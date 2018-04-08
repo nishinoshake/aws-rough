@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// エラー
+// -----------------------------------------------------
+
+.error {
+  &-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color-red, 0.8);
+    &-message {
+      font-size: 32px;
+      line-height: 2;
+      color: $color-white;
+    }
+  }
+}

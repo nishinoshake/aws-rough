@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// 料金内訳
+// -----------------------------------------------------
+
+.detail {
+  &-title {
+    height: 90px + $width-border-sp;
+    padding: 0 $padding-contents-sp;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: bold;
+    @include bb;
+    @include min {
+      font-size: 36px;
+      height: 134px + $width-border-pc;
+      padding: 0 $padding-contents-pc;
+    }
+    &-copy {
+      width: 4em;
+      margin-left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 0;
+      font-size: 50%;
+      @include b;
+      cursor: pointer;
+      @include min {
+        margin-left: 30px;
+      }
+      &:hover {
+        color: #fff;
+        background-color: $color-border;
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    @include max {
+      flex-direction: column-reverse;
+      padding: 40px $padding-contents-sp;
+    }
+    @include min {
+      align-items: center;
+      padding: $padding-contents-pc;
+    }
+  }
+  &-price {
+    @include min {
+      padding-right: 100px;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      &:nth-child(n + 2) {
+        margin-top: 20px;
+        @include min {
+          margin-top: 30px;
+        }
+      }
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+    }
+    &-name {
+      margin-right: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+      @include min {
+        margin-right: 30px;
+        font-size: 32px;
+      }
+    }
+    &-color {
+      width: 26px;
+      height: 26px;
+      margin-right: 10px;
+    }
+    .price {
+      margin-left: auto;
+    }
+  }
+  &-chart {
+    @include max {
+      width: 240px;
+      height: 240px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+    @include min {
+      width: 320px;
+      height: 320px;
+    }
+  }
+  &-empty {
+    padding: $padding-contents-sp $padding-contents-sp 0;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.7;
+    @include min {
+      padding: $padding-contents-pc $padding-contents-pc 0;
+      font-size: 52px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// 要素に直接指定するもの
+// 増えると秩序がなくなるので最小限にする
+// -----------------------------------------------------
+
+em,
+strong {
+  padding: 0 4px;
+  font-size: 116%;
+  font-weight: bold;
+}
+
+pre {
+  margin: 18px 0;
+  padding: 12px;
+  background-color: $color-bg;
+  overflow: auto;
+  font-size: 14px;
+  @include min {
+    margin: 25px 0;
+    padding: 20px;
+    font-size: 16px;
+  }
+}

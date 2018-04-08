@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// 合計
+// -----------------------------------------------------
+
+.cart {
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  @include max {
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    padding: 12px $padding-contents-sp;
+    background-color: $color-white;
+    @include b;
+  }
+  @include min() {
+    bottom: $padding-cart;
+    right: $padding-cart;
+  }
+  &-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    padding-bottom: 4px;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: bold;
+    @include bb;
+    @include max {
+      flex: 1;
+    }
+    @include min {
+      min-width: 250px;
+      padding-bottom: 8px;
+      font-size: 24px;
+      background-color: rgba($color-white, 0.9);
+    }
+    &-title {
+      padding-right: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1;
+      @include min {
+        padding-right: 12px;
+        font-size: 24px;
+      }
+    }
+  }
+  &-detail {
+    margin-left: 20px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: $color-white;
+    @include b;
+    @include min {
+      padding: 7px 16px;
+      font-size: 18px;
+      &:hover,
+      &.is-active {
+        color: #fff;
+        background-color: $color-border;
+      }
+    }
+  }
+}

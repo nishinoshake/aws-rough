@@ -1,0 +1,58 @@
+@charset "utf-8";
+// -----------------------------------------------------
+// フッター
+// -----------------------------------------------------
+.footer {
+  width: 100%;
+  position: absolute;
+  padding: $padding-contents-sp;
+  bottom: 0;
+  left: 0;
+  @include bt;
+  @include min {
+    padding: $padding-cart $padding-contents-pc;
+  }
+  &-list {
+    @include min {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-item {
+    font-size: 14px;
+    font-weight: bold;
+    @include min {
+      font-size: 20px;
+    }
+    &:nth-child(n + 2) {
+      @include max {
+        margin-top: 8px;
+      }
+      @include min {
+        margin-left: 25px;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+    }
+    &-icon {
+      width: 7px;
+      margin-right: 5px;
+      position: relative;
+      @include min {
+        width: 8px;
+        margin-right: 6px;
+      }
+      &:before {
+        content: '';
+        display: block;
+        height: 0;
+        padding-top: 266.7%;
+      }
+      svg {
+        @include fit-full;
+      }
+    }
+  }
+}

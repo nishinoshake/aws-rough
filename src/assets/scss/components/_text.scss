@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// テキスト
+// -----------------------------------------------------
+
+.text {
+  margin: 10px 0;
+  @include min {
+    margin: 12px 0;
+  }
+  &-link {
+    color: $color-link;
+    path {
+      fill: $color-link;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &-hover {
+      &:hover {
+        color: $color-link;
+        path {
+          fill: $color-link;
+        }
+      }
+    }
+  }
+}

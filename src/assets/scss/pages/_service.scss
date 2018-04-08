@@ -1,0 +1,89 @@
+@charset "utf-8";
+// -----------------------------------------------------
+// サービス
+// -----------------------------------------------------
+.service {
+  &-title {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 13px;
+    line-height: 1;
+    @include min {
+      height: 134px;
+      padding: $width-border-pc 40px 0;
+    }
+    &-icon {
+      width: 42px;
+      height: 42px;
+      margin-right: 8px;
+      @include min {
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+      }
+    }
+    &-name {
+      font-size: 32px;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      @include font-ramabhadra;
+      @include min {
+        font-size: 50px;
+      }
+    }
+  } // 計算するところ
+  &-calc {
+    position: relative;
+    &-footer {
+      position: absolute;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &-append {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 14px;
+      @include min {
+        padding: 12px 20px;
+      }
+      @include bb;
+      @include bl;
+      &:hover span {
+        opacity: 0.5;
+      }
+      span {
+        padding-left: 22px;
+        position: relative;
+        font-size: 14px;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        text-align: left;
+        @include min {
+          padding-left: 25px;
+          font-size: 16px;
+        }
+        &:before,
+        &:after {
+          content: '';
+          width: 15px;
+          height: 3px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          border-radius: 999em;
+          background-color: currentColor;
+          transition: 0.2s $easeOutCubic;
+        }
+        &:before {
+          transform: translate(0, -50%);
+        }
+        &:after {
+          transform: translate(0, -50%) rotate(90deg);
+        }
+      }
+    }
+  }
+}

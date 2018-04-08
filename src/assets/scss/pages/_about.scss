@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// 注意事項
+// -----------------------------------------------------
+
+.about {
+  &-section {
+    &:nth-child(n + 2) {
+      margin-top: 60px;
+    }
+  }
+  &-copy {
+    padding: 34px $padding-contents-sp 42px 18px;
+    font-size: 28px;
+    line-height: 1.6;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    @include bb;
+    @include min {
+      padding: 34px $padding-contents-pc 42px 44px;
+      font-size: 52px;
+    }
+    em {
+      padding-left: 4px;
+      font-size: 128%;
+      font-style: normal;
+      @include min {
+        padding-left: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "extends": ["standard", "plugin:vue/essential"],
+  "globals": {
+    "describe": true,
+    "expect": true,
+    "test": true,
+    "beforeEach": true
+  },
+  "rules": {
+    "no-new": "off",
+    "handle-callback-err": "off"
+  }
+}

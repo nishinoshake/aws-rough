@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// アニメーション
+// -----------------------------------------------------
+
+.anime {
+  // ページ遷移
+  &-fadein {
+    &-enter-active {
+      transition: 0.3s $easeOutCubic;
+    }
+    &-enter {
+      opacity: 0;
+    }
+  }
+
+  // 下から出てくるやつ
+  &-fade {
+    &-enter-active,
+    &-leave-active {
+      transition: 0.1s $easeOutCubic;
+    }
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+    }
+  }
+
+  // エラーのモーダル
+  &-error {
+    &-enter-active,
+    &-leave-active {
+      transition: 0.4s $easeOutCubic;
+    }
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+    }
+  }
+}

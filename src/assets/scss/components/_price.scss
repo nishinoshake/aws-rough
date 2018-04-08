@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// 価格
+// -----------------------------------------------------
+
+.price {
+  display: inline-flex;
+  align-items: flex-end;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  &-number {
+    margin: 0 0.1em -0.1em 0;
+    font-size: 130%;
+  }
+  &.mod-large {
+    font-size: 18px;
+    @include min {
+      font-size: 24px;
+    }
+    .price-number {
+      margin: 0 0.2em -0.1em 0;
+      font-size: 140%;
+    }
+  }
+}

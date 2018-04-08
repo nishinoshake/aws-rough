@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// ボタン
+// -----------------------------------------------------
+
+.button {
+  &-remove {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    background-color: $color-modest;
+    border-radius: 50%;
+    @include hide-text;
+    &:hover {
+      background-color: $color-dark;
+    }
+    &:before,
+    &:after {
+      content: '';
+      width: 50%;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 999em;
+      background-color: $color-white;
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

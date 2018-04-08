@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// 見出し
+// -----------------------------------------------------
+
+.title {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  @include min {
+    margin-bottom: 18px;
+    font-size: 32px;
+  }
+  &:before {
+    content: '#';
+    padding-right: 4px;
+  }
+  &-small {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    @include min {
+      margin-bottom: 14px;
+      font-size: 24px;
+    }
+  }
+}

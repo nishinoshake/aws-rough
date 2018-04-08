@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// セクション
+// -----------------------------------------------------
+
+.section {
+  padding: $padding-contents-sp;
+  @include min {
+    padding: $padding-contents-pc;
+  }
+  &:nth-of-type(n + 2) {
+    @include bt;
+  }
+  &-child {
+    margin-top: 20px;
+    @include min {
+      margin-top: 30px;
+    }
+    + .section-child {
+      margin-top: 40px;
+      @include min {
+        margin-top: 50px;
+      }
+    }
+  }
+}
