@@ -14,7 +14,7 @@
     </section>
     <section class="section">
       <h2 class="title">このサイトについて</h2>
-      <p class="text">AWSの利用料金を最小限の入力項目で「ざっくり」計算できるサイトです。見積もりなどで正確さを要求される場合は<ExternalLink href="https://calculator.s3.amazonaws.com/index.html">公式のツール</ExternalLink>をお使いください。</p>
+      <p class="text">AWSの利用料金を最小限の入力で「ざっくり」計算できるサイトです。<br>入力の手間を減らすために料金への影響が少ない項目は削っているため、<br>見積もりなどで正確さを要求される場合は<ExternalLink href="https://calculator.s3.amazonaws.com/index.html">公式のツール</ExternalLink>をお使いください。</p>
     </section>
     <section class="section">
       <h2 class="title">計算の前提</h2>

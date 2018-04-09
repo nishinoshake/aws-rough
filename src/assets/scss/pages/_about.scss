@@ -34,7 +34,7 @@
     &-list {
       display: flex;
       flex-wrap: wrap;
-      margin: 16px 0 0 -10px;
+      margin: 16px 0 8px -10px;
       @include min {
         margin: 30px 0 0 -16px;
       }
@@ -49,8 +49,10 @@
       a {
         display: block;
         text-align: center;
-        &:hover {
-          filter: grayscale(1);
+        @include min {
+          &:hover {
+            filter: grayscale(1);
+          }
         }
       }
       svg {
@@ -58,8 +60,8 @@
         width: 60px;
         height: 60px;
         @include min {
-          width: 120px;
-          height: 120px;
+          width: 100px;
+          height: 100px;
         }
       }
       span {
@@ -70,7 +72,7 @@
         line-height: 1.2;
         @include font-ramabhadra;
         @include min {
-          font-size: 28px;
+          font-size: 24px;
         }
       }
     }

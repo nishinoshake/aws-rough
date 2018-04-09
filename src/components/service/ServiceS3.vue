@@ -18,10 +18,6 @@
         <pre>2 * 100000 / 1024 ≒ 195GB</pre>
       </section>
       <section class="section-child">
-        <h3 class="title-small">容量</h3>
-        <p class="text">S3で使用するストレージの容量をGB単位で入力してください。</p>
-      </section>
-      <section class="section-child">
         <h3 class="title-small">読み込み回数</h3>
         <p class="text">GET/SELECTおよび他のすべてのリクエスト数を入力してください。</p>
       </section>
