@@ -60,6 +60,7 @@ module.exports = {
         collapseWhitespace: true,
         html5: true,
         minifyCSS: true,
+        minifyJS: true,
         removeComments: true,
         removeEmptyAttributes: true
       }
