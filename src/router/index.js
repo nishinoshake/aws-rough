@@ -13,7 +13,8 @@ import DetailIndex from '@/components/detail/DetailIndex'
 
 Vue.use(Router)
 
-const pagetitle = str => `${str} | ざっくりAWS`
+const SITENAME = 'ざっくりAWS'
+const pagetitle = str => `${str} | ${SITENAME}`
 
 const router = new Router({
   mode: 'history',
@@ -28,28 +29,22 @@ const router = new Router({
   },
   routes: [
     {
+      path: '/',
+      component: AboutIndex
+    },
+    {
       path: '/about',
-      name: 'about',
-      component: AboutIndex,
-      meta: {
-        title: 'このサイトについて'
-      }
+      redirect: '/'
     },
     {
       path: '/detail',
-      name: 'detail',
       component: DetailIndex,
       meta: {
         title: '内訳'
       }
     },
     {
-      path: '/',
-      redirect: '/ec2'
-    },
-    {
       path: '/ec2',
-      name: 'ec2',
       component: ServiceEC2,
       meta: {
         title: 'EC2'
@@ -57,7 +52,6 @@ const router = new Router({
     },
     {
       path: '/elb',
-      name: 'elb',
       component: ServiceELB,
       meta: {
         title: 'ELB'
@@ -65,7 +59,6 @@ const router = new Router({
     },
     {
       path: '/lambda',
-      name: 'lambda',
       component: ServiceLambda,
       meta: {
         title: 'Lambda'
@@ -73,7 +66,6 @@ const router = new Router({
     },
     {
       path: '/route53',
-      name: 'route53',
       component: ServiceRoute53,
       meta: {
         title: 'Route53'
@@ -81,7 +73,6 @@ const router = new Router({
     },
     {
       path: '/cloudfront',
-      name: 'cloudfront',
       component: ServiceCloudFront,
       meta: {
         title: 'CloudFront'
@@ -89,7 +80,6 @@ const router = new Router({
     },
     {
       path: '/s3',
-      name: 's3',
       component: ServiceS3,
       meta: {
         title: 'S3'
@@ -97,7 +87,6 @@ const router = new Router({
     },
     {
       path: '/rds',
-      name: 'rds',
       component: ServiceRDS,
       meta: {
         title: 'RDS'
@@ -105,7 +94,6 @@ const router = new Router({
     },
     {
       path: '/dynamodb',
-      name: 'dynamodb',
       component: ServiceDynamoDB,
       meta: {
         title: 'DynamoDB'
@@ -117,6 +105,8 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   if (to.meta && to.meta.title) {
     document.title = pagetitle(to.meta.title)
+  } else if (document.title !== SITENAME) {
+    document.title = SITENAME
   }
 
   next()
