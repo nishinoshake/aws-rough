@@ -3,6 +3,7 @@ export default [
   {
     key: 'ec2',
     name: 'EC2',
+    color: 'orange',
     multiple: true,
     table: [
       {
@@ -37,6 +38,7 @@ export default [
   {
     key: 'elb',
     name: 'ELB',
+    color: 'orange',
     multiple: false,
     table: [
       {
@@ -56,6 +58,7 @@ export default [
   {
     key: 'lambda',
     name: 'Lambda',
+    color: 'orange',
     multiple: false,
     table: [
       {
@@ -75,6 +78,7 @@ export default [
   {
     key: 'route53',
     name: 'Route53',
+    color: 'orange',
     multiple: false,
     table: [
       {
@@ -94,6 +98,7 @@ export default [
   {
     key: 'cloudfront',
     name: 'CloudFront',
+    color: 'red',
     table: [
       {
         type: 'number',
@@ -112,6 +117,7 @@ export default [
   {
     key: 's3',
     name: 'S3',
+    color: 'red',
     multiple: false,
     table: [
       {
@@ -141,6 +147,7 @@ export default [
   {
     key: 'rds',
     name: 'RDS',
+    color: 'blue',
     multiple: true,
     table: [
       {
@@ -177,6 +184,7 @@ export default [
   {
     key: 'dynamodb',
     name: 'DynamoDB',
+    color: 'blue',
     multiple: false,
     table: [
       {
