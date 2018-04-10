@@ -3,6 +3,7 @@
     <input
       type="number"
       :value="value"
+      min="0"
       class="form-text-input"
       @input="e => update({ serviceKey, index, columnKey, value: e.target.value })"
     />
