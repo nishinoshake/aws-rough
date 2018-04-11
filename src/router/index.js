@@ -10,6 +10,7 @@ import ServiceRDS from '@/components/service/ServiceRDS'
 import ServiceDynamoDB from '@/components/service/ServiceDynamoDB'
 import AboutIndex from '@/components/about/AboutIndex'
 import DetailIndex from '@/components/detail/DetailIndex'
+import ErrorNotFound from '@/components/error/ErrorNotFound'
 
 Vue.use(Router)
 
@@ -97,6 +98,13 @@ const router = new Router({
       component: ServiceDynamoDB,
       meta: {
         title: 'DynamoDB'
+      }
+    },
+    {
+      path: '*',
+      component: ErrorNotFound,
+      meta: {
+        title: 'Not Found'
       }
     }
   ]
