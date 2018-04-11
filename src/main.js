@@ -1,6 +1,7 @@
 import 'babel-polyfill'
 import Vue from 'vue'
 import VueAnalytics from 'vue-analytics'
+import SweetScroll from 'sweet-scroll'
 import App from './components/App'
 import router from './router'
 import './assets/scss/index.scss'
@@ -15,4 +16,8 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
+})
+
+new SweetScroll({
+  trigger: "a[href^='#']"
 })
