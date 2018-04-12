@@ -6,11 +6,11 @@
 
 .detail {
   &-title {
-    height: 90px + $width-border-sp;
+    height: 70px;
     padding: 0 $padding-contents-sp;
     display: flex;
     align-items: center;
-    font-size: 28px;
+    font-size: 22px;
     line-height: 1;
     font-weight: bold;
     @include bb;
@@ -21,7 +21,7 @@
     }
     &-copy {
       width: 4em;
-      margin-left: 20px;
+      margin-left: 15px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -100,7 +100,7 @@
   }
   &-empty {
     padding: $padding-contents-sp $padding-contents-sp 0;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
     line-height: 1.7;
     @include min {

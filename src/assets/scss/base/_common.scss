@@ -1,13 +1,14 @@
 @charset "utf-8";
 body {
   font-size: 14px;
-  line-height: 1.9;
+  line-height: 1.8;
   letter-spacing: 0.06em;
   font-feature-settings: 'palt';
   color: $color-dark;
   @include font-lato;
   @include min {
     font-size: 18px;
+    line-height: 1.9;
   }
 }
 

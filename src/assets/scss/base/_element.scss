@@ -7,9 +7,12 @@
 
 em,
 strong {
-  padding: 0 4px;
-  font-size: 116%;
+  padding: 0 2px;
+  font-size: 110%;
   font-weight: bold;
+  @include min {
+    font-size: 118%;
+  }
 }
 
 pre {
