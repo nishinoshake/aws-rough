@@ -110,14 +110,12 @@ const router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
+router.afterEach((to, from) => {
   if (to.meta && to.meta.title) {
     document.title = pagetitle(to.meta.title)
   } else if (document.title !== SITENAME) {
     document.title = SITENAME
   }
-
-  next()
 })
 
 export default router
