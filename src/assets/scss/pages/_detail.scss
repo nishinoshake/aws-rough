@@ -6,19 +6,6 @@
 
 .detail {
   &-title {
-    height: 70px;
-    padding: 0 $padding-contents-sp;
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    line-height: 1;
-    font-weight: bold;
-    @include bb;
-    @include min {
-      font-size: 36px;
-      height: 134px + $width-border-pc;
-      padding: 0 $padding-contents-pc;
-    }
     &-copy {
       width: 4em;
       margin-left: 15px;

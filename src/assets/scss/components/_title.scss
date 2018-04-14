@@ -17,6 +17,21 @@
     content: '#';
     padding-right: 4px;
   }
+  &-page {
+    height: 70px;
+    padding: 2px $padding-contents-sp 0;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    @include bb;
+    @include min {
+      height: 138px;
+      padding: 3px $padding-contents-pc 0;
+      font-size: 36px;
+    }
+  }
   &-small {
     margin-bottom: 10px;
     font-size: 18px;

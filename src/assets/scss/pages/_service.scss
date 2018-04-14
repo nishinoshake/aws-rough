@@ -4,13 +4,8 @@
 // -----------------------------------------------------
 .service {
   &-title {
-    height: 70px;
-    display: flex;
-    align-items: center;
     padding: 0 13px;
-    line-height: 1;
     @include min {
-      height: 134px;
       padding: $width-border-pc 40px 0;
     }
     &-icon {

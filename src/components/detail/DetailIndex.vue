@@ -1,15 +1,12 @@
 <template>
-  <div class="detail">
-    <h1 class="detail-title">
-      料金内訳
-      <DetailCopy :services="services" />
-    </h1>
+  <article class="detail">
+    <h1 class="title-page">料金内訳<DetailCopy :services="services" /></h1>
     <div class="detail-body" v-if="hasService">
       <DetailPrice :services="services" :colors="colors" />
       <DetailChart :services="services" :colors="colors" :hover-colors="hoverColors" />
     </div>
     <DetailEmpty v-else />
-  </div>
+  </article>
 </template>
 
 <script>

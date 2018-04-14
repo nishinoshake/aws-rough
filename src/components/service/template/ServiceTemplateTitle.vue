@@ -1,5 +1,5 @@
 <template>
-  <h1 class="service-title">
+  <h1 class="service-title title-page">
     <ServicePartsIcon :name="service.key" class="service-title-icon" />
     <span class="service-title-name">{{ service.name }}</span>
   </h1>

@@ -20,18 +20,7 @@
     }
   }
   &-title {
-    height: 70px;
-    padding: 0 $padding-contents-sp;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
     @include font-ramabhadra;
-    @include min {
-      height: 138px;
-      padding: $padding-contents-pc;
-      font-size: 46px;
-    }
-    @include bb;
   }
   &-text {
     padding: $padding-contents-sp;
