@@ -28,7 +28,7 @@
     <section class="section">
       <h2 class="title">お問い合わせ</h2>
       <p class="text">不具合などのご連絡は、お手数ですが下記へメールをお願いいたします。</p>
-      <p class="text-notice"><a href="mailto:lawson.and.7.11@gmail.com" class="text-link">lawson.and.7.11@gmail.com</a></p>
+      <p class="text"><a href="mailto:lawson.and.7.11@gmail.com" class="text-link">lawson.and.7.11@gmail.com</a></p>
     </section>
   </article>
 </template>
