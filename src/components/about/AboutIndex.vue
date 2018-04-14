@@ -1,20 +1,9 @@
 <template>
-  <div class="about">
-    <h1 class="about-copy"><em>AWS</em>の料金を、<br>日本円でざっくり。</h1>
+  <article class="about">
+    <h1 class="title-page">このサイトについて</h1>
     <section class="section">
-      <h2 class="title">よく使うサービス</h2>
-      <ul class="about-service-list">
-        <li class="about-service-item" v-for="service in recommendServices" :key="service.key">
-          <router-link :to="service.key">
-            <ServicePartsIcon :name="service.key" />
-            <span>{{ service.name }}</span>
-          </router-link>
-        </li>
-      </ul>
-    </section>
-    <section class="section">
-      <h2 class="title">このサイトについて</h2>
-      <p class="text">AWSの利用料金を最小限の入力で「ざっくり」計算できるサイトです。<br>入力の手間を減らすために料金への影響が少ない項目は削っているため、<br>見積もりなどで正確さを要求される場合は<ExternalLink href="https://calculator.s3.amazonaws.com/index.html">公式のツール</ExternalLink>をお使いください。</p>
+      <h2 class="title">サイトの目的</h2>
+      <p class="text">AWSの料金を最小限の入力で「ざっくり」計算できるサイトです。<br>入力の手間を減らすために料金への影響が少ない項目は削っているため、<br>見積もりなどで正確さを要求される場合は<ExternalLink href="https://calculator.s3.amazonaws.com/index.html">公式のツール</ExternalLink>をお使いください。</p>
     </section>
     <section class="section">
       <h2 class="title">計算の前提</h2>
@@ -34,22 +23,21 @@
         <h3 class="title-small">為替レート</h3>
         <p class="text">為替レートの取得には、<ExternalLink href="https://twitter.com/kujirahand">クジラ飛行机</ExternalLink>さんが公開されている、<ExternalLink href="http://api.aoikujira.com/kawase/">クジラ外国為替確認API</ExternalLink>を使わせてもらっています。<br>現在、計算に適用しているドル円のレートは<em>{{ usdjpy }}円</em>です。</p>
       </section>
+      <p class="text-notice">サービス/為替のデータは毎朝10時に更新しています。</p>
     </section>
     <section class="section">
       <h2 class="title">お問い合わせ</h2>
       <p class="text">不具合などのご連絡は、お手数ですが下記へメールをお願いいたします。</p>
-      <p class="text"><a href="mailto:lawson.and.7.11@gmail.com" class="text-link">lawson.and.7.11@gmail.com</a></p>
+      <p class="text-notice"><a href="mailto:lawson.and.7.11@gmail.com" class="text-link">lawson.and.7.11@gmail.com</a></p>
     </section>
-  </div>
+  </article>
 </template>
 
 <script>
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
-import serviceConfig from '@/config/service'
 import store from '@/store'
 import { MONTHLY_DATE } from '@/store/constants'
-import { getService } from '@/store/service'
 
 export default {
   name: 'AboutIndex',
@@ -62,9 +50,6 @@ export default {
   computed: {
     usdjpy() {
       return store.state.fx ? store.state.fx.usdjpy : 'xxx'
-    },
-    recommendServices() {
-      return ['ec2', 'route53', 's3', 'rds'].map(name => getService(name, serviceConfig))
     }
   }
 }

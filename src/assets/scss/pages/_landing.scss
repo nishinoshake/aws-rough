@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// 最初のページ
+// -----------------------------------------------------
+
+.landing {
+  &-copy {
+    padding: 34px $padding-contents-sp 42px 18px;
+    font-size: 28px;
+    line-height: 1.6;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    @include bb;
+    @include min {
+      padding: 34px $padding-contents-pc 42px 44px;
+      font-size: 52px;
+    }
+    em {
+      padding-left: 4px;
+      font-size: 128%;
+      font-style: normal;
+      @include min {
+        padding-left: 8px;
+      }
+    }
+  }
+  &-service {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 12px -20px 0 -15px;
+      @include min {
+        margin: 24px -20px 0 -33px;
+      }
+    }
+    &-item {
+      padding: 8px 6px;
+      @include min {
+        padding: 14px 20px;
+      }
+      a {
+        width: 165px;
+        display: flex;
+        align-items: center;
+        @include min {
+          width: 260px;
+          &:hover {
+            filter: grayscale(1);
+            .landing-service-summary {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+      svg {
+        width: 60px;
+        height: 60px;
+        margin-right: 2px;
+        @include min {
+          width: 100px;
+          height: 100px;
+          margin-right: 10px;
+        }
+      }
+    }
+    &-summary {
+    }
+    &-name {
+      margin-bottom: 7px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1;
+      white-space: nowrap;
+      @include font-ramabhadra;
+      @include min {
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+    }
+    &-description {
+      line-height: 1;
+      white-space: nowrap;
+      color: $color-modest;
+      @include max {
+        font-size: 12px;
+      }
+    }
+  }
+}

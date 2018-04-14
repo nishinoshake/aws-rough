@@ -3,6 +3,7 @@ export default [
   {
     key: 'ec2',
     name: 'EC2',
+    description: '仮想サーバー',
     color: 'orange',
     multiple: true,
     table: [
@@ -38,6 +39,7 @@ export default [
   {
     key: 'elb',
     name: 'ELB',
+    description: 'ロードバランサー',
     color: 'orange',
     multiple: false,
     table: [
@@ -58,6 +60,7 @@ export default [
   {
     key: 'lambda',
     name: 'Lambda',
+    description: 'サーバーレス',
     color: 'orange',
     multiple: false,
     table: [
@@ -78,6 +81,7 @@ export default [
   {
     key: 'route53',
     name: 'Route53',
+    description: 'DNS',
     color: 'orange',
     multiple: false,
     table: [
@@ -98,6 +102,7 @@ export default [
   {
     key: 'cloudfront',
     name: 'CloudFront',
+    description: 'CDN',
     color: 'red',
     table: [
       {
@@ -117,6 +122,7 @@ export default [
   {
     key: 's3',
     name: 'S3',
+    description: 'ストレージ',
     color: 'red',
     multiple: false,
     table: [
@@ -147,6 +153,7 @@ export default [
   {
     key: 'rds',
     name: 'RDS',
+    description: 'データベース',
     color: 'blue',
     multiple: true,
     table: [
@@ -184,6 +191,7 @@ export default [
   {
     key: 'dynamodb',
     name: 'DynamoDB',
+    description: 'NoSQL',
     color: 'blue',
     multiple: false,
     table: [

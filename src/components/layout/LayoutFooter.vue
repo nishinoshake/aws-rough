@@ -2,8 +2,8 @@
   <footer class="footer">
     <ul class="footer-list">
       <li class="footer-item">
-        <router-link to="/" class="text-link-hover">
-          <i class="footer-item-icon"><ArrorRight /></i>トップ
+        <router-link to="/about" class="text-link-hover">
+          <i class="footer-item-icon"><ArrorRight /></i>このサイトについて
         </router-link>
       </li>
       <li class="footer-item">

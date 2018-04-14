@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import LandingIndex from '@/components/landing/LandingIndex'
+import AboutIndex from '@/components/about/AboutIndex'
+import DetailIndex from '@/components/detail/DetailIndex'
 import ServiceEC2 from '@/components/service/ServiceEC2'
 import ServiceELB from '@/components/service/ServiceELB'
 import ServiceLambda from '@/components/service/ServiceLambda'
@@ -8,8 +11,6 @@ import ServiceCloudFront from '@/components/service/ServiceCloudFront'
 import ServiceS3 from '@/components/service/ServiceS3'
 import ServiceRDS from '@/components/service/ServiceRDS'
 import ServiceDynamoDB from '@/components/service/ServiceDynamoDB'
-import AboutIndex from '@/components/about/AboutIndex'
-import DetailIndex from '@/components/detail/DetailIndex'
 import ErrorNotFound from '@/components/error/ErrorNotFound'
 
 Vue.use(Router)
@@ -31,11 +32,11 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: AboutIndex
+      component: LandingIndex
     },
     {
       path: '/about',
-      redirect: '/'
+      component: AboutIndex
     },
     {
       path: '/detail',
