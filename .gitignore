@@ -1,5 +1,6 @@
 .DS_Store
 *.log
 .env
+.nuxt
 node_modules/
 dist/
