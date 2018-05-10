@@ -5,13 +5,13 @@
       <h2 class="title">サービスを選択してください</h2>
       <div class="landing-service-list">
         <section class="landing-service-item" v-for="service in services" :key="service.key">
-          <router-link :to="service.key">
+          <nuxt-link :to="service.key">
             <ServicePartsIcon :name="service.key" />
             <div class="landing-service-summary">
               <h3 class="landing-service-name">{{ service.name }}</h3>
               <p class="landing-service-description">{{ service.description }}</p>
             </div>
-          </router-link>
+          </nuxt-link>
         </section>
       </div>
     </section>

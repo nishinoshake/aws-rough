@@ -22,6 +22,10 @@ module.exports = {
       }
     ]
   },
+  router: {
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-active-exact'
+  },
   build: {
     extend (config) {
       const urlLoader = config.module.rules.find(

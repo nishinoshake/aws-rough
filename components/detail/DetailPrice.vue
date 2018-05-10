@@ -2,10 +2,10 @@
 <div class="detail-price">
   <ul class="detail-price-list">
     <li v-for="(service, index) in services" :key="service.name" class="detail-price-item">
-      <router-link :to="service.key" class="detail-price-link text-link-hover">
+      <nuxt-link :to="`/${service.key}/`" class="detail-price-link text-link-hover">
         <span class="detail-price-color" :style="{backgroundColor: colors[index]}" />
         <p class="detail-price-name">{{ service.name }}</p>
-      </router-link>
+      </nuxt-link>
       <ServicePartsPrice :price="service.total" mod="large" />
     </li>
   </ul>

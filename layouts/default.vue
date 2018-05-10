@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import SweetScroll from 'sweet-scroll'
-import FastClick from 'fastclick'
 import LayoutMenuPC from '@/layouts/LayoutMenuPC'
 import LayoutMenuSP from '@/layouts/LayoutMenuSP'
 import LayoutFooter from '@/layouts/LayoutFooter'
@@ -41,9 +39,6 @@ export default {
   created() {
     store.setInitialTables(serviceConfig)
     store.fetchAll({ fetchPrice, fetchFx })
-
-    FastClick.attach(document.body)
-    new SweetScroll({ trigger: "a[href^='#']" })
   }
 }
 </script>

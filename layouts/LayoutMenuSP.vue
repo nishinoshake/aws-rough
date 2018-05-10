@@ -29,7 +29,7 @@ export default {
   methods: {
     changeService(serviceName) {
       this.$refs.select.value = ''
-      this.$router.push(serviceName)
+      this.$router.push(`/${serviceName}/`)
     }
   }
 }

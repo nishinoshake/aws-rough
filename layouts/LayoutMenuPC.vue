@@ -2,12 +2,12 @@
   <div class="menu">
     <div class="menu-inside">
       <h1 class="menu-logo">
-        <router-link to="/"><IconLogo /></router-link>
+        <nuxt-link to="/"><IconLogo /></nuxt-link>
       </h1>
       <nav class="menu-nav">
         <ul class="menu-list">
           <li v-for="service in services" :key="service.key" class="menu-item">
-            <router-link :to="service.key">{{ service.name }}</router-link>
+            <nuxt-link :to="`/${service.key}/`">{{ service.name }}</nuxt-link>
           </li>
         </ul>
       </nav>
