@@ -37,11 +37,15 @@
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import store from '@/stores'
+import meta from '@/config/meta'
 import { MONTHLY_DATE } from '@/stores/constants'
 
 export default {
   name: 'AboutIndex',
   components: { ExternalLink, ServicePartsIcon },
+  head() {
+    return meta.about
+  },
   data() {
     return {
       monthlyDate: MONTHLY_DATE

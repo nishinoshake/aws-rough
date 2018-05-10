@@ -59,6 +59,7 @@ import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ServicePartsSpec from '@/components/service/parts/ServicePartsSpec'
 import ExternalLink from '@/components/text/ExternalLink'
 import store from '@/stores'
+import meta from '@/config/meta'
 
 export default {
   name: 'ServiceRDS',
@@ -67,6 +68,9 @@ export default {
     ServicePartsExclude,
     ServicePartsSpec,
     ExternalLink
+  },
+  head() {
+    return meta.rds
   },
   data() {
     return {

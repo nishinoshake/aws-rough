@@ -37,11 +37,15 @@ import ServiceTemplate from '@/components/service/template/ServiceTemplate'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ExternalLink from '@/components/text/ExternalLink'
 import store from '@/stores'
+import meta from '@/config/meta'
 import { addComma } from '@/stores/price'
 
 export default {
   name: 'ServiceLambda',
   components: { ServiceTemplate, ServicePartsExclude, ExternalLink },
+  head() {
+    return meta.lambda
+  },
   computed: {
     priceLambda() {
       return store.state.price.lambda

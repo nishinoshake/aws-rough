@@ -23,6 +23,7 @@ import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import serviceConfig from '@/config/service'
 import store from '@/stores'
+import meta from '@/config/meta'
 import { MONTHLY_DATE } from '@/stores/constants'
 import { getService } from '@/stores/service'
 
@@ -33,6 +34,9 @@ export default {
     return {
       monthlyDate: MONTHLY_DATE
     }
+  },
+  head() {
+    return meta.index
   },
   computed: {
     usdjpy() {

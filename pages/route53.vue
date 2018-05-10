@@ -31,9 +31,13 @@
 import ServiceTemplate from '@/components/service/template/ServiceTemplate'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ExternalLink from '@/components/text/ExternalLink'
+import meta from '@/config/meta'
 
 export default {
   name: 'ServiceRoute53',
-  components: { ServiceTemplate, ServicePartsExclude, ExternalLink }
+  components: { ServiceTemplate, ServicePartsExclude, ExternalLink },
+  head() {
+    return meta.route53
+  }
 }
 </script>
