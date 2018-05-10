@@ -7,7 +7,9 @@
         <nuxt/>
         <LayoutFooter />
       </div>
+      <CartIndex :total="state.total.jpy" />
     </div>
+    <ErrorModal :error="state.error.fetch" />
   </div>
 </template>
 
@@ -17,7 +19,9 @@ import LayoutMenuSP from '@/layouts/LayoutMenuSP'
 import LayoutFooter from '@/layouts/LayoutFooter'
 import CartIndex from '@/components/cart/CartIndex'
 import ErrorModal from '@/components/error/ErrorModal'
-import '@/assets/scss/index.scss'
+import serviceConfig from '@/config/service'
+import store from '@/stores'
+import { fetchPrice, fetchFx } from '../api'
 
 export default {
   components: {
@@ -27,8 +31,14 @@ export default {
     CartIndex,
     ErrorModal
   },
+  data() {
+    return {
+      state: store.state
+    }
+  },
   beforeMount() {
-    console.log('hoge')
+    store.setInitialTables(serviceConfig)
+    store.fetchAll({ fetchPrice, fetchFx })
   }
 }
 </script>
