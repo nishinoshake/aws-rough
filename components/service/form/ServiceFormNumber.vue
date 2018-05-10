@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import store from '@/store'
-import { MAX_INPUT } from '@/store/constants'
+import store from '@/stores'
+import { MAX_INPUT } from '@/stores/constants'
 
 export default {
   name: 'ServiceFormNumber',

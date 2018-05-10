@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import store from '@/store'
-import { formatPrice } from '@/store/price'
+import store from '@/stores'
+import { formatPrice } from '@/stores/price'
 
 export default {
   name: 'ServicePartsPrice',

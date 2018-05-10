@@ -23,7 +23,7 @@ import LayoutFooter from '@/components/layout/LayoutFooter'
 import CartIndex from '@/components/cart/CartIndex'
 import ErrorModal from '@/components/error/ErrorModal'
 import serviceConfig from '@/config/service'
-import store from '@/store'
+import store from '@/stores'
 import { fetchPrice, fetchFx } from '../api'
 
 export default {

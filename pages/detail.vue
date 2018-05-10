@@ -16,10 +16,10 @@ import DetailCopy from '@/components/detail/DetailCopy'
 import DetailPrice from '@/components/detail/DetailPrice'
 import DetailChart from '@/components/detail/DetailChart'
 import DetailEmpty from '@/components/detail/DetailEmpty'
-import store from '@/store'
+import store from '@/stores'
 import serviceConfig from '@/config/service'
-import { getService } from '@/store/service'
-import { totalTable } from '@/store/calc/total'
+import { getService } from '@/stores/service'
+import { totalTable } from '@/stores/calc/total'
 
 export default {
   name: 'DetailIndex',

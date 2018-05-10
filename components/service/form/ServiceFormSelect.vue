@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import store from '@/store'
+import store from '@/stores'
 
 export default {
   name: 'ServiceFormSelect',

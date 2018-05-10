@@ -22,9 +22,9 @@
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import serviceConfig from '@/config/service'
-import store from '@/store'
-import { MONTHLY_DATE } from '@/store/constants'
-import { getService } from '@/store/service'
+import store from '@/stores'
+import { MONTHLY_DATE } from '@/stores/constants'
+import { getService } from '@/stores/service'
 
 export default {
   name: 'LandingIndex',

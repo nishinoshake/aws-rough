@@ -36,8 +36,8 @@
 <script>
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
-import store from '@/store'
-import { MONTHLY_DATE } from '@/store/constants'
+import store from '@/stores'
+import { MONTHLY_DATE } from '@/stores/constants'
 
 export default {
   name: 'AboutIndex',

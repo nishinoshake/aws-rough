@@ -36,8 +36,8 @@
 import ServiceTemplate from '@/components/service/template/ServiceTemplate'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ExternalLink from '@/components/text/ExternalLink'
-import store from '@/store'
-import { addComma } from '@/store/price'
+import store from '@/stores'
+import { addComma } from '@/stores/price'
 
 export default {
   name: 'ServiceLambda',

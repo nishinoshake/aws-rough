@@ -58,7 +58,7 @@ import ServiceTemplate from '@/components/service/template/ServiceTemplate'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ServicePartsSpec from '@/components/service/parts/ServicePartsSpec'
 import ExternalLink from '@/components/text/ExternalLink'
-import store from '@/store'
+import store from '@/stores'
 
 export default {
   name: 'ServiceRDS',

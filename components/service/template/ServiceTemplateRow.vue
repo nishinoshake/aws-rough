@@ -41,7 +41,7 @@
 
 <script>
 import serviceConfig from '@/config/service'
-import store from '@/store'
+import store from '@/stores'
 import ServiceFormNumber from '@/components/service/form/ServiceFormNumber'
 import ServiceFormSelect from '@/components/service/form/ServiceFormSelect'
 import ServicePartsPrice from '@/components/service/parts/ServicePartsPrice'

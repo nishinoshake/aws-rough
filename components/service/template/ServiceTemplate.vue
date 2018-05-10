@@ -40,8 +40,8 @@
 import ServiceTemplateRow from '@/components/service/template/ServiceTemplateRow'
 import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateTitle'
 import serviceConfig from '@/config/service'
-import store from '@/store'
-import { getService } from '@/store/service'
+import store from '@/stores'
+import { getService } from '@/stores/service'
 
 export default {
   name: 'ServiceTemplate',
