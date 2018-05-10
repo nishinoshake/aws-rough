@@ -2,7 +2,7 @@
   <article class="service">
     <ServiceTemplateTitle :service="service" />
     <div class="service-calc">
-      <table :class="['table', {'mod-multiple': service.multiple }]">
+      <table :class="['table', {'mod-multiple': service.multiple, 'is-loaded': isLoaded }]">
         <thead :class="{[`mod-${service.mod}`]: service.mod}">
           <tr>
             <th
@@ -26,7 +26,7 @@
       </table>
       <div class="service-calc-footer" v-if="service.multiple">
         <button
-          class="service-calc-append"
+          :class="['service-calc-append', {'is-loaded': isLoaded }]"
           @click="append(service.key)"
         ><span>追加する</span></button>
       </div>
@@ -54,6 +54,7 @@ export default {
   },
   data() {
     return {
+      state: store.state,
       table: store.state.tables[this.serviceName]
     }
   },
@@ -61,11 +62,12 @@ export default {
     service() {
       const service = getService(this.serviceName, serviceConfig)
       const table = service.table.map(row => {
-        if (store.state.price && row.parseJson) {
-          return {
-            ...row,
-            options: row.parseJson(store.state.price)
-          }
+        if (row.parseJson) {
+          const options = Object.keys(store.state.price).length
+            ? row.parseJson(store.state.price)
+            : []
+
+          return { ...row, options }
         }
 
         return row
@@ -75,6 +77,9 @@ export default {
     },
     tableLabels() {
       return this.service.table.map(column => column.title)
+    },
+    isLoaded() {
+      return this.state.isLoaded
     }
   },
   methods: {

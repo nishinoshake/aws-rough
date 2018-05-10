@@ -47,9 +47,17 @@ export default {
       return store.state.price.lambda
     },
     freeRequest() {
+      if (!this.priceLambda) {
+        return ''
+      }
+
       return addComma(this.priceLambda.request.free)
     },
     freeMemory() {
+      if (!this.priceLambda) {
+        return ''
+      }
+
       return addComma(this.priceLambda.memory.free)
     }
   }

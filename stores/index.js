@@ -9,7 +9,6 @@ export default {
     tables: {},
     total: { usd: 0, jpy: 0 },
     isLoaded: false,
-    isOpen: false,
     error: {}
   },
   setInitialTables (serviceConfig) {

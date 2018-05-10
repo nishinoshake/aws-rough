@@ -6,6 +6,11 @@
 
 .table {
   width: 100%;
+  &.is-loaded {
+    td {
+      visibility: visible;
+    }
+  }
   thead,
   tbody {
     display: block;
@@ -90,6 +95,7 @@
     font-weight: bold;
   }
   td {
+    visibility: hidden;
     padding: ($padding-contents-sp / 2) $padding-contents-sp;
     @include max {
       &:before {

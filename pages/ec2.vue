@@ -81,6 +81,10 @@ export default {
       return store.state.price
     },
     specTable() {
+      if (!this.priceList.ec2) {
+        return []
+      }
+
       return this.priceList.ec2.instance.map(({ attributes }) => {
         return [
           attributes.instanceType,

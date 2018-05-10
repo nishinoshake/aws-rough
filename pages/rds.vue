@@ -78,6 +78,10 @@ export default {
       return store.state.price
     },
     specTable() {
+      if (!this.priceList.rds) {
+        return []
+      }
+
       return this.priceList.rds.instance.map(({ attributes }) => {
         return [
           attributes.instanceType,
