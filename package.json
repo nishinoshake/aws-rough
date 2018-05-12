@@ -8,11 +8,13 @@
   },
   "scripts": {
     "dev": "nuxt --spa",
+    "analyze": "nuxt build --analyze",
     "generate": "nuxt generate",
     "deploy": "sh deploy.sh",
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.0.2",
     "axios": "^0.18.0",
     "chart.js": "^2.7.2",
     "clipboard": "^2.0.0",
