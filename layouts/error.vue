@@ -1,14 +1,11 @@
 <template>
   <section class="error-notfound">
-    <h1 class="error-title title-page">Not Found</h1>
-    <p class="error-text">ソンナページハ、<br>ソンザイシマセン。<br>モシカシテ、<ExternalLink href="http://kaela-web.com">キムラカエラ</ExternalLink>？</p>
+    <h1 class="error-title title-page">Error</h1>
+    <p class="error-text">スミマセン、<br>ナニカガオカシイデス。</p>
   </section>
 </template>
 <script>
-import ExternalLink from '@/components/text/ExternalLink'
-
 export default {
-  props: ['error'],
-  components: { ExternalLink }
+  props: ['error']
 }
 </script>

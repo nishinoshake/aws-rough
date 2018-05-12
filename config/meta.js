@@ -16,6 +16,10 @@ export default {
     title: SITE_TITLE,
     meta: [description(SITE_DESCRIPTION)]
   },
+  error_404: {
+    title: pageTitle('Not Found'),
+    meta: [description(SITE_DESCRIPTION)]
+  },
   about: {
     title: pageTitle('このサイトについて'),
     meta: [pageDescription('このサイトについての説明ページです。')]
