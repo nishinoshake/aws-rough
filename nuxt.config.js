@@ -5,7 +5,7 @@ module.exports = {
     }]
   ],
   head: {
-    title: 'Not Found - ざっくりAWS',
+    title: 'Not Found | ざっくりAWS',
     meta: [{
         charset: 'utf-8'
       },
