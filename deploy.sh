@@ -9,8 +9,8 @@ if [ $? -gt 0 ] ;then
   exit 1
 fi
 
-npm run build
+npm run generate --spa
 
-aws s3 cp ./dist/index.html s3://aws.noplan.cc/index.html --cache-control no-store
-aws s3 cp ./dist/bundle.js s3://aws.noplan.cc/bundle.js --cache-control max-age=31536000
-aws cloudfront create-invalidation --distribution-id $CF_DIST_ID --paths / /index.html
+aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*" --include "*.html" --cache-control no-store
+aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*" --include "*.js" --cache-control max-age=31536000
+aws cloudfront create-invalidation --distribution-id $CF_DIST_ID --paths "/*"
