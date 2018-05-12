@@ -4,12 +4,11 @@
     <p class="error-text">ソンナページハ、<br>ソンザイシマセン。<br>モシカシテ、<ExternalLink href="http://kaela-web.com">キムラカエラ</ExternalLink>？</p>
   </section>
 </template>
-
 <script>
 import ExternalLink from '@/components/text/ExternalLink'
 
 export default {
-  name: 'ErrorNotFound',
+  props: ['error'],
   components: { ExternalLink }
 }
 </script>
