@@ -8,7 +8,7 @@ const description = text => ({
   content: text
 })
 
-const pageTitle = text => `${text} | ${SITE_TITLE}`
+const pageTitle = text => `${text} - ${SITE_TITLE}`
 const pageDescription = text => description(`${text}${SITE_DESCRIPTION}`)
 
 export default {
