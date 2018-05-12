@@ -1,4 +1,4 @@
-import s3 from '../../../store/calc/s3'
+import s3 from '../../../stores/calc/s3'
 
 describe('s3', () => {
   test('S3の料金を計算できる', () => {

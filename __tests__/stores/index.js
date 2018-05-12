@@ -1,6 +1,6 @@
-import store from '../../store'
-import { MONTHLY_HOURS } from '../../store/constants'
-import { usdToXXX } from '../../store/price'
+import store from '../../stores'
+import { MONTHLY_HOURS } from '../../stores/constants'
+import { usdToXXX } from '../../stores/price'
 
 const serviceConfig = [
   {

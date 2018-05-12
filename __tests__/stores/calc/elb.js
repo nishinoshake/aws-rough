@@ -1,5 +1,5 @@
-import elb from '../../../store/calc/elb'
-import { MONTHLY_HOURS } from '../../../store/constants'
+import elb from '../../../stores/calc/elb'
+import { MONTHLY_HOURS } from '../../../stores/constants'
 
 describe('elb', () => {
   test('ELBの料金を計算できる', () => {

@@ -3,7 +3,7 @@ import {
   getDefaultTable,
   getDefaultTables,
   parseInstance
-} from '../../store/service'
+} from '../../stores/service'
 
 describe('service', () => {
   const serviceConfig = [

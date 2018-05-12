@@ -1,4 +1,4 @@
-import lambda from '../../../store/calc/lambda'
+import lambda from '../../../stores/calc/lambda'
 
 describe('lambda', () => {
   test('Lmabdaの料金を計算できる', () => {

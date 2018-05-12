@@ -1,4 +1,4 @@
-import { toNumber, isValidNumber } from '../../store/validator'
+import { toNumber, isValidNumber } from '../../stores/validator'
 
 describe('validator', () => {
   describe('isValidNumber', () => {

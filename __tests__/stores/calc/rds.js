@@ -1,5 +1,5 @@
-import rds from '../../../store/calc/rds'
-import { MONTHLY_HOURS } from '../../../store/constants'
+import rds from '../../../stores/calc/rds'
+import { MONTHLY_HOURS } from '../../../stores/constants'
 
 describe('rds', () => {
   test('RDSの料金を計算できる', () => {
