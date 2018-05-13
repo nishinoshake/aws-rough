@@ -13,8 +13,8 @@ npm run dev
 # テスト
 npm run test
 
-# ビルド
-npm run build
+# 静的ファイル生成
+npm run generate
 ```
 
 ## 価格と為替の取得
