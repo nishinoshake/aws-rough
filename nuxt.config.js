@@ -46,10 +46,15 @@ module.exports = {
   build: {
     vendor: ['axios', 'lodash'],
     extend(config) {
-      const urlLoader = config.module.rules.find(
-        rule => rule.loader === 'url-loader'
-      )
-      urlLoader.test = /\.(png|jpe?g|gif)$/
+      config.module.rules = config.module.rules.map(rule => {
+        if (rule.loader === 'url-loader' && rule.test.toString().includes('svg')) {
+          return {
+            ...rule,
+            test: /\.(png|jpe?g|gif)$/
+          }
+        }
+        return rule
+      })
 
       config.module.rules.push({
         test: /\.svg$/,
@@ -57,5 +62,6 @@ module.exports = {
       })
     }
   },
+  loading: false,
   css: ['@/assets/scss/index.scss']
 }
