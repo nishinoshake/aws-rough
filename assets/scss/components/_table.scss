@@ -1,12 +1,31 @@
 @charset "utf-8";
-
 // -----------------------------------------------------
 // テーブル
 // -----------------------------------------------------
-
 .table {
   width: 100%;
+  position: relative;
+  &:before {
+    content: "Loading...";
+    position: absolute;
+    z-index: 10;
+    font-size: 18px;
+    pointer-events: none;
+    @include font-ramabhadra;
+    @include max {
+      left: 20px;
+      @include center;
+    }
+    @include min {
+      left: 60px;
+      bottom: 16px;
+      font-size: 24px;
+    }
+  }
   &.is-loaded {
+    &:before {
+      display: none;
+    }
     td {
       visibility: visible;
     }
@@ -132,9 +151,7 @@
   }
   &-price {
     text-align: right;
-  }
-
-  // スペックの控えめなテーブル
+  } // スペックの控えめなテーブル
   &-spec {
     margin: 30px 0;
     border-collapse: collapse;
