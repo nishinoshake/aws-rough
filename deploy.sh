@@ -9,7 +9,7 @@ if [ $? -gt 0 ] ;then
   exit 1
 fi
 
-npm run generate --spa
+npm run generate
 
 aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*" --include "*.html" --cache-control no-store
 aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*" --include "*.js" --cache-control max-age=31536000
