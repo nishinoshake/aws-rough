@@ -224,7 +224,7 @@ export default [
       {
         type: 'select',
         key: 'instance',
-        title: 'インスタンス',
+        title: 'ノードタイプ',
         default: 'cache.t2.micro',
         mod: 'large',
         parseJson: json =>

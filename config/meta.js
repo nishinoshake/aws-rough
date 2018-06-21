@@ -34,6 +34,10 @@ const meta = {
     title: pageTitle('EC2'),
     description: pageDescription('EC2の料金を計算するぞ。')
   },
+  elasticache: {
+    title: pageTitle('ElastiCache'),
+    description: pageDescription('ElastiCacheの料金を計算するぞ。')
+  },
   elb: {
     title: pageTitle('ELB'),
     description: pageDescription('ELBの料金を計算するぞ。')
