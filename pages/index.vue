@@ -6,7 +6,9 @@
       <div class="landing-service-list">
         <section class="landing-service-item" v-for="service in services" :key="service.key">
           <nuxt-link :to="service.key">
-            <ServicePartsIcon :name="service.key" />
+            <figure class="landing-service-icon">
+              <ServicePartsIcon :name="service.key" />
+            </figure>
             <div class="landing-service-summary">
               <h3 class="landing-service-name">{{ service.name }}</h3>
               <p class="landing-service-description">{{ service.description }}</p>

@@ -56,15 +56,20 @@
       svg {
         width: 60px;
         height: 60px;
-        margin-right: 2px;
         @include min {
           width: 100px;
           height: 100px;
-          margin-right: 10px;
         }
       }
     }
+    &-icon {
+      margin-right: 2px;
+      @include min {
+        margin-right: 10px;
+      }
+    }
     &-summary {
+      flex-grow: 1;
     }
     &-name {
       margin-bottom: 7px;
