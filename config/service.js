@@ -219,7 +219,7 @@ export default [
     name: 'ElastiCache',
     description: 'インメモリデータストア',
     color: 'blue',
-    multiple: false,
+    multiple: true,
     table: [
       {
         type: 'select',
