@@ -11,7 +11,7 @@ export default [
         type: 'select',
         key: 'instance',
         title: 'インスタンス',
-        default: 't2.micro',
+        default: 't2.nano',
         mod: 'large',
         parseJson: json =>
           json.ec2.instance.map(instance => instance.attributes.instanceType)
