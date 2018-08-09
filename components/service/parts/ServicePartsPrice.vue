@@ -1,6 +1,6 @@
 <template>
   <p :class="['price', {[`mod-${mod}`]: mod}]">
-    <span class="price-number">{{ yen }}</span>
+    <span class="price-number" data-name="price">{{ yen }}</span>
     <span class="price-unit">円</span>
   </p>
 </template>

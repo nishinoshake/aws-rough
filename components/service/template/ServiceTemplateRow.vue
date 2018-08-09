@@ -7,6 +7,7 @@
         [`mod-${column.mod}`]: column.mod,
         'has-remove': service.multiple && columnIndex === 0
       }"
+      :data-name="column.key"
       :data-label="labels[columnIndex]"
     >
       <!-- 削除ボタン -->
