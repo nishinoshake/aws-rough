@@ -1,0 +1,28 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/node:8.11.4
+    steps:
+      - checkout
+      - run: yarn install
+      - run: yarn test
+  deploy:
+    docker:
+      - image: circleci/node:8.11.4
+    steps:
+      - checkout
+      - run: yarn install
+      - run: yarn build
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - test
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
