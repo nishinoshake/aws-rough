@@ -14,6 +14,19 @@ jobs:
       - checkout
       - run: yarn install
       - run: yarn generate
+      - persist_to_workspace:
+          root: .
+          paths: .
+  deploy:
+    docker:
+      - image: circleci/python:3.6-jessie
+    steps:
+      - attach_workspace:
+        at: .
+      - run: sudo pip install awscli
+      - run: aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*" --include "*.html" --cache-control no-store
+      - run: aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*" --include "*.js" --cache-control max-age=31536000
+      - run: aws cloudfront create-invalidation --distribution-id $CF_DIST_ID --paths "/*"
 
 workflows:
   version: 2
@@ -21,6 +34,13 @@ workflows:
     jobs:
       - test
       - build:
+        filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - test
+            - build
           filters:
             branches:
               only: master

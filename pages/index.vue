@@ -2,7 +2,7 @@
   <div class="landing">
     <h1 class="landing-copy"><em>AWS</em>の料金を、<br>日本円でざっくり。</h1>
     <section class="section">
-      <h2 class="title">サービスを選択してください！</h2>
+      <h2 class="title">サービスを選択してくださいな！</h2>
       <div class="landing-service-list">
         <section class="landing-service-item" v-for="service in services" :key="service.key">
           <nuxt-link :to="`/${service.key}/`">
