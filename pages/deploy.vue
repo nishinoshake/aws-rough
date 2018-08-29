@@ -1,6 +1,6 @@
 <template>
   <div class="deploy">
-    <p class="deploy-title">デプロイ待ち</p>
+    <p class="deploy-title">完了！</p>
   </div>
 </template>
 
