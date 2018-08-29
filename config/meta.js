@@ -18,6 +18,10 @@ const meta = {
     title: pageTitle('このサイトについて'),
     description: pageDescription('このサイトについての説明ページです。')
   },
+  deploy: {
+    title: pageTitle('デプロイ'),
+    description: pageDescription('デプロイの確認ページです。')
+  },
   cloudfront: {
     title: pageTitle('CloudFront'),
     description: pageDescription('CloudFrontの料金を計算するぞ。')
