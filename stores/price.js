@@ -10,7 +10,7 @@ export const addComma = num => {
 
 export const formatPrice = price => {
   if (greaterThanMaxPrice(price)) {
-    return SUSHI
+    return 'hoge'
   }
 
   return addComma(price)
