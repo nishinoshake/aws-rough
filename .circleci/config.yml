@@ -1,20 +1,40 @@
 version: 2
 jobs:
-  test:
+  prepare:
     docker:
       - image: circleci/node:8.11.4
     working_directory: ~/aws-rough
     steps:
       - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn install
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - persist_to_workspace:
+          root: ~/aws-rough
+          paths:
+            - ./*
+  test:
+    docker:
+      - image: circleci/node:8.11.4
+    working_directory: ~/aws-rough
+    steps:
+      - attach_workspace:
+          at: ~/aws-rough
       - run: yarn test
   build:
     docker:
       - image: circleci/node:8.11.4
     working_directory: ~/aws-rough
     steps:
-      - checkout
-      - run: yarn install
+      - attach_workspace:
+          at: ~/aws-rough
       - run: yarn generate
       - persist_to_workspace:
           root: ~/aws-rough
@@ -36,15 +56,20 @@ workflows:
   version: 2
   test-deploy:
     jobs:
-      - test
+      - prepare
+      - test:
+          requires:
+            - prepare
       - build:
           requires:
+            - prepare
             - test
           filters:
             branches:
               only: master
       - deploy:
           requires:
+            - prepare
             - test
             - build
           filters:
