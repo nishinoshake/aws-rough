@@ -1,9 +1,18 @@
 version: 2
+
+defaults: &defaults
+  working_directory: ~/aws-rough
+  docker:
+    - image: circleci/python:3.6-jessie-node-browsers
+
+filter_only_master: &filter_only_master
+  filters:
+    branches:
+      only: master
+
 jobs:
-  prepare:
-    docker:
-      - image: circleci/node:8.11.4
-    working_directory: ~/aws-rough
+  install:
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
@@ -20,18 +29,16 @@ jobs:
           root: ~/aws-rough
           paths:
             - ./*
+
   test:
-    docker:
-      - image: circleci/node:8.11.4
-    working_directory: ~/aws-rough
+    <<: *defaults
     steps:
       - attach_workspace:
           at: ~/aws-rough
       - run: yarn test
+
   build:
-    docker:
-      - image: circleci/node:8.11.4
-    working_directory: ~/aws-rough
+    <<: *defaults
     steps:
       - attach_workspace:
           at: ~/aws-rough
@@ -40,10 +47,9 @@ jobs:
           root: ~/aws-rough
           paths:
             - dist
+
   deploy:
-    docker:
-      - image: circleci/python:3.6-jessie
-    working_directory: ~/aws-rough
+    <<: *defaults
     steps:
       - attach_workspace:
           at: ~/aws-rough
@@ -56,22 +62,18 @@ workflows:
   version: 2
   test-deploy:
     jobs:
-      - prepare
+      - install
       - test:
           requires:
-            - prepare
+            - install
       - build:
+          <<: *filter_only_master
           requires:
-            - prepare
+            - install
             - test
-          filters:
-            branches:
-              only: master
       - deploy:
+          <<: *filter_only_master
           requires:
-            - prepare
+            - install
             - test
             - build
-          filters:
-            branches:
-              only: master
