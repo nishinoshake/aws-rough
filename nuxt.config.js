@@ -10,6 +10,10 @@ module.exports = {
         charset: 'utf-8'
       },
       {
+        name: 'google-site-verification',
+        content: 'ClJCk2KjauaZyRoNcwAeHI-oDC6aS8dgZqnb3u0EKUI'
+      },
+      {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
       },
