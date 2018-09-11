@@ -69,11 +69,8 @@ workflows:
       - build:
           <<: *filter_only_master
           requires:
-            - install
             - test
       - deploy:
           <<: *filter_only_master
           requires:
-            - install
-            - test
             - build
