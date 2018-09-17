@@ -20,9 +20,14 @@ import LayoutFooter from '@/layouts/LayoutFooter'
 import CartIndex from '@/components/cart/CartIndex'
 import ErrorModal from '@/components/error/ErrorModal'
 import serviceConfig from '@/config/service'
-import WebFont from 'webfontloader'
 import store from '@/stores'
 import { fetchPrice, fetchFx } from '../api'
+
+let WebFont
+
+if (process.browser) {
+  WebFont = require('webfontloader')
+}
 
 export default {
   components: {
