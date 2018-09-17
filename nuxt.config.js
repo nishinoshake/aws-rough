@@ -2,7 +2,8 @@ module.exports = {
   modules: [
     ['@nuxtjs/google-analytics', {
       id: 'UA-53153991-13'
-    }]
+    }],
+    '@/modules/count-page'
   ],
   head: {
     title: 'Not Found | ざっくりAWS',
