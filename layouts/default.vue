@@ -20,6 +20,7 @@ import LayoutFooter from '@/layouts/LayoutFooter'
 import CartIndex from '@/components/cart/CartIndex'
 import ErrorModal from '@/components/error/ErrorModal'
 import serviceConfig from '@/config/service'
+import WebFont from 'webfontloader'
 import store from '@/stores'
 import { fetchPrice, fetchFx } from '../api'
 
@@ -39,6 +40,13 @@ export default {
   created() {
     store.setInitialTables(serviceConfig)
     store.fetchAll({ fetchPrice, fetchFx })
+  },
+  mounted() {
+    WebFont.load({
+      google: {
+        families: ['Lato:400,700', 'Ramabhadra']
+      }
+    })
   }
 }
 </script>
