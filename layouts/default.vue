@@ -23,12 +23,6 @@ import serviceConfig from '@/config/service'
 import store from '@/stores'
 import { fetchPrice, fetchFx } from '../api'
 
-let WebFont
-
-if (process.browser) {
-  WebFont = require('webfontloader')
-}
-
 export default {
   components: {
     LayoutMenuPC,
@@ -45,13 +39,6 @@ export default {
   created() {
     store.setInitialTables(serviceConfig)
     store.fetchAll({ fetchPrice, fetchFx })
-  },
-  mounted() {
-    WebFont.load({
-      google: {
-        families: ['Lato:400,700', 'Ramabhadra']
-      }
-    })
   }
 }
 </script>
