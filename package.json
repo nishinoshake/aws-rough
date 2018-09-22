@@ -60,6 +60,7 @@
     "vue-svg-loader": "^0.5.0"
   },
   "jest": {
-    "verbose": true
+    "verbose": true,
+    "testURL": "http://localhost/"
   }
 }
