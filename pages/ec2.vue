@@ -9,8 +9,7 @@
       <h2 class="title">入力項目の補足</h2>
       <section class="section-child">
         <h3 class="title-small">インスタンス</h3>
-        <p class="text">利用するインスタンスタイプを選択してください。</p>
-        <ServicePartsSpec :labels="specLabels" :table="specTable" />
+        <p class="text">利用する<ExternalLink href="https://aws.amazon.com/jp/ec2/instance-types/">インスタンスタイプ</ExternalLink>を選択してください。</p>
       </section>
       <section class="section-child">
         <h3 class="title-small">ストレージ</h3>
@@ -61,7 +60,6 @@ import ServiceTemplate from '@/components/service/template/ServiceTemplate'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ServicePartsSpec from '@/components/service/parts/ServicePartsSpec'
 import ExternalLink from '@/components/text/ExternalLink'
-import store from '@/stores'
 import meta from '@/config/meta'
 
 export default {
@@ -74,25 +72,6 @@ export default {
   },
   head() {
     return meta.ec2
-  },
-  data() {
-    return {
-      specLabels: ['タイプ', 'vCPU', 'メモリ(GiB)']
-    }
-  },
-  computed: {
-    priceList() {
-      return store.state.price
-    },
-    specTable() {
-      if (!this.priceList.ec2) {
-        return []
-      }
-
-      return this.priceList.ec2.instance.map(({ attributes }) => {
-        return [attributes.instanceType, attributes.vcpu, attributes.memory.replace('GiB', '')]
-      })
-    }
   }
 }
 </script>
