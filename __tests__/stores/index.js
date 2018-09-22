@@ -5,17 +5,11 @@ import { usdToXXX } from '../../stores/price'
 const serviceConfig = [
   {
     key: 'ec2',
-    table: [
-      { type: 'select', key: 'instance', default: 't2.micro' },
-      { type: 'number', key: 'unit' }
-    ]
+    table: [{ type: 'select', key: 'instance', default: 't2.micro' }, { type: 'number', key: 'unit' }]
   },
   {
     key: 'rds',
-    table: [
-      { type: 'select', key: 'instance', default: 'db.t2.micro' },
-      { type: 'number', key: 'unit' }
-    ]
+    table: [{ type: 'select', key: 'instance', default: 'db.t2.micro' }, { type: 'number', key: 'unit' }]
   }
 ]
 
@@ -97,10 +91,7 @@ describe('store', () => {
     test('サービスの行を追加できる', () => {
       store.append({ serviceKey: 'ec2' }, serviceConfig)
 
-      expect(store.state.tables.ec2).toEqual([
-        store.state.tables.ec2[0],
-        store.state.tables.ec2[0]
-      ])
+      expect(store.state.tables.ec2).toEqual([store.state.tables.ec2[0], store.state.tables.ec2[0]])
     })
   })
 

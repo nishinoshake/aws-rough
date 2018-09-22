@@ -8,10 +8,7 @@ export default (row, priceList) => {
   let total = 0
 
   if (transfer) {
-    total += reduceRange(
-      transfer,
-      priceList.cloudfront.transfer.external.priceRange
-    )
+    total += reduceRange(transfer, priceList.cloudfront.transfer.external.priceRange)
   }
 
   if (request) {

@@ -1,10 +1,5 @@
 import { SUSHI, MAX_PRICE } from '../../stores/constants'
-import {
-  greaterThanMaxPrice,
-  formatPrice,
-  usdToXXX,
-  reduceRange
-} from '../../stores/price'
+import { greaterThanMaxPrice, formatPrice, usdToXXX, reduceRange } from '../../stores/price'
 
 describe('price', () => {
   describe('greaterThanMaxPrice', () => {

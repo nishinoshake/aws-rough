@@ -1,25 +1,14 @@
-import {
-  getService,
-  getDefaultTable,
-  getDefaultTables,
-  parseInstance
-} from '../../stores/service'
+import { getService, getDefaultTable, getDefaultTables, parseInstance } from '../../stores/service'
 
 describe('service', () => {
   const serviceConfig = [
     {
       key: 'ec2',
-      table: [
-        { type: 'select', key: 'instance', default: 't2.micro' },
-        { type: 'number', key: 'unit' }
-      ]
+      table: [{ type: 'select', key: 'instance', default: 't2.micro' }, { type: 'number', key: 'unit' }]
     },
     {
       key: 'rds',
-      table: [
-        { type: 'select', key: 'instance', default: 'db.t2.micro' },
-        { type: 'number', key: 'unit' }
-      ]
+      table: [{ type: 'select', key: 'instance', default: 'db.t2.micro' }, { type: 'number', key: 'unit' }]
     }
   ]
 

@@ -63,9 +63,7 @@ export default {
       const service = getService(this.serviceName, serviceConfig)
       const table = service.table.map(row => {
         if (row.parseJson) {
-          const options = Object.keys(store.state.price).length
-            ? row.parseJson(store.state.price)
-            : []
+          const options = Object.keys(store.state.price).length ? row.parseJson(store.state.price) : []
 
           return { ...row, options }
         }

@@ -38,10 +38,8 @@ describe('rds', () => {
 
     const testCalcCorrectly = az => {
       const multi = az === 'Multi-AZ' ? 2 : 1
-      const instance =
-        priceList.rds.instance[0].price * MONTHLY_HOURS * row.unit * multi
-      const storage =
-        priceList.rds.storage.gp2.price * row.storage * row.unit * multi
+      const instance = priceList.rds.instance[0].price * MONTHLY_HOURS * row.unit * multi
+      const storage = priceList.rds.storage.gp2.price * row.storage * row.unit * multi
       const expected = instance + storage
 
       expect(rds({ ...row, az }, priceList)).toBe(expected)

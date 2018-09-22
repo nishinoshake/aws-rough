@@ -52,7 +52,7 @@ export default {
     }
   },
   computed: {
-    usdjpy () {
+    usdjpy() {
       return store.state.fx ? store.state.fx.usdjpy : null
     }
   }

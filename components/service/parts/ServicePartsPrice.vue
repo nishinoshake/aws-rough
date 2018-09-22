@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import store from '@/stores'
 import { formatPrice } from '@/stores/price'
 
 export default {

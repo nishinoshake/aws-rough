@@ -6,10 +6,7 @@ describe('total', () => {
 
   describe('totalTable', () => {
     test('サービスの合計金額を計算できる', () => {
-      const emptyTable = [
-        { total: { usd: 0, jpy: 0 } },
-        { total: { usd: 0, jpy: 0 } }
-      ]
+      const emptyTable = [{ total: { usd: 0, jpy: 0 } }, { total: { usd: 0, jpy: 0 } }]
 
       expect(totalTable(emptyTable)).toEqual({
         usd: 0,
@@ -41,17 +38,13 @@ describe('total', () => {
       })
 
       const tables = {
-        ec2: [
-          { total: { usd: 100, jpy: usdToXXX(100, usdjpy) } },
-          { total: { usd: 200, jpy: usdToXXX(200, usdjpy) } }
-        ],
+        ec2: [{ total: { usd: 100, jpy: usdToXXX(100, usdjpy) } }, { total: { usd: 200, jpy: usdToXXX(200, usdjpy) } }],
         rds: [{ total: { usd: 300, jpy: usdToXXX(300, usdjpy) } }]
       }
 
       expect(totalTables(tables)).toEqual({
         usd: 100 + 200 + 300,
-        jpy:
-          usdToXXX(100, usdjpy) + usdToXXX(200, usdjpy) + usdToXXX(300, usdjpy)
+        jpy: usdToXXX(100, usdjpy) + usdToXXX(200, usdjpy) + usdToXXX(300, usdjpy)
       })
     })
   })

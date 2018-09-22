@@ -16,7 +16,7 @@ export default (row, priceList) => {
   }
 
   if (storage) {
-    total += priceList.rds.storage.gp2.price * storage * (unit ? unit : 1) * multi
+    total += priceList.rds.storage.gp2.price * storage * (unit || 1) * multi
   }
 
   return total

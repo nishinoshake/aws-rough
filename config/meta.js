@@ -70,7 +70,8 @@ const ogTitle = title => ({
   content: title
 })
 
-const description = text => [{
+const description = text => [
+  {
     hid: 'description',
     name: 'description',
     content: text
@@ -82,10 +83,13 @@ const description = text => [{
   }
 ]
 
-export default Object.keys(meta).reduce(((obj, key) => ({
-  ...obj,
-  [key]: {
-    title: meta[key].title,
-    meta: [ogTitle(meta[key].title), ...description(meta[key].description)]
-  }
-})), {})
+export default Object.keys(meta).reduce(
+  (obj, key) => ({
+    ...obj,
+    [key]: {
+      title: meta[key].title,
+      meta: [ogTitle(meta[key].title), ...description(meta[key].description)]
+    }
+  }),
+  {}
+)

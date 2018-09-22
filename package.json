@@ -10,8 +10,16 @@
     "dev": "nuxt --spa",
     "analyze": "nuxt build --analyze",
     "generate": "nuxt generate",
-    "deploy": "sh deploy.sh",
-    "test": "jest"
+    "test": "jest",
+    "format": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+      "git add"
+    ]
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
@@ -21,27 +29,35 @@
     "color": "^3.0.0",
     "fastclick": "^1.0.6",
     "lodash": "^4.17.5",
-    "node-sass": "^4.9.0",
     "nuxt": "^1.4.0",
-    "sass-loader": "^7.0.1",
     "sweet-scroll": "^3.0.1",
-    "vue-chartjs": "^3.3.1",
-    "vue-svg-loader": "^0.5.0"
+    "vue-chartjs": "^3.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^9.0.0",
     "babel-jest": "^22.4.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^4.18.2",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
+    "husky": "^0.14.3",
     "jest": "^22.4.3",
-    "regenerator-runtime": "^0.11.1"
+    "lint-staged": "^7.3.0",
+    "node-sass": "^4.9.0",
+    "prettier": "^1.14.3",
+    "regenerator-runtime": "^0.11.1",
+    "sass-loader": "^7.0.1",
+    "vue-svg-loader": "^0.5.0"
   },
   "jest": {
     "verbose": true

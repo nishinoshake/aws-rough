@@ -22,7 +22,4 @@ export const getDefaultTables = serviceConfig => {
 }
 
 export const parseInstance = (instanceType, instances) =>
-  _.find(
-    instances,
-    instance => instance.attributes.instanceType === instanceType
-  )
+  _.find(instances, instance => instance.attributes.instanceType === instanceType)

@@ -11,29 +11,27 @@ export default {
     isLoaded: false,
     error: {}
   },
-  setInitialTables (serviceConfig) {
+  setInitialTables(serviceConfig) {
     this.state.tables = getDefaultTables(serviceConfig)
   },
-  fetchAll ({ fetchPrice, fetchFx }) {
+  fetchAll({ fetchPrice, fetchFx }) {
     return Promise.all([fetchPrice(), fetchFx()])
       .then(values => {
         this.state.price = values[0]
         this.state.fx = values[1]
         this.state.isLoaded = true
       })
-      .catch(error => {
+      .catch(() => {
         this.state.error = {
           ...this.state.error,
           fetch: '通信エラーが発生しました'
         }
       })
   },
-  append ({ serviceKey }, serviceConfig) {
-    this.state.tables[serviceKey].push(
-      getDefaultTable(serviceKey, serviceConfig)
-    )
+  append({ serviceKey }, serviceConfig) {
+    this.state.tables[serviceKey].push(getDefaultTable(serviceKey, serviceConfig))
   },
-  update ({ serviceKey, index, columnKey, value }) {
+  update({ serviceKey, index, columnKey, value }) {
     const row = {
       ...this.state.tables[serviceKey][index],
       [columnKey]: value
@@ -48,16 +46,12 @@ export default {
 
     this.updateTotal()
   },
-  updateTotal () {
+  updateTotal() {
     this.state.total = calc.totalTables(this.state.tables)
   },
-  remove ({ serviceKey, index }, serviceConfig) {
+  remove({ serviceKey, index }, serviceConfig) {
     if (this.state.tables[serviceKey].length === 1) {
-      this.state.tables[serviceKey].splice(
-        index,
-        1,
-        getDefaultTable(serviceKey, serviceConfig)
-      )
+      this.state.tables[serviceKey].splice(index, 1, getDefaultTable(serviceKey, serviceConfig))
     } else {
       this.state.tables[serviceKey].splice(index, 1)
     }

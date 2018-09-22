@@ -17,7 +17,7 @@ export default (row, priceList) => {
   }
 
   if (storage) {
-    total += priceList.ebs.gp2.price * storage * (unit ? unit : 1)
+    total += priceList.ebs.gp2.price * storage * (unit || 1)
   }
 
   if (transfer) {

@@ -87,11 +87,7 @@ export default {
       }
 
       return this.priceList.rds.instance.map(({ attributes }) => {
-        return [
-          attributes.instanceType,
-          attributes.vcpu,
-          attributes.memory.replace('GiB', '')
-        ]
+        return [attributes.instanceType, attributes.vcpu, attributes.memory.replace('GiB', '')]
       })
     }
   }

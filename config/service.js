@@ -13,8 +13,7 @@ export default [
         title: 'インスタンス',
         default: 't2.nano',
         mod: 'large',
-        parseJson: json =>
-          json.ec2.instance.map(instance => instance.attributes.instanceType)
+        parseJson: json => json.ec2.instance.map(instance => instance.attributes.instanceType)
       },
       {
         type: 'number',
@@ -163,8 +162,7 @@ export default [
         title: 'インスタンス',
         default: 'db.t2.micro',
         mod: 'large',
-        parseJson: json =>
-          json.rds.instance.map(instance => instance.attributes.instanceType)
+        parseJson: json => json.rds.instance.map(instance => instance.attributes.instanceType)
       },
       {
         type: 'number',
@@ -227,8 +225,7 @@ export default [
         title: 'ノードタイプ',
         default: 'cache.t2.micro',
         mod: 'large',
-        parseJson: json =>
-          json.elasticache.instance.map(instance => instance.attributes.instanceType)
+        parseJson: json => json.elasticache.instance.map(instance => instance.attributes.instanceType)
       },
       {
         type: 'number',

@@ -45,9 +45,7 @@ export default {
       return store.state.fx ? store.state.fx.usdjpy : 'xxx'
     },
     services() {
-      return serviceConfig.map(service =>
-        getService(service.key, serviceConfig)
-      )
+      return serviceConfig.map(service => getService(service.key, serviceConfig))
     }
   }
 }
