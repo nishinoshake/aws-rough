@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+const apiOrigin = process.env.API_ORIGIN || 'http://aws-catalog.noplan.cc.s3-website-ap-northeast-1.amazonaws.com'
+
 const client = axios.create({
   responseType: 'json',
   timeout: 20000 // 20s
@@ -13,6 +15,6 @@ const fetchJson = path =>
       .catch(error => reject(error))
   )
 
-export const fetchPrice = () => fetchJson('/json/price.json')
+export const fetchPrice = () => fetchJson(`${apiOrigin}/json/price.json`)
 
-export const fetchFx = () => fetchJson('/json/fx.json')
+export const fetchFx = () => fetchJson(`${apiOrigin}/json/fx.json`)
