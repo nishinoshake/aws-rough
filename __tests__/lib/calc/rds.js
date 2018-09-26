@@ -1,5 +1,5 @@
-import rds from '../../../lib/calc/rds'
-import { MONTHLY_HOURS } from '../../../config/constants'
+import rds from '@/lib/calc/rds'
+import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('rds', () => {
   test('RDSの料金を計算できる', () => {

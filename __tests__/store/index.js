@@ -1,8 +1,8 @@
 import Vuex from 'vuex'
 import { createLocalVue } from '@vue/test-utils'
-import createStore from '../../store'
-import { MONTHLY_HOURS } from '../../config/constants'
-import { usdToXXX } from '../../lib/price'
+import createStore from '@/store'
+import { MONTHLY_HOURS } from '@/config/constants'
+import { usdToXXX } from '@/lib/price'
 
 const serviceConfig = [
   {

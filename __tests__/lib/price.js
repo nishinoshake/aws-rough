@@ -1,5 +1,5 @@
-import { SUSHI, MAX_PRICE } from '../../config/constants'
-import { greaterThanMaxPrice, formatPrice, usdToXXX, reduceRange } from '../../lib/price'
+import { SUSHI, MAX_PRICE } from '@/config/constants'
+import { greaterThanMaxPrice, formatPrice, usdToXXX, reduceRange } from '@/lib/price'
 
 describe('price', () => {
   describe('greaterThanMaxPrice', () => {

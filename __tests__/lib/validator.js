@@ -1,4 +1,4 @@
-import { toNumber, isValidNumber } from '../../lib/validator'
+import { toNumber, isValidNumber } from '@/lib/validator'
 
 describe('validator', () => {
   describe('isValidNumber', () => {

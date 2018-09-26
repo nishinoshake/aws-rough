@@ -1,4 +1,4 @@
-import route53 from '../../../lib/calc/route53'
+import route53 from '@/lib/calc/route53'
 
 describe('route53', () => {
   test('Route53の料金を計算できる', () => {

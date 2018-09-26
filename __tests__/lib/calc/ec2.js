@@ -1,5 +1,5 @@
-import ec2 from '../../../lib/calc/ec2'
-import { MONTHLY_HOURS } from '../../../config/constants'
+import ec2 from '@/lib/calc/ec2'
+import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('ec2', () => {
   test('EC2の料金を計算できる', () => {

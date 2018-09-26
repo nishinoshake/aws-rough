@@ -1,5 +1,5 @@
-import elasticache from '../../../lib/calc/elasticache'
-import { MONTHLY_HOURS } from '../../../config/constants'
+import elasticache from '@/lib/calc/elasticache'
+import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('elasticache', () => {
   test('ElastiCacheの料金を計算できる', () => {
