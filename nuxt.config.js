@@ -6,6 +6,7 @@ module.exports = {
         id: 'UA-53153991-13'
       }
     ],
+    '@nuxtjs/dotenv',
     '@/modules/count-page'
   ],
   head: {

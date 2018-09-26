@@ -22,6 +22,7 @@
     ]
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.1.1",
     "@nuxtjs/google-analytics": "^2.0.2",
     "axios": "^0.18.0",
     "chart.js": "^2.7.2",
