@@ -7,7 +7,7 @@
     "url": "https://github.com/noplan1989/aws-rough"
   },
   "scripts": {
-    "dev": "nuxt --spa",
+    "dev": "nuxt",
     "analyze": "nuxt build --analyze",
     "generate": "nuxt generate",
     "test": "jest",

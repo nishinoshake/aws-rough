@@ -19,8 +19,6 @@ import LayoutMenuSP from '@/layouts/LayoutMenuSP'
 import LayoutFooter from '@/layouts/LayoutFooter'
 import CartIndex from '@/components/cart/CartIndex'
 import ErrorModal from '@/components/error/ErrorModal'
-import serviceConfig from '@/config/service'
-import { fetchPrice, fetchFx } from '../api'
 
 export default {
   components: {
@@ -29,10 +27,6 @@ export default {
     LayoutFooter,
     CartIndex,
     ErrorModal
-  },
-  created() {
-    this.$store.commit('SET_INITIAL_TABLES', { serviceConfig })
-    this.$store.dispatch('fetchAll', { fetchPrice, fetchFx })
   }
 }
 </script>

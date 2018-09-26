@@ -1,7 +1,9 @@
 import Vuex from 'vuex'
-import * as calc from '../lib/calc'
-import { getDefaultTable, getDefaultTables } from '../lib/service'
-import { usdToXXX } from '../lib/price'
+import * as calc from '@/lib/calc'
+import { getDefaultTable, getDefaultTables } from '@/lib/service'
+import { usdToXXX } from '@/lib/price'
+import serviceConfig from '@/config/service'
+import { fetchPrice, fetchFx } from '@/api'
 
 // すべてをAction経由にした方が見通しは良さそうですが、
 // 冗長過ぎるので、非同期なものだけdispatchして、他は直接commit。
@@ -64,6 +66,10 @@ const store = () =>
       }
     },
     actions: {
+      async nuxtServerInit({ commit, dispatch }) {
+        commit('SET_INITIAL_TABLES', { serviceConfig })
+        await dispatch('fetchAll', { fetchPrice, fetchFx })
+      },
       async fetchAll({ commit }, { fetchPrice, fetchFx }) {
         try {
           const values = await Promise.all([fetchPrice(), fetchFx()])
