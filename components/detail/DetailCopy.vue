@@ -9,8 +9,7 @@
 
 <script>
 import ClipBoard from 'clipboard'
-import store from '@/stores'
-import { formatPrice } from '@/stores/price'
+import { formatPrice } from '@/lib/price'
 
 export default {
   name: 'DetailCopy',
@@ -27,7 +26,7 @@ export default {
   },
   computed: {
     total() {
-      return store.state.total.jpy
+      return this.$store.state.total.jpy
     },
     copyText() {
       return this.services

@@ -1,5 +1,5 @@
-import { totalTable, totalTables } from '../../../stores/calc/total'
-import { usdToXXX } from '../../../stores/price'
+import { totalTable, totalTables } from '../../../lib/calc/total'
+import { usdToXXX } from '../../../lib/price'
 
 describe('total', () => {
   const usdjpy = 100

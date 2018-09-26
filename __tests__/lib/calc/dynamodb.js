@@ -1,5 +1,5 @@
-import dynamodb from '../../../stores/calc/dynamodb'
-import { MONTHLY_HOURS } from '../../../stores/constants'
+import dynamodb from '../../../lib/calc/dynamodb'
+import { MONTHLY_HOURS } from '../../../config/constants'
 
 describe('dynamodb', () => {
   test('DynamoDBの料金を計算できる', () => {

@@ -11,8 +11,7 @@
 </template>
 
 <script>
-import store from '@/stores'
-import { MAX_INPUT } from '@/stores/constants'
+import { MAX_INPUT } from '@/config/constants'
 
 export default {
   name: 'ServiceFormNumber',
@@ -37,7 +36,7 @@ export default {
     update(params) {
       const limitedValue = params.value < MAX_INPUT ? params.value : ''
 
-      store.update({ ...params, value: limitedValue })
+      this.$store.commit('UPDATE', { ...params, value: limitedValue })
     }
   }
 }

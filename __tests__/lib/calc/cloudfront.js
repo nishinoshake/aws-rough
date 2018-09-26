@@ -1,4 +1,4 @@
-import cloudfront from '../../../stores/calc/cloudfront'
+import cloudfront from '../../../lib/calc/cloudfront'
 
 describe('cloudfront', () => {
   test('CloudFrontの料金を計算できる', () => {

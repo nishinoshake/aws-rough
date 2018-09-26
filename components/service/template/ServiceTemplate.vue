@@ -40,8 +40,7 @@
 import ServiceTemplateRow from '@/components/service/template/ServiceTemplateRow'
 import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateTitle'
 import serviceConfig from '@/config/service'
-import store from '@/stores'
-import { getService } from '@/stores/service'
+import { getService } from '@/lib/service'
 
 export default {
   name: 'ServiceTemplate',
@@ -54,8 +53,7 @@ export default {
   },
   data() {
     return {
-      state: store.state,
-      table: store.state.tables[this.serviceName]
+      table: this.$store.state.tables[this.serviceName]
     }
   },
   computed: {
@@ -63,7 +61,7 @@ export default {
       const service = getService(this.serviceName, serviceConfig)
       const table = service.table.map(row => {
         if (row.parseJson) {
-          const options = Object.keys(store.state.price).length ? row.parseJson(store.state.price) : []
+          const options = Object.keys(this.$store.state.price).length ? row.parseJson(this.$store.state.price) : []
 
           return { ...row, options }
         }
@@ -77,12 +75,12 @@ export default {
       return this.service.table.map(column => column.title)
     },
     isLoaded() {
-      return this.state.isLoaded
+      return this.$store.state.isLoaded
     }
   },
   methods: {
     append(serviceKey) {
-      store.append({ serviceKey }, serviceConfig)
+      this.$store.commit('APPEND', { serviceKey, serviceConfig })
     }
   }
 }

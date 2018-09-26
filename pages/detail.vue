@@ -16,11 +16,10 @@ import DetailCopy from '@/components/detail/DetailCopy'
 import DetailPrice from '@/components/detail/DetailPrice'
 import DetailChart from '@/components/detail/DetailChart'
 import DetailEmpty from '@/components/detail/DetailEmpty'
-import store from '@/stores'
 import meta from '@/config/meta'
 import serviceConfig from '@/config/service'
-import { getService } from '@/stores/service'
-import { totalTable } from '@/stores/calc/total'
+import { getService } from '@/lib/service'
+import { totalTable } from '@/lib/calc/total'
 
 export default {
   name: 'DetailIndex',
@@ -41,10 +40,10 @@ export default {
   },
   computed: {
     total() {
-      return store.state.total
+      return this.$store.state.total
     },
     tables() {
-      return store.state.tables
+      return this.$store.state.tables
     },
     services() {
       return Object.keys(this.tables).reduce((services, serviceKey) => {

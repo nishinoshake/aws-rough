@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const apiOrigin = process.env.API_ORIGIN || 'http://aws-catalog.noplan.cc.s3-website-ap-northeast-1.amazonaws.com'
+// const apiOrigin = process.env.API_ORIGIN || 'http://aws-catalog.noplan.cc.s3-website-ap-northeast-1.amazonaws.com'
+const apiOrigin = 'http://aws-catalog.noplan.cc.s3-website-ap-northeast-1.amazonaws.coma'
 
 const client = axios.create({
   responseType: 'json',

@@ -1,4 +1,4 @@
-import { getService, getDefaultTable, getDefaultTables, parseInstance } from '../../stores/service'
+import { getService, getDefaultTable, getDefaultTables, parseInstance } from '../../lib/service'
 
 describe('service', () => {
   const serviceConfig = [

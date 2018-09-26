@@ -36,9 +36,8 @@
 import ServiceTemplate from '@/components/service/template/ServiceTemplate'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ExternalLink from '@/components/text/ExternalLink'
-import store from '@/stores'
 import meta from '@/config/meta'
-import { addComma } from '@/stores/price'
+import { addComma } from '@/lib/price'
 
 export default {
   name: 'ServiceLambda',
@@ -48,7 +47,7 @@ export default {
   },
   computed: {
     priceLambda() {
-      return store.state.price.lambda
+      return this.$store.state.price.lambda
     },
     freeRequest() {
       if (!this.priceLambda) {

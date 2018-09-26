@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import store from '@/stores'
-
 export default {
   name: 'ServiceFormSelect',
   props: {
@@ -41,7 +39,7 @@ export default {
   },
   methods: {
     update(params) {
-      store.update(params)
+      this.$store.commit('UPDATE', params)
     }
   }
 }

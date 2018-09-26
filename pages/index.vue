@@ -24,10 +24,9 @@
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import serviceConfig from '@/config/service'
-import store from '@/stores'
 import meta from '@/config/meta'
-import { MONTHLY_DATE } from '@/stores/constants'
-import { getService } from '@/stores/service'
+import { MONTHLY_DATE } from '@/config/constants'
+import { getService } from '@/lib/service'
 
 export default {
   name: 'LandingIndex',
@@ -42,7 +41,7 @@ export default {
   },
   computed: {
     usdjpy() {
-      return store.state.fx ? store.state.fx.usdjpy : 'xxx'
+      return this.$store.state.fx ? this.$store.state.fx.usdjpy : 'xxx'
     },
     services() {
       return serviceConfig.map(service => getService(service.key, serviceConfig))

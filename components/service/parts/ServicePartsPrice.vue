@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { formatPrice } from '@/stores/price'
+import { formatPrice } from '@/lib/price'
 
 export default {
   name: 'ServicePartsPrice',

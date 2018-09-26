@@ -36,9 +36,8 @@
 <script>
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
-import store from '@/stores'
 import meta from '@/config/meta'
-import { MONTHLY_DATE } from '@/stores/constants'
+import { MONTHLY_DATE } from '@/config/constants'
 
 export default {
   name: 'AboutIndex',
@@ -53,7 +52,7 @@ export default {
   },
   computed: {
     usdjpy() {
-      return store.state.fx ? store.state.fx.usdjpy : null
+      return this.$store.state.fx ? this.$store.state.fx.usdjpy : null
     }
   }
 }
