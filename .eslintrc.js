@@ -6,10 +6,14 @@ module.exports = {
   },
   globals: {
     jest: true,
+    page: true,
     describe: true,
     expect: true,
     test: true,
-    beforeEach: true
+    beforeAll: true,
+    beforeEach: true,
+    afterAll: true,
+    afterEach: true
   },
   parserOptions: {
     parser: 'babel-eslint'

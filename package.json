@@ -56,9 +56,11 @@
     "eslint-plugin-vue": "^4.3.0",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
+    "jest-puppeteer": "^3.4.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.0",
     "prettier": "^1.14.3",
+    "puppeteer": "^1.8.0",
     "regenerator-runtime": "^0.11.1",
     "sass-loader": "^7.0.1",
     "vue-svg-loader": "^0.5.0"
@@ -66,6 +68,7 @@
   "jest": {
     "verbose": true,
     "testURL": "http://localhost/",
+    "preset": "jest-puppeteer",
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1"
     }
