@@ -48,6 +48,10 @@ module.exports = {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Lato:400,700|Ramabhadra'
+      },
+      {
+        rel: 'shortcut icon',
+        href: '/img/favicon.ico'
       }
     ]
   },
