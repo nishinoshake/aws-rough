@@ -6,6 +6,7 @@ module.exports = {
   },
   globals: {
     jest: true,
+    browser: true,
     page: true,
     describe: true,
     expect: true,
