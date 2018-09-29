@@ -22,8 +22,8 @@
     </section>
     <ServicePartsExclude>
       <section class="section-child">
-        <h3 class="title-small">MySQL以外のデータベース</h3>
-        <p class="text">こちらの都合でデータベースはMySQLのみになっています。そのうち他のデータベースも追加します、すみません。</p>
+        <h3 class="title-small">ライセンスがややこしいデータベース</h3>
+        <p class="text">選択できるDBエンジンはMySQL/MariaDB/PostgreSQLになっています。OracleとMicrosoft SQL Serverは、ライセンスまわりがややこしそうだったので除外しています。すみません。</p>
       </section>
       <section class="section-child">
         <h3 class="title-small">リザーブドインスタンスなど</h3>
