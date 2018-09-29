@@ -21,6 +21,9 @@ describe('cloudfront', () => {
           }
         },
         request: {
+          http: {
+            price: 0.0015
+          },
           https: {
             price: 0.002
           }
@@ -29,6 +32,7 @@ describe('cloudfront', () => {
     }
 
     const emptyRow = {
+      protocol: 'HTTPS',
       transfer: 0,
       request: 0
     }
@@ -36,6 +40,7 @@ describe('cloudfront', () => {
     expect(cloudfront(emptyRow, priceList)).toEqual(0)
 
     const row = {
+      protocol: 'HTTPS',
       transfer: 1000,
       request: 10000
     }
