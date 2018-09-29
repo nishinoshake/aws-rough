@@ -1,8 +1,8 @@
 export default {
-  name: 'DynamoDB',
   path: '/dynamodb/',
   useCases: [
     {
+      name: 'DynamoDBの計算結果が想定内',
       range: {
         min: 880,
         max: 950

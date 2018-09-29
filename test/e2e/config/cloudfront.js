@@ -1,8 +1,8 @@
 export default {
-  name: 'CloudFront',
   path: '/cloudfront/',
   useCases: [
     {
+      name: 'CloudFrontの計算結果が想定内',
       range: {
         min: 220,
         max: 290

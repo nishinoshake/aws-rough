@@ -1,8 +1,8 @@
 export default {
-  name: 'Lambda',
   path: '/lambda/',
   useCases: [
     {
+      name: 'Lambdaの計算結果が想定内',
       range: {
         min: 150,
         max: 200

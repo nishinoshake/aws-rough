@@ -1,8 +1,8 @@
 export default {
-  name: 'ElastiCache',
   path: '/elasticache/',
   useCases: [
     {
+      name: 'ElastiCacheの計算結果が想定内',
       range: {
         min: 100,
         max: 130

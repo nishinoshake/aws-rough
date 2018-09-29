@@ -1,8 +1,8 @@
 export default {
-  name: 'Route53',
   path: '/route53/',
   useCases: [
     {
+      name: 'Route53の計算結果が想定内',
       range: {
         min: 40,
         max: 50

@@ -1,8 +1,8 @@
 export default {
-  name: 'S3',
   path: '/s3/',
   useCases: [
     {
+      name: 'S3の計算結果が想定内',
       range: {
         min: 640,
         max: 700

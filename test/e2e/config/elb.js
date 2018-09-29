@@ -1,8 +1,8 @@
 export default {
-  name: 'ELB',
   path: '/elb/',
   useCases: [
     {
+      name: 'ELBの計算結果が想定内',
       range: {
         min: 78,
         max: 88

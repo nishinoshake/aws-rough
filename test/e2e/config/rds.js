@@ -1,9 +1,9 @@
 export default {
-  name: 'RDS',
   path: '/rds/',
   useCases: [
     // MySQL
     {
+      name: 'RDS-MySQLの計算結果が想定内',
       range: {
         min: 1710,
         max: 1780
@@ -37,6 +37,7 @@ export default {
     },
     // MariaDB
     {
+      name: 'RDS-MariaDBの計算結果が想定内',
       range: {
         min: 830,
         max: 870
@@ -75,6 +76,7 @@ export default {
     },
     // PostgreSQL
     {
+      name: 'RDS-PostgreSQLの計算結果が想定内',
       range: {
         min: 460,
         max: 500

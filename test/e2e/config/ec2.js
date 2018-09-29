@@ -1,8 +1,8 @@
 export default {
-  name: 'EC2',
   path: '/ec2/',
   useCases: [
     {
+      name: 'EC2の計算結果が想定内',
       range: {
         min: 730,
         max: 800
