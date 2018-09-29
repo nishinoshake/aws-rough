@@ -1,4 +1,4 @@
-import { getService, getDefaultTable, getDefaultTables, parseInstance } from '@/lib/service'
+import { getService, getDefaultTable, getDefaultTables, getDefaultColumnValue, parseInstance } from '@/lib/service'
 
 describe('service', () => {
   const serviceConfig = [
@@ -46,6 +46,12 @@ describe('service', () => {
           }
         ]
       })
+    })
+  })
+
+  describe('getDefaultColumnValue', () => {
+    test('設定ファイルからカラムのデフォルト値を取得できる', () => {
+      expect(getDefaultColumnValue('ec2', 'instance', serviceConfig)).toBe('t2.micro')
     })
   })
 

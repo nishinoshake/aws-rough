@@ -14,6 +14,9 @@
 </template>
 
 <script>
+import serviceConfig from '@/config/service'
+import { getDefaultColumnValue } from '@/lib/service'
+
 export default {
   name: 'ServiceFormSelect',
   props: {
@@ -35,6 +38,18 @@ export default {
     options: {
       type: Array,
       required: true
+    }
+  },
+  watch: {
+    options(newOptions, oldOptions) {
+      if (!newOptions.includes(this.value)) {
+        this.$store.commit('UPDATE', {
+          serviceKey: this.serviceKey,
+          index: this.index,
+          columnKey: this.columnKey,
+          value: getDefaultColumnValue(this.serviceKey, this.columnKey, serviceConfig)
+        })
+      }
     }
   },
   methods: {

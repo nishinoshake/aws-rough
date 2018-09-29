@@ -31,7 +31,7 @@
         :index="rowIndex"
         :column-key="column.key"
         :value="row[column.key]"
-        :options="column.options"
+        :options="column.options || column.parseJson($store.state.price, row)"
       />
     </td>
     <td class="mod-price">

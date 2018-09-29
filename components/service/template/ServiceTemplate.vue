@@ -58,18 +58,7 @@ export default {
   },
   computed: {
     service() {
-      const service = getService(this.serviceName, serviceConfig)
-      const table = service.table.map(row => {
-        if (row.parseJson) {
-          const options = Object.keys(this.$store.state.price).length ? row.parseJson(this.$store.state.price) : []
-
-          return { ...row, options }
-        }
-
-        return row
-      })
-
-      return { ...service, table }
+      return getService(this.serviceName, serviceConfig)
     },
     tableLabels() {
       return this.service.table.map(column => column.title)

@@ -11,6 +11,7 @@
     "serve": "http-server ./dist -p 8888",
     "analyze": "nuxt build --analyze",
     "generate": "nuxt generate",
+    "jest": "jest",
     "test": "yarn test:unit && yarn test:e2e",
     "test:unit": "jest test/unit",
     "test:e2e": "jest test/e2e",
