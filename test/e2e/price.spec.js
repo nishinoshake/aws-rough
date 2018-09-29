@@ -9,7 +9,7 @@ const serviceConfig = Object.keys(config)
 
 let usdjpy
 
-test('日本円の為替レートが想定内', async () => {
+test('日本円の為替レートが想定内', async done => {
   const aboutPage = await browser.newPage()
   const aboutUrl = buildUrl(aboutConfig.path)
   const fxUseCase = aboutConfig.useCases[0]
@@ -20,10 +20,11 @@ test('日本円の為替レートが想定内', async () => {
   expect(usdjpy).toBeLessThanOrEqual(fxUseCase.range.max)
 
   aboutPage.close()
+  done()
 })
 
 for (const service of serviceConfig) {
-  test(`${service.name}の計算結果が想定内`, async () => {
+  test(`${service.name}の計算結果が想定内`, async done => {
     const serviceUrl = buildUrl(service.path)
 
     for (const useCase of service.useCases) {
@@ -36,5 +37,7 @@ for (const service of serviceConfig) {
 
       servicePage.close()
     }
+
+    done()
   })
 }
