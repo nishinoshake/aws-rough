@@ -8,6 +8,10 @@
     <section class="section">
       <h2 class="title">入力項目の補足</h2>
       <section class="section-child">
+        <h3 class="title-small">DBエンジン</h3>
+        <p class="text">利用する<ExternalLink href="https://aws.amazon.com/jp/rds/#Amazon_RDS_データベースエンジン">データベースエンジン</ExternalLink>を選択してください。<br>当サイトでは、MySQL/MariaDB/PostgreSQLの中からお選びいただけます。</p>
+      </section>
+      <section class="section-child">
         <h3 class="title-small">インスタンス</h3>
         <p class="text">利用する<ExternalLink href="https://aws.amazon.com/jp/rds/instance-types/">インスタンスタイプ</ExternalLink>を選択してください。</p>
       </section>
@@ -23,7 +27,7 @@
     <ServicePartsExclude>
       <section class="section-child">
         <h3 class="title-small">ライセンスがややこしいデータベース</h3>
-        <p class="text">選択できるDBエンジンはMySQL/MariaDB/PostgreSQLになっています。OracleとMicrosoft SQL Serverは、ライセンスまわりがややこしそうだったので除外しています。すみません。</p>
+        <p class="text">選択できるDBエンジンは、MySQL/MariaDB/PostgreSQLに絞っています。<br>OracleとMicrosoft SQL Serverは、ライセンスまわりがややこしかったので除外しています。すみません。</p>
       </section>
       <section class="section-child">
         <h3 class="title-small">リザーブドインスタンスなど</h3>
