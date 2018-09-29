@@ -60,7 +60,7 @@ module.exports = {
     linkExactActiveClass: 'is-active-exact'
   },
   build: {
-    vendor: ['axios', 'lodash'],
+    vendor: ['axios', 'lodash', 'animejs'],
     extend(config) {
       config.module.rules = config.module.rules.map(rule => {
         if (rule.loader === 'url-loader' && rule.test.toString().includes('svg')) {
