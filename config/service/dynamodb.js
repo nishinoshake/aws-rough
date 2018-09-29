@@ -1,0 +1,24 @@
+export default {
+  key: 'dynamodb',
+  name: 'DynamoDB',
+  description: 'NoSQL',
+  color: 'blue',
+  multiple: false,
+  table: [
+    {
+      type: 'number',
+      key: 'storage',
+      title: 'ストレージ(GB)'
+    },
+    {
+      type: 'number',
+      key: 'rcu',
+      title: 'RCU'
+    },
+    {
+      type: 'number',
+      key: 'wcu',
+      title: 'WCU'
+    }
+  ]
+}
