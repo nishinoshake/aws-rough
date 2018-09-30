@@ -54,6 +54,10 @@ const meta = {
     title: pageTitle('RDSの料金'),
     description: pageDescription('RDSの料金を計算するぞ。')
   },
+  aurora: {
+    title: pageTitle('Auroraの料金'),
+    description: pageDescription('Auroraの料金を計算するぞ。')
+  },
   route53: {
     title: pageTitle('Route53の料金'),
     description: pageDescription('Route53の料金を計算するぞ。')

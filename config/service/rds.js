@@ -1,7 +1,7 @@
 export default {
   key: 'rds',
   name: 'RDS',
-  description: 'データベース',
+  description: 'RDBMS',
   color: 'blue',
   multiple: true,
   table: [
