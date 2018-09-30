@@ -34,9 +34,8 @@
         <p class="text"><ExternalLink href="https://aws.amazon.com/jp/ec2/pricing/on-demand/">オンデマンドインスタンス</ExternalLink>以外にも、あらかじめ予約することで安く利用できる<ExternalLink href="https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ec2-reserved-instances.html">リザーブドインスタンス</ExternalLink>や、余っているインスタンスを安くできるかもしれない<ExternalLink href="https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/using-spot-instances.html">スポットインスタンス</ExternalLink>などがあります。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small">「汎用」以外のインスタンス</h3>
-        <p class="text">インスタンスタイプの選択肢は「汎用」ものに絞っています。</p>
-        <p class="text">EC2では、「汎用」のもの以外にも「コンピューティング最適化」や「メモリ最適化」など、様々な目的に特化したインスタンスタイプが用意されています。詳しくは、<ExternalLink href="https://aws.amazon.com/jp/ec2/pricing/on-demand/">公式の料金表</ExternalLink>をご確認ください。</p>
+        <h3 class="title-small">選択肢にないインスタンスタイプ</h3>
+        <p class="text">インスタンスタイプは、よく使いそうなものに絞っています。<br>その他のインスタンスタイプについては、<ExternalLink href="https://aws.amazon.com/jp/ec2/instance-types/">公式サイト</ExternalLink>でご確認ください。</p>
       </section>
       <section class="section-child">
         <h3 class="title-small">汎用SSD以外のストレージ</h3>

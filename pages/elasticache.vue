@@ -19,9 +19,8 @@
         <p class="text">あらかじめノードを予約する<ExternalLink href="https://aws.amazon.com/jp/elasticache/reserved-cache-nodes/">リザーブドノード</ExternalLink>を利用すれば、大幅な割引が適用されます。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small">スタンダード以外のノード</h3>
-        <p class="text">ノードタイプの選択肢は「スタンダード」ものに絞っています。</p>
-        <p class="text">ElastiCacheでは、「スタンダード」のもの以外にも「メモリ最適化」のノードタイプが用意されています。詳しくは、<ExternalLink href="https://aws.amazon.com/jp/elasticache/pricing/">公式の料金表</ExternalLink>をご確認ください。</p>
+        <h3 class="title-small">選択肢にないノードタイプ</h3>
+        <p class="text">ノードタイプは、よく使いそうなものに絞っています。<br>その他のノードタイプについては、<ExternalLink href="https://aws.amazon.com/jp/elasticache/pricing/">公式サイト</ExternalLink>でご確認ください。</p>
       </section>
       <section class="section-child">
         <h3 class="title-small">追加のバックアップストレージ</h3>

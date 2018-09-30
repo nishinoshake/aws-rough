@@ -35,9 +35,8 @@
         <p class="text">オンデマンドインスタンス以外にも、あらかじめ予約することで安く利用できるリザーブドインスタンスが用意されています。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small">「汎用」以外のインスタンス</h3>
-        <p class="text">インスタンスタイプの選択肢は「汎用」ものに絞っています。</p>
-        <p class="text">RDSでは、「汎用」のもの以外にも「メモリ最適化インスタンス」が用意されています。詳しくは、<ExternalLink href="https://aws.amazon.com/jp/rds/mysql/pricing/">公式の料金表</ExternalLink>をご確認ください。</p>
+        <h3 class="title-small">選択肢にないインスタンスタイプ</h3>
+        <p class="text">インスタンスタイプは、よく使いそうなものに絞っています。<br>その他のインスタンスタイプについては、<ExternalLink href="https://aws.amazon.com/jp/rds/instance-types/">公式サイト</ExternalLink>でご確認ください。</p>
       </section>
       <section class="section-child">
         <h3 class="title-small">汎用SSD以外のストレージ</h3>
