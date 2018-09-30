@@ -8,9 +8,7 @@ describe('elasticache', () => {
         instance: [
           {
             price: 0.026,
-            attributes: {
-              instanceType: 'cache.t2.micro'
-            }
+            instanceType: 'cache.t2.micro'
           }
         ]
       }

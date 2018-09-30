@@ -18,7 +18,7 @@ export default {
       title: 'インスタンス',
       default: 'db.t2.micro',
       mod: 'large',
-      parseJson: (json, row) => json.rds.instance[row.engine].map(instance => instance.attributes.instanceType)
+      parseJson: (json, row) => json.rds.instance[row.engine].map(instance => instance.instanceType)
     },
     {
       type: 'number',

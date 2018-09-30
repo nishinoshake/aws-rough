@@ -11,7 +11,7 @@ export default {
       title: 'ノードタイプ',
       default: 'cache.t2.micro',
       mod: 'large',
-      parseJson: json => json.elasticache.instance.map(instance => instance.attributes.instanceType)
+      parseJson: json => json.elasticache.instance.map(instance => instance.instanceType)
     },
     {
       type: 'number',

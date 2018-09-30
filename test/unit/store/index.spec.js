@@ -17,10 +17,10 @@ const serviceConfig = [
 
 const price = {
   ec2: {
-    instance: [{ price: 0.005, attributes: { instanceType: 't2.micro' } }]
+    instance: [{ price: 0.005, instanceType: 't2.micro' }]
   },
   rds: {
-    instance: [{ price: 0.008, attributes: { instanceType: 'db.t2.micro' } }]
+    instance: [{ price: 0.008, instanceType: 'db.t2.micro' }]
   }
 }
 

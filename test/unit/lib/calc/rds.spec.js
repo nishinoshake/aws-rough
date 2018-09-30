@@ -9,9 +9,7 @@ describe('rds', () => {
           MySQL: [
             {
               price: 0.01,
-              attributes: {
-                instanceType: 'db.t2.micro'
-              }
+              instanceType: 'db.t2.micro'
             }
           ]
         },

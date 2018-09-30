@@ -8,9 +8,7 @@ describe('ec2', () => {
         instance: [
           {
             price: 0.01,
-            attributes: {
-              instanceType: 't2.nano'
-            }
+            instanceType: 't2.nano'
           }
         ]
       },

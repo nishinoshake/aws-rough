@@ -60,15 +60,11 @@ describe('service', () => {
       const instances = [
         {
           price: 0.01,
-          attributes: {
-            instanceType: 't2.nano'
-          }
+          instanceType: 't2.nano'
         },
         {
           price: 0.02,
-          attributes: {
-            instanceType: 't2.micro'
-          }
+          instanceType: 't2.micro'
         }
       ]
 
