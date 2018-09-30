@@ -35,6 +35,39 @@ export default {
         target: '.service-calc span[data-name="price"]'
       }
     },
+    {
+      name: 'RDS-MySQLの高額インスタンスの計算結果が想定内',
+      range: {
+        min: 6670,
+        max: 6700
+      },
+      waitFor: 'td[data-name="instance"]',
+      actions: [
+        {
+          type: 'select',
+          target: 'td[data-name="instance"] select',
+          value: 'db.r4.16xlarge'
+        },
+        {
+          type: 'type',
+          target: 'td[data-name="unit"] input',
+          value: '1'
+        },
+        {
+          type: 'select',
+          target: 'td[data-name="az"] select',
+          value: 'Single-AZ'
+        },
+        {
+          type: 'type',
+          target: 'td[data-name="storage"] input',
+          value: '20'
+        }
+      ],
+      price: {
+        target: '.service-calc span[data-name="price"]'
+      }
+    },
     // MariaDB
     {
       name: 'RDS-MariaDBの計算結果が想定内',

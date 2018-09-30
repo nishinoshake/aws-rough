@@ -33,6 +33,39 @@ export default {
       price: {
         target: '.service-calc span[data-name="price"]'
       }
+    },
+    {
+      name: 'EC2の高額インスタンスの計算結果が想定内',
+      range: {
+        min: 30500,
+        max: 31000
+      },
+      waitFor: 'td[data-name="instance"]',
+      actions: [
+        {
+          type: 'select',
+          target: 'td[data-name="instance"] select',
+          value: 'p3.16xlarge'
+        },
+        {
+          type: 'type',
+          target: 'td[data-name="unit"] input',
+          value: '1'
+        },
+        {
+          type: 'type',
+          target: 'td[data-name="storage"] input',
+          value: '0'
+        },
+        {
+          type: 'type',
+          target: 'td[data-name="transfer"] input',
+          value: '0'
+        }
+      ],
+      price: {
+        target: '.service-calc span[data-name="price"]'
+      }
     }
   ]
 }
