@@ -23,7 +23,7 @@
 <script>
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
-import serviceConfig from '@/config/service'
+import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
 import { MONTHLY_DATE } from '@/config/constants'
 import { getService } from '@/lib/service'

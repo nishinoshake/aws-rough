@@ -1,10 +1,10 @@
-import elb from '@/lib/calc/elb'
+import clb from '@/lib/calc/clb'
 import { MONTHLY_HOURS } from '@/config/constants'
 
-describe('elb', () => {
-  test('ELBの料金を計算できる', () => {
+describe('clb', () => {
+  test('clbの料金を計算できる', () => {
     const priceList = {
-      elb: {
+      clb: {
         instance: {
           price: 0.1
         },
@@ -19,7 +19,7 @@ describe('elb', () => {
       transfer: 0
     }
 
-    expect(elb(emptyRow, priceList)).toBe(0)
+    expect(clb(emptyRow, priceList)).toBe(0)
 
     const row = {
       unit: 2,
@@ -30,6 +30,6 @@ describe('elb', () => {
     const transfer = 10 * 1000
     const expected = instance + transfer
 
-    expect(elb(row, priceList)).toBe(expected)
+    expect(clb(row, priceList)).toBe(expected)
   })
 })

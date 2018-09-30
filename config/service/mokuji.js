@@ -1,7 +1,5 @@
 import ec2 from './ec2'
-import clb from './clb'
-import alb from './alb'
-import nlb from './nlb'
+import elb from './elb'
 import lambda from './lambda'
 import route53 from './route53'
 import cloudfront from './cloudfront'
@@ -11,4 +9,4 @@ import aurora from './aurora'
 import dynamodb from './dynamodb'
 import elasticache from './elasticache'
 
-export default [ec2, clb, alb, nlb, lambda, route53, cloudfront, s3, rds, aurora, dynamodb, elasticache]
+export default [ec2, elb, lambda, route53, cloudfront, s3, rds, aurora, dynamodb, elasticache]

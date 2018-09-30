@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import serviceConfig from '@/config/service'
+import serviceConfig from '@/config/service/mokuji'
 import IconLogo from '@/assets/svg/logo.svg'
 
 export default {

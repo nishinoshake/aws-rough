@@ -1,5 +1,10 @@
 <template>
-  <ServiceTemplate service-name="elb">
+  <article class="service">
+    <ServiceTemplateTitle :service="service.elb" />
+    <div class="service-inside" :data-name="serviceName" v-for="serviceName in ['clb', 'alb', 'nlb']" :key="serviceName">
+      <ServiceTemplateLabel :label="service[serviceName].fullname" />
+      <ServiceTemplateCalc :service="service[serviceName]" />
+    </div>
     <section class="section">
       <h2 class="title">概要と料金</h2>
       <p class="text">複数のEC2インスタンスにトラフィックを分散するサービスです。</p>
@@ -13,31 +18,45 @@
       </section>
       <section class="section-child">
         <h3 class="title-small">データ転送量</h3>
-        <p class="text">ELBで処理されるデータ量をGB単位で入力してください。</p>
+        <p class="text">ロードバランサーで処理されるデータ量の合計をGB単位で入力してください。</p>
         <p class="text">Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。</p>
         <pre>2 * 100000 / 1024 ≒ 195GB</pre>
       </section>
-    </section>
-    <ServicePartsExclude>
       <section class="section-child">
-        <h3 class="title-small">Application Load Balancerなどを利用する場合</h3>
-        <p class="text">ELBには、最も歴史のある<ExternalLink href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/classic/introduction.html">Classic Load Balancer</ExternalLink>以外にも、<ExternalLink href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/introduction.html">Application Load Balancer</ExternalLink>や<ExternalLink href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/network/introduction.html">Network Load Balancer</ExternalLink>が用意されています。現状は、CLBをのみを対象にしていますが、ALBを利用するケースは多いと思うので、近いうちに対応予定です。</p>
+        <h3 class="title-small">LCU</h3>
+        <p class="text">Load Balancer Capacity Unit(LCU)を入力してください。</p>
+        <p class="text">名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。このサイトでざっくり説明するのは難しいので、<ExternalLink href="https://aws.amazon.com/jp/elasticloadbalancing/pricing/">公式の料金表</ExternalLink>を参考に算出していただくか、<ExternalLink href="https://calculator.s3.amazonaws.com/index.html">公式のツール</ExternalLink>をお使いください。</p>
       </section>
-    </ServicePartsExclude>
-  </ServiceTemplate>
+    </section>
+  </article>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
+import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateTitle'
+import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateLabel'
+import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
+import serviceConfigELB from '@/config/service/elb'
+import serviceConfigCLB from '@/config/service/clb'
+import serviceConfigALB from '@/config/service/alb'
+import serviceConfigNLB from '@/config/service/nlb'
 import ExternalLink from '@/components/text/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceELB',
-  components: { ServiceTemplate, ServicePartsExclude, ExternalLink },
+  components: { ServiceTemplateTitle, ServiceTemplateLabel, ServiceTemplateCalc, ExternalLink },
   head() {
     return meta.elb
+  },
+  data() {
+    return {
+      service: {
+        elb: serviceConfigELB,
+        clb: serviceConfigCLB,
+        alb: serviceConfigALB,
+        nlb: serviceConfigNLB
+      }
+    }
   }
 }
 </script>

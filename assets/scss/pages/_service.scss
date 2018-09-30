@@ -27,9 +27,48 @@
         font-size: 50px;
       }
     }
-  } // 計算するところ
+  }
+  &-inside {
+    @include max {
+      padding: 20px 20px 0;
+    }
+    @include min {
+      padding: 40px 40px 0;
+    }
+    &:nth-of-type(n+2) {
+      @include max {
+        margin-top: 10px;
+      }
+    }
+    &:last-of-type {
+      @include bb;
+      @include max {
+        padding-bottom: 35px;
+      }
+      @include min {
+        padding-bottom: 60px;
+      }
+    }
+    .table {
+      @include bl;
+      @include br;
+    }
+  }
+  // 計算するところ
   &-calc {
     position: relative;
+    &-label {
+      font-size: 22px;
+      @include font-ramabhadra;
+      @include bb;
+      @include max {
+        padding-bottom: 6px;
+      }
+      @include min {
+        padding-bottom: 8px;
+        font-size: 32px;
+      }
+    }
     &-footer {
       position: absolute;
       right: 0;

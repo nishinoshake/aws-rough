@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import serviceConfig from '@/config/service'
+import serviceConfig from '@/config/service/mokuji'
 
 export default {
   name: 'LayoutMenuSP',
