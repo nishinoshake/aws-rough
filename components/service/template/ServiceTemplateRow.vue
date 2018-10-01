@@ -21,6 +21,7 @@
         v-if="column.type === 'number'"
         :service-key="service.key"
         :index="rowIndex"
+        :label="labels[columnIndex]"
         :column-key="column.key"
         :value="row[column.key]"
       />
@@ -29,6 +30,7 @@
         v-if="column.type === 'select'"
         :service-key="service.key"
         :index="rowIndex"
+        :label="labels[columnIndex]"
         :column-key="column.key"
         :value="row[column.key]"
         :options="column.options || column.parseJson($store.state.price, row)"

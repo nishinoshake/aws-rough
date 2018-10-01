@@ -3,6 +3,7 @@
     <div class="form-select">
       <select
         ref="select"
+        aria-label="サービスを選択"
         @input="e => changeService(e.target.value)"
       >
         <option value="">Menu</option>

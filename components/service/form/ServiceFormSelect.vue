@@ -2,6 +2,7 @@
   <div class="form-select">
     <select
       @change="e => update({ serviceKey, index, columnKey, value: e.target.value })"
+      :aria-label="label"
       :value="value"
     >
       <option
@@ -26,6 +27,10 @@ export default {
     },
     index: {
       type: Number,
+      required: true
+    },
+    label: {
+      type: String,
       required: true
     },
     columnKey: {

@@ -2,6 +2,7 @@
   <div class="form-text">
     <input
       type="number"
+      :aria-label="label"
       :value="value"
       min="0"
       class="form-text-input"
@@ -22,6 +23,10 @@ export default {
     },
     index: {
       type: Number,
+      required: true
+    },
+    label: {
+      type: String,
       required: true
     },
     columnKey: {
