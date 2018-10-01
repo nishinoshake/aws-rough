@@ -6,6 +6,7 @@ module.exports = {
         id: 'UA-53153991-13'
       }
     ],
+    '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@/modules/count-page'
   ],
@@ -73,6 +74,15 @@ module.exports = {
         loader: 'vue-svg-loader'
       })
     }
+  },
+  manifest: {
+    name: 'ざっくりAWS',
+    lang: 'ja',
+    theme_color: '#ffffff',
+    background_color: '#ffffff'
+  },
+  workbox: {
+    dev: true
   },
   loading: false,
   css: ['@/assets/scss/index.scss']
