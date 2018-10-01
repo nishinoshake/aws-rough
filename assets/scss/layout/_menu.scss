@@ -50,10 +50,10 @@
       position: relative;
       padding: 6px 0;
       font-size: 18px;
+      font-weight: bold;
       line-height: 1.4;
       color: $color-modest;
       white-space: nowrap;
-      @include font-ramabhadra;
       &:hover,
       &.is-active {
         color: $color-dark;

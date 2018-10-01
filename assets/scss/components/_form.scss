@@ -12,7 +12,6 @@
       text-align: center;
       border: 2px solid $color-border;
       transition: 0.15s $easeOutCubic;
-      @include font-lato;
       &:invalid {
         border-color: $color-red;
       }
@@ -46,7 +45,6 @@
       border-radius: 0;
       font-size: 16px;
       cursor: pointer;
-      @include font-lato;
     }
     &:after {
       content: '';

@@ -97,15 +97,6 @@
 // -----------------------------------------------------
 // Text
 // -----------------------------------------------------
-@mixin font-ramabhadra {
-  font-family: 'Ramabhadra', sans-serif;
-}
-@mixin font-lato {
-  font-family: 'Lato', '游ゴシック体', 'Yu Gothic', YuGothic,
-    'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo,
-    sans-serif;
-}
-
 @mixin hide-text {
   font: 0 / 0;
   color: transparent;

@@ -22,7 +22,6 @@
       font-size: 26px;
       letter-spacing: 0.05em;
       white-space: nowrap;
-      @include font-ramabhadra;
       @include min {
         font-size: 50px;
       }
@@ -59,7 +58,6 @@
     position: relative;
     &-label {
       font-size: 22px;
-      @include font-ramabhadra;
       @include bb;
       @include max {
         padding-bottom: 6px;

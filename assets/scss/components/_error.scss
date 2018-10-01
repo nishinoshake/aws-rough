@@ -22,9 +22,6 @@
       color: $color-white;
     }
   }
-  &-title {
-    @include font-ramabhadra;
-  }
   &-text {
     padding: $padding-contents-sp;
     font-weight: bold;

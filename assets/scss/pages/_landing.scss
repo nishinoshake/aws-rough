@@ -77,7 +77,6 @@
       font-weight: bold;
       line-height: 1;
       white-space: nowrap;
-      @include font-ramabhadra;
       @include min {
         margin-bottom: 12px;
         font-size: 24px;
