@@ -58,12 +58,13 @@
     position: relative;
     &-label {
       font-size: 22px;
+      font-weight: bold;
       @include bb;
       @include max {
-        padding-bottom: 6px;
+        padding-bottom: 8px;
       }
       @include min {
-        padding-bottom: 8px;
+        padding-bottom: 10px;
         font-size: 32px;
       }
     }
