@@ -1,7 +1,7 @@
 <template>
   <div class="form-select">
     <select
-      @input="e => update({ serviceKey, index, columnKey, value: e.target.value })"
+      @change="e => update({ serviceKey, index, columnKey, value: e.target.value })"
       :value="value"
     >
       <option
