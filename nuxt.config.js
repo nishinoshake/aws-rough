@@ -59,7 +59,7 @@ module.exports = {
     vendor: ['axios', 'lodash', 'animejs'],
     extend(config) {
       config.module.rules = config.module.rules.map(rule => {
-        if (rule.loader === 'url-loader' && rule.test.toString().includes('svg')) {
+        if (rule.loader === 'url-loader' && rule.test.toString().indexOf('svg') > -1) {
           return {
             ...rule,
             test: /\.(png|jpe?g|gif)$/

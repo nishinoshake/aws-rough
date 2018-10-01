@@ -42,7 +42,7 @@ export default {
   },
   watch: {
     options(newOptions, oldOptions) {
-      if (!newOptions.includes(this.value)) {
+      if (newOptions.indexOf(this.value) === -1) {
         this.$store.commit('UPDATE', {
           serviceKey: this.serviceKey,
           index: this.index,

@@ -55,7 +55,11 @@ export default {
   },
   methods: {
     disableTween(oldPrice) {
-      if (!process.browser || oldPrice === undefined || navigator.userAgent.toLowerCase().includes('headlesschrome')) {
+      if (
+        !process.browser ||
+        oldPrice === undefined ||
+        navigator.userAgent.toLowerCase().indexOf('headlesschrome') > -1
+      ) {
         return true
       }
 
