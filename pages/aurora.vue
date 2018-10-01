@@ -2,7 +2,7 @@
   <ServiceTemplate service-name="aurora">
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text">AWSがクラウド向けに最適化したリレーショナルデータベースのサービスです。<br>立ち位置的には、RDSの選択肢のひとつですが、別にした方がわかりやすかったので、ページを分けています。</p>
+      <p class="text">AWSがクラウド向けに設計したリレーショナルデータベースのサービスです。<br>立ち位置的には、RDSの選択肢のひとつですが、別にした方がわかりやすかったので、ページを分けています。</p>
       <p class="text">主に、インスタンスのスペックや、レプリカの数、ストレージの容量などによって料金が決まります。</p>
     </section>
     <section class="section">
