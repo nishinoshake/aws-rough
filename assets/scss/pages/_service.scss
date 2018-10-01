@@ -78,10 +78,6 @@
       justify-content: center;
       align-items: center;
       padding: 12px 14px;
-      visibility: hidden;
-      &.is-loaded {
-        visibility: visible;
-      }
       @include min {
         padding: 12px 20px;
       }
