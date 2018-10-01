@@ -77,9 +77,12 @@ module.exports = {
   },
   manifest: {
     name: 'ざっくりAWS',
+    short_name: 'ざっくりAWS',
     lang: 'ja',
+    orientation: 'portrait',
     theme_color: '#ffffff',
-    background_color: '#ffffff'
+    background_color: '#ffffff',
+    start_url: '/index.html'
   },
   workbox: {
     dev: true
