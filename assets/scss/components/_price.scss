@@ -7,12 +7,13 @@
 .price {
   display: inline-flex;
   align-items: flex-end;
+  font-family: sans-serif;
   font-weight: bold;
   line-height: 1;
   letter-spacing: 0.06em;
   &-number {
-    margin: 0 0.1em -0.1em 0;
-    font-size: 130%;
+    margin: 0 0.1em -0.05em 0;
+    font-size: 120%;
   }
   &.mod-large {
     font-size: 18px;
@@ -21,7 +22,7 @@
     }
     .price-number {
       margin: 0 0.2em -0.1em 0;
-      font-size: 140%;
+      font-size: 130%;
     }
   }
 }
