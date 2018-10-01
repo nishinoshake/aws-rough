@@ -29,13 +29,13 @@
     &-list {
       display: flex;
       flex-wrap: wrap;
-      margin: 12px -20px 0 -15px;
+      margin: 12px -20px 0 -20px;
       @include min {
         margin: 24px -20px 0 -33px;
       }
     }
     &-item {
-      padding: 8px 5px;
+      padding: 8px 2px;
       @include min {
         padding: 14px 20px;
       }
@@ -72,7 +72,7 @@
       flex-grow: 1;
     }
     &-name {
-      margin-bottom: 7px;
+      margin-bottom: 8px;
       font-size: 16px;
       font-weight: bold;
       line-height: 1;
@@ -83,11 +83,12 @@
       }
     }
     &-description {
+      font-size: 15px;
       line-height: 1;
       white-space: nowrap;
-      color: $color-modest;
+      color: #575757;
       @include max {
-        font-size: 12px;
+        font-size: 11px;
       }
     }
   }
