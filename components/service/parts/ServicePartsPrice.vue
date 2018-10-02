@@ -1,6 +1,6 @@
 <template>
   <p :class="['price', {[`mod-${mod}`]: mod}]">
-    <span class="price-number" data-name="price">{{ yen }}</span>
+    <span :class="['price-number', {'mod-expensive': isExpensive}]" data-name="price">{{ yen }}</span>
     <span class="price-unit">円</span>
   </p>
 </template>
@@ -25,6 +25,14 @@ export default {
       tweenPrice: 0
     }
   },
+  computed: {
+    yen() {
+      return formatPrice(this.tweenPrice)
+    },
+    isExpensive() {
+      return this.price >= Math.pow(10, 7)
+    }
+  },
   watch: {
     price: {
       handler(newPrice, oldPrice) {
@@ -46,11 +54,6 @@ export default {
         })
       },
       immediate: true
-    }
-  },
-  computed: {
-    yen() {
-      return formatPrice(this.tweenPrice)
     }
   },
   methods: {

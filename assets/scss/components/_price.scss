@@ -16,13 +16,19 @@
     font-size: 120%;
   }
   &.mod-large {
-    font-size: 18px;
+    font-size: 16px;
     @include min {
       font-size: 24px;
     }
     .price-number {
       margin: 0 0.2em -0.1em 0;
-      font-size: 130%;
+      font-size: 120%;
+      @include max {
+        margin-bottom: -0.05em;
+      }
+      @include min {
+        font-size: 130%;
+      }
     }
   }
 }

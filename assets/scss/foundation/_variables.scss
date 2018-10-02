@@ -22,6 +22,7 @@ $color-blue: #2e73b8;
 // -----------------------------------------------------
 // size
 // -----------------------------------------------------
+$mq-minimal: 360px;
 $mq-max: 920px;
 $mq-min: $mq-max + 1;
 $mq-kamakura: 1192px;
@@ -30,7 +31,7 @@ $width-border-pc: 4px;
 $width-menu: 170px;
 $height-header-sp: 47px;
 $height-footer-sp: 133px;
-$height-cart-sp: 60px;
+$height-cart-sp: 56px;
 $padding-contents-sp: 20px;
 $padding-contents-pc: 50px;
 $padding-cart: 20px;

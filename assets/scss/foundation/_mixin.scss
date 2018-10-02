@@ -51,6 +51,12 @@
   transform: translateX(-50%);
 }
 
+@mixin center-flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // -----------------------------------------------------
 // Background
 // -----------------------------------------------------
@@ -112,5 +118,5 @@
 // Transition
 // -----------------------------------------------------
 @mixin transition-kamakura {
-  transition: 0.3s $easeOutQuart;
+  transition: .36s $easeOutQuart;
 }

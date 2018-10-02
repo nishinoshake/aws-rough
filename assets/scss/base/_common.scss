@@ -15,9 +15,17 @@ body {
 .container {
   position: relative;
   overflow: hidden;
+  @include bl;
+  @include br;
   @include transition-kamakura;
   @include max {
-    padding: $height-header-sp 0 $height-cart-sp;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-bottom: $height-cart-sp;
+  }
+  @include min {
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
   @include min($mq-kamakura) {
     margin-left: $width-menu;
@@ -42,10 +50,8 @@ body {
 
 .contents {
   position: relative;
-  min-height: calc(100vh - #{$height-header-sp} - #{$height-cart-sp});
+  min-height: calc(100vh - #{$height-header-sp});
   padding-bottom: $height-footer-sp;
-  @include bl;
-  @include br;
   @include min {
     min-height: 100vh;
     padding-bottom: 82px;
