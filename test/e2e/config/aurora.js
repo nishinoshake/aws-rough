@@ -22,8 +22,8 @@ export default {
         },
         {
           type: 'type',
-          target: 'td[data-name="replica"] input',
-          value: '1'
+          target: 'td[data-name="unit"] input',
+          value: '2'
         },
         {
           type: 'type',
@@ -61,8 +61,8 @@ export default {
         },
         {
           type: 'type',
-          target: 'td[data-name="replica"] input',
-          value: '3'
+          target: 'td[data-name="unit"] input',
+          value: '4'
         },
         {
           type: 'type',

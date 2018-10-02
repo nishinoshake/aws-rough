@@ -16,10 +16,6 @@
         <p class="text">利用する<ExternalLink href="https://aws.amazon.com/jp/rds/aurora/pricing/">インスタンスタイプ</ExternalLink>を選択してください。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small">レプリカ</h3>
-        <p class="text"><ExternalLink href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/Aurora.Replication.html">レプリケーション</ExternalLink>が必要な場合は、台数を入力してください。</p>
-      </section>
-      <section class="section-child">
         <h3 class="title-small">ストレージ</h3>
         <p class="text">利用する予定のストレージの容量をGB単位で入力してください。</p>
       </section>

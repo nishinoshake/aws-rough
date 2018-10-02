@@ -24,7 +24,7 @@ describe('aurora', () => {
     const emptyRow = {
       engine: 'MySQL',
       instance: '',
-      replica: 0,
+      unit: 0,
       storage: 0,
       io: 0
     }
@@ -34,12 +34,12 @@ describe('aurora', () => {
     const row = {
       engine: 'MySQL',
       instance: 'db.r4.large',
-      replica: 2,
+      unit: 3,
       storage: 100,
       io: 10000000
     }
 
-    const instance = priceList.aurora.instance.MySQL[0].price * MONTHLY_HOURS * (1 + row.replica)
+    const instance = priceList.aurora.instance.MySQL[0].price * MONTHLY_HOURS * row.unit
     const storage = priceList.aurora.storage.price * row.storage
     const io = priceList.aurora.io.price * row.io
     const expected = instance + storage + io

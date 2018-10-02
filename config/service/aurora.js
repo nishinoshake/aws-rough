@@ -22,15 +22,14 @@ export default {
     },
     {
       type: 'number',
-      key: 'replica',
+      key: 'unit',
       mod: 'small',
-      title: 'レプリカ(台)'
+      title: '台数'
     },
     {
       type: 'number',
       key: 'storage',
-      title: 'ストレージ(GB)',
-      mod: 'small'
+      title: 'ストレージ(GB)'
     },
     {
       type: 'number',
