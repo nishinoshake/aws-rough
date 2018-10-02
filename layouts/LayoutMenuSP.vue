@@ -6,7 +6,7 @@
       id="menu-sp"
       ref="select"
       aria-label="サービスを選択"
-      @input="e => changeService(e.target.value)"
+      @change="e => changeService(e.target.value)"
     >
       <option value="/">Home</option>
       <option
