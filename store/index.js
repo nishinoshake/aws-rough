@@ -2,8 +2,8 @@ import Vuex from 'vuex'
 import * as calc from '@/lib/calc'
 import { getDefaultTable, getDefaultTables } from '@/lib/service'
 import { usdToXXX } from '@/lib/price'
-import serviceConfig from '@/config/service'
 import { fetchPrice, fetchFx } from '@/api'
+import serviceConfig from '@/config/service'
 
 // すべてをAction経由にした方が見通しは良さそうですが、
 // 冗長過ぎるので、非同期なものだけdispatchして、他は直接commit。
@@ -64,6 +64,33 @@ const store = () =>
 
         state.total = calc.totalTables(state.tables)
       },
+      RESTORE(state, { tables, serviceConfig }) {
+        Object.keys(state.tables).forEach(serviceKey => {
+          if (!tables[serviceKey]) {
+            return
+          }
+
+          state.tables[serviceKey] = tables[serviceKey].map(restoredRow => {
+            let row = getDefaultTable(serviceKey, serviceConfig)
+
+            Object.keys(row).forEach(columnKey => {
+              if (restoredRow[columnKey]) {
+                row[columnKey] = restoredRow[columnKey]
+              }
+            })
+
+            const usd = calc[serviceKey](row, state.price)
+            const jpy = usdToXXX(usd, state.fx.usdjpy)
+
+            return {
+              ...row,
+              total: { usd, jpy }
+            }
+          })
+        })
+
+        state.total = calc.totalTables(state.tables)
+      },
       REMOVE(state, { serviceKey, serviceConfig, index }) {
         if (state.tables[serviceKey].length === 1) {
           state.tables[serviceKey].splice(index, 1, getDefaultTable(serviceKey, serviceConfig))
@@ -88,6 +115,28 @@ const store = () =>
           commit('SET_IS_LOADED')
         } catch (e) {
           commit('SET_ERROR_MESSAGE', { message: '通信エラーが発生しました。\nすみませんがリロードを・・・' })
+          commit('SHOW_ERROR')
+        }
+      },
+      async fetchZ({ commit }, { fetchZ, hash, serviceConfig }) {
+        try {
+          const tables = await fetchZ(hash)
+
+          commit('RESTORE', { tables, serviceConfig })
+        } catch (e) {
+          commit('SET_ERROR_MESSAGE', {
+            message: 'データを復元できませんでした・・・'
+          })
+          commit('SHOW_ERROR')
+        }
+      },
+      async postZ({ commit }, { postZ, hash, data }) {
+        try {
+          await postZ(hash, data)
+        } catch (e) {
+          commit('SET_ERROR_MESSAGE', {
+            message: 'リンクを作成できませんでした。\nすみませんがもう一度お願いします・・・'
+          })
           commit('SHOW_ERROR')
         }
       }

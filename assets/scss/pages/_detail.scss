@@ -7,16 +7,18 @@
 .detail {
   &-title {
     &-copy {
-      width: 4em;
+      width: 8.6em;
       margin-left: 15px;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 6px 0;
-      font-size: 50%;
+      font-size: 52%;
+      font-weight: bold;
       @include b;
       cursor: pointer;
       @include min {
+        padding: 12px 0;
         margin-left: 30px;
       }
       &:hover {
@@ -26,14 +28,29 @@
     }
   }
   &-body {
-    display: flex;
+    position: relative;
     @include max {
-      flex-direction: column-reverse;
       padding: 40px $padding-contents-sp;
     }
     @include min {
-      align-items: center;
       padding: $padding-contents-pc;
+    }
+  }
+  &-main {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s linear;
+    @include max {
+      flex-direction: column-reverse;
+    }
+    @include min {
+      align-items: center;
+    }
+    &.is-visible {
+      opacity: 1;
+      transition-delay: .4s;
+      pointer-events: auto;
     }
   }
   &-price {
@@ -86,13 +103,41 @@
     }
   }
   &-empty {
-    padding: $padding-contents-sp $padding-contents-sp 0;
+    position: absolute;
+    top: $padding-contents-sp;
+    left: $padding-contents-sp;
     font-size: 22px;
     font-weight: bold;
-    line-height: 1.7;
+    line-height: 1.5;
+    pointer-events: none;
+    span {
+      display: block;
+      opacity: 0;
+      transition: .36s $easeOutQuart;
+      &:nth-child(odd) {
+        transform: translateX(-10px);
+        @include min {
+          transform: translateX(-16px);
+        }
+      }
+      &:nth-child(even) {
+        transform: translateX(10px);
+        @include min {
+          transform: translateX(16px);
+        }
+      }
+    }
     @include min {
-      padding: $padding-contents-pc $padding-contents-pc 0;
+      top: $padding-contents-pc;
+      left: $padding-contents-pc;
       font-size: 52px;
+    }
+    &.is-visible {
+      span {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: .4s;
+      }
     }
   }
 }

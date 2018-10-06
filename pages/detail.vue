@@ -1,11 +1,16 @@
 <template>
   <article class="detail">
     <h1 class="title-page">料金内訳<DetailCopy :services="services" /></h1>
-    <div class="detail-body" v-if="hasService">
-      <DetailPrice :services="services" :colors="colors" />
-      <DetailChart :services="services" :colors="colors" :hover-colors="hoverColors" />
+    <div class="detail-body">
+      <div :class="['detail-main', {'is-visible': hasService}]">
+        <DetailPrice v-if="hasService" :services="services" :colors="colors" />
+        <DetailChart v-if="hasService" :services="services" :colors="colors" :hover-colors="hoverColors" />
+      </div>
+      <p :class="['detail-empty', {'is-visible': !hasService}]">
+        <span>With Great Power</span>
+        <span>Comes Great Responsibility</span>
+      </p>
     </div>
-    <DetailEmpty v-else />
   </article>
 </template>
 
@@ -15,7 +20,6 @@ import ServicePartsPrice from '@/components/service/parts/ServicePartsPrice'
 import DetailCopy from '@/components/detail/DetailCopy'
 import DetailPrice from '@/components/detail/DetailPrice'
 import DetailChart from '@/components/detail/DetailChart'
-import DetailEmpty from '@/components/detail/DetailEmpty'
 import meta from '@/config/meta'
 import serviceConfig from '@/config/service'
 import { getService } from '@/lib/service'
@@ -27,8 +31,7 @@ export default {
     ServicePartsPrice,
     DetailCopy,
     DetailPrice,
-    DetailChart,
-    DetailEmpty
+    DetailChart
   },
   head() {
     return meta.detail
@@ -37,6 +40,11 @@ export default {
     return {
       isCopied: false
     }
+  },
+  mounted() {
+    // document.body.addEventListener('click', () => {
+    //   document.querySelector('.detail-main').classList.toggle('is-visible')
+    // })
   },
   computed: {
     total() {

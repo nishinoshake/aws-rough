@@ -17,7 +17,11 @@ const serviceConfig = [
 
 const price = {
   ec2: {
-    instance: [{ price: 0.005, instanceType: 't2.micro' }]
+    instance: [
+      { price: 0.005, instanceType: 't2.micro' },
+      { price: 0.01, instanceType: 't2.small' },
+      { price: 0.015, instanceType: 'c4.large' }
+    ]
   },
   rds: {
     instance: [{ price: 0.008, instanceType: 'db.t2.micro' }]
@@ -144,6 +148,47 @@ describe('store', () => {
     })
   })
 
+  describe('RESTORE', () => {
+    test('サービスのテーブルを復元できる', () => {
+      const tables = {
+        ec2: [{ instance: 'c4.large', unit: 1 }, { instance: 't2.small', unit: 2 }]
+      }
+
+      store.commit('SET_PRICE', { value: price })
+      store.commit('SET_FX', { value: fx })
+      store.commit('RESTORE', { tables, serviceConfig })
+
+      expect(store.state.tables.ec2[0].instance).toBe('c4.large')
+      expect(store.state.tables.ec2[0].unit).toBe(1)
+      expect(store.state.tables.ec2[1].instance).toBe('t2.small')
+      expect(store.state.tables.ec2[1].unit).toBe(2)
+    })
+
+    test('存在しないサービスを追加しない', () => {
+      const tables = {
+        BigQuery: [{ instance: 'c4.large', unit: 1 }]
+      }
+
+      store.commit('SET_PRICE', { value: price })
+      store.commit('SET_FX', { value: fx })
+      store.commit('RESTORE', { tables, serviceConfig })
+
+      expect(store.state.tables.BigQuery).toBeUndefined()
+    })
+
+    test('存在しないプロパティを設定しない', () => {
+      const tables = {
+        ec2: [{ hoge: 100 }]
+      }
+
+      store.commit('SET_PRICE', { value: price })
+      store.commit('SET_FX', { value: fx })
+      store.commit('RESTORE', { tables, serviceConfig })
+
+      expect(store.state.tables.ec2[0].hoge).toBeUndefined()
+    })
+  })
+
   describe('REMOVE', () => {
     test('サービスの行を削除ができる', () => {
       store.commit('APPEND', { serviceKey: 'ec2', serviceConfig })
@@ -159,12 +204,25 @@ describe('store', () => {
     })
   })
 
+  const fetchAllResolve = async () => {
+    const fetchPrice = jest.fn().mockResolvedValue(price)
+    const fetchFx = jest.fn().mockResolvedValue(fx)
+
+    await store.dispatch('fetchAll', { fetchPrice, fetchFx })
+  }
+
+  const fetchAllReject = async () => {
+    const fetchPrice = jest.fn().mockResolvedValue({ data: price })
+    const fetchFx = jest.fn().mockRejectedValue({
+      message: 'With Great Power Comes Great Responsibility'
+    })
+
+    await store.dispatch('fetchAll', { fetchPrice, fetchFx })
+  }
+
   describe('fetchAll', () => {
     test('データの取得に成功したら結果を設定してくれる', async () => {
-      const fetchPrice = jest.fn().mockResolvedValue(price)
-      const fetchFx = jest.fn().mockResolvedValue(fx)
-
-      await store.dispatch('fetchAll', { fetchPrice, fetchFx })
+      await fetchAllResolve()
 
       expect(store.state.price).toEqual(price)
       expect(store.state.fx).toEqual(fx)
@@ -172,16 +230,71 @@ describe('store', () => {
     })
 
     test('データの取得に失敗したらエラーを設定してくれる', async () => {
-      const fetchPrice = jest.fn().mockResolvedValue({ data: price })
-      const fetchFx = jest.fn().mockRejectedValue({
+      await fetchAllReject()
+
+      expect(store.state.error.isVisible).toBe(true)
+      expect(store.state.error.message).toBe('通信エラーが発生しました。\nすみませんがリロードを・・・')
+      expect(store.state.isLoaded).toEqual(false)
+    })
+  })
+
+  describe('fetchZ', () => {
+    test('テーブルの情報を取得して設定してくれる', async () => {
+      await fetchAllResolve()
+
+      const fetchZ = jest.fn().mockResolvedValue({
+        ec2: [{ instance: 'c4.large', unit: 1 }]
+      })
+
+      await store.dispatch('fetchZ', { fetchZ, hash: 'a'.repeat(20), serviceConfig })
+
+      expect(store.state.tables.ec2[0].instance).toBe('c4.large')
+      expect(store.state.tables.ec2[0].unit).toBe(1)
+    })
+
+    test('データの取得に失敗したらエラーを設定してくれる', async () => {
+      await fetchAllResolve()
+
+      const fetchZ = jest.fn().mockRejectedValue({
         message: 'With Great Power Comes Great Responsibility'
       })
 
-      await store.dispatch('fetchAll', { fetchPrice, fetchFx })
+      await store.dispatch('fetchZ', { fetchZ, hash: 'a'.repeat(20), serviceConfig })
 
       expect(store.state.error.isVisible).toBe(true)
-      expect(store.state.error.message).toBe('通信エラーが発生しました')
-      expect(store.state.isLoaded).toEqual(false)
+      expect(store.state.error.message).toBe('データを復元できませんでした・・・')
+    })
+  })
+
+  describe('postZ', () => {
+    test('テーブルの情報をポストできる', async () => {
+      const postZ = jest.fn().mockResolvedValue({})
+
+      await store.dispatch('postZ', {
+        postZ,
+        hash: 'a'.repeat(20),
+        data: {
+          ec2: [{ instance: 'c4.large', unit: 1 }]
+        }
+      })
+
+      expect(store.state.error.isVisible).toBe(false)
+      expect(store.state.error.message).toBeNull()
+    })
+
+    test('テーブルの情報のポストに失敗したらエラーを設定できる', async () => {
+      const postZ = jest.fn().mockRejectedValue({
+        message: 'With Great Power Comes Great Responsibility'
+      })
+
+      await store.dispatch('postZ', {
+        postZ,
+        hash: 'a'.repeat(6),
+        data: {}
+      })
+
+      expect(store.state.error.isVisible).toBe(true)
+      expect(store.state.error.message).toBe('リンクを作成できませんでした。\nすみませんがもう一度お願いします・・・')
     })
   })
 })

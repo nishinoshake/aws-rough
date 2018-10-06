@@ -14,11 +14,14 @@
 </template>
 
 <script>
+import parseUrl from 'url-parse'
+import serviceConfig from '@/config/service'
 import LayoutMenuPC from '@/layouts/LayoutMenuPC'
 import LayoutMenuSP from '@/layouts/LayoutMenuSP'
 import LayoutFooter from '@/layouts/LayoutFooter'
 import CartIndex from '@/components/cart/CartIndex'
 import ErrorModal from '@/components/error/ErrorModal'
+import { fetchZ } from '@/api'
 
 export default {
   components: {
@@ -27,6 +30,13 @@ export default {
     LayoutFooter,
     CartIndex,
     ErrorModal
+  },
+  mounted() {
+    const { query } = parseUrl(location.href, true)
+
+    if (query && query.z) {
+      this.$store.dispatch('fetchZ', { fetchZ, hash: query.z, serviceConfig })
+    }
   }
 }
 </script>
