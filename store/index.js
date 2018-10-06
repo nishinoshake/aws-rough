@@ -16,7 +16,10 @@ const store = () =>
       tables: {},
       total: { usd: 0, jpy: 0 },
       isLoaded: false,
-      error: {}
+      error: {
+        isVisible: false,
+        message: null
+      }
     },
     mutations: {
       SET_INITIAL_TABLES(state, { serviceConfig }) {
@@ -31,11 +34,17 @@ const store = () =>
       SET_IS_LOADED(state) {
         state.isLoaded = true
       },
-      SET_ERROR(state, payload) {
-        state.error = {
-          ...state.error,
-          ...payload
-        }
+      SET_ERROR_MESSAGE(state, { message }) {
+        state.error.message = message
+      },
+      CLEAR_ERROR_MESSAGE(state) {
+        state.error.message = null
+      },
+      SHOW_ERROR(state) {
+        state.error.isVisible = true
+      },
+      HIDE_ERROR(state) {
+        state.error.isVisible = false
       },
       APPEND(state, { serviceKey, serviceConfig }) {
         state.tables[serviceKey].push(getDefaultTable(serviceKey, serviceConfig))
@@ -78,9 +87,8 @@ const store = () =>
           commit('SET_FX', { value: values[1] })
           commit('SET_IS_LOADED')
         } catch (e) {
-          commit('SET_ERROR', {
-            network: '通信エラーが発生しました'
-          })
+          commit('SET_ERROR_MESSAGE', { message: '通信エラーが発生しました。\nすみませんがリロードを・・・' })
+          commit('SHOW_ERROR')
         }
       }
     }

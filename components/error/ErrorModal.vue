@@ -1,11 +1,8 @@
 <template>
   <transition name="anime-error">
-    <div class="error-modal" v-if="error">
-      <p class="error-modal-message">
-        {{ error }}
-        <br>
-        すみませんがリロードを・・・
-      </p>
+    <div class="error-modal" v-if="isVisible">
+      <p class="error-modal-message">{{ message }}</p>
+      <button class="error-modal-close" @click="handleClose">閉じる</button>
     </div>
   </transition>
 </template>
@@ -14,7 +11,13 @@
 export default {
   name: 'ErrorModal',
   props: {
-    error: String
+    isVisible: Boolean,
+    message: String
+  },
+  methods: {
+    handleClose() {
+      this.$store.commit('HIDE_ERROR')
+    }
   }
 }
 </script>

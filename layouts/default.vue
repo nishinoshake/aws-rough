@@ -9,7 +9,7 @@
       </div>
       <CartIndex :total="$store.state.total.jpy" />
     </div>
-    <ErrorModal :error="$store.state.error.network" />
+    <ErrorModal :is-visible="$store.state.error.isVisible" :message="$store.state.error.message" />
   </div>
 </template>
 

@@ -6,29 +6,63 @@
 
 .error {
   &-modal {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+    width: calc(100% - 60px);
+    max-width: 500px;
     z-index: 100;
-    top: 0;
-    left: 0;
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba($color-red, 0.8);
-    &-message {
-      font-size: 32px;
-      line-height: 2;
-      color: $color-white;
-    }
-  }
-  &-text {
-    padding: $padding-contents-sp;
-    font-weight: bold;
-    line-height: 2;
+    background-color: #fff;
+    @include b;
+    @include center(fixed);
     @include min {
-      padding: $padding-contents-pc;
-      font-size: 32px;
+      width: calc(100% - 80px);
+      max-width: 800px;
+      padding: 50px;
+    }
+    &-message {
+      font-size: 20px;
+      line-height: 2;
+      text-align: center;
+      white-space: pre-wrap;
+      @include min {
+        font-size: 32px;
+      }
+    }
+    &-close {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      background-color: $color-dark;
+      @include hide-text;
+      &:hover {
+        background-color: $color-black;
+      }
+      @include min {
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        right: -25px;
+      }
+      &:before,
+      &:after {
+        content: "";
+        width: 50%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
     }
   }
 }

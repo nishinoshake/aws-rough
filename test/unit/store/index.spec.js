@@ -81,10 +81,33 @@ describe('store', () => {
     })
   })
 
-  describe('SET_ERROR', () => {
-    test('エラーを設定できる', () => {
-      store.commit('SET_ERROR', { network: '回線の調子が悪いです・・・' })
-      expect(store.state.error).toEqual({ network: '回線の調子が悪いです・・・' })
+  describe('SET_ERROR_MESSAGE', () => {
+    test('エラーメッセージを設定できる', () => {
+      store.commit('SET_ERROR_MESSAGE', { message: '回線の調子が悪いです・・・' })
+      expect(store.state.error.message).toEqual('回線の調子が悪いです・・・')
+    })
+  })
+
+  describe('CLEAR_ERROR_MESSAGE', () => {
+    test('エラーメッセージを削除できる', () => {
+      store.commit('SET_ERROR_MESSAGE', { message: '回線の調子が悪いです・・・' })
+      store.commit('CLEAR_ERROR_MESSAGE')
+      expect(store.state.error.message).toBeNull()
+    })
+  })
+
+  describe('SHOW_ERROR', () => {
+    test('エラーを表示できる', () => {
+      store.commit('SHOW_ERROR')
+      expect(store.state.error.isVisible).toBe(true)
+    })
+  })
+
+  describe('HIDE_ERROR', () => {
+    test('エラーを非表示にできる', () => {
+      store.commit('SHOW_ERROR')
+      store.commit('HIDE_ERROR')
+      expect(store.state.error.isVisible).toBe(false)
     })
   })
 
@@ -156,7 +179,8 @@ describe('store', () => {
 
       await store.dispatch('fetchAll', { fetchPrice, fetchFx })
 
-      expect(store.state.error.network).toEqual('通信エラーが発生しました')
+      expect(store.state.error.isVisible).toBe(true)
+      expect(store.state.error.message).toBe('通信エラーが発生しました')
       expect(store.state.isLoaded).toEqual(false)
     })
   })

@@ -31,7 +31,7 @@
   &-error {
     &-enter-active,
     &-leave-active {
-      transition: 0.4s $easeOutCubic;
+      transition: .1s linear;
     }
     &-enter,
     &-leave-to {
