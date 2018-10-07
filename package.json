@@ -13,8 +13,9 @@
     "generate": "nuxt generate",
     "jest": "jest",
     "test": "yarn test:unit && yarn test:e2e",
-    "test:unit": "jest test/unit",
-    "test:e2e": "jest test/e2e",
+    "test:unit": "jest -c jest.config.unit.js test/unit",
+    "test:e2e": "jest -c jest.config.e2e.js test/e2e",
+    "test:coverage": "jest --coverage -c jest.config.unit.js test/unit",
     "format": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "lint-staged"
@@ -70,13 +71,5 @@
     "regenerator-runtime": "^0.11.1",
     "sass-loader": "^7.0.1",
     "vue-svg-loader": "^0.5.0"
-  },
-  "jest": {
-    "verbose": true,
-    "testURL": "http://localhost/",
-    "preset": "jest-puppeteer",
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/$1"
-    }
   }
 }
