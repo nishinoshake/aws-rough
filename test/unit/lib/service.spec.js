@@ -1,4 +1,11 @@
-import { getService, getDefaultTable, getDefaultTables, getDefaultColumnValue, parseInstance } from '@/lib/service'
+import {
+  getService,
+  getDefaultTable,
+  getDefaultTables,
+  getDefaultColumnValue,
+  parseInstance,
+  minifyTable
+} from '@/lib/service'
 
 describe('service', () => {
   const serviceConfig = [
@@ -53,6 +60,9 @@ describe('service', () => {
     test('設定ファイルからカラムのデフォルト値を取得できる', () => {
       expect(getDefaultColumnValue('ec2', 'instance', serviceConfig)).toBe('t2.micro')
     })
+    test('設定ファイルからカラムのデフォルト値が見つからなければnullを返す', () => {
+      expect(getDefaultColumnValue('ec2', 'hoge', serviceConfig)).toBeNull()
+    })
   })
 
   describe('parseInstance', () => {
@@ -69,6 +79,20 @@ describe('service', () => {
       ]
 
       expect(parseInstance('t2.micro', instances)).toEqual(instances[1])
+    })
+  })
+
+  describe('minifyTable', () => {
+    test('テーブルから合計を削除できる', () => {
+      const tables = {
+        ec2: [{ instance: 't2.micro', unit: '', total: { usd: 0, jpy: 0 } }],
+        rds: [{ instance: 'db.t2.micro', unit: '', total: { usd: 0, jpy: 0 } }]
+      }
+
+      expect(minifyTable(tables)).toEqual({
+        ec2: [{ instance: 't2.micro', unit: '' }],
+        rds: [{ instance: 'db.t2.micro', unit: '' }]
+      })
     })
   })
 })

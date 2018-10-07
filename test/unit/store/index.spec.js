@@ -41,6 +41,8 @@ describe('store', () => {
     localVue.use(Vuex)
     store = createStore()
     store.commit('SET_INITIAL_TABLES', { serviceConfig })
+    store.commit('SET_PRICE', { value: price })
+    store.commit('SET_FX', { value: fx })
   })
 
   describe('SET_INITIAL_TABLES', () => {
@@ -66,14 +68,12 @@ describe('store', () => {
 
   describe('SET_PRICE', () => {
     test('料金を設定できる', () => {
-      store.commit('SET_PRICE', { value: price })
       expect(store.state.price).toEqual(price)
     })
   })
 
   describe('SET_FX', () => {
     test('為替を設定できる', () => {
-      store.commit('SET_FX', { value: fx })
       expect(store.state.fx).toEqual(fx)
     })
   })
@@ -125,9 +125,6 @@ describe('store', () => {
 
   describe('UPDATE', () => {
     test('サービスの値を更新できる', () => {
-      store.commit('SET_PRICE', { value: price })
-      store.commit('SET_FX', { value: fx })
-
       store.commit('UPDATE', {
         serviceKey: 'ec2',
         index: 0,
@@ -154,8 +151,6 @@ describe('store', () => {
         ec2: [{ instance: 'c4.large', unit: 1 }, { instance: 't2.small', unit: 2 }]
       }
 
-      store.commit('SET_PRICE', { value: price })
-      store.commit('SET_FX', { value: fx })
       store.commit('RESTORE', { tables, serviceConfig })
 
       expect(store.state.tables.ec2[0].instance).toBe('c4.large')
@@ -169,10 +164,7 @@ describe('store', () => {
         BigQuery: [{ instance: 'c4.large', unit: 1 }]
       }
 
-      store.commit('SET_PRICE', { value: price })
-      store.commit('SET_FX', { value: fx })
       store.commit('RESTORE', { tables, serviceConfig })
-
       expect(store.state.tables.BigQuery).toBeUndefined()
     })
 
@@ -181,10 +173,7 @@ describe('store', () => {
         ec2: [{ hoge: 100 }]
       }
 
-      store.commit('SET_PRICE', { value: price })
-      store.commit('SET_FX', { value: fx })
       store.commit('RESTORE', { tables, serviceConfig })
-
       expect(store.state.tables.ec2[0].hoge).toBeUndefined()
     })
   })
@@ -201,6 +190,14 @@ describe('store', () => {
         store.state.tables.ec2[0],
         store.state.tables.ec2[0]
       ])
+    })
+
+    test('サービスの行が1行のときに削除されたら入力がクリアされる', () => {
+      store.commit('UPDATE', { serviceKey: 'ec2', index: 0, columnKey: 'unit', value: 10 })
+      expect(store.state.tables.ec2[0].unit).toBe(10)
+
+      store.commit('REMOVE', { serviceKey: 'ec2', serviceConfig, index: 0 })
+      expect(store.state.tables.ec2[0].unit).toBe('')
     })
   })
 
