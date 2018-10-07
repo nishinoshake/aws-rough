@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     append(serviceKey) {
-      this.$store.commit('APPEND', { serviceKey, serviceConfig })
+      this.$store.dispatch('appendRow', { serviceKey, serviceConfig })
     }
   }
 }

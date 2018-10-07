@@ -1,5 +1,6 @@
 import Vuex from 'vuex'
 import * as calc from '@/lib/calc'
+import { MAX_ROW } from '@/config/constants'
 import { getDefaultTable, getDefaultTables } from '@/lib/service'
 import { usdToXXX } from '@/lib/price'
 import { fetchPrice, fetchFx } from '@/api'
@@ -139,6 +140,15 @@ const store = () =>
           })
           commit('SHOW_ERROR')
         }
+      },
+      appendRow({ state, commit }, { serviceKey, serviceConfig }) {
+        if (state.tables[serviceKey].length >= MAX_ROW) {
+          commit('SET_ERROR_MESSAGE', { message: `最大で${MAX_ROW}行までなんです。\nすみません・・・` })
+          commit('SHOW_ERROR')
+          return
+        }
+
+        commit('APPEND', { serviceKey, serviceConfig })
       }
     }
   })

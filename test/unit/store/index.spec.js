@@ -1,7 +1,7 @@
 import Vuex from 'vuex'
 import { createLocalVue } from '@vue/test-utils'
 import createStore from '@/store'
-import { MONTHLY_HOURS } from '@/config/constants'
+import { MONTHLY_HOURS, MAX_ROW } from '@/config/constants'
 import { usdToXXX } from '@/lib/price'
 
 const serviceConfig = [
@@ -292,6 +292,21 @@ describe('store', () => {
 
       expect(store.state.error.isVisible).toBe(true)
       expect(store.state.error.message).toBe('リンクを作成できませんでした。\nすみませんがもう一度お願いします・・・')
+    })
+  })
+
+  describe('appendRow', () => {
+    test('最大行を超えたらエラーが表示され、行が追加されない', () => {
+      for (let i = 0; i < MAX_ROW - 1; i++) {
+        store.dispatch('appendRow', { serviceKey: 'ec2', serviceConfig })
+      }
+      expect(store.state.error.isVisible).toBe(false)
+      expect(store.state.tables.ec2).toHaveLength(MAX_ROW)
+
+      store.dispatch('appendRow', { serviceKey: 'ec2', serviceConfig })
+      expect(store.state.error.isVisible).toBe(true)
+      expect(store.state.tables.ec2).toHaveLength(MAX_ROW)
+      expect(store.state.error.message).toBe(`最大で${MAX_ROW}行までなんです。\nすみません・・・`)
     })
   })
 })
