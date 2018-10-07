@@ -8,6 +8,7 @@
         <LayoutFooter />
       </div>
       <CartIndex :total="$store.state.total.jpy" />
+      <div class="container-frame"></div>
     </div>
     <ErrorModal :is-visible="$store.state.error.isVisible" :message="$store.state.error.message" />
   </div>
