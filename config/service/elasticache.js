@@ -1,7 +1,7 @@
 export default {
   key: 'elasticache',
   name: 'ElastiCache',
-  description: 'インメモリデータストア',
+  description: 'インメモリ',
   color: 'blue',
   multiple: true,
   table: [
