@@ -11,7 +11,10 @@ module.exports = {
     '@/modules/count-page'
   ],
   head: {
-    title: 'Not Found | ざっくりAWS',
+    title: 'ざっくりAWS',
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       {
         charset: 'utf-8'
