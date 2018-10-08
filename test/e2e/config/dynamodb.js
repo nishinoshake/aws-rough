@@ -7,26 +7,26 @@ export default {
         min: 880,
         max: 950
       },
-      waitFor: 'td[data-name="storage"]',
+      waitFor: '[data-test="storage"]',
       actions: [
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '1000'
         },
         {
           type: 'type',
-          target: 'td[data-name="rcu"] input',
+          target: '[data-test="rcu"]',
           value: '1000'
         },
         {
           type: 'type',
-          target: 'td[data-name="wcu"] input',
+          target: '[data-test="wcu"]',
           value: '1000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]

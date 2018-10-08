@@ -7,31 +7,31 @@ export default {
         min: 730,
         max: 800
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 't2.large'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '3'
         },
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '1000'
         },
         {
           type: 'type',
-          target: 'td[data-name="transfer"] input',
+          target: '[data-test="transfer"]',
           value: '1000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     },
     {
@@ -40,31 +40,31 @@ export default {
         min: 30500,
         max: 31000
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'p3.16xlarge'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '1'
         },
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '0'
         },
         {
           type: 'type',
-          target: 'td[data-name="transfer"] input',
+          target: '[data-test="transfer"]',
           value: '0'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]

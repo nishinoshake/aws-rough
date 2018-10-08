@@ -7,21 +7,21 @@ export default {
         min: 100,
         max: 130
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'cache.t2.small'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '3'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     },
     {
@@ -30,21 +30,21 @@ export default {
         min: 6380,
         max: 6410
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'cache.r4.16xlarge'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '1'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]

@@ -7,21 +7,21 @@ export default {
         min: 100,
         max: 110
       },
-      waitFor: 'div[data-name="alb"] td[data-name="unit"]',
+      waitFor: '[data-test="alb"] [data-test="unit"]',
       actions: [
         {
           type: 'type',
-          target: 'div[data-name="alb"] td[data-name="unit"] input',
+          target: '[data-test="alb"] [data-test="unit"]',
           value: '2'
         },
         {
           type: 'type',
-          target: 'div[data-name="alb"] td[data-name="lcu"] input',
+          target: '[data-test="alb"] [data-test="lcu"]',
           value: '6'
         }
       ],
       price: {
-        target: 'div[data-name="alb"] span[data-name="price"]'
+        target: '[data-test="alb"] [data-test="price"]'
       }
     }
   ]

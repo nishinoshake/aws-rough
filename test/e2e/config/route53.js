@@ -7,21 +7,21 @@ export default {
         min: 40,
         max: 50
       },
-      waitFor: 'td[data-name="hostzone"]',
+      waitFor: '[data-test="hostzone"]',
       actions: [
         {
           type: 'type',
-          target: 'td[data-name="hostzone"] input',
+          target: '[data-test="hostzone"]',
           value: '10'
         },
         {
           type: 'type',
-          target: 'td[data-name="query"] input',
+          target: '[data-test="query"]',
           value: '100000000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]

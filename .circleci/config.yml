@@ -30,12 +30,12 @@ jobs:
           paths:
             - ./*
 
-  build:
+  build_for_test:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/aws-rough
-      - run: yarn generate
+      - run: yarn generate:test
       - persist_to_workspace:
           root: ~/aws-rough
           paths:
@@ -53,6 +53,17 @@ jobs:
           paths:
             - dist
 
+  build_for_production:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/aws-rough
+      - run: yarn generate:production
+      - persist_to_workspace:
+          root: ~/aws-rough
+          paths:
+            - ./*
+
   deploy:
     <<: *defaults
     steps:
@@ -68,13 +79,16 @@ workflows:
   test-deploy:
     jobs:
       - install
-      - build:
+      - build_for_test:
           requires:
             - install
       - test:
           requires:
-            - build
+            - build_for_test
+      - build_for_production:
+          requires:
+            - test
       - deploy:
           <<: *filter_only_master
           requires:
-            - test
+            - build_for_production

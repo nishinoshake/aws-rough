@@ -7,26 +7,26 @@ export default {
         min: 420,
         max: 440
       },
-      waitFor: 'td[data-name="transfer"]',
+      waitFor: '[data-test="transfer"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="protocol"] select',
+          target: '[data-test="protocol"]',
           value: 'HTTP'
         },
         {
           type: 'type',
-          target: 'td[data-name="transfer"] input',
+          target: '[data-test="transfer"]',
           value: '3000'
         },
         {
           type: 'type',
-          target: 'td[data-name="request"] input',
+          target: '[data-test="request"]',
           value: '100000000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     },
     {
@@ -35,26 +35,26 @@ export default {
         min: 450,
         max: 470
       },
-      waitFor: 'td[data-name="transfer"]',
+      waitFor: '[data-test="transfer"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="protocol"] select',
+          target: '[data-test="protocol"]',
           value: 'HTTPS'
         },
         {
           type: 'type',
-          target: 'td[data-name="transfer"] input',
+          target: '[data-test="transfer"]',
           value: '3000'
         },
         {
           type: 'type',
-          target: 'td[data-name="request"] input',
+          target: '[data-test="request"]',
           value: '100000000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]

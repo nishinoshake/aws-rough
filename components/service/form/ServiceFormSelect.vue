@@ -3,6 +3,7 @@
     <select
       @change="e => update({ serviceKey, index, columnKey, value: e.target.value })"
       :aria-label="label"
+      :data-test="columnKey"
       :value="value"
     >
       <option

@@ -3,6 +3,7 @@
     <input
       type="number"
       :aria-label="label"
+      :data-test="columnKey"
       :value="value"
       min="0"
       class="form-text-input"

@@ -1,7 +1,7 @@
 <template>
   <article class="service">
     <ServiceTemplateTitle :service="service.elb" />
-    <div class="service-inside" :data-name="serviceName" v-for="serviceName in ['clb', 'alb', 'nlb']" :key="serviceName">
+    <div class="service-inside" :data-test="serviceName" v-for="serviceName in ['clb', 'alb', 'nlb']" :key="serviceName">
       <ServiceTemplateLabel :label="service[serviceName].fullname" />
       <ServiceTemplateCalc :service="service[serviceName]" />
     </div>

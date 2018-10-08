@@ -1,5 +1,5 @@
 <template>
-  <div class="service-calc">
+  <div class="service-calc" data-test="service-calc">
     <table :class="['table', {'mod-multiple': service.multiple }]">
       <thead>
         <tr>

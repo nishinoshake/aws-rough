@@ -21,7 +21,7 @@
       </section>
       <section class="section-child">
         <h3 class="title-small">為替レート</h3>
-        <p class="text">為替レートの取得には、<ExternalLink href="https://twitter.com/kujirahand">クジラ飛行机</ExternalLink>さんが公開されている、<ExternalLink href="http://api.aoikujira.com/kawase/">クジラ外国為替確認API</ExternalLink>を使わせてもらっています。<br>現在、計算に適用しているドル円のレートは<em><span v-if="usdjpy" data-name="yen">{{ usdjpy }}</span>円</em>です。</p>
+        <p class="text">為替レートの取得には、<ExternalLink href="https://twitter.com/kujirahand">クジラ飛行机</ExternalLink>さんが公開されている、<ExternalLink href="http://api.aoikujira.com/kawase/">クジラ外国為替確認API</ExternalLink>を使わせてもらっています。<br>現在、計算に適用しているドル円のレートは<em><span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span>円</em>です。</p>
       </section>
       <p class="text-notice">サービス/為替のデータは毎朝10時に更新しています。</p>
     </section>

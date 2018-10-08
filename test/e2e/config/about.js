@@ -7,10 +7,10 @@ export default {
         min: 80,
         max: 130
       },
-      waitFor: 'span[data-name="yen"]',
+      waitFor: '[data-test="yen"]',
       actions: [],
       price: {
-        target: 'span[data-name="yen"]'
+        target: '[data-test="yen"]'
       }
     }
   ]

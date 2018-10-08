@@ -61,7 +61,7 @@ module.exports = {
   },
   build: {
     vendor: ['axios', 'lodash', 'animejs'],
-    extend(config) {
+    extend(config, { isDev }) {
       config.module.rules = config.module.rules.map(rule => {
         if (rule.loader === 'url-loader' && rule.test.toString().indexOf('svg') > -1) {
           return {
@@ -81,6 +81,29 @@ module.exports = {
           }
         }
       })
+
+      if (!isDev && process.env.AWSROUGH_GENERATE === 'production') {
+        const tagAttributesForTesting = ['data-test', ':data-test']
+        const vueLoader = config.module.rules.find(rule => rule.loader === 'vue-loader')
+
+        vueLoader.options.compilerModules = [
+          {
+            preTransformNode: astEl => {
+              const { attrsMap, attrsList } = astEl
+
+              tagAttributesForTesting.forEach(attr => {
+                if (attrsMap[attr]) {
+                  delete attrsMap[attr]
+                  const attrsListIndex = attrsList.findIndex(x => x.name === attr)
+                  attrsList.splice(attrsListIndex, 1)
+                }
+              })
+
+              return astEl
+            }
+          }
+        ]
+      }
     }
   },
   manifest: {

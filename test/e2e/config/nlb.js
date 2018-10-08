@@ -7,21 +7,21 @@ export default {
         min: 410,
         max: 430
       },
-      waitFor: 'div[data-name="nlb"] td[data-name="unit"]',
+      waitFor: '[data-test="nlb"] [data-test="unit"]',
       actions: [
         {
           type: 'type',
-          target: 'div[data-name="nlb"] td[data-name="unit"] input',
+          target: '[data-test="nlb"] [data-test="unit"]',
           value: '4'
         },
         {
           type: 'type',
-          target: 'div[data-name="nlb"] td[data-name="lcu"] input',
+          target: '[data-test="nlb"] [data-test="lcu"]',
           value: '20'
         }
       ],
       price: {
-        target: 'div[data-name="nlb"] span[data-name="price"]'
+        target: '[data-test="nlb"] [data-test="price"]'
       }
     }
   ]

@@ -8,31 +8,31 @@ export default {
         min: 1710,
         max: 1780
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'db.t2.large'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '3'
         },
         {
           type: 'select',
-          target: 'td[data-name="az"] select',
+          target: '[data-test="az"]',
           value: 'Multi-AZ'
         },
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '1000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     },
     {
@@ -41,31 +41,31 @@ export default {
         min: 6670,
         max: 6700
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'db.r4.16xlarge'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '1'
         },
         {
           type: 'select',
-          target: 'td[data-name="az"] select',
+          target: '[data-test="az"]',
           value: 'Single-AZ'
         },
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '20'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     },
     // MariaDB
@@ -75,36 +75,36 @@ export default {
         min: 830,
         max: 870
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="engine"] select',
+          target: '[data-test="engine"]',
           value: 'MariaDB'
         },
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'db.t2.micro'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '7'
         },
         {
           type: 'select',
-          target: 'td[data-name="az"] select',
+          target: '[data-test="az"]',
           value: 'Multi-AZ'
         },
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '300'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     },
     // PostgreSQL
@@ -114,36 +114,36 @@ export default {
         min: 460,
         max: 500
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="engine"] select',
+          target: '[data-test="engine"]',
           value: 'PostgreSQL'
         },
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'db.t2.medium'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '5'
         },
         {
           type: 'select',
-          target: 'td[data-name="az"] select',
+          target: '[data-test="az"]',
           value: 'Single-AZ'
         },
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '100'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]

@@ -7,21 +7,21 @@ export default {
         min: 290,
         max: 310
       },
-      waitFor: 'div[data-name="clb"] td[data-name="unit"]',
+      waitFor: '[data-test="clb"] [data-test="unit"]',
       actions: [
         {
           type: 'type',
-          target: 'div[data-name="clb"] td[data-name="unit"] input',
+          target: '[data-test="clb"] [data-test="unit"]',
           value: '3'
         },
         {
           type: 'type',
-          target: 'div[data-name="clb"] td[data-name="transfer"] input',
+          target: '[data-test="clb"] [data-test="transfer"]',
           value: '30000'
         }
       ],
       price: {
-        target: 'div[data-name="clb"] span[data-name="price"]'
+        target: '[data-test="clb"] [data-test="price"]'
       }
     }
   ]

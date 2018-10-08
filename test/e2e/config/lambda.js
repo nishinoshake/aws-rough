@@ -7,21 +7,21 @@ export default {
         min: 150,
         max: 200
       },
-      waitFor: 'td[data-name="request"]',
+      waitFor: '[data-test="request"]',
       actions: [
         {
           type: 'type',
-          target: 'td[data-name="request"] input',
+          target: '[data-test="request"]',
           value: '100000000'
         },
         {
           type: 'type',
-          target: 'td[data-name="memory"] input',
+          target: '[data-test="memory"]',
           value: '10000000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]

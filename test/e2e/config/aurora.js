@@ -8,36 +8,36 @@ export default {
         min: 800,
         max: 820
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="engine"] select',
+          target: '[data-test="engine"]',
           value: 'MySQL'
         },
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'db.r4.large'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '2'
         },
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '500'
         },
         {
           type: 'type',
-          target: 'td[data-name="io"] input',
+          target: '[data-test="io"]',
           value: '1000000000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     },
     // PostgreSQL
@@ -47,36 +47,36 @@ export default {
         min: 32970,
         max: 33000
       },
-      waitFor: 'td[data-name="instance"]',
+      waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
-          target: 'td[data-name="engine"] select',
+          target: '[data-test="engine"]',
           value: 'PostgreSQL'
         },
         {
           type: 'select',
-          target: 'td[data-name="instance"] select',
+          target: '[data-test="instance"]',
           value: 'db.r4.16xlarge'
         },
         {
           type: 'type',
-          target: 'td[data-name="unit"] input',
+          target: '[data-test="unit"]',
           value: '4'
         },
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '1000'
         },
         {
           type: 'type',
-          target: 'td[data-name="io"] input',
+          target: '[data-test="io"]',
           value: '300000000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]

@@ -7,31 +7,31 @@ export default {
         min: 640,
         max: 700
       },
-      waitFor: 'td[data-name="storage"]',
+      waitFor: '[data-test="storage"]',
       actions: [
         {
           type: 'type',
-          target: 'td[data-name="storage"] input',
+          target: '[data-test="storage"]',
           value: '1000'
         },
         {
           type: 'type',
-          target: 'td[data-name="transfer"] input',
+          target: '[data-test="transfer"]',
           value: '1000'
         },
         {
           type: 'type',
-          target: 'td[data-name="read"] input',
+          target: '[data-test="read"]',
           value: '100000000'
         },
         {
           type: 'type',
-          target: 'td[data-name="write"] input',
+          target: '[data-test="write"]',
           value: '100000000'
         }
       ],
       price: {
-        target: '.service-calc span[data-name="price"]'
+        target: '[data-test="service-calc"] [data-test="price"]'
       }
     }
   ]
