@@ -10,7 +10,6 @@ export default {
       key: 'engine',
       title: '互換DB',
       default: 'MySQL',
-      mod: 'small',
       parseJson: (json, row) => Object.keys(json.aurora.instance)
     },
     {
@@ -18,12 +17,13 @@ export default {
       key: 'instance',
       title: 'インスタンス',
       default: 'db.r4.large',
+      size: 'large',
       parseJson: (json, row) => json.aurora.instance[row.engine].map(instance => instance.instanceType)
     },
     {
       type: 'number',
       key: 'unit',
-      mod: 'small',
+      size: 'minimal',
       title: '台数'
     },
     {
@@ -34,8 +34,7 @@ export default {
     {
       type: 'number',
       key: 'io',
-      title: 'I/O(件)',
-      mod: 'small'
+      title: 'I/O(件)'
     }
   ]
 }

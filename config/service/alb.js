@@ -14,7 +14,8 @@ export default {
     {
       type: 'number',
       key: 'lcu',
-      title: 'LCU'
+      title: 'LCU',
+      size: 'large'
     }
   ]
 }

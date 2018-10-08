@@ -13,7 +13,8 @@ export default {
     {
       type: 'number',
       key: 'query',
-      title: 'クエリ数'
+      title: 'クエリ数',
+      size: 'large'
     }
   ]
 }

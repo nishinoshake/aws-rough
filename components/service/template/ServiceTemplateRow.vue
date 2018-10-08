@@ -4,7 +4,7 @@
       v-for="(column, columnIndex) in service.table"
       :key="column.key"
       :class="{
-        [`mod-${column.mod}`]: column.mod,
+        [`mod-${column.size}`]: column.size,
         'has-remove': service.multiple && columnIndex === 0
       }"
       :data-name="column.key"

@@ -1,12 +1,12 @@
 <template>
   <div class="service-calc">
     <table :class="['table', {'mod-multiple': service.multiple }]">
-      <thead :class="{[`mod-${service.mod}`]: service.mod}">
+      <thead>
         <tr>
           <th
             v-for="column in service.table"
             :key="`header-${column.key}`"
-            :class="[{[`mod-${column.mod}`]: column.mod}]"
+            :class="[{[`mod-${column.size}`]: column.size}]"
           >{{ column.title }}</th>
           <th class="mod-price">月額</th>
         </tr>

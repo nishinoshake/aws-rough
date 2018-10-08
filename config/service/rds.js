@@ -17,20 +17,21 @@ export default {
       key: 'instance',
       title: 'インスタンス',
       default: 'db.t2.micro',
-      mod: 'large',
+      size: 'large',
       parseJson: (json, row) => json.rds.instance[row.engine].map(instance => instance.instanceType)
     },
     {
       type: 'number',
       key: 'unit',
       title: '台数',
-      mod: 'small'
+      size: 'minimal'
     },
     {
       type: 'select',
       key: 'az',
       title: 'AZ',
       default: 'Single-AZ',
+      size: 'small',
       options: ['Single-AZ', 'Multi-AZ']
     },
     {

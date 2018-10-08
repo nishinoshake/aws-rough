@@ -31,7 +31,7 @@
     td {
       &:first-child {
         @include min {
-          padding-left: 52px;
+          padding-left: 50px;
         }
       }
     }
@@ -54,13 +54,16 @@
       }
     }
     @include min {
-      width: 10rem;
+      width: 8.5rem;
       box-sizing: content-box;
+      &.mod-minimal {
+        width: 5rem;
+      }
       &.mod-small {
-        width: 8rem;
+        width: 7rem;
       }
       &.mod-large {
-        width: 13rem;
+        width: 10.5rem;
       }
       &.mod-price {
         width: auto;
@@ -75,18 +78,19 @@
         padding-top: $padding-contents-sp;
       }
       @include min {
-        padding-left: 52px;
+        padding-left: 50px;
       }
     }
     &:last-child {
       @include min {
-        padding-right: 52px;
+        padding-right: 20px;
       }
     }
   }
   th {
-    padding: 8px 10px;
+    padding: 8px;
     font-weight: bold;
+    white-space: nowrap;
   }
   td {
     padding: ($padding-contents-sp / 2) $padding-contents-sp;
@@ -101,7 +105,7 @@
     }
     @include min {
       position: relative;
-      padding: 16px 10px;
+      padding: 16px 8px;
     }
     .button-remove {
       position: absolute;

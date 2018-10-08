@@ -10,14 +10,14 @@ export default {
       key: 'instance',
       title: 'ノードタイプ',
       default: 'cache.t2.micro',
-      mod: 'large',
+      size: 'large',
       parseJson: json => json.elasticache.instance.map(instance => instance.instanceType)
     },
     {
       type: 'number',
       key: 'unit',
-      title: 'ノード数',
-      mod: 'small'
+      title: '台数',
+      size: 'minimal'
     }
   ]
 }

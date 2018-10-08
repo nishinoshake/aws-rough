@@ -7,7 +7,7 @@
     position: relative;
     &-input {
       width: 100%;
-      padding: 8px 12px;
+      padding: 8px;
       font-size: 16px;
       text-align: center;
       border: 2px solid $color-border;
@@ -32,15 +32,14 @@
   }
   &-select {
     width: 100%;
-    min-width: 7em;
     overflow: hidden;
     position: relative;
     display: block;
     border: 2px solid $color-border;
     background-color: #fff;
     select {
-      width: 110%;
-      padding: 8px 35px 8px 12px;
+      width: 100%;
+      padding: 8px;
       border: none;
       border-radius: 0;
       font-size: 16px;

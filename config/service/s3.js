@@ -13,7 +13,8 @@ export default {
     {
       type: 'number',
       key: 'transfer',
-      title: 'データ転送量(GB)'
+      title: 'データ転送量(GB)',
+      size: 'large'
     },
     {
       type: 'number',

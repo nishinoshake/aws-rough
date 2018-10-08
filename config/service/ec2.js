@@ -10,14 +10,13 @@ export default {
       key: 'instance',
       title: 'インスタンス',
       default: 't2.nano',
-      mod: 'large',
       parseJson: json => json.ec2.instance.map(instance => instance.instanceType)
     },
     {
       type: 'number',
       key: 'unit',
       title: '台数',
-      mod: 'small'
+      size: 'minimal'
     },
     {
       type: 'number',
@@ -27,7 +26,8 @@ export default {
     {
       type: 'number',
       key: 'transfer',
-      title: 'データ転送量(GB)'
+      title: 'データ転送量(GB)',
+      size: 'large'
     }
   ]
 }

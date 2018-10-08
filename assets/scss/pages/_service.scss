@@ -51,6 +51,14 @@
     .table {
       @include bl;
       @include br;
+      &:not(.mod-multiple) {
+        @include min {
+          th:first-child,
+          td:first-child {
+            padding-left: 30px;
+          }
+        }
+      }
     }
   }
   // 計算するところ
