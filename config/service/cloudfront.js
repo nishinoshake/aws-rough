@@ -1,7 +1,6 @@
 export default {
   key: 'cloudfront',
   name: 'CloudFront',
-  href: '/cloudfront/',
   description: 'CDN',
   color: 'red',
   multiple: true,

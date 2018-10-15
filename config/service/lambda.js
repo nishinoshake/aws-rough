@@ -1,7 +1,6 @@
 export default {
   key: 'lambda',
   name: 'Lambda',
-  href: '/lambda/',
   description: 'サーバーレス',
   color: 'orange',
   multiple: false,

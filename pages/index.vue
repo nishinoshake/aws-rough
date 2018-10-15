@@ -5,7 +5,7 @@
       <h2 class="title">サービスを選択してください</h2>
       <div class="landing-service-list">
         <section class="landing-service-item" v-for="service in services" :key="service.key">
-          <nuxt-link :to="service.href">
+          <nuxt-link :to="`/${service.key}/`">
             <figure class="landing-service-icon">
               <ServicePartsIcon :name="service.key" />
             </figure>

@@ -1,7 +1,6 @@
 export default {
   key: 'ec2',
   name: 'EC2',
-  href: '/ec2/',
   description: '仮想サーバー',
   color: 'orange',
   multiple: true,

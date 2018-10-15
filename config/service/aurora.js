@@ -1,7 +1,6 @@
 export default {
   key: 'aurora',
   name: 'Aurora',
-  href: '/aurora/',
   description: 'すごいRDBMS',
   color: 'blue',
   multiple: true,

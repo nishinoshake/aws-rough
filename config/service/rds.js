@@ -1,7 +1,6 @@
 export default {
   key: 'rds',
   name: 'RDS',
-  href: '/rds/',
   description: 'RDBMS',
   color: 'blue',
   multiple: true,

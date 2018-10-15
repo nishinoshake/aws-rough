@@ -1,7 +1,6 @@
 export default {
   key: 's3',
   name: 'S3',
-  href: '/s3/',
   description: 'ストレージ',
   color: 'red',
   multiple: false,

@@ -7,7 +7,7 @@
       <nav class="menu-nav">
         <ul class="menu-list">
           <li v-for="service in services" :key="service.key" class="menu-item">
-            <nuxt-link :to="service.href">{{ service.name }}</nuxt-link>
+            <nuxt-link :to="`/${service.key}/`">{{ service.name }}</nuxt-link>
           </li>
         </ul>
       </nav>

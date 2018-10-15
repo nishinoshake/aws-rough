@@ -12,7 +12,7 @@
       <option
         v-for="service in services"
         :key="service.key"
-        :value="service.href"
+        :value="`/${service.key}/`"
       >{{ service.name }}</option>
       <option value="/detail/">内訳を見るぞ</option>
     </select>

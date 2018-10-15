@@ -1,7 +1,6 @@
 export default {
   key: 'elasticache',
   name: 'ElastiCache',
-  href: '/elasticache/',
   description: 'インメモリ',
   color: 'blue',
   multiple: true,

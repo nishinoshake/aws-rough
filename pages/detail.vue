@@ -2,26 +2,9 @@
   <article class="detail">
     <h1 class="title-page">料金内訳<DetailCopy :services="services" /></h1>
     <div class="detail-body">
-      <div :class="['detail-main', {'is-visible': hasService, 'is-selected': selectedIndex !== null}]">
-        <DetailPrice
-          v-if="hasService"
-          :services="services"
-          :colors="colors"
-          :selected-index="selectedIndex"
-          :mouse-enter-handler="selectIndex"
-          :mouse-leave-handler="clearIndex"
-          :click-handler="jumpToService"
-        />
-        <DetailChart
-          v-if="hasService"
-          :rates="rates"
-          :colors="colors"
-          :inactive-colors="inactiveColors"
-          :selected-index="selectedIndex"
-          :mouse-enter-handler="selectIndex"
-          :mouse-leave-handler="clearIndex"
-          :click-handler="jumpToService"
-        />
+      <div :class="['detail-main', {'is-visible': hasService}]">
+        <DetailPrice v-if="hasService" :services="services" :colors="colors" />
+        <DetailChart v-if="hasService" :services="services" :colors="colors" :hover-colors="hoverColors" />
       </div>
       <p :class="['detail-empty', {'is-visible': !hasService}]">
         <span>With Great Power</span>
@@ -55,8 +38,7 @@ export default {
   },
   data() {
     return {
-      isCopied: false,
-      selectedIndex: null
+      isCopied: false
     }
   },
   computed: {
@@ -77,9 +59,6 @@ export default {
 
         return services
       }, [])
-    },
-    rates() {
-      return this.services.map(s => s.total / this.total.jpy)
     },
     hasService() {
       return this.services.length > 0
@@ -108,27 +87,12 @@ export default {
         return color
       })
     },
-    inactiveColors() {
+    hoverColors() {
       return this.colors.map(color => {
         return Color.hsl(color)
-          .grayscale()
+          .darken(0.12)
           .string()
       })
-    }
-  },
-  methods: {
-    selectIndex(index) {
-      this.selectedIndex = index
-    },
-    clearIndex() {
-      this.selectedIndex = null
-    },
-    jumpToService(index) {
-      const { key } = this.services[index]
-      const { href } = getService(key, serviceConfig)
-
-      this.selectedIndex = null
-      this.$router.push(href)
     }
   }
 }
