@@ -52,19 +52,36 @@
       transition-delay: .4s;
       pointer-events: auto;
     }
+    &.is-selected {
+      .detail-price-item {
+        &:not(.is-active) {
+          color: $color-dark-gray;
+          filter: grayscale(1);
+        }
+      }
+      .detail-chart-svg path {
+        &:not(.is-active) {
+          filter: grayscale(1);
+        }
+      }
+    }
   }
   &-price {
+    @include max {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
     @include min {
       padding-right: 100px;
     }
     &-item {
       display: flex;
+      padding: 10px 0;
       align-items: center;
-      &:nth-child(n + 2) {
-        margin-top: 20px;
-        @include min {
-          margin-top: 30px;
-        }
+      cursor: pointer;
+      @include min {
+        padding: 14px 0;
       }
     }
     &-link {
@@ -85,12 +102,14 @@
       width: 26px;
       height: 26px;
       margin-right: 10px;
+      transition: .2s $easeOutQuart;
     }
     .price {
       margin-left: auto;
     }
   }
   &-chart {
+    position: relative;
     @include max {
       width: 240px;
       height: 240px;
@@ -98,8 +117,24 @@
       margin-bottom: 40px;
     }
     @include min {
-      width: 320px;
-      height: 320px;
+      width: 360px;
+      height: 360px;
+    }
+    &:before {
+      content: '';
+      display: block;
+      height: 0;
+      padding-top: 100%;
+    }
+    &-svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      path {
+        cursor: pointer;
+      }
     }
   }
   &-empty {
