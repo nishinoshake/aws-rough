@@ -41,6 +41,11 @@ export default {
       isCopied: false
     }
   },
+  mounted() {
+    // document.body.addEventListener('click', () => {
+    //   document.querySelector('.detail-main').classList.toggle('is-visible')
+    // })
+  },
   computed: {
     total() {
       return this.$store.state.total

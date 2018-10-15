@@ -33,6 +33,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "animejs": "^2.2.0",
     "axios": "^0.18.0",
+    "chart.js": "^2.7.2",
     "clipboard": "^2.0.0",
     "color": "^3.0.0",
     "fastclick": "^1.0.6",
@@ -40,7 +41,8 @@
     "lodash": "^4.17.5",
     "nuxt": "^1.4.0",
     "sweet-scroll": "^3.0.1",
-    "url-parse": "^1.4.3"
+    "url-parse": "^1.4.3",
+    "vue-chartjs": "^3.3.1"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.25",
