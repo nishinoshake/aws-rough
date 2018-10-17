@@ -1,6 +1,7 @@
 export default {
   key: 'dynamodb',
   name: 'DynamoDB',
+  href: '/dynamodb/',
   description: 'NoSQL',
   color: 'blue',
   multiple: false,

@@ -2,6 +2,7 @@ export default {
   key: 'alb',
   name: 'ALB',
   fullname: 'Application Load Balancer',
+  href: '/elb/',
   description: 'アプリケーションロードバランサー',
   color: 'orange',
   multiple: false,

@@ -1,6 +1,7 @@
 export default {
   key: 'nlb',
   name: 'NLB',
+  href: '/elb/',
   fullname: 'Network Load Balancer',
   description: 'ネットワークロードバランサー',
   color: 'orange',

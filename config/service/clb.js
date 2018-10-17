@@ -2,6 +2,7 @@ export default {
   key: 'clb',
   name: 'CLB',
   fullname: 'Classic Load Balancer',
+  href: '/elb/',
   description: 'クラシックロードバランサー',
   color: 'orange',
   multiple: false,
