@@ -1,9 +1,11 @@
 <template>
-  <DetailChartPie class="detail-chart" :data="data" />
+  <DetailChartPie class="detail-chart" :data="data" :click-handler="handleClick" />
 </template>
 
 <script>
 import DetailChartPie from '@/components/detail/DetailChartPie'
+import serviceConfig from '@/config/service'
+import { getService } from '@/lib/service'
 
 export default {
   name: 'DetailChart',
@@ -37,6 +39,14 @@ export default {
           }
         ]
       }
+    }
+  },
+  methods: {
+    handleClick(index) {
+      const service = this.services[index]
+      const { href } = getService(service.key, serviceConfig)
+
+      this.$router.push(href)
     }
   }
 }

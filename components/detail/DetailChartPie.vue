@@ -5,9 +5,12 @@ export default {
   name: 'DetailChartPie',
   extends: Pie,
   props: {
-    data: Object
+    data: Object,
+    clickHandler: Function
   },
   data() {
+    const self = this
+
     return {
       options: {
         animation: {
@@ -31,7 +34,21 @@ export default {
           }
         },
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        onHover(e) {
+          const points = this.getElementAtEvent(e)
+
+          e.target.style.cursor = points.length ? 'pointer' : 'default'
+        },
+        onClick(e) {
+          if (self.clickHandler) {
+            const points = this.getElementAtEvent(e)
+
+            if (points.length) {
+              self.clickHandler(points[0]._index)
+            }
+          }
+        }
       }
     }
   },

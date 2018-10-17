@@ -2,9 +2,11 @@
 <div class="detail-price">
   <ul class="detail-price-list">
     <li v-for="(service, index) in services" :key="service.name" class="detail-price-item">
-      <span class="detail-price-color" :style="{backgroundColor: colors[index]}" />
-      <p class="detail-price-name">{{ service.name }}</p>
-      <ServicePartsPrice :price="service.total" mod="large" />
+      <nuxt-link :to="getServiceHref(service.key)" class="detail-price-link">
+        <span class="detail-price-color" :style="{backgroundColor: colors[index]}" />
+        <p class="detail-price-name">{{ service.name }}</p>
+        <ServicePartsPrice :price="service.total" mod="large" />
+      </nuxt-link>
     </li>
   </ul>
 </div>
@@ -12,6 +14,8 @@
 
 <script>
 import ServicePartsPrice from '@/components/service/parts/ServicePartsPrice'
+import serviceConfig from '@/config/service'
+import { getService } from '@/lib/service'
 
 export default {
   name: 'DetailPrice',
@@ -26,6 +30,10 @@ export default {
       required: true
     }
   },
-  computed: {}
+  methods: {
+    getServiceHref(serviceKey) {
+      return getService(serviceKey, serviceConfig).href
+    }
+  }
 }
 </script>

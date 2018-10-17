@@ -58,8 +58,6 @@
       padding-right: 100px;
     }
     &-item {
-      display: flex;
-      align-items: center;
       &:nth-child(n + 2) {
         margin-top: 20px;
         @include min {
