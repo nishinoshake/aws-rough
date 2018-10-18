@@ -111,18 +111,9 @@
     span {
       display: block;
       opacity: 0;
-      transition: .36s $easeOutQuart;
-      &:nth-child(odd) {
-        transform: translateX(-10px);
-        @include min {
-          transform: translateX(-16px);
-        }
-      }
-      &:nth-child(even) {
-        transform: translateX(10px);
-        @include min {
-          transform: translateX(16px);
-        }
+      transition: .2s linear;
+      &:nth-child(2) {
+        transition-delay: .08s;
       }
     }
     @include min {
@@ -133,7 +124,6 @@
     &.is-visible {
       span {
         opacity: 1;
-        transform: translateX(0);
         transition-delay: .4s;
       }
     }
