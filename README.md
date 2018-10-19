@@ -1,5 +1,4 @@
 # ざっくりAWS
-
 <img align="right" src="https://user-images.githubusercontent.com/8698355/47230506-5a514280-d405-11e8-90e9-01c1f8cc19c5.gif" alt="ざっくりAWS" width="400">
 
 [![CircleCI](https://circleci.com/gh/noplan1989/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/noplan1989/aws-rough/tree/master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/noplan1989/aws-rough/blob/master/LICENSE)
@@ -12,14 +11,15 @@ AWS の料金を日本円でざっくり計算できるサイトです。
 
 正確な料金は必要ないから適当な入力でざっくり知りたい、みたいなときに便利かもしれません。
 
-計算のロジックを公開していたほうが安心して使えるかなと思い、オープンソースにしました。
+　
 
 ## 使用しているライブラリ/フレームワーク
 このWebサイトは、主に[Vue.js](https://jp.vuejs.org)でできています。
 
 ### [Vue.js](https://jp.vuejs.org)
 公開当初からVue.jsを使ってUIを構築しています。  
-ReactとVue.jsで迷いましたが、HTMLをガシガシ書きたかったので、テンプレートやスタイルを楽に書けるVue.jsを選びました。
+ReactとVue.jsで迷いましたが、HTMLをガシガシ書きたかったので、  
+テンプレートやスタイルを楽に書けるVue.jsを選びました。
 
 ### [Nuxt.js](https://ja.nuxtjs.org)
 最初はVue.js単体で使っていたのですが、Nuxt.jsで静的サイトを生成できることを知って移行しました。
