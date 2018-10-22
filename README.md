@@ -1,8 +1,7 @@
-# ざっくりAWS [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/noplan1989/aws-rough/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/noplan1989/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/noplan1989/aws-rough/tree/master)
+# ざっくりAWS 
 
 [<img align="right" src="https://user-images.githubusercontent.com/8698355/47230506-5a514280-d405-11e8-90e9-01c1f8cc19c5.gif" alt="ざっくりAWS" width="400">](https://aws.noplan.cc)
 
-　  
 AWS の料金を日本円でざっくり計算できるサイトです。  
 
 入力の手間を減らすために、料金への影響が少ない項目は削っているため、手軽に概算を算出できます。
@@ -11,7 +10,7 @@ AWS の料金を日本円でざっくり計算できるサイトです。
 
 https://aws.noplan.cc
 
-　
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/noplan1989/aws-rough/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/noplan1989/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/noplan1989/aws-rough/tree/master)
  
 ## 使い方
 ```
