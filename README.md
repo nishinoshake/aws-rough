@@ -1,9 +1,6 @@
-# ざっくりAWS
-<img align="right" src="https://user-images.githubusercontent.com/8698355/47230506-5a514280-d405-11e8-90e9-01c1f8cc19c5.gif" alt="ざっくりAWS" width="400">
+# ざっくりAWS [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/noplan1989/aws-rough/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/noplan1989/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/noplan1989/aws-rough/tree/master)
 
-[![CircleCI](https://circleci.com/gh/noplan1989/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/noplan1989/aws-rough/tree/master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/noplan1989/aws-rough/blob/master/LICENSE)
-
-https://aws.noplan.cc
+[<img align="right" src="https://user-images.githubusercontent.com/8698355/47230506-5a514280-d405-11e8-90e9-01c1f8cc19c5.gif" alt="ざっくりAWS" width="400">](https://aws.noplan.cc)
 
 AWS の料金を日本円でざっくり計算できるサイトです。  
 
@@ -11,9 +8,24 @@ AWS の料金を日本円でざっくり計算できるサイトです。
 
 正確な料金は必要ないから適当な入力でざっくり知りたい、みたいなときに便利かもしれません。
 
-　
+https://aws.noplan.cc
 
-## 使用しているライブラリ/フレームワーク
+## 使い方
+```
+# インストール
+yarn
+
+# 開発
+yarn dev
+
+# テスト
+yarn test
+
+# 静的ファイル生成
+yarn generate:production
+```
+
+## ライブラリ/フレームワーク
 このWebサイトは、主に[Vue.js](https://jp.vuejs.org)でできています。
 
 ### [Vue.js](https://jp.vuejs.org)
@@ -59,20 +71,5 @@ API Gateway + Lambda + S3
 価格を取得するLambdaのコードは別のリポジトリで管理しています。  
 https://github.com/noplan1989/aws-rough-functions
 
-## 使い方
-```
-# インストール
-yarn
-
-# 開発
-yarn dev
-
-# テスト
-yarn test
-
-# 静的ファイル生成
-yarn generate:production
-```
-
 ## ご意見・ご要望
-追加して欲しいサービスや機能、致命的なバグなどがありましたら、issueにあげていただくか、なんらかの方法でご連絡をお願いいたします。サイト名が「ざっくりAWS」なので、**ざっくり**じゃなくなってしまう機能追加は難しいですが、できる限り対応いたします。
+追加して欲しいサービスや機能、致命的なバグなどがありましたら、issueにあげていただくか、なんらかの方法でご連絡をお願いいたします。サイト名が「ざっくりAWS」なので、ざっくりじゃなくなってしまう機能追加は難しいですが、できる限り対応いたします。
