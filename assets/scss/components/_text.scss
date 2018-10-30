@@ -27,14 +27,16 @@
     path {
       fill: $color-link;
     }
-    &:hover {
-      text-decoration: underline;
-    }
-    &-hover {
+    @include min {
       &:hover {
-        color: $color-link;
-        path {
-          fill: $color-link;
+        text-decoration: underline;
+      }
+      &-hover {
+        &:hover {
+          color: $color-link;
+          path {
+            fill: $color-link;
+          }
         }
       }
     }

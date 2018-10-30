@@ -15,15 +15,15 @@ body {
 .container {
   position: relative;
   overflow: hidden;
-  @include max {
-    padding: 2px;
+  @include max($mq-kamakura) {
+    padding: 2px 2px $height-cart-sp 2px;
     padding-bottom: $height-cart-sp;
   }
   @include min {
-    padding: 4px;
+    padding: 4px 4px $height-cart-sp 4px;
   }
   @include min($mq-kamakura) {
-    padding-left: $width-menu;
+    padding: 4px 4px 4px $width-menu;
   }
   &:before,
   &:after,

@@ -89,12 +89,12 @@
       padding: 12px 14px;
       @include min {
         padding: 12px 20px;
+        &:hover span {
+          opacity: 0.5;
+        }
       }
       @include bb;
       @include bl;
-      &:hover span {
-        opacity: 0.5;
-      }
       span {
         padding-left: 22px;
         position: relative;

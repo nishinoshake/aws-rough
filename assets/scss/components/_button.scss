@@ -12,8 +12,10 @@
     background-color: $color-modest;
     border-radius: 50%;
     @include hide-text;
-    &:hover {
-      background-color: $color-dark;
+    @include min {
+      &:hover {
+        background-color: $color-dark;
+      }
     }
     &:before,
     &:after {

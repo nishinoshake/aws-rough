@@ -1,5 +1,19 @@
 @charset "utf-8";
 
+@mixin nav-active {
+  color: $color-dark;
+  &:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    margin-top: -4px;
+    background-color: currentColor;
+  }
+}
+
 .menu {
   &.is-open {
     .menu-container {
@@ -70,22 +84,13 @@
       line-height: 1.4;
       color: $color-modest;
       white-space: nowrap;
-      &:hover,
-      &.is-active {
-        color: $color-dark;
-        &:before {
-          content: '';
-          width: 8px;
-          height: 8px;
-          position: absolute;
-          right: calc(100% + 10px);
-          top: 50%;
-          margin-top: -4px;
-          background-color: currentColor;
+      @include min {
+        &:hover {
+          @include nav-active;
         }
       }
-      svg {
-        display: none;
+      &.is-active {
+        @include nav-active;
       }
     }
   }
