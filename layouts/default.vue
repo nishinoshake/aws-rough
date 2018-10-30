@@ -1,8 +1,7 @@
 <template>
   <div class="app">
     <div class="container">
-      <LayoutMenuPC />
-      <LayoutMenuSP />
+      <LayoutMenu />
       <div class="contents">
         <nuxt/>
         <LayoutFooter />
@@ -17,8 +16,7 @@
 <script>
 import parseUrl from 'url-parse'
 import serviceConfig from '@/config/service'
-import LayoutMenuPC from '@/layouts/LayoutMenuPC'
-import LayoutMenuSP from '@/layouts/LayoutMenuSP'
+import LayoutMenu from '@/layouts/LayoutMenu'
 import LayoutFooter from '@/layouts/LayoutFooter'
 import CartIndex from '@/components/cart/CartIndex'
 import ErrorModal from '@/components/error/ErrorModal'
@@ -26,8 +24,7 @@ import { fetchZ } from '@/api'
 
 export default {
   components: {
-    LayoutMenuPC,
-    LayoutMenuSP,
+    LayoutMenu,
     LayoutFooter,
     CartIndex,
     ErrorModal

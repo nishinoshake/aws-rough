@@ -15,7 +15,6 @@ body {
 .container {
   position: relative;
   overflow: hidden;
-  @include transition-kamakura;
   @include max {
     padding: 2px;
     padding-bottom: $height-cart-sp;
@@ -32,7 +31,7 @@ body {
   &-frame:after {
     content: '';
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     @include bt;
   }
   &:before,

@@ -9,21 +9,21 @@
   position: fixed;
   display: flex;
   align-items: flex-end;
-  @include max {
+  @include max($mq-kamakura) {
     width: 100vw;
-    height: 56px;
+    height: $height-cart-sp;
     bottom: 0;
     left: 0;
     justify-content: space-between;
-    padding: 12px 120px 12px $padding-contents-sp;
+    padding: 12px $padding-contents-sp 12px 120px;
     background-color: $color-white;
     @include b;
   }
   @include max($mq-minimal) {
-    padding-left: 12px;
-    padding-right: 92px;
+    padding-right: 12px;
+    padding-left: 92px;
   }
-  @include min() {
+  @include min($mq-kamakura) {
     bottom: $padding-cart;
     right: $padding-cart;
   }
@@ -37,10 +37,10 @@
     font-size: 18px;
     font-weight: bold;
     @include bb;
-    @include max {
+    @include max($mq-kamakura) {
       flex: 1;
     }
-    @include min {
+    @include min($mq-kamakura) {
       min-width: 250px;
       padding-bottom: 8px;
       font-size: 24px;
@@ -51,7 +51,7 @@
       font-size: 16px;
       font-weight: bold;
       line-height: 1;
-      @include min {
+      @include min($mq-kamakura) {
         padding-right: 12px;
         font-size: 24px;
       }
@@ -76,7 +76,7 @@
     @include max($mq-kamakura) {
       display: none;
     }
-    @include min {
+    @include min($mq-kamakura) {
       &:hover,
       &.is-active {
         color: #fff;

@@ -17,16 +17,16 @@
   }
   &.mod-large {
     font-size: 16px;
-    @include min {
+    @include min($mq-kamakura) {
       font-size: 24px;
     }
     .price-number {
       margin: 0 0.2em -0.1em 0;
       font-size: 120%;
-      @include max {
+      @include max($mq-kamakura) {
         margin-bottom: -0.05em;
       }
-      @include min {
+      @include min($mq-kamakura) {
         font-size: 130%;
       }
     }
