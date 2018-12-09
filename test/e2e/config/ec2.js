@@ -37,8 +37,8 @@ export default {
     {
       name: 'EC2の高額インスタンスの計算結果が想定内',
       range: {
-        min: 30500,
-        max: 31000
+        min: 24000,
+        max: 26000
       },
       waitFor: '[data-test="instance"]',
       actions: [
