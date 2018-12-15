@@ -26,6 +26,10 @@ const meta = {
     title: pageTitle('CloudFrontの料金'),
     description: pageDescription('CloudFrontの料金を計算するぞ。')
   },
+  apigateway: {
+    title: pageTitle('API Gatewayの料金'),
+    description: pageDescription('API Gatewayの料金を計算するぞ。')
+  },
   detail: {
     title: pageTitle('料金内訳'),
     description: pageDescription('内訳を確認するぞ。')

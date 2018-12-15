@@ -48,6 +48,10 @@ export default {
   },
   watch: {
     options(newOptions, oldOptions) {
+      if (JSON.stringify(newOptions) === JSON.stringify(oldOptions)) {
+        return
+      }
+
       if (newOptions.indexOf(this.value) === -1) {
         this.$store.commit('UPDATE', {
           serviceKey: this.serviceKey,

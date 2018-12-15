@@ -9,6 +9,7 @@ import elb from '@/assets/svg/elb.svg'
 import lambda from '@/assets/svg/lambda.svg'
 import route53 from '@/assets/svg/route53.svg'
 import cloudfront from '@/assets/svg/cloudfront.svg'
+import apigateway from '@/assets/svg/apigateway.svg'
 import s3 from '@/assets/svg/s3.svg'
 import rds from '@/assets/svg/rds.svg'
 import aurora from '@/assets/svg/aurora.svg'
@@ -16,7 +17,7 @@ import dynamodb from '@/assets/svg/dynamodb.svg'
 
 export default {
   name: 'ServicePartsIcon',
-  components: { ec2, elasticache, elb, lambda, route53, cloudfront, rds, aurora, s3, dynamodb },
+  components: { ec2, elasticache, elb, lambda, route53, cloudfront, apigateway, rds, aurora, s3, dynamodb },
   props: {
     name: {
       type: String,

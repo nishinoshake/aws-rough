@@ -4,6 +4,7 @@ import {
   getDefaultTables,
   getDefaultColumnValue,
   parseInstance,
+  parseCacheMemory,
   minifyTable
 } from '@/lib/service'
 
@@ -79,6 +80,23 @@ describe('service', () => {
       ]
 
       expect(parseInstance('t2.micro', instances)).toEqual(instances[1])
+    })
+  })
+
+  describe('parseCacheMemory', () => {
+    test('メモリサイズを指定してパースできる', () => {
+      const cacheMemories = [
+        {
+          cacheMemorySizeGb: '0.5',
+          price: 0.03
+        },
+        {
+          cacheMemorySizeGb: '1.6',
+          price: 0.06
+        }
+      ]
+
+      expect(parseCacheMemory('1.6', cacheMemories)).toEqual(cacheMemories[1])
     })
   })
 
