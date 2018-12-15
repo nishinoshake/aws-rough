@@ -5,18 +5,20 @@ describe('apigateway', () => {
   test('API Gatewayの料金を計算できる', () => {
     const priceList = {
       apigateway: {
-        request: [
-          {
-            beginRange: 0,
-            endRange: 333000000,
-            price: 0.000004
-          },
-          {
-            beginRange: 333000000,
-            endRange: 1000000000,
-            price: 0.000003
-          }
-        ],
+        request: {
+          priceRange: [
+            {
+              beginRange: 0,
+              endRange: 333000000,
+              price: 0.000004
+            },
+            {
+              beginRange: 333000000,
+              endRange: 1000000000,
+              price: 0.000003
+            }
+          ]
+        },
         cache: [
           {
             cacheMemorySizeGb: '0.5',
