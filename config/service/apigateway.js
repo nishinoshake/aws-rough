@@ -3,7 +3,7 @@ export default {
   name: 'API Gateway',
   href: '/apigateway/',
   description: '手軽にAPI',
-  color: 'red',
+  color: 'beige',
   multiple: false,
   table: [
     {
