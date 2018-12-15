@@ -2,8 +2,7 @@
   <ServiceTemplate service-name="rds">
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text">リレーショナルデータベースのサービスです。</p>
-      <p class="text">主に、インスタンスのスペックや利用する台数、冗長構成、ストレージの容量によって料金が決まります。</p>
+      <p class="text">リレーショナルデータベースのサービスです。<br>主に、インスタンスのスペックや利用する台数、冗長構成、ストレージの容量によって料金が決まります。</p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>

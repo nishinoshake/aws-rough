@@ -2,8 +2,7 @@
   <ServiceTemplate service-name="route53">
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text">可用性と拡張性に優れたDNSのサービスです。</p>
-      <p class="text">主に、ホストゾーン数とクエリ数で料金が決まります。</p>
+      <p class="text">可用性と拡張性に優れたDNSのサービスです。<br>主に、ホストゾーン数とクエリ数で料金が決まります。</p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>

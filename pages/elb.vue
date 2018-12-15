@@ -7,8 +7,7 @@
     </div>
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text">複数のEC2インスタンスにトラフィックを分散するサービスです。</p>
-      <p class="text">利用する台数とデータ転送量によって料金が決まります。</p>
+      <p class="text">複数のEC2インスタンスにトラフィックを分散するサービスです。<br>利用する台数とデータ転送量によって料金が決まります。</p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>

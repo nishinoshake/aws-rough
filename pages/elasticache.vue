@@ -2,8 +2,7 @@
   <ServiceTemplate service-name="elasticache">
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text"> RedisおよびMemcachedを利用できるマネージドなサービスです。</p>
-      <p class="text">インメモリデータストアやキャッシュとして機能し、ミリ秒未満の応答時間が必要とされるような、要求の厳しいアプリケーションにも対応しています。</p>
+      <p class="text"> RedisおよびMemcachedを利用できるマネージドなサービスです。<br>インメモリデータストアやキャッシュとして機能し、ミリ秒未満の応答時間が必要とされるような、要求の厳しいアプリケーションにも対応しています。</p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>
