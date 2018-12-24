@@ -23,11 +23,11 @@ const meta = {
     description: pageDescription('デプロイの確認ページです。')
   },
   cloudfront: {
-    title: pageTitle('CloudFrontの料金'),
+    title: pageTitle('CloudFrontの料金を日本円でざっくり'),
     description: pageDescription('CloudFrontの料金を計算するぞ。')
   },
   apigateway: {
-    title: pageTitle('API Gatewayの料金'),
+    title: pageTitle('API Gatewayの料金を日本円でざっくり'),
     description: pageDescription('API Gatewayの料金を計算するぞ。')
   },
   detail: {
@@ -35,39 +35,39 @@ const meta = {
     description: pageDescription('内訳を確認するぞ。')
   },
   dynamodb: {
-    title: pageTitle('DynamoDBの料金'),
+    title: pageTitle('DynamoDBの料金を日本円でざっくり'),
     description: pageDescription('DynamoDBの料金を計算するぞ。')
   },
   ec2: {
-    title: pageTitle('EC2の料金'),
+    title: pageTitle('EC2の料金を日本円でざっくり'),
     description: pageDescription('EC2の料金を計算するぞ。')
   },
   elasticache: {
-    title: pageTitle('ElastiCacheの料金'),
+    title: pageTitle('ElastiCacheの料金を日本円でざっくり'),
     description: pageDescription('ElastiCacheの料金を計算するぞ。')
   },
   elb: {
-    title: pageTitle('ELBの料金'),
+    title: pageTitle('ELBの料金を日本円でざっくり'),
     description: pageDescription('ELBの料金を計算するぞ。')
   },
   lambda: {
-    title: pageTitle('Lambdaの料金'),
+    title: pageTitle('Lambdaの料金を日本円でざっくり'),
     description: pageDescription('Lambdaの料金を計算するぞ。')
   },
   rds: {
-    title: pageTitle('RDSの料金'),
+    title: pageTitle('RDSの料金を日本円でざっくり'),
     description: pageDescription('RDSの料金を計算するぞ。')
   },
   aurora: {
-    title: pageTitle('Auroraの料金'),
+    title: pageTitle('Auroraの料金を日本円でざっくり'),
     description: pageDescription('Auroraの料金を計算するぞ。')
   },
   route53: {
-    title: pageTitle('Route53の料金'),
+    title: pageTitle('Route53の料金を日本円でざっくり'),
     description: pageDescription('Route53の料金を計算するぞ。')
   },
   s3: {
-    title: pageTitle('S3の料金'),
+    title: pageTitle('S3の料金を日本円でざっくり'),
     description: pageDescription('S3の料金を計算するぞ。')
   }
 }
