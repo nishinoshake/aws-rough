@@ -2,7 +2,7 @@ export default {
   key: 'lambda',
   name: 'Lambda',
   href: '/lambda/',
-  description: 'サーバーレス',
+  description: 'FaaS',
   color: 'orange',
   multiple: false,
   table: [
