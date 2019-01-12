@@ -1,5 +1,6 @@
 export { default as about } from './about'
 export { default as ec2 } from './ec2'
+export { default as fargate } from './fargate'
 export { default as clb } from './clb'
 export { default as alb } from './alb'
 export { default as nlb } from './nlb'

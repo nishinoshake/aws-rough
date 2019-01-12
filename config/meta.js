@@ -42,6 +42,10 @@ const meta = {
     title: pageTitle('EC2の料金を日本円でざっくり'),
     description: pageDescription('EC2の料金を計算するぞ。')
   },
+  fargate: {
+    title: pageTitle('Fargateの料金を日本円でざっくり'),
+    description: pageDescription('Fargateの料金を計算するぞ。')
+  },
   elasticache: {
     title: pageTitle('ElastiCacheの料金を日本円でざっくり'),
     description: pageDescription('ElastiCacheの料金を計算するぞ。')
