@@ -24,22 +24,22 @@ export default {
       type: 'select',
       key: 'cpu',
       title: 'vCPU',
-      default: 'select',
+      default: '',
       size: 'small',
-      parseJson: (json, row) => ['select', ...sortBy(Object.keys(json.fargate.pair))]
+      parseJson: (json, row) => ['', ...sortBy(Object.keys(json.fargate.pair))]
     },
     {
       type: 'select',
       key: 'memory',
       title: 'メモリ(GB)',
       size: 'small',
-      default: 'select',
+      default: '',
       parseJson: (json, row) => {
-        if (row.cpu === 'select') {
+        if (!row.cpu) {
           return []
         }
 
-        return ['select', ...sortBy(json.fargate.pair[row.cpu])]
+        return ['', ...sortBy(json.fargate.pair[row.cpu])]
       }
     },
     {

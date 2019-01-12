@@ -33,8 +33,8 @@ describe('fargate', () => {
     const emptyRow = {
       unit: 0,
       hours: 0,
-      cpu: 'select',
-      memory: 'select',
+      cpu: '',
+      memory: '',
       transfer: 0
     }
 
