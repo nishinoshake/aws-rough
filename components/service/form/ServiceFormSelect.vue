@@ -55,14 +55,16 @@ export default {
         return
       }
 
-      if (newOptions.indexOf(this.value) === -1) {
-        this.$store.commit('UPDATE', {
-          serviceKey: this.serviceKey,
-          index: this.index,
-          columnKey: this.columnKey,
-          value: getDefaultColumnValue(this.serviceKey, this.columnKey, serviceConfig)
-        })
-      }
+      this.$nextTick(() => {
+        if (newOptions.indexOf(this.value) === -1) {
+          this.$store.commit('UPDATE', {
+            serviceKey: this.serviceKey,
+            index: this.index,
+            columnKey: this.columnKey,
+            value: getDefaultColumnValue(this.serviceKey, this.columnKey, serviceConfig)
+          })
+        }
+      })
     }
   },
   methods: {

@@ -44,12 +44,10 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      table: this.$store.state.tables[this.service.key]
-    }
-  },
   computed: {
+    table() {
+      return this.$store.state.tables[this.service.key]
+    },
     tableLabels() {
       return this.service.table.map(column => column.title)
     }
