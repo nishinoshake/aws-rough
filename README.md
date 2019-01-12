@@ -17,13 +17,23 @@ https://aws.noplan.cc
 # インストール
 yarn
 
-# 開発
+# 開発サーバーの起動
 yarn dev
 
-# テスト
+# ユニットテスト
+yarn test:unit
+
+# E2Eテスト向けに静的ファイルを生成
+yarn generate:test
+
+# E2Eテスト
+yarn test:e2e
+
+# テストをまとめて
 yarn test
 
-# 静的ファイル生成
+# 本番向けに静的ファイルを生成
+# E2Eテストに使用した要素のdata-test属性を削除しておく
 yarn generate:production
 ```
 
