@@ -16,10 +16,10 @@ import elasticache from './elasticache'
 export default [
   ec2,
   fargate,
+  lambda,
   clb,
   alb,
   nlb,
-  lambda,
   route53,
   cloudfront,
   apigateway,
