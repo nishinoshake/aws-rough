@@ -32,7 +32,6 @@ export default {
       key: 'az',
       title: 'AZ',
       default: 'Single-AZ',
-      size: 'small',
       options: ['Single-AZ', 'Multi-AZ']
     },
     {

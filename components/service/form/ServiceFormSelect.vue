@@ -1,17 +1,20 @@
 <template>
   <div class="form-select">
-    <select
-      @change="e => update({ serviceKey, index, columnKey, value: e.target.value })"
-      :aria-label="label"
-      :data-test="columnKey"
-      :value="value"
-    >
-      <option
-        v-for="option in options"
-        :key="`select-${option}`"
-        :value="option"
-      >{{ option }}</option>
-    </select>
+    <label>
+      <select
+        @change="e => update({ serviceKey, index, columnKey, value: e.target.value })"
+        :aria-label="label"
+        :data-test="columnKey"
+        :value="value"
+      >
+        <option
+          v-for="option in options"
+          :key="`select-${option}`"
+          :value="option"
+        >{{ option }}</option>
+      </select>
+      <span class="form-select-value">{{ value || '&nbsp;' }}</span>
+    </label>
   </div>
 </template>
 
