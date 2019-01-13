@@ -2,7 +2,7 @@
   <ServiceTemplate service-name="fargate">
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text"><ExternalLink href="https://aws.amazon.com/jp/ecs/">Amazon ECS</ExternalLink>の起動タイプのひとつです。<br>タスク数と稼働時間、タスクに割り当てたリソースとと外部へのデータ転送量で料金が決まります。</p>
+      <p class="text">インフラの管理が不要なコンテナの実行環境です。<ExternalLink href="https://aws.amazon.com/jp/ecs/">ECS</ExternalLink>の起動タイプとして選択できます。<br>タスク数と稼働時間、タスクに割り当てたリソースと外部へのデータ転送量で料金が決まります。</p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>
