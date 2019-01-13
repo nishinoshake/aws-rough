@@ -26,7 +26,7 @@ export default {
       title: 'vCPU',
       default: '',
       size: 'small',
-      parseJson: (json, row) => ['', ...sortBy(Object.keys(json.fargate.pair))]
+      parseJson: (json, row) => ['', ...sortBy(Object.keys(json.fargate.pair)).map(v => v.toString())]
     },
     {
       type: 'select',
@@ -36,10 +36,10 @@ export default {
       default: '',
       parseJson: (json, row) => {
         if (!row.cpu) {
-          return []
+          return ['']
         }
 
-        return ['', ...sortBy(json.fargate.pair[row.cpu])]
+        return ['', ...sortBy(json.fargate.pair[row.cpu]).map(v => v.toString())]
       }
     },
     {
