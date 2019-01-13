@@ -30,7 +30,6 @@ export default {
   mounted() {
     this.board = new ClipBoard(this.$refs.copy, {
       text: () => {
-        const homeUrl = process.env.HOME_URL || 'https://aws.noplan.cc'
         const minimalTable = minifyTable(this.$store.state.tables)
         const data = JSON.stringify(minimalTable)
         const hash = generateHash(data)
@@ -41,7 +40,7 @@ export default {
           this.clearCopied()
         }, 1200)
 
-        return `${homeUrl}/detail/?z=${hash}`
+        return `${process.env.homeUrl}/detail/?z=${hash}`
       }
     })
   },
