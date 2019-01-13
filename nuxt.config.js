@@ -7,8 +7,7 @@ module.exports = {
       }
     ],
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv',
-    '@/modules/count-page'
+    '@nuxtjs/dotenv'
   ],
   head: {
     title: 'ざっくりAWS',
