@@ -1,14 +1,4 @@
 module.exports = {
-  modules: [
-    [
-      '@nuxtjs/google-analytics',
-      {
-        id: 'UA-53153991-13'
-      }
-    ],
-    '@nuxtjs/pwa',
-    '@nuxtjs/dotenv'
-  ],
   head: {
     title: 'ざっくりAWS',
     htmlAttrs: {
@@ -54,12 +44,21 @@ module.exports = {
       }
     ]
   },
-  router: {
-    linkActiveClass: 'is-active',
-    linkExactActiveClass: 'is-active-exact'
-  },
+  loading: false,
+  css: ['@/assets/scss/index.scss'],
+  modules: [
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-53153991-13'
+      }
+    ],
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv'
+  ],
   build: {
     extend(config, { isDev }) {
+      // SVGを画像ではなく要素として使いたかったのでvue-svg-loaderを追加
       config.module.rules = config.module.rules.map(rule => {
         if (rule.test.toString().indexOf('svg') > -1) {
           return {
@@ -80,6 +79,7 @@ module.exports = {
         }
       })
 
+      // テストに使用しているdata-test属性をプロダクション向けの静的生成時に削除
       if (!isDev && process.env.AWSROUGH_GENERATE === 'production') {
         const tagAttributesForTesting = ['data-test', ':data-test']
         const vueLoader = config.module.rules.find(rule => rule.loader === 'vue-loader')
@@ -104,6 +104,10 @@ module.exports = {
       }
     }
   },
+  router: {
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-active-exact'
+  },
   manifest: {
     name: 'ざっくりAWS',
     short_name: 'ざっくりAWS',
@@ -115,7 +119,5 @@ module.exports = {
   },
   workbox: {
     dev: true
-  },
-  loading: false,
-  css: ['@/assets/scss/index.scss']
+  }
 }
