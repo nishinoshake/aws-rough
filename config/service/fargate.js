@@ -24,7 +24,7 @@ export default {
       type: 'select',
       key: 'cpu',
       title: 'vCPU',
-      default: '',
+      default: '1',
       size: 'small',
       parseJson: (json, row) => ['', ...sortBy(Object.keys(json.fargate.pair)).map(v => v.toString())]
     },
