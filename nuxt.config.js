@@ -59,13 +59,12 @@ module.exports = {
     linkExactActiveClass: 'is-active-exact'
   },
   build: {
-    vendor: ['axios', 'lodash', 'animejs'],
     extend(config, { isDev }) {
       config.module.rules = config.module.rules.map(rule => {
-        if (rule.loader === 'url-loader' && rule.test.toString().indexOf('svg') > -1) {
+        if (rule.test.toString().indexOf('svg') > -1) {
           return {
             ...rule,
-            test: /\.(png|jpe?g|gif)$/
+            test: /\.(png|jpe?g|gif|webp)$/
           }
         }
         return rule
