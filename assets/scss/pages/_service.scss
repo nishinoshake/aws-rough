@@ -61,6 +61,12 @@
         }
       }
     }
+    .service-calc-append {
+      border-right: 2px solid $color-dark;
+      @include min {
+        border-right-width: 4px;
+      }
+    }
   }
   // 計算するところ
   &-calc {
