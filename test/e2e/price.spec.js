@@ -11,7 +11,7 @@ const fxUseCase = aboutConfig.useCases[0]
 let usdjpy
 
 // 為替の確認
-test(fxUseCase.name, async done => {
+test(fxUseCase.name, async () => {
   const aboutPage = await browser.newPage()
   const aboutUrl = buildUrl(aboutConfig.path)
 
@@ -20,8 +20,7 @@ test(fxUseCase.name, async done => {
   expect(usdjpy).toBeGreaterThanOrEqual(fxUseCase.range.min)
   expect(usdjpy).toBeLessThanOrEqual(fxUseCase.range.max)
 
-  aboutPage.close()
-  done()
+  await aboutPage.close()
 })
 
 // 各サービスの計算結果を確認
@@ -29,7 +28,7 @@ for (const service of serviceConfig) {
   const serviceUrl = buildUrl(service.path)
 
   for (const useCase of service.useCases) {
-    test(useCase.name, async done => {
+    test(useCase.name, async () => {
       const servicePage = await browser.newPage()
       const price = await getPriceAfterInput(servicePage, serviceUrl, useCase)
       const priceInUsd = price / usdjpy
@@ -37,8 +36,7 @@ for (const service of serviceConfig) {
       expect(priceInUsd).toBeGreaterThanOrEqual(useCase.range.min)
       expect(priceInUsd).toBeLessThanOrEqual(useCase.range.max)
 
-      servicePage.close()
-      done()
+      await servicePage.close()
     })
   }
 }
