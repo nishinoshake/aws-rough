@@ -3,7 +3,7 @@
     <div class="container">
       <LayoutMenu />
       <div class="contents">
-        <nuxt/>
+        <nuxt />
         <LayoutFooter />
       </div>
       <CartIndex :total="$store.state.total.jpy" />

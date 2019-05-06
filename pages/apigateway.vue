@@ -2,7 +2,9 @@
   <ServiceTemplate service-name="apigateway">
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text">APIのエンドポイントを手軽に作成できるサービスです。<br>主に、リクエスト数とデータ転送量で料金が決まります。</p>
+      <p class="text">
+        APIのエンドポイントを手軽に作成できるサービスです。<br />主に、リクエスト数とデータ転送量で料金が決まります。
+      </p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>

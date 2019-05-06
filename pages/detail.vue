@@ -2,11 +2,11 @@
   <article class="detail">
     <h1 class="title-page">料金内訳<DetailCopy :services="services" /></h1>
     <div class="detail-body">
-      <div :class="['detail-main', {'is-visible': hasService}]">
+      <div :class="['detail-main', { 'is-visible': hasService }]">
         <DetailPrice v-if="hasService" :services="services" :colors="colors" />
         <DetailChart v-if="hasService" :services="services" :colors="colors" :hover-colors="hoverColors" />
       </div>
-      <p :class="['detail-empty', {'is-visible': !hasService}]">
+      <p :class="['detail-empty', { 'is-visible': !hasService }]">
         <span>With Great Power</span>
         <span>Comes Great Responsibility</span>
       </p>

@@ -1,13 +1,20 @@
 <template>
   <article class="service">
     <ServiceTemplateTitle :service="service.elb" />
-    <div class="service-inside" :data-test="serviceName" v-for="serviceName in ['clb', 'alb', 'nlb']" :key="serviceName">
+    <div
+      class="service-inside"
+      :data-test="serviceName"
+      v-for="serviceName in ['clb', 'alb', 'nlb']"
+      :key="serviceName"
+    >
       <ServiceTemplateLabel :label="service[serviceName].fullname" />
       <ServiceTemplateCalc :service="service[serviceName]" />
     </div>
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text">複数のEC2インスタンスにトラフィックを分散するサービスです。<br>利用する台数とデータ転送量によって料金が決まります。</p>
+      <p class="text">
+        複数のEC2インスタンスにトラフィックを分散するサービスです。<br />利用する台数とデータ転送量によって料金が決まります。
+      </p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>
@@ -24,7 +31,14 @@
       <section class="section-child">
         <h3 class="title-small">LCU</h3>
         <p class="text">Load Balancer Capacity Unit(LCU)を入力してください。</p>
-        <p class="text">名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。このサイトでざっくり説明するのは難しいので、<ExternalLink href="https://aws.amazon.com/jp/elasticloadbalancing/pricing/">公式の料金表</ExternalLink>を参考に算出していただくか、<ExternalLink href="https://calculator.s3.amazonaws.com/index.html">公式のツール</ExternalLink>をお使いください。</p>
+        <p class="text">
+          名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。このサイトでざっくり説明するのは難しいので、<ExternalLink
+            href="https://aws.amazon.com/jp/elasticloadbalancing/pricing/"
+            >公式の料金表</ExternalLink
+          >を参考に算出していただくか、<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
+            >公式のツール</ExternalLink
+          >をお使いください。
+        </p>
       </section>
     </section>
   </article>

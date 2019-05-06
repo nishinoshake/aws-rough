@@ -13,8 +13,10 @@
       <button
         v-if="service.multiple && columnIndex === 0"
         class="button-remove"
-        @click="remove({serviceKey: service.key, index: rowIndex})"
-      >削除</button>
+        @click="remove({ serviceKey: service.key, index: rowIndex })"
+      >
+        削除
+      </button>
 
       <ServiceFormNumber
         v-if="column.type === 'number'"

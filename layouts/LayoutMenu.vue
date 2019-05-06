@@ -1,5 +1,5 @@
 <template>
-  <div :class="['menu', {'is-open': isOpen}]">
+  <div :class="['menu', { 'is-open': isOpen }]">
     <div class="menu-container">
       <h1 class="menu-logo">
         <nuxt-link to="/" @click.native="close()">

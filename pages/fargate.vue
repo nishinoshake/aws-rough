@@ -2,7 +2,11 @@
   <ServiceTemplate service-name="fargate">
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text">インフラの管理が不要なコンテナの実行環境です。<ExternalLink href="https://aws.amazon.com/jp/ecs/">ECS</ExternalLink>の起動タイプとして選択できます。<br>タスク数と稼働時間、タスクに割り当てたリソースと外部へのデータ転送量で料金が決まります。</p>
+      <p class="text">
+        インフラの管理が不要なコンテナの実行環境です。<ExternalLink href="https://aws.amazon.com/jp/ecs/"
+          >ECS</ExternalLink
+        >の起動タイプとして選択できます。<br />タスク数と稼働時間、タスクに割り当てたリソースと外部へのデータ転送量で料金が決まります。
+      </p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>
@@ -12,7 +16,9 @@
       </section>
       <section class="section-child">
         <h3 class="title-small">稼働時間(時)</h3>
-        <p class="text">ひと月に稼働する時間を入力してください。<br>デフォルトでは 24時間 × 30.5日 = 732時間 を入力しています。</p>
+        <p class="text">
+          ひと月に稼働する時間を入力してください。<br />デフォルトでは 24時間 × 30.5日 = 732時間 を入力しています。
+        </p>
       </section>
       <section class="section-child">
         <h3 class="title-small">vCPU</h3>

@@ -2,7 +2,9 @@
   <ServiceTemplate service-name="cloudfront">
     <section class="section">
       <h2 class="title">概要と料金</h2>
-      <p class="text">CDNのサービスです。<br>主に、インターネットへのデータ転送量とリクエスト数で料金が決まります。</p>
+      <p class="text">
+        CDNのサービスです。<br />主に、インターネットへのデータ転送量とリクエスト数で料金が決まります。
+      </p>
     </section>
     <section class="section">
       <h2 class="title">入力項目の補足</h2>
@@ -28,11 +30,21 @@
       </section>
       <section class="section-child">
         <h3 class="title-small">オリジンへのPOSTやPUT</h3>
-        <p class="text">CloudFrontでは、オリジン(S3/ELB/EC2など)に対するデータのフェッチは無料ですが、POSTやPUTのリクエストに対しては別料金がかかります。詳しくは<ExternalLink href="https://aws.amazon.com/jp/cloudfront/pricing/">公式の料金表</ExternalLink>をご確認ください。</p>
+        <p class="text">
+          CloudFrontでは、オリジン(S3/ELB/EC2など)に対するデータのフェッチは無料ですが、POSTやPUTのリクエストに対しては別料金がかかります。詳しくは<ExternalLink
+            href="https://aws.amazon.com/jp/cloudfront/pricing/"
+            >公式の料金表</ExternalLink
+          >をご確認ください。
+        </p>
       </section>
       <section class="section-child">
         <h3 class="title-small">大量の無効リクエスト</h3>
-        <p class="text">キャッシュの無効リクエストは、月に1,000パスまでは追加料金なしで利用できますが、それ以降は課金されます。詳しくは<ExternalLink href="https://aws.amazon.com/jp/cloudfront/pricing/">公式の料金表</ExternalLink>をご確認ください。</p>
+        <p class="text">
+          キャッシュの無効リクエストは、月に1,000パスまでは追加料金なしで利用できますが、それ以降は課金されます。詳しくは<ExternalLink
+            href="https://aws.amazon.com/jp/cloudfront/pricing/"
+            >公式の料金表</ExternalLink
+          >をご確認ください。
+        </p>
       </section>
     </ServicePartsExclude>
   </ServiceTemplate>

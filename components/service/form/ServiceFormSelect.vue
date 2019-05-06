@@ -7,11 +7,7 @@
         :data-test="columnKey"
         :value="value"
       >
-        <option
-          v-for="option in options"
-          :key="`select-${option}`"
-          :value="option"
-        >{{ option }}</option>
+        <option v-for="option in options" :key="`select-${option}`" :value="option">{{ option }}</option>
       </select>
       <span class="form-select-value">{{ value || '&nbsp;' }}</span>
     </label>
