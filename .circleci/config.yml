@@ -1,7 +1,7 @@
 version: 2
 
 defaults: &defaults
-  working_directory: ~/aws-rough
+  working_directory: ~/app
   docker:
     - image: circleci/python:3.6-jessie-node-browsers
 
@@ -16,17 +16,17 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          name: Restore Yarn Package Cache
+          name: Restore npm package
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-      - run: yarn install
+            - node-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm install
       - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          name: Save npm package
+          key: node-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
-            - ~/.cache/yarn
+            - node_modules
       - persist_to_workspace:
-          root: ~/aws-rough
+          root: ~/app
           paths:
             - ./*
 
@@ -34,10 +34,10 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/aws-rough
-      - run: yarn generate:test
+          at: ~/app
+      - run: npm run generate:test
       - persist_to_workspace:
-          root: ~/aws-rough
+          root: ~/app
           paths:
             - ./*
 
@@ -45,11 +45,11 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/aws-rough
-      - run: yarn test:unit
-      - run: yarn test:e2e
+          at: ~/app
+      - run: npm run test:unit
+      - run: npm run test:e2e
       - persist_to_workspace:
-          root: ~/aws-rough
+          root: ~/app
           paths:
             - dist
 
@@ -57,10 +57,10 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/aws-rough
-      - run: yarn generate:production
+          at: ~/app
+      - run: npm run generate:production
       - persist_to_workspace:
-          root: ~/aws-rough
+          root: ~/app
           paths:
             - ./*
 
@@ -68,7 +68,7 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/aws-rough
+          at: ~/app
       - run: sudo pip install awscli
       - run: aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*.html" --cache-control max-age=31536000
       - run: aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*" --include "*.html" --cache-control no-store

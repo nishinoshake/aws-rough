@@ -15,26 +15,26 @@ https://aws.noplan.cc
 ## 使い方
 ```
 # インストール
-yarn
+npm install
 
 # 開発サーバーの起動
-yarn dev
+npm run dev
 
 # ユニットテスト
-yarn test:unit
+npm run test:unit
 
 # E2Eテスト向けに静的ファイルを生成
-yarn generate:test
+npm run generate:test
 
 # E2Eテスト
-yarn test:e2e
+npm run test:e2e
 
 # テストをまとめて
-yarn test
+npm run test
 
 # 本番向けに静的ファイルを生成
 # E2Eテストに使用した要素のdata-test属性を削除しておく
-yarn generate:production
+npm run generate:production
 ```
 
 ## ライブラリ/フレームワーク

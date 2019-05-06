@@ -13,7 +13,7 @@
     "generate:test": "cross-env AWSROUGH_GENERATE=e2e nuxt generate",
     "generate:production": "cross-env AWSROUGH_GENERATE=production nuxt generate",
     "jest": "jest",
-    "test": "yarn test:unit && yarn test:e2e",
+    "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "jest -c jest.config.unit.js test/unit",
     "test:e2e": "jest -c jest.config.e2e.js test/e2e",
     "test:coverage": "jest --coverage -c jest.config.unit.js test/unit",
