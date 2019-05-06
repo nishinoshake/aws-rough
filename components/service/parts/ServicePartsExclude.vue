@@ -4,7 +4,7 @@
     <p class="text">
       下記のいずれかに該当する場合は、<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
         >公式のツール</ExternalLink
-      >をご利用ください。
+      >を使用してください。
     </p>
     <slot />
   </section>

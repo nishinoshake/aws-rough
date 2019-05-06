@@ -73,6 +73,10 @@ const meta = {
   s3: {
     title: pageTitle('S3の料金を日本円でざっくり'),
     description: pageDescription('S3の料金を計算するぞ。')
+  },
+  vpc: {
+    title: pageTitle('VPCの料金を日本円でざっくり'),
+    description: pageDescription('VPCの料金を計算するぞ。')
   }
 }
 

@@ -1,6 +1,7 @@
 import ec2 from './ec2'
 import fargate from './fargate'
 import elb from './elb'
+import vpc from './vpc'
 import lambda from './lambda'
 import route53 from './route53'
 import cloudfront from './cloudfront'
@@ -11,4 +12,4 @@ import aurora from './aurora'
 import dynamodb from './dynamodb'
 import elasticache from './elasticache'
 
-export default [ec2, fargate, lambda, elb, route53, apigateway, cloudfront, s3, rds, aurora, dynamodb, elasticache]
+export default [ec2, fargate, lambda, elb, vpc, route53, apigateway, cloudfront, s3, rds, aurora, dynamodb, elasticache]

@@ -12,6 +12,7 @@ import rds from './rds'
 import aurora from './aurora'
 import dynamodb from './dynamodb'
 import elasticache from './elasticache'
+import natgw from './natgw'
 
 export default [
   ec2,
@@ -20,6 +21,7 @@ export default [
   clb,
   alb,
   nlb,
+  natgw,
   route53,
   apigateway,
   cloudfront,
