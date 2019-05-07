@@ -1,8 +1,6 @@
 const SITE_TITLE = 'ざっくりAWS'
 const SITE_DESCRIPTION =
   'AWSの料金の目安を日本円で「ざっくり」計算できるサイトです。公式のシミュレーターよりも少ない入力で手軽に概算を算出できます。料金の厳密さよりも手軽さを優先しているので、正確な料金が知りたい方は公式のシミュレーターをお使いください。'
-
-const pageTitle = text => `${text} | ${SITE_TITLE}`
 const pageDescription = text => `${text}${SITE_DESCRIPTION}`
 
 const meta = {
@@ -15,67 +13,63 @@ const meta = {
     description: SITE_DESCRIPTION
   },
   about: {
-    title: pageTitle('このサイトについて'),
-    description: pageDescription('このサイトについての説明ページです。')
-  },
-  deploy: {
-    title: pageTitle('デプロイ'),
-    description: pageDescription('デプロイの確認ページです。')
+    title: 'ざっくりAWSについて',
+    description: SITE_DESCRIPTION
   },
   cloudfront: {
-    title: pageTitle('CloudFrontの料金を日本円でざっくり'),
+    title: 'CloudFrontの料金を日本円でざっくり',
     description: pageDescription('CloudFrontの料金を計算するぞ。')
   },
   apigateway: {
-    title: pageTitle('API Gatewayの料金を日本円でざっくり'),
+    title: 'API Gatewayの料金を日本円でざっくり',
     description: pageDescription('API Gatewayの料金を計算するぞ。')
   },
   detail: {
-    title: pageTitle('料金内訳'),
+    title: '料金内訳',
     description: pageDescription('内訳を確認するぞ。')
   },
   dynamodb: {
-    title: pageTitle('DynamoDBの料金を日本円でざっくり'),
+    title: 'DynamoDBの料金を日本円でざっくり',
     description: pageDescription('DynamoDBの料金を計算するぞ。')
   },
   ec2: {
-    title: pageTitle('EC2の料金を日本円でざっくり'),
+    title: 'EC2の料金を日本円でざっくり',
     description: pageDescription('EC2の料金を計算するぞ。')
   },
   fargate: {
-    title: pageTitle('Fargateの料金を日本円でざっくり'),
+    title: 'Fargateの料金を日本円でざっくり',
     description: pageDescription('Fargateの料金を計算するぞ。')
   },
   elasticache: {
-    title: pageTitle('ElastiCacheの料金を日本円でざっくり'),
+    title: 'ElastiCacheの料金を日本円でざっくり',
     description: pageDescription('ElastiCacheの料金を計算するぞ。')
   },
   elb: {
-    title: pageTitle('ELBの料金を日本円でざっくり'),
+    title: 'ELBの料金を日本円でざっくり',
     description: pageDescription('ELBの料金を計算するぞ。')
   },
   lambda: {
-    title: pageTitle('Lambdaの料金を日本円でざっくり'),
+    title: 'Lambdaの料金を日本円でざっくり',
     description: pageDescription('Lambdaの料金を計算するぞ。')
   },
   rds: {
-    title: pageTitle('RDSの料金を日本円でざっくり'),
+    title: 'RDSの料金を日本円でざっくり',
     description: pageDescription('RDSの料金を計算するぞ。')
   },
   aurora: {
-    title: pageTitle('Auroraの料金を日本円でざっくり'),
+    title: 'Auroraの料金を日本円でざっくり',
     description: pageDescription('Auroraの料金を計算するぞ。')
   },
   route53: {
-    title: pageTitle('Route53の料金を日本円でざっくり'),
+    title: 'Route53の料金を日本円でざっくり',
     description: pageDescription('Route53の料金を計算するぞ。')
   },
   s3: {
-    title: pageTitle('S3の料金を日本円でざっくり'),
+    title: 'S3の料金を日本円でざっくり',
     description: pageDescription('S3の料金を計算するぞ。')
   },
   vpc: {
-    title: pageTitle('VPCの料金を日本円でざっくり'),
+    title: 'VPCの料金を日本円でざっくり',
     description: pageDescription('VPCの料金を計算するぞ。')
   }
 }
