@@ -29,13 +29,17 @@
     &-list {
       display: flex;
       flex-wrap: wrap;
-      margin: 12px -20px 0 -20px;
+      @include max {
+        margin: -10px -20px;
+      }
       @include min {
-        margin: 24px -20px 0 -33px;
+        margin: -20px -34px;
       }
     }
     &-item {
-      padding: 8px 0 8px 10px;
+      @include max {
+        padding: 8px 0 8px 10px;
+      }
       @include min {
         padding: 14px 20px;
       }
