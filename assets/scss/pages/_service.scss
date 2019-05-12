@@ -3,6 +3,16 @@
 // サービス
 // -----------------------------------------------------
 .service {
+  &-inside {
+    .service-calc.mod-multiple {
+      @include max {
+        margin-bottom: 50px;
+      }
+      @include min {
+        margin-bottom: 40px;
+      }
+    }
+  }
   &-title {
     padding: 0 13px;
     @include min {
@@ -28,58 +38,19 @@
       }
     }
   }
-  &-inside {
-    @include max {
-      padding: 20px 20px 0;
-    }
-    @include min {
-      padding: 40px 40px 0;
-    }
-    &:nth-of-type(n+2) {
-      @include max {
-        margin-top: 10px;
-      }
-    }
-    &:last-of-type {
-      @include bb;
-      @include max {
-        padding-bottom: 35px;
-      }
-      @include min {
-        padding-bottom: 60px;
-      }
-    }
-    .table {
-      @include bl;
-      @include br;
-      &:not(.mod-multiple) {
-        @include min {
-          th:first-child,
-          td:first-child {
-            padding-left: 30px;
-          }
-        }
-      }
-    }
-    .service-calc-append {
-      border-right: 2px solid $color-dark;
-      @include min {
-        border-right-width: 4px;
-      }
-    }
-  }
   // 計算するところ
   &-calc {
     position: relative;
     &-label {
-      font-size: 22px;
+      line-height: 1.2;
       font-weight: bold;
       @include bb;
       @include max {
-        padding-bottom: 8px;
+        padding: 14px 20px;
+        font-size: 22px;
       }
       @include min {
-        padding-bottom: 10px;
+        padding: 22px 50px;
         font-size: 32px;
       }
     }
@@ -93,6 +64,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-weight: bold;
       padding: 12px 14px;
       @include min {
         padding: 12px 20px;

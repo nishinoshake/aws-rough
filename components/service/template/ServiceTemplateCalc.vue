@@ -1,18 +1,6 @@
 <template>
-  <div class="service-calc" data-test="service-calc">
+  <div :class="['service-calc', { 'mod-multiple': service.multiple }]" data-test="service-calc">
     <table :class="['table', { 'mod-multiple': service.multiple }]">
-      <thead>
-        <tr>
-          <th
-            v-for="column in service.table"
-            :key="`header-${column.key}`"
-            :class="[{ [`mod-${column.size}`]: column.size }]"
-          >
-            {{ column.title }}
-          </th>
-          <th class="mod-price">月額</th>
-        </tr>
-      </thead>
       <tbody>
         <ServiceTemplateRow
           v-for="(row, rowIndex) in table"

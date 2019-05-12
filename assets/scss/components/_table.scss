@@ -5,14 +5,8 @@
 .table {
   width: 100%;
   position: relative;
-  thead,
   tbody {
     display: block;
-  }
-  thead {
-    @include max {
-      display: none;
-    }
   }
   tr {
     width: 100%;
@@ -23,11 +17,10 @@
     }
     @include min {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
     }
   }
   &.mod-multiple {
-    th,
     td {
       &:first-child {
         @include min {
@@ -36,10 +29,10 @@
       }
     }
   }
-  th,
   td {
     @include max {
       display: block;
+      padding: ($padding-contents-sp / 2) $padding-contents-sp;
       &.mod-price {
         display: flex;
         justify-content: flex-end;
@@ -55,6 +48,8 @@
     }
     @include min {
       width: 8.5rem;
+      position: relative;
+      padding: 22px 8px;
       box-sizing: content-box;
       &.mod-minimal {
         width: 5rem;
@@ -71,6 +66,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        padding-bottom: 32px;
       }
     }
     &:first-child {
@@ -86,27 +82,6 @@
         padding-right: 20px;
       }
     }
-  }
-  th {
-    padding: 8px;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-  td {
-    padding: ($padding-contents-sp / 2) $padding-contents-sp;
-    @include max {
-      &:before {
-        content: attr(data-label);
-        display: block;
-        margin-bottom: 6px;
-        font-size: 16px;
-        font-weight: bold;
-      }
-    }
-    @include min {
-      position: relative;
-      padding: 16px 8px;
-    }
     .button-remove {
       position: absolute;
       @include max {
@@ -118,9 +93,8 @@
         background-color: $color-dark;
       }
       @include min {
-        top: 50%;
+        bottom: 28px;
         left: 13px;
-        transform: translateY(-50%);
       }
     }
   }
@@ -133,7 +107,6 @@
   &-spec {
     margin: 30px 0;
     border-collapse: collapse;
-    th,
     td {
       padding: 8px 12px;
       font-size: 14px;
@@ -143,9 +116,6 @@
       @include min {
         font-size: 16px;
       }
-    }
-    th {
-      font-weight: bold;
     }
   }
 }

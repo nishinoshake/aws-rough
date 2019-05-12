@@ -1,14 +1,17 @@
 <template>
-  <div class="form-text">
-    <input
-      type="number"
-      :aria-label="label"
-      :data-test="columnKey"
-      :value="value"
-      min="0"
-      class="form-text-input"
-      @input="e => update({ serviceKey, index, columnKey, value: e.target.value })"
-    />
+  <div class="form-block">
+    <label class="form-label" :for="`${serviceKey}-${columnKey}-${index}`">{{ label }}</label>
+    <div class="form-text">
+      <input
+        type="number"
+        :id="`${serviceKey}-${columnKey}-${index}`"
+        :data-test="columnKey"
+        :value="value"
+        min="0"
+        class="form-text-input"
+        @input="e => update({ serviceKey, index, columnKey, value: e.target.value })"
+      />
+    </div>
   </div>
 </template>
 

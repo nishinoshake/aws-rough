@@ -3,6 +3,18 @@
 // フォーム
 // -----------------------------------------------------
 .form {
+  &-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.1;
+    @include max {
+      font-size: 14px;
+    }
+    @include min {
+      font-size: 16px;
+    }
+  }
   &-text {
     position: relative;
     &-input {
