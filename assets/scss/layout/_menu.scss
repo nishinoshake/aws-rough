@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 @mixin nav-active {
-  color: $color-dark;
   &:before {
     content: '';
     width: 8px;
@@ -30,12 +29,12 @@
     top: 0;
     left: 0;
     padding: $width-border-pc 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     background: $color-white;
     @include br;
     @include max($mq-kamakura) {
       padding-bottom: $height-cart-sp;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
       transform: translateX(-100%);
       transition: transform .3s $easeOutQuart;
     }
@@ -81,8 +80,7 @@
       padding: 6px 0;
       font-size: 18px;
       font-weight: bold;
-      line-height: 1.4;
-      color: $color-modest;
+      line-height: 1.6;
       white-space: nowrap;
       @include min {
         &:hover {
