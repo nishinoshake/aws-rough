@@ -5,7 +5,7 @@ body {
   line-height: 1.8;
   letter-spacing: 0.06em;
   font-feature-settings: 'palt';
-  color: $color-dark;
+  color: $color-darkest;
   @include min {
     font-size: 18px;
     line-height: 1.9;

@@ -13,10 +13,6 @@
     margin-bottom: 18px;
     font-size: 32px;
   }
-  &:before {
-    content: '#';
-    padding-right: 4px;
-  }
   &-page {
     height: 70px;
     padding: 0 $padding-contents-sp;
@@ -37,6 +33,7 @@
     font-size: 18px;
     font-weight: bold;
     line-height: 1.4;
+    color: $color-dark;
     @include min {
       margin-bottom: 14px;
       font-size: 24px;
