@@ -1,13 +1,12 @@
 <template>
   <tr>
     <td
-      v-for="(column, columnIndex) in service.table"
+      v-for="(column, columnIndex) in table"
       :key="column.key"
       :class="{
         [`mod-${column.size}`]: column.size,
         'has-remove': service.multiple && columnIndex === 0
       }"
-      :data-label="labels[columnIndex]"
     >
       <!-- 削除ボタン -->
       <button
@@ -22,7 +21,7 @@
         v-if="column.type === 'number'"
         :service-key="service.key"
         :index="rowIndex"
-        :label="labels[columnIndex]"
+        :label="column.title"
         :column-key="column.key"
         :value="row[column.key]"
       />
@@ -31,7 +30,7 @@
         v-if="column.type === 'select'"
         :service-key="service.key"
         :index="rowIndex"
-        :label="labels[columnIndex]"
+        :label="column.title"
         :column-key="column.key"
         :value="row[column.key]"
         :options="column.options || column.parseJson($store.state.price, row)"
@@ -61,16 +60,21 @@ export default {
       type: Number,
       required: true
     },
-    labels: {
-      type: Array,
-      required: true
-    },
     service: {
       type: Object,
       required: true
     }
   },
   computed: {
+    table() {
+      if (this.service.filterRow) {
+        const keys = this.service.filterRow(this.row)
+
+        return this.service.table.filter(row => keys.indexOf(row.key) !== -1)
+      } else {
+        return this.service.table
+      }
+    },
     error() {
       return this.$store.state.error
     }

@@ -7,7 +7,6 @@
           :key="rowIndex"
           :row="row"
           :row-index="rowIndex"
-          :labels="tableLabels"
           :service="service"
         />
       </tbody>
@@ -34,9 +33,6 @@ export default {
   computed: {
     table() {
       return this.$store.state.tables[this.service.key]
-    },
-    tableLabels() {
-      return this.service.table.map(column => column.title)
     }
   },
   methods: {

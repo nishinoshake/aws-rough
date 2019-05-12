@@ -13,6 +13,19 @@
         <p class="text">DynamoDBで使用するストレージの容量をGB単位で入力してください。</p>
       </section>
       <section class="section-child">
+        <h3 class="title-small">読み込みリクエスト</h3>
+        <p class="text">
+          4KBまでの強い整合性のある読み込み1回につき1単位、トランザクション読み込み1回につき2単位、結果整合性のある読み込み1回につき
+          0.5単位の読み込みリクエストが発生します。
+        </p>
+      </section>
+      <section class="section-child">
+        <h3 class="title-small">書き込みリクエスト</h3>
+        <p class="text">
+          1KBまでの書き込み1回につき1単位、トランザクション書き込み1回につき2単位の書き込みリクエストが発生します。
+        </p>
+      </section>
+      <section class="section-child">
         <h3 class="title-small">RCU</h3>
         <p class="text">読み込みキャパシティユニット(RCU)を入力してください。</p>
         <p class="text">
