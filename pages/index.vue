@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <h1 class="title-page">なんの料金が知りたいですか？</h1>
+    <h1 class="title-page">どのサービスの料金が<br class="sp" />知りたいですか？</h1>
     <section class="section">
       <div class="landing-service-list">
         <section class="landing-service-item" v-for="service in services" :key="service.key">

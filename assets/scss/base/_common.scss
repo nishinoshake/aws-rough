@@ -68,3 +68,15 @@ body {
     padding-bottom: 82px;
   }
 }
+
+.sp {
+  @include min {
+    display: none;
+  }
+}
+
+.pc {
+  @include max {
+    display: none;
+  }
+}

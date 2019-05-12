@@ -14,17 +14,19 @@
     font-size: 32px;
   }
   &-page {
-    height: 70px;
-    padding: 0 $padding-contents-sp;
     display: flex;
     align-items: center;
     font-size: 22px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.5;
     @include bb;
+    @include max {
+      min-height: 70px;
+      padding: 20px $padding-contents-sp;
+    }
     @include min {
-      height: 134px;
-      padding: 0 $padding-contents-pc;
+      min-height: 134px;
+      padding: 30px $padding-contents-pc;
       font-size: 36px;
     }
   }
