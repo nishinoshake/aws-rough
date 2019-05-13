@@ -15,12 +15,20 @@ const meta = {
     description: SITE_DESCRIPTION
   },
   about: {
-    title: 'ざっくりAWSについて',
+    title: 'このサイトについて | ざっくりAWS',
     description: SITE_DESCRIPTION
   },
   detail: {
-    title: '料金内訳',
+    title: '料金内訳 | ざっくりAWS',
     description: 'ざっくりAWSの料金内訳を確認できます。'
+  },
+  terms: {
+    title: '利用規約 | ざっくりAWS',
+    description: 'ざっくりAWSの利用規約です。'
+  },
+  privacy: {
+    title: 'プライバシーポリシー | ざっくりAWS',
+    description: 'ざっくりAWSのプライバシーポリシーです。'
   },
   ec2: {
     title: pageTitle('EC2'),

@@ -3,12 +3,22 @@
     <ul class="footer-list">
       <li class="footer-item">
         <nuxt-link to="/about/" class="text-link-hover">
-          <i class="footer-item-icon"><ArrorRight /></i>このサイトについて
+          このサイトについて
+        </nuxt-link>
+      </li>
+      <li class="footer-item">
+        <nuxt-link to="/terms/" class="text-link-hover">
+          利用規約
+        </nuxt-link>
+      </li>
+      <li class="footer-item">
+        <nuxt-link to="/privacy/" class="text-link-hover">
+          プライバシーポリシー
         </nuxt-link>
       </li>
       <li class="footer-item">
         <a href="https://github.com/noplan1989/aws-rough" target="_blank" rel="noopener" class="text-link-hover">
-          <i class="footer-item-icon"><ArrorRight /></i>GitHub
+          GitHub
         </a>
       </li>
     </ul>
