@@ -11,11 +11,6 @@
           <i class="footer-item-icon"><ArrorRight /></i>GitHub
         </a>
       </li>
-      <li class="footer-item">
-        <a href="http://calculator.s3.amazonaws.com/index.html" target="_blank" rel="noopener" class="text-link-hover">
-          <i class="footer-item-icon"><ArrorRight /></i>公式ツール
-        </a>
-      </li>
     </ul>
   </footer>
 </template>
