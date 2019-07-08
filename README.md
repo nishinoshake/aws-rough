@@ -10,7 +10,7 @@ AWS の料金を日本円でざっくり計算できるサイトです。
 
 https://aws.noplan.cc
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/noplan1989/aws-rough/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/noplan1989/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/noplan1989/aws-rough/tree/master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nishinoshake/aws-rough/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/nishinoshake/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/nishinoshake/aws-rough/tree/master)
  
 ## 使い方
 ```
@@ -81,7 +81,7 @@ API Gateway + Lambda + S3
 毎朝10時にLambdaを起こして価格の更新を行い、CircleCIで静的ファイルを生成してからデプロイする流れです。
 
 価格を取得するLambdaのコードは別のリポジトリで管理しています。  
-https://github.com/noplan1989/aws-rough-functions
+https://github.com/nishinoshake/aws-rough-functions
 
 ## ご意見・ご要望
 追加して欲しいサービスや機能、致命的なバグなどがありましたら、issueにあげていただくか、なんらかの方法でご連絡をお願いいたします。サイト名が「ざっくりAWS」なので、ざっくりじゃなくなってしまう機能追加は難しいですが、できる限り対応いたします。
