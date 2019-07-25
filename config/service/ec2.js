@@ -10,7 +10,7 @@ export default {
       type: 'select',
       key: 'instance',
       title: 'インスタンス',
-      default: 't2.nano',
+      default: 't3.nano',
       parseJson: json => json.ec2.instance.map(instance => instance.instanceType)
     },
     {

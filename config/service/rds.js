@@ -17,7 +17,7 @@ export default {
       type: 'select',
       key: 'instance',
       title: 'インスタンス',
-      default: 'db.t2.micro',
+      default: 'db.t3.micro',
       size: 'large',
       parseJson: (json, row) => json.rds.instance[row.engine].map(instance => instance.instanceType)
     },

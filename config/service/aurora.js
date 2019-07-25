@@ -17,7 +17,7 @@ export default {
       type: 'select',
       key: 'instance',
       title: 'インスタンス',
-      default: 'db.r4.large',
+      default: 'db.r5.large',
       size: 'large',
       parseJson: (json, row) => json.aurora.instance[row.engine].map(instance => instance.instanceType)
     },
