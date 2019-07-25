@@ -10,7 +10,7 @@ export default {
       type: 'select',
       key: 'protocol',
       title: 'プロトコル',
-      default: 'HTTP',
+      default: 'HTTPS',
       options: ['HTTP', 'HTTPS']
     },
     {
