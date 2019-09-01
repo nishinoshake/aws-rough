@@ -5,4 +5,10 @@
 // -----------------------------------------------------
 
 .about {
+  @include max {
+    padding: 60px 20px 0;
+  }
+  @include min {
+    padding: 100px 0;
+  }
 }

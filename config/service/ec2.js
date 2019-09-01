@@ -1,6 +1,7 @@
 export default {
   key: 'ec2',
   name: 'EC2',
+  fullname: 'Elastic Compute Cloud',
   href: '/ec2/',
   description: '仮想サーバー',
   color: 'orange',
@@ -11,6 +12,7 @@ export default {
       key: 'instance',
       title: 'インスタンス',
       default: 't3.nano',
+      size: 'large',
       parseJson: json => json.ec2.instance.map(instance => instance.instanceType)
     },
     {

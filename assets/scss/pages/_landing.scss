@@ -5,95 +5,34 @@
 // -----------------------------------------------------
 
 .landing {
-  &-copy {
-    padding: 30px $padding-contents-sp 36px 18px;
-    font-size: 28px;
-    line-height: 1.5;
-    letter-spacing: 0.2em;
-    font-weight: bold;
-    @include bb;
-    @include min {
-      padding: 38px $padding-contents-pc 46px 44px;
-      font-size: 52px;
-    }
-    em {
-      padding-left: 4px;
-      font-size: 128%;
-      font-style: normal;
-      @include min {
-        padding-left: 8px;
-      }
-    }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include max {
+    padding-bottom: $height-footer-sp;
   }
-  &-service {
-    &-list {
-      display: flex;
-      flex-wrap: wrap;
-      @include max {
-        margin: -10px -20px;
-      }
-      @include min {
-        margin: -20px -34px;
-      }
+  @include min {
+    padding-bottom: $height-footer-pc;
+  }
+  &-copy {
+    position: relative;
+    line-height: 2;
+    letter-spacing: 0.12em;
+    color: $color-modest;
+    font-feature-settings: normal;
+    @include max {
+      padding: $padding-sp * 1.5;
+      font-size: 22px;
+      @include font-en(300);
     }
-    &-item {
-      @include max {
-        padding: 8px 0 8px 10px;
-      }
-      @include min {
-        padding: 14px 20px;
-      }
-      a {
-        width: 165px;
-        display: flex;
-        align-items: center;
-        @include min {
-          width: 260px;
-          &:hover {
-            filter: grayscale(1);
-            .landing-service-summary {
-              opacity: 0.8;
-            }
-          }
-        }
-      }
-      svg {
-        width: 60px;
-        height: 60px;
-        @include min {
-          width: 100px;
-          height: 100px;
-        }
-      }
+    @include min {
+      padding: 40px 0 40px 40px;
+      font-size: 56px;
+      @include font-en;
     }
-    &-icon {
-      margin-right: 2px;
-      @include min {
-        margin-right: 10px;
-      }
-    }
-    &-summary {
-      flex-grow: 1;
-    }
-    &-name {
-      margin-bottom: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      line-height: 1;
-      white-space: nowrap;
-      @include min {
-        margin-bottom: 12px;
-        font-size: 24px;
-      }
-    }
-    &-description {
-      font-size: 15px;
-      line-height: 1;
-      white-space: nowrap;
-      color: #575757;
-      @include max {
-        font-size: 11px;
-      }
+    span {
+      padding-right: 0.2em;
     }
   }
 }

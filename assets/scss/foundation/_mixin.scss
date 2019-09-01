@@ -9,13 +9,25 @@
   }
 }
 
-@mixin between($width-from: $mq-min, $width-to: $mq-kamakura) {
-  @media only screen and (min-width: $width-from) and (max-width: $width-to) {
+@mixin max-large($width: $mq-large) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin between {
+  @media only screen and (min-width: $mq-min) and (max-width: $mq-large) {
     @content;
   }
 }
 
 @mixin min($width: $mq-min) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-large($width: $mq-large + 1px) {
   @media only screen and (min-width: $width) {
     @content;
   }
@@ -67,42 +79,57 @@
 }
 
 // -----------------------------------------------------
-// border
+// border-radius
 // -----------------------------------------------------
-@mixin b {
-  border: $width-border-sp solid $color-border;
+@mixin radius-xs {
+  border-radius: 4px;
+}
+@mixin radius-s {
+  border-radius: 8px;
+}
+@mixin radius-m {
+  @include max {
+    border-radius: 12px;
+  }
   @include min {
-    border-width: $width-border-pc;
+    border-radius: 16px;
   }
 }
-@mixin bt {
-  border-top: $width-border-sp solid $color-border;
-  @include min {
-    border-width: $width-border-pc;
-  }
+@mixin radius-l {
+  border-radius: 32px;
 }
-@mixin br {
-  border-right: $width-border-sp solid $color-border;
-  @include min {
-    border-width: $width-border-pc;
-  }
+
+
+// -----------------------------------------------------
+// Shadow
+// -----------------------------------------------------
+@mixin shadow ($size: 36px, $color: rgba($color-modest, 0.1)) {
+  box-shadow: 0 0 $size $color;
 }
-@mixin bb {
-  border-bottom: $width-border-sp solid $color-border;
-  @include min {
-    border-width: $width-border-pc;
-  }
+@mixin shadow-thick () {
+  box-shadow: 0 0 72px rgba(0, 0, 0, 0.1);
 }
-@mixin bl {
-  border-left: $width-border-sp solid $color-border;
-  @include min {
-    border-width: $width-border-pc;
-  }
+@mixin shadow-light {
+  @include shadow(16px, rgba(#ccc, 0.1));
 }
 
 // -----------------------------------------------------
 // Text
 // -----------------------------------------------------
+@mixin font-sans {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+}
+@mixin font-ja {
+  font-family: 'Noto Serif JP', serif;
+}
+@mixin font-en($weight: 100) {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: $weight;
+}
+@mixin font-number {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
 @mixin hide-text {
   font: 0 / 0;
   color: transparent;

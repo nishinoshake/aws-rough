@@ -1,57 +1,95 @@
 @charset "utf-8";
-// -----------------------------------------------------
-// フッター
-// -----------------------------------------------------
+
 .footer {
-  width: 100%;
-  position: absolute;
-  padding: $padding-contents-sp;
-  bottom: 0;
-  left: 0;
-  @include bt;
-  @include min {
-    padding: $padding-cart $padding-contents-pc;
+  @include max-large {
+    z-index: 100;
   }
-  &-list {
-    @include min {
-      display: flex;
-      align-items: center;
-    }
+  @include min-large {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-top: $width-border solid $color-border;
+    background-color: $color-white;
   }
-  &-item {
-    font-size: 14px;
-    font-weight: bold;
-    @include min {
-      font-size: 20px;
-    }
-    &:nth-child(n + 2) {
-      @include max {
-        margin-top: 8px;
-      }
-      @include min {
-        margin-left: 25px;
-      }
-    }
-    a {
-      display: flex;
-      align-items: center;
-    }
-    &-icon {
-      width: 7px;
-      margin-right: 5px;
+  &-bar {
+    @include min-large {
+      max-width: $width-max;
+      height: $height-footer-pc;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding-left: $width-menu-pc + $padding-pc * 1.5;
+      padding-right: $padding-pc;
+    }
+  }
+  &-action {
+    @include max-large {
+      width: 100%;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      bottom: 0;
+      padding-right: $width-menu-sp;
+      display: flex;
+      justify-content: flex-end;
+      background-color: $color-white;
+      border-top: 1px solid $color-border;
+    }
+  }
+  &-logo {
+    position: absolute;
+    left: 0;
+    a {
+      width: 150px;
+      display: block;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-nav {
+    &-list {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      @include max-large {
+        padding:  $padding-sp * 5  $padding-sp $padding-sp * 7;
+        justify-content: center;
+      }
+    }
+    &-item {
+      line-height: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      @include font-en(300);
+      @include max {
+        font-size: 18px;
+      }
       @include min {
-        width: 8px;
-        margin-right: 6px;
+        font-size: 22px;
       }
-      &:before {
-        content: '';
-        display: block;
-        height: 0;
-        padding-top: 266.7%;
-      }
-      svg {
-        @include fit-full;
+      &:nth-child(n+2) {
+        &:before {
+          content: "";
+          background-color: $color-border;
+          @include max {
+            width: 12px;
+            height: 1px;
+            margin: 0 10px;            
+          }
+          @include min {
+            width: 20px;
+            height: 2px;
+            margin: 0 25px;
+          }
+        }
       }
     }
   }

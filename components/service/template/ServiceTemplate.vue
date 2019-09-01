@@ -1,8 +1,15 @@
 <template>
   <article class="service">
     <ServiceTemplateTitle :service="service" />
-    <ServiceTemplateCalc :service="service" />
-    <slot />
+    <div class="section">
+      <ServiceTemplateCalc :service="service" />
+    </div>
+    <div class="section">
+      <div class="section-box">
+        <p class="title-daitan"><span>補足と前提</span></p>
+        <slot name="aside" />
+      </div>
+    </div>
   </article>
 </template>
 

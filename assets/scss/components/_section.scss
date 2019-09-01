@@ -5,23 +5,31 @@
 // -----------------------------------------------------
 
 .section {
-  padding: $padding-contents-sp;
-  @include min {
-    padding: $padding-contents-pc;
-  }
-  &:nth-of-type(n + 2) {
-    @include bt;
+  + .section {
+    @include max {
+      margin-top: $margin-sp * 3;
+    }
+    @include min {
+      margin-top: $margin-pc * 3;
+    }
   }
   &-child {
-    margin-top: 20px;
-    @include min {
-      margin-top: 30px;
-    }
     + .section-child {
       margin-top: 40px;
       @include min {
         margin-top: 50px;
       }
+    }
+  }
+  &-box {
+    background-color: $color-bg;
+    @include max {
+      padding: $padding-sp * 1.5 $padding-sp;
+      border-radius: 16px;
+    }
+    @include min {
+      padding: $padding-pc * 1.5;
+      border-radius: 36px;
     }
   }
 }

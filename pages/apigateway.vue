@@ -1,36 +1,37 @@
 <template>
   <ServiceTemplate service-name="apigateway">
-    <section class="section">
-      <h2 class="title">概要と料金</h2>
-      <p class="text">
-        APIのエンドポイントを手軽に作成できるサービスです。<br />主に、リクエスト数とデータ転送量で料金が決まります。
-      </p>
-    </section>
-    <section class="section">
-      <h2 class="title">入力項目の補足</h2>
-      <section class="section-child">
-        <h3 class="title-small">リクエスト数</h3>
-        <p class="text">API Gatewayへ送信されるリクエストの数を入力してください。</p>
-      </section>
-      <section class="section-child">
-        <h3 class="title-small">データ転送量</h3>
-        <p class="text">API Gatewayから送信されるデータ転送量をGB単位で入力してください。</p>
-      </section>
-      <section class="section-child">
-        <h3 class="title-small">キャッシュ</h3>
-        <p class="text">キャッシュを使用する場合は、サイズを選択してください。</p>
-      </section>
-    </section>
+    <template v-slot:aside>
+      <div class="service-summary accordion-list">
+        <ServicePartsAccordion title="入力項目の補足">
+          <section class="section-child">
+            <h3 class="title-small"><span>リクエスト数</span></h3>
+            <p class="text">API Gatewayへ送信されるリクエストの数を入力してください。</p>
+          </section>
+          <section class="section-child">
+            <h3 class="title-small"><span>データ転送量</span></h3>
+            <p class="text">API Gatewayから送信されるデータ転送量をGB単位で入力してください。</p>
+          </section>
+          <section class="section-child">
+            <h3 class="title-small"><span>キャッシュ</span></h3>
+            <p class="text">キャッシュを使用する場合は、サイズを選択してください。</p>
+          </section>
+        </ServicePartsAccordion>
+
+        <ServicePartsCondition></ServicePartsCondition>
+      </div>
+    </template>
   </ServiceTemplate>
 </template>
 
 <script>
 import ServiceTemplate from '@/components/service/template/ServiceTemplate'
+import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
+import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceApiGateway',
-  components: { ServiceTemplate },
+  components: { ServiceTemplate, ServicePartsAccordion, ServicePartsCondition },
   head() {
     return meta.apigateway
   }

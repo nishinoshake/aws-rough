@@ -8,27 +8,36 @@
   display: inline-flex;
   align-items: flex-end;
   font-family: sans-serif;
-  font-weight: bold;
   line-height: 1;
   letter-spacing: 0.06em;
+  @include max-large {
+    font-size: 12px;
+  }
+  @include min-large {
+    font-size: 12px;
+  }
   &-number {
-    margin: 0 0.1em -0.05em 0;
-    font-size: 120%;
+    @include font-number;
+    @include max-large {
+      font-size: 160%;
+    }
+    @include min-large {
+      font-size: 180%;
+    }
+  }
+  &-unit {
+    margin: 0 0 3px 4px;
+    color: $color-modest;
   }
   &.mod-large {
-    font-size: 16px;
-    @include min($mq-kamakura) {
-      font-size: 24px;
+    @include max-large {
+      font-size: 12px;
     }
-    .price-number {
-      margin: 0 0.2em -0.1em 0;
-      font-size: 120%;
-      @include max($mq-kamakura) {
-        margin-bottom: -0.05em;
-      }
-      @include min($mq-kamakura) {
-        font-size: 130%;
-      }
+    @include min-large {
+      font-size: 14px;
+    }
+    .price-unit {
+      margin: 0 0 2px 6px;
     }
   }
 }

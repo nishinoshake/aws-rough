@@ -1,118 +1,170 @@
 @charset "utf-8";
 
-@mixin nav-active {
-  &:before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    right: calc(100% + 10px);
-    top: 50%;
-    margin-top: -4px;
-    background-color: currentColor;
-  }
-}
-
 .menu {
-  &.is-open {
-    .menu-container {
-      @include max($mq-kamakura) {
-        transform: translateX(0);
-      }
+  @include min-large {
+    width: $width-menu-pc;
+    position: relative;
+    flex: none;
+    &:after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      z-index: 200;
+      top: 0;
+      left: $width-menu-pc;
+      background-color: $color-border;
     }
   }
   &-container {
-    width: $width-menu;
-    height: 100vh;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    padding: $width-border-pc 0;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    background: $color-white;
-    @include br;
-    @include max($mq-kamakura) {
-      padding-bottom: $height-cart-sp;
-      transform: translateX(-100%);
-      transition: transform .3s $easeOutQuart;
+    @include max-large {
+      width: 100vw;
+      position: fixed;
+      bottom: $height-footer-sp;
+      left: 0;
+      z-index: 1;
+      background-color: $color-white;
+      border-top: 1px solid $color-border;
+      transition: transform 0.36s $easeOutExpo;
+      &:not(.is-open) {
+        transform: translate3d(0, 100%, 0);
+      }
+    }
+    @include min-large {
+      position: sticky;
+      top: 0;
+      left: 0;
+      padding-left: 16px;
+    }
+  }
+  &-button {
+    @include max-large {
+      width: $width-menu-sp;
+      height: $height-footer-sp;
+      position: fixed;
+      z-index: 20;
+      right: 0;
+      bottom: 0;
+      border-left: 1px solid $color-border;
+      font-size: 18px;
+      color: $color-modest;
+      @include center-flex;
+      @include font-en(300);
+    }
+    @include min-large {
+      display: none;
+    }
+  }
+  &-frame {
+    @include max-large {
+      padding: $padding-sp;
+    }
+    @include min-large {
+      height: calc(100vh - #{$height-footer-pc});
+      padding: 30px 0;
+      &.can-scroll {
+        overflow-y: scroll;
+      }
+      &:not(.can-scroll) {
+        display: flex;
+        align-items: center;
+      }
     }
   }
   &-logo {
-    height: 130px;
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
     a {
-      width: 102px;
-      position: relative;
+      width: 140px;
       display: block;
-      line-height: 0;
     }
-    span {
+    img {
       display: block;
-      &:before {
-        content: '';
-        display: block;
-        height: 0;
-        padding-top: 70.3125%;
-      }
-    }
-    svg {
-      @include fit-full;
+      width: 100%;
+      height: auto;
     }
   }
   &-list {
-    padding: 20px 30px;
-    @include bt;
+    @include max-large {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -20px;
+    }
   }
   &-item {
     &.mod-detail {
-      @include min($mq-kamakura) {
+      @include min-large {
         display: none;
       }
     }
-    a {
-      display: block;
-      position: relative;
-      padding: 6px 0;
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 1.6;
-      white-space: nowrap;
+    &.mod-orange a {
+      &.is-active {
+        color: $color-orange;
+      }
       @include min {
         &:hover {
-          @include nav-active;
+          color: $color-orange;
         }
       }
+    }
+    &.mod-blue a {
       &.is-active {
-        @include nav-active;
+        color: $color-blue;
+      }
+      @include min {
+        &:hover {
+          color: $color-blue;
+        }
+      }
+    }
+    &.mod-beige a {
+      &.is-active {
+        color: $color-beige;
+      }
+      @include min {
+        &:hover {
+          color: $color-beige;
+        }
+      }
+    }
+    &.mod-red a {
+      &.is-active {
+        color: $color-red;
+      }
+      @include min {
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    a {
+      display: flex;
+      line-height: 1;
+      letter-spacing: normal;
+      white-space: nowrap;
+      align-items: center;
+      color: $color-modest;
+      @include font-en(300);
+      @include max-large {
+        padding: 10px;
+        font-size: 16px;
+      }
+      @include min-large {
+        padding: 8px 0;
+        font-size: 20px;
       }
     }
   }
-}
-
-// 小さい画面用のボタン
-.menu-button {
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: .08em;
-  @include max($mq-kamakura) {
-    position: fixed;
-    z-index: 10;
-    width: 100px;
-    height: $height-cart-sp;
-    bottom: 0;
-    left: 0;
-    font-size: 18px;
-    @include br;
+  &-icon {
+    flex: none;
+    @include max {
+      width: 24px;
+      height: 24px;
+    }
+    @include min {
+      width: 32px;
+      height: 32px;
+    }
   }
-  @include max($mq-minimal) {
-    width: 80px;
-  }
-  @include min($mq-kamakura) {
-    display: none;
+  &-name {
+    margin-left: 4px;
   }
 }

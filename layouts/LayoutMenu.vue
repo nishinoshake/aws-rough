@@ -1,46 +1,60 @@
 <template>
-  <div :class="['menu', { 'is-open': isOpen }]">
-    <div class="menu-container">
-      <h1 class="menu-logo">
-        <nuxt-link to="/" @click.native="close()">
-          <span><IconLogo /></span>
-        </nuxt-link>
-      </h1>
-      <nav class="menu-nav">
+  <nav class="menu">
+    <div :class="['menu-container', { 'is-open': isOpen }]">
+      <div :class="['menu-frame', { 'can-scroll': canScroll }]">
         <ul class="menu-list">
-          <li v-for="service in services" :key="service.key" class="menu-item">
-            <nuxt-link :to="service.href" @click.native="close()">{{ service.name }}</nuxt-link>
-          </li>
-          <li class="menu-item mod-detail">
-            <nuxt-link to="/detail/" @click.native="close()">内訳を見る</nuxt-link>
+          <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
+            <nuxt-link :to="service.href" @click.native="handleClick">
+              <ServicePartsIcon :name="service.key" class="menu-icon" />
+              <span class="menu-name">{{ service.name }}</span>
+            </nuxt-link>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
-    <button class="menu-button" @click="toggle">{{ isOpen ? 'CLOSE' : 'MENU' }}</button>
-  </div>
+    <button class="menu-button" @click="toggle">{{ buttonText }}</button>
+  </nav>
 </template>
 
 <script>
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import serviceConfig from '@/config/service/mokuji'
-import IconLogo from '@/assets/svg/logo.svg'
 
 export default {
   name: 'LayoutMenu',
-  components: { IconLogo, ServicePartsIcon },
+  components: { ServicePartsIcon },
   data() {
     return {
+      services: serviceConfig,
       isOpen: false,
-      services: serviceConfig
+      canScroll: false
     }
   },
+  computed: {
+    buttonText() {
+      return this.isOpen ? 'CLOSE' : 'MENU'
+    }
+  },
+  mounted() {
+    this.handleResize()
+    window.addEventListener('resize', () => this.handleResize())
+  },
   methods: {
-    open() {
-      this.isOpen = true
-    },
-    close() {
+    handleClick() {
       this.isOpen = false
+      this.$emit('change')
+    },
+    handleResize() {
+      const menuHeight = document.querySelector('.menu-list').offsetHeight
+      let footerHeight = 0
+
+      if (window.matchMedia('(max-width: 1280px)').matches) {
+        footerHeight = document.querySelector('.footer-action').offsetHeight
+      } else {
+        footerHeight = document.querySelector('.footer').offsetHeight
+      }
+
+      this.canScroll = menuHeight > window.innerHeight - footerHeight
     },
     toggle() {
       this.isOpen = !this.isOpen

@@ -1,7 +1,8 @@
 import Vuex from 'vuex'
 import * as calc from '@/lib/calc'
 import { MAX_ROW } from '@/config/constants'
-import { getDefaultTable, getDefaultTables } from '@/lib/service'
+import { getDefaultTable, getDefaultTables, getService } from '@/lib/service'
+import { totalTable } from '@/lib/calc/total'
 import { usdToXXX } from '@/lib/price'
 import { fetchPrice, fetchFx } from '@/api'
 import serviceConfig from '@/config/service'
@@ -20,6 +21,50 @@ const store = () =>
       error: {
         isVisible: false,
         message: null
+      }
+    },
+    getters: {
+      services(state) {
+        return Object.keys(state.tables).reduce((services, serviceKey) => {
+          const { name, color } = getService(serviceKey, serviceConfig)
+          const { jpy } = totalTable(state.tables[serviceKey])
+
+          if (jpy > 0) {
+            return [...services, { key: serviceKey, name, color, total: jpy }]
+          }
+
+          return services
+        }, [])
+      },
+      hasService(state, getters) {
+        return getters.services.length > 0
+      },
+      colorRatio(state, getters) {
+        const colors = {
+          orange: 0,
+          red: 0,
+          beige: 0,
+          blue: 0
+        }
+        const colorLength = Object.keys(colors).length
+
+        if (getters.hasService) {
+          getters.services.forEach(service => {
+            colors[service.color] += service.total
+          })
+
+          Object.keys(colors).forEach(key => {
+            colors[key] = Math.round((100 * colors[key]) / state.total.jpy)
+          })
+
+          return colors
+        } else {
+          Object.keys(colors).forEach(key => {
+            colors[key] = Math.round(100 / colorLength)
+          })
+
+          return colors
+        }
       }
     },
     mutations: {

@@ -7,38 +7,118 @@
 .title {
   margin-bottom: 12px;
   font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
+  @include font-sans;
   @include min {
-    margin-bottom: 18px;
-    font-size: 32px;
+    margin-bottom: 22px;
+    font-size: 30px;
   }
   &-page {
     display: flex;
     align-items: center;
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 1.5;
-    @include bb;
+    line-height: 1;
+    top: -0.7em;
+    left: 1em;
     @include max {
-      min-height: 70px;
-      padding: 20px $padding-contents-sp;
+      min-height: 160px;
+      font-size: 30px;
     }
     @include min {
-      min-height: 134px;
-      padding: 30px $padding-contents-pc;
-      font-size: 36px;
+      min-height: 260px;
+      font-size: 56px;
+    }
+    &-icon {
+      flex: none;
+      @include max {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+      @include min {
+        width: 64px;
+        height: 64px;
+        margin-right: 14px;
+      }
+    }
+    &-name {
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+      @include max {
+        @include font-en(300);
+      }
+      @include min {
+        @include font-en;
+      }
+    }
+    &-ja {
+      color: $color-modest;
+      @include max {
+        font-size: 24px;
+      }
+      @include min {
+        font-size: 42px;
+      }
+    }
+    &-separator {
+      @include max {
+        display: none;
+      }
+      @include min {
+        width: 30px;
+        height: 1px;
+        margin: 0 24px;
+        background-color: currentColor; 
+      }
+    }
+    &-fullname {
+      @include max {
+        display: none;
+      }
+      @include min {
+        font-size: 60%;
+        @include font-en;
+      }
+    }
+  }
+  &-section {
+    position: absolute;
+    letter-spacing: 0.1em;
+    @include min {
+      top: -42px;
+      font-size: 48px;
+      color: $color-border;
     }
   }
   &-small {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
     line-height: 1.4;
-    color: $color-dark;
+    @include max {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
     @include min {
-      margin-bottom: 14px;
-      font-size: 24px;
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+    span {
+      display: inline;
+      padding-bottom: 2px;
+      border-bottom: 2px solid $color-border;
+    }
+  }
+  &-daitan {
+    display: flex;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    color: $color-modest;
+    @include max {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+    @include min {
+      margin-bottom: 50px;
+      font-size: 28px;
     }
   }
 }

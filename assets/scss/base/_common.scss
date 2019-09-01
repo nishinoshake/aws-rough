@@ -1,72 +1,58 @@
 @charset "utf-8";
+
 body {
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Yu Gothic", YuGothic, Verdana, Meiryo, sans-serif;
-  line-height: 1.8;
-  letter-spacing: 0.06em;
-  font-feature-settings: 'palt';
-  color: $color-darkest;
+  line-height: 1.9;
+  letter-spacing: 0.12em;
+  color: $color-font;
+  font-feature-settings: "palt";
+  @include font-sans;
   @include min {
-    font-size: 18px;
-    line-height: 1.9;
+    font-size: 16px;
   }
 }
 
 .container {
   position: relative;
-  overflow: hidden;
-  @include max($mq-kamakura) {
-    padding: 2px 2px $height-cart-sp 2px;
-    padding-bottom: $height-cart-sp;
-  }
   @include min {
-    padding: 4px 4px $height-cart-sp 4px;
-  }
-  @include min($mq-kamakura) {
-    padding: 4px 4px 4px $width-menu;
-  }
-  &:before,
-  &:after,
-  &-frame:before,
-  &-frame:after {
-    content: '';
-    position: fixed;
-    z-index: 2;
-    @include bt;
-  }
-  &:before,
-  &:after {
-    left: 0;
-    width: 100vw;
-  }
-  &:before {
-    top: 0;
-  }
-  &:after {
-    bottom: 0;
-  }
-  &-frame:before,
-  &-frame:after {
-    top: 0;
-    height: 100vh;
-    @include bl;
-  }
-  &-frame:before {
-    left: 0;
-  }
-  &-frame:after {
-    right: 0;
+    max-width: $width-max;
+    margin: 0 auto;
   }
 }
 
+.main {
+  display: flex;
+}
+
 .contents {
+  min-width: 0;
+  min-height: 100vh;
+  flex-grow: 1;
   position: relative;
-  min-height: calc(100vh - #{$height-header-sp});
-  padding-bottom: $height-footer-sp;
-  @include min {
-    min-height: 100vh;
-    padding-bottom: 82px;
+  @include max {
+    padding: 0 $padding-sp;
   }
+  @include between {
+    padding: 0 $padding-sp * 2;
+  }
+  @include min-large {
+    padding: 0 $padding-pc ($height-footer-pc + $padding-pc * 2) $padding-pc * 1.5;
+  }
+}
+
+.app.page-index .contents {
+  @include min-large {
+    padding-bottom: 0;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.14s linear;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
 
 .sp {

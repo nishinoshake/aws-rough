@@ -1,7 +1,7 @@
 <template>
   <p :class="['price', { [`mod-${mod}`]: mod }]">
     <span :class="['price-number', { 'mod-expensive': isExpensive }]" data-test="price">{{ yen }}</span>
-    <span class="price-unit">円</span>
+    <span class="price-unit">円/月</span>
   </p>
 </template>
 

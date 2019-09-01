@@ -2,6 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   head: {
+    server: {
+      host: '0.0.0.0'
+    },
     title: 'ざっくりAWS',
     htmlAttrs: {
       lang: 'ja'
@@ -43,6 +46,10 @@ module.exports = {
       {
         rel: 'shortcut icon',
         href: '/img/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Lato:100,300|Work+Sans:100,300&display=swap'
       }
     ]
   },
@@ -54,12 +61,12 @@ module.exports = {
     storageUrl: process.env.STORAGE_URL || 'http://aws-storage.noplan.cc.s3-website-ap-northeast-1.amazonaws.com'
   },
   modules: [
-    [
-      '@nuxtjs/google-analytics',
-      {
-        id: 'UA-53153991-13'
-      }
-    ],
+    // [
+    //   '@nuxtjs/google-analytics',
+    //   {
+    //     id: 'UA-53153991-13'
+    //   }
+    // ],
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv'
   ],

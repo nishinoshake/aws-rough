@@ -5,35 +5,37 @@
 // -----------------------------------------------------
 
 .detail {
+  @include max {
+    min-height: calc(100vh - #{$height-footer-sp});
+  }
   &-title {
     &-copy {
-      width: 10em;
-      margin-left: 15px;
+      width: 9.5em;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 6px 0;
-      font-size: 52%;
-      font-weight: bold;
-      @include b;
+      line-height: 1;
+      color: $color-modest;
+      border: $width-border solid $color-border;
+      @include radius-s;
       cursor: pointer;
+      @include max {
+        margin-left: 25px;
+        padding: 8px 0;
+        font-size: 14px;
+      }
       @include min {
-        padding: 12px 0;
-        margin-left: 30px;
-        &:hover {
-          color: #fff;
-          background-color: $color-border;
-        }
+        margin-left: 50px;
+        padding: 16px 0;
+        font-size: 18px;
       }
     }
   }
   &-body {
     position: relative;
     @include max {
-      padding: 40px $padding-contents-sp;
     }
     @include min {
-      padding: $padding-contents-pc;
     }
   }
   &-main {
@@ -55,6 +57,7 @@
   }
   &-price {
     @include min {
+      min-width: 400px;
       padding-right: 100px;
     }
     &-item {
@@ -72,17 +75,18 @@
     &-name {
       margin-right: 20px;
       font-size: 24px;
-      font-weight: bold;
       line-height: 1;
+      @include font-en(300);
       @include min {
         margin-right: 30px;
-        font-size: 32px;
+        font-size: 28px;
       }
     }
     &-color {
-      width: 26px;
-      height: 26px;
-      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 16px;
     }
     .price {
       margin-left: auto;
@@ -102,12 +106,10 @@
   }
   &-empty {
     position: absolute;
-    top: $padding-contents-sp;
-    left: $padding-contents-sp;
     font-size: 22px;
-    font-weight: bold;
     line-height: 1.5;
     pointer-events: none;
+    @include font-en;
     span {
       display: block;
       opacity: 0;
@@ -117,8 +119,6 @@
       }
     }
     @include min {
-      top: $padding-contents-pc;
-      left: $padding-contents-pc;
       font-size: 52px;
     }
     &.is-visible {

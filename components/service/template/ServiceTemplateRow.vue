@@ -1,22 +1,12 @@
 <template>
   <tr>
     <td
-      v-for="(column, columnIndex) in table"
+      v-for="column in table"
       :key="column.key"
       :class="{
-        [`mod-${column.size}`]: column.size,
-        'has-remove': service.multiple && columnIndex === 0
+        [`mod-${column.size}`]: column.size
       }"
     >
-      <!-- 削除ボタン -->
-      <button
-        v-if="service.multiple && columnIndex === 0"
-        class="button-remove"
-        @click="remove({ serviceKey: service.key, index: rowIndex })"
-      >
-        削除
-      </button>
-
       <ServiceFormNumber
         v-if="column.type === 'number'"
         :service-key="service.key"
@@ -38,6 +28,13 @@
     </td>
     <td class="mod-price">
       <ServicePartsPrice :price="row.total.jpy" />
+      <button
+        v-if="service.multiple"
+        class="button-remove"
+        @click="remove({ serviceKey: service.key, index: rowIndex })"
+      >
+        削除
+      </button>
     </td>
   </tr>
 </template>

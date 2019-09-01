@@ -12,12 +12,13 @@ export default {
       type: 'number',
       key: 'unit',
       title: 'タスク数',
+      size: 'small',
       default: '1'
     },
     {
       type: 'number',
       key: 'hours',
-      title: '稼働時間(時)',
+      title: '稼働時間/月',
       default: '732'
     },
     {

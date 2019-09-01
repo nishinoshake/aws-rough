@@ -1,13 +1,13 @@
 <template>
-  <div class="app">
+  <div :class="`app page-${routeName}`">
     <div class="container">
-      <LayoutMenu />
-      <div class="contents">
-        <nuxt />
-        <LayoutFooter />
+      <div class="main">
+        <LayoutMenu />
+        <div class="contents">
+          <nuxt />
+          <LayoutFooter :total="$store.state.total.jpy" />
+        </div>
       </div>
-      <CartIndex :total="$store.state.total.jpy" />
-      <div class="container-frame"></div>
     </div>
     <ErrorModal :is-visible="$store.state.error.isVisible" :message="$store.state.error.message" />
   </div>
@@ -16,18 +16,21 @@
 <script>
 import parseUrl from 'url-parse'
 import serviceConfig from '@/config/service'
-import LayoutMenu from '@/layouts/LayoutMenu'
 import LayoutFooter from '@/layouts/LayoutFooter'
-import CartIndex from '@/components/cart/CartIndex'
+import LayoutMenu from '@/layouts/LayoutMenu'
 import ErrorModal from '@/components/error/ErrorModal'
 import { fetchZ } from '@/api'
 
 export default {
   components: {
-    LayoutMenu,
     LayoutFooter,
-    CartIndex,
+    LayoutMenu,
     ErrorModal
+  },
+  computed: {
+    routeName() {
+      return this.$route.name
+    }
   },
   mounted() {
     const { query } = parseUrl(location.href, true)

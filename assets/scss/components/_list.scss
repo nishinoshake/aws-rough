@@ -6,23 +6,35 @@
 
 .list {
   &-item {
-    padding-left: 16px;
+    line-height: 1.4;
     position: relative;
+    @include max {
+      padding-left: 18px;
+    }
     @include min {
-      padding-left: 20px;
+      padding-left: 18px;
+    }
+    &:nth-child(n+2) {
+      @include max {
+        margin-top: 4px;
+      }
+      @include min {
+        margin-top: 10px;
+      }
     }
     &:before {
       content: '';
-      width: 6px;
-      height: 6px;
       position: absolute;
-      top: 12px;
-      left: 1px;
-      background-color: currentColor;
-      @include min {
+      left: 0;
+      top: 50%;
+      background-color: $color-border;
+      @include max {
         width: 8px;
-        height: 8px;
-        top: 16px;
+        height: 2px;
+      }
+      @include min {
+        width: 10px;
+        height: 2px;
       }
     }
   }

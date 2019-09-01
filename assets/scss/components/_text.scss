@@ -5,10 +5,6 @@
 // -----------------------------------------------------
 
 .text {
-  margin: 10px 0;
-  @include min {
-    margin: 12px 0;
-  }
   &-notice {
     margin: 12px 0;
     padding-left: 1em;
@@ -27,18 +23,51 @@
     path {
       fill: $color-link;
     }
+  }
+  &-zakuri {
+    text-align: justify;
+    line-height: 2;
+    letter-spacing: 0.16em;
+    @include max-large {
+      font-size: 18px;
+    }
+    @include min-large {
+      font-size: 26px;
+    }
+    + .text-zakuri {
+      @include max {
+        margin-top: 40px;
+      }
+      @include min {
+        margin-top: 60px;
+      }
+    }
+  }
+  &-quote {
+    line-height: 1.8;
+    @include max {
+      margin: 40px 0;
+      padding: 0 20px;
+      font-size: 26px;
+      @include font-en(300);
+    }
     @include min {
-      &:hover {
-        text-decoration: underline;
-      }
-      &-hover {
-        &:hover {
-          color: $color-link;
-          path {
-            fill: $color-link;
-          }
-        }
-      }
+      margin: 80px 0;
+      padding: 0 40px;
+      font-size: 50px;
+      @include font-en;
+    }
+  }
+}
+
+* {
+  + .text,
+  + .text-notice {
+    @include max {
+      margin-top: 12px;
+    }
+    @include min {
+      margin-top: 14px;
     }
   }
 }

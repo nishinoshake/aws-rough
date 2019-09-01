@@ -12,68 +12,64 @@
         margin-bottom: 40px;
       }
     }
-  }
-  &-title {
-    padding: 0 13px;
-    @include min {
-      padding: $width-border-pc 40px 0;
-    }
-    &-icon {
-      flex: 0 0 auto;
-      width: 40px;
-      height: 40px;
-      margin-right: 6px;
-      @include min {
-        width: 70px;
-        height: 70px;
-        margin-right: 10px;
+    + .service-inside {
+      @include max {
+        margin-top: $margin-sp * 3;
       }
-    }
-    &-name {
-      font-size: 26px;
-      letter-spacing: 0.05em;
-      white-space: nowrap;
       @include min {
-        font-size: 50px;
+        margin-top: $margin-pc * 3;
       }
     }
   }
   // 計算するところ
   &-calc {
     position: relative;
+    z-index: 0;
     &-label {
       line-height: 1.2;
-      font-weight: bold;
-      @include bb;
       @include max {
-        padding: 14px 20px;
+        margin-bottom: 20px;
         font-size: 22px;
+        @include font-en(300);
       }
       @include min {
-        padding: 22px 50px;
-        font-size: 32px;
+        margin-bottom: 30px;
+        font-size: 36px;
+        @include font-en;
       }
     }
     &-footer {
-      position: absolute;
-      right: 0;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
+      @include max {
+        margin-top: $margin-sp * 1.5;
+      }
+      @include min {
+        margin-top: $margin-pc;
+      }
     }
     &-append {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-weight: bold;
-      padding: 12px 14px;
+      padding: 12px 36px;
+      color: $color-white;
+      border-radius: 999em;
       @include min {
-        padding: 12px 20px;
-        &:hover span {
-          opacity: 0.5;
-        }
+        padding: 16px 32px;
       }
-      @include bb;
-      @include bl;
+      &.mod-orange {
+        background-color: $color-orange;
+      }
+      &.mod-blue {
+        background-color: $color-blue;
+      }
+      &.mod-beige {
+        background-color: $color-beige;
+      }
+      &.mod-red {
+        background-color: $color-red;
+      }
       span {
         padding-left: 22px;
         position: relative;
@@ -89,11 +85,10 @@
         &:after {
           content: '';
           width: 15px;
-          height: 3px;
+          height: $width-border;
           position: absolute;
           top: 50%;
           left: 0;
-          border-radius: 999em;
           background-color: currentColor;
           transition: 0.2s $easeOutCubic;
         }
@@ -103,6 +98,36 @@
         &:after {
           transform: translate(0, -50%) rotate(90deg);
         }
+      }
+    }
+  }
+  &-summary {
+  }
+  &-zakkuri {
+    &-title {
+      padding: 8px 0;
+      background-color: $color-white;
+      letter-spacing: 0.1em;
+      @include min {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: $color-modest;
+      }
+    }
+    &-body {
+      position: relative;
+      padding-left: 30px;
+      &:before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-border;
+      }
+      .section-child {
+        position: relative;
       }
     }
   }

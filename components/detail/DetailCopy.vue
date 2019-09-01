@@ -1,5 +1,5 @@
 <template>
-  <span class="detail-title-copy" ref="copy">{{ isCopied ? 'コピーしました！' : '共有リンクを作成' }}</span>
+  <button class="detail-title-copy" ref="copy">{{ isCopied ? 'コピーしました!' : '共有URLを作成' }}</button>
 </template>
 
 <script>

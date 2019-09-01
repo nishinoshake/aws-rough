@@ -3,84 +3,92 @@
 // -----------------------------------------------------
 // 合計
 // -----------------------------------------------------
-
 .cart {
-  z-index: 2;
-  position: fixed;
   display: flex;
-  align-items: flex-end;
-  @include max($mq-kamakura) {
-    width: 100vw;
-    height: $height-cart-sp;
-    bottom: 0;
-    left: 0;
-    justify-content: space-between;
-    padding: 12px $padding-contents-sp 12px 120px;
-    background-color: $color-white;
-    @include b;
+  align-items: center;
+  @include max-large {
+    max-width: 320px;
+    flex-grow: 1;
+    padding: 12px 30px;
   }
-  @include max($mq-minimal) {
-    padding-right: 12px;
-    padding-left: 92px;
+  @include max {
+    padding: 12px 20px;
   }
-  @include min($mq-kamakura) {
-    bottom: $padding-cart;
-    right: $padding-cart;
+  &-link {
+    @include max-large {
+      display: none;
+    }
+    @include min-large {
+      margin-left: 20px;
+      padding: 5px 16px;
+      color: $color-modest;
+      white-space: nowrap;
+      border: 1px solid currentColor;
+      border-radius: 6px; 
+    }
   }
   &-total {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
     position: relative;
-    padding-bottom: 4px;
+    padding: 4px 0 12px 2em;
     z-index: 1;
-    font-size: 18px;
-    font-weight: bold;
-    @include bb;
-    @include max($mq-kamakura) {
-      flex: 1;
-    }
-    @include min($mq-kamakura) {
-      min-width: 250px;
-      padding-bottom: 8px;
-      font-size: 24px;
-      background-color: rgba($color-white, 0.9);
-    }
-    &-title {
-      padding-right: 8px;
+    @include max-large {
+      width: 100%;
       font-size: 16px;
-      font-weight: bold;
-      line-height: 1;
-      @include min($mq-kamakura) {
-        padding-right: 12px;
-        font-size: 24px;
-      }
+    }
+    @include min-large {
+      min-width: 280px;
+      font-size: 24px;
     }
     .price-number {
       @include max {
         &.mod-expensive {
-          font-size: 106%;
+          font-size: 140%;
         }
       }
     }
   }
-  &-detail {
-    margin-left: 20px;
-    padding: 7px 16px;
-    font-size: 18px;
-    line-height: 1;
-    font-weight: bold;
-    white-space: nowrap;
-    background-color: $color-white;
-    @include b;
-    @include max($mq-kamakura) {
-      display: none;
+  &-label {
+    position: absolute;
+    left: 0;
+    @include max-large {
+      bottom: 4px;
+      font-size: 18px;
     }
-    @include min($mq-kamakura) {
-      &:hover,
-      &.is-active {
-        color: #fff;
-        background-color: $color-border;
+    @include min-large {
+      bottom: 4px;
+      font-size: 20px;
+    }
+  }
+  &-detail {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    background-color: $color-border;
+    @include max-large {
+      height: 4px;
+    }
+    @include min-large {
+      height: 4px;
+    }
+    &-item {
+      width: 25%;
+      transition: width 0.4s $easeOutQuart;
+      &.mod-orange {
+        background-color: $color-orange;
+      }
+      &.mod-blue {
+        background-color: $color-blue;
+      }
+      &.mod-beige {
+        background-color: $color-beige;
+      }
+      &.mod-red {
+        background-color: $color-red;
       }
     }
   }

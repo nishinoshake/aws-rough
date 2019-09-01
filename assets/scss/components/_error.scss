@@ -14,7 +14,6 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    @include b;
     @include center(fixed);
     @include min {
       width: calc(100% - 80px);
@@ -36,7 +35,7 @@
       position: absolute;
       top: -20px;
       right: -20px;
-      background-color: $color-dark;
+      background-color: $color-black;
       @include hide-text;
       @include min {
         width: 50px;
