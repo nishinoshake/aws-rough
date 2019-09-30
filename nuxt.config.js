@@ -61,12 +61,12 @@ module.exports = {
     storageUrl: process.env.STORAGE_URL || 'http://aws-storage.noplan.cc.s3-website-ap-northeast-1.amazonaws.com'
   },
   modules: [
-    // [
-    //   '@nuxtjs/google-analytics',
-    //   {
-    //     id: 'UA-53153991-13'
-    //   }
-    // ],
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-53153991-13'
+      }
+    ],
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv'
   ],
