@@ -11,7 +11,7 @@
       を置くのが定石らしい。
     </p>
     <p class="text-zakuri">
-      このところ、開発環境にコンテナを使うことが多いので、本番環境もコンテナで統一してみたくなった。AWSのECSではサーバーの管理が不要な
+      このところ、開発環境にコンテナを使うことが多いので、本番環境もコンテナで統一しておきたい。AWSのECSではサーバーの管理が不要な
       <nuxt-link to="/fargate/" class="text-zakuri-service"><ServicePartsIcon name="fargate" />Fargate</nuxt-link>
       という実行環境を選べるらしい。こりゃすごいや。
     </p>
@@ -39,7 +39,7 @@
       <nuxt-link to="/rds/" class="text-zakuri-service"><ServicePartsIcon name="rds" />RDS</nuxt-link>
       を使うことも視野に入れておく。どこで見たかは忘れたけど、クラウド向けに最適化された
       <nuxt-link to="/aurora/" class="text-zakuri-service"><ServicePartsIcon name="aurora" />Aurora</nuxt-link>
-      とかいうやつが、特にすごいらしい。
+      がすごいらしい。
     </p>
     <p class="text-zakuri">
       一旦はこれで行けそうだけど、データベースのパフォーマンスが気になり始めたら、インメモリキャッシュとして
