@@ -12,7 +12,13 @@
         </ul>
       </div>
     </div>
-    <button class="menu-button" @click="toggle">{{ buttonText }}</button>
+    <button class="menu-button" @click="toggle">
+      <span class="menu-button-icon">
+        <img v-if="isOpen" src="/img/icon/times.svg" alt="" />
+        <img v-else src="/img/icon/bars.svg" alt="" />
+      </span>
+      <span class="menu-button-text">{{ buttonText }}</span>
+    </button>
   </nav>
 </template>
 
