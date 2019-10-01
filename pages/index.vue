@@ -22,7 +22,7 @@
     <p class="text-zakuri">「サーバーレスはいいぞ」</p>
 
     <p class="text-zakuri">
-      という話をちらほら耳にするけど、実際に使ってみないとわからない。とりあえず、
+      という話をちらほら耳にするけど、実際に使ってみないと本当のところはわからない。とりあえず、
       <nuxt-link to="/apigateway/" class="text-zakuri-service">
         <ServicePartsIcon name="apigateway" />API Gateway
       </nuxt-link>
