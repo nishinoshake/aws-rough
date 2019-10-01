@@ -21,13 +21,13 @@
       cursor: pointer;
       @include max {
         margin-left: 25px;
-        padding: 8px 0;
-        font-size: 14px;
+        padding: 10px 0;
+        font-size: 12px;
       }
       @include min {
         margin-left: 50px;
         padding: 16px 0;
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   }
@@ -109,7 +109,6 @@
     font-size: 22px;
     line-height: 1.5;
     pointer-events: none;
-    @include font-en;
     span {
       display: block;
       opacity: 0;
@@ -118,8 +117,12 @@
         transition-delay: .08s;
       }
     }
+    @include max {
+      @include font-en(300);
+    }
     @include min {
       font-size: 52px;
+      @include font-en;
     }
     &.is-visible {
       span {

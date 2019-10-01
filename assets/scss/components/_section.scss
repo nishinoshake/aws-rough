@@ -10,7 +10,7 @@
       margin-top: $margin-sp * 3;
     }
     @include min {
-      margin-top: $margin-pc * 3;
+      margin-top: $margin-pc * 6;
     }
   }
   &-child {

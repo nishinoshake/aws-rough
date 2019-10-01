@@ -1,11 +1,11 @@
 <template>
   <article class="about">
+    <p class="text-zakuri">AWSの料金、<br class="sp" />ややこしいですよね。</p>
     <p class="text-zakuri">
-      ざっくりAWSは、AWSの料金を日本円でざっくり計算できるサイトです。
+      サービスの選択肢が多く、構成が柔軟なおかけで、さまざまな要件をカバーできるのは嬉しいのですが、そのぶん料金体系がややこしいので、やるせない気持ちになります。そんな気持ちをもとに作られたのが、料金を日本円でざっくり計算できる、このサイトです。
     </p>
-
     <p class="text-zakuri">
-      ざっくりと言いつつ、計算ツールを公開する以上は、料金の目安として役に立つ金額を算出できるように努めていますが、「実際に運用してみたら案外高かった」とか「このサイトで考慮されていないパラメータの影響が大きかった」といった場合の責任までは負えません。
+      ざっくりと言いつつ、計算ツールを公開する以上は、料金の目安として役に立つ金額を算出できるように努めていますが、「実際に運用してみたら案外高かった」とか「このサイトで考慮されていないパラメータの影響が大きかった」といった場合の責任までは負いかねます。
     </p>
 
     <blockquote class="text-quote">"With Great Power<br />Comes Great Responsibility"</blockquote>
@@ -23,7 +23,7 @@
         >Price List API</ExternalLink
       >から取得し、為替レートの取得には、<ExternalLink href="https://twitter.com/kujirahand">クジラ飛行机</ExternalLink
       >さんが公開されている、<ExternalLink href="http://api.aoikujira.com/kawase/">クジラ外国為替確認API</ExternalLink
-      >を使わせてもらっています。<br />現在、計算に適用しているドル円のレートは<em
+      >を使わせてもらっています。現在、計算に適用しているドル円のレートは<em
         ><span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span
         >円</em
       >で、データは毎朝10時に更新しています。

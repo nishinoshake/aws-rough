@@ -40,9 +40,12 @@ body {
   }
 }
 
-.app.page-index .contents {
-  @include min-large {
-    padding-bottom: 0;
+.app.page-index,
+.app.page-about {
+  .contents {
+    @include min-large {
+      padding-bottom: 0;
+    }
   }
 }
 

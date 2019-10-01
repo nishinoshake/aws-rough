@@ -5,15 +5,28 @@
 // -----------------------------------------------------
 
 .landing {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+  max-width: 850px;
+  position: relative;
   @include max {
-    padding-bottom: $height-footer-sp;
+    padding: 60px $padding-sp 0;
   }
   @include min {
-    padding-bottom: $height-footer-pc;
+    padding-top: 80px;
+  }
+  @include max-large {
+    margin: 0 auto;
+  }
+  @include min-large {
+    padding: 100px 100px 180px 40px;
+    &:after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $color-border;
+    }
   }
   &-copy {
     position: relative;

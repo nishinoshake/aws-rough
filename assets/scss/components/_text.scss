@@ -27,19 +27,48 @@
   &-zakuri {
     text-align: justify;
     line-height: 2;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     @include max-large {
       font-size: 18px;
     }
     @include min-large {
-      font-size: 26px;
+      font-size: 24px;
+    }
+    &-service {
+      display: inline-flex;
+      align-items: center;
+      letter-spacing: 0.08em;
+      background-color: $color-gray;
+      border-radius: 8px;
+      @include max {
+        padding: 2px 6px;
+        font-size: 72%;
+        vertical-align: -3px;
+      }
+      @include min {
+        padding: 2px 10px;
+        font-size: 76%;
+        vertical-align: -2px;
+      }
+      svg {
+        @include max {
+          width: 18px;
+          height: 18px;
+          margin-right: 3px;
+        }
+        @include min {
+          width: 22px;
+          height: 22px;
+          margin-right: 4px;
+        }
+      }
     }
     + .text-zakuri {
       @include max {
-        margin-top: 40px;
+        margin-top: 32px;
       }
       @include min {
-        margin-top: 60px;
+        margin-top: 40px;
       }
     }
   }
@@ -54,7 +83,7 @@
     @include min {
       margin: 80px 0;
       padding: 0 40px;
-      font-size: 50px;
+      font-size: 42px;
       @include font-en;
     }
   }

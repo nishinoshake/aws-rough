@@ -36,6 +36,9 @@
       left: 0;
       padding-left: 16px;
     }
+    @include min($width-max) {
+      padding-left: 0;
+    }
   }
   &-button {
     @include max-large {
