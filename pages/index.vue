@@ -1,7 +1,7 @@
 <template>
   <div class="landing">
     <p class="text-zakuri">はじめてのAWS。</p>
-    <p class="text-zakuri">どこから手をつければいいのだろうか。<br />とりあえず入門書を読み進める。</p>
+    <p class="text-zakuri">どこから手をつければいいのか・・・<br />とりあえず入門書を読み進める。</p>
     <p class="text-zakuri">
       <nuxt-link to="/vpc/" class="text-zakuri-service"><ServicePartsIcon name="vpc" />VPC</nuxt-link>
       でネットワークを設計し、<br />
@@ -22,7 +22,7 @@
     <p class="text-zakuri">
       ECSでは、サーバーの管理が不要な<br />
       <nuxt-link to="/fargate/" class="text-zakuri-service"><ServicePartsIcon name="fargate" />Fargate</nuxt-link>
-      というやつがいるらしい。<br />
+      というやつが使えるらしい。<br />
     </p>
     <p class="text-zakuri">こりゃすごいや。</p>
     <p class="text-zakuri">
