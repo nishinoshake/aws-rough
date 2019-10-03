@@ -41,7 +41,7 @@
       position: sticky;
       top: 0;
       left: 0;
-      padding-left: 32px;
+      padding-left: 30px;
     }
   }
   &-button {
@@ -168,7 +168,7 @@
       }
       @include min-large {
         padding: 8px 0;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }
@@ -179,8 +179,8 @@
       height: 24px;
     }
     @include min {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
     }
   }
   &-name {

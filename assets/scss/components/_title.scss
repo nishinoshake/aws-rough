@@ -25,7 +25,7 @@
     }
     @include min {
       min-height: 260px;
-      font-size: 56px;
+      font-size: 46px;
     }
     &-icon {
       flex: none;
@@ -35,8 +35,8 @@
         margin-right: 10px;
       }
       @include min {
-        width: 64px;
-        height: 64px;
+        width: 56px;
+        height: 56px;
         margin-right: 14px;
       }
     }
@@ -99,7 +99,6 @@
     }
     @include min {
       margin-bottom: 18px;
-      font-size: 22px;
     }
     span {
       display: inline;
@@ -118,7 +117,7 @@
     }
     @include min {
       margin-bottom: 50px;
-      font-size: 28px;
+      font-size: 22px;
     }
   }
 }
