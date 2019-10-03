@@ -27,7 +27,7 @@
   &-zakuri {
     text-align: justify;
     line-height: 2;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.12em;
     @include max-large {
       font-size: 16px;
     }
@@ -38,7 +38,7 @@
       display: inline-flex;
       align-items: center;
       margin: 0 -6px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.07em;
       background-color: $color-gray;
       border-radius: 8px;
       @include max {
