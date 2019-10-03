@@ -5,7 +5,6 @@
 // -----------------------------------------------------
 
 .landing {
-  max-width: 850px;
   position: relative;
   @include max {
     padding: 60px $padding-sp * 0.5 0;
@@ -14,9 +13,10 @@
     padding-top: 80px;
   }
   @include max-large {
+    max-width: 380px;
     margin: 0 auto;
   }
   @include min-large {
-    padding: 100px 100px 180px 40px;
+    padding: 100px 70px 180px;
   }
 }

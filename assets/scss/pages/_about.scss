@@ -5,7 +5,6 @@
 // -----------------------------------------------------
 
 .about {
-  max-width: 850px;
   position: relative;
   @include max {
     padding: 60px $padding-sp 0;
@@ -17,15 +16,6 @@
     margin: 0 auto;
   }
   @include min-large {
-    padding: 100px 100px 180px 40px;
-    &:after {
-      content: "";
-      width: 1px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: $color-border;
-    }
+    padding: 100px 70px 180px;
   }
 }

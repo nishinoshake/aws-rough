@@ -1,26 +1,28 @@
 <template>
   <div class="landing">
     <p class="text-zakuri">はじめてのAWS。</p>
-    <p class="text-zakuri">どこから手をつければいいのか。<br />とりあえず入門書を読んでみる。</p>
+    <p class="text-zakuri">どこから手をつければいいのだろうか。<br />とりあえず入門書を読み進める。</p>
     <p class="text-zakuri">
-      本に書いてあるとおりに、<br />
       <nuxt-link to="/vpc/" class="text-zakuri-service"><ServicePartsIcon name="vpc" />VPC</nuxt-link>
-      でネットワークを設計して、<br />
+      でネットワークを設計し、<br />
+      そこに
       <nuxt-link to="/ec2/" class="text-zakuri-service"><ServicePartsIcon name="ec2" />EC2</nuxt-link>
-      を置いてみよう。
+      を置くらしい。<br />
+      この単語には聞き覚えがあるぞ。<br />
     </p>
     <p class="text-zakuri">
       これだけでも使えそうだけど、<br />トラフィックの増減に備えて、<br />手前に
       <nuxt-link to="/elb/" class="text-zakuri-service"><ServicePartsIcon name="elb" />ELB</nuxt-link>
-      を置くのが定石らしい。
+      を置くのが定石とのこと。
     </p>
     <p class="text-zakuri">
-      このところ、<br />開発環境にコンテナをよく使うので、<br />本番環境も統一できたら素敵だ。<br />はじめてにしては、欲張りな気もするが。
+      とりあえずサーバーは起動できたが、<br />
+      欲を言えばDockerを使いたい。
     </p>
     <p class="text-zakuri">
       ECSでは、サーバーの管理が不要な<br />
       <nuxt-link to="/fargate/" class="text-zakuri-service"><ServicePartsIcon name="fargate" />Fargate</nuxt-link>
-      というやつが使えるらしい。<br />
+      というやつがいるらしい。<br />
     </p>
     <p class="text-zakuri">こりゃすごいや。</p>
     <p class="text-zakuri">
@@ -30,7 +32,7 @@
     <p class="text-zakuri">「サーバーレスはいいぞ」</p>
 
     <p class="text-zakuri">
-      という話をちらほら耳にするけど、<br />実際に使ってみないと、<br />本当のところはわからない。
+      という話をちらほら耳にするが、<br />実際に使ってみないと、<br />本当のところはわからない。
     </p>
     <p class="text-zakuri">
       <nuxt-link to="/apigateway/" class="text-zakuri-service">
@@ -40,10 +42,11 @@
       <nuxt-link to="/lambda/" class="text-zakuri-service"><ServicePartsIcon name="lambda" />Lambda</nuxt-link>
       に、<br />ストレージの
       <nuxt-link to="/s3/" class="text-zakuri-service"><ServicePartsIcon name="s3" />S3</nuxt-link>
-      をあわせれば、<br />色々とできそうな気がする。<br />とりあえず、やってみよう。
+      をあわせれば、<br />いろいろとできそうな気がする。
     </p>
+    <p class="text-zakuri">とりあえず、やってみよう。</p>
     <p class="text-zakuri">
-      データベースは、<br />サーバーレスと相性が良いらしい<br />
+      データベースは、<br />サーバーレスでスケーラブルな<br />
       <nuxt-link to="/dynamodb/" class="text-zakuri-service"><ServicePartsIcon name="dynamodb" />DynamoDB</nuxt-link>
       を使うことに。
     </p>
@@ -57,16 +60,16 @@
       を使うことも視野に入れておこう。
     </p>
     <p class="text-zakuri">
-      どこで見たかは忘れたけど、<br />
+      どこで見たかは覚えてないが、<br />
       <nuxt-link to="/aurora/" class="text-zakuri-service"><ServicePartsIcon name="aurora" />Aurora</nuxt-link
       >とかいうやつがすごいらしい。
     </p>
     <p class="text-zakuri">
-      一旦これで行けそうだけど、<br />手軽なキャッシュが欲しくなったら、<br />
+      一旦これで走り始めて、<br />手軽なキャッシュが欲しくなったら、<br />
       <nuxt-link to="/elasticache/" class="text-zakuri-service">
         <ServicePartsIcon name="elasticache" />ElastiCache
       </nuxt-link>
-      の導入も考える。
+      の導入も考えよう。
     </p>
     <p class="text-zakuri">
       あとは、
@@ -75,9 +78,9 @@
       </nuxt-link>
       を手前に置いて、<br />
       <nuxt-link to="/route53/" class="text-zakuri-service"><ServicePartsIcon name="route53" />Route53</nuxt-link>
-      でドメインの設定をすれば、<br />とりあえず始められそうだ。
+      でドメインの設定をすれば、<br />とりあえず公開できそうだ。
     </p>
-    <p class="text-zakuri">しかしこれ、<br class="sp" />一体いくらかかるんだ？</p>
+    <p class="text-zakuri">しかしこれ、一体いくらかかるんだ？</p>
   </div>
 </template>
 

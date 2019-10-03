@@ -16,6 +16,8 @@
       background-color: $color-border;
     }
   }
+  @include min($width-max) {
+  }
   &-container {
     @include max-large {
       width: 100vw;
@@ -39,10 +41,7 @@
       position: sticky;
       top: 0;
       left: 0;
-      padding-left: 16px;
-    }
-    @include min($width-max) {
-      padding-left: 0;
+      padding-left: 32px;
     }
   }
   &-button {
