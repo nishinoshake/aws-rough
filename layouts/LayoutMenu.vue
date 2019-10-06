@@ -12,10 +12,9 @@
         </ul>
       </div>
     </div>
-    <button class="menu-button" @click="toggle">
+    <button :class="['menu-button', { 'is-open': isOpen }]" @click="toggle">
       <span class="menu-button-icon">
-        <img v-if="isOpen" src="/img/icon/times.svg" alt="" />
-        <img v-else src="/img/icon/bars.svg" alt="" />
+        <span></span>
       </span>
       <span class="menu-button-text">{{ buttonText }}</span>
     </button>
