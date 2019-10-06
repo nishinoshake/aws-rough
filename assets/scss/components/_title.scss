@@ -113,10 +113,10 @@
     color: $color-modest;
     @include max {
       margin-bottom: 30px;
-      font-size: 20px;
+      font-size: 16px;
     }
     @include min {
-      margin-bottom: 50px;
+      margin-bottom: 35px;
       font-size: 22px;
     }
   }

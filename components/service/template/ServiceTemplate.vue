@@ -1,9 +1,7 @@
 <template>
   <article class="service">
     <ServiceTemplateTitle :service="service" />
-    <div class="section">
-      <ServiceTemplateCalc :service="service" />
-    </div>
+    <ServiceTemplateCalc :service="service" />
     <div class="section">
       <div class="section-box">
         <p class="title-daitan"><span>補足と前提</span></p>

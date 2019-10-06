@@ -12,11 +12,11 @@
       padding-left: 18px;
     }
     @include min {
-      padding-left: 18px;
+      padding-left: 16px;
     }
     &:nth-child(n+2) {
       @include max {
-        margin-top: 4px;
+        margin-top: 6px;
       }
       @include min {
         margin-top: 10px;
@@ -26,15 +26,17 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 50%;
+      border-radius: 50%;
       background-color: $color-border;
       @include max {
-        width: 8px;
-        height: 2px;
+        width: 4px;
+        height: 4px;
+        top: calc(50% - 2px);
       }
       @include min {
-        width: 10px;
-        height: 2px;
+        width: 4px;
+        height: 4px;
+        top: calc(50% - 2px);
       }
     }
   }

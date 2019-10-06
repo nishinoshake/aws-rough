@@ -1,11 +1,9 @@
 <template>
   <article class="service">
     <ServiceTemplateTitle :service="service.vpc" />
-    <div class="section">
-      <div class="service-inside" :data-test="serviceName" v-for="serviceName in ['natgw']" :key="serviceName">
-        <ServiceTemplateLabel :label="service[serviceName].fullname" />
-        <ServiceTemplateCalc :service="service[serviceName]" />
-      </div>
+    <div class="service-inside" :data-test="serviceName" v-for="serviceName in ['natgw']" :key="serviceName">
+      <ServiceTemplateLabel :label="service[serviceName].fullname" />
+      <ServiceTemplateCalc :service="service[serviceName]" />
     </div>
 
     <div class="section">

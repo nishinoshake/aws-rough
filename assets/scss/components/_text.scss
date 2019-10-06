@@ -29,10 +29,10 @@
     line-height: 2;
     letter-spacing: 0.12em;
     @include max-large {
-      font-size: 16px;
+      font-size: 14px;
     }
     @include min-large {
-      font-size: 22px;
+      font-size: 20px;
     }
     &-service {
       display: inline-flex;
@@ -50,6 +50,18 @@
         padding: 2px 10px;
         font-size: 76%;
         vertical-align: -4px;
+      }
+      &.mod-red {
+        background-color: rgba($color-red, 0.1);
+      }
+      &.mod-orange {
+        background-color: rgba($color-orange, 0.1);
+      }
+      &.mod-beige {
+        background-color: rgba($color-beige, 0.1);
+      }
+      &.mod-blue {
+        background-color: rgba($color-blue, 0.1);
       }
       svg {
         @include max {

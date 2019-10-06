@@ -3,6 +3,17 @@
 // サービス
 // -----------------------------------------------------
 .service {
+  &-calc,
+  &-inside {
+    + .section {
+      @include max {
+        margin-top: $padding-sp * 5;
+      }
+      @include min {
+        margin-top: $margin-pc * 6;
+      }
+    }
+  }
   &-inside {
     .service-calc.mod-multiple {
       @include max {
