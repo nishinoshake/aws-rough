@@ -45,7 +45,7 @@
     letter-spacing: 0.1em;
     @include font-sans;
     @include max {
-      padding: 10px 30px 10px 20px;
+      padding: 12px 30px 12px 20px;
       font-size: 14px;
     }
     @include min {
@@ -87,7 +87,7 @@
     background-position: top;
     background-repeat: repeat-x;
     @include max {
-      padding: $padding-sp ;
+      padding: $padding-sp + 10px $padding-sp;
     }
     @include min {
       padding: $padding-pc;

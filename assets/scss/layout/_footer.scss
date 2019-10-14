@@ -1,13 +1,13 @@
 @charset "utf-8";
 
 .footer {
-  @include max {
-    margin: 0 $padding-sp * -1.5;
-  }
   @include max-large {
     z-index: 100;
     margin: $padding-sp * 3 $padding-sp * -2 0;
     border-top: 1px solid $color-border;
+  }
+  @include max {
+    margin: $padding-sp * 3 $padding-sp * -1.5 0;
   }
   @include min-large {
     width: 100%;
