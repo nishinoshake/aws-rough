@@ -28,26 +28,29 @@
 
         <ServicePartsAccordion title="対象外のもの">
           <section class="section-child">
-            <h3 class="title-small"><span>高価なAMIを使う場合</span></h3>
-            <p class="text">RHELやWindows ServerなどのOSを利用する場合は、価格が高くなります。</p>
+            <h3 class="title-small"><span>ライセンス費用が発生するOS</span></h3>
+            <p class="text">
+              OSはAmazon Linuxを前提にしているので、RHELやWindows ServerなどのOSを利用する場合は、価格が高くなります。
+            </p>
           </section>
           <section class="section-child">
             <h3 class="title-small"><span>リザーブドインスタンスなど</span></h3>
             <p class="text">
-              あらかじめ予約することで安く利用できる<ExternalLink
+              オンデマンドインスタンスを前提にしているので、あらかじめ予約することで安く利用できる<ExternalLink
                 href="https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ec2-reserved-instances.html"
                 >リザーブドインスタンス</ExternalLink
               >や、余っているインスタンスを安く利用できるかもしれない<ExternalLink
                 href="https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/using-spot-instances.html"
                 >スポットインスタンス</ExternalLink
-              >などを利用する場合。
+              >などを利用する場合は、もっと安くなります。
             </p>
           </section>
           <section class="section-child">
             <h3 class="title-small"><span>選択肢にないインスタンスタイプ</span></h3>
             <p class="text">
-              インスタンスタイプは、よく使いそうなものに絞っています。<br />その他のインスタンスタイプについては、<ExternalLink
-                href="https://aws.amazon.com/jp/ec2/instance-types/"
+              インスタンスタイプは、よく使いそうなものに絞っています。
+              <br class="pc" />
+              その他のインスタンスタイプについては、<ExternalLink href="https://aws.amazon.com/jp/ec2/instance-types/"
                 >公式サイト</ExternalLink
               >でご確認ください。
             </p>
@@ -55,7 +58,7 @@
           <section class="section-child">
             <h3 class="title-small"><span>汎用SSD以外のストレージ</span></h3>
             <p class="text">
-              EBSでは、汎用SSD以外にもパフォーマンスが高い「プロビジョンド IOPS
+              EBSは汎用SSDを前提にしていますが、パフォーマンスが高い「プロビジョンド IOPS
               SSD」や、安価な「マグネティック」なども用意されています。詳しくは、<ExternalLink
                 href="https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/EBSVolumeTypes.html"
                 >Amazon EBS ボリュームの種類</ExternalLink
@@ -76,6 +79,24 @@
             </p>
           </section>
         </ServicePartsAccordion>
+      </div>
+    </template>
+
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">
+          仮想サーバー。
+        </p>
+        <p class="text">
+          Webサーバーだって、データベースだって、メールサーバーだって。
+          <br class="pc" />
+          なんだってできますが、上手くやれるサービスが他にある場合は、そっちを使ったほうがいいです。
+          <br class="pc" />
+          データベースはRDSに。メールはSESに。餅は餅屋に。
+        </p>
+        <p class="text">
+          他のサービスを検討して、消去法でEC2が残った場合に使う、ぐらいが丁度いい塩梅かと。
+        </p>
       </div>
     </template>
   </ServiceTemplate>

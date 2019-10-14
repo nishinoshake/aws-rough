@@ -5,6 +5,7 @@
 // -----------------------------------------------------
 
 .text {
+  text-align: justify;
   &-notice {
     margin: 12px 0;
     padding-left: 1em;
@@ -28,53 +29,11 @@
     text-align: justify;
     line-height: 2;
     letter-spacing: 0.12em;
-    @include max-large {
+    @include max {
       font-size: 14px;
     }
-    @include min-large {
-      font-size: 20px;
-    }
-    &-service {
-      display: inline-flex;
-      align-items: center;
-      margin: 0 -6px;
-      letter-spacing: 0.07em;
-      background-color: $color-gray;
-      border-radius: 8px;
-      @include max {
-        padding: 2px 6px;
-        font-size: 80%;
-        vertical-align: -2px;
-      }
-      @include min {
-        padding: 2px 10px;
-        font-size: 76%;
-        vertical-align: -4px;
-      }
-      &.mod-red {
-        background-color: rgba($color-red, 0.1);
-      }
-      &.mod-orange {
-        background-color: rgba($color-orange, 0.1);
-      }
-      &.mod-beige {
-        background-color: rgba($color-beige, 0.1);
-      }
-      &.mod-blue {
-        background-color: rgba($color-blue, 0.1);
-      }
-      svg {
-        @include max {
-          width: 18px;
-          height: 18px;
-          margin-right: 3px;
-        }
-        @include min {
-          width: 22px;
-          height: 22px;
-          margin-right: 4px;
-        }
-      }
+    @include min {
+      font-size: 18px;
     }
     + .text-zakuri {
       @include max {

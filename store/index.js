@@ -18,6 +18,7 @@ const store = () =>
       tables: {},
       total: { usd: 0, jpy: 0 },
       isLoaded: false,
+      isMenuOpen: false,
       error: {
         isVisible: false,
         message: null
@@ -79,6 +80,15 @@ const store = () =>
       },
       SET_IS_LOADED(state) {
         state.isLoaded = true
+      },
+      SHOW_MENU(state) {
+        state.isMenuOpen = true
+      },
+      HIDE_MENU(state) {
+        state.isMenuOpen = false
+      },
+      TOGGLE_MENU(state) {
+        state.isMenuOpen = !state.isMenuOpen
       },
       SET_ERROR_MESSAGE(state, { message }) {
         state.error.message = message

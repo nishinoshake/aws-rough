@@ -23,6 +23,26 @@
         <ServicePartsCondition></ServicePartsCondition>
       </div>
     </template>
+
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">
+          サーバーレスでコードを実行できるやつ。
+        </p>
+        <p class="text">
+          サーバーレスとはいっても、どこかにサーバーはあるので、
+          <br class="pc" />
+          初めてこの単語を聞いた人は、いまいちピンと来ないかもしれませんが、
+          <br class="pc" />
+          サーバーの管理が開発者の手から離れ、使った分だけ課金される、みたいなニュアンスです。
+        </p>
+        <p class="text">
+          Lambda自身はコードを実行するだけのものですが、
+          <br class="pc" />
+          S3やAPI Gatewayなどと連携することで、活用の幅が広がります。
+        </p>
+      </div>
+    </template>
   </ServiceTemplate>
 </template>
 

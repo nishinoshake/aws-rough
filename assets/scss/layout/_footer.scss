@@ -1,8 +1,13 @@
 @charset "utf-8";
 
 .footer {
+  @include max {
+    margin: 0 $padding-sp * -1.5;
+  }
   @include max-large {
     z-index: 100;
+    margin: $padding-sp * 3 $padding-sp * -2 0;
+    border-top: 1px solid $color-border;
   }
   @include min-large {
     width: 100%;
@@ -59,7 +64,7 @@
       display: flex;
       align-items: center;
       @include max-large {
-        padding:  $padding-sp * 5  $padding-sp $padding-sp * 8;
+        padding: $padding-sp * 1.5 $padding-sp $height-footer-sp + $padding-sp * 1.5;
         justify-content: center;
       }
     }
@@ -73,21 +78,24 @@
         font-size: 18px;
       }
       @include min {
-        font-size: 22px;
+        font-size: 20px;
       }
       &:nth-child(n+2) {
-        &:before {
-          content: "";
-          background-color: $color-border;
-          @include max {
-            width: 12px;
-            height: 1px;
-            margin: 0 10px;            
-          }
-          @include min {
-            width: 20px;
-            height: 2px;
-            margin: 0 25px;
+        @include max {
+          margin-left: 30px;
+        }
+        @include min {
+          margin-left: 40px;
+        }
+      }
+      a {
+        display: block;
+        padding: 6px 0;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        @include min {
+          &:hover {
+            border-bottom-color: $color-border;
           }
         }
       }

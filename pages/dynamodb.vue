@@ -83,6 +83,17 @@
         </ServicePartsAccordion>
       </div>
     </template>
+
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">スケーラブルなNoSQLデータベース。</p>
+        <p class="text">
+          リレーショナルじゃないデータは、とりあえずDynamoDBに置いておけば、スケーラビリティに頭を抱えずに済む。
+          <br class="pc" />
+          パフォーマンスやコストを最適化するためには、ある程度の慣れが必要なので、軽い気持ちで使うと後悔します。
+        </p>
+      </div>
+    </template>
   </ServiceTemplate>
 </template>
 

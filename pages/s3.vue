@@ -65,6 +65,17 @@
         </ServicePartsAccordion>
       </div>
     </template>
+
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">ファイル置き場。</p>
+        <p class="text">
+          分析のためのデータレイクとしても使えるので、とりあえずS3に置いておけば間違いない。
+          <br class="pc" />
+          ライフサイクルを設定してGlacierへ移行できたりするので、賢く使えばコストを抑えられる。
+        </p>
+      </div>
+    </template>
   </ServiceTemplate>
 </template>
 

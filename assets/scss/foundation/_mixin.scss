@@ -79,28 +79,6 @@
 }
 
 // -----------------------------------------------------
-// border-radius
-// -----------------------------------------------------
-@mixin radius-xs {
-  border-radius: 4px;
-}
-@mixin radius-s {
-  border-radius: 8px;
-}
-@mixin radius-m {
-  @include max {
-    border-radius: 12px;
-  }
-  @include min {
-    border-radius: 16px;
-  }
-}
-@mixin radius-l {
-  border-radius: 32px;
-}
-
-
-// -----------------------------------------------------
 // Shadow
 // -----------------------------------------------------
 @mixin shadow ($size: 36px, $color: rgba($color-modest, 0.1)) {
@@ -139,11 +117,4 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-// -----------------------------------------------------
-// Transition
-// -----------------------------------------------------
-@mixin transition-kamakura {
-  transition: .36s $easeOutQuart;
 }

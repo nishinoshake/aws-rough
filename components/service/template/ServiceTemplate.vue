@@ -8,6 +8,16 @@
         <slot name="aside" />
       </div>
     </div>
+    <div class="section">
+      <div class="section-box">
+        <p class="title-daitan">
+          <span>ざっくり{{ service.name }}</span>
+        </p>
+        <div class="service-zakuri">
+          <slot name="zakuri" />
+        </div>
+      </div>
+    </div>
   </article>
 </template>
 

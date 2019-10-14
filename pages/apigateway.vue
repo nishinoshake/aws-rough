@@ -16,8 +16,17 @@
             <p class="text">キャッシュを使用する場合は、サイズを選択してください。</p>
           </section>
         </ServicePartsAccordion>
+      </div>
+    </template>
 
-        <ServicePartsCondition></ServicePartsCondition>
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">APIのエンドポイントを作成できるやつ。</p>
+        <p class="text">
+          バックエンドはEC2でもLambdaでもいけますが、Lambdaと併用するケースが多い気がします。
+          <br class="pc" />
+          最近、WebSocketもサポートされたので使ってみたい。
+        </p>
       </div>
     </template>
   </ServiceTemplate>

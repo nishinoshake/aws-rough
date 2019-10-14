@@ -71,15 +71,35 @@
       }
       &.mod-orange {
         background-color: $color-orange;
+        @include min {
+          &:hover {
+            background-color: darken($color-orange, 10%);
+          }
+        }
       }
       &.mod-blue {
         background-color: $color-blue;
+        @include min {
+          &:hover {
+            background-color: darken($color-blue, 10%);
+          }
+        }
       }
       &.mod-beige {
         background-color: $color-beige;
+        @include min {
+          &:hover {
+            background-color: darken($color-beige, 10%);
+          }
+        }
       }
       &.mod-red {
         background-color: $color-red;
+        @include min {
+          &:hover {
+            background-color: darken($color-red, 10%);
+          }
+        }
       }
       span {
         padding-left: 22px;
@@ -101,7 +121,6 @@
           top: 50%;
           left: 0;
           background-color: currentColor;
-          transition: 0.2s $easeOutCubic;
         }
         &:before {
           transform: translate(0, -50%);
@@ -114,32 +133,14 @@
   }
   &-summary {
   }
-  &-zakkuri {
-    &-title {
-      padding: 8px 0;
-      background-color: $color-white;
-      letter-spacing: 0.1em;
-      @include min {
-        margin-bottom: 20px;
-        font-size: 28px;
-        color: $color-modest;
-      }
+  &-zakuri {
+    background-color: $color-white;
+    border: $width-border solid $color-border;
+    @include max {
+      padding: $padding-sp ;
     }
-    &-body {
-      position: relative;
-      padding-left: 30px;
-      &:before {
-        content: "";
-        width: 1px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: $color-border;
-      }
-      .section-child {
-        position: relative;
-      }
+    @include min {
+      padding: $padding-pc;
     }
   }
 }

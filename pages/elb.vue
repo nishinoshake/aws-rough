@@ -45,6 +45,26 @@
         </div>
       </div>
     </div>
+
+    <div class="section">
+      <div class="section-box">
+        <p class="title-daitan">
+          <span>ざっくりELB</span>
+        </p>
+        <div class="service-zakuri">
+          <div class="section-child">
+            <p class="text">ロードバランサー（トラフィックを分散するやつ）。</p>
+            <p class="text">
+              基本的にはインスタンスが複数台の場合に使いますが、
+              <br class="pc" />
+              無料の証明書を利用してSSLの終端ができたりもするので、
+              <br class="pc" />
+              お金が許すのであれば、インスタンスが1台の場合でも挟んでおいた方が、後々の拡張がしやすいです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </article>
 </template>
 

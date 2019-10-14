@@ -14,7 +14,6 @@
     position: relative;
     background-color: $color-white;
     border: $width-border solid $color-border;
-    @include radius-m;
     @include max {
       display: block;
       padding: $padding-sp;
@@ -88,8 +87,8 @@
         right: -15px;
       }
       @include min {
-        top: -10px;
-        right: -10px;
+        top: -15px;
+        right: -15px;
       }
     }
   }

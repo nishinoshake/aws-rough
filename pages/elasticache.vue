@@ -54,6 +54,17 @@
         </ServicePartsAccordion>
       </div>
     </template>
+
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">マネージド型のインメモリデータストア。</p>
+        <p class="text">
+          データベースエンジンは、RedisかMemcachedから選べます。
+          <br class="pc" />
+          データベースのクエリ結果や、セッションのキャッシュなど、高いパフォーマンスが求められるところで使われます。
+        </p>
+      </div>
+    </template>
   </ServiceTemplate>
 </template>
 

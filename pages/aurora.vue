@@ -56,6 +56,17 @@
         </ServicePartsAccordion>
       </div>
     </template>
+
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">クラウドに最適化されたリレーショナルデータベース。</p>
+        <p class="text">
+          高いパフォーマンスと耐久性に加え、MySQLおよびPostgreSQLとの互換性があります。
+          <br class="pc" />
+          ストレージが自動的に拡張してくれるのも嬉しいです。立ち位置としては、RDSで選択できるデータベースエンジンのひとつですが、料金の算出方法が若干違ったのでページを分けています。
+        </p>
+      </div>
+    </template>
   </ServiceTemplate>
 </template>
 

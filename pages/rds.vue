@@ -80,6 +80,15 @@
         </ServicePartsAccordion>
       </div>
     </template>
+
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">マネージド型のリレーショナルデータベース。</p>
+        <p class="text">
+          EC2でもデータベースは構築できますが、RDSを使ったほうがバックアップやパッチの適用などが楽です。
+        </p>
+      </div>
+    </template>
   </ServiceTemplate>
 </template>
 

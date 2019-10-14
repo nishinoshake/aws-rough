@@ -14,6 +14,14 @@
   @include max {
     padding: 12px 20px;
   }
+  @include min {
+    &:hover {
+      .cart-link {
+        color: $color-font;
+        border-color: $color-border-active;
+      }
+    }
+  }
   &-link {
     @include max-large {
       display: none;
@@ -23,8 +31,7 @@
       padding: 5px 16px;
       color: $color-modest;
       white-space: nowrap;
-      border: 1px solid currentColor;
-      border-radius: 6px; 
+      border: 1px solid $color-border;
     }
   }
   &-total {

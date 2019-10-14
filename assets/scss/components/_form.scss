@@ -25,11 +25,12 @@
       text-align: center;
       border: $width-border solid $color-border;
       background-color: $color-white;
-      transition: 0.15s $easeOutCubic;
-      @include radius-xs;
       @include shadow-light;
       &:invalid {
         background-color: rgba($color-red, 0.2);
+      }
+      &:focus {
+        border-color: $color-border-active;
       }
     }
     &-alert {
@@ -53,7 +54,6 @@
     display: block;
     background-color: $color-white;
     border: $width-border solid $color-border;
-    @include radius-xs;
     @include shadow-light;
     select {
       opacity: 0;

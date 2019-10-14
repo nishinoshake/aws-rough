@@ -29,7 +29,6 @@ body {
       top: 0;
       background-color: $color-border;
       transform: scaleY(0);
-      transition: transform 1.2s $easeOutQuart;
     }
     &:before {
       left: 0;
@@ -40,7 +39,7 @@ body {
       transform-origin: center top;
     }
   }
-  @include min($width-max + 100px) {
+  @include min($width-max + 1px) {
     &:before,
     &:after {
       transform: scaleY(1);
@@ -58,13 +57,13 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    padding: 0 $padding-sp;
+    padding: 0 $padding-sp * 1.5;
   }
   @include between {
     padding: 0 $padding-sp * 2;
   }
   @include min-large {
-    padding: 0 $padding-pc * 2 ($height-footer-pc + $padding-pc * 2);
+    padding: 0 $padding-pc * 2 ($height-footer-pc + $padding-pc * 1.5);
   }
 }
 
@@ -75,15 +74,6 @@ body {
       padding-bottom: 0;
     }
   }
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.14s linear;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
 }
 
 .sp {

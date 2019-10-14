@@ -17,7 +17,6 @@
       line-height: 1;
       color: $color-modest;
       border: $width-border solid $color-border;
-      @include radius-s;
       cursor: pointer;
       @include max {
         margin-left: 25px;
@@ -28,6 +27,10 @@
         margin-left: 50px;
         padding: 16px 0;
         font-size: 16px;
+        &:hover {
+          color: $color-font;
+          border-color: $color-border-active;
+        }
       }
     }
   }

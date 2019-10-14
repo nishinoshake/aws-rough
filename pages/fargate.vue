@@ -30,6 +30,26 @@
         <ServicePartsCondition></ServicePartsCondition>
       </div>
     </template>
+
+    <template v-slot:zakuri>
+      <div class="section-child">
+        <p class="text">
+          サーバーの管理が不要なコンテナの実行環境。
+        </p>
+        <p class="text">
+          CPUとメモリを指定するだけでコンテナの実行環境を用意できます。
+          <br class="pc" />
+          EC2でクラスターを構築するよりもお手軽で魅力的ですが、価格は割高になります。
+        </p>
+        <p class="text">
+          大幅な値下げによって、EC2と比べた場合の差は縮まりつつありますが、
+          <br class="pc" />
+          リザーブドインスタンスやスポットインスタンスと比べてしまうと、費用面では分が悪いので、
+          <br class="pc" />
+          運用が楽になるメリットと天秤にかけて、どちらにするかを選ぶと良いのでは。
+        </p>
+      </div>
+    </template>
   </ServiceTemplate>
 </template>
 

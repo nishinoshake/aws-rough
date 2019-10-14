@@ -9,9 +9,11 @@ $color-white: #fff;
 $color-bg: #fafbfc;
 $color-gray: #f8f8f8;
 $color-black: #000;
+$color-dark: #222;
 $color-font: #393939;
 $color-modest: #555;
 $color-border: #a4a4a4;
+$color-border-active: $color-dark;
 $color-link: #039be4;
 $color-red: #e05243;
 $color-orange: #f58536;
@@ -21,7 +23,7 @@ $color-blue: #2e73b8;
 // -----------------------------------------------------
 // size
 // -----------------------------------------------------
-$mq-max: 1024px;
+$mq-max: 850px;
 $mq-min: $mq-max + 1;
 $mq-large: 1192px;
 $width-max: 1360px;

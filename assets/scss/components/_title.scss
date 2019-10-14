@@ -109,6 +109,7 @@
   &-daitan {
     display: flex;
     line-height: 1;
+    position: relative;
     letter-spacing: 0.12em;
     color: $color-modest;
     @include max {
@@ -116,8 +117,41 @@
       font-size: 16px;
     }
     @include min {
-      margin-bottom: 35px;
-      font-size: 22px;
+      margin-bottom: 60px;
+      font-size: 26px;
+    }
+    &:before {
+      content: "";
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      background-color: $color-border;
+      @include max {
+        width: 100vw;
+        left: -$padding-sp * 1.5;
+      }
+      @include between {
+        width: 100vw;
+        left: -$padding-sp * 2;
+      }
+      @include min-large {
+        width: $width-max - $width-menu-pc;
+        left: -$padding-pc * 2;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      background-color: $color-white;
+      @include max {
+        padding: 0 12px;
+        margin-left: -12px;
+      }
+      @include min {
+        padding: 0 16px;
+        margin-left: -16px;
+      }
     }
   }
 }

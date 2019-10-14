@@ -1,6 +1,6 @@
 <template>
   <nav class="menu">
-    <div :class="['menu-container', { 'is-open': isOpen }]">
+    <div :class="['menu-container', { 'is-open': isMenuOpen }]">
       <div :class="['menu-frame', { 'can-scroll': canScroll }]">
         <ul class="menu-list">
           <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
@@ -12,7 +12,7 @@
         </ul>
       </div>
     </div>
-    <button :class="['menu-button', { 'is-open': isOpen }]" @click="toggle">
+    <button :class="['menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
       <span class="menu-button-icon">
         <span></span>
       </span>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import serviceConfig from '@/config/service/mokuji'
 
@@ -31,13 +32,13 @@ export default {
   data() {
     return {
       services: serviceConfig,
-      isOpen: false,
       canScroll: false
     }
   },
   computed: {
+    ...mapState(['isMenuOpen']),
     buttonText() {
-      return this.isOpen ? 'CLOSE' : 'MENU'
+      return this.isMenuOpen ? 'CLOSE' : 'MENU'
     }
   },
   mounted() {
@@ -45,8 +46,9 @@ export default {
     window.addEventListener('resize', () => this.handleResize())
   },
   methods: {
+    ...mapMutations(['HIDE_MENU', 'TOGGLE_MENU']),
     handleClick() {
-      this.isOpen = false
+      this.HIDE_MENU()
       this.$emit('change')
     },
     handleResize() {
@@ -62,7 +64,7 @@ export default {
       this.canScroll = menuHeight > window.innerHeight - footerHeight
     },
     toggle() {
-      this.isOpen = !this.isOpen
+      this.TOGGLE_MENU()
     }
   }
 }
