@@ -4,14 +4,11 @@
       AWSの料金を、<br class="sp" />ざっくり計算できるサイトです。
       <br />
       <br class="sp" />
-      料金が気になるサービスを
-      <br class="sp" />
-      メニューから選択してください。
+      料金が気になるサービスを<br class="sp" />メニューから選択してください。
       <br />
       <br class="sp" />
-      BiSHのライブを観たい方は、
-      <br class="sp" />
-      <ExternalLink href="https://www.youtube.com/results?search_query=BRiNG+iCiNG+SHiT+HORSE+TOUR+FiNAL"
+      BiSHのライブを観たい方は、<br class="sp" /><ExternalLink
+        href="https://www.youtube.com/results?search_query=BRiNG+iCiNG+SHiT+HORSE+TOUR+FiNAL"
         >こちら</ExternalLink
       >から離脱してください。
     </p>

@@ -64,7 +64,7 @@
       display: flex;
       align-items: center;
       @include max-large {
-        padding: $padding-sp * 1.5 $padding-sp $height-footer-sp + $padding-sp * 1.5;
+        padding: 15px $padding-sp ($height-footer-sp + 15px);
         justify-content: center;
       }
     }
@@ -75,14 +75,14 @@
       align-items: center;
       @include font-en(300);
       @include max {
-        font-size: 18px;
+        font-size: 16px;
       }
       @include min {
         font-size: 20px;
       }
       &:nth-child(n+2) {
         @include max {
-          margin-left: 30px;
+          margin-left: 36px;
         }
         @include min {
           margin-left: 40px;
