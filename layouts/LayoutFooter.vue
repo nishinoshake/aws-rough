@@ -9,7 +9,13 @@
           <nuxt-link to="/about/">About</nuxt-link>
         </li>
         <li class="footer-nav-item">
-          <a href="https://github.com/nishinoshake/aws-rough">GitHub</a>
+          <ExternalLink href="https://github.com/nishinoshake/aws-rough">GitHub</ExternalLink>
+        </li>
+
+        <li class="footer-nav-item">
+          <ExternalLink href="https://www.youtube.com/results?search_query=BRiNG+iCiNG+SHiT+HORSE+TOUR+FiNAL"
+            >BiSH</ExternalLink
+          >
         </li>
       </ul>
       <div class="footer-action">
@@ -35,11 +41,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsPrice from '@/components/service/parts/ServicePartsPrice'
 
 export default {
   name: 'LayoutFooter',
-  components: { ServicePartsPrice },
+  components: { ServicePartsPrice, ExternalLink },
   props: {
     total: {
       type: Number,

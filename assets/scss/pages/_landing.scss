@@ -7,21 +7,40 @@
 .landing {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   @include max {
     min-height: calc(100vh - #{$height-footer-sp});
   }
   @include min {
     min-height: calc(100vh - #{$height-footer-pc});
-    padding: 0 70px;
+    padding: 0 50px;
   }
-  &-text {
-    line-height: 2;
+  &-copy {
+    line-height: 1.8;
     @include max {
-      font-size: 16px;
+      margin-right: -10px;
+      font-size: 18px;
+      @include font-en(300);
     }
     @include min {
-      font-size: 24px;
+      font-size: 48px;
+      @include font-en;
+    }
+  }
+  &-ja {
+    @include max {
+      width: 100%;
+      max-width: 260px;
+      margin: 8px 0 0 -2px;
+    }
+    @include min {
+      width: 550px;
+      margin-top: 20px;
+    }
+    svg {
+      width: 100%;
+      height: auto;
     }
   }
 }

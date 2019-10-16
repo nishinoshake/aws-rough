@@ -75,14 +75,14 @@
       align-items: center;
       @include font-en(300);
       @include max {
-        font-size: 16px;
+        font-size: 14px;
       }
       @include min {
         font-size: 20px;
       }
       &:nth-child(n+2) {
         @include max {
-          margin-left: 36px;
+          margin-left: 28px;
         }
         @include min {
           margin-left: 40px;
@@ -91,6 +91,7 @@
       a {
         display: block;
         padding: 6px 0;
+        color: inherit;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
         @include min {
