@@ -18,33 +18,6 @@ body {
     max-width: $width-max;
     margin: 0 auto;
   }
-  @include min-large {
-    &:before,
-    &:after {
-      content: "";
-      width: 1px;
-      height: 100%;
-      position: absolute;
-      z-index: 200;
-      top: 0;
-      background-color: $color-border;
-      transform: scaleY(0);
-    }
-    &:before {
-      left: 0;
-      transform-origin: center bottom;
-    }
-    &:after {
-      right: 0;
-      transform-origin: center top;
-    }
-  }
-  @include min($width-max + 1px) {
-    &:before,
-    &:after {
-      transform: scaleY(1);
-    }
-  }
 }
 
 .main {
@@ -63,7 +36,7 @@ body {
     padding: 0 $padding-sp * 2;
   }
   @include min-large {
-    padding: 0 $padding-pc * 2 ($height-footer-pc + $padding-pc * 1.5);
+    padding: 0 $padding-pc * 2 ($height-footer-pc + $padding-pc * 2);
   }
 }
 

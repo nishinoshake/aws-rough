@@ -107,51 +107,22 @@
     }
   }
   &-daitan {
-    display: flex;
-    line-height: 1;
+    line-height: 1.2;
     position: relative;
     letter-spacing: 0.12em;
     color: $color-modest;
+    background-color: $color-gray;
     @include max {
-      margin-bottom: 30px;
-      font-size: 16px;
+      margin-bottom: 20px;
+      padding: 20px;
+      font-size: 20px;
+      @include font-en(300);
     }
     @include min {
-      margin-bottom: 60px;
-      font-size: 26px;
-    }
-    &:before {
-      content: "";
-      height: 1px;
-      position: absolute;
-      top: 50%;
-      background-color: $color-border;
-      @include max {
-        width: 100vw;
-        left: -$padding-sp * 1.5;
-      }
-      @include between {
-        width: 100vw;
-        left: -$padding-sp * 2;
-      }
-      @include min-large {
-        width: $width-max - $width-menu-pc;
-        left: -$padding-pc * 2;
-      }
-    }
-    span {
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      background-color: $color-white;
-      @include max {
-        padding: 0 8px;
-        margin-left: -9px;
-      }
-      @include min {
-        padding: 0 16px;
-        margin-left: -16px;
-      }
+      margin-bottom: 20px;
+      padding: 32px 40px;
+      font-size: 46px;
+      @include font-en;
     }
   }
 }
