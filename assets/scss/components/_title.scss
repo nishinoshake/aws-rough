@@ -113,15 +113,15 @@
     color: $color-modest;
     background-color: $color-gray;
     @include max {
-      margin-bottom: 20px;
-      padding: 20px;
+      margin-bottom: 24px;
+      padding: 14px 20px;
       font-size: 20px;
       @include font-en(300);
     }
     @include min {
-      margin-bottom: 20px;
-      padding: 32px 40px;
-      font-size: 46px;
+      margin-bottom: 40px;
+      padding: 20px 40px;
+      font-size: 40px;
       @include font-en;
     }
   }

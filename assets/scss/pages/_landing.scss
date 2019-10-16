@@ -32,10 +32,9 @@
     @include max {
       width: 100%;
       max-width: 274px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
     @include min {
-      // width: 624px;
       width: 748px;
       margin-top: 28px;
     }

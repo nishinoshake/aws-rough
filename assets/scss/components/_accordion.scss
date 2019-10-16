@@ -30,7 +30,7 @@
     }
     &:nth-child(n+2) {
       @include max {
-        margin-top: $margin-sp;
+        margin-top: 12px;
       }
       @include min {
         margin-top: $margin-pc;

@@ -7,7 +7,7 @@
     border-top: 1px solid $color-border;
   }
   @include max {
-    margin: $padding-sp * 3 $padding-sp * -1.5 0;
+    margin: $padding-sp * 2 $padding-sp * -1.5 0;
   }
   @include min-large {
     width: 100%;
