@@ -8,7 +8,7 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>補足と前提</span></p>
+        <p class="title-daitan"><span>Disclaimer</span></p>
         <div class="service-summary accordion-list">
           <ServicePartsAccordion title="入力項目の補足">
             <section class="section-child">
@@ -45,7 +45,7 @@
     <div class="section">
       <div class="section-box">
         <p class="title-daitan">
-          <span>ざっくりVPC</span>
+          <span>Zakuri VPC</span>
         </p>
         <div class="service-zakuri">
           <div class="section-child">

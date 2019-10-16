@@ -5,7 +5,6 @@
     <div class="section">
       <div class="section-box">
         <p class="title-daitan"><span>Disclaimer</span></p>
-        <!-- <p class="title-daitan"><span>補足と前提</span></p> -->
         <slot name="aside" />
       </div>
     </div>
