@@ -76,6 +76,18 @@ body {
   }
 }
 
+.app.page-index {
+  @include max {
+    .contents {
+      min-height: calc(100vh - #{$height-footer-sp});
+    }
+    .footer {
+      margin-top: 0;
+    }
+  }
+
+}
+
 .sp {
   @include min {
     display: none;

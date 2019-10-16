@@ -31,16 +31,21 @@
   &-ja {
     @include max {
       width: 100%;
-      max-width: 260px;
-      margin: 8px 0 0 -2px;
+      max-width: 274px;
+      margin-top: 12px;
     }
     @include min {
-      width: 550px;
-      margin-top: 20px;
+      // width: 624px;
+      width: 748px;
+      margin-top: 28px;
     }
     svg {
       width: 100%;
+      display: block;
       height: auto;
+    }
+    path {
+      fill: $color-font;
     }
   }
 }
