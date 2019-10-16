@@ -14,7 +14,7 @@
   }
   @include min {
     min-height: calc(100vh - #{$height-footer-pc});
-    padding: 0 50px;
+    padding: 140px 50px 0;
   }
   &-copy {
     line-height: 1.8;
