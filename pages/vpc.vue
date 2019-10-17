@@ -8,7 +8,27 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>Disclaimer</span></p>
+        <p class="title-daitan">
+          <span>ざっくりわかるVPC</span>
+        </p>
+        <div class="service-zakuri">
+          <div class="section-child">
+            <p class="text">
+              AWS上にネットワークを構築できるやつ。
+            </p>
+            <p class="text">
+              サブネットを作成したり、ルートテーブルやゲートウェイを設定したり、色々できます。
+              <br class="pc" />
+              VPCの利用自体は無料ですが、プライベートサブネットから外へ出るためのNATゲートウェイは有料です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-box">
+        <p class="title-daitan"><span>補足と前提</span></p>
         <div class="service-summary accordion-list">
           <ServicePartsAccordion title="入力項目の補足">
             <section class="section-child">
@@ -38,26 +58,6 @@
               </p>
             </section>
           </ServicePartsAccordion>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-box">
-        <p class="title-daitan">
-          <span>Zakuri VPC</span>
-        </p>
-        <div class="service-zakuri">
-          <div class="section-child">
-            <p class="text">
-              AWS上にネットワークを構築できるやつ。
-            </p>
-            <p class="text">
-              サブネットを作成したり、ルートテーブルやゲートウェイを設定したり、色々できます。
-              <br class="pc" />
-              VPCの利用自体は無料ですが、プライベートサブネットから外へ出るためのNATゲートウェイは有料です。
-            </p>
-          </div>
         </div>
       </div>
     </div>

@@ -13,7 +13,27 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>Disclaimer</span></p>
+        <p class="title-daitan">
+          <span>ざっくりわかるELB</span>
+        </p>
+        <div class="service-zakuri">
+          <div class="section-child">
+            <p class="text">トラフィックを分散してくれるやつ（ロードバランサー）。</p>
+            <p class="text">
+              基本的にはインスタンスが複数台の場合に使いますが、
+              <br class="pc" />
+              無料の証明書を利用してSSLの終端ができたりもするので、
+              <br class="pc" />
+              お金が許すなら、インスタンスが1台の場合でも挟んでおいた方が、後々の拡張がしやすいです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-box">
+        <p class="title-daitan"><span>補足と前提</span></p>
         <div class="service-summary accordion-list">
           <ServicePartsAccordion title="入力項目の補足">
             <section class="section-child">
@@ -32,7 +52,7 @@
               <h3 class="title-small"><span>LCU</span></h3>
               <p class="text">Load Balancer Capacity Unit(LCU)を入力してください。</p>
               <p class="text">
-                名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。このサイトでざっくり説明するのは難しいので、<ExternalLink
+                名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。このサイトでざっくりした説明するのは難しいので、<ExternalLink
                   href="https://aws.amazon.com/jp/elasticloadbalancing/pricing/"
                   >公式の料金表</ExternalLink
                 >を参考に算出していただくか、<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
@@ -42,26 +62,6 @@
             </section>
           </ServicePartsAccordion>
           <ServicePartsCondition></ServicePartsCondition>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-box">
-        <p class="title-daitan">
-          <span>Zakuri ELB</span>
-        </p>
-        <div class="service-zakuri">
-          <div class="section-child">
-            <p class="text">ロードバランサー（トラフィックを分散するやつ）。</p>
-            <p class="text">
-              基本的にはインスタンスが複数台の場合に使いますが、
-              <br class="pc" />
-              無料の証明書を利用してSSLの終端ができたりもするので、
-              <br class="pc" />
-              お金が許すのであれば、インスタンスが1台の場合でも挟んでおいた方が、後々の拡張がしやすいです。
-            </p>
-          </div>
         </div>
       </div>
     </div>

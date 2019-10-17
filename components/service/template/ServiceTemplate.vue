@@ -4,18 +4,18 @@
     <ServiceTemplateCalc :service="service" />
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>Disclaimer</span></p>
-        <slot name="aside" />
-      </div>
-    </div>
-    <div class="section">
-      <div class="section-box">
         <p class="title-daitan">
-          <span>Zakuri {{ service.name }}</span>
+          <span>ざっくりわかる{{ service.name }}</span>
         </p>
         <div class="service-zakuri">
           <slot name="zakuri" />
         </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-box">
+        <p class="title-daitan"><span>補足と前提</span></p>
+        <slot name="aside" />
       </div>
     </div>
   </article>

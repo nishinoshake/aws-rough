@@ -36,7 +36,7 @@
 
     <template v-slot:zakuri>
       <div class="section-child">
-        <p class="text">DNSのサービス。</p>
+        <p class="text">ドメインを解決してくれるやつ（DNS）。</p>
         <p class="text">
           CloudFrontやS3などのサービスとの連携がしやすいので、特別な理由がない限りお世話になります。
           <br class="pc" />

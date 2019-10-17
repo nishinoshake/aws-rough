@@ -116,13 +116,11 @@
       margin-bottom: 24px;
       padding: 14px 20px;
       font-size: 20px;
-      @include font-en(300);
     }
     @include min {
       margin-bottom: 40px;
-      padding: 20px 40px;
-      font-size: 40px;
-      @include font-en;
+      padding: 24px 40px;
+      font-size: 24px;
     }
   }
 }

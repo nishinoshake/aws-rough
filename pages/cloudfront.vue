@@ -52,9 +52,9 @@
 
     <template v-slot:zakuri>
       <div class="section-child">
-        <p class="text">コンテンツを効率的に配信できるやつ。</p>
+        <p class="text">コンテンツを効率的に配信できるやつ（CDN）。</p>
         <p class="text">
-          CloudFrontの後ろには、S3やELBなどのAWSのサービスを置くことが多いですが、オンプレミスのサーバーも設定できます。静的アセットをユーザーに近いところ（エッジ）にキャッシュしておくと、レスポンスを速くできる上に、サーバーの負荷を軽減できるので、導入のメリットは大きいです。
+          CloudFrontの後ろには、S3やELBなどのAWSのサービスを置くことが多いですが、オンプレミスのサーバーも設定できます。たとえば、静的アセットをユーザーに近いところにキャッシュしておくと、レスポンス速度の向上と、サーバー負荷の軽減が期待できるので、導入のメリットは大きいです。
         </p>
         <p class="text">
           Basic認証などのちょっとした処理であれば、<ExternalLink href="https://aws.amazon.com/jp/lambda/edge/"

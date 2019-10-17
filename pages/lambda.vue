@@ -40,6 +40,8 @@
           Lambda自身はコードを実行するだけのものですが、
           <br class="pc" />
           S3やAPI Gatewayなどと連携することで、活用の幅が広がります。
+          <br class="pc" />
+          ネイティブでは、Java、Go、PowerShell、Node.js、C#、Python、Rubyをサポートしています。
         </p>
       </div>
     </template>
