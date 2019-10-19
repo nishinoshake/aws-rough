@@ -36,9 +36,11 @@
 
     <template v-slot:zakuri>
       <div class="section-child">
-        <p class="text">ドメインを解決してくれるやつ（DNS）。</p>
+        <p class="text">ドメイン名を解決してくれるやつ（DNS）。</p>
         <p class="text">
-          CloudFrontやS3などのサービスとの連携がしやすいので、特別な理由がない限りお世話になります。
+          ドメインごとにホストゾーンというものを作成し、そこにDNSレコードを追加していきます。
+          <br class="pc" />
+          可用性が高く、CloudFrontやS3などのAWSのサービスと連携がしやすいのが特徴です。
           <br class="pc" />
           あまり使われてないかもしれませんが、ドメインの取得もできます。
         </p>

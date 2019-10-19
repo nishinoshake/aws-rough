@@ -34,12 +34,19 @@
           <br class="pc" />
           初めてこの単語を聞いた人は、いまいちピンと来ないかもしれませんが、
           <br class="pc" />
-          サーバーの管理が開発者の手から離れ、使った分だけ課金される、みたいなニュアンスです。
+          サーバーの管理が開発者の手から離れ、使った分だけ課金される、みたいなニュアンスになります。
         </p>
         <p class="text">
-          Lambda自身はコードを実行するだけのものですが、
+          Lambdaだけを使うケースは稀で、他のサービスと連携することが多いです。
           <br class="pc" />
-          S3やAPI Gatewayなどと連携することで、活用の幅が広がります。
+          S3に画像が保存されたタイミングでリサイズ処理をしたり、
+          <br class="pc" />
+          API Gatewayのバックエンドとして設定したり、使いみちは色々。
+        </p>
+        <p class="text">
+          <ExternalLink href="https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/runtimes-custom.html"
+            >カスタムランタイム</ExternalLink
+          >を使用すれば好きな言語で実装できますが、
           <br class="pc" />
           ネイティブでは、Java、Go、PowerShell、Node.js、C#、Python、Rubyをサポートしています。
         </p>

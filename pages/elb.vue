@@ -4,7 +4,7 @@
     <div
       class="service-inside"
       :data-test="serviceName"
-      v-for="serviceName in ['clb', 'alb', 'nlb']"
+      v-for="serviceName in ['alb', 'nlb', 'clb']"
       :key="serviceName"
     >
       <ServiceTemplateLabel :label="service[serviceName].fullname" />
@@ -19,12 +19,33 @@
         <div class="service-zakuri">
           <div class="section-child">
             <p class="text">トラフィックを分散してくれるやつ（ロードバランサー）。</p>
+
+            <table class="spec">
+              <caption>
+                ※ LはOSI参照モデルのレイヤーです
+              </caption>
+              <tbody>
+                <tr>
+                  <th>ALB</th>
+                  <td>高機能 - HTTP/HTTPS(L7)</td>
+                </tr>
+                <tr>
+                  <th>NLB</th>
+                  <td>シンプル - TCP(L4)</td>
+                </tr>
+                <tr>
+                  <th>CLB</th>
+                  <td>旧世代 - L4/L7</td>
+                </tr>
+              </tbody>
+            </table>
+
             <p class="text">
-              基本的にはインスタンスが複数台の場合に使いますが、
+              ALBは、HTTPのヘッダーを見てくれるので、ホストやパスなどに基づいたルーティングができます。
               <br class="pc" />
-              無料の証明書を利用してSSLの終端ができたりもするので、
+              NLBは、そこら辺の余計な処理をせずに分散してくれるので高速に動作します。
               <br class="pc" />
-              お金が許すなら、インスタンスが1台の場合でも挟んでおいた方が、後々の拡張がしやすいです。
+              旧世代のCLBに関しては、L7がALB、L4がNLBに相当するので、新規で使うメリットは少ないでしょう。
             </p>
           </div>
         </div>
