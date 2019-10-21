@@ -113,7 +113,7 @@
     }
     @include min-large {
       height: calc(100vh - #{$height-footer-pc});
-      padding: 30px 0;
+      padding: 15px 0;
       &.can-scroll {
         overflow-y: scroll;
       }
@@ -200,7 +200,7 @@
         font-size: 16px;
       }
       @include min-large {
-        padding: 8px 0;
+        padding: 7px 0;
         font-size: 18px;
       }
     }
