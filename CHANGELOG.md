@@ -1,6 +1,12 @@
 # Changelog
 サービスの追加などをざっくり記録しています。
 
+## 2019-10-22
+SNS/SQS/SESを追加  
+https://aws.noplan.cc/sns/  
+https://aws.noplan.cc/sqs/  
+https://aws.noplan.cc/ses/
+
 ## 2019-01-13
 Fargateを追加  
 https://aws.noplan.cc/fargate/
