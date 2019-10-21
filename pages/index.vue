@@ -1,10 +1,5 @@
 <template>
   <div class="landing">
-    <p class="landing-copy">
-      Minimal calculator for AWS.
-      <br />
-      Tadashi Tokyo region ni kagiru.
-    </p>
     <p class="landing-ja">
       <LandingCopy />
     </p>

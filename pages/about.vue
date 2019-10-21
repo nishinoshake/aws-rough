@@ -5,6 +5,32 @@
       サービスの選択肢が多く、構成が柔軟なおかけで、さまざまな要件をカバーできるのは嬉しいのですが、そのぶん料金体系がややこしいので、やるせない気持ちになります。そんな気持ちをもとに作られたのが、料金を日本円でざっくり計算できる、このサイトです。
     </p>
     <p class="text-zakuri">
+      入力と結果の表示をシンプルにするために、よく使われそうな条件に絞ったサイト設計にしています。
+    </p>
+
+    <table class="spec">
+      <thead>
+        <tr>
+          <th colspan="2">計算の前提</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>通貨</th>
+          <td>日本円</td>
+        </tr>
+        <tr>
+          <th>期間</th>
+          <td>月額（30.5日）</td>
+        </tr>
+        <tr>
+          <th>リージョン</th>
+          <td>東京リージョン<br />（SESのみバージニア北部）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="text-zakuri">
       ざっくりと言いつつ、計算ツールを公開する以上は、料金の目安として役に立つ金額を算出できるように努めていますが、「実際に運用してみたら案外高かった」とか「このサイトで考慮されていないパラメータの影響が大きかった」といった場合の責任までは負いかねます。
     </p>
 
@@ -30,9 +56,8 @@
     </p>
 
     <p class="text-zakuri">
-      また、ユーザーの皆さまの利用状況を把握するため、Googleアナリティクスを利用しています。
-      データの収集にあたって、ウェブサイトにアクセスしたときにブラウザに送られてくる小さなテキストデータである、Cookieを使用しています。Googleアナリティクスでデータを収集する仕組みについては<ExternalLink
-        href="https://www.google.com/intl/ja/policies/privacy/partners/"
+      また、ユーザーのみなさまの利用状況を把握するため、GoogleアナリティクスおよびCookieを使用しています。Googleアナリティクスでデータを収集する仕組みについては<ExternalLink
+        href="https://policies.google.com/technologies/partner-sites?hl=ja"
         >こちらのリンク</ExternalLink
       >からご確認いただけます。
     </p>

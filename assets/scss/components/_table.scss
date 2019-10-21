@@ -21,6 +21,7 @@
     @include min {
       display: flex;
       align-items: flex-end;
+      padding: 0 16px;
     }
     + tr {
       margin-top: 30px;
@@ -66,16 +67,17 @@
         justify-content: flex-end;
         padding-bottom: 32px;
       }
-    }
-    &:first-child {
-      @include min {
-        padding-left: 26px;
+      &.mod-w-33 {
+        width: 33.333%;
+        box-sizing: border-box;
+        &:nth-child(n+4) {
+          padding-top: 0;
+        }
       }
     }
     &:last-child {
       @include min {
         min-width: 140px;
-        padding-right: 26px;
       }
     }
     .button-remove {
@@ -107,6 +109,24 @@
       line-height: 1.4;
       @include min {
         font-size: 16px;
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------
+  //  でかい
+  // ---------------------------------------------------------------
+  &.mod-grande {
+    @include min {
+      tr {
+        flex-wrap: wrap;
+        padding-right: 240px;
+      }
+      td.mod-price {
+        width: 240px;
+        position: absolute;
+        bottom: 0;
+        right: 26px;
       }
     }
   }

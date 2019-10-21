@@ -13,6 +13,9 @@ import aurora from './aurora'
 import dynamodb from './dynamodb'
 import elasticache from './elasticache'
 import natgw from './natgw'
+import sns from './sns'
+import sqs from './sqs'
+import ses from './ses'
 
 export default [
   ec2,
@@ -29,5 +32,8 @@ export default [
   rds,
   aurora,
   dynamodb,
-  elasticache
+  elasticache,
+  sns,
+  sqs,
+  ses
 ]

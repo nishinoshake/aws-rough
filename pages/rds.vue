@@ -83,7 +83,7 @@
 
     <template v-slot:zakuri>
       <div class="section-child">
-        <p class="text">マネージド型のリレーショナルデータベース。</p>
+        <p class="text">フルマネージド型のリレーショナルデータベース。</p>
         <p class="text">
           EC2でもリレーショナルデータベースは構築できますが、
           <br class="pc" />

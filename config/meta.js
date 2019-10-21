@@ -94,6 +94,18 @@ const meta = {
   elasticache: {
     title: pageTitle('ElastiCache'),
     description: pageDescription('ElastiCacheの料金は、主にノードタイプと台数で決まります。')
+  },
+  sns: {
+    title: pageTitle('SNS'),
+    description: pageDescription('SNSの料金は、主にノードタイプと台数で決まります。')
+  },
+  sqs: {
+    title: pageTitle('SQS'),
+    description: pageDescription('SQSの料金は、主にノードタイプと台数で決まります。')
+  },
+  ses: {
+    title: pageTitle('SES'),
+    description: pageDescription('SESの料金は、主にノードタイプと台数で決まります。')
   }
 }
 

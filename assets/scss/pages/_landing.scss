@@ -11,13 +11,14 @@
   justify-content: center;
   @include max {
     min-height: calc(100vh - #{$height-footer-sp});
+    padding-top: 80px;
   }
   @include min {
     min-height: calc(100vh - #{$height-footer-pc});
-    padding: 140px 50px 0;
+    padding: 200px 50px 0;
   }
   &-copy {
-    line-height: 1.8;
+    line-height: 1.4;
     @include max {
       margin-right: -10px;
       font-size: 18px;
@@ -31,11 +32,10 @@
   &-ja {
     @include max {
       width: 100%;
-      max-width: 274px;
-      margin-top: 10px;
+      max-width: 300px;
     }
     @include min {
-      width: 748px;
+      width: 720px;
       margin-top: 28px;
     }
     svg {

@@ -97,7 +97,11 @@
           <br class="pc" />
           上手くやれるサービスが他にある場合は、そっちを使ったほうが楽をできます。
           <br class="pc" />
-          データベースはRDSに。メールはSESに。餅は餅屋に。
+          データベースは<nuxt-link class="text-link" to="/rds/">RDS</nuxt-link>に。メールは<nuxt-link
+            class="text-link"
+            to="/ses/"
+            >SES</nuxt-link
+          >に。そんな感じで。
         </p>
         <p class="text">
           他のサービスを検討して、消去法でEC2が残った場合に使う、ぐらいが丁度いい塩梅かと。

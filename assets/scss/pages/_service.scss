@@ -137,10 +137,10 @@
     background-color: $color-white;
     border: $width-border solid $color-border;
     @include max {
-      padding: $padding-sp ;
+      padding: $padding-sp;
     }
     @include min {
-      padding: $padding-pc;
+      padding: 34px $padding-pc $padding-pc;
     }
   }
 }

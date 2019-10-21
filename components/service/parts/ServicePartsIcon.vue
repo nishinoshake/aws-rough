@@ -16,6 +16,9 @@ import s3 from '@/assets/svg/s3.svg'
 import rds from '@/assets/svg/rds.svg'
 import aurora from '@/assets/svg/aurora.svg'
 import dynamodb from '@/assets/svg/dynamodb.svg'
+import sns from '@/assets/svg/sns.svg'
+import sqs from '@/assets/svg/sqs.svg'
+import ses from '@/assets/svg/ses.svg'
 
 export default {
   name: 'ServicePartsIcon',
@@ -32,7 +35,10 @@ export default {
     rds,
     aurora,
     s3,
-    dynamodb
+    dynamodb,
+    sns,
+    sqs,
+    ses
   },
   props: {
     name: {

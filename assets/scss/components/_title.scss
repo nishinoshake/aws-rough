@@ -111,15 +111,14 @@
     position: relative;
     letter-spacing: 0.12em;
     color: $color-modest;
-    background-color: $color-gray;
+    border: 1px solid $color-border;
+    border-bottom: 0;
     @include max {
-      margin-bottom: 24px;
-      padding: 14px 20px;
+      padding: 20px;
       font-size: 18px;
     }
     @include min {
-      margin-bottom: 40px;
-      padding: 24px 40px;
+      padding: 28px 40px;
       font-size: 24px;
     }
   }

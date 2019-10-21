@@ -1,6 +1,9 @@
 <template>
-  <div :class="['service-calc', { 'mod-multiple': service.multiple }]" data-test="service-calc">
-    <table :class="['table', { 'mod-multiple': service.multiple }]">
+  <div
+    :class="['service-calc', { 'mod-multiple': service.multiple, 'mod-grande': service.grande }]"
+    data-test="service-calc"
+  >
+    <table :class="['table', { 'mod-multiple': service.multiple, 'mod-grande': service.grande }]">
       <tbody>
         <ServiceTemplateRow
           v-for="(row, rowIndex) in table"

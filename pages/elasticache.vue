@@ -57,7 +57,7 @@
 
     <template v-slot:zakuri>
       <div class="section-child">
-        <p class="text">マネージド型のインメモリデータストア。</p>
+        <p class="text">フルマネージド型のインメモリデータストア。</p>
         <p class="text">
           データベースのクエリ結果のキャッシュや、セッション管理など、
           <br class="pc" />
