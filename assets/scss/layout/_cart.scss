@@ -17,19 +17,22 @@
   @include min {
     &:hover {
       .cart-link {
-        color: $color-font;
-        border-color: $color-border-active;
+        background-color: $color-font;
+        border-color: $color-font;
+        color: $color-white;
       }
     }
   }
   &-link {
+    @include transition-collection;
     @include max-large {
       display: none;
     }
     @include min-large {
       margin-left: 20px;
-      padding: 5px 16px;
+      padding: 5px 20px;
       color: $color-modest;
+      border-radius: 4px;
       white-space: nowrap;
       border: 1px solid $color-border;
     }
@@ -41,6 +44,7 @@
     position: relative;
     padding: 4px 0 12px 2em;
     z-index: 1;
+    @include transition-fade;
     @include max-large {
       width: 100%;
       font-size: 16px;

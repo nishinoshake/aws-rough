@@ -70,6 +70,28 @@
 }
 
 // -----------------------------------------------------
+// Transition
+// -----------------------------------------------------
+@mixin transition-fade {
+  transition: opacity 0.1s linear;
+}
+@mixin transition-collection {
+  transition: opacity 0.1s linear, color 0.1s linear, border-color 0.1s linear, background-color 0.1s linear;
+}
+
+// -----------------------------------------------------
+// Hover
+// -----------------------------------------------------
+@mixin hover-fade {
+  @include transition-fade;
+  @include min { 
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// -----------------------------------------------------
 // Background
 // -----------------------------------------------------
 @mixin bg-cover {

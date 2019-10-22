@@ -26,6 +26,7 @@
       border: $width-border solid $color-border;
       background-color: $color-white;
       @include shadow-light;
+      @include transition-collection;
       &:invalid {
         background-color: rgba($color-red, 0.2);
       }

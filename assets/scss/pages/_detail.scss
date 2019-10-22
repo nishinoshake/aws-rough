@@ -10,14 +10,16 @@
   }
   &-title {
     &-copy {
-      width: 9.5em;
+      width: 10em;
       display: flex;
       justify-content: center;
       align-items: center;
       line-height: 1;
       color: $color-modest;
       border: $width-border solid $color-border;
+      border-radius: 999em;
       cursor: pointer;
+      @include transition-collection;
       @include max {
         margin-left: 25px;
         padding: 10px 0;
@@ -28,8 +30,9 @@
         padding: 16px 0;
         font-size: 16px;
         &:hover {
-          color: $color-font;
-          border-color: $color-border-active;
+          background-color: $color-font;
+          border-color: $color-font;
+          color: $color-white;
         }
       }
     }
@@ -74,6 +77,7 @@
     &-link {
       display: flex;
       align-items: center;
+      @include hover-fade;
     }
     &-name {
       margin-right: 20px;

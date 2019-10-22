@@ -92,12 +92,8 @@
         display: block;
         padding: 4px 0;
         color: inherit;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        @include min {
-          &:hover {
-            border-bottom-color: $color-border;
-          }
+        &:hover {
+          opacity: 0.7;
         }
       }
     }

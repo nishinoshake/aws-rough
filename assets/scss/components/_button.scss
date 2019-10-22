@@ -12,6 +12,7 @@
     background-color: $color-font;
     border-radius: 50%;
     @include hide-text;
+    @include transition-collection;
     @include min {
       &:hover {
         background-color: darken($color-font, 10%);

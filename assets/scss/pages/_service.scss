@@ -64,13 +64,15 @@
       justify-content: center;
       align-items: center;
       padding: 16px 36px;
-      color: $color-white;
       border-radius: 999em;
-      background-color: $color-font;
+      border: 1px solid $color-border;
+      @include transition-collection;
       @include min {
         padding: 16px 32px;
         &:hover {
-          background-color: darken($color-font, 10%);
+          background-color: $color-font;
+          border-color: $color-font;
+          color: $color-white;
         }
       }
       span {

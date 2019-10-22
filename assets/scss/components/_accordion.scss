@@ -17,24 +17,12 @@
   &-item {
     background-color: $color-white;
     border: $width-border solid $color-border;
-    @include min {
-      &:hover {
-        border-color: $color-border-active;
-        .accordion-title:after {
-          border-bottom-color: $color-border-active;
-          border-right-color: $color-border-active;
-        }
-      }
-    }
     &.is-active {
-      border-color: $color-border-active;
       .accordion-inside {
         opacity: 1;
       }
-      .accordion-title:after {
-        border-bottom-color: $color-border-active;
-        border-right-color: $color-border-active;
-        transform: translateY(-20%) rotate(225deg);
+      .accordion-title svg {
+        transform: rotate(180deg);
       }
     }
     &:nth-child(n+2) {
@@ -53,6 +41,7 @@
     text-align: left;
     letter-spacing: 0.1em;
     @include font-sans;
+    @include transition-fade;
     @include max {
       padding: 12px 30px 12px 20px;
       font-size: 14px;
@@ -60,23 +49,23 @@
     @include min {
       padding: 22px 40px 22px 40px;
       font-size: 18px;
+      &:hover {
+        opacity: 0.7;
+      }
     }
-    &:after {
-      content: "";
+    svg {
+      height: auto;
+      fill: $color-border;
       position: absolute;
-      top: 50%;
-      border-bottom: $width-border solid $color-border;
-      border-right: $width-border solid $color-border;
-      transform: translateY(-80%) rotate(45deg);
-      transition: transform 0.24s $easeOutExpo;
+      transition: transform 0.32s $easeOutQuart;
       @include max {
-        width: 8px;
-        height: 8px;
+        width: 16px;
+        top: calc(50% - 9px);
         right: 20px;
       }
       @include min {
-        width: 14px;
-        height: 14px;
+        width: 20px;
+        top: calc(50% - 12px);
         right: 30px;
       }
     }
@@ -91,7 +80,7 @@
     opacity: 0;
     transition: opacity 0.1s linear;
     will-change: opacity;
-    background-image: linear-gradient(to right, $color-border-active, $color-border-active 4px, transparent 4px, transparent 6px);
+    background-image: linear-gradient(to right, $color-border, $color-border 4px, transparent 4px, transparent 6px);
     background-size: 6px 1px;
     background-position: top;
     background-repeat: repeat-x;
