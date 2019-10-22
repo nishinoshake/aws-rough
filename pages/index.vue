@@ -1,7 +1,13 @@
 <template>
   <div class="landing">
     <p class="landing-ja">
-      <LandingCopy />
+      <picture>
+        <source srcset="/img/landing-copy-thin.svg" media="(min-width: 851px)" />
+        <img
+          src="/img/landing-copy-light.svg"
+          alt="AWSの料金をざっくり計算できます。メニューからサービスを選択してください。"
+        />
+      </picture>
     </p>
   </div>
 </template>
@@ -9,7 +15,6 @@
 <script>
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
-import LandingCopy from '@/assets/svg/landing-copy.svg'
 import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
 import { MONTHLY_DATE } from '@/config/constants'
@@ -17,7 +22,7 @@ import { getService } from '@/lib/service'
 
 export default {
   name: 'LandingIndex',
-  components: { ExternalLink, ServicePartsIcon, LandingCopy },
+  components: { ExternalLink, ServicePartsIcon },
   data() {
     return {
       monthlyDate: MONTHLY_DATE
