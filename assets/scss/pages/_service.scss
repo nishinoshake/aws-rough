@@ -7,7 +7,7 @@
   &-inside {
     + .section {
       @include max {
-        margin-top: $padding-sp * 5;
+        margin-top: $padding-sp * 2.5;
       }
       @include min {
         margin-top: $margin-pc * 4;
@@ -66,39 +66,11 @@
       padding: 16px 36px;
       color: $color-white;
       border-radius: 999em;
+      background-color: $color-font;
       @include min {
         padding: 16px 32px;
-      }
-      &.mod-orange {
-        background-color: $color-orange;
-        @include min {
-          &:hover {
-            background-color: darken($color-orange, 10%);
-          }
-        }
-      }
-      &.mod-blue {
-        background-color: $color-blue;
-        @include min {
-          &:hover {
-            background-color: darken($color-blue, 10%);
-          }
-        }
-      }
-      &.mod-beige {
-        background-color: $color-beige;
-        @include min {
-          &:hover {
-            background-color: darken($color-beige, 10%);
-          }
-        }
-      }
-      &.mod-red {
-        background-color: $color-red;
-        @include min {
-          &:hover {
-            background-color: darken($color-red, 10%);
-          }
+        &:hover {
+          background-color: darken($color-font, 10%);
         }
       }
       span {

@@ -7,7 +7,7 @@
 .section {
   + .section {
     @include max {
-      margin-top: $margin-sp * 3;
+      margin-top: $margin-sp * 2.5;
     }
     @include min {
       margin-top: $margin-pc * 4;
@@ -15,7 +15,7 @@
   }
   &-child {
     + .section-child {
-      margin-top: 40px;
+      margin-top: 20px;
       @include min {
         margin-top: 50px;
       }

@@ -45,13 +45,6 @@
         </p>
 
         <p class="text">
-          たとえば、<ExternalLink href="https://aws.amazon.com/jp/cloudwatch/">CloudWatch</ExternalLink
-          >でEC2のCPU利用率が高いときにSNSへメッセージを送るように設定しておき、
-          <br class="pc" />
-          そのトピックをLambdaでサブスクライブして、Slackへ通知するコードを実行する。みたいな事ができます。
-        </p>
-
-        <p class="text">
           AWS内のメッセージングだけでなく、モバイルのプッシュ通知や、Email/HTTPなどの通知もサポートしています。
           <br class="pc" />
           結構な量の無料利用枠があるので、下の表を参考にしてください。SQS/Lambdaへの配信は無料です。
@@ -62,7 +55,7 @@
           >を参考にしてください。
         </p>
 
-        <table class="spec mod-mb0">
+        <table class="spec">
           <thead>
             <tr>
               <th colspan="2">無料利用枠</th>
@@ -87,6 +80,17 @@
             </tr>
           </tbody>
         </table>
+
+        <p class="text">
+          <span class="text-bold">SNSの使用例</span>
+          <br />
+          EC2のCPU使用率が高いときに知らせるためのSNSトピックを、<ExternalLink
+            href="https://aws.amazon.com/jp/cloudwatch/"
+            >CloudWatch</ExternalLink
+          >で設定しておき、
+          <br class="pc" />
+          それをLambdaでサブスクライブして、Slackへ通知するコードを実行する。みたいな事ができます。
+        </p>
       </div>
     </template>
   </ServiceTemplate>

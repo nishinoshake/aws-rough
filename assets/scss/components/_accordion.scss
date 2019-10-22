@@ -96,7 +96,7 @@
     background-position: top;
     background-repeat: repeat-x;
     @include max {
-      padding: $padding-sp + 10px $padding-sp;
+      padding: $padding-sp $padding-sp;
     }
     @include min {
       padding: 34px $padding-pc;

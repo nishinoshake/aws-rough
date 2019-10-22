@@ -9,12 +9,12 @@
     width: 32px;
     height: 32px;
     position: relative;
-    background-color: $color-modest;
+    background-color: $color-font;
     border-radius: 50%;
     @include hide-text;
     @include min {
       &:hover {
-        background-color: darken($color-modest, 10%);
+        background-color: darken($color-font, 10%);
       }
     }
     &:before,
