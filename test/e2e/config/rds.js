@@ -5,15 +5,15 @@ export default {
     {
       name: 'RDS-MySQLの計算結果が想定内',
       range: {
-        min: 1710,
-        max: 1780
+        min: 2070,
+        max: 2090
       },
       waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
           target: '[data-test="instance"]',
-          value: 'db.t2.large'
+          value: 'db.r5.large'
         },
         {
           type: 'type',
@@ -38,15 +38,15 @@ export default {
     {
       name: 'RDS-MySQLの高額インスタンスの計算結果が想定内',
       range: {
-        min: 6670,
-        max: 6700
+        min: 10000,
+        max: 10050
       },
       waitFor: '[data-test="instance"]',
       actions: [
         {
           type: 'select',
           target: '[data-test="instance"]',
-          value: 'db.r4.16xlarge'
+          value: 'db.r5.24xlarge'
         },
         {
           type: 'type',
@@ -72,8 +72,8 @@ export default {
     {
       name: 'RDS-MariaDBの計算結果が想定内',
       range: {
-        min: 830,
-        max: 870
+        min: 2960,
+        max: 3000
       },
       waitFor: '[data-test="instance"]',
       actions: [
@@ -85,7 +85,7 @@ export default {
         {
           type: 'select',
           target: '[data-test="instance"]',
-          value: 'db.t2.micro'
+          value: 'db.m5.large'
         },
         {
           type: 'type',
@@ -111,8 +111,8 @@ export default {
     {
       name: 'RDS-PostgreSQLの計算結果が想定内',
       range: {
-        min: 460,
-        max: 500
+        min: 960,
+        max: 990
       },
       waitFor: '[data-test="instance"]',
       actions: [
@@ -124,7 +124,7 @@ export default {
         {
           type: 'select',
           target: '[data-test="instance"]',
-          value: 'db.t2.medium'
+          value: 'db.m5.large'
         },
         {
           type: 'type',
