@@ -51,6 +51,13 @@ module.exports = {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Lato:100,300|Work+Sans:100,300&display=swap'
       }
+    ],
+    script: [
+      {
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        'data-ad-client': 'ca-pub-7912727364342998',
+        async: true
+      }
     ]
   },
   loading: false,
