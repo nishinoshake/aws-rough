@@ -70,8 +70,8 @@ jobs:
       - attach_workspace:
           at: ~/app
       - run: sudo pip install awscli
-      - run: aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*.html" --cache-control max-age=31536000
-      - run: aws s3 sync ./dist/ s3://aws.noplan.cc --exact-timestamps --delete --exclude "*" --include "*.html" --cache-control no-store
+      - run: aws s3 sync ./dist/ s3://aws-rough.cc --exact-timestamps --delete --exclude "*.html" --cache-control max-age=31536000
+      - run: aws s3 sync ./dist/ s3://aws-rough.cc --exact-timestamps --delete --exclude "*" --include "*.html" --cache-control no-store
       - run: aws cloudfront create-invalidation --distribution-id $CF_DIST_ID --paths "/*"
 
 workflows:

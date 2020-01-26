@@ -1,6 +1,6 @@
 # ざっくりAWS 
 
-[<img align="right" src="https://user-images.githubusercontent.com/8698355/47230506-5a514280-d405-11e8-90e9-01c1f8cc19c5.gif" alt="ざっくりAWS" width="400">](https://aws.noplan.cc)
+[<img align="right" src="https://user-images.githubusercontent.com/8698355/47230506-5a514280-d405-11e8-90e9-01c1f8cc19c5.gif" alt="ざっくりAWS" width="400">](https://aws-rough.cc)
 
 AWS の料金を日本円でざっくり計算できるサイトです。  
 
@@ -8,7 +8,7 @@ AWS の料金を日本円でざっくり計算できるサイトです。
 
 正確な料金は必要ないから適当な入力でざっくり知りたい、みたいなときに便利かもしれません。
 
-https://aws.noplan.cc
+https://aws-rough.cc
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nishinoshake/aws-rough/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/nishinoshake/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/nishinoshake/aws-rough/tree/master)
  

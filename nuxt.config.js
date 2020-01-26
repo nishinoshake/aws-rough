@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         name: 'twitter:image',
-        content: 'https://aws.noplan.cc/img/og.png?2018040902'
+        content: 'https://aws-rough.cc/img/og.png?2018040902'
       },
       {
         property: 'og:site_name',
@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         property: 'og:image',
-        content: 'https://aws.noplan.cc/img/og.png?2018040902'
+        content: 'https://aws-rough.cc/img/og.png?2018040902'
       }
     ],
     link: [
@@ -56,7 +56,7 @@ module.exports = {
   loading: false,
   css: ['@/assets/scss/index.scss'],
   env: {
-    homeUrl: process.env.HOME_URL || 'https://aws.noplan.cc',
+    homeUrl: process.env.HOME_URL || 'https://aws-rough.cc',
     apiUrl: process.env.API_URL || 'https://aws-api.noplan.cc',
     storageUrl: process.env.STORAGE_URL || 'http://aws-storage.noplan.cc.s3-website-ap-northeast-1.amazonaws.com'
   },
