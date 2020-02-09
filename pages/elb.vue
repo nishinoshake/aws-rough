@@ -86,6 +86,7 @@
         </div>
       </div>
     </div>
+    <ServiceTemplateAds />
   </article>
 </template>
 
@@ -93,6 +94,7 @@
 import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateTitle'
 import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateLabel'
 import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
+import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import serviceConfigELB from '@/config/service/elb'
 import serviceConfigCLB from '@/config/service/clb'
 import serviceConfigALB from '@/config/service/alb'
@@ -108,6 +110,7 @@ export default {
     ServiceTemplateTitle,
     ServiceTemplateLabel,
     ServiceTemplateCalc,
+    ServiceTemplateAds,
     ServicePartsAccordion,
     ServicePartsCondition,
     ExternalLink

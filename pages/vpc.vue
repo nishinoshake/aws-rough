@@ -61,6 +61,7 @@
         </div>
       </div>
     </div>
+    <ServiceTemplateAds />
   </article>
 </template>
 
@@ -68,6 +69,7 @@
 import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateTitle'
 import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateLabel'
 import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
+import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
 import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
@@ -82,6 +84,7 @@ export default {
     ServiceTemplateTitle,
     ServiceTemplateLabel,
     ServiceTemplateCalc,
+    ServiceTemplateAds,
     ServicePartsExclude,
     ServicePartsAccordion,
     ServicePartsCondition,
