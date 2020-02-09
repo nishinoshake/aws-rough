@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.3.0",
-    "@nuxtjs/google-adsense": "github:nishinoshake/google-adsense-module",
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.6.0",
     "animejs": "^2.2.0",
@@ -43,7 +42,9 @@
     "nuxt": "^2.3.4",
     "sweet-scroll": "^3.0.1",
     "url-parse": "^1.4.3",
-    "vue-chartjs": "^3.3.1"
+    "vue-chartjs": "^3.3.1",
+    "vue-google-adsense": "^1.8.0",
+    "vue-script2": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

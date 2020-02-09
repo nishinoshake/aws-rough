@@ -12,7 +12,9 @@
           >を買います。
         </p>
         <div class="service-ad-frame">
-          <adsbygoogle />
+          <no-ssr>
+            <Adsense data-ad-client="ca-pub-7912727364342998"></Adsense>
+          </no-ssr>
         </div>
       </div>
     </div>

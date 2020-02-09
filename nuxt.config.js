@@ -67,15 +67,10 @@ module.exports = {
         id: 'UA-53153991-13'
       }
     ],
-    [
-      '@nuxtjs/google-adsense',
-      {
-        id: 'ca-pub-7912727364342998'
-      }
-    ],
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv'
   ],
+  plugins: [{ src: '~/plugins/vue-google-adsense', ssr: false }],
   build: {
     extend(config, { isDev }) {
       // SVGを画像ではなく要素として使いたかったのでvue-svg-loaderを追加
