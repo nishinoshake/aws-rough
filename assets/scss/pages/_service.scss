@@ -107,7 +107,8 @@
   }
   &-summary {
   }
-  &-zakuri {
+  &-zakuri,
+  &-ad {
     background-color: $color-white;
     border: $width-border solid $color-border;
     @include max {
@@ -115,6 +116,17 @@
     }
     @include min {
       padding: 34px $padding-pc $padding-pc;
+    }
+  }
+  &-ad {
+    &-frame {
+      overflow: hidden;
+      @include max {
+        margin-top: $padding-sp;
+      }
+      @include min {
+        margin-top: 34px;
+      }
     }
   }
 }

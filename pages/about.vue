@@ -31,13 +31,7 @@
     </table>
 
     <p class="text-zakuri">
-      ざっくりと言いつつ、計算ツールを公開する以上は、料金の目安として役に立つ金額を算出できるように努めていますが、「実際に運用してみたら案外高かった」とか「このサイトで考慮されていないパラメータの影響が大きかった」といった場合の責任までは負いかねます。
-    </p>
-
-    <blockquote class="text-quote">"With Great Power<br />Comes Great Responsibility"</blockquote>
-
-    <p class="text-zakuri">
-      映画のセリフを引用するのは野暮かもしれませんが、AWSは柔軟にシステムを構築できる便利さがある反面、費用が想定以上にかかってしまうリスクもあります。大きめのシステムの見積もりなどで正確さが要求される場合は、<ExternalLink
+      ざっくりと言いつつ、計算ツールを公開する以上は、料金の目安として役に立つ金額を算出できるように努めていますが、「実際に運用してみたら案外高かった」とか「このサイトで考慮されていないパラメータの影響が大きかった」といった場合の責任までは負いかねます。大きめのシステムの見積もりなどで正確さが要求される場合は、<ExternalLink
         href="https://calculator.s3.amazonaws.com/index.html"
         >公式のツール</ExternalLink
       >をお使いください。
@@ -56,10 +50,27 @@
     </p>
 
     <p class="text-zakuri">
-      また、ユーザーのみなさまの利用状況を把握するため、GoogleアナリティクスおよびCookieを使用しています。Googleアナリティクスでデータを収集する仕組みについては<ExternalLink
-        href="https://policies.google.com/technologies/partner-sites?hl=ja"
-        >こちらのリンク</ExternalLink
-      >からご確認いただけます。
+      また、ユーザーのみなさまの利用状況を把握するため、Googleアナリティクスを使用しています。GoogleによるCookieの利用方法やオプトアウトの方法は、下記のリンクから確認できます。
+    </p>
+
+    <ul class="list">
+      <li class="list-item">
+        <ExternalLink href="https://policies.google.com/technologies/cookies?hl=ja"
+          >GoogleによるCookieの利用方法</ExternalLink
+        >
+      </li>
+      <li class="list-item">
+        <ExternalLink href="https://support.google.com/analytics/answer/181881?hl=ja"
+          >Googleアナリティクスのオプトアウト</ExternalLink
+        >
+      </li>
+    </ul>
+
+    <p class="text-zakuri">
+      上記のGoogleアナリティクスとは別で、Googleアドセンスというサービスを利用して、広告の配信も行っています（こちらもCookieを使用）。パーソナライズ広告に抵抗がある方は、<ExternalLink
+        href="https://www.google.com/settings/ads"
+        >広告設定のページ</ExternalLink
+      >から無効にできます。
     </p>
 
     <p class="text-zakuri">

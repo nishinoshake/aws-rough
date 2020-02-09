@@ -18,4 +18,12 @@
   @include min-large {
     padding: 100px 70px 180px;
   }
+  .list {
+    @include max {
+      margin: 20px 0 32px;
+    }
+    @include min {
+      margin: 24px 0 40px;
+    }
+  }
 }
