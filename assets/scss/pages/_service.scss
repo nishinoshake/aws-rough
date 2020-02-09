@@ -120,7 +120,6 @@
   }
   &-ad {
     &-frame {
-      overflow: hidden;
       @include max {
         margin-top: $padding-sp;
       }
