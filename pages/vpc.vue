@@ -6,6 +6,8 @@
       <ServiceTemplateCalc :service="service[serviceName]" />
     </div>
 
+    <ServiceTemplateAds />
+
     <div class="section">
       <div class="section-box">
         <p class="title-daitan">
@@ -61,7 +63,6 @@
         </div>
       </div>
     </div>
-    <ServiceTemplateAds />
   </article>
 </template>
 

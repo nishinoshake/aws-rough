@@ -2,6 +2,7 @@
   <article class="service">
     <ServiceTemplateTitle :service="service" />
     <ServiceTemplateCalc :service="service" />
+    <ServiceTemplateAds />
     <div class="section">
       <div class="section-box">
         <p class="title-daitan">
@@ -18,7 +19,6 @@
         <slot name="aside" />
       </div>
     </div>
-    <ServiceTemplateAds />
   </article>
 </template>
 
