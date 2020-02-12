@@ -6,7 +6,7 @@
         <p>
           このエリアには<ExternalLink href="https://www.google.com/intl/ja_jp/adsense/start/"
             >Googleアドセンス</ExternalLink
-          >の広告が表示されます。この広告をクリックすると、サイト運営者の収益になります。広告を追加するとサイトが重くなるから嫌だなぁと思って避けていたのですが、お金が欲しくなったのでいれました。そのお金で<ExternalLink
+          >の広告が表示されます。興味がある広告が表示されたときに、クリックして内容をご確認いただくと、サイト運営者の収益になります。そのお金で<ExternalLink
             href="https://www.redbull.com/jp-ja/energydrink"
             >Red Bull</ExternalLink
           >を買います。
