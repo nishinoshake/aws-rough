@@ -3,19 +3,12 @@
     <div class="section-box">
       <p class="title-daitan"><span>広告</span></p>
       <div class="service-ad">
-        <p>
-          <ExternalLink href="https://www.google.com/intl/ja_jp/adsense/start/"
-            >Googleアドセンス</ExternalLink
-          >の広告です。<br />収益で<ExternalLink
-            href="https://www.redbull.com/jp-ja/energydrink"
-            >Red Bull</ExternalLink
-          >を買います。
-        </p>
         <div class="service-ad-frame">
           <no-ssr>
             <Adsense data-ad-client="ca-pub-7912727364342998"></Adsense>
           </no-ssr>
         </div>
+        <p>※収益でRed Bullを買います。</p>
       </div>
     </div>
   </div>

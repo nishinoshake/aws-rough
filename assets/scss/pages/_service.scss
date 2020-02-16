@@ -121,10 +121,10 @@
   &-ad {
     &-frame {
       @include max {
-        margin-top: $padding-sp;
+        margin-bottom: $padding-sp;
       }
       @include min {
-        margin-top: 34px;
+        margin-bottom: 34px;
       }
     }
   }
