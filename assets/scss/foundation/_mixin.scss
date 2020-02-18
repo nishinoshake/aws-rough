@@ -117,24 +117,13 @@
 // Text
 // -----------------------------------------------------
 @mixin font-sans {
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, YuGothic, "Hiragino Sans", "Meiryo", sans-serif;
 }
-@mixin font-ja {
-  font-family: 'Noto Serif JP', serif;
-}
-@mixin font-en($weight: 100) {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: $weight;
-}
-@mixin font-number {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-}
+
 @mixin hide-text {
   font: 0 / 0;
   color: transparent;
 }
-
 @mixin ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;

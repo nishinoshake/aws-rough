@@ -15,8 +15,8 @@
       justify-content: center;
       align-items: center;
       line-height: 1;
-      color: $color-modest;
-      border: $width-border solid $color-border;
+      color: $color-white;
+      background-color: $color-dark;
       border-radius: 999em;
       cursor: pointer;
       @include transition-collection;
@@ -30,9 +30,7 @@
         padding: 16px 0;
         font-size: 16px;
         &:hover {
-          background-color: $color-font;
-          border-color: $color-font;
-          color: $color-white;
+          background-color: $color-black;
         }
       }
     }
@@ -83,7 +81,6 @@
       margin-right: 20px;
       font-size: 22px;
       line-height: 1;
-      @include font-en(300);
       @include min {
         margin-right: 30px;
         font-size: 28px;
@@ -124,12 +121,8 @@
         transition-delay: .08s;
       }
     }
-    @include max {
-      @include font-en(300);
-    }
     @include min {
       font-size: 52px;
-      @include font-en;
     }
     &.is-visible {
       span {

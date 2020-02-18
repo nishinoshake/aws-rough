@@ -15,7 +15,7 @@
     @include transition-collection;
     @include min {
       &:hover {
-        background-color: darken($color-font, 10%);
+        background-color: $color-black;
       }
     }
     &:before,

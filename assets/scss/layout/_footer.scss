@@ -3,11 +3,6 @@
 .footer {
   @include max-large {
     z-index: 100;
-    margin: $padding-sp * 3 $padding-sp * -2 0;
-    border-top: 1px solid $color-border;
-  }
-  @include max {
-    margin: $padding-sp * 2 $padding-sp * -1.5 0;
   }
   @include min-large {
     width: 100%;
@@ -15,20 +10,23 @@
     bottom: 0;
     left: 0;
     z-index: 1;
-    border-top: $width-border solid $color-border;
-    background-color: $color-white;
+  }
+  &-container {
+    @include min-large {
+      max-width: $width-max;
+      margin: 0 auto;
+      padding-left: $width-menu-pc;
+    }
   }
   &-bar {
     @include min-large {
-      max-width: $width-max;
       height: $height-footer-pc;
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 0 auto;
-      padding-left: $width-menu-pc + $padding-pc * 1.5;
       padding-right: $padding-pc;
+      background-color: $color-white;
+      border-top: $width-border solid $color-border;
     }
   }
   &-action {
@@ -46,54 +44,22 @@
     }
   }
   &-logo {
-    position: absolute;
-    left: 0;
-    a {
+    line-height: 1;
+    @include max-large {
+      width: 200px;
+      margin: $padding-sp * 3 auto $padding-sp * 6;
+    }
+    @include min-large {
       width: 150px;
+      padding-left: $padding-pc;
+      box-sizing: content-box;
+    }
+    a {
       display: block;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
-  &-nav {
-    &-list {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      @include max-large {
-        padding: 15px $padding-sp ($height-footer-sp + 15px);
-        justify-content: center;
-      }
-    }
-    &-item {
-      line-height: 1;
-      position: relative;
-      display: flex;
-      align-items: center;
-      @include font-en(300);
-      @include max {
-        font-size: 14px;
-      }
-      @include min {
-        font-size: 20px;
-      }
-      &:nth-child(n+2) {
-        @include max {
-          margin-left: 28px;
-        }
-        @include min {
-          margin-left: 40px;
-        }
-      }
-      a {
-        display: block;
-        padding: 4px 0;
-        color: inherit;
-        &:hover {
-          opacity: 0.7;
+      &:hover {
+        background-color: $color-black;
+        path {
+          fill: $color-white;
         }
       }
     }

@@ -8,7 +8,6 @@
   margin-bottom: 12px;
   font-size: 20px;
   letter-spacing: 0.1em;
-  @include font-sans;
   @include min {
     margin-bottom: 22px;
     font-size: 30px;
@@ -24,7 +23,7 @@
       font-size: 30px;
     }
     @include min {
-      min-height: 260px;
+      min-height: 180px;
       font-size: 46px;
     }
     &-icon {
@@ -45,12 +44,6 @@
       align-items: center;
       letter-spacing: 0.1em;
       white-space: nowrap;
-      @include max {
-        @include font-en(300);
-      }
-      @include min {
-        @include font-en;
-      }
     }
     &-ja {
       color: $color-modest;
@@ -67,7 +60,7 @@
       }
       @include min {
         width: 30px;
-        height: 1px;
+        height: 3px;
         margin: 0 24px;
         background-color: currentColor; 
       }
@@ -78,7 +71,6 @@
       }
       @include min {
         font-size: 60%;
-        @include font-en;
       }
     }
   }

@@ -6,42 +6,26 @@
 
 .landing {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @include max {
-    min-height: calc(100vh - #{$height-footer-sp});
-    padding-top: 80px;
-  }
-  @include min {
-    min-height: calc(100vh - #{$height-footer-pc});
-    padding: 200px 50px 0;
-  }
   &-copy {
     line-height: 1.4;
+    letter-spacing: 0.18em;
+    text-indent: 0.16em;
     @include max {
-      margin-right: -10px;
-      font-size: 18px;
-      @include font-en(300);
+      margin-right: -1em;
+      padding: 80px 0;
+      font-size: 30px;
     }
     @include min {
+      padding: 120px 0;
       font-size: 48px;
-      @include font-en;
     }
   }
-  &-ja {
+  .list {
     @include max {
-      width: 100%;
-      max-width: 300px;
+      margin-top: 12px;
     }
     @include min {
-      width: 720px;
-      margin-top: 28px;
-    }
-    img {
-      width: 100%;
-      display: block;
-      height: auto;
+      margin-top: 16px;
     }
   }
 }

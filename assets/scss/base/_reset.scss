@@ -53,6 +53,7 @@ em,
 strong,
 th,
 var {
+  font-family: inherit;
   font-style: normal;
   font-weight: normal;
 }
@@ -68,6 +69,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: inherit;
   font-size: 100%;
   font-weight: normal;
 }
@@ -90,4 +92,5 @@ button {
 
 button {
   cursor: pointer;
+  font-family: inherit;
 }

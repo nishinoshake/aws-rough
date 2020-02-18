@@ -5,16 +5,6 @@
     width: $width-menu-pc;
     position: relative;
     flex: none;
-    &:after {
-      content: "";
-      width: 1px;
-      height: 100%;
-      position: absolute;
-      z-index: 200;
-      top: 0;
-      left: $width-menu-pc;
-      background-color: $color-border;
-    }
   }
   @include min($width-max) {
   }
@@ -100,7 +90,6 @@
         margin-top: 4px;
         font-size: 12px;
         color: $color-modest;
-        @include font-en(300);
       }
     }
     @include min-large {
@@ -112,7 +101,7 @@
       padding: $padding-sp;
     }
     @include min-large {
-      height: calc(100vh - #{$height-footer-pc});
+      height: 100vh;
       padding: 15px 0;
       &.can-scroll {
         overflow-y: scroll;
@@ -194,7 +183,6 @@
       white-space: nowrap;
       align-items: center;
       color: $color-modest;
-      @include font-en(300);
       @include max-large {
         padding: 10px;
         font-size: 16px;

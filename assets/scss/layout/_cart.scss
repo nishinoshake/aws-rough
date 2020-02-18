@@ -17,8 +17,8 @@
   @include min {
     &:hover {
       .cart-link {
-        background-color: $color-font;
-        border-color: $color-font;
+        background-color: $color-black;
+        border-color: $color-black;
         color: $color-white;
       }
     }

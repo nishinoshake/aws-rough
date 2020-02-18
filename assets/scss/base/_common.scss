@@ -37,28 +37,23 @@ body {
   }
   @include min-large {
     padding: 0 $padding-pc * 2 ($height-footer-pc + $padding-pc * 2);
-  }
-}
-
-.app.page-index,
-.app.page-about {
-  .contents {
-    @include min-large {
-      padding-bottom: 0;
+    &:before,
+    &:after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      background-color: $color-border;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
     }
   }
-}
-
-.app.page-index {
-  @include max {
-    .contents {
-      min-height: calc(100vh - #{$height-footer-sp});
-    }
-    .footer {
-      margin-top: 0;
-    }
-  }
-
 }
 
 .sp {

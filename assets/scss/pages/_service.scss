@@ -41,12 +41,10 @@
       @include max {
         margin-bottom: 20px;
         font-size: 22px;
-        @include font-en(300);
       }
       @include min {
         margin-bottom: 30px;
-        font-size: 36px;
-        @include font-en;
+        font-size: 32px;
       }
     }
     &-footer {
@@ -65,14 +63,13 @@
       align-items: center;
       padding: 16px 36px;
       border-radius: 999em;
-      border: 1px solid $color-border;
+      color: $color-white;
+      background-color: $color-dark;
       @include transition-collection;
       @include min {
         padding: 16px 32px;
         &:hover {
-          background-color: $color-font;
-          border-color: $color-font;
-          color: $color-white;
+          background-color: $color-black;
         }
       }
       span {

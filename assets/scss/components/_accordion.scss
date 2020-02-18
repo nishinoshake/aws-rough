@@ -40,7 +40,6 @@
     position: relative;
     text-align: left;
     letter-spacing: 0.1em;
-    @include font-sans;
     @include transition-fade;
     @include max {
       padding: 12px 30px 12px 20px;
