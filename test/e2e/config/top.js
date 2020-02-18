@@ -1,5 +1,5 @@
 export default {
-  path: '/about/',
+  path: '/',
   useCases: [
     {
       name: '日本円の為替レートが想定内',

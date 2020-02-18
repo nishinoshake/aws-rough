@@ -2,25 +2,25 @@ import getPriceAfterInput from './util/getPriceAfterInput'
 import * as config from './config'
 
 const buildUrl = path => `http://localhost:8888${path}`
-const aboutConfig = config.about
+const topConfig = config.top
 const serviceConfig = Object.keys(config)
-  .filter(name => name !== 'about')
+  .filter(name => name !== 'top')
   .map(name => config[name])
 
-const fxUseCase = aboutConfig.useCases[0]
+const fxUseCase = topConfig.useCases[0]
 let usdjpy
 
 // 為替の確認
 test(fxUseCase.name, async () => {
-  const aboutPage = await browser.newPage()
-  const aboutUrl = buildUrl(aboutConfig.path)
+  const topPage = await browser.newPage()
+  const topUrl = buildUrl(topConfig.path)
 
-  usdjpy = await getPriceAfterInput(aboutPage, aboutUrl, fxUseCase)
+  usdjpy = await getPriceAfterInput(topPage, topUrl, fxUseCase)
 
   expect(usdjpy).toBeGreaterThanOrEqual(fxUseCase.range.min)
   expect(usdjpy).toBeLessThanOrEqual(fxUseCase.range.max)
 
-  await aboutPage.close()
+  await topPage.close()
 })
 
 // 各サービスの計算結果を確認
