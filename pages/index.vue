@@ -1,6 +1,28 @@
 <template>
   <div class="landing">
     <h1 class="landing-copy">AWSの料金を、<br />日本円でざっくり</h1>
+
+    <div class="section">
+      <div class="section-box">
+        <p class="title-daitan"><span>料金が気になるサービスは？</span></p>
+        <div class="service-zakuri">
+          <div class="landing-service-list">
+            <section class="landing-service-item" v-for="service in services" :key="service.key">
+              <nuxt-link :to="`/${service.key}/`">
+                <figure class="landing-service-icon">
+                  <ServicePartsIcon :name="service.key" />
+                </figure>
+                <div class="landing-service-summary">
+                  <h3 class="landing-service-name">{{ service.name }}</h3>
+                  <p class="landing-service-description">{{ service.description }}</p>
+                </div>
+              </nuxt-link>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="section">
       <div class="section-box">
         <p class="title-daitan"><span>このサイトについて</span></p>

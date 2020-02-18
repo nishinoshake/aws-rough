@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <div class="section-box">
-      <p class="title-daitan"><span>Googleアドセンスの広告</span></p>
+      <p class="title-daitan"><span>広告</span></p>
       <div class="service-ad">
         <div class="service-ad-frame">
           <no-ssr>

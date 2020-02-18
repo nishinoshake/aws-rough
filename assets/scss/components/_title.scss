@@ -46,7 +46,6 @@
       white-space: nowrap;
     }
     &-ja {
-      color: $color-modest;
       @include max {
         font-size: 24px;
       }
@@ -102,8 +101,6 @@
     line-height: 1.2;
     position: relative;
     letter-spacing: 0.12em;
-    color: $color-modest;
-    background-color: $color-bg;
     border-bottom: 1px solid $color-border;
     @include max {
       padding: 20px;
