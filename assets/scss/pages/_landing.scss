@@ -30,18 +30,18 @@
   }
   &-service {
     &-list {
+      display: flex;
+      flex-wrap: wrap;
+      @include max {
+        margin: 0 -14px;
+      }
       @include min {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -20px 0 -20px;
+        margin: 0 -20px;
       }
     }
     &-item {
       @include max {
-        width: 100%;
-        &:nth-child(n+2) {
-          margin-top: 20px;
-        }
+        padding: 8px;
       }
       @include min {
         padding: 14px;
@@ -50,6 +50,9 @@
         width: 100%;
         display: flex;
         align-items: center;
+        @include max {
+          width: 126px;
+        }
         @include min {
           width: 200px;
           &:hover {
@@ -65,8 +68,8 @@
       flex: none;
       margin-right: 2px;
       @include max {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
       }
       @include min {
         width: 64px;
@@ -82,13 +85,12 @@
       flex-grow: 1;
     }
     &-name {
-      margin-bottom: 7px;
-      font-size: 16px;
-      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 12px;
       line-height: 1;
       white-space: nowrap;
       @include min {
-        margin-bottom: 8px;
+        margin-bottom: 9px;
         font-size: 20px;
       }
     }
@@ -97,10 +99,10 @@
       white-space: nowrap;
       color: $color-modest;
       @include max {
-        font-size: 12px;
+        font-size: 10px;
       }
       @include min {
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }

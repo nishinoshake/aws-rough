@@ -47,7 +47,7 @@
     line-height: 1;
     @include max-large {
       width: 200px;
-      margin: $padding-sp * 3 auto $padding-sp * 6;
+      margin: $padding-sp * 3 auto $padding-sp * 6.5;
     }
     @include min-large {
       width: 150px;
