@@ -56,12 +56,6 @@
     }
     a {
       display: block;
-      &:hover {
-        background-color: $color-black;
-        path {
-          fill: $color-white;
-        }
-      }
     }
   }
 }
