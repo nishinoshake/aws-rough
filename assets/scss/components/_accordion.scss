@@ -6,7 +6,6 @@
 
 .accordion {
   &-list {
-    border: 1px solid $color-border;
     @include max {
       padding: $padding-sp;
     }
@@ -17,6 +16,7 @@
   &-item {
     background-color: $color-white;
     border: $width-border solid $color-border;
+    border-radius: 6px;
     &.is-active {
       .accordion-inside {
         opacity: 1;

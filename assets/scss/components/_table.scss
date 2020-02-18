@@ -14,6 +14,7 @@
     position: relative;
     background-color: $color-white;
     border: $width-border solid $color-border;
+    border-radius: 6px;
     @include max {
       display: block;
       padding: $padding-sp;

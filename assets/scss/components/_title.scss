@@ -111,8 +111,8 @@
     position: relative;
     letter-spacing: 0.12em;
     color: $color-modest;
-    border: 1px solid $color-border;
-    border-bottom: 0;
+    background-color: $color-bg;
+    border-bottom: 1px solid $color-border;
     @include max {
       padding: 20px;
       font-size: 18px;

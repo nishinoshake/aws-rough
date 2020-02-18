@@ -109,8 +109,6 @@
   }
   &-zakuri,
   &-ad {
-    background-color: $color-white;
-    border: $width-border solid $color-border;
     @include max {
       padding: $padding-sp;
     }

@@ -13,6 +13,11 @@
       margin-top: $margin-pc * 4;
     }
   }
+  &-box {
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid $color-border;
+  }
   &-child {
     + .section-child {
       margin-top: 20px;
