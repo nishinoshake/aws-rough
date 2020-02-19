@@ -73,13 +73,10 @@
       padding: 16px 36px;
       border-radius: 999em;
       color: $color-white;
-      background-color: $color-dark;
+      background-color: $color-black;
       @include transition-collection;
       @include min {
         padding: 16px 32px;
-        &:hover {
-          background-color: $color-black;
-        }
       }
       span {
         padding-left: 22px;

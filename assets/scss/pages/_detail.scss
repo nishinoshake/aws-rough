@@ -16,7 +16,7 @@
       align-items: center;
       line-height: 1;
       color: $color-white;
-      background-color: $color-dark;
+      background-color: $color-black;
       border-radius: 999em;
       cursor: pointer;
       @include transition-collection;
@@ -29,9 +29,6 @@
         margin-left: 50px;
         padding: 16px 0;
         font-size: 16px;
-        &:hover {
-          background-color: $color-black;
-        }
       }
     }
   }

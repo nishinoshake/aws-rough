@@ -33,11 +33,8 @@
       padding: 5px 22px;
       color: $color-white;
       white-space: nowrap;
-      background-color: $color-dark;
+      background-color: $color-black;
       border-radius: 999em;
-      &:hover {
-        background-color: $color-black;
-      }
     }
   }
   &-total {

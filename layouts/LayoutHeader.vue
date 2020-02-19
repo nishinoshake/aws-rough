@@ -3,9 +3,7 @@
     <div class="header-container">
       <div class="header-bar">
         <p class="header-logo">
-          <nuxt-link to="/">
-            <Logo />
-          </nuxt-link>
+          <nuxt-link to="/">ZKRAWS</nuxt-link>
         </p>
         <div class="header-action">
           <nuxt-link to="/detail/" class="cart">

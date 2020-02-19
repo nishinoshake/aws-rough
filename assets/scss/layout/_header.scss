@@ -53,18 +53,17 @@
       padding: $padding-sp * 0.8 $padding-sp * 2;
     }
     @include max-large {
+      width: 100%;
+      display: flex;
       margin-bottom: $margin-sp * 2;
       border-bottom: $width-border solid $color-border;
     }
-    @include min-large {
-      width: 150px;
-      box-sizing: content-box;
-    }
     a {
       display: block;
-      @include max-large {
-        width: 120px;
-      }
+      padding: 10px 12px;
+      font-size: 20px;
+      color: $color-white;
+      background-color: $color-black;
     }
   }
 }

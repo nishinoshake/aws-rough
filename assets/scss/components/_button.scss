@@ -9,15 +9,9 @@
     width: 32px;
     height: 32px;
     position: relative;
-    background-color: $color-font;
+    background-color: $color-black;
     border-radius: 50%;
     @include hide-text;
-    @include transition-collection;
-    @include min {
-      &:hover {
-        background-color: $color-black;
-      }
-    }
     &:before,
     &:after {
       content: '';
