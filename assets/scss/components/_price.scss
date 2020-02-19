@@ -21,12 +21,11 @@
       font-size: 160%;
     }
     @include min-large {
-      font-size: 180%;
+      font-size: 160%;
     }
   }
   &-unit {
     margin: 0 0 3px 4px;
-    color: $color-modest;
   }
   &.mod-large {
     @include max-large {

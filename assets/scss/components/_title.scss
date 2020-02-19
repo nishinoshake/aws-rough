@@ -16,14 +16,12 @@
     display: flex;
     align-items: center;
     line-height: 1;
-    top: -0.7em;
-    left: 1em;
     @include max {
-      min-height: 160px;
+      margin-bottom: $margin-sp * 2;
       font-size: 30px;
     }
     @include min {
-      min-height: 180px;
+      margin-bottom: $margin-pc * 3;
       font-size: 46px;
     }
     &-icon {
@@ -101,14 +99,14 @@
     line-height: 1.2;
     position: relative;
     letter-spacing: 0.12em;
-    border-bottom: 1px solid $color-border;
+    border-bottom: $width-border solid $color-border;
     @include max {
       padding: 20px;
-      font-size: 18px;
+      font-size: 16px;
     }
     @include min {
       padding: 28px 40px;
-      font-size: 24px;
+      font-size: 22px;
     }
   }
 }

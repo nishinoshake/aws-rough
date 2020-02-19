@@ -12,12 +12,12 @@
     @include max-large {
       width: 100vw;
       position: fixed;
-      bottom: $height-footer-sp;
+      bottom: $height-header-sp;
       left: 0;
       z-index: 10;
       visibility: hidden;
       background-color: $color-white;
-      border-top: 1px solid $color-border;
+      border-top: $width-border solid $color-border;
       transform: translate3d(0, 100%, 0);
       transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
       will-change: transform;
@@ -29,20 +29,20 @@
     }
     @include min-large {
       position: sticky;
-      top: 0;
+      top: #{$height-header-pc + $height-offset-pc + $margin-pc};
       left: 0;
-      padding-left: 30px;
+      padding-left: 38px;
     }
   }
   &-button {
     @include max-large {
       width: $width-menu-sp;
-      height: $height-footer-sp;
+      height: $height-header-sp;
       position: fixed;
       z-index: 20;
       right: 0;
       bottom: 0;
-      border-left: 1px solid $color-border;
+      border-left: $width-border solid $color-border;
       flex-direction: column;
       @include center-flex;
       &.is-open {
@@ -71,7 +71,7 @@
         span {
           content: "";
           width: 100%;
-          height: 1px;
+          height: $width-border;
           left: 0;
           position: absolute;
           background-color: currentColor;
@@ -89,7 +89,6 @@
       &-text {
         margin-top: 4px;
         font-size: 12px;
-        color: $color-modest;
       }
     }
     @include min-large {
@@ -97,18 +96,11 @@
     }
   }
   &-frame {
-    @include max-large {
-      padding: $padding-sp;
-    }
     @include min-large {
-      height: 100vh;
-      padding: 15px 0;
+      height: calc(100vh - #{$height-header-pc + $height-offset-pc + $margin-pc});
+      padding: 10px 0;
       &.can-scroll {
         overflow-y: scroll;
-      }
-      &:not(.can-scroll) {
-        display: flex;
-        align-items: center;
       }
     }
   }
@@ -127,7 +119,7 @@
     @include max-large {
       display: flex;
       flex-wrap: wrap;
-      margin-right: -20px;
+      padding: 12px 0;
     }
   }
   &-item {
@@ -182,13 +174,12 @@
       letter-spacing: normal;
       white-space: nowrap;
       align-items: center;
-      color: $color-modest;
       @include max-large {
         padding: 10px;
         font-size: 16px;
       }
       @include min-large {
-        padding: 7px 0;
+        padding: 6px 0;
         font-size: 18px;
       }
     }

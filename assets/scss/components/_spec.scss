@@ -20,7 +20,7 @@
   }
   th,
   td {
-    border: 1px solid $color-border;
+    border: $width-border solid $color-border;
     @include max {
       padding: 8px;
     }

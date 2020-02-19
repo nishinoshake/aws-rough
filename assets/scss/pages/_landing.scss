@@ -97,7 +97,7 @@
     &-description {
       line-height: 1;
       white-space: nowrap;
-      color: $color-modest;
+      color: $color-muted;
       @include max {
         font-size: 10px;
       }

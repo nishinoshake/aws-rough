@@ -2,7 +2,6 @@
   <article class="service">
     <ServiceTemplateTitle :service="service" />
     <ServiceTemplateCalc :service="service" />
-    <ServiceTemplateAds />
     <div class="section">
       <div class="section-box">
         <p class="title-daitan">
@@ -13,6 +12,7 @@
         </div>
       </div>
     </div>
+    <ServiceTemplateAds />
     <div class="section">
       <div class="section-box">
         <p class="title-daitan"><span>補足と前提</span></p>

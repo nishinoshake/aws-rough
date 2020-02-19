@@ -103,7 +103,7 @@
 // -----------------------------------------------------
 // Shadow
 // -----------------------------------------------------
-@mixin shadow ($size: 36px, $color: rgba($color-modest, 0.1)) {
+@mixin shadow ($size: 36px, $color: rgba($color-muted, 0.1)) {
   box-shadow: 0 0 $size $color;
 }
 @mixin shadow-thick () {

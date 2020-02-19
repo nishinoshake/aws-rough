@@ -1,11 +1,11 @@
 <template>
   <div :class="`app page-${routeName}`">
     <div class="container">
+      <LayoutHeader :total="$store.state.total.jpy" />
       <div class="main">
         <LayoutMenu />
         <div class="contents">
           <nuxt />
-          <LayoutFooter :total="$store.state.total.jpy" />
         </div>
       </div>
     </div>
@@ -16,14 +16,14 @@
 <script>
 import parseUrl from 'url-parse'
 import serviceConfig from '@/config/service'
-import LayoutFooter from '@/layouts/LayoutFooter'
+import LayoutHeader from '@/layouts/LayoutHeader'
 import LayoutMenu from '@/layouts/LayoutMenu'
 import ErrorModal from '@/components/error/ErrorModal'
 import { fetchZ } from '@/api'
 
 export default {
   components: {
-    LayoutFooter,
+    LayoutHeader,
     LayoutMenu,
     ErrorModal
   },

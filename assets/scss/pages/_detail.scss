@@ -6,7 +6,7 @@
 
 .detail {
   @include max {
-    min-height: calc(100vh - #{$height-footer-sp});
+    min-height: calc(100vh - #{$height-header-sp});
   }
   &-title {
     &-copy {

@@ -1,61 +1,70 @@
 @charset "utf-8";
 
-.footer {
+.header {
   @include max-large {
     z-index: 100;
   }
   @include min-large {
     width: 100%;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     z-index: 1;
+    border-bottom: $width-border solid $color-border;
   }
   &-container {
     @include min-large {
       max-width: $width-max;
       margin: 0 auto;
-      padding-left: $width-menu-pc;
     }
   }
   &-bar {
     @include min-large {
-      height: $height-footer-pc;
+      height: $height-header-pc;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-right: $padding-pc;
+      padding: 0 $padding-pc;
       background-color: $color-white;
-      border-top: $width-border solid $color-border;
     }
   }
   &-action {
     @include max-large {
       width: 100%;
+      height: $height-header-sp;
       position: fixed;
-      z-index: 10;
+      z-index: 15;
       left: 0;
       bottom: 0;
       padding-right: $width-menu-sp;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       background-color: $color-white;
-      border-top: 1px solid $color-border;
+      border-top: $width-border solid $color-border;
     }
   }
   &-logo {
     line-height: 1;
+    @include max {
+      padding: $padding-sp * 0.8 $padding-sp * 1.5;
+    }
+    @include between {
+      padding: $padding-sp * 0.8 $padding-sp * 2;
+    }
     @include max-large {
-      width: 200px;
-      margin: $padding-sp * 3 auto $padding-sp * 6.5;
+      margin-bottom: $margin-sp * 2;
+      border-bottom: $width-border solid $color-border;
     }
     @include min-large {
       width: 150px;
-      padding-left: $padding-pc;
       box-sizing: content-box;
     }
     a {
       display: block;
+      @include max-large {
+        width: 120px;
+      }
     }
   }
 }

@@ -3,6 +3,9 @@
 // サービス
 // -----------------------------------------------------
 .service {
+  @include min-large {
+    margin-top: -10px;
+  }
   &-calc,
   &-inside {
     + .section {
@@ -10,7 +13,7 @@
         margin-top: $padding-sp * 2.5;
       }
       @include min {
-        margin-top: $margin-pc * 4;
+        margin-top: $margin-pc * 3;
       }
     }
   }
@@ -36,6 +39,12 @@
   &-calc {
     position: relative;
     z-index: 0;
+    @include max {
+      margin-bottom: $margin-sp * 4;
+    }
+    @include min {
+      margin-bottom: $margin-pc * 5;
+    }
     &-label {
       line-height: 1.2;
       @include max {
@@ -47,7 +56,7 @@
         font-size: 32px;
       }
     }
-    &-footer {
+    &-header {
       display: flex;
       justify-content: center;
       @include max {

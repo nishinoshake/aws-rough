@@ -14,7 +14,7 @@
         />
       </tbody>
     </table>
-    <div class="service-calc-footer" v-if="service.multiple">
+    <div class="service-calc-header" v-if="service.multiple">
       <button :class="`service-calc-append mod-${service.color}`" @click="append(service.key)">
         <span>追加する</span>
       </button>

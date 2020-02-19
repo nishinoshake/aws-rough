@@ -2,7 +2,7 @@
   <nav class="menu">
     <div :class="['menu-container', { 'is-open': isMenuOpen }]">
       <div :class="['menu-frame', { 'can-scroll': canScroll }]">
-        <ul class="menu-list">
+        <ul class="menu-list" ref="menuList">
           <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
             <nuxt-link :to="service.href" @click.native="handleClick">
               <ServicePartsIcon :name="service.key" class="menu-icon" />
@@ -52,16 +52,14 @@ export default {
       this.$emit('change')
     },
     handleResize() {
-      const menuHeight = document.querySelector('.menu-list').offsetHeight
-      let footerHeight = 0
-
-      if (window.matchMedia('(max-width: 1280px)').matches) {
-        footerHeight = document.querySelector('.footer-action').offsetHeight
-      } else {
-        footerHeight = document.querySelector('.footer').offsetHeight
+      if (window.matchMedia('(max-width: 1192px)').matches) {
+        return
       }
 
-      this.canScroll = menuHeight > window.innerHeight - footerHeight
+      const menuHeight = this.$refs.menuList.offsetHeight
+      const menuOffsetY = this.$refs.menuList.getBoundingClientRect().top
+
+      this.canScroll = menuHeight > window.innerHeight - menuOffsetY
     },
     toggle() {
       this.TOGGLE_MENU()

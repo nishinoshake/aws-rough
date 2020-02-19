@@ -1,7 +1,5 @@
 <template>
   <div class="landing">
-    <h1 class="landing-copy">AWSの料金を、<br />日本円でざっくり</h1>
-
     <div class="section">
       <div class="section-box">
         <p class="title-daitan"><span>料金が気になるサービスは？</span></p>
@@ -147,7 +145,7 @@
               >までお願いいたします。息抜きに<ExternalLink
                 href="https://www.youtube.com/results?search_query=BRiNG+iCiNG+SHiT+HORSE+TOUR+FiNAL"
                 >BiSH</ExternalLink
-              >。
+              >でもどうぞ。
             </p>
           </div>
         </div>

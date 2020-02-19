@@ -30,29 +30,13 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    padding: 0 $padding-sp * 1.5;
+    padding: 0 $padding-sp * 1.5 #{$height-header-sp + $padding-sp * 3};
   }
   @include between {
-    padding: 0 $padding-sp * 2;
+    padding: 0 $padding-sp * 2 #{$height-header-sp + $padding-sp * 3};
   }
   @include min-large {
-    padding: 0 $padding-pc * 2 ($height-footer-pc + $padding-pc * 2);
-    &:before,
-    &:after {
-      content: "";
-      width: 1px;
-      height: 100%;
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      background-color: $color-border;
-    }
-    &:before {
-      left: 0;
-    }
-    &:after {
-      right: 0;
-    }
+    padding: #{$height-header-pc + $margin-pc * 3} $padding-pc $padding-pc * 2 $padding-pc;
   }
 }
 

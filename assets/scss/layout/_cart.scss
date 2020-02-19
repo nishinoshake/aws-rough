@@ -12,7 +12,7 @@
     padding: 12px 30px;
   }
   @include max {
-    padding: 12px 20px;
+    padding: 0 20px;
   }
   @include min {
     &:hover {
@@ -29,11 +29,15 @@
       display: none;
     }
     @include min-large {
-      margin-left: 20px;
-      padding: 5px 20px;
-      border-radius: 4px;
+      margin-left: 30px;
+      padding: 5px 22px;
+      color: $color-white;
       white-space: nowrap;
-      border: 1px solid $color-border;
+      background-color: $color-dark;
+      border-radius: 999em;
+      &:hover {
+        background-color: $color-black;
+      }
     }
   }
   &-total {
@@ -41,16 +45,18 @@
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
-    padding: 4px 0 12px 2em;
+    padding: 4px 0 8px 2em;
     z-index: 1;
     @include transition-fade;
     @include max-large {
       width: 100%;
       font-size: 16px;
+      border-bottom: 2px solid $color-black;
     }
     @include min-large {
       min-width: 270px;
       font-size: 24px;
+      border-bottom: 2px solid $color-black;
     }
     .price-number {
       @include max {
@@ -63,14 +69,9 @@
   &-label {
     position: absolute;
     left: 0;
-    @include max-large {
-      bottom: 4px;
-      font-size: 18px;
-    }
-    @include min-large {
-      bottom: 4px;
-      font-size: 20px;
-    }
+    bottom: 7px;
+    font-size: 18px;
+    line-height: 1;
   }
   &-detail {
     width: 100%;

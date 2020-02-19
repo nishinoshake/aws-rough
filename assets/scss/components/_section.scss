@@ -10,13 +10,13 @@
       margin-top: $margin-sp * 2.5;
     }
     @include min {
-      margin-top: $margin-pc * 4;
+      margin-top: $margin-pc * 3;
     }
   }
   &-box {
     overflow: hidden;
-    border-radius: 6px;
-    border: 1px solid $color-border;
+    border-radius: $radius;
+    border: $width-border solid $color-border;
   }
   &-child {
     + .section-child {

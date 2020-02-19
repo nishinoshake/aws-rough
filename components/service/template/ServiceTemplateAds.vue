@@ -8,6 +8,7 @@
             <Adsense data-ad-client="ca-pub-7912727364342998"></Adsense>
           </no-ssr>
         </div>
+        <p>※収益でRed Bullを買います</p>
       </div>
     </div>
   </div>
