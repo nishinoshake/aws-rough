@@ -112,6 +112,9 @@
   }
   &-zakuri,
   &-ad {
+    overflow: hidden;
+    border-radius: $radius;
+    border: $width-border solid $color-border;
     @include max {
       padding: $padding-sp;
     }

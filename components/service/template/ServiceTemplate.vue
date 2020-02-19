@@ -4,9 +4,9 @@
     <ServiceTemplateCalc :service="service" />
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan">
+        <h2 class="title-daitan">
           <span>ざっくりわかる{{ service.name }}</span>
-        </p>
+        </h2>
         <div class="service-zakuri">
           <slot name="zakuri" />
         </div>
@@ -15,7 +15,7 @@
     <ServiceTemplateAds />
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>補足と前提</span></p>
+        <h2 class="title-daitan"><span>補足と前提</span></h2>
         <slot name="aside" />
       </div>
     </div>

@@ -96,17 +96,21 @@
     }
   }
   &-daitan {
+    font-weight: 700;
     line-height: 1.2;
     position: relative;
     letter-spacing: 0.12em;
-    border-bottom: $width-border solid $color-border;
     @include max {
-      padding: 20px;
+      margin-bottom: 22px;
       font-size: 16px;
     }
     @include min {
-      padding: 28px 40px;
-      font-size: 22px;
+      margin-bottom: 32px;
+      font-size: 28px;
+    }
+    &:before {
+      content: "$";
+      padding-right: 0.1em;
     }
   }
 }

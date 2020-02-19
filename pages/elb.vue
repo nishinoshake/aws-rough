@@ -13,9 +13,9 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan">
+        <h2 class="title-daitan">
           <span>ざっくりわかるELB</span>
-        </p>
+        </h2>
         <div class="service-zakuri">
           <div class="section-child">
             <p class="text">トラフィックを分散してくれるやつ（ロードバランサー）。</p>
@@ -56,7 +56,7 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>補足と前提</span></p>
+        <h2 class="title-daitan"><span>補足と前提</span></h2>
         <div class="service-summary accordion-list">
           <ServicePartsAccordion title="入力項目の補足">
             <section class="section-child">

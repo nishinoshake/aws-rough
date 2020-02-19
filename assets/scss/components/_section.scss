@@ -7,16 +7,16 @@
 .section {
   + .section {
     @include max {
-      margin-top: $margin-sp * 2.5;
+      margin-top: $margin-sp * 3;
     }
     @include min {
-      margin-top: $margin-pc * 3;
+      margin-top: $margin-pc * 5;
     }
   }
   &-box {
-    overflow: hidden;
-    border-radius: $radius;
-    border: $width-border solid $color-border;
+    // overflow: hidden;
+    // border-radius: $radius;
+    // border: $width-border solid $color-border;
   }
   &-child {
     + .section-child {

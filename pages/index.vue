@@ -2,7 +2,7 @@
   <div class="landing">
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>料金が気になるサービスは？</span></p>
+        <h2 class="title-daitan"><span>料金が気になるサービスは？</span></h2>
         <div class="service-zakuri">
           <div class="landing-service-list">
             <section class="landing-service-item" v-for="service in services" :key="service.key">
@@ -23,7 +23,7 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>このサイトについて</span></p>
+        <h2 class="title-daitan"><span>このサイトについて</span></h2>
         <div class="service-zakuri">
           <div class="section-child">
             <p class="text-zakuri">AWSの料金、<br class="sp" />ややこしいですよね。</p>
@@ -69,7 +69,7 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>使用しているデータ</span></p>
+        <h2 class="title-daitan"><span>使用しているデータ</span></h2>
         <div class="service-zakuri">
           <div class="section-child">
             <p class="text-zakuri">
@@ -92,7 +92,7 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>Googleアナリティクスの使用</span></p>
+        <h2 class="title-daitan"><span>Googleアナリティクスの使用</span></h2>
         <div class="service-zakuri">
           <div class="section-child">
             <p class="text-zakuri">
@@ -118,7 +118,7 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>Googleアドセンスの使用</span></p>
+        <h2 class="title-daitan"><span>Googleアドセンスの使用</span></h2>
         <div class="service-zakuri">
           <div class="section-child">
             <p class="text-zakuri">
@@ -136,7 +136,7 @@
 
     <div class="section">
       <div class="section-box">
-        <p class="title-daitan"><span>お問い合わせ</span></p>
+        <h2 class="title-daitan"><span>お問い合わせ</span></h2>
         <div class="service-zakuri">
           <div class="section-child">
             <p class="text-zakuri">
