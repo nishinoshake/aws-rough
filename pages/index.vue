@@ -141,7 +141,7 @@
           <div class="section-child">
             <p class="text-zakuri">
               不具合などのご連絡は、<ExternalLink href="https://github.com/nishinoshake/aws-rough">GitHub</ExternalLink
-              >へIssueか<a href="mailto:lawson.and.7.11@gmail.com" class="text-link">メール</a
+              >のIssueか<a href="mailto:lawson.and.7.11@gmail.com" class="text-link">メール</a
               >までお願いいたします。息抜きに<ExternalLink
                 href="https://www.youtube.com/results?search_query=BRiNG+iCiNG+SHiT+HORSE+TOUR+FiNAL"
                 >BiSH</ExternalLink
