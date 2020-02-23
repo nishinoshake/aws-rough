@@ -9,25 +9,7 @@
   }
 }
 
-@mixin max-large($width: $mq-large) {
-  @media only screen and (max-width: $width) {
-    @content;
-  }
-}
-
-@mixin between {
-  @media only screen and (min-width: $mq-min) and (max-width: $mq-large) {
-    @content;
-  }
-}
-
 @mixin min($width: $mq-min) {
-  @media only screen and (min-width: $width) {
-    @content;
-  }
-}
-
-@mixin min-large($width: $mq-large + 1px) {
   @media only screen and (min-width: $width) {
     @content;
   }
@@ -101,16 +83,51 @@
 }
 
 // -----------------------------------------------------
-// Shadow
+// Border
 // -----------------------------------------------------
-@mixin shadow ($size: 36px, $color: rgba($color-muted, 0.1)) {
-  box-shadow: 0 0 $size $color;
+@mixin b {
+  @include max {
+    border: $width-border-sp solid $color-border;
+  }
+  @include min {
+    border: $width-border-pc solid $color-border;
+  }
 }
-@mixin shadow-thick () {
-  box-shadow: 0 0 72px rgba(0, 0, 0, 0.1);
+
+@mixin bt {
+  @include max {
+    border-top: $width-border-sp solid $color-border;
+  }
+  @include min {
+    border-top: $width-border-pc solid $color-border;
+  }
 }
-@mixin shadow-light {
-  @include shadow(16px, rgba(#ccc, 0.1));
+
+@mixin br {
+  @include max {
+    border-right: $width-border-sp solid $color-border;
+  }
+  @include min {
+    border-right: $width-border-pc solid $color-border;
+  }
+}
+
+@mixin bb {
+  @include max {
+    border-bottom: $width-border-sp solid $color-border;
+  }
+  @include min {
+    border-bottom: $width-border-pc solid $color-border;
+  }
+}
+
+@mixin bl {
+  @include max {
+    border-left: $width-border-sp solid $color-border;
+  }
+  @include min {
+    border-left: $width-border-pc solid $color-border;
+  }
 }
 
 // -----------------------------------------------------
@@ -118,6 +135,10 @@
 // -----------------------------------------------------
 @mixin font-sans {
   font-family: -apple-system, BlinkMacSystemFont, YuGothic, "Hiragino Sans", "Meiryo", sans-serif;
+}
+
+@mixin font-en {
+  font-family: 'Lato', sans-serif;
 }
 
 @mixin hide-text {

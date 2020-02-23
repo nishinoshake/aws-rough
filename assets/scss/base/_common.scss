@@ -12,11 +12,48 @@ body {
   }
 }
 
+.app-line {
+  &:before,
+  &:after,
+  > div:before,
+  > div:after {
+    content: "";
+    position: fixed;
+    background-color: $color-border;
+  }
+  &:before,
+  &:after {
+    width: 100%;
+    left: 0;
+    @include bt;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+  > div:before,
+  > div:after {
+    height: 100%;
+    top: 0;
+    @include bl;
+  }
+  > div:before {
+    left: 0;
+  }
+  > div:after {
+    right: 0;
+  }
+}
+
 .container {
   position: relative;
+  @include max {
+    padding: $width-border-sp;
+  }
   @include min {
-    max-width: $mq-large;
-    margin: 0 auto;
+    padding: $width-border-pc;
   }
 }
 
@@ -30,13 +67,7 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    padding: $padding-sp * 2 $padding-sp * 1.5 #{$height-header-sp + $padding-sp * 3};
-  }
-  @include between {
-    padding: $padding-sp * 2 $padding-sp * 2 #{$height-header-sp + $padding-sp * 3};
-  }
-  @include min-large {
-    padding: $padding-pc * 2 $padding-pc $padding-pc * 4 0;
+    padding-bottom: 90px;
   }
 }
 

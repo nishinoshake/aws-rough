@@ -6,6 +6,7 @@
   &-label {
     display: block;
     line-height: 1.1;
+    font-weight: 700;
     @include max {
       margin-bottom: 10px;
       font-size: 14px;
@@ -22,16 +23,12 @@
       padding: 10px;
       font-size: 16px;
       text-align: center;
-      border: $width-border solid $color-border;
+      border: $width-border-form solid $color-border;
       background-color: $color-white;
-      border-radius: $radius * 0.5;
-      @include shadow-light;
+      border-radius: $radius;
       @include transition-collection;
       &:invalid {
         background-color: rgba($color-red, 0.2);
-      }
-      &:focus {
-        box-shadow: 0 0 10px rgba($color-black, 0.1);
       }
     }
     &-alert {
@@ -54,9 +51,8 @@
     position: relative;
     display: block;
     background-color: $color-white;
-    border: $width-border solid $color-border;
-    border-radius: $radius * 0.5;
-    @include shadow-light;
+    border: $width-border-form solid $color-border;
+    border-radius: $radius;
     select {
       opacity: 0;
       font-size: 16px;
@@ -81,8 +77,8 @@
       bottom: 3px;
       right: 10px;
       margin: auto 0;
-      border-top: $width-border solid $color-border;
-      border-right: $width-border solid $color-border;
+      border-top: $width-border-form solid $color-border;
+      border-right: $width-border-form solid $color-border;
       transform: rotate(135deg);
       pointer-events: none;
     }

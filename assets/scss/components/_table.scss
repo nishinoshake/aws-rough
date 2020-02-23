@@ -13,7 +13,7 @@
     width: 100%;
     position: relative;
     background-color: $color-white;
-    border: $width-border solid $color-border;
+    border: $width-border-form solid $color-border;
     border-radius: $radius;
     @include max {
       display: block;

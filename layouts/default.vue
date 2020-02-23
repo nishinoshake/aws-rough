@@ -1,14 +1,16 @@
 <template>
   <div :class="`app page-${routeName}`">
     <div class="container">
-      <LayoutHeader :total="$store.state.total.jpy" />
+      <LayoutCart :total="$store.state.total.jpy" />
       <div class="main">
         <LayoutMenu />
         <div class="contents">
           <nuxt />
+          <LayoutFooter />
         </div>
       </div>
     </div>
+    <div class="app-line"><div></div></div>
     <ErrorModal :is-visible="$store.state.error.isVisible" :message="$store.state.error.message" />
   </div>
 </template>
@@ -16,15 +18,17 @@
 <script>
 import parseUrl from 'url-parse'
 import serviceConfig from '@/config/service'
-import LayoutHeader from '@/layouts/LayoutHeader'
+import LayoutCart from '@/layouts/LayoutCart'
 import LayoutMenu from '@/layouts/LayoutMenu'
+import LayoutFooter from '@/layouts/LayoutFooter'
 import ErrorModal from '@/components/error/ErrorModal'
 import { fetchZ } from '@/api'
 
 export default {
   components: {
-    LayoutHeader,
+    LayoutCart,
     LayoutMenu,
+    LayoutFooter,
     ErrorModal
   },
   computed: {

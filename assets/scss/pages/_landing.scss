@@ -9,17 +9,18 @@
   &-copy {
     line-height: 1.6;
     font-weight: 700;
-    letter-spacing: 0.3em;
-    text-indent: 0.16em;
+    letter-spacing: 0.2em;
+    text-indent: 0.12em;
     @include max {
-      margin-bottom: 80px;
-      padding-top: 50px;
+      padding: 20px 0;
       font-size: 24px;
     }
     @include min {
-      margin-bottom: 120px;
-      padding-top: 60px;
+      padding: 14px 0;
       font-size: 48px;
+    }
+    span {
+      @include font-en;
     }
   }
   .list {
@@ -84,7 +85,9 @@
       margin-bottom: 5px;
       font-size: 12px;
       line-height: 1;
+      font-weight: 700;
       white-space: nowrap;
+      @include font-en;
       @include min {
         margin-bottom: 9px;
         font-size: 20px;
@@ -93,7 +96,6 @@
     &-description {
       line-height: 1;
       white-space: nowrap;
-      color: $color-muted;
       @include max {
         font-size: 10px;
       }

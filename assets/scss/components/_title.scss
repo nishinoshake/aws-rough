@@ -16,34 +16,22 @@
     display: flex;
     align-items: center;
     line-height: 1;
+    letter-spacing: .1em;
+    @include bb;
+    @include font-en;
     @include max {
-      margin-bottom: $margin-sp * 2;
+      height: $height-header-sp;
+      padding: 0 $padding-sp;
       font-size: 30px;
     }
     @include min {
-      margin-bottom: $margin-pc * 3;
-      font-size: 64px;
-    }
-    &-icon {
-      flex: none;
-      @include max {
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
-      }
-      @include min {
-        width: 56px;
-        height: 56px;
-        margin-right: 14px;
-      }
-    }
-    &-name {
-      display: flex;
-      align-items: center;
-      letter-spacing: 0.1em;
-      white-space: nowrap;
+      height: $height-header-pc;
+      padding: 0 $padding-pc;
+      font-size: 56px;
     }
     &-ja {
+      font-weight: 700;
+      @include font-sans;
       @include max {
         font-size: 24px;
       }
@@ -105,7 +93,7 @@
       font-size: 16px;
     }
     @include min {
-      margin-bottom: 50px;
+      margin-bottom: 36px;
       font-size: 32px;
     }
     span {

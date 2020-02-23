@@ -6,22 +6,31 @@
 .cart {
   display: flex;
   align-items: center;
-  border: 2px solid $color-black;
+  position: fixed;
+  z-index: 10;
+  bottom: 20px;
+  border: $width-border-form solid $color-black;
   background-color: $color-black;
   border-radius: 999em;
   overflow: hidden;
-  @include max-large {
-    width: 100%;
-    max-width: 400px;
+  @include max {
+    width: calc(100% - #{$padding-sp * 2});
+    max-width: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include min {
+    right: 20px;
   }
   &-link {
     white-space: nowrap;
     color: $color-white;
+    font-weight: 700;
     @include transition-collection;
-    @include max-large {
+    @include max {
       padding: 5px 16px;
     }
-    @include min-large {
+    @include min {
       padding: 5px 22px;
     }
   }
@@ -30,17 +39,16 @@
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
-    padding: 4px 0 8px 2em;
     background-color: $color-white;
     z-index: 1;
     @include transition-fade;
-    @include max-large {
+    @include max {
       min-width: 220px;
       flex-grow: 1;
       padding: 14px 14px 14px 18px;
       font-size: 14px;
     }
-    @include min-large {
+    @include min {
       min-width: 270px;
       padding: 14px 14px 14px 18px;
       font-size: 24px;
@@ -55,10 +63,11 @@
   }
   &-label {
     line-height: 1;
-    @include max-large {
+    font-weight: 700;
+    @include max {
       font-size: 14px;
     }
-    @include min-large {
+    @include min {
       font-size: 18px;
     }
   }

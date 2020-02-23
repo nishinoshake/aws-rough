@@ -6,7 +6,7 @@
 
 .detail {
   @include max {
-    min-height: calc(100vh - #{$height-header-sp});
+    min-height: 100vh;
   }
   &-title {
     &-copy {
@@ -16,6 +16,7 @@
       align-items: center;
       line-height: 1;
       color: $color-white;
+      font-weight: 700;
       background-color: $color-black;
       border-radius: 999em;
       cursor: pointer;
@@ -35,8 +36,12 @@
   &-body {
     position: relative;
     @include max {
+      min-height: calc(100vh - #{$height-header-sp});
+      padding: $padding-sp;
     }
     @include min {
+      min-height: calc(100vh - #{$height-header-pc});
+      padding: $padding-pc;
     }
   }
   &-main {
@@ -78,6 +83,7 @@
       margin-right: 20px;
       font-size: 22px;
       line-height: 1;
+      @include font-en;
       @include min {
         margin-right: 30px;
         font-size: 28px;
@@ -107,9 +113,9 @@
   }
   &-empty {
     position: absolute;
-    font-size: 22px;
     line-height: 1.5;
     pointer-events: none;
+    @include font-en;
     span {
       display: block;
       opacity: 0;
@@ -118,8 +124,15 @@
         transition-delay: .08s;
       }
     }
+    @include max {
+      top: $padding-sp;
+      left: $padding-sp;
+      font-size: 22px;
+    }
     @include min {
-      font-size: 36px;
+      top: $padding-pc;
+      left: $padding-pc;
+      font-size: 48px;
     }
     &.is-visible {
       span {

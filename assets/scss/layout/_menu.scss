@@ -1,50 +1,27 @@
 @charset "utf-8";
 
 .menu {
-  @include max-large {
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    visibility: hidden;
-    background-color: $color-white;
-    border-bottom: $width-border solid $color-border;
-    transform: translate3d(0, -100%, 0);
-    transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
-    will-change: transform;
-    &.is-open {
+  @include max {
+    &.is-open .menu-frame {
       visibility: visible;
       transform: translate3d(0, 0, 0);
       transition: transform 0.36s $easeOutExpo, visibility 0s;
     }
   }
-  @include min-large {
+  @include min {
     width: $width-menu-pc;
     height: 100vh;
     position: sticky;
     flex: none;
     top: 0;
     left: 0;
-    padding: 0 $padding-pc;
+    @include br;
     &.can-scroll {
       overflow-y: scroll;
     }
-    &:not(.can-scroll) {
-      display: flex;
-      align-items: center;
-    }
-  }
-  &-container {
-
-  }
-  &-frame {
-    @include min-large {
-      padding: 50px 0;
-    }
   }
   &-button {
-    @include max-large {
+    @include max {
       width: $width-menu-sp;
       height: $width-menu-sp;
       position: fixed;
@@ -95,112 +72,98 @@
         }
       }
     }
-    @include min-large {
+    @include min {
       display: none;
+    }
+  }
+  &-frame {
+    @include max {
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      visibility: hidden;
+      background-color: $color-white;
+      transform: translate3d(0, -100%, 0);
+      transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
+      will-change: transform;
+      border: $width-border-sp solid $color-border;
     }
   }
   &-logo {
     line-height: 1;
-    @include between {
-    }
-    @include max-large {
+    @include bb;
+    @include max {
       width: 100%;
       display: flex;
-      padding: 26px $padding-sp;
     }
-    @include min-large {
-      margin-bottom: 20px;
+    @include min {
+      height: $height-header-pc;
     }
     a {
-      display: inline-block;
-      padding: 8px 10px;
-      font-size: 16px;
+      width: 100%;
       font-weight: 700;
-      color: $color-white;
-      background-color: $color-black;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      text-align: center;
+      @include center-flex;
+      @include max {
+        padding: $padding-sp 0;
+        font-size: 32px;
+      }
+      @include min {
+        height: 100%;
+        font-size: 36px;
+      }
     }
   }
   &-list {
-    @include max-large {
+    @include max {
       display: flex;
       flex-wrap: wrap;
-      padding: 0 #{$padding-sp - 10px} 24px;
+      padding: $padding-sp #{$padding-sp - 10px};
+    }
+    @include min {
+      padding: 20px 14px;
     }
   }
   &-item {
     &.mod-detail {
-      @include min-large {
+      @include min {
         display: none;
-      }
-    }
-    &.mod-orange a {
-      &.is-active {
-        color: $color-orange;
-      }
-      &:before {
-        background-color: $color-orange;
-      }
-      @include min {
-        &:hover {
-          color: $color-orange;
-        }
-      }
-    }
-    &.mod-blue a {
-      &.is-active {
-        color: $color-blue;
-      }
-      &:before {
-        background-color: $color-blue;
-      }
-      @include min {
-        &:hover {
-          color: $color-blue;
-        }
-      }
-    }
-    &.mod-beige a {
-      &.is-active {
-        color: $color-beige;
-      }
-      &:before {
-        background-color: $color-beige;
-      }
-      @include min {
-        &:hover {
-          color: $color-beige;
-        }
-      }
-    }
-    &.mod-red a {
-      &.is-active {
-        color: $color-red;
-      }
-      &:before {
-        background-color: $color-red;
-      }
-      @include min {
-        &:hover {
-          color: $color-red;
-        }
       }
     }
     a {
       display: flex;
       line-height: 1;
       letter-spacing: normal;
+      font-weight: 700;
       white-space: nowrap;
       align-items: center;
-      @include max-large {
+      @include font-en;
+      &.is-active {
+        span {
+          color: $color-white;
+          background-color: $color-black;
+        }
+      }
+      @include max {
         padding: 10px;
         font-size: 16px;
       }
-      @include min-large {
-        padding: 6px 0;
+      @include min {
+        padding: 6px 0 6px 12px;
         font-size: 18px;
+        &:hover {
+          span {
+            color: $color-white;
+            background-color: $color-black;
+          }
+        }
       }
       &:before {
-        content: "";
+        // content: "";
         width: 8px;
         height: 8px;
         margin-right: 6px;
@@ -220,6 +183,6 @@
     }
   }
   &-name {
-    margin-left: 4px;
+    padding: 2px 3px;
   }
 }

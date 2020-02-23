@@ -36,15 +36,13 @@
 // 全ページにあるやつ
 // ==========================================================================
 @import 'layout/cart';
-@import 'layout/header';
+@import 'layout/footer';
 @import 'layout/menu';
 
 // ==========================================================================
 // ページ
 // ==========================================================================
-@import 'pages/about';
 @import 'pages/deploy';
 @import 'pages/detail';
 @import 'pages/landing';
 @import 'pages/service';
-@import 'pages/terms';

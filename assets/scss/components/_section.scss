@@ -5,21 +5,14 @@
 // -----------------------------------------------------
 
 .section {
-  + .section {
-    border-top: 1px solid $color-border;
-    @include max {
-      margin-top: $margin-sp * 3;
-      padding-top: $margin-sp * 3;
-    }
-    @include min {
-      margin-top: $margin-pc * 5;
-      padding-top: $margin-pc * 5;
-    }
+  @include max {
+    padding: $padding-sp;
   }
-  &-box {
-    // overflow: hidden;
-    // border-radius: $radius;
-    // border: $width-border solid $color-border;
+  @include min {
+    padding: $padding-pc;
+  }
+  + .section {
+    @include bt;
   }
   &-child {
     + .section-child {

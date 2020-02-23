@@ -6,19 +6,6 @@
 
 .text {
   text-align: justify;
-  &-notice {
-    margin: 12px 0;
-    padding-left: 1em;
-    text-indent: -1em;
-    font-size: 90%;
-    color: $color-muted;
-    &:before {
-      content: '※';
-    }
-    @include min {
-      margin: 14px 0;
-    }
-  }
   &-link {
     color: $color-link;
     text-decoration: underline;
@@ -64,8 +51,7 @@
 }
 
 * {
-  + .text,
-  + .text-notice {
+  + .text {
     @include max {
       margin-top: 12px;
     }

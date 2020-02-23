@@ -7,7 +7,7 @@
 .accordion {
   &-item {
     background-color: $color-white;
-    border: $width-border solid $color-border;
+    border: $width-border-form solid $color-border;
     border-radius: $radius;
     &.is-active {
       .accordion-inside {
@@ -31,6 +31,7 @@
     display: block;
     position: relative;
     text-align: left;
+    font-weight: 700;
     letter-spacing: 0.1em;
     @include transition-fade;
     @include max {

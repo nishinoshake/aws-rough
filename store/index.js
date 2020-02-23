@@ -39,33 +39,6 @@ const store = () =>
       },
       hasService(state, getters) {
         return getters.services.length > 0
-      },
-      colorRatio(state, getters) {
-        const colors = {
-          orange: 0,
-          red: 0,
-          beige: 0,
-          blue: 0
-        }
-        const colorLength = Object.keys(colors).length
-
-        if (getters.hasService) {
-          getters.services.forEach(service => {
-            colors[service.color] += service.total
-          })
-
-          Object.keys(colors).forEach(key => {
-            colors[key] = Math.round((100 * colors[key]) / state.total.jpy)
-          })
-
-          return colors
-        } else {
-          Object.keys(colors).forEach(key => {
-            colors[key] = Math.round(100 / colorLength)
-          })
-
-          return colors
-        }
       }
     },
     mutations: {

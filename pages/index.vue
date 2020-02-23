@@ -1,6 +1,8 @@
 <template>
   <div class="landing">
-    <h1 class="landing-copy">AWSの料金を、<br />日本円でざっくり</h1>
+    <div class="section">
+      <h1 class="landing-copy"><span>AWS</span>の料金を、<br />日本円でざっくり</h1>
+    </div>
     <div class="section">
       <div class="section-box">
         <h2 class="title-daitan"><span>料金が気になるサービスは？</span></h2>
@@ -146,11 +148,7 @@
           <div class="section-child">
             <p class="text-zakuri">
               不具合などのご連絡は、<ExternalLink href="https://github.com/nishinoshake/aws-rough">GitHub</ExternalLink
-              >のIssueか<a href="mailto:lawson.and.7.11@gmail.com" class="text-link">メール</a
-              >までお願いいたします。息抜きに<ExternalLink
-                href="https://www.youtube.com/results?search_query=BRiNG+iCiNG+SHiT+HORSE+TOUR+FiNAL"
-                >BiSH</ExternalLink
-              >でもどうぞ。
+              >のIssueか<a href="mailto:lawson.and.7.11@gmail.com" class="text-link">メール</a>までお願いいたします。
             </p>
           </div>
         </div>

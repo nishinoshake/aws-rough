@@ -9,29 +9,19 @@
   align-items: flex-end;
   font-family: sans-serif;
   line-height: 1;
+  font-weight: 700;
   letter-spacing: 0.06em;
-  @include max-large {
-    font-size: 12px;
-  }
-  @include min-large {
-    font-size: 12px;
-  }
   &-number {
-    @include max-large {
-      font-size: 160%;
-    }
-    @include min-large {
-      font-size: 160%;
-    }
+    font-size: 160%;
   }
   &-unit {
     margin: 0 0 3px 4px;
   }
   &.mod-large {
-    @include max-large {
+    @include max {
       font-size: 12px;
     }
-    @include min-large {
+    @include min {
       font-size: 14px;
     }
     .price-unit {

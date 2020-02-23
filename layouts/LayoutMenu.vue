@@ -2,7 +2,7 @@
   <nav :class="['menu', { 'is-open': isMenuOpen, 'can-scroll': canScroll }]">
     <div class="menu-frame">
       <p class="menu-logo">
-        <nuxt-link to="/" @click.native="HIDE_MENU">ざっくりAWS</nuxt-link>
+        <nuxt-link to="/" @click.native="HIDE_MENU">ZKR<br class="pc" />AWS</nuxt-link>
       </p>
       <ul class="menu-list" ref="menuList">
         <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
@@ -23,11 +23,12 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
+import Logo from '@/assets/svg/logo.svg'
 import serviceConfig from '@/config/service/mokuji'
 
 export default {
   name: 'LayoutMenu',
-  components: { ServicePartsIcon },
+  components: { ServicePartsIcon, Logo },
   data() {
     return {
       services: serviceConfig,

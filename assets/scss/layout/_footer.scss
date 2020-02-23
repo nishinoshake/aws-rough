@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.footer {
+  @include bt;
+  @include max {
+    padding: 12px $padding-sp;
+    border-bottom: $width-border-sp solid $color-border;
+  }
+  @include min {
+    padding: 23px $padding-pc;
+  }
+  &-list {
+    display: flex;
+    @include max {
+      justify-content: center;
+    }
+    @include min {
+      font-size: 20px;
+    }
+  }
+  &-item {
+    &:nth-child(n+2) {
+      margin-left: 1em;
+    }
+  }
+  &-item a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

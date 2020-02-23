@@ -18,9 +18,12 @@
   &.mod-center {
     text-align: center;
   }
+  thead th {
+    font-weight: 700;
+  }
   th,
   td {
-    border: $width-border solid $color-border;
+    border: $width-border-form solid $color-border;
     @include max {
       padding: 8px;
     }
