@@ -1,46 +1,42 @@
 @charset "utf-8";
 
 .menu {
+  @include max-large {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+    background-color: $color-white;
+    border-bottom: $width-border solid $color-border;
+    transform: translate3d(0, -100%, 0);
+    transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
+    will-change: transform;
+    &.is-open {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.36s $easeOutExpo, visibility 0s;
+    }
+  }
   @include min-large {
     width: $width-menu-pc;
-    position: relative;
+    height: 100vh;
+    position: sticky;
     flex: none;
-  }
-  @include min($mq-large) {
+    top: 0;
+    left: 0;
+    padding: 0 $padding-pc;
+    &.can-scroll {
+      overflow-y: scroll;
+    }
+    &:not(.can-scroll) {
+      display: flex;
+      align-items: center;
+    }
   }
   &-container {
-    @include max-large {
-      width: 100vw;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      visibility: hidden;
-      background-color: $color-white;
-      border-bottom: $width-border solid $color-border;
-      transform: translate3d(0, -100%, 0);
-      transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
-      will-change: transform;
-      &.is-open {
-        visibility: visible;
-        transform: translate3d(0, 0, 0);
-        transition: transform 0.36s $easeOutExpo, visibility 0s;
-      }
-    }
-    @include min-large {
-      height: 100vh;
-      position: sticky;
-      top: 0;
-      left: 0;
-      padding-left: 38px;
-      &.can-scroll {
-        overflow-y: scroll;
-      }
-      &:not(.can-scroll) {
-        display: flex;
-        align-items: center;
-      }
-    }
+
   }
   &-frame {
     @include min-large {
@@ -118,7 +114,7 @@
     a {
       display: inline-block;
       padding: 8px 10px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
       color: $color-white;
       background-color: $color-black;

@@ -36,7 +36,7 @@ body {
     padding: $padding-sp * 2 $padding-sp * 2 #{$height-header-sp + $padding-sp * 3};
   }
   @include min-large {
-    padding: $padding-pc * 2 $padding-pc $padding-pc * 4;
+    padding: $padding-pc * 2 $padding-pc $padding-pc * 4 0;
   }
 }
 

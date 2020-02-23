@@ -1,18 +1,16 @@
 <template>
-  <nav class="menu">
-    <div :class="['menu-container', { 'is-open': isMenuOpen, 'can-scroll': canScroll }]">
-      <div class="menu-frame">
-        <p class="menu-logo">
-          <nuxt-link to="/" @click.native="HIDE_MENU">ざっくりAWS</nuxt-link>
-        </p>
-        <ul class="menu-list" ref="menuList">
-          <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
-            <nuxt-link :to="service.href" @click.native="handleClick">
-              <span class="menu-name">{{ service.name }}</span>
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
+  <nav :class="['menu', { 'is-open': isMenuOpen, 'can-scroll': canScroll }]">
+    <div class="menu-frame">
+      <p class="menu-logo">
+        <nuxt-link to="/" @click.native="HIDE_MENU">ざっくりAWS</nuxt-link>
+      </p>
+      <ul class="menu-list" ref="menuList">
+        <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
+          <nuxt-link :to="service.href" @click.native="handleClick">
+            <span class="menu-name">{{ service.name }}</span>
+          </nuxt-link>
+        </li>
+      </ul>
     </div>
     <button :class="['menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
       <span class="menu-button-icon">
