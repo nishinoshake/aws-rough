@@ -6,54 +6,44 @@
 .cart {
   display: flex;
   align-items: center;
+  border: 2px solid $color-black;
+  background-color: $color-black;
+  border-radius: 999em;
+  overflow: hidden;
   @include max-large {
-    max-width: 320px;
-    flex-grow: 1;
-    padding: 12px 30px;
-  }
-  @include max {
-    padding: 0 20px;
-  }
-  @include min {
-    &:hover {
-      .cart-link {
-        background-color: $color-black;
-        border-color: $color-black;
-        color: $color-white;
-      }
-    }
+    width: 100%;
+    max-width: 400px;
   }
   &-link {
+    white-space: nowrap;
+    color: $color-white;
     @include transition-collection;
     @include max-large {
-      display: none;
+      padding: 5px 16px;
     }
     @include min-large {
-      margin-left: 30px;
       padding: 5px 22px;
-      color: $color-white;
-      white-space: nowrap;
-      background-color: $color-black;
-      border-radius: 999em;
     }
   }
   &-total {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
     position: relative;
     padding: 4px 0 8px 2em;
+    background-color: $color-white;
     z-index: 1;
     @include transition-fade;
     @include max-large {
-      width: 100%;
-      font-size: 16px;
-      border-bottom: 2px solid $color-black;
+      min-width: 220px;
+      flex-grow: 1;
+      padding: 14px 14px 14px 18px;
+      font-size: 14px;
     }
     @include min-large {
       min-width: 270px;
+      padding: 14px 14px 14px 18px;
       font-size: 24px;
-      border-bottom: 2px solid $color-black;
     }
     .price-number {
       @include max {
@@ -64,40 +54,12 @@
     }
   }
   &-label {
-    position: absolute;
-    left: 0;
-    bottom: 7px;
-    font-size: 18px;
     line-height: 1;
-  }
-  &-detail {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    background-color: $color-border;
     @include max-large {
-      height: 4px;
+      font-size: 14px;
     }
     @include min-large {
-      height: 4px;
-    }
-    &-item {
-      width: 25%;
-      transition: width 0.4s $easeOutQuart;
-      &.mod-orange {
-        background-color: $color-orange;
-      }
-      &.mod-blue {
-        background-color: $color-blue;
-      }
-      &.mod-beige {
-        background-color: $color-beige;
-      }
-      &.mod-red {
-        background-color: $color-red;
-      }
+      font-size: 18px;
     }
   }
 }

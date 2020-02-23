@@ -108,19 +108,8 @@
       }
     }
   }
-  &-summary {
-  }
-  &-zakuri,
-  &-ad {
-    overflow: hidden;
-    border-radius: $radius;
-    border: $width-border solid $color-border;
-    @include max {
-      padding: $padding-sp;
-    }
-    @include min {
-      padding: 34px $padding-pc $padding-pc;
-    }
+  &-body {
+    position: relative;
   }
   &-ad {
     &-frame {

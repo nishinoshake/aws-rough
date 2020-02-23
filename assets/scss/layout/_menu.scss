@@ -6,19 +6,19 @@
     position: relative;
     flex: none;
   }
-  @include min($width-max) {
+  @include min($mq-large) {
   }
   &-container {
     @include max-large {
       width: 100vw;
       position: fixed;
-      bottom: $height-header-sp;
+      top: 0;
       left: 0;
       z-index: 10;
       visibility: hidden;
       background-color: $color-white;
-      border-top: $width-border solid $color-border;
-      transform: translate3d(0, 100%, 0);
+      border-bottom: $width-border solid $color-border;
+      transform: translate3d(0, -100%, 0);
       transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
       will-change: transform;
       &.is-open {
@@ -28,22 +28,34 @@
       }
     }
     @include min-large {
+      height: 100vh;
       position: sticky;
-      top: #{$height-header-pc + $height-offset-pc + $margin-pc};
+      top: 0;
       left: 0;
       padding-left: 38px;
+      &.can-scroll {
+        overflow-y: scroll;
+      }
+      &:not(.can-scroll) {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &-frame {
+    @include min-large {
+      padding: 50px 0;
     }
   }
   &-button {
     @include max-large {
       width: $width-menu-sp;
-      height: $height-header-sp;
+      height: $width-menu-sp;
       position: fixed;
       z-index: 20;
       right: 0;
-      bottom: 0;
-      border-left: $width-border solid $color-border;
-      flex-direction: column;
+      top: 0;
+      background-color: $color-black;
       @include center-flex;
       &.is-open {
         .menu-button-icon {
@@ -61,17 +73,17 @@
         }
       }
       &-icon {
-        width: 24px;
-        height: 16px;
-        margin-bottom: 3px;
+        width: 20px;
+        height: 14px;
         position: relative;
-        color: $color-border;
+        color: $color-white;
         &:before,
         &:after,
         span {
           content: "";
           width: 100%;
-          height: $width-border;
+          height: 2px;
+          border-radius: 999em;
           left: 0;
           position: absolute;
           background-color: currentColor;
@@ -86,40 +98,37 @@
           top: 100%;
         }
       }
-      &-text {
-        margin-top: 4px;
-        font-size: 12px;
-      }
     }
     @include min-large {
       display: none;
     }
   }
-  &-frame {
-    @include min-large {
-      height: calc(100vh - #{$height-header-pc + $height-offset-pc + $margin-pc});
-      padding: 10px 0;
-      &.can-scroll {
-        overflow-y: scroll;
-      }
-    }
-  }
   &-logo {
-    a {
-      width: 140px;
-      display: block;
+    line-height: 1;
+    @include between {
     }
-    img {
-      display: block;
+    @include max-large {
       width: 100%;
-      height: auto;
+      display: flex;
+      padding: 26px $padding-sp;
+    }
+    @include min-large {
+      margin-bottom: 20px;
+    }
+    a {
+      display: inline-block;
+      padding: 8px 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: $color-white;
+      background-color: $color-black;
     }
   }
   &-list {
     @include max-large {
       display: flex;
       flex-wrap: wrap;
-      padding: 12px 0;
+      padding: 0 #{$padding-sp - 10px} 24px;
     }
   }
   &-item {
@@ -132,6 +141,9 @@
       &.is-active {
         color: $color-orange;
       }
+      &:before {
+        background-color: $color-orange;
+      }
       @include min {
         &:hover {
           color: $color-orange;
@@ -141,6 +153,9 @@
     &.mod-blue a {
       &.is-active {
         color: $color-blue;
+      }
+      &:before {
+        background-color: $color-blue;
       }
       @include min {
         &:hover {
@@ -152,6 +167,9 @@
       &.is-active {
         color: $color-beige;
       }
+      &:before {
+        background-color: $color-beige;
+      }
       @include min {
         &:hover {
           color: $color-beige;
@@ -161,6 +179,9 @@
     &.mod-red a {
       &.is-active {
         color: $color-red;
+      }
+      &:before {
+        background-color: $color-red;
       }
       @include min {
         &:hover {
@@ -181,6 +202,13 @@
       @include min-large {
         padding: 6px 0;
         font-size: 18px;
+      }
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        margin-right: 6px;
+        border-radius: 50%;
       }
     }
   }

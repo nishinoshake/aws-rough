@@ -52,8 +52,6 @@
       </div>
     </div>
 
-    <ServiceTemplateAds />
-
     <div class="section">
       <div class="section-box">
         <h2 class="title-daitan"><span>補足と前提</span></h2>
@@ -88,6 +86,8 @@
         </div>
       </div>
     </div>
+
+    <ServiceTemplateAds />
   </article>
 </template>
 

@@ -21,6 +21,7 @@
   }
   &-link {
     color: $color-link;
+    text-decoration: underline;
     path {
       fill: $color-link;
     }

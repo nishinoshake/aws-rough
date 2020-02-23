@@ -6,11 +6,14 @@
 
 .section {
   + .section {
+    border-top: 1px solid $color-border;
     @include max {
       margin-top: $margin-sp * 3;
+      padding-top: $margin-sp * 3;
     }
     @include min {
       margin-top: $margin-pc * 5;
+      padding-top: $margin-pc * 5;
     }
   }
   &-box {

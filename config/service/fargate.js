@@ -12,7 +12,7 @@ export default {
       type: 'number',
       key: 'unit',
       title: 'タスク数',
-      size: 'small',
+      size: 'minimal',
       default: '1'
     },
     {
@@ -26,7 +26,7 @@ export default {
       key: 'cpu',
       title: 'vCPU',
       default: '1',
-      size: 'small',
+      size: 'minimal',
       parseJson: (json, row) => ['', ...sortBy(Object.keys(json.fargate.pair)).map(v => v.toString())]
     },
     {

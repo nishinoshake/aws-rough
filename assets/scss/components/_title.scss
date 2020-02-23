@@ -22,7 +22,7 @@
     }
     @include min {
       margin-bottom: $margin-pc * 3;
-      font-size: 46px;
+      font-size: 64px;
     }
     &-icon {
       flex: none;
@@ -105,12 +105,11 @@
       font-size: 16px;
     }
     @include min {
-      margin-bottom: 32px;
-      font-size: 28px;
+      margin-bottom: 50px;
+      font-size: 32px;
     }
-    &:before {
-      content: "$";
-      padding-right: 0.1em;
+    span {
+      background-image: linear-gradient(transparent 75%, $color-marker 75%);
     }
   }
 }

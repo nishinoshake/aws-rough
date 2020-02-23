@@ -15,7 +15,7 @@ body {
 .container {
   position: relative;
   @include min {
-    max-width: $width-max;
+    max-width: $mq-large;
     margin: 0 auto;
   }
 }
@@ -30,13 +30,13 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    padding: 0 $padding-sp * 1.5 #{$height-header-sp + $padding-sp * 3};
+    padding: $padding-sp * 2 $padding-sp * 1.5 #{$height-header-sp + $padding-sp * 3};
   }
   @include between {
-    padding: 0 $padding-sp * 2 #{$height-header-sp + $padding-sp * 3};
+    padding: $padding-sp * 2 $padding-sp * 2 #{$height-header-sp + $padding-sp * 3};
   }
   @include min-large {
-    padding: #{$height-header-pc + $margin-pc * 3} $padding-pc $padding-pc * 2 $padding-pc;
+    padding: $padding-pc * 2 $padding-pc $padding-pc * 4;
   }
 }
 

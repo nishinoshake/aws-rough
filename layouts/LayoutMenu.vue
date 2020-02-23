@@ -1,11 +1,13 @@
 <template>
   <nav class="menu">
-    <div :class="['menu-container', { 'is-open': isMenuOpen }]">
-      <div :class="['menu-frame', { 'can-scroll': canScroll }]">
+    <div :class="['menu-container', { 'is-open': isMenuOpen, 'can-scroll': canScroll }]">
+      <div class="menu-frame">
+        <p class="menu-logo">
+          <nuxt-link to="/" @click.native="HIDE_MENU">ざっくりAWS</nuxt-link>
+        </p>
         <ul class="menu-list" ref="menuList">
           <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
             <nuxt-link :to="service.href" @click.native="handleClick">
-              <ServicePartsIcon :name="service.key" class="menu-icon" />
               <span class="menu-name">{{ service.name }}</span>
             </nuxt-link>
           </li>
@@ -16,7 +18,6 @@
       <span class="menu-button-icon">
         <span></span>
       </span>
-      <span class="menu-button-text">{{ buttonText }}</span>
     </button>
   </nav>
 </template>
@@ -36,10 +37,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['isMenuOpen']),
-    buttonText() {
-      return this.isMenuOpen ? 'CLOSE' : 'MENU'
-    }
+    ...mapState(['isMenuOpen'])
   },
   mounted() {
     this.handleResize()

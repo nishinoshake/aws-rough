@@ -7,16 +7,18 @@
 .landing {
   position: relative;
   &-copy {
-    line-height: 1.4;
-    letter-spacing: 0.18em;
+    line-height: 1.6;
+    font-weight: 700;
+    letter-spacing: 0.3em;
     text-indent: 0.16em;
     @include max {
-      margin-right: -1em;
-      padding: 80px 0;
-      font-size: 30px;
+      margin-bottom: 80px;
+      padding-top: 50px;
+      font-size: 24px;
     }
     @include min {
-      padding: 120px 0;
+      margin-bottom: 120px;
+      padding-top: 60px;
       font-size: 48px;
     }
   }
@@ -55,12 +57,6 @@
         }
         @include min {
           width: 200px;
-          &:hover {
-            filter: grayscale(1);
-            .landing-service-summary {
-              opacity: 0.8;
-            }
-          }
         }
       }
     }

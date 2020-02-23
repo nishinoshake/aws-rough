@@ -1,69 +1,21 @@
 @charset "utf-8";
 
 .header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  z-index: 1;
   @include max-large {
-    z-index: 100;
+    bottom: 20px;
+    padding: 0 $padding-sp * 1.5;
   }
   @include min-large {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    border-bottom: $width-border solid $color-border;
+    bottom: 30px;
   }
   &-container {
-    @include min-large {
-      max-width: $width-max;
-      margin: 0 auto;
-    }
-  }
-  &-bar {
-    @include min-large {
-      height: $height-header-pc;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 $padding-pc;
-      background-color: $color-white;
-    }
-  }
-  &-action {
-    @include max-large {
-      width: 100%;
-      height: $height-header-sp;
-      position: fixed;
-      z-index: 15;
-      left: 0;
-      bottom: 0;
-      padding-right: $width-menu-sp;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      background-color: $color-white;
-      border-top: $width-border solid $color-border;
-    }
-  }
-  &-logo {
-    line-height: 1;
-    @include max {
-      padding: $padding-sp * 0.8 $padding-sp * 1.5;
-    }
-    @include between {
-      padding: $padding-sp * 0.8 $padding-sp * 2;
-    }
-    @include max-large {
-      width: 100%;
-      display: flex;
-      margin-bottom: $margin-sp * 2;
-      border-bottom: $width-border solid $color-border;
-    }
-    a {
-      display: block;
-      padding: 10px 12px;
-      font-size: 20px;
-      color: $color-white;
-      background-color: $color-black;
-    }
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

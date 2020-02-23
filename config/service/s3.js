@@ -10,7 +10,8 @@ export default {
     {
       type: 'number',
       key: 'storage',
-      title: '容量(GB)'
+      title: '容量(GB)',
+      size: 'small'
     },
     {
       type: 'number',

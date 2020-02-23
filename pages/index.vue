@@ -1,5 +1,6 @@
 <template>
   <div class="landing">
+    <h1 class="landing-copy">AWSの料金を、<br />日本円でざっくり</h1>
     <div class="section">
       <div class="section-box">
         <h2 class="title-daitan"><span>料金が気になるサービスは？</span></h2>
@@ -44,6 +45,10 @@
                 <tr>
                   <th>通貨</th>
                   <td>日本円</td>
+                </tr>
+                <tr>
+                  <th>税金</th>
+                  <td>税抜き</td>
                 </tr>
                 <tr>
                   <th>期間</th>

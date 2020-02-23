@@ -8,16 +8,16 @@
             <p class="text">DynamoDBで使用するストレージの容量をGB単位で入力してください。</p>
           </section>
           <section class="section-child">
-            <h3 class="title-small"><span>読み込みリクエスト</span></h3>
+            <h3 class="title-small"><span>読み込み単位</span></h3>
             <p class="text">
               4KBまでの強い整合性のある読み込み1回につき1単位、トランザクション読み込み1回につき2単位、結果整合性のある読み込み1回につき
-              0.5単位の読み込みリクエストが発生します。
+              0.5単位の読み込みになります。
             </p>
           </section>
           <section class="section-child">
-            <h3 class="title-small"><span>書き込みリクエスト</span></h3>
+            <h3 class="title-small"><span>書き込み単位</span></h3>
             <p class="text">
-              1KBまでの書き込み1回につき1単位、トランザクション書き込み1回につき2単位の書き込みリクエストが発生します。
+              1KBまでの書き込み1回につき1単位、トランザクション書き込み1回につき2単位になります。
             </p>
           </section>
           <section class="section-child">

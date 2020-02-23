@@ -32,14 +32,12 @@ export default {
     {
       type: 'number',
       key: 'read',
-      title: '読み込みリクエスト',
-      size: 'large'
+      title: '読み込み単位'
     },
     {
       type: 'number',
       key: 'write',
-      title: '書き込みリクエスト',
-      size: 'large'
+      title: '書き込み単位'
     }
   ],
   filterRow({ mode }) {
