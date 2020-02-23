@@ -1,8 +1,6 @@
 <template>
   <div class="landing">
-    <div class="section">
-      <h1 class="landing-copy"><span>AWS</span>の料金を、<br />日本円でざっくり</h1>
-    </div>
+    <h1 class="landing-copy"><span>AWS</span>の料金を、<br class="sp" />日本円でざっくり</h1>
     <div class="section">
       <div class="section-box">
         <h2 class="title-daitan"><span>料金が気になるサービスは？</span></h2>

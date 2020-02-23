@@ -73,7 +73,7 @@
     transition: opacity 0.1s linear;
     will-change: opacity;
     background-image: linear-gradient(to right, $color-border, $color-border 4px, transparent 4px, transparent 6px);
-    background-size: 6px 1px;
+    background-size: 6px $width-border-form;
     background-position: top;
     background-repeat: repeat-x;
     @include max {

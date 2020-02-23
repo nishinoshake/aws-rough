@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     line-height: 1;
-    letter-spacing: .1em;
+    letter-spacing: 0.06em;
     @include bb;
     @include font-en;
     @include max {

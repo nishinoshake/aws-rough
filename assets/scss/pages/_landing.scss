@@ -9,15 +9,19 @@
   &-copy {
     line-height: 1.6;
     font-weight: 700;
-    letter-spacing: 0.2em;
-    text-indent: 0.12em;
+    letter-spacing: 0.16em;
+    text-indent: 0.1em;
+    @include bb;
     @include max {
-      padding: 20px 0;
+      padding: 50px $padding-sp;
       font-size: 24px;
     }
     @include min {
-      padding: 14px 0;
-      font-size: 48px;
+      height: $height-header-pc;
+      display: flex;
+      align-items: center;
+      padding: 0 $padding-pc;
+      font-size: 40px;
     }
     span {
       @include font-en;
@@ -85,6 +89,7 @@
       margin-bottom: 5px;
       font-size: 12px;
       line-height: 1;
+      letter-spacing: 0.03em;
       font-weight: 700;
       white-space: nowrap;
       @include font-en;
