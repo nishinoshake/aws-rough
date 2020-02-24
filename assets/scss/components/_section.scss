@@ -13,9 +13,22 @@
   }
 }
 
-.section-child + .section-child {
-  margin-top: 20px;
-  @include min {
-    margin-top: 50px;
+.section-child {
+  + .section-child {
+    @include max {
+      margin-top: 20px;
+    }
+    @include min {
+      margin-top: 50px;
+    }
+  }
+
+  > * + * {
+    @include max {
+      margin-top: 12px;
+    }
+    @include min {
+      margin-top: 14px;
+    }
   }
 }

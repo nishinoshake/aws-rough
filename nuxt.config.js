@@ -1,10 +1,10 @@
 require('dotenv').config()
 
 module.exports = {
+  server: {
+    host: '0.0.0.0'
+  },
   head: {
-    server: {
-      host: '0.0.0.0'
-    },
     title: 'ざっくりAWS',
     htmlAttrs: {
       lang: 'ja'

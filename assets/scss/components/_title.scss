@@ -50,7 +50,7 @@
     font-size: 16px;
   }
   @include min {
-    margin-bottom: 36px;
+    margin-bottom: 30px;
     font-size: 32px;
   }
   span {
@@ -62,7 +62,6 @@
   line-height: 1.4;
   @include max {
     margin-bottom: 10px;
-    font-size: 14px;
   }
   @include min {
     margin-bottom: 18px;

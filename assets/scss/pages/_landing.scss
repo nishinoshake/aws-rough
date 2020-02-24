@@ -90,12 +90,14 @@
 
 .landing-service-name {
   margin-bottom: 5px;
-  font-size: 12px;
   line-height: 1;
   letter-spacing: 0.03em;
   font-weight: 700;
   white-space: nowrap;
   @include font-en;
+  @include max {
+    font-size: 12px;
+  }
   @include min {
     margin-bottom: 9px;
     font-size: 20px;
@@ -109,6 +111,6 @@
     font-size: 10px;
   }
   @include min {
-    font-size: 13px;
+    font-size: 14px;
   }
 }

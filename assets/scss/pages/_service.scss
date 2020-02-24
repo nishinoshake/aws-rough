@@ -70,10 +70,12 @@
   span {
     padding-left: 22px;
     position: relative;
-    font-size: 14px;
     line-height: 1;
     letter-spacing: 0.1em;
     text-align: left;
+    @include max {
+      font-size: 14px;
+    }
     @include min {
       padding-left: 25px;
       font-size: 16px;
@@ -81,7 +83,7 @@
     &:before,
     &:after {
       content: '';
-      width: 15px;
+      width: 12px;
       height: $width-border-form;
       position: absolute;
       top: 50%;

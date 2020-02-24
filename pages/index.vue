@@ -28,35 +28,6 @@
           <p class="text">
             サービスの選択肢が多く、構成が柔軟なおかけで、さまざまな要件をカバーできるのは嬉しいのですが、そのぶん料金体系がややこしいので、やるせない気持ちになります。そんな気持ちをもとに作られたのが、料金を日本円でざっくり計算できる、このサイトです。
           </p>
-          <p class="text">
-            入力と結果の表示をシンプルにするために、よく使われそうな条件に絞ったサイト設計にしています。
-          </p>
-
-          <table class="spec">
-            <thead>
-              <tr>
-                <th colspan="2">計算の前提</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>通貨</th>
-                <td>日本円</td>
-              </tr>
-              <tr>
-                <th>税金</th>
-                <td>税抜き</td>
-              </tr>
-              <tr>
-                <th>期間</th>
-                <td>月額（30.5日）</td>
-              </tr>
-              <tr>
-                <th>リージョン</th>
-                <td>東京リージョン<br />（SESのみバージニア北部）</td>
-              </tr>
-            </tbody>
-          </table>
 
           <p class="text">
             ざっくりと言いつつ、計算ツールを公開する以上は、料金の目安として役に立つ金額を算出できるように努めていますが、「実際に運用してみたら案外高かった」とか「このサイトで考慮されていないパラメータの影響が大きかった」といった場合の責任までは負いかねます。大きめのシステムの見積もりなどで正確さが要求される場合は、<ExternalLink
@@ -69,28 +40,75 @@
     </div>
 
     <div class="section">
-      <h2 class="title-section"><span>使用しているデータ</span></h2>
+      <h2 class="title-section"><span>計算の前提</span></h2>
       <div class="service-zakuri">
         <div class="section-child">
+          <table class="spec">
+            <tbody>
+              <tr>
+                <th>通貨</th>
+                <td>日本円</td>
+              </tr>
+              <tr>
+                <th>税金</th>
+                <td>税抜き</td>
+              </tr>
+              <tr>
+                <th>期間</th>
+                <td>ひと月（30.5日）</td>
+              </tr>
+              <tr>
+                <th>ドル円</th>
+                <td>
+                  <span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span
+                  >円
+                </td>
+              </tr>
+              <tr>
+                <th>リージョン</th>
+                <td>東京リージョン<br />（SESのみバージニア北部）</td>
+              </tr>
+            </tbody>
+          </table>
+
           <p class="text">
-            各サービスの価格は、AWSが提供している<ExternalLink
-              href="https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/price-changes.html"
-              >Price List API</ExternalLink
-            >から取得し、為替レートの取得には、<ExternalLink href="https://twitter.com/kujirahand"
-              >クジラ飛行机</ExternalLink
-            >さんが公開されている、<ExternalLink href="http://api.aoikujira.com/kawase/"
-              >クジラ外国為替確認API</ExternalLink
-            >を使わせてもらっています。現在、計算に適用しているドル円のレートは<em
-              ><span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span
-              >円</em
-            >で、データは毎朝10時に更新しています。
+            シンプルにするために、よく使われそうな条件に絞ったサイト設計にしています。
           </p>
         </div>
       </div>
     </div>
 
     <div class="section">
-      <h2 class="title-section"><span>Googleアナリティクスの使用</span></h2>
+      <h2 class="title-section"><span>使用しているデータ</span></h2>
+      <div class="service-zakuri">
+        <div class="section-child">
+          <table class="spec">
+            <tbody>
+              <tr>
+                <th>AWSの料金</th>
+                <td>
+                  <ExternalLink
+                    href="https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/price-changes.html"
+                    >Price List API</ExternalLink
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th>為替レート</th>
+                <td><ExternalLink href="https://exchangeratesapi.io">Foreign exchange rates API</ExternalLink></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="text">
+            毎朝10時にデータを更新しています。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="title-section"><span>Googleアナリティクス</span></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">
@@ -114,7 +132,7 @@
     </div>
 
     <div class="section">
-      <h2 class="title-section"><span>Googleアドセンスの使用</span></h2>
+      <h2 class="title-section"><span>Googleアドセンス</span></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">
@@ -127,8 +145,6 @@
       </div>
     </div>
 
-    <ServiceTemplateAds />
-
     <div class="section">
       <h2 class="title-section"><span>お問い合わせ</span></h2>
       <div class="service-zakuri">
@@ -140,6 +156,8 @@
         </div>
       </div>
     </div>
+
+    <ServiceTemplateAds />
   </div>
 </template>
 

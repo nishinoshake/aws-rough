@@ -32,11 +32,9 @@
   @include transition-fade;
   @include max {
     padding: 12px 30px 12px 20px;
-    font-size: 14px;
   }
   @include min {
     padding: 22px 40px 22px 40px;
-    font-size: 18px;
     &:hover {
       opacity: 0.7;
     }
