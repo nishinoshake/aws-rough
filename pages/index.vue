@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <h1 class="landing-copy"><span>AWS</span>の料金を、<br class="sp" />日本円でざっくり</h1>
+    <h1 class="landing-copy"><span>AWS</span>の料金を、<br class="sp" />日本円で{{ prefix }}</h1>
     <div class="section">
       <h2 class="title-section"><span>料金が気になるサービスは？</span></h2>
       <div class="service-zakuri">
@@ -162,6 +162,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import ExternalLink from '@/components/text/ExternalLink'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
@@ -182,6 +183,7 @@ export default {
     return meta.index
   },
   computed: {
+    ...mapState(['prefix']),
     usdjpy() {
       return this.$store.state.fx ? this.$store.state.fx.usdjpy : null
     },

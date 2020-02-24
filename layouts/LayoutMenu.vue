@@ -1,7 +1,12 @@
 <template>
   <nav :class="['menu', { 'is-open': isMenuOpen, 'can-scroll': canScroll }]">
     <div class="menu-frame">
-      <LayoutMenuLogo />
+      <p class="menu-logo">
+        <nuxt-link to="/" @click.native="HIDE_MENU"
+          ><span class="menu-logo-ja">{{ prefix }}</span
+          ><span class="menu-logo-en">AWS</span></nuxt-link
+        >
+      </p>
       <ul class="menu-list" ref="menuList">
         <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
           <nuxt-link :to="service.href" @click.native="handleClick">
@@ -21,12 +26,11 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
-import LayoutMenuLogo from './LayoutMenuLogo'
 import serviceConfig from '@/config/service/mokuji'
 
 export default {
   name: 'LayoutMenu',
-  components: { ServicePartsIcon, LayoutMenuLogo },
+  components: { ServicePartsIcon },
   data() {
     return {
       services: serviceConfig,
@@ -34,7 +38,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['isMenuOpen'])
+    ...mapState(['isMenuOpen', 'prefix'])
   },
   mounted() {
     this.handleResize()
