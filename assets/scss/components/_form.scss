@@ -70,16 +70,16 @@
     }
     &:after {
       content: '';
-      width: 6px;
-      height: 6px;
+      height: 0;
+      border-style: solid;
       position: absolute;
       top: 0;
-      bottom: 3px;
+      bottom: 0;
       right: 10px;
       margin: auto 0;
-      border-top: $width-border-form solid $color-border;
-      border-right: $width-border-form solid $color-border;
-      transform: rotate(135deg);
+      width: 0;
+      border-width: 9px 7px 0 7px;
+      border-color: $color-border transparent transparent transparent;
       pointer-events: none;
     }
   }

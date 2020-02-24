@@ -7,7 +7,7 @@
     border-bottom: $width-border-sp solid $color-border;
   }
   @include min {
-    padding: 23px $padding-pc;
+    padding: 25px $padding-pc;
   }
   &-list {
     display: flex;

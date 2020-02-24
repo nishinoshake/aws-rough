@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     line-height: 1;
+    font-weight: 700;
     letter-spacing: 0.06em;
     @include bb;
     @include font-en;
@@ -89,7 +90,7 @@
     position: relative;
     letter-spacing: 0.12em;
     @include max {
-      margin-bottom: 22px;
+      margin-bottom: 14px;
       font-size: 16px;
     }
     @include min {

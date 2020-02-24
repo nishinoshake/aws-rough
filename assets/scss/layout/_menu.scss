@@ -105,7 +105,7 @@
       width: 100%;
       font-weight: 700;
       letter-spacing: -0.01em;
-      line-height: 1.1;
+      line-height: 1.2;
       text-align: center;
       @include center-flex;
       @include max {
@@ -114,7 +114,19 @@
       }
       @include min {
         height: 100%;
-        font-size: 36px;
+        font-size: 42px;
+        flex-direction: column;
+      }
+    }
+    &-en {
+      @include font-en;
+    }
+    &-ja {
+      @include max {
+        font-size: 90%;
+      }
+      @include min {
+        font-size: 72%;
       }
     }
   }

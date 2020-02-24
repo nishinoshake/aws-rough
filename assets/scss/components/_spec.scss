@@ -25,7 +25,7 @@
   td {
     border: $width-border-form solid $color-border;
     @include max {
-      padding: 8px;
+      padding: 8px 12px;
     }
     @include min {
       padding: 12px 16px;

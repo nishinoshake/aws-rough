@@ -5,6 +5,7 @@
 // -----------------------------------------------------
 
 .section {
+  overflow: hidden;
   @include max {
     padding: $padding-sp;
   }
