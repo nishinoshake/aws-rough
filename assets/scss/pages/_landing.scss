@@ -1,112 +1,114 @@
 @charset "utf-8";
 
-// -----------------------------------------------------
-// 最初のページ
-// -----------------------------------------------------
-
 .landing {
   position: relative;
-  &-copy {
-    line-height: 1.6;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-indent: 0.1em;
-    @include bb;
+}
+
+.landing-copy {
+  line-height: 1.6;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-indent: 0.1em;
+  @include bb;
+  @include max {
+    padding: 50px $padding-sp;
+    font-size: 24px;
+  }
+  @include min {
+    height: $height-header-pc;
+    display: flex;
+    align-items: center;
+    padding: 0 $padding-pc;
+    font-size: 40px;
+  }
+  span {
+    @include font-en;
+  }
+}
+
+.landing-list {
+  @include max {
+    margin-top: 12px;
+  }
+  @include min {
+    margin-top: 16px;
+  }
+}
+
+.landing-service-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include max {
+    margin: 0 -14px;
+  }
+  @include min {
+    margin: 0 -20px;
+  }
+}
+
+.landing-service-item {
+  @include max {
+    padding: 8px;
+  }
+  @include min {
+    padding: 14px;
+  }
+  a {
+    width: 100%;
+    display: flex;
+    align-items: center;
     @include max {
-      padding: 50px $padding-sp;
-      font-size: 24px;
+      width: 126px;
     }
     @include min {
-      height: $height-header-pc;
-      display: flex;
-      align-items: center;
-      padding: 0 $padding-pc;
-      font-size: 40px;
-    }
-    span {
-      @include font-en;
+      width: 200px;
     }
   }
-  .list {
-    @include max {
-      margin-top: 12px;
-    }
-    @include min {
-      margin-top: 16px;
-    }
+}
+
+.landing-service-icon {
+  flex: none;
+  margin-right: 2px;
+  @include max {
+    width: 40px;
+    height: 40px;
   }
-  &-service {
-    &-list {
-      display: flex;
-      flex-wrap: wrap;
-      @include max {
-        margin: 0 -14px;
-      }
-      @include min {
-        margin: 0 -20px;
-      }
-    }
-    &-item {
-      @include max {
-        padding: 8px;
-      }
-      @include min {
-        padding: 14px;
-      }
-      a {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        @include max {
-          width: 126px;
-        }
-        @include min {
-          width: 200px;
-        }
-      }
-    }
-    &-icon {
-      flex: none;
-      margin-right: 2px;
-      @include max {
-        width: 40px;
-        height: 40px;
-      }
-      @include min {
-        width: 64px;
-        height: 64px;
-        margin-right: 10px;
-      }
-      svg {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &-summary {
-      flex-grow: 1;
-    }
-    &-name {
-      margin-bottom: 5px;
-      font-size: 12px;
-      line-height: 1;
-      letter-spacing: 0.03em;
-      font-weight: 700;
-      white-space: nowrap;
-      @include font-en;
-      @include min {
-        margin-bottom: 9px;
-        font-size: 20px;
-      }
-    }
-    &-description {
-      line-height: 1;
-      white-space: nowrap;
-      @include max {
-        font-size: 10px;
-      }
-      @include min {
-        font-size: 13px;
-      }
-    }
+  @include min {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.landing-service-summary {
+  flex-grow: 1;
+}
+
+.landing-service-name {
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  white-space: nowrap;
+  @include font-en;
+  @include min {
+    margin-bottom: 9px;
+    font-size: 20px;
+  }
+}
+
+.landing-service-description {
+  line-height: 1;
+  white-space: nowrap;
+  @include max {
+    font-size: 10px;
+  }
+  @include min {
+    font-size: 13px;
   }
 }

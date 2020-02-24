@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-// -----------------------------------------------------
-// セクション
-// -----------------------------------------------------
-
 .section {
   overflow: hidden;
   @include max {
@@ -15,12 +11,11 @@
   + .section {
     @include bt;
   }
-  &-child {
-    + .section-child {
-      margin-top: 20px;
-      @include min {
-        margin-top: 50px;
-      }
-    }
+}
+
+.section-child + .section-child {
+  margin-top: 20px;
+  @include min {
+    margin-top: 50px;
   }
 }

@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-// -----------------------------------------------------
-// 見出し
-// -----------------------------------------------------
-
 .title {
   margin-bottom: 12px;
   font-size: 20px;
@@ -12,93 +8,70 @@
     margin-bottom: 22px;
     font-size: 30px;
   }
-  &-page {
-    display: flex;
-    align-items: center;
-    line-height: 1;
+}
+
+.title-page {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  @include bb;
+  @include font-en;
+  @include max {
+    height: $height-header-sp;
+    padding: 0 $padding-sp;
+    font-size: 30px;
+  }
+  @include min {
+    height: $height-header-pc;
+    padding: 0 $padding-pc;
+    font-size: 56px;
+  }
+  &-ja {
     font-weight: 700;
-    letter-spacing: 0.06em;
-    @include bb;
-    @include font-en;
+    @include font-sans;
     @include max {
-      height: $height-header-sp;
-      padding: 0 $padding-sp;
-      font-size: 30px;
+      font-size: 24px;
     }
     @include min {
-      height: $height-header-pc;
-      padding: 0 $padding-pc;
-      font-size: 56px;
-    }
-    &-ja {
-      font-weight: 700;
-      @include font-sans;
-      @include max {
-        font-size: 24px;
-      }
-      @include min {
-        font-size: 42px;
-      }
-    }
-    &-separator {
-      @include max {
-        display: none;
-      }
-      @include min {
-        width: 30px;
-        height: 3px;
-        margin: 0 24px;
-        background-color: currentColor; 
-      }
-    }
-    &-fullname {
-      @include max {
-        display: none;
-      }
-      @include min {
-        font-size: 60%;
-      }
-    }
-  }
-  &-section {
-    position: absolute;
-    letter-spacing: 0.1em;
-    @include min {
-      top: -42px;
-      font-size: 48px;
-      color: $color-border;
-    }
-  }
-  &-small {
-    line-height: 1.4;
-    @include max {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    @include min {
-      margin-bottom: 18px;
-    }
-    span {
-      display: inline;
-      padding-bottom: 2px;
-      border-bottom: 2px solid $color-border;
-    }
-  }
-  &-daitan {
-    font-weight: 700;
-    line-height: 1.2;
-    position: relative;
-    letter-spacing: 0.12em;
-    @include max {
-      margin-bottom: 14px;
-      font-size: 16px;
-    }
-    @include min {
-      margin-bottom: 36px;
-      font-size: 32px;
-    }
-    span {
-      background-image: linear-gradient(transparent 75%, $color-marker 75%);
+      font-size: 42px;
     }
   }
 }
+
+.title-section {
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+  letter-spacing: 0.12em;
+  @include max {
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+  @include min {
+    margin-bottom: 36px;
+    font-size: 32px;
+  }
+  span {
+    background-image: linear-gradient(transparent 75%, $color-marker 75%);
+  }
+}
+
+.title-small {
+  line-height: 1.4;
+  @include max {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  @include min {
+    margin-bottom: 18px;
+  }
+  span {
+    display: inline;
+    padding-bottom: 2px;
+    border-bottom: 2px solid $color-border;
+  }
+}
+
+

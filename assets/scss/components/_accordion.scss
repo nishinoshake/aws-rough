@@ -1,89 +1,86 @@
 @charset "utf-8";
 
-// -----------------------------------------------------
-// 見出し
-// -----------------------------------------------------
+.accordion-item {
+  background-color: $color-white;
+  border: $width-border-form solid $color-border;
+  border-radius: $radius;
+  &.is-active {
+    .accordion-inside {
+      opacity: 1;
+    }
+    .accordion-title svg {
+      transform: rotate(180deg);
+    }
+  }
+  &:nth-child(n+2) {
+    @include max {
+      margin-top: 12px;
+    }
+    @include min {
+      margin-top: $margin-pc;
+    }
+  }
+}
 
-.accordion {
-  &-item {
-    background-color: $color-white;
-    border: $width-border-form solid $color-border;
-    border-radius: $radius;
-    &.is-active {
-      .accordion-inside {
-        opacity: 1;
-      }
-      .accordion-title svg {
-        transform: rotate(180deg);
-      }
-    }
-    &:nth-child(n+2) {
-      @include max {
-        margin-top: 12px;
-      }
-      @include min {
-        margin-top: $margin-pc;
-      }
+.accordion-title {
+  width: 100%;
+  display: block;
+  position: relative;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  @include transition-fade;
+  @include max {
+    padding: 12px 30px 12px 20px;
+    font-size: 14px;
+  }
+  @include min {
+    padding: 22px 40px 22px 40px;
+    font-size: 18px;
+    &:hover {
+      opacity: 0.7;
     }
   }
-  &-title {
-    width: 100%;
-    display: block;
-    position: relative;
-    text-align: left;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    @include transition-fade;
+  svg {
+    height: auto;
+    fill: $color-border;
+    position: absolute;
+    transition: transform 0.32s $easeOutQuart;
     @include max {
-      padding: 12px 30px 12px 20px;
-      font-size: 14px;
+      width: 16px;
+      top: calc(50% - 9px);
+      right: 20px;
     }
     @include min {
-      padding: 22px 40px 22px 40px;
-      font-size: 18px;
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-    svg {
-      height: auto;
-      fill: $color-border;
-      position: absolute;
-      transition: transform 0.32s $easeOutQuart;
-      @include max {
-        width: 16px;
-        top: calc(50% - 9px);
-        right: 20px;
-      }
-      @include min {
-        width: 20px;
-        top: calc(50% - 12px);
-        right: 30px;
-      }
+      width: 20px;
+      top: calc(50% - 12px);
+      right: 30px;
     }
   }
-  &-frame {
-    overflow: hidden;
-    height: 0;
-    will-change: height;
+}
+
+.accordion-frame {
+  overflow: hidden;
+  height: 0;
+  will-change: height;
+}
+
+.accordion-inside {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  will-change: opacity;
+  background-image: linear-gradient(to right, $color-border, $color-border 4px, transparent 4px, transparent 6px);
+  background-size: 6px $width-border-form;
+  background-position: top;
+  background-repeat: repeat-x;
+  @include max {
+    padding: $padding-sp $padding-sp;
   }
-  &-inside {
-    position: relative;
-    opacity: 0;
-    transition: opacity 0.1s linear;
-    will-change: opacity;
-    background-image: linear-gradient(to right, $color-border, $color-border 4px, transparent 4px, transparent 6px);
-    background-size: 6px $width-border-form;
-    background-position: top;
-    background-repeat: repeat-x;
-    @include max {
-      padding: $padding-sp $padding-sp;
-    }
-    @include min {
-      padding: 34px $padding-pc;
-    }
-    .text {
-      text-align: justify;
-    }
+  @include min {
+    padding: 34px $padding-pc;
+  }
+  .text {
+    text-align: justify;
   }
 }

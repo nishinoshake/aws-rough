@@ -1,62 +1,37 @@
 @charset "utf-8";
 
-// -----------------------------------------------------
-// テキスト
-// -----------------------------------------------------
-
 .text {
   text-align: justify;
-  &-link {
-    color: $color-link;
-    text-decoration: underline;
-    path {
-      fill: $color-link;
-    }
+}
+
+* + .text {
+  @include max {
+    margin-top: 12px;
   }
-  &-bold {
-    font-weight: bold;
-  }
-  &-zakuri {
-    text-align: justify;
-    line-height: 2;
-    letter-spacing: 0.12em;
-    @include max {
-      font-size: 14px;
-    }
-    @include min {
-      font-size: 18px;
-    }
-    + .text-zakuri {
-      @include max {
-        margin-top: 14px;
-      }
-      @include min {
-        margin-top: 20px;
-      }
-    }
-  }
-  &-quote {
-    line-height: 1.8;
-    @include max {
-      margin: 40px 0;
-      padding: 0 20px;
-      font-size: 26px;
-    }
-    @include min {
-      margin: 80px 0;
-      padding: 0 40px;
-      font-size: 42px;
-    }
+  @include min {
+    margin-top: 14px;
   }
 }
 
-* {
-  + .text {
-    @include max {
-      margin-top: 12px;
-    }
-    @include min {
-      margin-top: 14px;
-    }
+.text-link {
+  color: $color-link;
+  text-decoration: underline;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-quote {
+  line-height: 1.8;
+  @include max {
+    margin: 40px 0;
+    padding: 0 20px;
+    font-size: 26px;
+  }
+  @include min {
+    margin: 80px 0;
+    padding: 0 40px;
+    font-size: 42px;
   }
 }

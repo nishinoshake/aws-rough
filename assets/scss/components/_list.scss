@@ -1,43 +1,37 @@
 @charset "utf-8";
 
-// -----------------------------------------------------
-// リスト
-// -----------------------------------------------------
-
-.list {
-  &-item {
-    line-height: 1.4;
-    position: relative;
+.list-item {
+  line-height: 1.4;
+  position: relative;
+  @include max {
+    padding-left: 18px;
+  }
+  @include min {
+    padding-left: 16px;
+  }
+  &:nth-child(n+2) {
     @include max {
-      padding-left: 18px;
+      margin-top: 6px;
     }
     @include min {
-      padding-left: 16px;
+      margin-top: 10px;
     }
-    &:nth-child(n+2) {
-      @include max {
-        margin-top: 6px;
-      }
-      @include min {
-        margin-top: 10px;
-      }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    background-color: $color-border;
+    @include max {
+      width: 4px;
+      height: 4px;
+      top: calc(50% - 2px);
     }
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      border-radius: 50%;
-      background-color: $color-border;
-      @include max {
-        width: 4px;
-        height: 4px;
-        top: calc(50% - 2px);
-      }
-      @include min {
-        width: 4px;
-        height: 4px;
-        top: calc(50% - 2px);
-      }
+    @include min {
+      width: 4px;
+      height: 4px;
+      top: calc(50% - 2px);
     }
   }
 }

@@ -1,32 +1,26 @@
 @charset "utf-8";
 
-// -----------------------------------------------------
-// ボタン
-// -----------------------------------------------------
-
-.button {
-  &-remove {
-    width: 32px;
-    height: 32px;
-    position: relative;
-    background-color: $color-black;
-    border-radius: 50%;
-    @include hide-text;
-    &:before,
-    &:after {
-      content: '';
-      width: 50%;
-      height: $width-border-form;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      background-color: $color-white;
-    }
-    &:before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-    &:after {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
+.button-remove {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  background-color: $color-black;
+  border-radius: 50%;
+  @include hide-text;
+  &:before,
+  &:after {
+    content: '';
+    width: 50%;
+    height: $width-border-form;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $color-white;
+  }
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }

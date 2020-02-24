@@ -9,21 +9,23 @@
   @include min {
     padding: 25px $padding-pc;
   }
-  &-list {
-    display: flex;
-    @include max {
-      justify-content: center;
-    }
-    @include min {
-      font-size: 20px;
-    }
+}
+
+.footer-list {
+  display: flex;
+  @include max {
+    justify-content: center;
   }
-  &-item {
-    &:nth-child(n+2) {
-      margin-left: 1em;
-    }
+  @include min {
+    font-size: 20px;
   }
-  &-item a {
+}
+
+.footer-item {
+  &:nth-child(n+2) {
+    margin-left: 1em;
+  }
+  a {
     color: inherit;
     font-weight: 700;
     text-decoration: none;

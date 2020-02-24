@@ -1,7 +1,5 @@
 @charset "utf-8";
-// -----------------------------------------------------
-// テーブル
-// -----------------------------------------------------
+
 .table {
   width: 100%;
   display: block;
@@ -95,28 +93,6 @@
       }
     }
   }
-  &-unit {
-    margin-left: 6px;
-  }
-  &-price {
-    text-align: right;
-  } // スペックの控えめなテーブル
-  &-spec {
-    margin: 30px 0;
-    border-collapse: collapse;
-    td {
-      padding: 8px 12px;
-      font-size: 14px;
-      line-height: 1.4;
-      @include min {
-        font-size: 16px;
-      }
-    }
-  }
-
-  // ---------------------------------------------------------------
-  //  でかい
-  // ---------------------------------------------------------------
   &.mod-grande {
     @include min {
       tr {
@@ -129,6 +105,27 @@
         bottom: 0;
         right: 26px;
       }
+    }
+  }
+}
+
+.table-unit {
+  margin-left: 6px;
+}
+
+.table-price {
+  text-align: right;
+}
+
+.table-spec {
+  margin: 30px 0;
+  border-collapse: collapse;
+  td {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    @include min {
+      font-size: 16px;
     }
   }
 }

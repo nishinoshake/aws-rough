@@ -20,181 +20,188 @@
       overflow-y: scroll;
     }
   }
-  &-button {
-    @include max {
-      width: $width-menu-sp;
-      height: $width-menu-sp;
-      position: fixed;
-      z-index: 20;
-      right: 0;
-      top: 0;
-      background-color: $color-black;
-      @include center-flex;
-      &.is-open {
-        .menu-button-icon {
-          &:before {
-            top: 50%;
-            transform: rotate(45deg);
-          }
-          span {
-            display: none;
-          }
-          &:after {
-            top: 50%;
-            transform: rotate(-45deg);
-          }
-        }
-      }
-      &-icon {
-        width: 20px;
-        height: 14px;
-        position: relative;
-        color: $color-white;
-        &:before,
-        &:after,
-        span {
-          content: "";
-          width: 100%;
-          height: 2px;
-          border-radius: 999em;
-          left: 0;
-          position: absolute;
-          background-color: currentColor;
-        }
+}
+
+.menu-button {
+  @include max {
+    width: $width-menu-sp;
+    height: $width-menu-sp;
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    top: 0;
+    background-color: $color-black;
+    @include center-flex;
+    &.is-open {
+      .menu-button-icon {
         &:before {
-          top: 0;
+          top: 50%;
+          transform: rotate(45deg);
         }
         span {
-          top: 50%;
+          display: none;
         }
         &:after {
-          top: 100%;
+          top: 50%;
+          transform: rotate(-45deg);
         }
       }
     }
+    &-icon {
+      width: 20px;
+      height: 14px;
+      position: relative;
+      color: $color-white;
+      &:before,
+      &:after,
+      span {
+        content: "";
+        width: 100%;
+        height: 2px;
+        border-radius: 999em;
+        left: 0;
+        position: absolute;
+        background-color: currentColor;
+      }
+      &:before {
+        top: 0;
+      }
+      span {
+        top: 50%;
+      }
+      &:after {
+        top: 100%;
+      }
+    }
+  }
+  @include min {
+    display: none;
+  }
+}
+
+.menu-frame {
+  @include max {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+    background-color: $color-white;
+    transform: translate3d(0, -100%, 0);
+    transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
+    will-change: transform;
+    border: $width-border-sp solid $color-border;
+  }
+}
+
+.menu-logo {
+  line-height: 1;
+  @include bb;
+  @include max {
+    width: 100%;
+    display: flex;
+  }
+  @include min {
+    height: $height-header-pc;
+  }
+  a {
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    text-align: center;
+    @include center-flex;
+    @include max {
+      padding: $padding-sp 0;
+      font-size: 32px;
+    }
+    @include min {
+      height: 100%;
+      font-size: 42px;
+      flex-direction: column;
+    }
+  }
+  &-en {
+    @include font-en;
+  }
+  &-ja {
+    @include max {
+      font-size: 90%;
+    }
+    @include min {
+      font-size: 72%;
+    }
+  }
+}
+
+.menu-list {
+  @include max {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $padding-sp #{$padding-sp - 10px};
+  }
+  @include min {
+    padding: 20px 14px;
+  }
+}
+
+.menu-item {
+  &.mod-detail {
     @include min {
       display: none;
     }
   }
-  &-frame {
-    @include max {
-      width: 100vw;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      visibility: hidden;
-      background-color: $color-white;
-      transform: translate3d(0, -100%, 0);
-      transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
-      will-change: transform;
-      border: $width-border-sp solid $color-border;
-    }
-  }
-  &-logo {
+  a {
+    display: flex;
     line-height: 1;
-    @include bb;
+    letter-spacing: normal;
+    font-weight: 700;
+    white-space: nowrap;
+    align-items: center;
+    @include font-en;
+    &.is-active {
+      span {
+        color: $color-white;
+        background-color: $color-black;
+      }
+    }
     @include max {
-      width: 100%;
-      display: flex;
+      padding: 10px;
+      font-size: 16px;
     }
     @include min {
-      height: $height-header-pc;
-    }
-    a {
-      width: 100%;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      line-height: 1.2;
-      text-align: center;
-      @include center-flex;
-      @include max {
-        padding: $padding-sp 0;
-        font-size: 32px;
-      }
-      @include min {
-        height: 100%;
-        font-size: 42px;
-        flex-direction: column;
-      }
-    }
-    &-en {
-      @include font-en;
-    }
-    &-ja {
-      @include max {
-        font-size: 90%;
-      }
-      @include min {
-        font-size: 72%;
-      }
-    }
-  }
-  &-list {
-    @include max {
-      display: flex;
-      flex-wrap: wrap;
-      padding: $padding-sp #{$padding-sp - 10px};
-    }
-    @include min {
-      padding: 20px 14px;
-    }
-  }
-  &-item {
-    &.mod-detail {
-      @include min {
-        display: none;
-      }
-    }
-    a {
-      display: flex;
-      line-height: 1;
-      letter-spacing: normal;
-      font-weight: 700;
-      white-space: nowrap;
-      align-items: center;
-      @include font-en;
-      &.is-active {
+      padding: 6px 0 6px 12px;
+      font-size: 18px;
+      &:hover {
         span {
           color: $color-white;
           background-color: $color-black;
         }
       }
-      @include max {
-        padding: 10px;
-        font-size: 16px;
-      }
-      @include min {
-        padding: 6px 0 6px 12px;
-        font-size: 18px;
-        &:hover {
-          span {
-            color: $color-white;
-            background-color: $color-black;
-          }
-        }
-      }
-      &:before {
-        // content: "";
-        width: 8px;
-        height: 8px;
-        margin-right: 6px;
-        border-radius: 50%;
-      }
+    }
+    &:before {
+      // content: "";
+      width: 8px;
+      height: 8px;
+      margin-right: 6px;
+      border-radius: 50%;
     }
   }
-  &-icon {
-    flex: none;
-    @include max {
-      width: 24px;
-      height: 24px;
-    }
-    @include min {
-      width: 28px;
-      height: 28px;
-    }
+}
+
+.menu-icon {
+  flex: none;
+  @include max {
+    width: 24px;
+    height: 24px;
   }
-  &-name {
-    padding: 2px 3px;
+  @include min {
+    width: 28px;
+    height: 28px;
   }
+}
+
+.menu-name {
+  padding: 2px 3px;
 }

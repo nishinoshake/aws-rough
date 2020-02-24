@@ -1,86 +1,72 @@
 @charset "utf-8";
-// -----------------------------------------------------
-// フォーム
-// -----------------------------------------------------
-.form {
-  &-label {
-    display: block;
-    line-height: 1.1;
-    font-weight: 700;
-    @include max {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    @include min {
-      font-size: 14px;
-      margin-bottom: 12px;
-    }
+
+.form-label {
+  display: block;
+  line-height: 1.1;
+  font-weight: 700;
+  @include max {
+    margin-bottom: 10px;
+    font-size: 14px;
   }
-  &-text {
-    position: relative;
-    &-input {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      text-align: center;
-      border: $width-border-form solid $color-border;
-      background-color: $color-white;
-      border-radius: $radius;
-      @include transition-collection;
-      &:invalid {
-        background-color: rgba($color-red, 0.2);
-      }
-    }
-    &-alert {
-      width: 100%;
-      position: absolute;
-      bottom: calc(100% + 8px);
-      left: 0;
-      padding: 4px 0;
-      font-size: 14px;
-      letter-spacing: 0.1em;
-      text-align: center;
-      color: $color-white;
-      background-color: $color-red;
-      pointer-events: none;
-    }
+  @include min {
+    font-size: 14px;
+    margin-bottom: 12px;
   }
-  &-select {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+}
+
+.form-text {
+  position: relative;
+}
+
+.form-text-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  border: $width-border-form solid $color-border;
+  background-color: $color-white;
+  border-radius: $radius;
+  @include transition-collection;
+  &:invalid {
+    background-color: rgba($color-red, 0.2);
+  }
+}
+
+.form-select {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  background-color: $color-white;
+  border: $width-border-form solid $color-border;
+  border-radius: $radius;
+  select {
+    opacity: 0;
+    font-size: 16px;
+    cursor: pointer;
+    @include fit-full;
+  }
+  &-value {
     display: block;
+    padding: 11px 16px 11px 0;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
     background-color: $color-white;
-    border: $width-border-form solid $color-border;
-    border-radius: $radius;
-    select {
-      opacity: 0;
-      font-size: 16px;
-      cursor: pointer;
-      @include fit-full;
-    }
-    &-value {
-      display: block;
-      padding: 11px 16px 11px 0;
-      font-size: 16px;
-      line-height: 1;
-      text-align: center;
-      white-space: nowrap;
-      background-color: $color-white;
-    }
-    &:after {
-      content: '';
-      height: 0;
-      border-style: solid;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 10px;
-      margin: auto 0;
-      width: 0;
-      border-width: 9px 7px 0 7px;
-      border-color: $color-border transparent transparent transparent;
-      pointer-events: none;
-    }
+  }
+  &:after {
+    content: '';
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto 0;
+    width: 0;
+    border-width: 9px 7px 0 7px;
+    border-color: $color-border transparent transparent transparent;
+    pointer-events: none;
   }
 }

@@ -8,137 +8,145 @@
   @include max {
     min-height: 100vh;
   }
-  &-title {
-    &-copy {
-      width: 10em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      line-height: 1;
-      color: $color-white;
-      font-weight: 700;
-      background-color: $color-black;
-      border-radius: 999em;
-      cursor: pointer;
-      @include transition-collection;
-      @include max {
-        margin-left: 25px;
-        padding: 10px 0;
-        font-size: 12px;
-      }
-      @include min {
-        margin-left: 50px;
-        padding: 16px 0;
-        font-size: 16px;
-      }
-    }
+}
+
+.detail-copy {
+  width: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: $color-white;
+  font-weight: 700;
+  background-color: $color-black;
+  border-radius: 999em;
+  cursor: pointer;
+  @include transition-collection;
+  @include max {
+    margin-left: 25px;
+    padding: 10px 0;
+    font-size: 12px;
   }
-  &-body {
-    position: relative;
-    @include max {
-      min-height: calc(100vh - #{$height-header-sp});
-      padding: $padding-sp;
-    }
+  @include min {
+    margin-left: 50px;
+    padding: 16px 0;
+    font-size: 16px;
+  }
+}
+
+.detail-body {
+  position: relative;
+  @include max {
+    min-height: calc(100vh - #{$height-header-sp});
+    padding: $padding-sp;
+  }
+  @include min {
+    min-height: calc(100vh - #{$height-header-pc});
+    padding: $padding-pc;
+  }
+}
+
+.detail-main {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: .2s linear;
+  @include max {
+    flex-direction: column-reverse;
+  }
+  @include min {
+    align-items: center;
+  }
+  &.is-visible {
+    opacity: 1;
+    transition-delay: .4s;
+    pointer-events: auto;
+  }
+}
+
+.detail-price {
+  @include min {
+    min-width: 400px;
+    padding-right: 100px;
+  }
+  .price {
+    margin-left: auto;
+  }
+}
+
+.detail-price-item {
+  &:nth-child(n + 2) {
+    margin-top: 20px;
     @include min {
-      min-height: calc(100vh - #{$height-header-pc});
-      padding: $padding-pc;
+      margin-top: 30px;
     }
   }
-  &-main {
-    display: flex;
+}
+
+.detail-price-link {
+  display: flex;
+  align-items: center;
+  @include hover-fade;
+}
+
+.detail-price-name {
+  margin-right: 20px;
+  font-size: 22px;
+  line-height: 1;
+  @include font-en;
+  @include min {
+    margin-right: 30px;
+    font-size: 28px;
+  }
+}
+
+.detail-price-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.detail-chart {
+  @include max {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  @include min {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.detail-empty {
+  position: absolute;
+  line-height: 1.5;
+  pointer-events: none;
+  @include font-en;
+  span {
+    display: block;
     opacity: 0;
-    pointer-events: none;
     transition: .2s linear;
-    @include max {
-      flex-direction: column-reverse;
+    &:nth-child(2) {
+      transition-delay: .08s;
     }
-    @include min {
-      align-items: center;
-    }
-    &.is-visible {
+  }
+  @include max {
+    top: $padding-sp;
+    left: $padding-sp;
+    font-size: 22px;
+  }
+  @include min {
+    top: $padding-pc;
+    left: $padding-pc;
+    font-size: 48px;
+  }
+  &.is-visible {
+    span {
       opacity: 1;
       transition-delay: .4s;
-      pointer-events: auto;
-    }
-  }
-  &-price {
-    @include min {
-      min-width: 400px;
-      padding-right: 100px;
-    }
-    &-item {
-      &:nth-child(n + 2) {
-        margin-top: 20px;
-        @include min {
-          margin-top: 30px;
-        }
-      }
-    }
-    &-link {
-      display: flex;
-      align-items: center;
-      @include hover-fade;
-    }
-    &-name {
-      margin-right: 20px;
-      font-size: 22px;
-      line-height: 1;
-      @include font-en;
-      @include min {
-        margin-right: 30px;
-        font-size: 28px;
-      }
-    }
-    &-color {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      margin-right: 16px;
-    }
-    .price {
-      margin-left: auto;
-    }
-  }
-  &-chart {
-    @include max {
-      width: 240px;
-      height: 240px;
-      margin: 0 auto;
-      margin-bottom: 40px;
-    }
-    @include min {
-      width: 320px;
-      height: 320px;
-    }
-  }
-  &-empty {
-    position: absolute;
-    line-height: 1.5;
-    pointer-events: none;
-    @include font-en;
-    span {
-      display: block;
-      opacity: 0;
-      transition: .2s linear;
-      &:nth-child(2) {
-        transition-delay: .08s;
-      }
-    }
-    @include max {
-      top: $padding-sp;
-      left: $padding-sp;
-      font-size: 22px;
-    }
-    @include min {
-      top: $padding-pc;
-      left: $padding-pc;
-      font-size: 48px;
-    }
-    &.is-visible {
-      span {
-        opacity: 1;
-        transition-delay: .4s;
-      }
     }
   }
 }
