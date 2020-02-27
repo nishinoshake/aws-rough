@@ -99,11 +99,23 @@
   }
 }
 
-.service-calc-ad-frame {
-  @include max {
-    margin-bottom: $padding-sp;
-  }
+.service-ad-list {
   @include min {
-    margin-bottom: 34px;
+    display: flex;
+  }
+}
+
+.service-ad-item {
+  @include min {
+    flex: none;
+    width: 336px;
+  }
+  &:nth-child(2) {
+    @include max {
+      margin-top: $padding-sp;
+    }
+    @include min {
+      margin-left: 40px;
+    }
   }
 }

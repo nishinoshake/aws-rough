@@ -50,6 +50,8 @@
       </div>
     </div>
 
+    <ServiceTemplateAds />
+
     <div class="section">
       <h2 class="title-section"><span>補足と前提</span></h2>
       <div class="service-summary accordion-list">
@@ -82,8 +84,6 @@
         <ServicePartsCondition></ServicePartsCondition>
       </div>
     </div>
-
-    <ServiceTemplateAds />
   </article>
 </template>
 

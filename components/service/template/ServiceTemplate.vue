@@ -12,11 +12,11 @@
         <slot name="zakuri" />
       </div>
     </div>
+    <ServiceTemplateAds />
     <div class="section">
       <h2 class="title-section"><span>補足と前提</span></h2>
       <slot name="aside" />
     </div>
-    <ServiceTemplateAds />
   </article>
 </template>
 
