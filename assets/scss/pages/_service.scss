@@ -9,7 +9,7 @@
 }
 
 .service-inside {
-  @include bb;
+  @include bb($color-gap);
   @include max {
     padding: $padding-sp;
   }
@@ -43,11 +43,11 @@
   }
 }
 
-.service-calc-header {
+.service-calc-footer {
   display: flex;
   justify-content: center;
   @include max {
-    margin-top: $margin-sp * 1.5;
+    margin-top: $margin-sp;
   }
   @include min {
     margin-top: $margin-pc * 1.5;

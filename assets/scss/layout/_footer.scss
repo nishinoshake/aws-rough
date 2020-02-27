@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 .footer {
-  @include bt;
+  @include bt($color-gap);
   @include max {
     padding: 12px $padding-sp;
-    border-bottom: $width-border-sp solid $color-border;
+    border-bottom: $width-border-sp * 3.4 solid $color-gap;
   }
   @include min {
     padding: 25px $padding-pc;

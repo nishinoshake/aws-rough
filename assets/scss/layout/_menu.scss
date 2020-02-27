@@ -10,12 +10,12 @@
   }
   @include min {
     width: $width-menu-pc;
-    height: 100vh;
+    height: calc(100vh - #{$width-border-pc * 2});
     position: sticky;
     flex: none;
-    top: 0;
+    top: $width-border-pc;
     left: 0;
-    @include br;
+    @include br($color-gap);
     &.can-scroll {
       overflow-y: scroll;
     }
@@ -91,13 +91,13 @@
     transform: translate3d(0, -100%, 0);
     transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
     will-change: transform;
-    border: $width-border-sp solid $color-border;
+    border: $width-border-sp solid $color-gap;
   }
 }
 
 .menu-logo {
   line-height: 1;
-  @include bb;
+  @include bb($color-gap);
   @include max {
     width: 100%;
     display: flex;
@@ -109,7 +109,7 @@
     width: 100%;
     font-weight: 700;
     letter-spacing: -0.01em;
-    line-height: 1.2;
+    line-height: 1.1;
     text-align: center;
     @include center-flex;
     @include max {
@@ -130,7 +130,7 @@
       font-size: 90%;
     }
     @include min {
-      font-size: 72%;
+      font-size: 70%;
     }
   }
 }
@@ -171,7 +171,7 @@
       font-size: 16px;
     }
     @include min {
-      padding: 6px 0 6px 12px;
+      padding: 5px 0 5px 12px;
       font-size: 18px;
       &:hover {
         span {

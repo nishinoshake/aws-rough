@@ -85,48 +85,48 @@
 // -----------------------------------------------------
 // Border
 // -----------------------------------------------------
-@mixin b {
+@mixin b($color: $color-border) {
   @include max {
-    border: $width-border-sp solid $color-border;
+    border: $width-border-sp solid $color;
   }
   @include min {
-    border: $width-border-pc solid $color-border;
+    border: $width-border-pc solid $color;
   }
 }
 
-@mixin bt {
+@mixin bt($color: $color-border) {
   @include max {
-    border-top: $width-border-sp solid $color-border;
+    border-top: $width-border-sp solid $color;
   }
   @include min {
-    border-top: $width-border-pc solid $color-border;
+    border-top: $width-border-pc solid $color;
   }
 }
 
-@mixin br {
+@mixin br($color: $color-border) {
   @include max {
-    border-right: $width-border-sp solid $color-border;
+    border-right: $width-border-sp solid $color;
   }
   @include min {
-    border-right: $width-border-pc solid $color-border;
+    border-right: $width-border-pc solid $color;
   }
 }
 
-@mixin bb {
+@mixin bb($color: $color-border) {
   @include max {
-    border-bottom: $width-border-sp solid $color-border;
+    border-bottom: $width-border-sp solid $color;
   }
   @include min {
-    border-bottom: $width-border-pc solid $color-border;
+    border-bottom: $width-border-pc solid $color;
   }
 }
 
-@mixin bl {
+@mixin bl($color: $color-border) {
   @include max {
-    border-left: $width-border-sp solid $color-border;
+    border-left: $width-border-sp solid $color;
   }
   @include min {
-    border-left: $width-border-pc solid $color-border;
+    border-left: $width-border-pc solid $color;
   }
 }
 

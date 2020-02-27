@@ -2,12 +2,15 @@
 
 body {
   font-size: 14px;
-  line-height: 1.9;
   letter-spacing: 0.12em;
   color: $color-font;
   font-feature-settings: "palt";
   @include font-sans;
+  @include max {
+    line-height: 1.7;
+  }
   @include min {
+    line-height: 1.9;
     font-size: 18px;
   }
 }
@@ -19,13 +22,12 @@ body {
   > div:after {
     content: "";
     position: fixed;
-    background-color: $color-border;
   }
   &:before,
   &:after {
     width: 100%;
     left: 0;
-    @include bt;
+    @include bt($color-gap);
   }
   &:before {
     top: 0;
@@ -37,7 +39,7 @@ body {
   > div:after {
     height: 100%;
     top: 0;
-    @include bl;
+    @include bl($color-gap);
   }
   > div:before {
     left: 0;
@@ -66,9 +68,6 @@ body {
   min-height: 100vh;
   flex-grow: 1;
   position: relative;
-  @include max {
-    padding-bottom: 90px;
-  }
 }
 
 .sp {

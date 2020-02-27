@@ -5,19 +5,20 @@
   align-items: center;
   position: fixed;
   z-index: 10;
-  bottom: 20px;
   border: $width-border-form solid $color-black;
   background-color: $color-black;
   border-radius: 999em;
   overflow: hidden;
   @include max {
-    width: calc(100% - #{$padding-sp * 2});
+    width: calc(100% - #{$padding-sp * 2 + $width-border-sp * 2});
     max-width: 360px;
+    bottom: #{$width-border-sp + 10px};
     left: 50%;
     transform: translateX(-50%);
   }
   @include min {
-    right: 20px;
+    bottom: #{$width-border-pc + 14px};
+    right: #{$width-border-pc + 14px};
   }
 }
 
@@ -49,7 +50,7 @@
   }
   @include min {
     min-width: 270px;
-    padding: 14px 14px 14px 18px;
+    padding: 16px 16px 16px 22px;
     font-size: 24px;
   }
   .price-number {

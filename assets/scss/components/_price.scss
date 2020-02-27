@@ -7,6 +7,12 @@
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0.06em;
+  @include max {
+    font-size: 10px;
+  }
+  @include min {
+    font-size: 12px;
+  }
   &.mod-large {
     @include max {
       font-size: 12px;

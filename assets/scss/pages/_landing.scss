@@ -9,7 +9,7 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-indent: 0.1em;
-  @include bb;
+  @include bb($color-gap);
   @include max {
     padding: 50px $padding-sp;
     font-size: 24px;

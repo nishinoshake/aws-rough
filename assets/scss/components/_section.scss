@@ -9,7 +9,7 @@
     padding: $padding-pc;
   }
   + .section {
-    @include bt;
+    @include bt($color-gap);
   }
 }
 

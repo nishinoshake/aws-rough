@@ -16,7 +16,7 @@
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0.06em;
-  @include bb;
+  @include bb($color-gap);
   @include font-en;
   @include max {
     height: $height-header-sp;
@@ -42,7 +42,7 @@
 
 .title-section {
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
   position: relative;
   letter-spacing: 0.12em;
   @include max {
@@ -54,7 +54,16 @@
     font-size: 32px;
   }
   span {
-    background-image: linear-gradient(transparent 75%, $color-marker 75%);
+    background-image: linear-gradient(transparent 70%, $color-marker 70%);
+  }
+  + .accordion-list,
+  + .spec {
+    @include max {
+      margin-top: 28px;
+    }
+    @include min {
+      margin-top: 40px;
+    }
   }
 }
 
