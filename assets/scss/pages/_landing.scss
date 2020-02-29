@@ -9,6 +9,7 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-indent: 0.1em;
+  background-color: $color-white;
   @include bb($color-gap);
   @include max {
     padding: 50px $padding-sp;
@@ -58,7 +59,7 @@
     display: flex;
     align-items: center;
     @include max {
-      width: 126px;
+      width: 140px;
     }
     @include min {
       width: 200px;
@@ -92,11 +93,10 @@
   margin-bottom: 5px;
   line-height: 1;
   letter-spacing: 0.03em;
-  font-weight: 700;
   white-space: nowrap;
   @include font-en;
   @include max {
-    font-size: 12px;
+    font-size: 14px;
   }
   @include min {
     margin-bottom: 9px;

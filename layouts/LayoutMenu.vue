@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['menu', { 'is-open': isMenuOpen, 'can-scroll': canScroll }]">
+  <nav :class="['menu', { 'is-open': isMenuOpen }]">
     <div class="menu-frame">
       <p class="menu-logo">
         <nuxt-link to="/" @click.native="HIDE_MENU"
@@ -7,13 +7,15 @@
           ><span class="menu-logo-en">AWS</span></nuxt-link
         >
       </p>
-      <ul class="menu-list" ref="menuList">
-        <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
-          <nuxt-link :to="service.href" @click.native="handleClick">
-            <span class="menu-name">{{ service.name }}</span>
-          </nuxt-link>
-        </li>
-      </ul>
+      <div class="menu-list-container" :class="{ 'can-scroll': canScroll }">
+        <ul class="menu-list" ref="menuList">
+          <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
+            <nuxt-link :to="service.href" @click.native="handleClick">
+              <span class="menu-name">{{ service.name }}</span>
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
     </div>
     <button :class="['menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
       <span class="menu-button-icon">
@@ -55,10 +57,11 @@ export default {
         return
       }
 
-      const menuHeight = this.$refs.menuList.offsetHeight
       const menuOffsetY = this.$refs.menuList.getBoundingClientRect().top
+      const menuHeight = this.$refs.menuList.offsetHeight
+      const borderWidth = 30
 
-      this.canScroll = menuHeight > window.innerHeight - menuOffsetY
+      this.canScroll = menuOffsetY + menuHeight + borderWidth > window.innerHeight
     },
     toggle() {
       this.TOGGLE_MENU()

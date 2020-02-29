@@ -95,7 +95,11 @@
               </tr>
               <tr>
                 <th>為替レート</th>
-                <td><ExternalLink href="https://exchangeratesapi.io">Foreign exchange rates API</ExternalLink></td>
+                <td>
+                  <ExternalLink href="https://github.com/exchangeratesapi/exchangeratesapi"
+                    >exchangeratesapi</ExternalLink
+                  >
+                </td>
               </tr>
             </tbody>
           </table>

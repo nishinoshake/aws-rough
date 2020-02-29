@@ -9,6 +9,7 @@
 }
 
 .service-inside {
+  background-color: $color-white;
   @include bb($color-gap);
   @include max {
     padding: $padding-sp;
@@ -33,6 +34,7 @@
 
 .service-calc-label {
   line-height: 1.2;
+  font-weight: 700;
   @include max {
     margin-bottom: 20px;
     font-size: 22px;
@@ -110,12 +112,17 @@
     flex: none;
     width: 336px;
   }
-  &:nth-child(2) {
+  &:nth-child(n+2) {
     @include max {
-      margin-top: $padding-sp;
+      display: none;
     }
     @include min {
       margin-left: 40px;
+    }
+  }
+  &:nth-child(n+3) {
+    @include max(1460px) {
+      display: none;
     }
   }
 }

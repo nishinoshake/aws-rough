@@ -3,12 +3,7 @@
 .list-item {
   line-height: 1.4;
   position: relative;
-  @include max {
-    padding-left: 18px;
-  }
-  @include min {
-    padding-left: 16px;
-  }
+  padding-left: 20px;
   &:nth-child(n+2) {
     @include max {
       margin-top: 6px;
@@ -19,19 +14,16 @@
   }
   &:before {
     content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px;
+    border-color: transparent transparent transparent $color-border;
+    border-style: solid;
     position: absolute;
+    top: 0;
     left: 0;
-    border-radius: 50%;
-    background-color: $color-border;
-    @include max {
-      width: 4px;
-      height: 4px;
-      top: calc(50% - 2px);
-    }
-    @include min {
-      width: 4px;
-      height: 4px;
-      top: calc(50% - 2px);
-    }
+    bottom: 0;
+    margin: auto 0;
   }
 }

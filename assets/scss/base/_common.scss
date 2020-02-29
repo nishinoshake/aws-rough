@@ -5,6 +5,7 @@ body {
   letter-spacing: 0.12em;
   color: $color-font;
   font-feature-settings: "palt";
+  background-color: $color-gap;
   @include font-sans;
   @include max {
     line-height: 1.7;
@@ -65,9 +66,14 @@ body {
 
 .contents {
   min-width: 0;
-  min-height: 100vh;
   flex-grow: 1;
   position: relative;
+  @include max {
+    min-height: calc(100vh - (2 * $width-border-sp));
+  }
+  @include min {
+    min-height: calc(100vh - (2 * $width-border-pc));
+  }
 }
 
 .sp {

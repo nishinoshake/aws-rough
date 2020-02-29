@@ -4,12 +4,6 @@
 // 料金内訳
 // -----------------------------------------------------
 
-.detail {
-  @include max {
-    min-height: 100vh;
-  }
-}
-
 .detail-copy {
   width: 10em;
   display: flex;
@@ -36,12 +30,13 @@
 
 .detail-body {
   position: relative;
+  background-color: $color-white;
   @include max {
-    min-height: calc(100vh - #{$height-header-sp});
+    min-height: calc(100vh - #{$height-header-sp + $height-footer-sp + (2 * $width-border-sp)});
     padding: $padding-sp;
   }
   @include min {
-    min-height: calc(100vh - #{$height-header-pc});
+    min-height: calc(100vh - #{$height-header-pc + $height-footer-pc + (2 * $width-border-pc)});
     padding: $padding-pc;
   }
 }
@@ -128,7 +123,7 @@
   span {
     display: block;
     opacity: 0;
-    transition: .2s linear;
+    transition: opacity .2s linear;
     &:nth-child(2) {
       transition-delay: .08s;
     }

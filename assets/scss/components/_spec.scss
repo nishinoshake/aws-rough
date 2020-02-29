@@ -23,7 +23,7 @@
   }
   th,
   td {
-    border: $width-border-form solid $color-border;
+    border: $width-border-spec solid $color-gray;
     @include max {
       padding: 8px 12px;
     }

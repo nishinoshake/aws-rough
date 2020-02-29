@@ -17,8 +17,8 @@
     transform: translateX(-50%);
   }
   @include min {
-    bottom: #{$width-border-pc + 14px};
-    right: #{$width-border-pc + 14px};
+    bottom: #{$width-border-pc + 15px};
+    right: #{$width-border-pc + 15px};
   }
 }
 

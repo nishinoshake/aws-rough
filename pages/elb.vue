@@ -11,6 +11,8 @@
       <ServiceTemplateCalc :service="service[serviceName]" />
     </div>
 
+    <ServiceTemplateAds />
+
     <div class="section">
       <h2 class="title-section">
         <span>ざっくりわかるELB</span>
@@ -20,21 +22,18 @@
           <p class="text">トラフィックを分散してくれるやつ（ロードバランサー）。</p>
 
           <table class="spec">
-            <caption>
-              ※ LはOSI参照モデルのレイヤーです
-            </caption>
             <tbody>
               <tr>
                 <th>ALB</th>
-                <td>高機能 - HTTP/HTTPS(L7)</td>
+                <td>高機能・HTTP/HTTPS(L7)</td>
               </tr>
               <tr>
                 <th>NLB</th>
-                <td>シンプル - TCP(L4)</td>
+                <td>シンプル・TCP(L4)</td>
               </tr>
               <tr>
                 <th>CLB</th>
-                <td>旧世代 - L4/L7</td>
+                <td>旧世代・L4/L7</td>
               </tr>
             </tbody>
           </table>
@@ -49,8 +48,6 @@
         </div>
       </div>
     </div>
-
-    <ServiceTemplateAds />
 
     <div class="section">
       <h2 class="title-section"><span>補足と前提</span></h2>

@@ -14,8 +14,8 @@
   display: flex;
   align-items: center;
   line-height: 1;
-  font-weight: 700;
   letter-spacing: 0.06em;
+  background-color: $color-white;
   @include bb($color-gap);
   @include font-en;
   @include max {
@@ -52,9 +52,6 @@
   @include min {
     margin-bottom: 30px;
     font-size: 32px;
-  }
-  span {
-    background-image: linear-gradient(transparent 70%, $color-marker 70%);
   }
   + .accordion-list,
   + .spec {

@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .menu {
+  background-color: $color-white;
   @include max {
     &.is-open .menu-frame {
       visibility: visible;
@@ -16,9 +17,6 @@
     top: $width-border-pc;
     left: 0;
     @include br($color-gap);
-    &.can-scroll {
-      overflow-y: scroll;
-    }
   }
 }
 
@@ -97,6 +95,7 @@
 
 .menu-logo {
   line-height: 1;
+  background-color: $color-white;
   @include bb($color-gap);
   @include max {
     width: 100%;
@@ -109,7 +108,7 @@
     width: 100%;
     font-weight: 700;
     letter-spacing: -0.01em;
-    line-height: 1.1;
+    line-height: 1.2;
     text-align: center;
     @include center-flex;
     @include max {
@@ -135,6 +134,15 @@
   }
 }
 
+.menu-list-container {
+  @include min {
+    height: calc(100vh - #{$height-header-pc + $width-border-pc * 2});
+    &.can-scroll {
+      overflow-y: scroll;
+    } 
+  }
+}
+
 .menu-list {
   @include max {
     display: flex;
@@ -156,7 +164,6 @@
     display: flex;
     line-height: 1;
     letter-spacing: normal;
-    font-weight: 700;
     white-space: nowrap;
     align-items: center;
     @include font-en;
@@ -179,13 +186,6 @@
           background-color: $color-black;
         }
       }
-    }
-    &:before {
-      // content: "";
-      width: 8px;
-      height: 8px;
-      margin-right: 6px;
-      border-radius: 50%;
     }
   }
 }

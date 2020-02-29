@@ -10,7 +10,6 @@
         </div>
       </div>
     </div>
-    <div class="app-line"><div></div></div>
     <ErrorModal :is-visible="$store.state.error.isVisible" :message="$store.state.error.message" />
   </div>
 </template>

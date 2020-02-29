@@ -2,7 +2,6 @@
   <div :class="['accordion-item', { 'is-active': isActive }]">
     <button class="accordion-title" @click="toggle">
       {{ title }}
-      <ArrorwDown />
     </button>
     <div class="accordion-frame" ref="frame" :style="defaultFrameStyle">
       <div class="accordion-inside" ref="inside">
@@ -14,13 +13,9 @@
 
 <script>
 import anime from 'animejs'
-import ArrorwDown from '@/assets/svg/fa/arrow-down.svg'
 
 export default {
   name: 'ServicePartsAccordion',
-  components: {
-    ArrorwDown
-  },
   props: {
     title: String,
     forceOpen: Boolean

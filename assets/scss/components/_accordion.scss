@@ -8,7 +8,7 @@
     .accordion-inside {
       opacity: 1;
     }
-    .accordion-title svg {
+    .accordion-title:after {
       transform: rotate(180deg);
     }
   }
@@ -35,24 +35,26 @@
   }
   @include min {
     padding: 22px 40px 22px 40px;
-    &:hover {
-      opacity: 0.7;
-    }
+    font-size: 20px;
   }
-  svg {
-    height: auto;
-    fill: $color-border;
+  &:after {
+    content: '';
+    height: 0;
+    border-style: solid;
     position: absolute;
-    transition: transform 0.32s $easeOutQuart;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 0;
+    border-color: $color-border transparent transparent transparent;
+    pointer-events: none;
     @include max {
-      width: 16px;
-      top: calc(50% - 9px);
       right: 20px;
+      border-width: 10px 8px 0 8px;
     }
     @include min {
-      width: 20px;
-      top: calc(50% - 12px);
-      right: 30px;
+      right: 32px;
+      border-width: 14px 10px 0 10px;
     }
   }
 }
@@ -76,7 +78,7 @@
     padding: $padding-sp $padding-sp;
   }
   @include min {
-    padding: 34px $padding-pc;
+    padding: $padding-pc $padding-pc;
   }
   .text {
     text-align: justify;

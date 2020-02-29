@@ -1,13 +1,18 @@
 @charset "utf-8";
 
 .footer {
+  display: flex;
+  align-items: center;
+  background-color: $color-white;
   @include bt($color-gap);
   @include max {
-    padding: 12px $padding-sp;
+    height: $height-footer-sp;
+    padding: 0 $padding-sp;
     border-bottom: $width-border-sp * 3.4 solid $color-gap;
   }
   @include min {
-    padding: 25px $padding-pc;
+    height: $height-footer-pc;
+    padding: 0 $padding-pc;
   }
 }
 

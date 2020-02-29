@@ -2,6 +2,7 @@
 
 .section {
   overflow: hidden;
+  background-color: $color-white;
   @include max {
     padding: $padding-sp;
   }
@@ -19,7 +20,7 @@
       margin-top: 20px;
     }
     @include min {
-      margin-top: 50px;
+      margin-top: 36px;
     }
   }
 
