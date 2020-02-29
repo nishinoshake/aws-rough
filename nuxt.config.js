@@ -73,6 +73,14 @@ module.exports = {
   plugins: [{ src: '~/plugins/vue-google-adsense', ssr: false }],
   build: {
     extend(config, { isDev }) {
+      if (config.externals) {
+        config.externals.moment = 'moment'
+      } else {
+        config.externals = {
+          moment: 'moment'
+        }
+      }
+
       // SVGを画像ではなく要素として使いたかったのでvue-svg-loaderを追加
       config.module.rules = config.module.rules.map(rule => {
         if (rule.test.toString().indexOf('svg') > -1) {
