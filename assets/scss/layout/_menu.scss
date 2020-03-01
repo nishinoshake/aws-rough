@@ -4,9 +4,7 @@
   background-color: $color-white;
   @include max {
     &.is-open .menu-frame {
-      visibility: visible;
-      transform: translate3d(0, 0, 0);
-      transition: transform 0.36s $easeOutExpo, visibility 0s;
+      display: block;
     }
   }
   @include min {
@@ -84,11 +82,8 @@
     top: 0;
     left: 0;
     z-index: 10;
-    visibility: hidden;
+    display: none;
     background-color: $color-white;
-    transform: translate3d(0, -100%, 0);
-    transition: transform 0.36s $easeOutExpo, visibility 0s 0.36s;
-    will-change: transform;
     border: $width-border-sp solid $color-gap;
   }
 }
@@ -113,7 +108,7 @@
     @include center-flex;
     @include max {
       padding: $padding-sp 0;
-      font-size: 32px;
+      font-size: 26px;
     }
     @include min {
       height: 100%;

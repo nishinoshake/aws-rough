@@ -8,6 +8,7 @@
   @include max {
     height: $height-footer-sp;
     padding: 0 $padding-sp;
+    justify-content: center;
     border-bottom: $width-border-sp * 3.4 solid $color-gap;
   }
   @include min {

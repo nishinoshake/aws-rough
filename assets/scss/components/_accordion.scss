@@ -49,8 +49,8 @@
     border-color: $color-border transparent transparent transparent;
     pointer-events: none;
     @include max {
-      right: 20px;
-      border-width: 10px 8px 0 8px;
+      right: 16px;
+      border-width: 9px 7px 0 7px;
     }
     @include min {
       right: 32px;
