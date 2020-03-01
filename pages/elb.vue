@@ -11,8 +11,6 @@
       <ServiceTemplateCalc :service="service[serviceName]" />
     </div>
 
-    <ServiceTemplateAds />
-
     <div class="section">
       <h2 class="title-section">
         <span>ざっくりわかるELB</span>
@@ -81,6 +79,8 @@
         <ServicePartsCondition></ServicePartsCondition>
       </div>
     </div>
+
+    <ServiceTemplateAds />
   </article>
 </template>
 

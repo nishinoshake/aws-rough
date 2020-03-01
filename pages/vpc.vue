@@ -6,8 +6,6 @@
       <ServiceTemplateCalc :service="service[serviceName]" />
     </div>
 
-    <ServiceTemplateAds />
-
     <div class="section">
       <h2 class="title-section">
         <span>ざっくりわかるVPC</span>
@@ -59,6 +57,8 @@
         </ServicePartsAccordion>
       </div>
     </div>
+
+    <ServiceTemplateAds />
   </article>
 </template>
 
