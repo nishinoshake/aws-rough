@@ -4,19 +4,14 @@
     <div class="section">
       <h2 class="title-section"><span>料金が気になるサービスは？</span></h2>
       <div class="service-zakuri">
-        <div class="landing-service-list">
-          <section class="landing-service-item" v-for="service in services" :key="service.key">
+        <ul class="landing-service-list">
+          <li :class="`landing-service-item mod-${service.color}`" v-for="service in services" :key="service.key">
             <nuxt-link :to="`/${service.key}/`">
-              <figure class="landing-service-icon">
-                <ServicePartsIcon :name="service.key" />
-              </figure>
-              <div class="landing-service-summary">
-                <h3 class="landing-service-name">{{ service.name }}</h3>
-                <p class="landing-service-description">{{ service.description }}</p>
-              </div>
+              <span class="landing-service-name">{{ service.name }}</span>
+              <span class="landing-service-description">{{ service.description }}</span>
             </nuxt-link>
-          </section>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
 
