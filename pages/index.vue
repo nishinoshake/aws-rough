@@ -163,7 +163,6 @@
 <script>
 import { mapState } from 'vuex'
 import ExternalLink from '@/components/text/ExternalLink'
-import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
@@ -172,7 +171,7 @@ import { getService } from '@/lib/service'
 
 export default {
   name: 'LandingIndex',
-  components: { ExternalLink, ServiceTemplateAds, ServicePartsIcon },
+  components: { ExternalLink, ServiceTemplateAds },
   data() {
     return {
       monthlyDate: MONTHLY_DATE

@@ -27,12 +27,10 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import serviceConfig from '@/config/service/mokuji'
 
 export default {
   name: 'LayoutMenu',
-  components: { ServicePartsIcon },
   data() {
     return {
       services: serviceConfig,

@@ -5,11 +5,8 @@
 </template>
 
 <script>
-import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
-
 export default {
   name: 'ServiceTemplateTitle',
-  components: { ServicePartsIcon },
   props: {
     service: {
       type: Object,
