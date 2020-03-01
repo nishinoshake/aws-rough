@@ -137,6 +137,10 @@
   font-family: -apple-system, BlinkMacSystemFont, YuGothic, "Hiragino Sans", "Meiryo", sans-serif;
 }
 
+@mixin font-serif {
+  font-family: "YuMincho", "Yu Mincho", serif;
+}
+
 @mixin font-en {
   font-family: 'Lato', sans-serif;
 }

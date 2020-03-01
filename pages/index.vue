@@ -39,6 +39,9 @@
       <div class="service-zakuri">
         <div class="section-child">
           <table class="spec">
+            <caption>
+              ※ データは毎朝10時に更新しています。
+            </caption>
             <tbody>
               <tr>
                 <th>通貨</th>
@@ -63,22 +66,6 @@
                 <th>リージョン</th>
                 <td>東京リージョン<br />（SESのみバージニア北部）</td>
               </tr>
-            </tbody>
-          </table>
-
-          <p class="text">
-            シンプルにするために、よく使われそうな条件に絞ったサイト設計にしています。
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2 class="title-section"><span>使用しているデータ</span></h2>
-      <div class="service-zakuri">
-        <div class="section-child">
-          <table class="spec">
-            <tbody>
               <tr>
                 <th>AWSの料金</th>
                 <td>
@@ -98,10 +85,6 @@
               </tr>
             </tbody>
           </table>
-
-          <p class="text">
-            毎朝10時にデータを更新しています。
-          </p>
         </div>
       </div>
     </div>

@@ -43,15 +43,20 @@
 .title-section {
   font-weight: 700;
   line-height: 1.1;
+  display: flex;
   position: relative;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   @include max {
-    margin-bottom: 14px;
+    margin-bottom: 18px;
     font-size: 16px;
   }
   @include min {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     font-size: 32px;
+  }
+  span {
+    padding: 6px 8px;
+    background: $color-light-gray;
   }
   + .accordion-list,
   + .spec {
@@ -59,12 +64,13 @@
       margin-top: 28px;
     }
     @include min {
-      margin-top: 40px;
+      margin-top: 44px;
     }
   }
 }
 
 .title-small {
+  font-weight: 700;
   line-height: 1.4;
   @include max {
     margin-bottom: 10px;

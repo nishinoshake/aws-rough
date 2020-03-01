@@ -2,7 +2,7 @@ export default {
   key: 'lambda',
   name: 'Lambda',
   href: '/lambda/',
-  description: 'FaaS',
+  description: '関数',
   color: 'orange',
   multiple: false,
   table: [

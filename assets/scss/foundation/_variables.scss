@@ -7,6 +7,7 @@ $image: '/assets/img/specialmooove';
 // -----------------------------------------------------
 $color-white: #fff;
 $color-bg: #f8f9fb;
+$color-light-gray: #eaeaea;
 $color-gray: #ccc;
 $color-link: #039be4;
 $color-red: #e05243;
@@ -14,10 +15,9 @@ $color-orange: #f58536;
 $color-beige: #d9a741;
 $color-blue: #2e73b8;
 $color-muted: #888;
-$color-dark: #222;
 $color-black: #000;
-$color-font: $color-dark;
-$color-border: $color-dark;
+$color-font: $color-black;
+$color-border: $color-black;
 $color-gap: $color-bg;
 
 // -----------------------------------------------------
@@ -25,6 +25,7 @@ $color-gap: $color-bg;
 // -----------------------------------------------------
 $mq-max: 1192px;
 $mq-min: $mq-max + 1;
+$width-max: 1380px;
 $width-menu-pc: 200px;
 $width-menu-sp: 50px;
 $width-border-pc: 30px;
@@ -32,7 +33,7 @@ $width-border-sp: 25px;
 $width-border-form: 3px;
 $width-border-spec: 1px;
 $height-header-sp: 100px;
-$height-header-pc: 200px;
+$height-header-pc: 175px;
 $height-footer-pc: 120px;
 $height-footer-sp: 160px;
 $margin-sp: 20px;

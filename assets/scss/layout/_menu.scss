@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 .menu {
-  background-color: $color-white;
   @include max {
     &.is-open .menu-frame {
       display: block;
@@ -130,8 +129,9 @@
 }
 
 .menu-list-container {
+  background-color: $color-white;
   @include min {
-    height: calc(100vh - #{$height-header-pc + $width-border-pc * 2});
+    max-height: calc(100vh - #{$height-header-pc + $width-border-pc * 2});
     &.can-scroll {
       overflow-y: scroll;
     } 
@@ -145,7 +145,7 @@
     padding: $padding-sp #{$padding-sp - 10px};
   }
   @include min {
-    padding: 20px 14px;
+    padding: 20px;
   }
 }
 
@@ -173,7 +173,7 @@
       font-size: 16px;
     }
     @include min {
-      padding: 5px 0 5px 12px;
+      padding: 5px 0 5px 5px;
       font-size: 18px;
       &:hover {
         span {

@@ -20,6 +20,9 @@
     bottom: #{$width-border-pc + 15px};
     right: #{$width-border-pc + 15px};
   }
+  @include min($width-max) {
+    right: calc(50% - #{($width-max - 2 * $width-border-pc) / 2} + 15px);
+  }
 }
 
 .cart-link {
