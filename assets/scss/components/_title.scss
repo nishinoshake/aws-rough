@@ -54,10 +54,6 @@
     margin-bottom: 32px;
     font-size: 32px;
   }
-  span {
-    padding: 6px 8px;
-    background: $color-light-gray;
-  }
   + .accordion-list,
   + .spec {
     @include max {

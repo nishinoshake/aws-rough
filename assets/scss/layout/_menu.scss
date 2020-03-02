@@ -3,7 +3,9 @@
 .menu {
   @include max {
     &.is-open .menu-frame {
-      display: block;
+      visibility: visible;
+      transform: translateY(0);
+      transition: transform 0.36s $easeOutQuart, visibility 0s;
     }
   }
   @include min {
@@ -81,9 +83,12 @@
     top: 0;
     left: 0;
     z-index: 10;
-    display: none;
+    visibility: hidden;
     background-color: $color-white;
     border: $width-border-sp solid $color-gap;
+    transform: translateY(-100%);
+    transition: transform 0.36s $easeOutQuart, visibility 0s 0.36s;
+    will-change: transform;
   }
 }
 

@@ -2,10 +2,10 @@
   <nav :class="['menu', { 'is-open': isMenuOpen }]">
     <div class="menu-frame">
       <p class="menu-logo">
-        <nuxt-link to="/" @click.native="HIDE_MENU"
-          ><span class="menu-logo-ja">{{ prefix }}</span
-          ><span class="menu-logo-en">AWS</span></nuxt-link
-        >
+        <nuxt-link to="/">
+          <span class="menu-logo-ja">{{ prefix }}</span>
+          <span class="menu-logo-en">AWS</span>
+        </nuxt-link>
       </p>
       <div class="menu-list-container" :class="{ 'can-scroll': canScroll }">
         <ul class="menu-list" ref="menuList">
@@ -38,7 +38,17 @@ export default {
     }
   },
   computed: {
-    ...mapState(['isMenuOpen', 'prefix'])
+    ...mapState(['isMenuOpen', 'prefix']),
+    routeName() {
+      return this.$route.name
+    }
+  },
+  watch: {
+    async routeName(val) {
+      await this.$nextTick()
+
+      this.HIDE_MENU()
+    }
   },
   mounted() {
     this.handleResize()
@@ -47,7 +57,6 @@ export default {
   methods: {
     ...mapMutations(['HIDE_MENU', 'TOGGLE_MENU']),
     handleClick() {
-      this.HIDE_MENU()
       this.$emit('change')
     },
     handleResize() {
