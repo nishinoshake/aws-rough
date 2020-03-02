@@ -4,7 +4,8 @@
   border-collapse: collapse;
   @include max {
     width: 100%;
-    margin: 24px 0;
+    max-width: 400px;
+    margin: 24px auto;
   }
   @include min {
     margin: 40px 0;
@@ -16,28 +17,39 @@
     margin-bottom: 0;
   }
   &.mod-center {
-    text-align: center;
+    th,
+    td {
+      text-align: center;
+    }
   }
   thead th {
     font-weight: 700;
+    text-align: center;
+  }
+  th {
+    text-align: left;
   }
   th,
   td {
-    border: $width-border-spec solid $color-gray;
+    border-top: $width-border-spec solid $color-gray;
+    border-bottom: $width-border-spec solid $color-gray;
     @include max {
-      padding: 8px 12px;
+      padding: 10px 6px;
     }
     @include min {
-      padding: 12px 16px;
+      padding: 12px 8px;
     }
   }
   td {
+    @include min {
+      padding-left: 20px;
+    }
     &.mod-align-right {
       text-align: right;
     }
   }
   caption {
-    margin-top: 12px;
+    margin-top: 16px;
     caption-side: bottom;
     font-size: 80%;
     text-align: left;

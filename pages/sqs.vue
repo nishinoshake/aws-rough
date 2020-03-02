@@ -28,7 +28,7 @@
           <tbody>
             <tr>
               <th></th>
-              <th>SNS</th>
+              <td>SNS</td>
               <td>SQS</td>
             </tr>
             <tr>
