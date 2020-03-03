@@ -10,9 +10,10 @@
   letter-spacing: 0.16em;
   text-indent: 0.1em;
   background-color: $color-white;
-  @include bb($color-gap);
+  @include mb;
+  @include radius;
   @include max {
-    padding: 50px $padding-sp;
+    padding: 36px $padding-sp;
     font-size: 24px;
   }
   @include min {

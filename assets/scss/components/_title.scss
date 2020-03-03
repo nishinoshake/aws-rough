@@ -16,7 +16,8 @@
   line-height: 1;
   letter-spacing: 0.06em;
   background-color: $color-white;
-  @include bb($color-gap);
+  @include mb;
+  @include radius;
   @include font-en;
   @include max {
     height: $height-header-sp;

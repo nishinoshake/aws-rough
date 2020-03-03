@@ -15,7 +15,7 @@
     flex: none;
     top: $width-border-pc;
     left: 0;
-    @include br($color-gap);
+    padding-right: $width-border-pc;
   }
 }
 
@@ -25,9 +25,10 @@
     height: $width-menu-sp;
     position: fixed;
     z-index: 20;
-    right: 0;
-    top: 0;
+    top: 6px;
+    right: 6px;
     background-color: $color-black;
+    border-radius: 8px;
     @include center-flex;
     &.is-open {
       .menu-button-icon {
@@ -84,7 +85,8 @@
     left: 0;
     z-index: 10;
     visibility: hidden;
-    background-color: $color-white;
+    margin-bottom: $width-border-sp;
+    background-color: $color-gap;
     border: $width-border-sp solid $color-gap;
     transform: translateY(-100%);
     transition: transform 0.36s $easeOutQuart, visibility 0s 0.36s;
@@ -95,7 +97,8 @@
 .menu-logo {
   line-height: 1;
   background-color: $color-white;
-  @include bb($color-gap);
+  @include radius;
+  @include mb;
   @include max {
     width: 100%;
     display: flex;
@@ -135,6 +138,7 @@
 
 .menu-list-container {
   background-color: $color-white;
+  @include radius;
   @include min {
     max-height: calc(100vh - #{$height-header-pc + $width-border-pc * 2});
     &.can-scroll {
@@ -167,6 +171,9 @@
     white-space: nowrap;
     align-items: center;
     @include font-en;
+    span {
+      border-radius: 3px;
+    }
     &.is-active {
       span {
         color: $color-white;

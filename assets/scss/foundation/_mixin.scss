@@ -130,6 +130,51 @@
   }
 }
 
+@mixin mt {
+  @include max {
+    margin-top: $width-border-sp;
+  }
+  @include min {
+    margin-top: $width-border-pc;
+  }
+}
+
+@mixin mr {
+  @include max {
+    margin-right: $width-border-sp;
+  }
+  @include min {
+    margin-right: $width-border-pc;
+  }
+}
+
+@mixin mb {
+  @include max {
+    margin-bottom: $width-border-sp;
+  }
+  @include min {
+    margin-bottom: $width-border-pc;
+  }
+}
+
+@mixin ml {
+  @include max {
+    margin-left: $width-border-sp;
+  }
+  @include min {
+    margin-left: $width-border-pc;
+  }
+}
+
+@mixin radius {
+  @include max {
+    border-radius: 16px; 
+  }
+  @include min {
+    border-radius: 16px; 
+  }
+}
+
 // -----------------------------------------------------
 // Text
 // -----------------------------------------------------

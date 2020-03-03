@@ -17,11 +17,11 @@
     transform: translateX(-50%);
   }
   @include min {
-    bottom: #{$width-border-pc + 15px};
-    right: #{$width-border-pc + 15px};
+    bottom: #{$width-border-pc + 16px};
+    right: #{$width-border-pc + 16px};
   }
   @include min($width-max) {
-    right: calc(50% - #{($width-max - 2 * $width-border-pc) / 2} + 15px);
+    right: calc(50% - #{($width-max - 2 * $width-border-pc) / 2} + 16px);
   }
 }
 

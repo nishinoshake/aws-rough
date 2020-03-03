@@ -4,16 +4,17 @@
   display: flex;
   align-items: center;
   background-color: $color-white;
-  @include bt($color-gap);
+  @include mt;
+  @include radius;
   @include max {
     height: $height-footer-sp;
     padding: 0 $padding-sp;
     justify-content: center;
-    border-bottom: $width-border-sp * 3.4 solid $color-gap;
   }
   @include min {
     height: $height-footer-pc;
     padding: 0 $padding-pc;
+    border-radius: 999em;
   }
 }
 

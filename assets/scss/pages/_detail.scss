@@ -31,12 +31,13 @@
 .detail-body {
   position: relative;
   background-color: $color-white;
+  @include radius;
   @include max {
-    min-height: calc(100vh - #{$height-header-sp + $height-footer-sp + (2 * $width-border-sp)});
+    min-height: calc(100vh - #{$height-header-sp + $height-footer-sp + (3 * $width-border-sp) + $padding-bottom-sp});
     padding: $padding-sp;
   }
   @include min {
-    min-height: calc(100vh - #{$height-header-pc + $height-footer-pc + (2 * $width-border-pc)});
+    min-height: calc(100vh - #{$height-header-pc + $height-footer-pc + (4 * $width-border-pc)});
     padding: $padding-pc;
   }
 }

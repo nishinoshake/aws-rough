@@ -3,6 +3,7 @@
 .section {
   overflow: hidden;
   background-color: $color-white;
+  @include radius;
   @include max {
     padding: $padding-sp;
   }
@@ -10,7 +11,7 @@
     padding: $padding-pc;
   }
   + .section {
-    @include bt($color-gap);
+    @include mt;
   }
 }
 

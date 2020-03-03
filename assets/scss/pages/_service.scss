@@ -10,7 +10,8 @@
 
 .service-inside {
   background-color: $color-white;
-  @include bb($color-gap);
+  @include mb;
+  @include radius;
   @include max {
     padding: $padding-sp;
   }
