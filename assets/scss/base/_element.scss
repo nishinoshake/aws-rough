@@ -15,6 +15,7 @@ pre {
   padding: 12px;
   overflow: auto;
   background-color: $color-bg;
+  border-radius: 6px;
   @include min {
     padding: 20px;
   }

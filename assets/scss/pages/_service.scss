@@ -10,6 +10,7 @@
 
 .service-inside {
   background-color: $color-white;
+  @include b($color-gap);
   @include mb;
   @include radius;
   @include max {
@@ -87,11 +88,16 @@
     &:after {
       content: '';
       width: 12px;
-      height: $width-border-form;
       position: absolute;
       top: 50%;
       left: 0;
       background-color: currentColor;
+      @include max {
+        height: 2px;
+      }
+      @include min {
+        height: $width-border-form;
+      }
     }
     &:before {
       transform: translate(0, -50%);

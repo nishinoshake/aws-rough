@@ -31,6 +31,7 @@
 .detail-body {
   position: relative;
   background-color: $color-white;
+  @include b($color-gap);
   @include radius;
   @include max {
     min-height: calc(100vh - #{$height-header-sp + $height-footer-sp + (3 * $width-border-sp) + $padding-bottom-sp});

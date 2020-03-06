@@ -17,6 +17,7 @@
   letter-spacing: 0.06em;
   background-color: $color-white;
   @include mb;
+  @include b($color-gap);
   @include radius;
   @include font-en;
   @include max {
@@ -33,10 +34,10 @@
     font-weight: 700;
     @include font-sans;
     @include max {
-      font-size: 24px;
+      font-size: 22px;
     }
     @include min {
-      font-size: 42px;
+      font-size: 40px;
     }
   }
 }
@@ -48,11 +49,15 @@
   position: relative;
   letter-spacing: 0.06em;
   @include max {
-    margin-bottom: 18px;
+    margin: (-$padding-sp) (-$padding-sp) $padding-sp;
+    padding: 20px $padding-sp;
+    border-bottom: $width-border-form solid $color-gap;
     font-size: 16px;
   }
   @include min {
-    margin-bottom: 32px;
+    margin: (-$padding-pc) (-$padding-pc) $padding-pc;
+    padding: 36px $padding-pc;
+    border-bottom: $width-border-form solid $color-gap;
     font-size: 32px;
   }
   + .accordion-list,

@@ -12,7 +12,6 @@
     position: relative;
     background-color: $color-white;
     border: $width-border-form solid $color-border;
-    border-radius: $radius;
     @include max {
       display: block;
       padding: $padding-sp;

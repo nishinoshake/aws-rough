@@ -86,48 +86,7 @@
 // Border
 // -----------------------------------------------------
 @mixin b($color: $color-border) {
-  @include max {
-    border: $width-border-sp solid $color;
-  }
-  @include min {
-    border: $width-border-pc solid $color;
-  }
-}
-
-@mixin bt($color: $color-border) {
-  @include max {
-    border-top: $width-border-sp solid $color;
-  }
-  @include min {
-    border-top: $width-border-pc solid $color;
-  }
-}
-
-@mixin br($color: $color-border) {
-  @include max {
-    border-right: $width-border-sp solid $color;
-  }
-  @include min {
-    border-right: $width-border-pc solid $color;
-  }
-}
-
-@mixin bb($color: $color-border) {
-  @include max {
-    border-bottom: $width-border-sp solid $color;
-  }
-  @include min {
-    border-bottom: $width-border-pc solid $color;
-  }
-}
-
-@mixin bl($color: $color-border) {
-  @include max {
-    border-left: $width-border-sp solid $color;
-  }
-  @include min {
-    border-left: $width-border-pc solid $color;
-  }
+  border: $width-border-form solid $color;
 }
 
 @mixin mt {
@@ -167,12 +126,7 @@
 }
 
 @mixin radius {
-  @include max {
-    border-radius: 16px; 
-  }
-  @include min {
-    border-radius: 16px; 
-  }
+  border-radius: 0;
 }
 
 // -----------------------------------------------------

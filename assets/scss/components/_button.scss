@@ -11,11 +11,16 @@
   &:after {
     content: '';
     width: 50%;
-    height: $width-border-form;
     position: absolute;
     top: 50%;
     left: 50%;
     background-color: $color-white;
+    @include max {
+      height: 2px;
+    }
+    @include min {
+      height: $width-border-form;
+    }
   }
   &:before {
     transform: translate(-50%, -50%) rotate(45deg);

@@ -13,8 +13,7 @@
   }
   @include min {
     height: $height-footer-pc;
-    padding: 0 $padding-pc;
-    border-radius: 999em;
+    padding: 0 16px;
   }
 }
 

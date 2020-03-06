@@ -12,8 +12,9 @@
   background-color: $color-white;
   @include mb;
   @include radius;
+  @include b($color-gap);
   @include max {
-    padding: 36px $padding-sp;
+    padding: $padding-sp;
     font-size: 24px;
   }
   @include min {

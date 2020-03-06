@@ -31,10 +31,12 @@
   }
   th,
   td {
-    border-top: $width-border-spec solid $color-gray;
-    border-bottom: $width-border-spec solid $color-gray;
+    border-top: $width-border-spec solid $color-black;
+    border-bottom: $width-border-spec solid $color-black;
     @include max {
       padding: 10px 6px;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
     }
     @include min {
       padding: 12px 8px;

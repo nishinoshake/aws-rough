@@ -14,11 +14,11 @@ $color-red: #e05243;
 $color-orange: #f58536;
 $color-beige: #d9a741;
 $color-blue: #2e73b8;
-$color-muted: #888;
+$color-muted: #444;
 $color-black: #000;
 $color-font: $color-black;
 $color-border: $color-black;
-$color-gap: #eceff1;
+$color-gap: $color-black;
 
 // -----------------------------------------------------
 // size
@@ -31,7 +31,7 @@ $width-menu-sp: 46px;
 $width-border-pc: 30px;
 $width-border-sp: 25px;
 $width-border-form: 3px;
-$width-border-spec: 1px;
+$width-border-spec: 3px;
 $height-header-sp: 75px;
 $height-header-pc: 145px;
 $height-footer-pc: 90px;
@@ -40,7 +40,7 @@ $margin-sp: 20px;
 $margin-pc: 20px;
 $padding-sp: 25px;
 $padding-pc: 50px;
-$padding-bottom-sp: 120px;
+$padding-bottom-sp: 110px;
 $radius: 6px;
 
 // -----------------------------------------------------

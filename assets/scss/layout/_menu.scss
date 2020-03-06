@@ -85,9 +85,9 @@
     left: 0;
     z-index: 10;
     visibility: hidden;
-    margin-bottom: $width-border-sp;
-    background-color: $color-gap;
-    border: $width-border-sp solid $color-gap;
+    background-color: $color-white;
+    border-bottom: $width-border-form solid $color-gap;
+    padding: $width-border-sp;
     transform: translateY(-100%);
     transition: transform 0.36s $easeOutQuart, visibility 0s 0.36s;
     will-change: transform;
@@ -96,7 +96,7 @@
 
 .menu-logo {
   line-height: 1;
-  background-color: $color-white;
+  @include b($color-gap);
   @include radius;
   @include mb;
   @include max {
@@ -137,7 +137,7 @@
 }
 
 .menu-list-container {
-  background-color: $color-white;
+  @include b($color-gap);
   @include radius;
   @include min {
     max-height: calc(100vh - #{$height-header-pc + $width-border-pc * 2});
