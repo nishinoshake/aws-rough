@@ -110,15 +110,12 @@
 
 .service-ad-list {
   @include min {
-    display: flex;
+    // display: flex;
+    // justify-content: center;
   }
 }
 
 .service-ad-item {
-  @include min {
-    flex: none;
-    width: 336px;
-  }
   &:nth-child(n+2) {
     @include max {
       display: none;

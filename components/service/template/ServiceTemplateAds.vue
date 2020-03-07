@@ -8,11 +8,6 @@
             <Adsense data-ad-client="ca-pub-7912727364342998"></Adsense>
           </no-ssr>
         </div>
-        <div class="service-ad-item">
-          <no-ssr>
-            <Adsense data-ad-client="ca-pub-7912727364342998"></Adsense>
-          </no-ssr>
-        </div>
       </div>
     </div>
   </div>
