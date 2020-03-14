@@ -2,6 +2,9 @@
   <article class="service">
     <ServiceTemplateTitle :service="service" />
     <div class="section">
+      <h2 class="title-section">
+        <span>料金を計算</span>
+      </h2>
       <ServiceTemplateCalc :service="service" />
     </div>
     <ServiceTemplateAds />

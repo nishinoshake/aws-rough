@@ -9,22 +9,20 @@
 }
 
 .service-inside {
-  background-color: $color-white;
-  @include b($color-gap);
-  @include mb;
-  @include radius;
-  @include max {
-    padding: $padding-sp;
-  }
-  @include min {
-    padding: $padding-pc;
-  }
   .service-calc.mod-multiple {
     @include max {
       margin-bottom: 50px;
     }
     @include min {
       margin-bottom: 40px;
+    }
+  }
+  + .service-inside {
+    @include max {
+      margin-top: 40px;
+    }
+    @include min {
+      margin-top: 60px;
     }
   }
 }
