@@ -41,16 +41,6 @@ module.exports = {
         property: 'og:image',
         content: 'https://aws-rough.cc/img/og.png?2018040902'
       }
-    ],
-    link: [
-      {
-        rel: 'shortcut icon',
-        href: '/img/favicon.ico'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Lato:700&display=swap'
-      }
     ]
   },
   loading: false,
