@@ -7,7 +7,7 @@ const pageDescription = description => `${description}${SITE_DESCRIPTION}`
 
 const meta = {
   index: {
-    title: `AWSの料金を日本円でざっくり見積もり | ${SITE_TITLE}`,
+    title: `${SITE_TITLE} | AWSの料金を日本円でざっくり見積もり`,
     description: SITE_DESCRIPTION
   },
   error_404: {
