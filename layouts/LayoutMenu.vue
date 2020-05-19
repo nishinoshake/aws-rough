@@ -3,7 +3,7 @@
     <div class="menu-frame">
       <p class="menu-logo">
         <nuxt-link to="/">
-          <span class="menu-logo-ja">{{ prefix }}</span>
+          <span class="menu-logo-ja">ざっくり</span>
           <span class="menu-logo-en">AWS</span>
         </nuxt-link>
       </p>
@@ -38,7 +38,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['isMenuOpen', 'prefix']),
+    ...mapState(['isMenuOpen']),
     routeName() {
       return this.$route.name
     }

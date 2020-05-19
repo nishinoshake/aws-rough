@@ -17,7 +17,6 @@ const store = () =>
       fx: {},
       tables: {},
       total: { usd: 0, jpy: 0 },
-      prefix: '　',
       isLoaded: false,
       isMenuOpen: false,
       error: {
@@ -54,9 +53,6 @@ const store = () =>
       },
       SET_IS_LOADED(state) {
         state.isLoaded = true
-      },
-      SET_PREFIX(state, { prefix }) {
-        state.prefix = prefix
       },
       SHOW_MENU(state) {
         state.isMenuOpen = true
@@ -181,13 +177,6 @@ const store = () =>
         }
 
         commit('APPEND', { serviceKey, serviceConfig })
-      },
-      selectPrefix({ state, commit }) {
-        const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min
-        const words = ['ざっくり', 'ザックリ', 'やっぱり', 'さっぱり', 'あっさり', 'こってり']
-        const index = getRandomInt(0, words.length)
-
-        commit('SET_PREFIX', { prefix: words[index] })
       }
     }
   })

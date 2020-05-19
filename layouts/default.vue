@@ -41,8 +41,6 @@ export default {
     if (query && query.z) {
       this.$store.dispatch('fetchZ', { fetchZ, hash: query.z, serviceConfig })
     }
-
-    this.$store.dispatch('selectPrefix')
   }
 }
 </script>
