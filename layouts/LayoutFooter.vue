@@ -5,12 +5,10 @@
         <ExternalLink href="https://github.com/nishinoshake/aws-rough">GitHub</ExternalLink>
       </li>
       <li class="footer-item">
-        <ExternalLink href="https://www.youtube.com/results?search_query=BRiNG+iCiNG+SHiT+HORSE+TOUR+FiNAL"
-          >BiSH</ExternalLink
-        >
+        <ExternalLink href="https://calculator.s3.amazonaws.com/index.html?lng=ja_JP">公式ツール</ExternalLink>
       </li>
       <li class="footer-item">
-        <ExternalLink href="https://calculator.s3.amazonaws.com/index.html?lng=ja_JP">公式ツール</ExternalLink>
+        <ExternalLink href="https://hatebu.noplan.cc">先週のはてブ</ExternalLink>
       </li>
     </ul>
   </footer>
