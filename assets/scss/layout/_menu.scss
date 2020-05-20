@@ -4,8 +4,6 @@
   @include max {
     &.is-open .menu-frame {
       visibility: visible;
-      transform: translateY(0);
-      transition: transform 0.36s $easeOutQuart, visibility 0s;
     }
   }
   @include min {
@@ -30,7 +28,7 @@
     line-height: 1;
     @include max {
       padding: 16px 10px;
-      font-size: 22px;
+      font-size: 20px;
     }
     @include min {
       display: flex;
@@ -50,9 +48,13 @@
     height: $width-menu-sp;
     position: fixed;
     z-index: 20;
-    top: 0;
-    right: 0;
+    bottom: $padding-sp;
+    left: $padding-sp;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: $color-white;
     background-color: $color-black;
+    border-radius: 50%;
     @include center-flex;
   }
   @include min {
@@ -75,7 +77,8 @@
   }
   &-icon {
     width: 20px;
-    height: 14px;
+    height: 12px;
+    margin-bottom: 2px;
     position: relative;
     color: $color-white;
     &:before,
@@ -105,15 +108,13 @@
   @include max {
     width: 100vw;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: 10;
     visibility: hidden;
     background-color: $color-white;
-    border-bottom: $width-border-form solid $color-gap;
-    padding: $width-border-sp;
-    transform: translateY(-100%);
-    transition: transform 0.36s $easeOutQuart, visibility 0s 0.36s;
+    border-top: $width-border-form solid $color-gap;
+    padding: 0 $width-border-sp #{$width-menu-sp + $padding-sp * 2};
     will-change: transform;
   }
   @include min {

@@ -1,7 +1,7 @@
 <template>
   <div class="landing">
     <div class="section">
-      <h1 class="title-section"><span>料金が気になるサービスは？</span></h1>
+      <h1 class="title-section"><span>料金が気になるサービスはどれですか？</span></h1>
       <div class="service-zakuri">
         <ul class="landing-service-list">
           <li :class="`landing-service-item mod-${service.color}`" v-for="service in services" :key="service.key">

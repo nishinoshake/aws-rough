@@ -4,17 +4,16 @@
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   border: 2px solid $color-black;
   background-color: $color-black;
   border-radius: 999em;
   overflow: hidden;
   @include max {
-    width: calc(100% - #{$padding-sp * 2 + $width-border-sp * 2});
+    width: calc(100% - #{$padding-sp * 2.8 + $width-menu-sp});
     max-width: 360px;
-    bottom: #{$width-border-sp + 10px};
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: $padding-sp;
+    right: $padding-sp;
   }
   @include min {
     bottom: 30px;

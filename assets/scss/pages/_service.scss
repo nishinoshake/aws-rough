@@ -105,6 +105,7 @@
 }
 
 .service-ad-item {
+  max-width: 840px;
   &:nth-child(n+2) {
     @include max {
       display: none;

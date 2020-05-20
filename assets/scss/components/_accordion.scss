@@ -3,6 +3,7 @@
 .accordion-item {
   background-color: $color-white;
   border: $width-border-form solid $color-border;
+  border-radius: $radius;
   &.is-active {
     .accordion-inside {
       opacity: 1;

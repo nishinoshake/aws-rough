@@ -31,7 +31,12 @@
 }
 
 .price-unit {
-  margin: 0 0 3px 4px;
+  @include max {
+    margin: 0 0 1px 4px;
+  }
+  @include min {
+    margin: 0 0 3px 4px;
+  }
 }
 
 .price-number {
