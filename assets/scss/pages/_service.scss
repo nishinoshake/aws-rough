@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-.service {
-  overflow: hidden;
-}
-
 .service-body {
   position: relative;
 }
@@ -22,7 +18,7 @@
       margin-top: 40px;
     }
     @include min {
-      margin-top: 60px;
+      margin-top: 80px;
     }
   }
 }
@@ -34,14 +30,14 @@
 
 .service-calc-label {
   line-height: 1.2;
-  font-weight: 700;
+  border-top: $width-border-form dashed $color-border;
   @include max {
-    margin-bottom: 20px;
-    font-size: 22px;
+    padding: 16px 0;
+    font-size: 20px;
   }
   @include min {
-    margin-bottom: 30px;
-    font-size: 32px;
+    padding: 18px 0;
+    font-size: 24px;
   }
 }
 
@@ -86,16 +82,11 @@
     &:after {
       content: '';
       width: 12px;
+      height: 2px;
       position: absolute;
       top: 50%;
       left: 0;
       background-color: currentColor;
-      @include max {
-        height: 2px;
-      }
-      @include min {
-        height: $width-border-form;
-      }
     }
     &:before {
       transform: translate(0, -50%);

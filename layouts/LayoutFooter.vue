@@ -5,10 +5,10 @@
         <ExternalLink href="https://calculator.s3.amazonaws.com/index.html?lng=ja_JP">公式ツール</ExternalLink>
       </li>
       <li class="footer-item">
-        <ExternalLink href="https://github.com/nishinoshake/aws-rough">GitHub</ExternalLink>
+        <ExternalLink href="https://hatebu.noplan.cc">先週のはてブ</ExternalLink>
       </li>
       <li class="footer-item">
-        <ExternalLink href="https://hatebu.noplan.cc">先週のはてブ</ExternalLink>
+        <ExternalLink href="https://github.com/nishinoshake/aws-rough">GitHub</ExternalLink>
       </li>
     </ul>
   </footer>

@@ -16,8 +16,13 @@
 .text-link {
   color: $color-link;
   text-decoration: underline;
+  @include min {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .text-bold {
-  font-weight: bold;
+  font-weight: 700;
 }

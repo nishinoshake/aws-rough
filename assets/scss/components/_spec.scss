@@ -22,29 +22,43 @@
       text-align: center;
     }
   }
-  thead th {
-    font-weight: 700;
-    text-align: center;
+  tr {
+    border-bottom: $width-border-form solid $color-border;
   }
-  th {
-    text-align: left;
+  thead th {
+    text-align: center;
   }
   th,
   td {
-    border-top: $width-border-spec solid $color-black;
-    border-bottom: $width-border-spec solid $color-black;
     @include max {
-      padding: 10px 6px;
-      border-top-width: 1px;
-      border-bottom-width: 1px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
     @include min {
-      padding: 12px 8px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-size: 16px;
+    }
+  }
+  th {
+    text-align: left;
+    @include max {
+      padding-left: 10px;
+      padding-right: 5px;
+    }
+    @include min {
+      padding-left: 20px;
+      padding-right: 10px;
     }
   }
   td {
+    @include max {
+      padding-right: 10px;
+      padding-left: 5px;
+    }
     @include min {
-      padding-left: 20px;
+      padding-right: 20px;
+      padding-left: 10px;
     }
     &.mod-align-right {
       text-align: right;

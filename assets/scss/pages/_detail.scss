@@ -11,7 +11,6 @@
   align-items: center;
   line-height: 1;
   color: $color-white;
-  font-weight: 700;
   background-color: $color-black;
   border-radius: 999em;
   cursor: pointer;
@@ -31,15 +30,13 @@
 .detail-body {
   position: relative;
   background-color: $color-white;
-  @include b($color-gap);
-  @include radius;
   @include max {
+    margin-top: 20px;
     min-height: calc(100vh - #{$height-header-sp + $height-footer-sp + (3 * $width-border-sp) + $padding-bottom-sp});
-    padding: $padding-sp;
   }
   @include min {
+    margin-top: 30px;
     min-height: calc(100vh - #{$height-header-pc + $height-footer-pc + (4 * $width-border-pc)});
-    padding: $padding-pc;
   }
 }
 
@@ -119,6 +116,8 @@
 
 .detail-empty {
   position: absolute;
+  top: 0;
+  left:0 ;
   line-height: 1.5;
   pointer-events: none;
   @include font-en;
@@ -131,14 +130,10 @@
     }
   }
   @include max {
-    top: $padding-sp;
-    left: $padding-sp;
     font-size: 22px;
   }
   @include min {
-    top: $padding-pc;
-    left: $padding-pc;
-    font-size: 48px;
+    font-size: 40px;
   }
   &.is-visible {
     span {

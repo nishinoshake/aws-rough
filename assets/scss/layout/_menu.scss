@@ -10,12 +10,37 @@
   }
   @include min {
     width: $width-menu-pc;
-    height: calc(100vh - #{$width-border-pc * 2});
+    height: 100vh;
     position: sticky;
     flex: none;
-    top: $width-border-pc;
+    top: 0;
     left: 0;
-    padding-right: $width-border-pc;
+    padding-bottom: 30px;
+  }
+}
+
+.menu-logo {
+  letter-spacing: 0;
+  border-bottom: $width-border-form dashed $color-border;
+  @include max {
+    margin-bottom: 6px;
+  }
+  a {
+    display: block;
+    line-height: 1;
+    @include max {
+      padding: 16px 10px;
+      font-size: 22px;
+    }
+    @include min {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      font-size: 18px;
+      &:hover {
+        background-color: $color-snow;
+      }
+    }
   }
 }
 
@@ -25,56 +50,55 @@
     height: $width-menu-sp;
     position: fixed;
     z-index: 20;
-    top: 6px;
-    right: 6px;
+    top: 0;
+    right: 0;
     background-color: $color-black;
-    border-radius: 8px;
     @include center-flex;
-    &.is-open {
-      .menu-button-icon {
-        &:before {
-          top: 50%;
-          transform: rotate(45deg);
-        }
-        span {
-          display: none;
-        }
-        &:after {
-          top: 50%;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-    &-icon {
-      width: 20px;
-      height: 14px;
-      position: relative;
-      color: $color-white;
-      &:before,
-      &:after,
-      span {
-        content: "";
-        width: 100%;
-        height: 2px;
-        border-radius: 999em;
-        left: 0;
-        position: absolute;
-        background-color: currentColor;
-      }
-      &:before {
-        top: 0;
-      }
-      span {
-        top: 50%;
-      }
-      &:after {
-        top: 100%;
-      }
-    }
   }
   @include min {
     display: none;
   }
+  &.is-open {
+    .menu-button-icon {
+      &:before {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+      span {
+        display: none;
+      }
+      &:after {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &-icon {
+    width: 20px;
+    height: 14px;
+    position: relative;
+    color: $color-white;
+    &:before,
+    &:after,
+    span {
+      content: "";
+      width: 100%;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      background-color: currentColor;
+    }
+    &:before {
+      top: 0;
+    }
+    span {
+      top: 50%;
+    }
+    &:after {
+      top: 100%;
+    }
+  }
+
 }
 
 .menu-frame {
@@ -92,55 +116,8 @@
     transition: transform 0.36s $easeOutQuart, visibility 0s 0.36s;
     will-change: transform;
   }
-}
-
-.menu-logo {
-  line-height: 1;
-  @include b($color-gap);
-  @include radius;
-  @include mb;
-  @include max {
-    width: 100%;
-    display: flex;
-  }
   @include min {
-    height: $height-header-pc;
-  }
-  a {
-    width: 100%;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    line-height: 1.2;
-    text-align: center;
-    @include center-flex;
-    @include max {
-      padding: $padding-sp 0;
-      font-size: 26px;
-    }
-    @include min {
-      height: 100%;
-      font-size: 42px;
-      flex-direction: column;
-    }
-  }
-  &-en {
-    @include font-en;
-  }
-  &-ja {
-    @include max {
-      font-size: 90%;
-    }
-    @include min {
-      font-size: 70%;
-    }
-  }
-}
-
-.menu-list-container {
-  @include b($color-gap);
-  @include radius;
-  @include min {
-    max-height: calc(100vh - #{$height-header-pc + $width-border-pc * 2});
+    height: 100vh;
     &.can-scroll {
       overflow-y: scroll;
     } 
@@ -151,47 +128,29 @@
   @include max {
     display: flex;
     flex-wrap: wrap;
-    padding: $padding-sp #{$padding-sp - 10px};
-  }
-  @include min {
-    padding: 20px;
   }
 }
 
 .menu-item {
-  &.mod-detail {
-    @include min {
-      display: none;
-    }
-  }
   a {
     display: flex;
     line-height: 1;
     letter-spacing: normal;
     white-space: nowrap;
     align-items: center;
-    @include font-en;
-    span {
-      border-radius: 3px;
-    }
     &.is-active {
-      span {
-        color: $color-white;
-        background-color: $color-black;
-      }
+      background-color: $color-snow;
     }
     @include max {
       padding: 10px;
       font-size: 16px;
     }
     @include min {
-      padding: 5px 0 5px 5px;
+      padding: 8px 20px;
       font-size: 18px;
+      border-bottom: $width-border-form dashed $color-border;
       &:hover {
-        span {
-          color: $color-white;
-          background-color: $color-black;
-        }
+        background-color: $color-snow;
       }
     }
   }

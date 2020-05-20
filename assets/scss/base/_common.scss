@@ -10,21 +10,20 @@ body {
     line-height: 1.7;
   }
   @include min {
-    line-height: 1.9;
-    font-size: 18px;
+    line-height: 1.8;
+    font-size: 16px;
   }
 }
 
 .container {
   position: relative;
   @include max {
-    padding: $width-border-sp $width-border-sp $padding-bottom-sp;
+    padding: 0 $width-border-sp $padding-bottom-sp;
   }
   @include min {
     max-width: $width-max;
     margin-left: auto;
     margin-right: auto;
-    padding: $width-border-pc;
   }
 }
 
@@ -37,10 +36,14 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    min-height: calc(100vh - #{(2 * $width-border-sp)});
+    min-height: calc(100vh - #{$height-footer-sp});
   }
   @include min {
-    min-height: calc(100vh - #{(2 * $width-border-pc)});
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 60px;
+    min-height: calc(100vh - #{$height-footer-pc});
   }
 }
 

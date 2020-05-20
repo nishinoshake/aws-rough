@@ -1,8 +1,7 @@
 <template>
   <div class="landing">
-    <h1 class="landing-copy"><span>AWS</span>の料金を<br class="sp" />日本円でざっくり</h1>
     <div class="section">
-      <h2 class="title-section"><span>料金が気になるサービスは？</span></h2>
+      <h1 class="title-section"><span>料金が気になるサービスは？</span></h1>
       <div class="service-zakuri">
         <ul class="landing-service-list">
           <li :class="`landing-service-item mod-${service.color}`" v-for="service in services" :key="service.key">

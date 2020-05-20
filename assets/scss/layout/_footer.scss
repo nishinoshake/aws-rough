@@ -3,8 +3,8 @@
 .footer {
   display: flex;
   align-items: center;
+  margin-top: 60px;
   background-color: $color-white;
-  @include mt;
   @include radius;
   @include max {
     height: $height-footer-sp;
@@ -23,7 +23,7 @@
     justify-content: center;
   }
   @include min {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -33,7 +33,6 @@
   }
   a {
     color: inherit;
-    font-weight: 700;
     text-decoration: none;
   }
 }

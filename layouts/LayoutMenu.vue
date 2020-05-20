@@ -1,17 +1,14 @@
 <template>
   <nav :class="['menu', { 'is-open': isMenuOpen }]">
-    <div class="menu-frame">
-      <p class="menu-logo">
-        <nuxt-link to="/">
-          <span class="menu-logo-ja">ざっくり</span>
-          <span class="menu-logo-en">AWS</span>
-        </nuxt-link>
-      </p>
-      <div class="menu-list-container" :class="{ 'can-scroll': canScroll }">
-        <ul class="menu-list" ref="menuList">
-          <li v-for="service in services" :key="service.key" :class="`menu-item mod-${service.color}`">
+    <div class="menu-frame" :class="{ 'can-scroll': canScroll }">
+      <div class="menu-list-container" ref="menuContainer">
+        <p class="menu-logo">
+          <nuxt-link to="/" @click.native="handleClick">ざっくりAWS</nuxt-link>
+        </p>
+        <ul class="menu-list">
+          <li v-for="service in services" :key="service.key" class="menu-item">
             <nuxt-link :to="service.href" @click.native="handleClick">
-              <span class="menu-name">{{ service.name }}</span>
+              &gt;&nbsp;<span>{{ service.name }}</span>
             </nuxt-link>
           </li>
         </ul>
@@ -64,11 +61,9 @@ export default {
         return
       }
 
-      const menuOffsetY = this.$refs.menuList.getBoundingClientRect().top
-      const menuHeight = this.$refs.menuList.offsetHeight
-      const borderWidth = 30
+      const menuHeight = this.$refs.menuContainer.offsetHeight
 
-      this.canScroll = menuOffsetY + menuHeight + borderWidth > window.innerHeight
+      this.canScroll = menuHeight > window.innerHeight
     },
     toggle() {
       this.TOGGLE_MENU()

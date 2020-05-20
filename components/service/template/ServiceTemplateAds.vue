@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <h2 class="title-section"><span>広告</span></h2>
+    <h2 class="title-section"><span>大きめの広告</span></h2>
     <div class="service-ad">
       <div class="service-ad-list">
         <div class="service-ad-item">

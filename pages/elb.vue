@@ -2,9 +2,6 @@
   <article class="service">
     <ServiceTemplateTitle :service="service.elb" />
     <div class="section">
-      <h2 class="title-section">
-        <span>料金を計算</span>
-      </h2>
       <div
         class="service-inside"
         :data-test="serviceName"
@@ -24,8 +21,6 @@
       </h2>
       <div class="service-zakuri">
         <div class="section-child">
-          <p class="text">トラフィックを分散してくれるやつ（ロードバランサー）。</p>
-
           <table class="spec">
             <tbody>
               <tr>
@@ -42,6 +37,8 @@
               </tr>
             </tbody>
           </table>
+
+          <p class="text">トラフィックを分散してくれるやつ（ロードバランサー）。</p>
 
           <p class="text">
             ALBは、HTTPのヘッダーを見てくれるので、ホストやパスなどに基づいたルーティングができます。

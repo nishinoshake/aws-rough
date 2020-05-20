@@ -3,7 +3,6 @@
 .form-label {
   display: block;
   line-height: 1.1;
-  font-weight: 700;
   @include max {
     margin-bottom: 10px;
   }
@@ -56,16 +55,19 @@
   }
   &:after {
     content: '';
-    height: 0;
-    border-style: solid;
+    width: 8px;
+    height: 8px;
+    top: calc(50% - 8px);
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 10px;
-    margin: auto 0;
-    width: 0;
-    border-width: 9px 7px 0 7px;
-    border-color: $color-border transparent transparent transparent;
+    border-bottom: 2px solid $color-font;
+    border-right: 2px solid $color-font;
+    transform: rotate(45deg);
     pointer-events: none;
+    @include max {
+      right: 16px;
+    }
+    @include min {
+      right: 14px;
+    }
   }
 }

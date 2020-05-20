@@ -1,6 +1,7 @@
 <template>
   <h1 class="title-page">
-    <span class="title-page-name">{{ service.name }}</span>
+    &gt;&nbsp;<span class="title-page-name">{{ service.name }}</span
+    >&nbsp;<span class="title-page-ja">料金</span>
   </h1>
 </template>
 

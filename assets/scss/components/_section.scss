@@ -1,18 +1,13 @@
 @charset "utf-8";
 
 .section {
-  overflow: hidden;
-  background-color: $color-white;
-  @include b($color-gap);
-  @include radius;
-  @include max {
-    padding: $padding-sp;
-  }
-  @include min {
-    padding: $padding-pc;
-  }
   + .section {
-    @include mt;
+    @include max {
+      margin-top: 60px;
+    }
+    @include min {
+      margin-top: 100px;
+    }
   }
 }
 

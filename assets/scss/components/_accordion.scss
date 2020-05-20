@@ -3,13 +3,12 @@
 .accordion-item {
   background-color: $color-white;
   border: $width-border-form solid $color-border;
-  border-radius: $radius;
   &.is-active {
     .accordion-inside {
       opacity: 1;
     }
     .accordion-title:after {
-      transform: rotate(180deg);
+      transform: translateY(6px) rotate(225deg);
     }
   }
   &:nth-child(n+2) {
@@ -27,11 +26,10 @@
   display: block;
   position: relative;
   text-align: left;
-  font-weight: 700;
   letter-spacing: 0.1em;
   @include transition-fade;
   @include max {
-    padding: 12px 30px 12px 20px;
+    padding: 18px 30px 18px 20px;
   }
   @include min {
     padding: 22px 40px 22px 40px;
@@ -39,22 +37,21 @@
   }
   &:after {
     content: '';
-    height: 0;
-    border-style: solid;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    width: 0;
-    border-color: $color-border transparent transparent transparent;
-    pointer-events: none;
+    border-bottom: 2px solid $color-font;
+    border-right: 2px solid $color-font;
+    transform: rotate(45deg);
     @include max {
-      right: 16px;
-      border-width: 9px 7px 0 7px;
+      width: 10px;
+      height: 10px;
+      top: calc(50% - 10px);
+      right: 22px;
     }
     @include min {
-      right: 32px;
-      border-width: 14px 10px 0 10px;
+      width: 14px;
+      height: 14px;
+      top: calc(50% - 12px);
+      right: 40px;
     }
   }
 }

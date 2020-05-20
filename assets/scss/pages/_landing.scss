@@ -2,27 +2,30 @@
 
 .landing {
   position: relative;
+  @include max {
+    padding-top: 40px;
+  }
+  @include min {
+    padding-top: 60px;
+  }
 }
 
 .landing-copy {
+  display: flex;
+  align-items: center;
   line-height: 1.6;
-  font-weight: 700;
   letter-spacing: 0.16em;
   text-indent: 0.1em;
   background-color: $color-white;
-  @include mb;
-  @include radius;
-  @include b($color-gap);
   @include max {
-    padding: $padding-sp;
-    font-size: 24px;
+    height: $height-header-sp;
+    font-size: 20px;
   }
   @include min {
     height: $height-header-pc;
     display: flex;
     align-items: center;
-    padding: 0 $padding-pc;
-    font-size: 40px;
+    font-size: 32px;
   }
   span {
     @include font-en;
@@ -76,7 +79,7 @@
   }
   @include min {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -89,6 +92,6 @@
     font-size: 10px;
   }
   @include min {
-    font-size: 14px;
+    font-size: 12px;
   }
 }

@@ -15,50 +15,41 @@
   align-items: center;
   line-height: 1;
   letter-spacing: 0.06em;
-  background-color: $color-white;
-  @include mb;
-  @include b($color-gap);
   @include radius;
-  @include font-en;
   @include max {
     height: $height-header-sp;
-    padding: 0 $padding-sp;
-    font-size: 30px;
+    font-size: 22px;
   }
   @include min {
     height: $height-header-pc;
-    padding: 0 $padding-pc;
-    font-size: 56px;
+    font-size: 36px;
   }
   &-ja {
-    font-weight: 700;
     @include font-sans;
     @include max {
-      font-size: 22px;
+      font-size: 20px;
     }
     @include min {
-      font-size: 40px;
+      font-size: 34px;
     }
   }
 }
 
 .title-section {
-  font-weight: 700;
   line-height: 1.1;
   display: flex;
   position: relative;
   letter-spacing: 0.06em;
+  border-bottom: $width-border-form dashed $color-border;
   @include max {
-    margin: (-$padding-sp) (-$padding-sp) $padding-sp;
-    padding: 20px $padding-sp;
-    border-bottom: $width-border-form solid $color-gap;
-    font-size: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    font-size: 18px;
   }
   @include min {
-    margin: (-$padding-pc) (-$padding-pc) $padding-pc;
-    padding: 36px $padding-pc;
-    border-bottom: $width-border-form solid $color-gap;
-    font-size: 32px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    font-size: 24px;
   }
   + .accordion-list,
   + .spec {
@@ -72,7 +63,6 @@
 }
 
 .title-small {
-  font-weight: 700;
   line-height: 1.4;
   @include max {
     margin-bottom: 10px;
@@ -83,7 +73,7 @@
   span {
     display: inline;
     padding-bottom: 2px;
-    border-bottom: 2px solid $color-border;
+    border-bottom: $width-border-form solid $color-border;
   }
 }
 

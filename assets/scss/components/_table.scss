@@ -4,6 +4,14 @@
   width: 100%;
   display: block;
   position: relative;
+  border-top: $width-border-form dashed $color-border;
+  &.mod-multiple {
+    tr {
+      @include min {
+        padding-left: 40px;
+      }
+    }
+  }
   tbody {
     display: block;
   }
@@ -11,18 +19,14 @@
     width: 100%;
     position: relative;
     background-color: $color-white;
-    border: $width-border-form solid $color-border;
+    border-bottom: $width-border-form dashed $color-border;
     @include max {
       display: block;
-      padding: $padding-sp;
+      padding: $padding-sp 0;
     }
     @include min {
       display: flex;
       align-items: flex-end;
-      padding: 0 16px;
-    }
-    + tr {
-      margin-top: 30px;
     }
   }
   td {
@@ -56,7 +60,7 @@
         width: 7rem;
       }
       &.mod-large {
-        width: 11rem;
+        width: 12rem;
       }
       &.mod-price {
         flex-grow: 1;
@@ -83,12 +87,12 @@
       @include max {
         width: 30px;
         height: 30px;
-        top: -15px;
-        right: -15px;
+        bottom: 24px;
+        left: 0;
       }
       @include min {
-        top: -15px;
-        right: -15px;
+        top: 56px;
+        left: 0;
       }
     }
   }

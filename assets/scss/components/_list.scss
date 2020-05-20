@@ -14,12 +14,10 @@
   }
   &:before {
     content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 6px 0 6px 10px;
-    border-color: transparent transparent transparent $color-border;
-    border-style: solid;
+    width: 6px;
+    height: 6px;
+    background-color: $color-black;
+    border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
