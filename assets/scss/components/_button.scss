@@ -11,16 +11,16 @@
   &:after {
     content: '';
     width: 50%;
-    height: 2px;
+    height: $width-border-input;
     position: absolute;
     top: 50%;
     left: 50%;
     background-color: $color-white;
   }
   &:before {
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
   }
   &:after {
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(-45deg);
   }
 }

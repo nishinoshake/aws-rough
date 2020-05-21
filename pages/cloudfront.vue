@@ -2,7 +2,9 @@
   <ServiceTemplate service-name="cloudfront">
     <template v-slot:aside>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition></ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>プロトコル</span></h3>
             <p class="text">HTTPかHTTPSを選択してください。</p>
@@ -21,9 +23,7 @@
           </section>
         </ServicePartsAccordion>
 
-        <ServicePartsCondition></ServicePartsCondition>
-
-        <ServicePartsAccordion title="対象外のもの">
+        <ServicePartsAccordion title="対象外のもの" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>日本以外のエッジロケーション</span></h3>
             <p class="text">日本のエッジロケーションを前提に料金を算出しています。</p>

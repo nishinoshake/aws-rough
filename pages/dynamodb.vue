@@ -2,7 +2,9 @@
   <ServiceTemplate service-name="dynamodb">
     <template v-slot:aside>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition></ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>ストレージ</span></h3>
             <p class="text">DynamoDBで使用するストレージの容量をGB単位で入力してください。</p>
@@ -51,9 +53,7 @@
           </section>
         </ServicePartsAccordion>
 
-        <ServicePartsCondition></ServicePartsCondition>
-
-        <ServicePartsAccordion title="対象外のもの">
+        <ServicePartsAccordion title="対象外のもの" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>リザーブドキャパシティー</span></h3>
             <p class="text">

@@ -56,14 +56,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 36px;
+  padding: 18px 36px;
   border-radius: 999em;
   color: $color-white;
-  font-weight: 700;
   background-color: $color-black;
   @include transition-collection;
   @include min {
-    padding: 16px 32px;
+    padding: 18px 32px;
   }
   span {
     padding-left: 22px;
@@ -75,24 +74,24 @@
       font-size: 14px;
     }
     @include min {
-      padding-left: 25px;
+      padding-left: 22px;
       font-size: 16px;
     }
     &:before,
     &:after {
       content: '';
       width: 12px;
-      height: 2px;
+      height: $width-border-input;
       position: absolute;
       top: 50%;
       left: 0;
       background-color: currentColor;
     }
     &:before {
-      transform: translate(0, -50%);
+      transform: translate3d(0, -50%, 0);
     }
     &:after {
-      transform: translate(0, -50%) rotate(90deg);
+      transform: translate3d(0, -50%, 0) rotate(90deg);
     }
   }
 }

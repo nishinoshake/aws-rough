@@ -2,7 +2,9 @@
   <ServiceTemplate service-name="rds">
     <template v-slot:aside>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition></ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>DBエンジン</span></h3>
             <p class="text">
@@ -33,9 +35,7 @@
           </section>
         </ServicePartsAccordion>
 
-        <ServicePartsCondition></ServicePartsCondition>
-
-        <ServicePartsAccordion title="対象外のもの">
+        <ServicePartsAccordion title="対象外のもの" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>ライセンスがややこしいデータベース</span></h3>
             <p class="text">

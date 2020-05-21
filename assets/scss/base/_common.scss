@@ -28,7 +28,10 @@ body {
 }
 
 .main {
-  display: flex;
+  @include min {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .contents {

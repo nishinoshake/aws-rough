@@ -1,6 +1,6 @@
 <template>
-  <nav :class="['menu', { 'is-open': isMenuOpen }]">
-    <div class="menu-frame" :class="{ 'can-scroll': canScroll }">
+  <nav :class="['menu', { 'is-open': isMenuOpen, 'can-scroll': canScroll }]" ref="menu">
+    <div class="menu-frame">
       <div class="menu-list-container" ref="menuContainer">
         <p class="menu-logo">
           <nuxt-link to="/" @click.native="handleClick">ざっくりAWS</nuxt-link>
@@ -8,7 +8,7 @@
         <ul class="menu-list">
           <li v-for="service in services" :key="service.key" class="menu-item">
             <nuxt-link :to="service.href" @click.native="handleClick">
-              &gt;&nbsp;<span>{{ service.name }}</span>
+              <span>&gt;&nbsp;{{ service.name }}</span>
             </nuxt-link>
           </li>
         </ul>
@@ -57,13 +57,19 @@ export default {
       this.$emit('change')
     },
     handleResize() {
+      const viewHeight = parseInt(window.innerHeight, 10)
+      const menuHeight = parseInt(this.$refs.menuContainer.offsetHeight, 10)
+
+      document.documentElement.style.setProperty('--view-height', `${viewHeight}px`)
+      document.documentElement.style.setProperty('--menu-height', `${menuHeight}px`)
+
       if (window.matchMedia('(max-width: 1192px)').matches) {
         return
       }
 
-      const menuHeight = this.$refs.menuContainer.offsetHeight
+      const menuOffsetY = this.$refs.menu.getBoundingClientRect().top
 
-      this.canScroll = menuHeight > window.innerHeight
+      this.canScroll = menuHeight + menuOffsetY > window.innerHeight
     },
     toggle() {
       this.TOGGLE_MENU()

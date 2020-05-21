@@ -5,7 +5,7 @@
 // -----------------------------------------------------
 
 .detail-copy {
-  width: 10em;
+  width: 11em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,8 +22,8 @@
   }
   @include min {
     margin-left: 50px;
-    padding: 16px 0;
-    font-size: 16px;
+    padding: 14px 0;
+    font-size: 14px;
   }
 }
 

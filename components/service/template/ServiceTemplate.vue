@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="section">
-      <h2 class="title-section"><span>補足と前提</span></h2>
+      <h2 class="title-section"><span>補足のようなもの</span></h2>
       <slot name="aside" />
     </div>
   </article>

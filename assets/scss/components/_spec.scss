@@ -5,16 +5,8 @@
   @include max {
     width: 100%;
     max-width: 400px;
-    margin: 24px auto;
-  }
-  @include min {
-    margin: 40px 0;
-  }
-  &.mod-mt0 {
-    margin-top: 0;
-  }
-  &.mod-mb0 {
-    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   &.mod-center {
     th,
@@ -70,5 +62,15 @@
     font-size: 80%;
     text-align: left;
     color: $color-muted;
+  }
+}
+
+* + .spec,
+.spec + * {
+  @include max {
+    margin-top: 24px;
+  }
+  @include min {
+    margin-top: 40px;
   }
 }

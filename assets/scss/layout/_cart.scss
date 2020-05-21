@@ -5,7 +5,7 @@
   align-items: center;
   position: fixed;
   z-index: 100;
-  border: 2px solid $color-black;
+  border: $width-border-input solid $color-black;
   background-color: $color-black;
   border-radius: 999em;
   overflow: hidden;
@@ -13,21 +13,20 @@
     width: calc(100% - #{$padding-sp * 2.8 + $width-menu-sp});
     max-width: 360px;
     bottom: $padding-sp;
-    right: $padding-sp;
+    left: $padding-sp;
   }
   @include min {
     bottom: 30px;
-    right: 30px;
+    right: 76px;
   }
   @include min($width-max) {
-    right: calc(50% - #{($width-max - 2 * $width-border-pc) / 2} + 16px);
+    right: calc(50% - #{($width-max - 2 * $width-border-pc) / 2} + 46px);
   }
 }
 
 .cart-link {
   white-space: nowrap;
   color: $color-white;
-  font-weight: 700;
   @include transition-collection;
   @include max {
     padding: 5px 16px;

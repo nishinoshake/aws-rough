@@ -52,9 +52,11 @@
     </div>
 
     <div class="section">
-      <h2 class="title-section"><span>補足と前提</span></h2>
+      <h2 class="title-section"><span>補足のようなもの</span></h2>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition></ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>台数</span></h3>
             <p class="text">利用するロードバランサーの台数を入力してください。</p>
@@ -80,7 +82,6 @@
             </p>
           </section>
         </ServicePartsAccordion>
-        <ServicePartsCondition></ServicePartsCondition>
       </div>
     </div>
   </article>

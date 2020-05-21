@@ -15,7 +15,7 @@
     </div>
 
     <div class="section">
-      <h2 class="title-section"><span>このサイトについて</span></h2>
+      <h2 class="title-section"><span>AWSの料金を日本円でざっくり</span></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">AWSの料金、<br class="sp" />ややこしいですよね。</p>

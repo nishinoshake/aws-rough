@@ -2,7 +2,9 @@
   <ServiceTemplate service-name="route53">
     <template v-slot:aside>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition></ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>ホストゾーン数</span></h3>
             <p class="text">Route53で管理するドメインの数を入力してください。</p>
@@ -18,9 +20,7 @@
           </section>
         </ServicePartsAccordion>
 
-        <ServicePartsCondition></ServicePartsCondition>
-
-        <ServicePartsAccordion title="対象外のもの">
+        <ServicePartsAccordion title="対象外のもの" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>レイテンシーベースルーティングクエリなど</span></h3>
             <p class="text">

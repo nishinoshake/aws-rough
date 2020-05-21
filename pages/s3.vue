@@ -2,7 +2,11 @@
   <ServiceTemplate service-name="s3">
     <template v-slot:aside>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition>
+          <li class="list-item">標準のストレージクラス</li>
+        </ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>容量</span></h3>
             <p class="text">S3で使用するストレージの容量をGB単位で入力してください。</p>
@@ -25,11 +29,7 @@
           </section>
         </ServicePartsAccordion>
 
-        <ServicePartsCondition>
-          <li class="list-item">標準のストレージクラス</li>
-        </ServicePartsCondition>
-
-        <ServicePartsAccordion title="対象外のもの">
+        <ServicePartsAccordion title="対象外のもの" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>標準以外のストレージクラス</span></h3>
             <p class="text">

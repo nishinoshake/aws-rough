@@ -2,7 +2,13 @@
   <ServiceTemplate service-name="ec2">
     <template v-slot:aside>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition>
+          <li class="list-item">オンデマンドインスタンス</li>
+          <li class="list-item">OSはAmazon Linux</li>
+          <li class="list-item">EBSは汎用SSD</li>
+        </ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>インスタンス</span></h3>
             <p class="text">
@@ -20,13 +26,7 @@
           </section>
         </ServicePartsAccordion>
 
-        <ServicePartsCondition>
-          <li class="list-item">オンデマンドインスタンス</li>
-          <li class="list-item">OSはAmazon Linux</li>
-          <li class="list-item">EBSは汎用SSD</li>
-        </ServicePartsCondition>
-
-        <ServicePartsAccordion title="対象外のもの">
+        <ServicePartsAccordion title="対象外のもの" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>ライセンス費用が発生するOS</span></h3>
             <p class="text">

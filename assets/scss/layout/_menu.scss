@@ -8,26 +8,30 @@
   }
   @include min {
     width: $width-menu-pc;
-    height: 100vh;
     position: sticky;
     flex: none;
     top: 0;
     left: 0;
-    padding-bottom: 30px;
+    &.can-scroll {
+      height: 100vh;
+      overflow-y: scroll;
+    }
+    &:not(.can-scroll) {
+      top: 45px;
+    }
   }
 }
 
 .menu-logo {
   letter-spacing: 0;
-  border-bottom: $width-border-form dashed $color-border;
-  @include max {
-    margin-bottom: 6px;
+  @include min {
+    display: none;
   }
   a {
     display: block;
     line-height: 1;
     @include max {
-      padding: 16px 10px;
+      padding: 28px 10px 24px;
       font-size: 20px;
     }
     @include min {
@@ -49,11 +53,10 @@
     position: fixed;
     z-index: 20;
     bottom: $padding-sp;
-    left: $padding-sp;
+    right: $padding-sp;
     font-size: 14px;
     letter-spacing: 0.1em;
-    color: $color-white;
-    background-color: $color-black;
+    background-color: $color-dark;
     border-radius: 50%;
     @include center-flex;
   }
@@ -78,7 +81,7 @@
   &-icon {
     width: 20px;
     height: 12px;
-    margin-bottom: 2px;
+    margin-bottom: $width-border-input;
     position: relative;
     color: $color-white;
     &:before,
@@ -86,7 +89,7 @@
     span {
       content: "";
       width: 100%;
-      height: 2px;
+      height: $width-border-input;
       left: 0;
       position: absolute;
       background-color: currentColor;
@@ -113,15 +116,9 @@
     z-index: 10;
     visibility: hidden;
     background-color: $color-white;
-    border-top: $width-border-form solid $color-gap;
+    border-top: $width-border-form dashed $color-border;
     padding: 0 $width-border-sp #{$width-menu-sp + $padding-sp * 2};
     will-change: transform;
-  }
-  @include min {
-    height: 100vh;
-    &.can-scroll {
-      overflow-y: scroll;
-    } 
   }
 }
 
@@ -139,20 +136,25 @@
     letter-spacing: normal;
     white-space: nowrap;
     align-items: center;
-    &.is-active {
-      background-color: $color-snow;
+    &.is-active span {
+      color: $color-white;
+      background-color: $color-dark;
     }
     @include max {
-      padding: 10px;
+      padding: 8px;
       font-size: 16px;
     }
     @include min {
-      padding: 8px 20px;
+      padding: 6px 20px;
       font-size: 18px;
-      border-bottom: $width-border-form dashed $color-border;
-      &:hover {
-        background-color: $color-snow;
+      &:hover span {
+        color: $color-white;
+        background-color: $color-dark;
       }
+    }
+    span {
+      display: inline-block;
+      padding: 2px 4px;
     }
   }
 }

@@ -2,7 +2,16 @@
   <ServiceTemplate service-name="ses">
     <template v-slot:aside>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsAccordion title="計算の前提" :force-open="true">
+          <ul class="list">
+            <li class="list-item">バージニア北部リージョン</li>
+            <li class="list-item">ひと月は30.5日</li>
+            <li class="list-item">{{ usdjpy }}円/ドル（毎朝10時更新）</li>
+            <slot />
+          </ul>
+        </ServicePartsAccordion>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>データ転送量</span></h3>
             <p class="text">
@@ -25,14 +34,6 @@
             <h3 class="title-small"><span>専用 IP アドレス</span></h3>
             <p class="text">送信用のIPアドレスをリースする場合は、個数を入力してください。</p>
           </section>
-        </ServicePartsAccordion>
-
-        <ServicePartsAccordion title="計算の前提">
-          <ul class="list">
-            <li class="list-item">バージニア北部リージョン</li>
-            <li class="list-item">ひと月は30.5日</li>
-            <slot />
-          </ul>
         </ServicePartsAccordion>
       </div>
     </template>
@@ -79,6 +80,11 @@ export default {
   },
   head() {
     return meta.ses
+  },
+  computed: {
+    usdjpy() {
+      return this.$store.state.fx ? this.$store.state.fx.usdjpy : null
+    }
   }
 }
 </script>

@@ -2,7 +2,9 @@
   <ServiceTemplate service-name="lambda">
     <template v-slot:aside>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition></ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>リクエスト数</span></h3>
             <p class="text">Lambdaへのリクエスト数を入力してください。</p>
@@ -19,8 +21,6 @@
             <pre>(2048 / 1024) * 86400 = 172,800GB秒</pre>
           </section>
         </ServicePartsAccordion>
-
-        <ServicePartsCondition></ServicePartsCondition>
       </div>
     </template>
 

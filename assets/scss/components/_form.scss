@@ -21,7 +21,7 @@
   padding: 10px;
   font-size: 16px;
   text-align: center;
-  border: $width-border-form solid $color-border;
+  border: $width-border-input solid $color-dark;
   background-color: $color-white;
   border-radius: $radius;
   @include transition-collection;
@@ -36,7 +36,7 @@
   position: relative;
   display: block;
   background-color: $color-white;
-  border: $width-border-form solid $color-border;
+  border: $width-border-input solid $color-dark;
   border-radius: $radius;
   select {
     opacity: 0;
@@ -59,8 +59,8 @@
     height: 8px;
     top: calc(50% - 8px);
     position: absolute;
-    border-bottom: 2px solid $color-font;
-    border-right: 2px solid $color-font;
+    border-bottom: $width-border-input solid $color-font;
+    border-right: $width-border-input solid $color-font;
     transform: rotate(45deg);
     pointer-events: none;
     @include max {

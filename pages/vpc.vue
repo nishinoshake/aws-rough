@@ -29,9 +29,11 @@
     </div>
 
     <div class="section">
-      <h2 class="title-section"><span>補足と前提</span></h2>
+      <h2 class="title-section"><span>補足のようなもの</span></h2>
       <div class="service-summary accordion-list">
-        <ServicePartsAccordion title="入力項目の補足">
+        <ServicePartsCondition></ServicePartsCondition>
+
+        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>個数</span></h3>
             <p class="text">利用するNAT Gatewayの個数を入力してください。</p>
@@ -42,9 +44,7 @@
           </section>
         </ServicePartsAccordion>
 
-        <ServicePartsCondition></ServicePartsCondition>
-
-        <ServicePartsAccordion title="対象外のもの">
+        <ServicePartsAccordion title="対象外のもの" :force-open="true">
           <section class="section-child">
             <h3 class="title-small"><span>VPN/PrivateLink</span></h3>
             <p class="text">
