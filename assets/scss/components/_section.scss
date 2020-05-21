@@ -2,12 +2,7 @@
 
 .section {
   + .section {
-    @include max {
-      margin-top: 60px;
-    }
-    @include min {
-      margin-top: 120px;
-    }
+    margin-top: 100px;
   }
 }
 

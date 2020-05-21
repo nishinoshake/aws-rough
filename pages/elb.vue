@@ -13,9 +13,7 @@
       </div>
     </div>
 
-    <ServiceTemplateAds />
-
-    <div class="section">
+    <section class="section">
       <h2 class="title-section">
         <span>ざっくりわかるELB</span>
       </h2>
@@ -49,10 +47,10 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2 class="title-section"><span>補足のようなもの</span></h2>
+    <section class="section">
+      <h2 class="title-section"><span>細かい補足</span></h2>
       <div class="service-summary accordion-list">
         <ServicePartsCondition></ServicePartsCondition>
 
@@ -83,7 +81,9 @@
           </section>
         </ServicePartsAccordion>
       </div>
-    </div>
+    </section>
+
+    <ServiceTemplateAds />
   </article>
 </template>
 

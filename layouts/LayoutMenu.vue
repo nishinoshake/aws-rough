@@ -8,7 +8,7 @@
         <ul class="menu-list">
           <li v-for="service in services" :key="service.key" class="menu-item">
             <nuxt-link :to="service.href" @click.native="handleClick">
-              <span>&gt;&nbsp;{{ service.name }}</span>
+              <span>{{ service.name }}</span>
             </nuxt-link>
           </li>
         </ul>

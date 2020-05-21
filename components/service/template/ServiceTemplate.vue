@@ -4,19 +4,19 @@
     <div class="section">
       <ServiceTemplateCalc :service="service" />
     </div>
-    <ServiceTemplateAds />
-    <div class="section">
+    <section class="section">
       <h2 class="title-section">
         <span>ざっくりわかる{{ service.name }}</span>
       </h2>
       <div class="service-zakuri">
         <slot name="zakuri" />
       </div>
-    </div>
-    <div class="section">
-      <h2 class="title-section"><span>補足のようなもの</span></h2>
+    </section>
+    <section class="section">
+      <h2 class="title-section"><span>細かい補足</span></h2>
       <slot name="aside" />
-    </div>
+    </section>
+    <ServiceTemplateAds />
   </article>
 </template>
 

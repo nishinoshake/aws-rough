@@ -137,8 +137,8 @@
     white-space: nowrap;
     align-items: center;
     &.is-active span {
-      color: $color-white;
       background-color: $color-dark;
+      color: $color-white;
     }
     @include max {
       padding: 8px;
@@ -148,8 +148,8 @@
       padding: 6px 20px;
       font-size: 18px;
       &:hover span {
-        color: $color-white;
         background-color: $color-dark;
+        color: $color-white;
       }
     }
     span {

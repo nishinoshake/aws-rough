@@ -96,26 +96,11 @@
   }
 }
 
-.service-ad-list {
+.service-ad-desc {
+  @include max {
+    margin-bottom: 20px;
+  }
   @include min {
-    // display: flex;
-    // justify-content: center;
-  }
-}
-
-.service-ad-item {
-  max-width: 840px;
-  &:nth-child(n+2) {
-    @include max {
-      display: none;
-    }
-    @include min {
-      margin-left: 40px;
-    }
-  }
-  &:nth-child(n+3) {
-    @include max(1460px) {
-      display: none;
-    }
+    margin-bottom: 24px;
   }
 }

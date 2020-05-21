@@ -46,7 +46,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 0 60px;
-    min-height: calc(100vh - #{$height-footer-pc});
+    min-height: 100vh;
   }
 }
 
