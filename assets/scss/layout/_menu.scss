@@ -26,11 +26,15 @@
     padding: 28px 10px 24px;
   }
   @include min {
+    
     margin-bottom: 24px;
-    padding: 0 0 0 20px;
+    padding-left: 20px;
   }
   a {
     display: block;
+    @include min {
+      width: 140px;
+    }
     span {
       position: relative;
       display: block;
@@ -169,11 +173,11 @@
       border-radius: 3px;
       &:before {
         content: "";
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
         margin-right: 10px;
         border-radius: 50%;
-        background-color: $color-border;
+        background-color: $color-gray;
       }
     }
   }
