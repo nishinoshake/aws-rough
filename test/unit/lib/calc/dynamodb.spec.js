@@ -1,4 +1,4 @@
-import dynamodb from '@/lib/calc/dynamodb'
+import { calc } from '@/lib/calc/dynamodb'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('dynamodb', () => {
@@ -67,7 +67,7 @@ describe('dynamodb', () => {
       rcu: 0
     }
 
-    expect(dynamodb(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     {
       const row = {
@@ -82,7 +82,7 @@ describe('dynamodb', () => {
       const rcu = (200 * MONTHLY_HOURS - 18600) * 0.02
       const expected = storage + wcu + rcu
 
-      expect(dynamodb(row, priceList)).toBe(expected)
+      expect(calc(row, priceList)).toBe(expected)
     }
 
     {
@@ -98,7 +98,7 @@ describe('dynamodb', () => {
       const read = 2000 * 10000 * 0.00000028
       const expected = storage + write + read
 
-      expect(dynamodb(row, priceList)).toBe(expected)
+      expect(calc(row, priceList)).toBe(expected)
     }
   })
 })

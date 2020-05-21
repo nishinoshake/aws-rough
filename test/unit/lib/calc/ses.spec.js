@@ -1,4 +1,4 @@
-import ses, { CHUNK_SIZE } from '@/lib/calc/ses'
+import { calc, CHUNK_SIZE } from '@/lib/calc/ses'
 
 describe('ses', () => {
   test('SESの料金を計算できる', () => {
@@ -40,7 +40,7 @@ describe('ses', () => {
       dedicatedIp: 0
     }
 
-    expect(ses(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       sendEc2: 3000000,
@@ -59,6 +59,6 @@ describe('ses', () => {
     const dedicatedIp = 3 * 24.95
     const expected = sendEc2 + sendGeneral + transfer + recieve + recieveChunk + dedicatedIp
 
-    expect(ses(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

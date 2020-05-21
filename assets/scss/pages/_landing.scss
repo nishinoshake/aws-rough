@@ -2,38 +2,14 @@
 
 .landing {
   position: relative;
-}
-
-.landing-copy {
-  display: flex;
-  justify-content: flex-end;
   @include max {
-    padding: 80px 20px;
+    padding-top: 40px;
   }
   @include min {
-    padding: 50px 80px 80px 0;
-  }
-  span {
-    position: relative;
-    @include max {
-      width: 240px;
-    }
-    @include min {
-      width: 400px;
-    }
-    &:before {
-      content: "";
-      display: block;
-      padding-top: 14.29%;
-    }
-  }
-  svg {
-    @include fit-full;
-  }
-  path {
-    fill: $color-black;
+    padding-top: 62px;
   }
 }
+
 
 .landing-list {
   @include max {

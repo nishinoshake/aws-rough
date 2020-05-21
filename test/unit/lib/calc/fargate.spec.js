@@ -1,4 +1,4 @@
-import fargate from '@/lib/calc/fargate'
+import { calc } from '@/lib/calc/fargate'
 
 describe('fargate', () => {
   test('Fargateの料金を計算できる', () => {
@@ -38,7 +38,7 @@ describe('fargate', () => {
       transfer: 0
     }
 
-    expect(fargate(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       unit: 2,
@@ -53,6 +53,6 @@ describe('fargate', () => {
     const transfer = 10 * 10 + 90 * 9 + 900 * 8
     const expected = cpu + memory + transfer
 
-    expect(fargate(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

@@ -1,4 +1,4 @@
-import clb from '@/lib/calc/clb'
+import { calc } from '@/lib/calc/clb'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('clb', () => {
@@ -19,7 +19,7 @@ describe('clb', () => {
       transfer: 0
     }
 
-    expect(clb(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       unit: 2,
@@ -30,6 +30,6 @@ describe('clb', () => {
     const transfer = 10 * 1000
     const expected = instance + transfer
 
-    expect(clb(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

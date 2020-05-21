@@ -1,4 +1,4 @@
-import ec2 from '@/lib/calc/ec2'
+import { calc } from '@/lib/calc/ec2'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('ec2', () => {
@@ -47,7 +47,7 @@ describe('ec2', () => {
       transfer: 0
     }
 
-    expect(ec2(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       instance: 't2.nano',
@@ -61,6 +61,6 @@ describe('ec2', () => {
     const transfer = 10 * 10 + 90 * 9 + 900 * 8
     const expected = instance + storage + transfer
 
-    expect(ec2(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

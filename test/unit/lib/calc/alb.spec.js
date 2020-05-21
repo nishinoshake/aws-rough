@@ -1,4 +1,4 @@
-import alb from '@/lib/calc/alb'
+import { calc } from '@/lib/calc/alb'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('alb', () => {
@@ -19,7 +19,7 @@ describe('alb', () => {
       lcu: 0
     }
 
-    expect(alb(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       unit: 2,
@@ -30,6 +30,6 @@ describe('alb', () => {
     const lcu = 0.01 * 4 * 2 * MONTHLY_HOURS
     const expected = instance + lcu
 
-    expect(alb(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

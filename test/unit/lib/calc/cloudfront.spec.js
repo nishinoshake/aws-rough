@@ -1,4 +1,4 @@
-import cloudfront from '@/lib/calc/cloudfront'
+import { calc } from '@/lib/calc/cloudfront'
 
 describe('cloudfront', () => {
   test('CloudFrontの料金を計算できる', () => {
@@ -37,7 +37,7 @@ describe('cloudfront', () => {
       request: 0
     }
 
-    expect(cloudfront(emptyRow, priceList)).toEqual(0)
+    expect(calc(emptyRow, priceList)).toEqual(0)
 
     const row = {
       protocol: 'HTTPS',
@@ -49,6 +49,6 @@ describe('cloudfront', () => {
     const request = 10000 * 0.002
     const expected = transfer + request
 
-    expect(cloudfront(row, priceList)).toEqual(expected)
+    expect(calc(row, priceList)).toEqual(expected)
   })
 })

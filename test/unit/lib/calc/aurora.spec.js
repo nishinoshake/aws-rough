@@ -1,4 +1,4 @@
-import aurora from '@/lib/calc/aurora'
+import { calc } from '@/lib/calc/aurora'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('aurora', () => {
@@ -29,7 +29,7 @@ describe('aurora', () => {
       io: 0
     }
 
-    expect(aurora(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       engine: 'MySQL',
@@ -44,6 +44,6 @@ describe('aurora', () => {
     const io = priceList.aurora.io.price * row.io
     const expected = instance + storage + io
 
-    expect(aurora(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

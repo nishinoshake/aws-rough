@@ -1,4 +1,4 @@
-import nlb from '@/lib/calc/nlb'
+import { calc } from '@/lib/calc/nlb'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('nlb', () => {
@@ -19,7 +19,7 @@ describe('nlb', () => {
       lcu: 0
     }
 
-    expect(nlb(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       unit: 4,
@@ -30,6 +30,6 @@ describe('nlb', () => {
     const lcu = 0.03 * 3 * 4 * MONTHLY_HOURS
     const expected = instance + lcu
 
-    expect(nlb(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

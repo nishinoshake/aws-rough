@@ -1,4 +1,4 @@
-import apigateway from '@/lib/calc/apigateway'
+import { calc } from '@/lib/calc/apigateway'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('apigateway', () => {
@@ -59,7 +59,7 @@ describe('apigateway', () => {
       transfer: 0
     }
 
-    expect(apigateway(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       request: 500000000, // 5億
@@ -72,6 +72,6 @@ describe('apigateway', () => {
     const transfer = 10 * 10 + 90 * 9 + 900 * 8
     const expected = request + cache + transfer
 
-    expect(apigateway(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

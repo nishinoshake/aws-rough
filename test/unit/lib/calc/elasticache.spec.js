@@ -1,4 +1,4 @@
-import elasticache from '@/lib/calc/elasticache'
+import { calc } from '@/lib/calc/elasticache'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('elasticache', () => {
@@ -19,7 +19,7 @@ describe('elasticache', () => {
       unit: 0
     }
 
-    expect(elasticache(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       instance: 'cache.t2.micro',
@@ -28,6 +28,6 @@ describe('elasticache', () => {
 
     const expected = 0.026 * MONTHLY_HOURS * 2
 
-    expect(elasticache(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

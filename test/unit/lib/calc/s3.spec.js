@@ -1,4 +1,4 @@
-import s3 from '@/lib/calc/s3'
+import { calc } from '@/lib/calc/s3'
 
 describe('s3', () => {
   test('S3の料金を計算できる', () => {
@@ -69,7 +69,7 @@ describe('s3', () => {
       write: 0
     }
 
-    expect(s3(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       storage: 1000,
@@ -84,6 +84,6 @@ describe('s3', () => {
     const transfer = 10 * 10 + 90 * 9 + 900 * 8
     const expected = storage + read + write + transfer
 
-    expect(s3(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

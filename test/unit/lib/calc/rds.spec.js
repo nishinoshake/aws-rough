@@ -1,4 +1,4 @@
-import rds from '@/lib/calc/rds'
+import { calc } from '@/lib/calc/rds'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('rds', () => {
@@ -27,7 +27,7 @@ describe('rds', () => {
       storage: 0
     }
 
-    expect(rds(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       engine: 'MySQL',
@@ -44,7 +44,7 @@ describe('rds', () => {
       const storage = priceList.rds.storage.gp2.price * row.storage * row.unit * multi
       const expected = instance + storage
 
-      expect(rds({ ...row, az }, priceList)).toBe(expected)
+      expect(calc({ ...row, az }, priceList)).toBe(expected)
     }
 
     azOptions.forEach(az => testCalcCorrectly(az))

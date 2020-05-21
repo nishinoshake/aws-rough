@@ -1,4 +1,4 @@
-import natgw from '@/lib/calc/natgw'
+import { calc } from '@/lib/calc/natgw'
 import { MONTHLY_HOURS } from '@/config/constants'
 
 describe('natgw', () => {
@@ -19,7 +19,7 @@ describe('natgw', () => {
       processedData: 0
     }
 
-    expect(natgw(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       unit: 2,
@@ -30,6 +30,6 @@ describe('natgw', () => {
     const processedData = 0.058 * 1000
     const expected = instance + processedData
 
-    expect(natgw(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

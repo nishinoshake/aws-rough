@@ -1,4 +1,4 @@
-import sns from '@/lib/calc/sns'
+import { calc } from '@/lib/calc/sns'
 
 describe('sns', () => {
   test('SNSの料金を計算できる', () => {
@@ -82,7 +82,7 @@ describe('sns', () => {
       http: 0
     }
 
-    expect(sns(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       mobile: 2000000,
@@ -99,6 +99,6 @@ describe('sns', () => {
     const http = (2000000 - 100000) * 6e-7
     const expected = mobile + transfer + request + email + http
 
-    expect(sns(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

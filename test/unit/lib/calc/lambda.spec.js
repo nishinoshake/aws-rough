@@ -1,4 +1,4 @@
-import lambda from '@/lib/calc/lambda'
+import { calc } from '@/lib/calc/lambda'
 
 describe('lambda', () => {
   test('Lmabdaの料金を計算できる', () => {
@@ -20,7 +20,7 @@ describe('lambda', () => {
       memory: 0
     }
 
-    expect(lambda(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       request: 10000000,
@@ -31,6 +31,6 @@ describe('lambda', () => {
     const memory = 0.00001 * (1000000 - 400000)
     const expected = request + memory
 
-    expect(lambda(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

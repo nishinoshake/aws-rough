@@ -1,4 +1,4 @@
-import route53 from '@/lib/calc/route53'
+import { calc } from '@/lib/calc/route53'
 
 describe('route53', () => {
   test('Route53の料金を計算できる', () => {
@@ -40,7 +40,7 @@ describe('route53', () => {
       query: 0
     }
 
-    expect(route53(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       hostzone: 30,
@@ -51,6 +51,6 @@ describe('route53', () => {
     const query = 1000 * 4e-6 + (10000 - 1000) * 2e-6
     const expected = hostzone + query
 
-    expect(route53(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })

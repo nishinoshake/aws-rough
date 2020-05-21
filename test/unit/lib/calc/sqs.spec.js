@@ -1,4 +1,4 @@
-import sqs from '@/lib/calc/sqs'
+import { calc } from '@/lib/calc/sqs'
 
 describe('sqs', () => {
   test('SQSの料金を計算できる', () => {
@@ -19,7 +19,7 @@ describe('sqs', () => {
       fifo: 0
     }
 
-    expect(sqs(emptyRow, priceList)).toBe(0)
+    expect(calc(emptyRow, priceList)).toBe(0)
 
     const row = {
       standard: 3000000,
@@ -30,6 +30,6 @@ describe('sqs', () => {
     const fifo = 3000000 * 5e-7
     const expected = standard + fifo
 
-    expect(sqs(row, priceList)).toBe(expected)
+    expect(calc(row, priceList)).toBe(expected)
   })
 })
