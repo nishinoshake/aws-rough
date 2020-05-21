@@ -26,8 +26,7 @@
       </div>
     </section>
 
-    <section class="section">
-      <h2 class="title-section"><span>細かい補足</span></h2>
+    <div class="section">
       <div class="service-summary accordion-list">
         <ServicePartsCondition></ServicePartsCondition>
 
@@ -58,6 +57,15 @@
           </section>
         </ServicePartsAccordion>
       </div>
+    </div>
+
+    <section class="section">
+      <h2 class="title-section">
+        <span>料金の計算式をざっくり</span>
+      </h2>
+      <div class="service-zakuri">
+        <ServicePartsCode service-name="natgw" />
+      </div>
     </section>
 
     <ServiceTemplateAds />
@@ -69,6 +77,7 @@ import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateT
 import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateLabel'
 import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
+import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
 import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
@@ -84,6 +93,7 @@ export default {
     ServiceTemplateLabel,
     ServiceTemplateCalc,
     ServiceTemplateAds,
+    ServicePartsCode,
     ServicePartsExclude,
     ServicePartsAccordion,
     ServicePartsCondition,

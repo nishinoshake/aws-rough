@@ -2,33 +2,36 @@
 
 .landing {
   position: relative;
-  @include max {
-    padding-top: 40px;
-  }
-  @include min {
-    padding-top: 50px;
-  }
 }
 
 .landing-copy {
   display: flex;
-  align-items: center;
-  line-height: 1.6;
-  letter-spacing: 0.16em;
-  text-indent: 0.1em;
-  background-color: $color-white;
+  justify-content: flex-end;
   @include max {
-    height: $height-header-sp;
-    font-size: 20px;
+    padding: 80px 20px;
   }
   @include min {
-    height: $height-header-pc;
-    display: flex;
-    align-items: center;
-    font-size: 32px;
+    padding: 50px 80px 80px 0;
   }
   span {
-    @include font-en;
+    position: relative;
+    @include max {
+      width: 240px;
+    }
+    @include min {
+      width: 400px;
+    }
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 14.29%;
+    }
+  }
+  svg {
+    @include fit-full;
+  }
+  path {
+    fill: $color-black;
   }
 }
 

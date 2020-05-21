@@ -12,9 +12,16 @@
         <slot name="zakuri" />
       </div>
     </section>
-    <section class="section">
-      <h2 class="title-section"><span>細かい補足</span></h2>
+    <div class="section">
       <slot name="aside" />
+    </div>
+    <section class="section">
+      <h2 class="title-section">
+        <span>料金の計算式をざっくり</span>
+      </h2>
+      <div class="service-zakuri">
+        <ServicePartsCode :service-name="serviceName" />
+      </div>
     </section>
     <ServiceTemplateAds />
   </article>
@@ -24,13 +31,14 @@
 import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateTitle'
 import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
+import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
 import ExternalLink from '@/components/text/ExternalLink'
 import serviceConfig from '@/config/service'
 import { getService } from '@/lib/service'
 
 export default {
   name: 'ServiceTemplate',
-  components: { ServiceTemplateCalc, ServiceTemplateTitle, ServiceTemplateAds, ExternalLink },
+  components: { ServiceTemplateCalc, ServiceTemplateTitle, ServiceTemplateAds, ServicePartsCode, ExternalLink },
   props: {
     serviceName: {
       type: String,

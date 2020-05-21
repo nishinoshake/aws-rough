@@ -24,7 +24,6 @@
   }
   @include min {
     height: $height-header-pc;
-    padding-left: 25px;
     font-size: 48px;
   }
   &-ja {
@@ -33,7 +32,7 @@
       font-size: 20px;
     }
     @include min {
-      font-size: 34px;
+      font-size: 38px;
     }
   }
   &-small {
@@ -49,14 +48,14 @@
   letter-spacing: 0.06em;
   border-bottom: $width-border-form dashed $color-border;
   @include max {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     padding-bottom: 16px;
     font-size: 18px;
   }
   @include min {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     padding-bottom: 24px;
-    font-size: 24px;
+    font-size: 26px;
   }
   + .accordion-list,
   + .spec {

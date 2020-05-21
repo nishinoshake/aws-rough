@@ -12,12 +12,10 @@
     flex: none;
     top: 0;
     left: 0;
+    padding-top: 60px;
     &.can-scroll {
       height: 100vh;
       overflow-y: scroll;
-    }
-    &:not(.can-scroll) {
-      top: 45px;
     }
   }
 }
@@ -28,15 +26,11 @@
     padding: 28px 10px 24px;
   }
   @include min {
-    margin-bottom: 14px;
-    padding: 0 30px 0 20px;
+    margin-bottom: 24px;
+    padding: 0 0 0 20px;
   }
   a {
     display: block;
-    background-color: $color-white;
-    @include min {
-      padding: 6px;
-    }
     span {
       position: relative;
       display: block;
@@ -51,7 +45,7 @@
     @include fit-full;
   }
   path {
-    fill: $color-dark;
+    fill: $color-black;
   }
 }
 
@@ -149,22 +143,38 @@
     &.is-active span {
       background-color: $color-black;
       color: $color-white;
+      &:before {
+        background-color: $color-white;
+      }
     }
     @include max {
       padding: 8px;
       font-size: 16px;
     }
     @include min {
-      padding: 6px 20px;
+      padding: 6px 14px;
       font-size: 18px;
       &:hover span {
         background-color: $color-black;
         color: $color-white;
+        &:before {
+          background-color: $color-white;
+        }
       }
     }
     span {
-      display: inline-block;
-      padding: 2px 4px;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 3px;
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: $color-border;
+      }
     }
   }
 }

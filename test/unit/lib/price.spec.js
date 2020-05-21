@@ -1,5 +1,5 @@
 import { SUSHI, MAX_PRICE } from '@/config/constants'
-import { greaterThanMaxPrice, formatPrice, usdToXXX, reduceRange } from '@/lib/price'
+import { greaterThanMaxPrice, formatPrice, usdToXXX, calcInRange } from '@/lib/price'
 
 describe('price', () => {
   describe('greaterThanMaxPrice', () => {
@@ -30,7 +30,7 @@ describe('price', () => {
     })
   })
 
-  describe('reduceRange', () => {
+  describe('calcInRange', () => {
     test('料金のレンジを計算できる', () => {
       const ranges = [
         {
@@ -50,14 +50,14 @@ describe('price', () => {
         }
       ]
 
-      expect(reduceRange(0, ranges)).toBe(0)
+      expect(calcInRange(0, ranges)).toBe(0)
 
       const r0 = 10 * 10
       const r1 = (100 - 10) * 9
       const r2 = (1000 - 100) * 8
       const expected = r0 + r1 + r2
 
-      expect(reduceRange(1000, ranges)).toBe(expected)
+      expect(calcInRange(1000, ranges)).toBe(expected)
     })
   })
 })

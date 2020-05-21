@@ -60,7 +60,7 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv'
   ],
-  plugins: [{ src: '~/plugins/vue-google-adsense', ssr: false }],
+  plugins: [{ src: '~/plugins/vue-google-adsense', ssr: false }, { src: '~/plugins/vue-highlightjs', ssr: false }],
   build: {
     extend(config, { isDev }) {
       if (config.externals) {
