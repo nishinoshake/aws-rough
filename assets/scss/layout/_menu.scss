@@ -23,26 +23,35 @@
 }
 
 .menu-logo {
-  letter-spacing: 0;
+  @include max {
+    max-width: 200px;
+    padding: 28px 10px 24px;
+  }
   @include min {
-    display: none;
+    margin-bottom: 14px;
+    padding: 0 30px 0 20px;
   }
   a {
     display: block;
-    line-height: 1;
-    @include max {
-      padding: 28px 10px 24px;
-      font-size: 20px;
-    }
+    background-color: $color-white;
     @include min {
-      display: flex;
-      align-items: center;
-      padding: 14px 20px;
-      font-size: 18px;
-      &:hover {
-        background-color: $color-snow;
+      padding: 6px;
+    }
+    span {
+      position: relative;
+      display: block;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 19.57%;
       }
     }
+  }
+  svg {
+    @include fit-full;
+  }
+  path {
+    fill: $color-dark;
   }
 }
 
@@ -56,7 +65,7 @@
     right: $padding-sp;
     font-size: 14px;
     letter-spacing: 0.1em;
-    background-color: $color-dark;
+    background-color: $color-black;
     border-radius: 50%;
     @include center-flex;
   }
@@ -136,8 +145,9 @@
     letter-spacing: normal;
     white-space: nowrap;
     align-items: center;
+    @include font-en;
     &.is-active span {
-      background-color: $color-dark;
+      background-color: $color-black;
       color: $color-white;
     }
     @include max {
@@ -148,7 +158,7 @@
       padding: 6px 20px;
       font-size: 18px;
       &:hover span {
-        background-color: $color-dark;
+        background-color: $color-black;
         color: $color-white;
       }
     }

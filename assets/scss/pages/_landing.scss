@@ -6,7 +6,7 @@
     padding-top: 40px;
   }
   @include min {
-    padding-top: 55px;
+    padding-top: 50px;
   }
 }
 
@@ -54,7 +54,7 @@
 
 .landing-service-item {
   @include max {
-    width: 140px;
+    width: 130px;
     padding: 14px;
   }
   @include min {

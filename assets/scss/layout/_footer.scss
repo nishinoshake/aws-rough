@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   margin-top: 60px;
-  background-color: $color-white;
   @include radius;
   @include max {
     height: $height-footer-sp;
@@ -13,7 +12,7 @@
   }
   @include min {
     height: $height-footer-pc;
-    padding: 0 16px;
+    padding: 0 25px;
   }
 }
 

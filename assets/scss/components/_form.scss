@@ -21,7 +21,7 @@
   padding: 10px;
   font-size: 16px;
   text-align: center;
-  border: $width-border-input solid $color-dark;
+  border: $width-border-input solid $color-black;
   background-color: $color-white;
   border-radius: $radius;
   @include transition-collection;
@@ -36,7 +36,7 @@
   position: relative;
   display: block;
   background-color: $color-white;
-  border: $width-border-input solid $color-dark;
+  border: $width-border-input solid $color-black;
   border-radius: $radius;
   select {
     opacity: 0;

@@ -14,15 +14,18 @@
   display: flex;
   align-items: center;
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 5px;
+  font-feature-settings: normal;
+  @include font-en;
   @include radius;
   @include max {
     height: $height-header-sp;
-    font-size: 22px;
+    font-size: 32px;
   }
   @include min {
     height: $height-header-pc;
-    font-size: 36px;
+    padding-left: 25px;
+    font-size: 48px;
   }
   &-ja {
     @include font-sans;

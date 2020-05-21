@@ -17,10 +17,10 @@
   }
   @include min {
     bottom: 30px;
-    right: 76px;
+    right: 85px;
   }
   @include min($width-max) {
-    right: calc(50% - #{($width-max - 2 * $width-border-pc) / 2} + 46px);
+    right: calc(50% - #{($width-max - 2 * $width-border-pc) / 2} + 55px);
   }
 }
 

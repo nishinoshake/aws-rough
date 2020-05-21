@@ -29,7 +29,6 @@
 
 .detail-body {
   position: relative;
-  background-color: $color-white;
   @include max {
     margin-top: 20px;
     min-height: calc(100vh - #{$height-header-sp + $height-footer-sp + (3 * $width-border-sp) + $padding-bottom-sp});

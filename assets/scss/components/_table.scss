@@ -18,7 +18,6 @@
   tr {
     width: 100%;
     position: relative;
-    background-color: $color-white;
     border-bottom: $width-border-form dashed $color-border;
     @include max {
       display: block;

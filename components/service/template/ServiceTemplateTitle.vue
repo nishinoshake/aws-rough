@@ -1,8 +1,7 @@
 <template>
   <h1 class="title-page">
     <span>
-      <span class="title-page-name">{{ service.name }}</span
-      ><span class="title-page-small">の料金</span>
+      <span class="title-page-name">{{ service.name }}</span>
     </span>
   </h1>
 </template>

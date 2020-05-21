@@ -2,7 +2,7 @@
 
 .accordion-item {
   background-color: $color-white;
-  border: $width-border-input solid $color-dark;
+  border: $width-border-input solid $color-black;
   border-radius: $radius;
   &.is-active {
     .accordion-inside {
@@ -66,7 +66,7 @@
 .accordion-inside {
   position: relative;
   opacity: 0;
-  border-top: $width-border-input dotted $color-dark;
+  border-top: $width-border-input dotted $color-black;
   transition: opacity 0.1s linear;
   will-change: opacity;
   @include max {
