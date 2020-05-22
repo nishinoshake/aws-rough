@@ -68,6 +68,18 @@
   }
 }
 
+.title-page-fullname {
+  color: rgba($color-black, 0.2);
+  @include max {
+    display: block;
+    margin-top: 0.3em;
+    font-size: 70%;
+  }
+  @include min {
+    padding-left: 0.1em;
+  }
+}
+
 .title-small {
   line-height: 1.4;
   @include max {

@@ -10,6 +10,21 @@
   }
 }
 
+.landing-copy {
+  margin-bottom: 120px;
+}
+
+.landing-copy-item {
+  line-height: 1;
+  @include min {
+    font-size: 32px;
+  }
+}
+
+.landing-copy-item + .landing-copy-item {
+  margin-top: 32px;
+}
+
 
 .landing-list {
   @include max {
