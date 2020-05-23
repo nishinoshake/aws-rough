@@ -10,21 +10,36 @@
   }
 }
 
-.landing-copy {
-  margin-bottom: 120px;
+.landing-ticker {
+  overflow: hidden;
+  padding: 12px ;
+  border: 1px dashed $color-border;
+  margin-top: 80px;
 }
 
-.landing-copy-item {
-  line-height: 1;
+.landing-ticker-list {
+  display: inline-flex;
+  animation: ticker 120s 1s linear infinite;
+}
+
+.landing-ticker-item {
+  white-space: nowrap;
+  @include max {
+    font-size: 12px;
+  }
   @include min {
-    font-size: 32px;
+    font-size: 18px;
   }
 }
 
-.landing-copy-item + .landing-copy-item {
-  margin-top: 32px;
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
 
 .landing-list {
   @include max {

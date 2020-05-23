@@ -13,152 +13,49 @@
         </ul>
       </div>
     </section>
-
-    <section class="section">
-      <h2 class="title-section"><span>AWSの料金を日本円でざっくり</span></h2>
-      <div class="service-zakuri">
-        <div class="section-child">
-          <p class="text">AWSの料金、<br class="sp" />ややこしいですよね。</p>
-          <p class="text">
-            サービスの選択肢が多く、構成が柔軟なおかけで、<br
-              class="pc"
-            />さまざまな要件をカバーできるのは嬉しいのですが、<br
-              class="pc"
-            />そのぶん料金体系がややこしく、利用するハードルが高いのも事実です。
-          </p>
-
-          <p class="text">
-            そのややこしさを少しでも解消するべく、<br class="pc" />日本円でざっくり計算できる、このサイトを作りました。
-          </p>
-
-          <p class="text">
-            ざっくりと言いつつ、計算ツールを公開する以上は、<br
-              class="pc"
-            />料金の目安として役に立つ金額を算出できるように努めていますが、<br
-              class="pc"
-            />実際に運用してみたら案外高かった・・・といった場合の責任までは負いかねます。
-          </p>
-
-          <p class="text">
-            仕事で使うシステムの見積もりなどで、正確さが要求される場合は、<ExternalLink
-              href="https://calculator.s3.amazonaws.com/index.html"
-              >公式のツール</ExternalLink
-            >をお使いください。
-          </p>
-        </div>
+    <div class="landing-ticker">
+      <div class="landing-ticker-list">
+        <p class="landing-ticker-item" v-for="i of 2" :key="i">
+          はじめてのAWS。とりあえず入門書を読み進める。
+          <nuxt-link to="/vpc/" class="text-link">VPC</nuxt-link>
+          でネットワークを設計し、 そこに
+          <nuxt-link to="/ec2/" class="text-link">EC2</nuxt-link>
+          を置くらしい。 この単語には聞き覚えがあるぞ。 これだけでも使えそうだけど、トラフィックの増減に備えて、手前に
+          <nuxt-link to="/elb/" class="text-link">ELB</nuxt-link>
+          を置くのが定石とのこと。 とりあえずサーバーは起動できたが、 欲を言えばDockerを使いたい。
+          ECSでは、サーバーの管理が不要な
+          <nuxt-link to="/fargate/" class="text-link">Fargate</nuxt-link>
+          というやつが使えるらしい。 こりゃすごいや。
+          すでにお腹がいっぱいだけど、APIの部分はサーバーレスで設計してみたい気持ちもある。 「サーバーレスはいいぞ」
+          という話をちらほら耳にするが、実際に使ってみないと、本当のところはわからない。
+          <nuxt-link to="/apigateway/" class="text-link">
+            API Gateway
+          </nuxt-link>
+          と
+          <nuxt-link to="/lambda/" class="text-link">Lambda</nuxt-link>
+          に、ストレージの
+          <nuxt-link to="/s3/" class="text-link">S3</nuxt-link>
+          をあわせれば、いろいろとできそうな気がする。 とりあえず、やってみよう。
+          データベースは、サーバーレスでスケーラブルな
+          <nuxt-link to="/dynamodb/" class="text-link">DynamoDB</nuxt-link>
+          を使うことに。 よくよく調べてみると、設計にコツが必要らしいので、途中で心が折れるかもしれない。
+          そのときは潔く、すぐに馴染めそうな <nuxt-link to="/rds/" class="text-link">RDS</nuxt-link>
+          を使うことも視野に入れておこう。 どこで見たかは覚えてないが、
+          <nuxt-link to="/aurora/" class="text-link">Aurora</nuxt-link>とかいうやつがすごいらしい。
+          一旦これで走り始めて、手軽なキャッシュが欲しくなったら、
+          <nuxt-link to="/elasticache/" class="text-link">
+            ElastiCache
+          </nuxt-link>
+          の導入も考えよう。 あとは、
+          <nuxt-link to="/cloudfront/" class="text-link">
+            CloudFront
+          </nuxt-link>
+          を手前に置いて、
+          <nuxt-link to="/route53/" class="text-link">Route53</nuxt-link>
+          でドメインの設定をすれば、とりあえず公開できそうだ。 しかしこれ、一体いくらかかるんだ？
+        </p>
       </div>
-    </section>
-
-    <section class="section">
-      <h2 class="title-section"><span>計算の前提</span></h2>
-      <div class="service-zakuri">
-        <div class="section-child">
-          <table class="spec">
-            <caption>
-              ※ 為替とAWSの料金は毎朝10時に更新しています
-            </caption>
-            <tbody>
-              <tr>
-                <th>通貨</th>
-                <td>日本円</td>
-              </tr>
-              <tr>
-                <th>税金</th>
-                <td>税抜き</td>
-              </tr>
-              <tr>
-                <th>期間</th>
-                <td>30.5日（月額）</td>
-              </tr>
-              <tr>
-                <th>ドル円</th>
-                <td>
-                  <span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span
-                  >円
-                </td>
-              </tr>
-              <tr>
-                <th>リージョン</th>
-                <td>東京リージョン<br />（SESのみバージニア北部）</td>
-              </tr>
-              <tr>
-                <th>AWSの料金</th>
-                <td>
-                  <ExternalLink
-                    href="https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/price-changes.html"
-                    >Price List API</ExternalLink
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th>為替レート</th>
-                <td>
-                  <ExternalLink href="https://github.com/exchangeratesapi/exchangeratesapi"
-                    >exchangeratesapi</ExternalLink
-                  >
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="title-section"><span>Google Analytics</span></h2>
-      <div class="service-zakuri">
-        <div class="section-child">
-          <p class="text">
-            サイトの利用状況を把握するために、Google Analyticsを使用しています。<br
-              class="pc"
-            />GoogleによるCookieの利用方法やオプトアウトの方法は、下記のリンクから確認できます。
-          </p>
-
-          <ul class="list">
-            <li class="list-item">
-              <ExternalLink href="https://policies.google.com/technologies/cookies?hl=ja"
-                >GoogleによるCookieの利用方法</ExternalLink
-              >
-            </li>
-            <li class="list-item">
-              <ExternalLink href="https://support.google.com/analytics/answer/181881?hl=ja"
-                >Google Analyticsのオプトアウト</ExternalLink
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="title-section"><span>Google AdSense</span></h2>
-      <div class="service-zakuri">
-        <div class="section-child">
-          <p class="text">
-            広告の配信に、Google AdSenseというサービスを使用しています。（こちらもCookieを使用）<br
-              class="pc"
-            />パーソナライズ広告に抵抗がある方は、<ExternalLink href="https://www.google.com/settings/ads"
-              >広告設定のページ</ExternalLink
-            >から無効にできます。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="title-section"><span>お問い合わせ</span></h2>
-      <div class="service-zakuri">
-        <div class="section-child">
-          <p class="text">
-            不具合などのご連絡は、<ExternalLink href="https://github.com/nishinoshake/aws-rough/issues"
-              >GitHubのIssue</ExternalLink
-            >か<a href="mailto:lawson.and.7.11@gmail.com" class="text-link">メール</a>までお願いいたします。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <ServiceTemplateAds />
+    </div>
   </div>
 </template>
 
