@@ -2,7 +2,7 @@
   <footer class="footer">
     <ul class="footer-list">
       <li class="footer-item">
-        <nuxt-link to="/">このサイトについて</nuxt-link>
+        <nuxt-link to="/about">このサイトについて</nuxt-link>
       </li>
       <li class="footer-item">
         <ExternalLink href="https://calculator.s3.amazonaws.com/index.html?lng=ja_JP">公式ツール</ExternalLink>
