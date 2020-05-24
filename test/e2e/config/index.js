@@ -1,4 +1,4 @@
-export { default as top } from './top'
+export { default as about } from './about'
 export { default as ec2 } from './ec2'
 export { default as fargate } from './fargate'
 export { default as clb } from './clb'

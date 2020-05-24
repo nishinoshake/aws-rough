@@ -25,7 +25,6 @@
     font-size: 48px;
   }
   &-ja {
-    font-weight: 400;
     @include font-sans;
     @include max {
       font-size: 20px;
