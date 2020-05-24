@@ -2,12 +2,6 @@
 
 .spec {
   border-collapse: collapse;
-  @include max {
-    width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
   &.mod-center {
     th,
     td {
@@ -15,28 +9,34 @@
     }
   }
   tr {
-    border-bottom: $width-border-form dotted $color-border;
+    border-bottom: $width-border-form solid $color-light-gray;
   }
   thead th {
     text-align: center;
+    padding-top: 0;
+  }
+  tbody {
+    th {
+      white-space: nowrap;
+    }
   }
   th,
   td {
     @include max {
       padding-top: 10px;
       padding-bottom: 10px;
+      font-size: 12px;
     }
     @include min {
-      padding-top: 16px;
-      padding-bottom: 16px;
-      font-size: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 14px;
     }
   }
   th {
-    text-align: left;
     @include max {
-      padding-left: 10px;
-      padding-right: 5px;
+      padding-left: 14px;
+      padding-right: 7px;
     }
     @include min {
       padding-left: 20px;
@@ -45,12 +45,12 @@
   }
   td {
     @include max {
-      padding-right: 10px;
-      padding-left: 5px;
+      padding-right: 14px;
+      padding-left: 7px; 
     }
     @include min {
       padding-right: 20px;
-      padding-left: 10px;
+      padding-left: 10px; 
     }
     &.mod-align-right {
       text-align: right;
@@ -71,6 +71,6 @@
     margin-top: 24px;
   }
   @include min {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 }

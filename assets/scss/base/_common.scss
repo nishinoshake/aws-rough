@@ -1,10 +1,9 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lora&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400&family=Source+Code+Pro&family=Source+Serif+Pro&display=swap');
 
 body {
   font-size: 14px;
-  letter-spacing: 0.12em;
   color: $color-font;
   font-feature-settings: "palt";
   background: linear-gradient(to right, #fafafa, #fff);
@@ -27,6 +26,7 @@ body {
     max-width: $width-max;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
   }
 }
 
@@ -48,7 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 60px;
+    padding-left: 60px;
     min-height: 100vh;
   }
 }

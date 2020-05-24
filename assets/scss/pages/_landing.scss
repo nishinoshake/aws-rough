@@ -3,10 +3,10 @@
 .landing {
   position: relative;
   @include max {
-    padding-top: 40px;
+    padding-top: 36px;
   }
   @include min {
-    padding-top: 62px;
+    padding-top: 66px;
   }
 }
 
@@ -50,57 +50,61 @@
   }
 }
 
-.landing-service-list {
-  display: flex;
-  flex-wrap: wrap;
+.landing-service-item {
+  line-height: 1;
+
+}
+
+.landing-service-link {
   @include max {
-    margin: -8px -14px -14px;
+    display: block;
+    padding: 8px 0;
   }
   @include min {
-    margin: -10px -20px -20px;
+    display: flex;
+    padding: 10px 0;
+    &:hover .landing-service-inner {
+      background-color: $color-snow-dark;
+    }
   }
 }
 
-.landing-service-item {
-  @include max {
-    width: 130px;
-    padding: 14px;
-  }
-  @include min {
-    width: 210px;
-    padding: 20px;
-  }
-  a {
-    width: 100%;
-    display: block;
-  }
+.landing-service-inner {
+  display: flex;
+  align-items: baseline;
 }
 
 .landing-service-name {
-  display: block;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
   @include font-en;
   @include max {
-    margin-bottom: 6px;
-    font-size: 16px;
+    font-size: 32px;
   }
   @include min {
-    margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 48px;
+  }
+}
+
+.landing-service-fullname {
+  color: rgba($color-black, 0.2);
+  @include font-en;
+  @include max {
+    display: none;
+  }
+  @include min {
+    margin-left: 16px;
+    font-size: 48px;
   }
 }
 
 .landing-service-description {
-  display: block;
-  line-height: 1;
-  white-space: nowrap;
   color: $color-muted;
+  @include font-serif;
   @include max {
-    font-size: 10px;
+    margin-left: 8px;
+    font-size: 14px;
   }
   @include min {
-    font-size: 12px;
+    margin-left: 16px;
+    font-size: 16px;
   }
 }

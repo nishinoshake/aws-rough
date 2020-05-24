@@ -49,28 +49,36 @@
       </div>
     </section>
 
-    <div class="section">
-      <div class="service-summary accordion-list">
-        <ServicePartsCondition></ServicePartsCondition>
+    <section class="section section-notice">
+      <section class="section">
+        <h2 class="title-section"><span>料金計算の前提</span></h2>
+        <div class="service-zakuri">
+          <ServicePartsCondition />
+        </div>
+      </section>
 
-        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
+      <section class="section">
+        <h2 class="title-section"><span>入力項目の補足</span></h2>
+        <div class="service-zakuri">
           <section class="section-child">
             <h3 class="title-small"><span>台数</span></h3>
             <p class="text">利用するロードバランサーの台数を入力してください。</p>
           </section>
           <section class="section-child">
             <h3 class="title-small"><span>データ転送量</span></h3>
-            <p class="text">ロードバランサーで処理されるデータ量の合計をGB単位で入力してください。</p>
             <p class="text">
-              Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
+              ロードバランサーで処理されるデータ量の合計をGB単位で入力してください。<br
+                class="pc"
+              />Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
             </p>
             <pre>2 * 100000 / 1024 ≒ 195GB</pre>
           </section>
           <section class="section-child">
             <h3 class="title-small"><span>LCU</span></h3>
-            <p class="text">Load Balancer Capacity Unit(LCU)を入力してください。</p>
             <p class="text">
-              名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。このサイトでざっくりした説明するのは難しいので、<ExternalLink
+              Load Balancer Capacity Unit(LCU)を入力してください。<br />名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。<br
+                class="pc"
+              />このサイトでざっくりした説明するのは難しいので、<ExternalLink
                 href="https://aws.amazon.com/jp/elasticloadbalancing/pricing/"
                 >公式の料金表</ExternalLink
               >を参考に算出していただくか、<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
@@ -78,15 +86,16 @@
               >をお使いください。
             </p>
           </section>
-        </ServicePartsAccordion>
-      </div>
-    </div>
+        </div>
+      </section>
+    </section>
 
     <section class="section">
       <h2 class="title-section">
-        <span>料金の計算式をざっくり</span>
+        <span>ALBの料金計算式をざっくり</span>
       </h2>
       <div class="service-zakuri">
+        <p class="text">ざっくりこんな感じで料金を計算しています。</p>
         <ServicePartsCode service-name="alb" />
       </div>
     </section>

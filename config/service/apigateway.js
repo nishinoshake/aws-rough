@@ -2,7 +2,7 @@ export default {
   key: 'apigateway',
   name: 'API Gateway',
   href: '/apigateway/',
-  description: '手軽にAPI',
+  description: 'API管理',
   color: 'beige',
   multiple: false,
   table: [
@@ -15,8 +15,7 @@ export default {
     {
       type: 'number',
       key: 'transfer',
-      title: 'データ転送量(GB)',
-      size: 'large'
+      title: 'データ転送量(GB)'
     },
     {
       type: 'select',

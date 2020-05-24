@@ -18,8 +18,8 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     line-height: 1.4;
-    background: #2f2f2f;
-    border-radius: 6px;
+    background: $color-dark;
+    border-radius: $radius;
   }
   /*
   Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/

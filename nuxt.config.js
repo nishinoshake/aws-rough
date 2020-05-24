@@ -41,6 +41,12 @@ module.exports = {
         property: 'og:image',
         content: 'https://aws-rough.cc/img/og.png?2018040902'
       }
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Source+Code+Pro&display=swap'
+      }
     ]
   },
   loading: false,

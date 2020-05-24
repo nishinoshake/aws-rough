@@ -15,8 +15,7 @@ export default {
     {
       type: 'number',
       key: 'processedData',
-      title: '処理データ量(GB)',
-      size: 'large'
+      title: '処理データ量(GB)'
     }
   ]
 }

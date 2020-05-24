@@ -20,7 +20,7 @@
     right: 85px;
   }
   @include min($width-max) {
-    right: calc(50% - #{($width-max - 2 * $width-border-pc) / 2} + 55px);
+    right: calc(50% - #{($width-max - 2) / 2} + 50px);
   }
 }
 
@@ -65,7 +65,6 @@
 
 .cart-label {
   line-height: 1;
-  font-weight: 700;
   @include max {
     font-size: 14px;
   }

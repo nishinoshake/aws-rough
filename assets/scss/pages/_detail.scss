@@ -14,6 +14,7 @@
   background-color: $color-black;
   border-radius: 999em;
   cursor: pointer;
+  @include font-sans;
   @include transition-collection;
   @include max {
     margin-left: 25px;

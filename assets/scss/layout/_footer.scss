@@ -4,34 +4,59 @@
   display: flex;
   align-items: center;
   margin-top: 60px;
-  @include radius;
-  @include max {
-    height: $height-footer-sp;
-    padding: 0 $padding-sp;
-    justify-content: center;
-  }
   @include min {
     height: $height-footer-pc;
-    padding: 0 25px;
+  }
+}
+
+.footer-logo {
+  width: 76px;
+  a {
+    display: block;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    @include min {
+      padding-bottom: 2px;
+      &:hover {
+        border-bottom-color: currentColor;
+      } 
+    }
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 19.54%;
+    }
+  }
+  svg {
+    @include fit-full;
   }
 }
 
 .footer-list {
   display: flex;
+  align-items: center;
+  line-height: 1;
   @include max {
-    justify-content: center;
+    font-size: 16px;
   }
   @include min {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 .footer-item {
-  &:nth-child(n+2) {
-    margin-left: 1em;
+  + .footer-item {
+    margin-left: 1.5em;
   }
   a {
+    display: block;
     color: inherit;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    @include min {
+      &:hover {
+        border-bottom-color: currentColor;
+      } 
+    }
   }
 }

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.story {
+  @include max {
+    padding-top: 36px;
+  }
+  @include min {
+    padding-top: 62px;
+  }
+}

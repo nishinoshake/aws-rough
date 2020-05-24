@@ -1,29 +1,5 @@
 <template>
   <ServiceTemplate service-name="lambda">
-    <template v-slot:aside>
-      <div class="service-summary accordion-list">
-        <ServicePartsCondition></ServicePartsCondition>
-
-        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
-          <section class="section-child">
-            <h3 class="title-small"><span>リクエスト数</span></h3>
-            <p class="text">Lambdaへのリクエスト数を入力してください。</p>
-            <p class="text">{{ freeRequest }}件のリクエストは無料です。</p>
-          </section>
-          <section class="section-child">
-            <h3 class="title-small"><span>メモリ</span></h3>
-            <p class="text">Lambdaに割り当てたメモリと、実行された秒数をかけた値を入力してください。</p>
-            <p class="text">
-              {{
-                freeMemory
-              }}GB秒までは無料です。<br />GB秒というのが直感的にわかりにくいですが、2048MB割り当てた関数を86,400秒実行した場合、下記のようになります
-            </p>
-            <pre>(2048 / 1024) * 86400 = 172,800GB秒</pre>
-          </section>
-        </ServicePartsAccordion>
-      </div>
-    </template>
-
     <template v-slot:zakuri>
       <div class="section-child">
         <p class="text">
@@ -51,6 +27,24 @@
           ネイティブでは、Java、Go、PowerShell、Node.js、C#、Python、Rubyをサポートしています。
         </p>
       </div>
+    </template>
+
+    <template v-slot:help>
+      <section class="section-child">
+        <h3 class="title-small"><span>リクエスト数</span></h3>
+        <p class="text">Lambdaへのリクエスト数を入力してください。</p>
+        <p class="text">{{ freeRequest }}件のリクエストは無料です。</p>
+      </section>
+      <section class="section-child">
+        <h3 class="title-small"><span>メモリ</span></h3>
+        <p class="text">
+          Lambdaに割り当てたメモリと、実行された秒数をかけた値を入力してください。<br />
+          {{
+            freeMemory
+          }}GB秒までは無料です。GB秒というのが直感的にわかりにくいですが、2048MB割り当てた関数を86,400秒実行した場合、下記のようになります
+        </p>
+        <pre>(2048 / 1024) * 86400 = 172,800GB秒</pre>
+      </section>
     </template>
   </ServiceTemplate>
 </template>

@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 .accordion-item {
-  background-color: $color-white;
   border: $width-border-input solid $color-black;
   border-radius: $radius;
   &.is-active {
@@ -27,33 +26,14 @@
   display: block;
   position: relative;
   text-align: left;
-  letter-spacing: 0.1em;
+  cursor: default;
   @include transition-fade;
   @include max {
     padding: 18px 30px 18px 20px;
   }
   @include min {
     padding: 22px 40px 22px 40px;
-    font-size: 20px;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    border-bottom: $width-border-input solid $color-font;
-    border-right: $width-border-input solid $color-font;
-    transform: rotate(45deg);
-    @include max {
-      width: 10px;
-      height: 10px;
-      top: calc(50% - 10px);
-      right: 22px;
-    }
-    @include min {
-      width: 14px;
-      height: 14px;
-      top: calc(50% - 12px);
-      right: 40px;
-    }
+    font-size: 18px;
   }
 }
 

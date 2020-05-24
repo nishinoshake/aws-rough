@@ -3,7 +3,6 @@
 .title {
   margin-bottom: 12px;
   font-size: 20px;
-  letter-spacing: 0.1em;
   @include min {
     margin-bottom: 22px;
     font-size: 30px;
@@ -14,7 +13,6 @@
   display: flex;
   align-items: center;
   line-height: 1;
-  letter-spacing: 5px;
   font-feature-settings: normal;
   @include font-en;
   @include radius;
@@ -27,6 +25,7 @@
     font-size: 48px;
   }
   &-ja {
+    font-weight: 400;
     @include font-sans;
     @include max {
       font-size: 20px;
@@ -39,23 +38,25 @@
     padding-left: 0.1em;
     font-size: 70%;
   }
+  > span {
+    @include min {
+      display: flex;
+      align-items: baseline;
+    }
+  }
 }
 
 .title-section {
   line-height: 1.1;
   display: flex;
   position: relative;
-  letter-spacing: 0.06em;
-  border-bottom: $width-border-form dashed $color-border;
   @include max {
     margin-bottom: 18px;
-    padding-bottom: 16px;
     font-size: 18px;
   }
   @include min {
-    margin-bottom: 26px;
-    padding-bottom: 24px;
-    font-size: 24px;
+    margin-bottom: 28px;
+    font-size: 20px;
   }
   + .accordion-list,
   + .spec {
@@ -66,32 +67,36 @@
       margin-top: 44px;
     }
   }
+  span {
+    border-bottom: $width-border-form dashed $color-border;
+    @include max {
+      padding-bottom: 4px;
+    }
+    @include min {
+      padding-bottom: 8px;
+    }
+  }
 }
 
 .title-page-fullname {
   color: rgba($color-black, 0.2);
   @include max {
-    display: block;
-    margin-top: 0.3em;
-    font-size: 70%;
+    display: none;
   }
   @include min {
-    padding-left: 0.3em;
+    margin-left: 16px;
   }
 }
 
 .title-small {
-  line-height: 1.4;
+  display: block;
+  line-height: 1.2;
+  font-weight: 700;
   @include max {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   @include min {
-    margin-bottom: 18px;
-  }
-  span {
-    display: inline;
-    padding-bottom: 2px;
-    border-bottom: $width-border-form solid $color-border;
+    margin-bottom: 10px;
   }
 }
 

@@ -2,7 +2,7 @@ export default {
   key: 'elasticache',
   name: 'ElastiCache',
   href: '/elasticache/',
-  description: 'インメモリ',
+  description: 'インメモリDB',
   color: 'blue',
   multiple: true,
   table: [

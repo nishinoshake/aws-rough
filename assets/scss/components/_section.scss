@@ -3,10 +3,30 @@
 .section {
   + .section {
     @include max {
-      margin-top: 100px;
+      margin-top: 80px;
     }
     @include min {
-      margin-top: 120px;
+      margin-top: 100px;
+    }
+  }
+}
+
+.section-notice {
+  border-left: 3px solid $color-black;
+  @include max {
+    padding-left: 20px;
+  }
+  @include min {
+    padding-left: 40px;
+  }
+  .section {
+    + .section {
+      @include max {
+        margin-top: 56px;
+      }
+      @include min {
+        margin-top: 80px;
+      }
     }
   }
 }
@@ -14,7 +34,7 @@
 .section-child {
   + .section-child {
     @include max {
-      margin-top: 20px;
+      margin-top: 30px;
     }
     @include min {
       margin-top: 40px;

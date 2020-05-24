@@ -96,12 +96,16 @@
 // -----------------------------------------------------
 // Text
 // -----------------------------------------------------
+@mixin font-serif {
+  font-family: "YuMincho", "Yu Mincho", serif;;
+}
+
 @mixin font-sans {
   font-family: system-ui,-apple-system,sans-serif;
 }
 
 @mixin font-en {
-  letter-spacing: normal;
+  font-family: 'Lora', serif;
 }
 
 @mixin font-source {

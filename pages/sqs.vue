@@ -1,11 +1,5 @@
 <template>
   <ServiceTemplate service-name="sqs">
-    <template v-slot:aside>
-      <div class="service-summary accordion-list">
-        <ServicePartsCondition></ServicePartsCondition>
-      </div>
-    </template>
-
     <template v-slot:zakuri>
       <div class="section-child">
         <p class="text">フルマネージド型のメッセージキューサービス。</p>
@@ -56,10 +50,10 @@
           <br class="pc" />
           順序を厳密に保持したいときのために、FIFOキューも用意されています。
         </p>
-
+      </div>
+      <div class="section-child">
+        <h3 class="title-small">SNSとSQSを組み合わせた使用例</h3>
         <p class="text">
-          <span class="text-bold">SNSとSQSを組み合わせた使用例</span>
-          <br />
           ユーザーがアップロードした画像に対して、サムネイルの作成と画像認識の処理を同時に走らせたい場合、
           <br class="pc" />
           メッセージを一旦SNSのトピックに投げて、それを複数のSQSのキューでサブスクライブする設計しておけば、

@@ -3,7 +3,7 @@
 .list-item {
   line-height: 1.4;
   position: relative;
-  padding-left: 20px;
+  padding-left: 14px;
   &:nth-child(n+2) {
     @include max {
       margin-top: 6px;
@@ -14,8 +14,8 @@
   }
   &:before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     background-color: $color-black;
     border-radius: 50%;
     position: absolute;

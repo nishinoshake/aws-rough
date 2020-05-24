@@ -7,7 +7,7 @@
     margin-bottom: 10px;
   }
   @include min {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 12px;
   }
 }
@@ -18,13 +18,19 @@
 
 .form-text-input {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
   text-align: center;
   border: $width-border-input solid $color-black;
   background-color: $color-white;
   border-radius: $radius;
   @include transition-collection;
+  @include max {
+    padding: 10px;
+    font-size: 16px;
+  }
+  @include min {
+    padding: 11px;
+    font-size: 14px;
+  }
   &:invalid {
     background-color: rgba($color-red, 0.2);
   }
@@ -40,18 +46,29 @@
   border-radius: $radius;
   select {
     opacity: 0;
-    font-size: 16px;
     cursor: pointer;
     @include fit-full;
+    @include max {
+      font-size: 16px;
+    }
+    @include min {
+      font-size: 14px;
+    }
   }
   &-value {
     display: block;
-    padding: 11px 16px 11px 0;
-    font-size: 16px;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
     background-color: $color-white;
+    @include max {
+      padding: 11px 16px 11px 0;
+      font-size: 16px;
+    }
+    @include min {
+      padding: 13px 16px 13px 0;
+      font-size: 14px;
+    }
   }
   &:after {
     content: '';

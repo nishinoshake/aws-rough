@@ -26,11 +26,17 @@
       </div>
     </section>
 
-    <div class="section">
-      <div class="service-summary accordion-list">
-        <ServicePartsCondition></ServicePartsCondition>
+    <section class="section section-notice">
+      <section class="section">
+        <h2 class="title-section"><span>料金計算の前提</span></h2>
+        <div class="service-zakuri">
+          <ServicePartsCondition />
+        </div>
+      </section>
 
-        <ServicePartsAccordion title="入力項目の補足" :force-open="true">
+      <section class="section">
+        <h2 class="title-section"><span>入力項目の補足</span></h2>
+        <div class="service-zakuri">
           <section class="section-child">
             <h3 class="title-small"><span>個数</span></h3>
             <p class="text">利用するNAT Gatewayの個数を入力してください。</p>
@@ -39,9 +45,12 @@
             <h3 class="title-small"><span>処理データ量</span></h3>
             <p class="text">NAT Gatewayで処理されるデータ量の合計をGB単位で入力してください。</p>
           </section>
-        </ServicePartsAccordion>
+        </div>
+      </section>
 
-        <ServicePartsAccordion title="対象外のもの" :force-open="true">
+      <section class="section">
+        <h2 class="title-section"><span>対象外のもの</span></h2>
+        <div class="service-zakuri">
           <section class="section-child">
             <h3 class="title-small"><span>VPN/PrivateLink</span></h3>
             <p class="text">
@@ -55,15 +64,16 @@
               >を使用してください。
             </p>
           </section>
-        </ServicePartsAccordion>
-      </div>
-    </div>
+        </div>
+      </section>
+    </section>
 
     <section class="section">
       <h2 class="title-section">
-        <span>料金の計算式をざっくり</span>
+        <span>NAT Gatewayの料金計算式をざっくり</span>
       </h2>
       <div class="service-zakuri">
+        <p class="text">ざっくりこんな感じで料金を計算しています。</p>
         <ServicePartsCode service-name="natgw" />
       </div>
     </section>
