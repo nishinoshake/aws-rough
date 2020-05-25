@@ -143,36 +143,24 @@
     align-items: center;
     @include font-en;
     &.is-active span {
-      background-color: $color-black;
-      color: $color-white;
-      &:before {
-        background-color: $color-white;
-      }
+      border-color: $color-black;
     }
     @include max {
+      padding: 6px;
       font-size: 16px;
-      @include max {
-        padding: 6px;
-      }
-      @include min {
-        padding: 8px;
-      }
     }
     @include min {
       padding: 3px 0;
       font-size: 18px;
       &:hover span {
-        background-color: $color-black;
-        color: $color-white;
-        &:before {
-          background-color: $color-white;
-        }
+        border-color: $color-black;
       }
     }
     span {
       display: inline-flex;
       align-items: center;
-      padding: 4px 10px;
+      padding: 3px 6px;
+      border: 1px solid transparent;
       border-radius: 3px;
     }
   }

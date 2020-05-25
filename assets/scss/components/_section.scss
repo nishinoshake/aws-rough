@@ -15,7 +15,7 @@
   border-radius: $radius;
   border: $width-border-form solid $color-gray;
   @include max {
-    padding: 20px;
+    padding: 30px;
   }
   @include min {
     padding: 60px;
