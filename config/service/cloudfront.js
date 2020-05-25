@@ -1,6 +1,7 @@
 export default {
   key: 'cloudfront',
   name: 'CloudFront',
+  fullname: 'Developer friendly CDN',
   href: '/cloudfront/',
   description: 'CDN',
   color: 'red',

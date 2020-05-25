@@ -50,21 +50,24 @@
   }
 }
 
+.landing-service-list {
+  @include min {
+    margin-left: -10px;
+  }
+}
+
 .landing-service-item {
   line-height: 1;
-
 }
 
 .landing-service-link {
   @include max {
     display: block;
-    padding: 8px 0;
   }
   @include min {
     display: flex;
-    padding: 10px 0;
     &:hover .landing-service-inner {
-      background-color: $color-snow-dark;
+      background: linear-gradient(to right, $color-light-gray, $color-snow-dark);
     }
   }
 }
@@ -72,6 +75,13 @@
 .landing-service-inner {
   display: flex;
   align-items: baseline;
+  border-radius: $radius;
+  @include max {
+    padding: 8px 0;
+  }
+  @include min {
+    padding: 10px;
+  }
 }
 
 .landing-service-name {
@@ -85,7 +95,7 @@
 }
 
 .landing-service-fullname {
-  color: rgba($color-black, 0.2);
+  color: rgba($color-black, 0.1);
   @include font-en;
   @include max {
     display: none;

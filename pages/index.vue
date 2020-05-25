@@ -8,7 +8,6 @@
               <span class="landing-service-inner">
                 <span class="landing-service-name">{{ service.name }}</span>
                 <span v-if="service.fullname" class="landing-service-fullname">{{ service.fullname }}</span>
-                <span class="landing-service-description">{{ service.description }}</span>
               </span>
             </nuxt-link>
           </li>

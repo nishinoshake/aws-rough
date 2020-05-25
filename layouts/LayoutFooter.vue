@@ -2,10 +2,10 @@
   <footer class="footer">
     <ul class="footer-list">
       <li class="footer-item">
-        <nuxt-link to="/">ZAKURI AWS</nuxt-link>
+        <nuxt-link to="/">ざっくりAWS</nuxt-link>
       </li>
       <li class="footer-item">
-        <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/about">このサイトについて</nuxt-link>
       </li>
       <li class="footer-item">
         <ExternalLink href="https://github.com/nishinoshake/aws-rough">GitHub</ExternalLink>

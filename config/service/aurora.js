@@ -1,6 +1,7 @@
 export default {
   key: 'aurora',
   name: 'Aurora',
+  fullname: 'Relational database for cloud',
   href: '/aurora/',
   description: 'すごいRDBMS',
   color: 'blue',

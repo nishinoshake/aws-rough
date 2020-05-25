@@ -1,6 +1,7 @@
 export default {
   key: 'lambda',
   name: 'Lambda',
+  fullname: 'Function as a Service',
   href: '/lambda/',
   description: '関数',
   color: 'orange',

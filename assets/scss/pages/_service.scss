@@ -44,38 +44,24 @@
 .service-calc-footer {
   display: flex;
   justify-content: center;
-  @include max {
-    margin-top: $margin-sp;
-  }
-  @include min {
-    margin-top: $margin-pc * 1.5;
-  }
+  margin-top: 36px;
 }
 
 .service-calc-append {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px 36px;
+  padding: 16px 32px;
   border-radius: 999em;
   color: $color-white;
   background-color: $color-black;
   @include transition-collection;
-  @include min {
-    padding: 18px 32px;
-  }
   span {
-    padding-left: 22px;
+    padding-left: 20px;
     position: relative;
     line-height: 1;
+    font-size: 14px;
     text-align: left;
-    @include max {
-      font-size: 14px;
-    }
-    @include min {
-      padding-left: 22px;
-      font-size: 14px;
-    }
     &:before,
     &:after {
       content: '';

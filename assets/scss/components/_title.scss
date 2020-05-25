@@ -78,7 +78,7 @@
 }
 
 .title-page-fullname {
-  color: rgba($color-black, 0.2);
+  color: rgba($color-black, 0.1);
   @include max {
     display: none;
   }
@@ -90,12 +90,15 @@
 .title-small {
   display: block;
   line-height: 1.2;
-  font-weight: 700;
   @include max {
     margin-bottom: 8px;
   }
   @include min {
     margin-bottom: 10px;
+  }
+  span {
+    padding: 2px;
+    border: 1px solid currentColor;
   }
 }
 

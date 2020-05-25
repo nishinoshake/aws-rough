@@ -1,6 +1,7 @@
 export default {
   key: 'route53',
   name: 'Route53',
+  fullname: 'Highly available DNS',
   href: '/route53/',
   description: 'DNS',
   color: 'orange',

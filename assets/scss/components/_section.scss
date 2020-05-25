@@ -12,12 +12,13 @@
 }
 
 .section-notice {
-  border-left: 3px solid $color-black;
+  border-radius: $radius;
+  border: $width-border-form solid $color-gray;
   @include max {
-    padding-left: 20px;
+    padding: 20px;
   }
   @include min {
-    padding-left: 40px;
+    padding: 60px;
   }
   .section {
     + .section {

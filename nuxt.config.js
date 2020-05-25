@@ -45,7 +45,7 @@ module.exports = {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Inter&family=Source+Code+Pro&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Fira+Code&family=Lora&display=swap'
       }
     ]
   },
