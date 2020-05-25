@@ -67,7 +67,7 @@
   @include min {
     display: flex;
     &:hover .landing-service-inner {
-      background: linear-gradient(to right, $color-light-gray, $color-snow-dark);
+      border-color: currentColor;
     }
   }
 }
@@ -80,7 +80,8 @@
     padding: 8px 0;
   }
   @include min {
-    padding: 10px;
+    padding: 7px;
+    border: 3px solid transparent;
   }
 }
 
