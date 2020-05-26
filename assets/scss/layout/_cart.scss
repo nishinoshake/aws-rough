@@ -5,10 +5,11 @@
   align-items: center;
   position: fixed;
   z-index: 100;
-  border: $width-border-input solid $color-black;
+  border: 2px solid $color-black;
   background-color: $color-black;
   border-radius: 999em;
   overflow: hidden;
+  transform: translate3d(0, 0, 0);
   @include max {
     width: calc(100% - #{$padding-sp * 2.8 + $width-menu-sp});
     max-width: 360px;
@@ -21,6 +22,14 @@
   }
   @include min($width-max) {
     right: calc(50% - #{($width-max - 2) / 2} + 50px);
+  }
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.1s ease;
+  }
+  &-enter,
+  &-leave-to {
+    opacity: 0;
   }
 }
 
@@ -51,7 +60,7 @@
   }
   @include min {
     min-width: 270px;
-    padding: 16px 16px 16px 22px;
+    padding: 18px 18px 18px 22px;
     font-size: 24px;
   }
   .price-number {
