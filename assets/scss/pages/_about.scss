@@ -1,0 +1,8 @@
+.about {
+    @include max {
+      padding-top: 36px;
+    }
+    @include min {
+      padding-top: 66px;
+    }
+  }

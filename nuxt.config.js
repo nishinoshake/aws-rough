@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         name: 'twitter:image',
-        content: 'https://aws-rough.cc/img/og.png?2018040902'
+        content: 'https://aws-rough.cc/img/og.png?d=2020060301'
       },
       {
         property: 'og:site_name',
@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         property: 'og:image',
-        content: 'https://aws-rough.cc/img/og.png?2018040902'
+        content: 'https://aws-rough.cc/img/og.png?d=2020060301'
       }
     ],
     link: [

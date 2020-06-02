@@ -1,10 +1,10 @@
 <template>
-  <div class="landing">
+  <div class="about">
     <section class="section">
       <h2 class="title-section" id="introduction"><a href="#introduction"># AWSの料金を、日本円でざっくり</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
-          <p class="text">AWSの料金、<br class="sp" />ややこしいですよね。</p>
+          <p class="text">AWSの料金、ややこしいですよね。</p>
           <p class="text">
             サービスの選択肢が多く、構成が柔軟なおかけで、<br
               class="pc"

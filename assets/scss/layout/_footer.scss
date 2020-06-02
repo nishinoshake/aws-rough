@@ -10,6 +10,7 @@
   color: $color-white;
   background-color: $color-black;
   @include max {
+    height: 50vh;
     padding: 60px 0;
   }
   @include min {
