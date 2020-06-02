@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h2 class="title-section"><span>Google AdSenseの広告</span></h2>
+    <h2 class="title-section" id="ad"><a href="#ad"># Google AdSenseの広告</a></h2>
     <div class="service-ad">
       <p class="service-ad-desc">
         このエリアに興味がある広告が表示された際にクリックすると、当サイトの制作者にお金が入る仕組みになっています。<br

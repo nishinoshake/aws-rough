@@ -9,8 +9,8 @@
     </div>
 
     <section class="section">
-      <h2 class="title-section">
-        <span>ざっくりわかるVPC</span>
+      <h2 class="title-section" id="zakkuri">
+        <a href="#zakkuri"># ざっくりわかるVPC</a>
       </h2>
       <div class="service-zakuri">
         <div class="section-child">
@@ -28,14 +28,7 @@
 
     <section class="section section-notice">
       <section class="section">
-        <h2 class="title-section"><span>料金計算の前提</span></h2>
-        <div class="service-zakuri">
-          <ServicePartsCondition />
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="title-section"><span>入力項目の補足</span></h2>
+        <h2 class="title-section" id="help"><a href="#help"># 入力項目の補足</a></h2>
         <div class="service-zakuri">
           <section class="section-child">
             <h3 class="title-small"><span>個数</span></h3>
@@ -49,7 +42,14 @@
       </section>
 
       <section class="section">
-        <h2 class="title-section"><span>対象外のもの</span></h2>
+        <h2 class="title-section" id="condition"><a href="#condition"># 料金計算の前提</a></h2>
+        <div class="service-zakuri">
+          <ServicePartsCondition />
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="title-section" id="disclaimer"><a href="#disclaimer"># 対象外のもの</a></h2>
         <div class="service-zakuri">
           <section class="section-child">
             <h3 class="title-small"><span>VPN/PrivateLink</span></h3>
@@ -69,8 +69,8 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section">
-        <span>NAT Gatewayの料金計算式をざっくり</span>
+      <h2 class="title-section" id="code">
+        <a href="#code"># NAT Gatewayの料金計算式をざっくり</a>
       </h2>
       <div class="service-zakuri">
         <p class="text">ざっくりこんな感じで料金を計算しています。</p>

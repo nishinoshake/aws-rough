@@ -1,7 +1,7 @@
 <template>
   <div class="landing">
     <section class="section">
-      <h2 class="title-section"><span>AWSの料金を、日本円でざっくり</span></h2>
+      <h2 class="title-section" id="introduction"><a href="#introduction"># AWSの料金を、日本円でざっくり</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">AWSの料金、<br class="sp" />ややこしいですよね。</p>
@@ -36,7 +36,7 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section"><span>計算の前提</span></h2>
+      <h2 class="title-section" id="condition"><a href="#condition"># 計算の前提</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <table class="spec">
@@ -91,7 +91,7 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section"><span>Google Analytics</span></h2>
+      <h2 class="title-section" id="analytics"><a href="#analytics"># Google Analytics</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">
@@ -117,7 +117,7 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section"><span>Google AdSense</span></h2>
+      <h2 class="title-section" id="adsense"><a href="#adsense"># Google AdSense</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">
@@ -132,7 +132,7 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section"><span>お問い合わせ</span></h2>
+      <h2 class="title-section" id="contact"><a href="#contact"># お問い合わせ</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">
@@ -165,7 +165,7 @@ export default {
     }
   },
   head() {
-    return meta.index
+    return meta.about
   },
   computed: {
     usdjpy() {

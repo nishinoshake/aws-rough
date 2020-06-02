@@ -57,7 +57,7 @@
     width: $width-menu-sp;
     height: $width-menu-sp;
     position: fixed;
-    z-index: 20;
+    z-index: 1000;
     bottom: $padding-sp;
     right: $padding-sp;
     font-size: 14px;
@@ -118,11 +118,11 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 10;
+    z-index: 900;
     visibility: hidden;
     background-color: $color-white;
     border-top: $width-border-form dashed $color-border;
-    padding: $width-border-sp $width-border-sp #{$width-menu-sp + $padding-sp * 2};
+    padding: 30px 90px 30px 30px;
     will-change: transform;
   }
 }
@@ -161,7 +161,6 @@
       align-items: center;
       padding: 3px 6px;
       border: 1px solid transparent;
-      border-radius: 3px;
     }
   }
 }

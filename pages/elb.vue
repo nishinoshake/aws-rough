@@ -14,8 +14,8 @@
     </div>
 
     <section class="section">
-      <h2 class="title-section">
-        <span>ざっくりわかるELB</span>
+      <h2 class="title-section" id="zakkuri">
+        <a href="#zakkuri"># ざっくりわかるELB</a>
       </h2>
       <div class="service-zakuri">
         <div class="section-child">
@@ -51,14 +51,7 @@
 
     <section class="section section-notice">
       <section class="section">
-        <h2 class="title-section"><span>料金計算の前提</span></h2>
-        <div class="service-zakuri">
-          <ServicePartsCondition />
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="title-section"><span>入力項目の補足</span></h2>
+        <h2 class="title-section" id="help"><a href="#help"># 入力項目の補足</a></h2>
         <div class="service-zakuri">
           <section class="section-child">
             <h3 class="title-small"><span>台数</span></h3>
@@ -88,11 +81,18 @@
           </section>
         </div>
       </section>
+
+      <section class="section">
+        <h2 class="title-section" id="condition"><a href="#condition"># 料金計算の前提</a></h2>
+        <div class="service-zakuri">
+          <ServicePartsCondition />
+        </div>
+      </section>
     </section>
 
     <section class="section">
-      <h2 class="title-section">
-        <span>ALBの料金計算式をざっくり</span>
+      <h2 class="title-section" id="code">
+        <a href="#code"># ALBの料金計算式をざっくり</a>
       </h2>
       <div class="service-zakuri">
         <p class="text">ざっくりこんな感じで料金を計算しています。</p>

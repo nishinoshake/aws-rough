@@ -1,16 +1,9 @@
 <template>
   <footer class="footer">
-    <ul class="footer-list">
-      <li class="footer-item">
-        <nuxt-link to="/">ざっくりAWS</nuxt-link>
-      </li>
-      <li class="footer-item">
-        <nuxt-link to="/about">このサイトについて</nuxt-link>
-      </li>
-      <li class="footer-item">
-        <ExternalLink href="https://github.com/nishinoshake/aws-rough">GitHub</ExternalLink>
-      </li>
-    </ul>
+    <p class="footer-title"><nuxt-link to="/" class="footer-about-link">善き人のためのAWS</nuxt-link></p>
+    <p class="footer-about">
+      <nuxt-link to="/about" class="footer-about-link">→ このサイトについて ←</nuxt-link>
+    </p>
   </footer>
 </template>
 

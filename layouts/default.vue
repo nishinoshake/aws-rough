@@ -6,10 +6,10 @@
         <LayoutMenu />
         <div class="contents">
           <nuxt />
-          <LayoutFooter />
         </div>
       </div>
     </div>
+    <LayoutFooter />
     <ErrorModal :is-visible="$store.state.error.isVisible" :message="$store.state.error.message" />
   </div>
 </template>
@@ -37,9 +37,14 @@ export default {
   },
   mounted() {
     const { query } = parseUrl(location.href, true)
+    const hash = this.$route.hash
 
     if (query && query.z) {
       this.$store.dispatch('fetchZ', { fetchZ, hash: query.z, serviceConfig })
+    }
+
+    if (hash && hash.match(/^#.+$/)) {
+      document.querySelector(hash).scrollIntoView()
     }
   }
 }

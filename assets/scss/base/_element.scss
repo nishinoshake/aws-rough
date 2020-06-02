@@ -16,7 +16,6 @@ pre {
   overflow-x: auto;
   overflow-y: hidden;
   background-color: $color-bg;
-  border-radius: 6px;
   @include font-source;
   @include min {
     padding: 20px;

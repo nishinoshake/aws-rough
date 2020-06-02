@@ -45,7 +45,7 @@ module.exports = {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Fira+Code&family=Lora&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Fira+Code&family=Lora&display=swap'
       }
     ]
   },
@@ -66,7 +66,10 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv'
   ],
-  plugins: [{ src: '~/plugins/vue-google-adsense', ssr: false }, { src: '~/plugins/vue-highlightjs', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-google-adsense', ssr: false },
+    { src: '~/plugins/vue-highlightjs', ssr: false }
+  ],
   build: {
     extend(config, { isDev }) {
       if (config.externals) {

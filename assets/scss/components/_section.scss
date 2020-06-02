@@ -3,30 +3,29 @@
 .section {
   + .section {
     @include max {
-      margin-top: 80px;
+      margin-top: 60px;
     }
     @include min {
-      margin-top: 100px;
+      margin-top: 70px;
     }
   }
 }
 
 .section-notice {
-  border-radius: $radius;
   border: $width-border-form solid $color-gray;
   @include max {
-    padding: 30px;
+    padding: 10px 30px 30px;
   }
   @include min {
-    padding: 60px;
+    padding: 30px 50px 50px;
   }
   .section {
     + .section {
       @include max {
-        margin-top: 56px;
+        margin-top: 36px;
       }
       @include min {
-        margin-top: 80px;
+        margin-top: 60px;
       }
     }
   }

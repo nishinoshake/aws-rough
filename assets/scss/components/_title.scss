@@ -49,13 +49,14 @@
   line-height: 1.1;
   display: flex;
   position: relative;
+  font-weight: 700;
+  padding: 20px 0;
   @include max {
-    margin-bottom: 18px;
-    font-size: 18px;
+    font-size: 16px;
   }
   @include min {
-    margin-bottom: 28px;
-    font-size: 20px;
+    margin-bottom: 6px;
+    font-size: 18px;
   }
   + .accordion-list,
   + .spec {
@@ -67,13 +68,13 @@
     }
   }
   span {
-    border-bottom: $width-border-form dashed $color-border;
-    @include max {
-      padding-bottom: 4px;
-    }
-    @include min {
-      padding-bottom: 8px;
-    }
+    // border-bottom: $width-border-form dashed $color-border;
+    // @include max {
+    //   padding-bottom: 4px;
+    // }
+    // @include min {
+    //   padding-bottom: 8px;
+    // }
   }
 }
 
@@ -97,8 +98,11 @@
     margin-bottom: 10px;
   }
   span {
-    padding-left: 10px;
+    padding-left: 7px;
     border-left: 2px solid currentColor;
+    @include min {
+      padding-left: 10px;
+    }
   }
 }
 

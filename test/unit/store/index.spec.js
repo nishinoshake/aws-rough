@@ -7,11 +7,17 @@ import { usdToXXX } from '@/lib/price'
 const serviceConfig = [
   {
     key: 'ec2',
-    table: [{ type: 'select', key: 'instance', default: 't2.micro' }, { type: 'number', key: 'unit' }]
+    table: [
+      { type: 'select', key: 'instance', default: 't2.micro' },
+      { type: 'number', key: 'unit' }
+    ]
   },
   {
     key: 'rds',
-    table: [{ type: 'select', key: 'instance', default: 'db.t2.micro' }, { type: 'number', key: 'unit' }]
+    table: [
+      { type: 'select', key: 'instance', default: 'db.t2.micro' },
+      { type: 'number', key: 'unit' }
+    ]
   }
 ]
 
@@ -148,7 +154,10 @@ describe('store', () => {
   describe('RESTORE', () => {
     test('サービスのテーブルを復元できる', () => {
       const tables = {
-        ec2: [{ instance: 'c4.large', unit: 1 }, { instance: 't2.small', unit: 2 }]
+        ec2: [
+          { instance: 'c4.large', unit: 1 },
+          { instance: 't2.small', unit: 2 }
+        ]
       }
 
       store.commit('RESTORE', { tables, serviceConfig })

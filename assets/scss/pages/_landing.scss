@@ -75,7 +75,6 @@
 .landing-service-inner {
   display: flex;
   align-items: baseline;
-  border-radius: $radius;
   @include max {
     padding: 8px 0;
   }
