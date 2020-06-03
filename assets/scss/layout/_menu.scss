@@ -142,7 +142,8 @@
     align-items: center;
     @include font-en;
     &.is-active span {
-      border-color: $color-black;
+      color: $color-white;
+      background-color: $color-black;
     }
     @include max {
       padding: 6px;
@@ -152,14 +153,14 @@
       padding: 3px 0;
       font-size: 18px;
       &:hover span {
-        border-color: $color-black;
+        color: $color-white;
+        background-color: $color-black;
       }
     }
     span {
       display: inline-flex;
       align-items: center;
       padding: 3px 6px;
-      border: 1px solid transparent;
     }
   }
 }

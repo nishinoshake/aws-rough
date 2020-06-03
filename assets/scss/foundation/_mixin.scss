@@ -105,11 +105,11 @@
 }
 
 @mixin font-en {
-  font-family: 'Lora', serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @mixin font-source {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 @mixin hide-text {

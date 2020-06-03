@@ -6,7 +6,7 @@
     padding: 36px 20px 0;
   }
   @include min {
-    padding-top: 66px;
+    padding-top: 67px;
   }
 }
 
@@ -52,7 +52,6 @@
 
 .landing-service-list {
   @include min {
-    margin-left: -10px;
   }
 }
 
@@ -67,7 +66,11 @@
   @include min {
     display: flex;
     &:hover .landing-service-inner {
-      border-color: currentColor;
+      color: $color-white;
+      background-color: $color-black;
+      .landing-service-fullname {
+        color: $color-dark-gray;
+      }
     }
   }
 }
@@ -79,8 +82,7 @@
     padding: 8px 0;
   }
   @include min {
-    padding: 7px;
-    border: 3px solid transparent;
+    padding: 10px;
   }
 }
 
@@ -90,7 +92,7 @@
     font-size: 32px;
   }
   @include min {
-    font-size: 48px;
+    font-size: 46px;
   }
 }
 
@@ -102,7 +104,7 @@
   }
   @include min {
     margin-left: 16px;
-    font-size: 48px;
+    font-size: 46px;
   }
 }
 

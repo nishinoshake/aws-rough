@@ -25,7 +25,7 @@
   }
   &-enter-active,
   &-leave-active {
-    transition: opacity 0.2s ease, transform 0.8s $easeOutExpo;
+    transition: opacity 0.1s ease, transform 0.64s $easeOutExpo;
   }
   &-enter {
     opacity: 0;

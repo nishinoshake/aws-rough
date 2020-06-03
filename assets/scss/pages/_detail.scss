@@ -32,11 +32,9 @@
   position: relative;
   @include max {
     margin-top: 20px;
-    min-height: calc(100vh - #{$height-header-sp + $height-footer-sp + (3 * $width-border-sp) + $padding-bottom-sp});
   }
   @include min {
     margin-top: 30px;
-    min-height: calc(100vh - #{$height-header-pc + $height-footer-pc + (4 * $width-border-pc)});
   }
 }
 
@@ -133,7 +131,7 @@
     font-size: 22px;
   }
   @include min {
-    font-size: 40px;
+    font-size: 60px;
   }
   &.is-visible {
     span {
