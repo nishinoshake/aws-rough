@@ -55,7 +55,7 @@
     font-size: 16px;
   }
   @include min {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     font-size: 18px;
   }
   + .accordion-list,
@@ -67,14 +67,16 @@
       margin-top: 44px;
     }
   }
-  span {
-    // border-bottom: $width-border-form dashed $color-border;
-    // @include max {
-    //   padding-bottom: 4px;
-    // }
-    // @include min {
-    //   padding-bottom: 8px;
-    // }
+}
+
+.section-notice {
+  .title-section {
+    @include max {
+      font-size: 14px;
+    }
+    @include min {
+      font-size: 16px;
+    }
   }
 }
 

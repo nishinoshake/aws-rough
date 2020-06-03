@@ -101,6 +101,7 @@
     </section>
 
     <ServiceTemplateAds />
+    <ServiceTemplateAbout />
   </article>
 </template>
 
@@ -109,6 +110,7 @@ import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateT
 import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateLabel'
 import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
+import ServiceTemplateAbout from '@/components/service/template/ServiceTemplateAbout'
 import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
 import serviceConfigELB from '@/config/service/elb'
 import serviceConfigCLB from '@/config/service/clb'
@@ -126,6 +128,7 @@ export default {
     ServiceTemplateLabel,
     ServiceTemplateCalc,
     ServiceTemplateAds,
+    ServiceTemplateAbout,
     ServicePartsCode,
     ServicePartsAccordion,
     ServicePartsCondition,

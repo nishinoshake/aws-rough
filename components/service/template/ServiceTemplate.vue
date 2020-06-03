@@ -52,6 +52,7 @@
     </section>
 
     <ServiceTemplateAds />
+    <ServiceTemplateAbout />
   </article>
 </template>
 
@@ -59,6 +60,7 @@
 import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateTitle'
 import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
+import ServiceTemplateAbout from '@/components/service/template/ServiceTemplateAbout'
 import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
 import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
 import ExternalLink from '@/components/text/ExternalLink'
@@ -70,6 +72,7 @@ export default {
   components: {
     ServiceTemplateCalc,
     ServiceTemplateTitle,
+    ServiceTemplateAbout,
     ServiceTemplateAds,
     ServicePartsCode,
     ServicePartsCondition,

@@ -57,8 +57,6 @@ export default {
       const viewHeight = parseInt(window.innerHeight, 10)
       const menuHeight = parseInt(this.$refs.menu.offsetHeight, 10)
 
-      console.log(menuHeight)
-
       document.documentElement.style.setProperty('--view-height', `${viewHeight}px`)
       document.documentElement.style.setProperty('--menu-height', `${menuHeight}px`)
 

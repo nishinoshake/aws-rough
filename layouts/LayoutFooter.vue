@@ -1,10 +1,6 @@
 <template>
   <footer class="footer">
-    <p class="footer-title"><nuxt-link to="/" class="footer-about-link">善き人のためのAWS</nuxt-link></p>
-    <p class="footer-about">
-      <nuxt-link to="/about" class="footer-about-link">このサイトについて</nuxt-link>
-    </p>
-    <div class="footer-bg"></div>
+    <div class="footer-bar"><nuxt-link to="/" class="footer-bar-link"></nuxt-link></div>
   </footer>
 </template>
 
