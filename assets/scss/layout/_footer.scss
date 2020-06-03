@@ -7,8 +7,7 @@
   align-items: center;
   position: relative;
   z-index: 100;
-  color: $color-white;
-  background-color: $color-black;
+  background-color: $color-snow-dark;
   @include max {
     height: 50vh;
     padding: 60px 0;
@@ -23,7 +22,6 @@
 .footer-title {
   font-size: 22px;
   font-family: 'Noto Serif JP', serif;
-  color: $color-white;
   letter-spacing: 0.04em;
   @include min {
     font-size: 38px;
