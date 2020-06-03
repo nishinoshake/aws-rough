@@ -6,7 +6,7 @@
     padding: 36px 20px 0;
   }
   @include min {
-    padding-top: 67px;
+    padding-top: 68px;
   }
 }
 
@@ -52,6 +52,7 @@
 
 .landing-service-list {
   @include min {
+    margin-left: -10px;
   }
 }
 
@@ -92,7 +93,7 @@
     font-size: 32px;
   }
   @include min {
-    font-size: 46px;
+    font-size: 48px;
   }
 }
 

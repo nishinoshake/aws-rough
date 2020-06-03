@@ -22,7 +22,7 @@
   }
   @include min {
     height: $height-header-pc;
-    font-size: 46px;
+    font-size: 48px;
   }
   &-ja {
     @include font-sans;
@@ -38,12 +38,7 @@
     font-size: 70%;
   }
   &-service {
-    background-color: $color-snow-dark;
-    @include max {
-      padding: 8px 0;
-    }
     @include min {
-      padding: 10px;
       display: flex;
       align-items: baseline;
     }

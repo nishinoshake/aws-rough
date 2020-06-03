@@ -121,7 +121,7 @@
     visibility: hidden;
     background-color: $color-white;
     border-top: $width-border-form dashed $color-border;
-    padding: 30px 90px 30px 30px;
+    padding: 22px 90px 22px 22px;
     will-change: transform;
   }
 }
@@ -147,7 +147,7 @@
     }
     @include max {
       padding: 6px;
-      font-size: 16px;
+      font-size: 22px;
     }
     @include min {
       padding: 3px 0;

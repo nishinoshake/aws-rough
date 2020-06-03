@@ -22,7 +22,7 @@
   .section {
     + .section {
       @include max {
-        margin-top: 36px;
+        margin-top: 24px;
       }
       @include min {
         margin-top: 70px;
