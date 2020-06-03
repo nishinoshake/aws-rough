@@ -1,7 +1,7 @@
 <template>
-  <nav :class="['menu', { 'is-open': isMenuOpen, 'can-scroll': canScroll }]" ref="menu">
+  <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
     <div class="menu-frame">
-      <div class="menu-list-container" ref="menuContainer">
+      <div class="menu-list-container">
         <ul class="menu-list">
           <li v-for="service in services" :key="service.key" class="menu-item">
             <nuxt-link :to="service.href" @click.native="handleClick">
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       services: serviceConfig,
-      canScroll: false
+      isSmall: false
     }
   },
   computed: {
@@ -55,7 +55,9 @@ export default {
     },
     handleResize() {
       const viewHeight = parseInt(window.innerHeight, 10)
-      const menuHeight = parseInt(this.$refs.menuContainer.offsetHeight, 10)
+      const menuHeight = parseInt(this.$refs.menu.offsetHeight, 10)
+
+      console.log(menuHeight)
 
       document.documentElement.style.setProperty('--view-height', `${viewHeight}px`)
       document.documentElement.style.setProperty('--menu-height', `${menuHeight}px`)
@@ -64,9 +66,7 @@ export default {
         return
       }
 
-      const menuOffsetY = this.$refs.menu.getBoundingClientRect().top
-
-      this.canScroll = menuHeight + menuOffsetY > window.innerHeight
+      this.isSmall = menuHeight > window.innerHeight
     },
     toggle() {
       this.TOGGLE_MENU()

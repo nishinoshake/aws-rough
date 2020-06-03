@@ -18,13 +18,13 @@ body {
 .container {
   position: relative;
   @include max {
-    padding: 0 $width-border-sp $padding-bottom-sp;
+    padding: 0 $width-border-sp;
   }
   @include min {
     max-width: $width-max;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px 160px;
+    padding: 0 20px;
   }
 }
 
@@ -40,13 +40,14 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    min-height: calc(100vh - #{$height-footer-sp});
+    min-height: 100vh;
+    padding-bottom: $padding-bottom-sp;
   }
   @include min {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 60px;
+    padding: 0 0 160px 60px;
     min-height: 100vh;
   }
 }

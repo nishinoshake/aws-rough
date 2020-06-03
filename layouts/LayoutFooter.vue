@@ -4,6 +4,7 @@
     <p class="footer-about">
       <nuxt-link to="/about" class="footer-about-link">このサイトについて</nuxt-link>
     </p>
+    <div class="footer-bg"></div>
   </footer>
 </template>
 

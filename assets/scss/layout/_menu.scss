@@ -12,10 +12,9 @@
     flex: none;
     top: 0;
     left: 0;
-    padding-top: 40px;
-    &.can-scroll {
-      height: 100vh;
-      overflow-y: scroll;
+    padding: 40px 0;
+    &.is-small {
+      position: static;
     }
   }
 }
