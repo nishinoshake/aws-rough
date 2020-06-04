@@ -121,7 +121,7 @@
     visibility: hidden;
     background-color: $color-white;
     border-top: $width-border-form dashed $color-border;
-    padding: 22px 90px 22px 22px;
+    padding: 22px 70px 22px 22px;
     will-change: transform;
   }
 }
@@ -133,47 +133,64 @@
   }
 }
 
-.menu-item {
-  a {
-    display: flex;
-    line-height: 1;
-    letter-spacing: normal;
-    white-space: nowrap;
-    align-items: center;
-    @include font-en;
-    &.is-active span {
-      color: $color-white;
-      background-color: $color-black;
+.menu-link {
+  display: block;
+  line-height: 1;
+  letter-spacing: normal;
+  white-space: nowrap;
+  @include font-en;
+  &.is-active {
+    &.mod-orange {
+      color: $color-orange;
     }
-    @include max {
-      padding: 6px;
-      font-size: 22px;
+    &.mod-blue {
+      color: $color-blue;
     }
-    @include min {
-      padding: 3px 0;
-      font-size: 18px;
-      &:hover span {
-        color: $color-white;
-        background-color: $color-black;
-      }
+    &.mod-red {
+      color: $color-red;
     }
-    span {
-      display: inline-flex;
-      align-items: center;
-      padding: 3px 6px;
+    &.mod-beige {
+      color: $color-beige;
+    }
+  }
+  @include max {
+    padding: 8px;
+    font-size: 18px;
+  }
+  @include min {
+    padding: 4px 0;
+    font-size: 18px;
+    &.mod-orange:hover {
+      color: $color-orange;
+    }
+    &.mod-blue:hover {
+      color: $color-blue;
+    }
+    &.mod-red:hover {
+      color: $color-red;
+    }
+    &.mod-beige:hover {
+      color: $color-beige;
     }
   }
 }
 
-.menu-icon {
-  flex: none;
-  @include max {
-    width: 24px;
-    height: 24px;
-  }
-  @include min {
-    width: 28px;
-    height: 28px;
+.menu-inner {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  svg {
+    flex: none;
+    @include max {
+      width: 24px;
+      height: 24px;
+      margin-right: 3px;
+    }
+    @include min {
+      width: 24px;
+      height: 24px;
+      margin-right: 4px;
+    }
   }
 }
 
@@ -181,8 +198,12 @@
   padding: 2px 3px;
 }
 
-.page-index .menu-item a span {
+.page-index .menu-inner {
   @include min {
-    background-color: $color-black;
+    &:before {
+      content: "";
+      @include fit-full;
+      background-color: $color-black;
+    }
   }
 }

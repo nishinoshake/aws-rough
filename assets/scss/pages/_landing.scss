@@ -3,43 +3,25 @@
 .landing {
   position: relative;
   @include max {
-    padding: 36px 20px 0;
+    padding: 36px 0 0;
   }
   @include min {
     padding-top: 68px;
   }
 }
 
-.landing-ticker {
-  overflow: hidden;
-  padding: 12px ;
-  border: 1px dashed $color-border;
-  margin-top: 80px;
-}
-
-.landing-ticker-list {
-  display: inline-flex;
-  animation: ticker 120s 1s linear infinite;
-}
-
-.landing-ticker-item {
-  white-space: nowrap;
+.landing-copy {
+  font-family: serif;
   @include max {
-    font-size: 12px;
+    margin-bottom: 32px;
+    font-size: 20px;
   }
   @include min {
-    font-size: 18px;
+    margin-bottom: 50px;
+    font-size: 32px;
   }
 }
 
-@keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
 .landing-list {
   @include max {
@@ -51,49 +33,72 @@
 }
 
 .landing-service-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include max {
+    margin: -12px -8px;
+  }
   @include min {
-    margin-left: -10px;
+    margin: -16px -12px;
   }
 }
 
 .landing-service-item {
+  flex: none;
   line-height: 1;
+  @include max {
+    width: 180px;
+  }
+  @include min {
+    width: 300px;
+  }
 }
 
 .landing-service-link {
+  display: flex;
+  align-items: center;
   @include max {
-    display: block;
+    padding: 12px 8px;
   }
   @include min {
-    display: flex;
-    &:hover .landing-service-inner {
-      color: $color-white;
-      background-color: $color-black;
-      .landing-service-fullname {
-        color: $color-dark-gray;
-      }
+    padding: 16px 12px;
+  }
+  @include min {
+    &.mod-orange:hover {
+      color: $color-orange;
+    }
+    &.mod-blue:hover {
+      color: $color-blue;
+    }
+    &.mod-red:hover {
+      color: $color-red;
+    }
+    &.mod-beige:hover {
+      color: $color-beige;
     }
   }
-}
-
-.landing-service-inner {
-  display: flex;
-  align-items: baseline;
-  @include max {
-    padding: 8px 0;
-  }
-  @include min {
-    padding: 10px;
+  svg {
+    flex: none;
+    @include max {
+      width: 40px;
+      height: 40px;
+      margin-right: 6px;
+    }
+    @include min {
+      width: 50px;
+      height: 50px;
+      margin-right: 6px;
+    }
   }
 }
 
 .landing-service-name {
   @include font-en;
   @include max {
-    font-size: 32px;
+    font-size: 16px;
   }
   @include min {
-    font-size: 48px;
+    font-size: 32px;
   }
 }
 

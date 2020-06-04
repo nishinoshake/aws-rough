@@ -2,13 +2,12 @@
   <div class="landing">
     <section class="section">
       <div class="service-zakuri">
+        <h1 class="landing-copy">料金が気になるサービスはありますか？</h1>
         <ul class="landing-service-list">
-          <li :class="`landing-service-item mod-${service.color}`" v-for="service in services" :key="service.key">
-            <nuxt-link :to="`/${service.key}/`" class="landing-service-link">
-              <span class="landing-service-inner">
-                <span class="landing-service-name">{{ service.name }}</span>
-                <span v-if="service.fullname" class="landing-service-fullname">{{ service.fullname }}</span>
-              </span>
+          <li class="landing-service-item" v-for="service in services" :key="service.key">
+            <nuxt-link :to="`/${service.key}/`" :class="`landing-service-link mod-${service.color}`">
+              <ServicePartsIcon :name="service.key" />
+              <span class="landing-service-name">{{ service.name }}</span>
             </nuxt-link>
           </li>
         </ul>
@@ -19,7 +18,7 @@
 
 <script>
 import ExternalLink from '@/components/text/ExternalLink'
-import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
+import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
 import { MONTHLY_DATE } from '@/config/constants'
@@ -27,7 +26,7 @@ import { getService } from '@/lib/service'
 
 export default {
   name: 'LandingIndex',
-  components: { ExternalLink, ServiceTemplateAds },
+  components: { ExternalLink, ServicePartsIcon },
   data() {
     return {
       monthlyDate: MONTHLY_DATE

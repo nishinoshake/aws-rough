@@ -16,20 +16,20 @@ import sqs from './sqs'
 import ses from './ses'
 
 export default [
-  s3,
   ec2,
   elb,
   vpc,
-  ses,
-  sns,
-  sqs,
-  rds,
-  aurora,
   fargate,
   lambda,
   route53,
+  s3,
   cloudfront,
+  rds,
+  aurora,
   dynamodb,
   elasticache,
+  ses,
+  sns,
+  sqs,
   apigateway
 ]

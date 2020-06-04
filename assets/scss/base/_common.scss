@@ -40,7 +40,7 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    min-height: 100vh;
+    min-height: calc(100vh - 180px);
     padding-bottom: $padding-bottom-sp;
   }
   @include min {
@@ -48,7 +48,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 0 0 160px 60px;
-    min-height: 100vh;
+    min-height: calc(100vh - 120px);
   }
 }
 

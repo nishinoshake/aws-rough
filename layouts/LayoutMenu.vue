@@ -4,8 +4,11 @@
       <div class="menu-list-container">
         <ul class="menu-list">
           <li v-for="service in services" :key="service.key" class="menu-item">
-            <nuxt-link :to="service.href" @click.native="handleClick">
-              <span>{{ service.name }}</span>
+            <nuxt-link :class="`menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
+              <div class="menu-inner">
+                <ServicePartsIcon :name="service.key" />
+                <span>{{ service.name }}</span>
+              </div>
             </nuxt-link>
           </li>
         </ul>
@@ -22,9 +25,11 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import serviceConfig from '@/config/service/mokuji'
+import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 
 export default {
   name: 'LayoutMenu',
+  components: { ServicePartsIcon },
   data() {
     return {
       services: serviceConfig,
