@@ -6,19 +6,22 @@
     padding: 36px 0 0;
   }
   @include min {
-    padding-top: 68px;
+    padding-top: 62px;
   }
 }
 
 .landing-copy {
-  font-family: serif;
+  @include font-en;
   @include max {
     margin-bottom: 32px;
     font-size: 20px;
   }
   @include min {
-    margin-bottom: 50px;
-    font-size: 32px;
+    margin-bottom: 38px;
+    font-size: 36px;
+  }
+  span {
+    background-color: $color-snow-dark;
   }
 }
 

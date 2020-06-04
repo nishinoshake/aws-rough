@@ -4,7 +4,7 @@ body {
   font-size: 14px;
   color: $color-font;
   font-feature-settings: "palt";
-  background: linear-gradient(to right, #fafafa, #fff);
+  background-color: $color-white;
   @include font-sans;
   @include max {
     line-height: 1.7;
@@ -40,7 +40,7 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - #{$height-footer-sp});
     padding-bottom: $padding-bottom-sp;
   }
   @include min {
@@ -48,7 +48,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 0 0 160px 60px;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - #{$height-footer-pc});
   }
 }
 

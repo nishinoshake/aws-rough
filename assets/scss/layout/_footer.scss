@@ -1,20 +1,30 @@
 @charset "utf-8";
 
 .footer {
-  height: 50vh;
+  background-color: $color-white;
+}
+
+.footer-inner {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex;
   align-items: center;
-  position: relative;
-  background: $color-white;
   @include max {
+    height: $height-footer-sp;
+    flex-direction: column;
+    justify-content: center;
     padding: 60px 0;
   }
   @include min {
     width: 100%;
-    min-height: $height-footer-pc;
+    height: $height-footer-pc;
     margin-left: auto;
+  }
+  @include min {
+
+    max-width: $width-max;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
   }
 }
 
@@ -27,13 +37,20 @@
   @include font-en;
   @include center-flex;
   @include max {
-    width: 280px;
-    height: 28px;
+    width: 240px;
+    height: 24px;
     font-size: 12px;
   }
   @include min {
-    width: 400px;
-    height: 40px;
+    width: 280px;
+    height: 32px;
     font-size: 14px;
+  }
+}
+
+.footer-list {
+  @include min {
+    margin-left: 40px;
+    font-size: 18px;
   }
 }

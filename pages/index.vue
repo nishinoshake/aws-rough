@@ -2,7 +2,6 @@
   <div class="landing">
     <section class="section">
       <div class="service-zakuri">
-        <h1 class="landing-copy">料金が気になるサービスはありますか？</h1>
         <ul class="landing-service-list">
           <li class="landing-service-item" v-for="service in services" :key="service.key">
             <nuxt-link :to="`/${service.key}/`" :class="`landing-service-link mod-${service.color}`">
