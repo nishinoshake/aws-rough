@@ -7,7 +7,7 @@
     margin-bottom: 10px;
   }
   @include min {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 12px;
   }
 }
@@ -29,7 +29,7 @@
   }
   @include min {
     padding: 11px;
-    font-size: 14px;
+    font-size: 16px;
   }
   &:invalid {
     background-color: rgba($color-red, 0.2);
@@ -52,7 +52,7 @@
       font-size: 16px;
     }
     @include min {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   &-value {
@@ -67,7 +67,7 @@
     }
     @include min {
       padding: 13px 16px 13px 0;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   &:after {

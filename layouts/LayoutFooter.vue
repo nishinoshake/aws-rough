@@ -1,10 +1,10 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer-inner">
-      <div class="footer-bar">
-        <nuxt-link to="/" class="footer-bar-link">{{ label }}</nuxt-link>
-      </div>
       <ul class="footer-list">
+        <li class="footer-item">
+          <nuxt-link to="/" class="footer-link">HOME</nuxt-link>
+        </li>
         <li class="footer-item">
           <nuxt-link to="/about/" class="footer-link">ABOUT</nuxt-link>
         </li>

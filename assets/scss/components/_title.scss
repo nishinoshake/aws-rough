@@ -50,13 +50,14 @@
   display: flex;
   position: relative;
   font-weight: 700;
-  padding: 20px 0;
   @include max {
+    padding: 14px 0;
     font-size: 16px;
   }
   @include min {
-    margin-bottom: 4px;
-    font-size: 18px;
+    margin-bottom: 6px;
+    padding: 20px 0;
+    font-size: 24px;
   }
   + .accordion-list,
   + .spec {
@@ -75,7 +76,7 @@
       font-size: 14px;
     }
     @include min {
-      font-size: 16px;
+      font-size: 20px;
     }
   }
 }
@@ -93,6 +94,7 @@
 .title-small {
   display: block;
   line-height: 1.2;
+  color: $color-muted-dark;
   @include max {
     margin-bottom: 8px;
   }
@@ -100,10 +102,9 @@
     margin-bottom: 10px;
   }
   span {
-    padding-left: 7px;
-    border-left: 2px solid currentColor;
+    border-bottom: 1px solid currentColor;
     @include min {
-      padding-left: 10px;
+      border-bottom-width: 2px;
     }
   }
 }

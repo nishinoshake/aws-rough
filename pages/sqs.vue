@@ -52,7 +52,7 @@
         </p>
       </div>
       <div class="section-child">
-        <h3 class="title-small">SNSとSQSを組み合わせた使用例</h3>
+        <h3 class="title-small"><span>SNSとSQSを組み合わせる例</span></h3>
         <p class="text">
           ユーザーがアップロードした画像に対して、サムネイルの作成と画像認識の処理を同時に走らせたい場合、
           <br class="pc" />

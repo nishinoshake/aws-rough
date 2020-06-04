@@ -3,7 +3,7 @@
 .section {
   + .section {
     @include max {
-      margin-top: 60px;
+      margin-top: 50px;
     }
     @include min {
       margin-top: 120px;
@@ -12,7 +12,7 @@
 }
 
 .section-notice {
-  border: $width-border-form solid $color-gray;
+  border: $width-border-form dashed $color-black;
   @include max {
     padding: 10px 30px 30px;
   }

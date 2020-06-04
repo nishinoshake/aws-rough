@@ -5,22 +5,17 @@
 }
 
 .footer-inner {
-  display: flex;
-  display: flex;
-  align-items: center;
   @include max {
     height: $height-footer-sp;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px 0;
   }
   @include min {
     width: 100%;
+    display: flex;
+    align-items: center;
     height: $height-footer-pc;
     margin-left: auto;
   }
   @include min {
-
     max-width: $width-max;
     margin-left: auto;
     margin-right: auto;
@@ -49,8 +44,13 @@
 }
 
 .footer-list {
-  @include min {
-    margin-left: 40px;
-    font-size: 18px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  @include max {
+    justify-content: center;
   }
+}
+.footer-item + .footer-item {
+  margin-left: 1.5em;
 }

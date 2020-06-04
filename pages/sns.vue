@@ -47,7 +47,7 @@
         </table>
       </div>
       <div class="section-child">
-        <h3 class="title-small">SNSの使用例</h3>
+        <h3 class="title-small"><span>SNSの使用例</span></h3>
         <p class="text">
           EC2のCPU使用率が高いときに知らせるためのSNSトピックを、<ExternalLink
             href="https://aws.amazon.com/jp/cloudwatch/"

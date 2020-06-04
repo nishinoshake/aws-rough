@@ -6,33 +6,54 @@
     padding: 36px 0 0;
   }
   @include min {
-    padding-top: 62px;
+    padding-top: 44px;
   }
 }
 
-.landing-copy {
-  @include font-en;
-  @include max {
-    margin-bottom: 32px;
-    font-size: 20px;
-  }
+.landing-please {
   @include min {
-    margin-bottom: 38px;
+    margin-bottom: 40px;
     font-size: 36px;
   }
-  span {
-    background-color: $color-snow-dark;
+}
+
+.landing-poem {
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  @include max {
+    font-size: 20px;
+    text-align: justify;
+  }
+  @include min {
+    font-size: 32px;
+  }
+  a {
+    @include font-en;
+    &.mod-orange {
+      color: $color-orange;
+    }
+    &.mod-blue {
+      color: $color-blue;
+    }
+    &.mod-red {
+      color: $color-red;
+    }
+    &.mod-beige {
+      color: $color-beige;
+    }
+    &.mod-serverless {
+      color: $color-serverless;
+    }
+    @include min {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
-
-.landing-list {
-  @include max {
-    margin-top: 12px;
-  }
-  @include min {
-    margin-top: 16px;
-  }
+.landing-poem-item + .landing-poem-item {
+  margin-top: 32px;
 }
 
 .landing-service-list {
@@ -42,7 +63,7 @@
     margin: -12px -8px;
   }
   @include min {
-    margin: -16px -12px;
+    margin: -15px -12px 82px;
   }
 }
 
@@ -64,7 +85,7 @@
     padding: 12px 8px;
   }
   @include min {
-    padding: 16px 12px;
+    padding: 15px 12px;
   }
   @include min {
     &.mod-orange:hover {

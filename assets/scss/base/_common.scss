@@ -11,7 +11,7 @@ body {
   }
   @include min {
     line-height: 1.8;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -47,7 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 0 160px 60px;
+    padding-bottom: 170px;
     min-height: calc(100vh - #{$height-footer-pc});
   }
 }

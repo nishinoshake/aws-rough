@@ -158,8 +158,8 @@
     font-size: 18px;
   }
   @include min {
-    padding: 4px 0;
-    font-size: 18px;
+    padding: 5px 0;
+    font-size: 20px;
     &.mod-orange:hover {
       color: $color-orange;
     }
@@ -196,14 +196,4 @@
 
 .menu-name {
   padding: 2px 3px;
-}
-
-.page-index .menu-inner {
-  @include min {
-    &:before {
-      content: "";
-      @include fit-full;
-      background-color: $color-black;
-    }
-  }
 }

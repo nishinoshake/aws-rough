@@ -25,12 +25,11 @@
     @include max {
       padding-top: 10px;
       padding-bottom: 10px;
-      font-size: 12px;
+      font-size: 14px;
     }
     @include min {
       padding-top: 10px;
       padding-bottom: 10px;
-      font-size: 14px;
     }
   }
   th {
@@ -57,9 +56,9 @@
     }
   }
   caption {
-    margin-top: 16px;
+    margin-top: 18px;
     caption-side: bottom;
-    font-size: 80%;
+    font-size: 90%;
     text-align: left;
     color: $color-muted;
   }
