@@ -79,7 +79,6 @@
     </section>
 
     <ServiceTemplateAds />
-    <ServiceTemplateAbout />
   </article>
 </template>
 
@@ -88,7 +87,6 @@ import ServiceTemplateTitle from '@/components/service/template/ServiceTemplateT
 import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateLabel'
 import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
-import ServiceTemplateAbout from '@/components/service/template/ServiceTemplateAbout'
 import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
 import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
@@ -105,7 +103,6 @@ export default {
     ServiceTemplateLabel,
     ServiceTemplateCalc,
     ServiceTemplateAds,
-    ServiceTemplateAbout,
     ServicePartsCode,
     ServicePartsExclude,
     ServicePartsAccordion,
