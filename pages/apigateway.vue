@@ -4,11 +4,7 @@
       <div class="section-child">
         <p class="text">APIのエンドポイントを作成できるやつ。</p>
         <p class="text">
-          バックエンドにはEC2やLambdaなどを設定できるほか、
-          <br class="pc" />
-          マッピングテンプレートを使用してモックもできます。
-          <br class="pc" />
-          最近、WebSocketもサポートされました。
+          バックエンドにはEC2やLambdaなどを設定できるほか、マッピングテンプレートを使用してモックもできます。最近、WebSocketもサポートされました。
         </p>
       </div>
     </template>

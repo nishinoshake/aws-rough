@@ -4,16 +4,10 @@
       <div class="section-child">
         <p class="text">最強のファイル置き場。</p>
         <p class="text">
-          EC2と双璧をなす、AWSの中心となるサービスです。
-          <br class="pc" />
-          可用性が高く、スケーラブルで、安い、頼りになるストレージ。
-          <br class="pc" />
-          さらに、静的サイトのホスティングもできる。強い。
+          EC2と双璧をなす、AWSの中心となるサービスです。可用性が高く、スケーラブルで、安い、頼りになるストレージ。さらに、静的サイトのホスティングもできる。強い。
         </p>
         <p class="text">
-          分析のためのデータレイクとしても使えるので、ファイルはとりあえずS3に置いておけば間違いないです。
-          <br class="pc" />
-          ライフサイクルを設定して、より安価なGlacierへ移行できたりするので、さらにコストを抑えられます。
+          分析のためのデータレイクとしても使えるので、ファイルはとりあえずS3に置いておけば間違いないです。ライフサイクルを設定して、より安価なGlacierへ移行できたりするので、さらにコストを抑えられます。
         </p>
       </div>
     </template>
@@ -30,7 +24,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>データ転送量</span></h3>
         <p class="text">
-          S3からインターネットへ送信されるデータ量を入力してください。<br />Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
+          S3からインターネットへ送信されるデータ量を入力してください。Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
         </p>
         <pre>2 * 100000 / 1024 ≒ 195GB</pre>
       </section>
@@ -40,7 +34,7 @@
       </section>
       <section class="section-child">
         <h3 class="title-small"><span>書き込み回数</span></h3>
-        <p class="text">PUT/COPY/POSTのリクエスト数を入力してください。<br />DELETEリクエストは無料です</p>
+        <p class="text">PUT/COPY/POSTのリクエスト数を入力してください。DELETEリクエストは無料です</p>
       </section>
     </template>
 
@@ -62,7 +56,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>別リージョンへのデータ転送</span></h3>
         <p class="text">
-          別リージョンへデータを転送する場合は追加料金がかかります。<br />詳しくは<ExternalLink
+          別リージョンへデータを転送する場合は追加料金がかかります。詳しくは<ExternalLink
             href="https://aws.amazon.com/jp/s3/pricing/"
             >公式の料金表</ExternalLink
           >をご確認ください。
@@ -74,7 +68,7 @@
           S3のデータ転送を高速化する<ExternalLink
             href="https://aws.amazon.com/jp/blogs/news/aws-storage-update-amazon-s3-transfer-acceleration-larger-snowballs-in-more-regions/"
             >Transfer Acceleration</ExternalLink
-          >なるものがあるらしいです。<br class="pc" />海外のリージョンへのデータ転送では高速化が望めるかもしれません。
+          >なるものがあるらしいです。海外のリージョンへのデータ転送では高速化が望めるかもしれません。
         </p>
       </section>
     </template>

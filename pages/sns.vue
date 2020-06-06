@@ -4,17 +4,7 @@
       <div class="section-child">
         <p class="text">フルマネージド型のPub/Subサービス。</p>
         <p class="text">
-          メッセージを送る「パブリッシャー」と、受け取る「サブスクライバー」を、
-          <br class="pc" />
-          「トピック」を介して繋ぐことで、異なるシステムやサービスをサクッと連携できます。
-        </p>
-
-        <p class="text">
-          AWS内のメッセージングだけでなく、モバイルのプッシュ通知や、Email/HTTPなどの通知もサポートしています。
-          <br class="pc" />
-          結構な量の無料利用枠があるので、下の表を参考にしてください。SQS/Lambdaへの配信は無料です。
-          <br class="pc" />
-          SMSの通知も用意されていますが、本サイトではサポートしていないので<ExternalLink
+          AWS内のメッセージングだけでなく、モバイルのプッシュ通知や、Email/HTTPなどの通知もサポートしています。結構な量の無料利用枠があるので、下の表を参考にしてください。SQS/Lambdaへの配信は無料です。SMSの通知も用意されていますが、本サイトではサポートしていないので<ExternalLink
             href="https://aws.amazon.com/sns/sms-pricing/"
             >こちら</ExternalLink
           >を参考にしてください。
@@ -52,9 +42,7 @@
           EC2のCPU使用率が高いときに知らせるためのSNSトピックを、<ExternalLink
             href="https://aws.amazon.com/jp/cloudwatch/"
             >CloudWatch</ExternalLink
-          >で設定しておき、
-          <br class="pc" />
-          それをLambdaでサブスクライブして、Slackへ通知するコードを実行する。みたいな事ができます。
+          >で設定しておき、それをLambdaでサブスクライブして、Slackへ通知するコードを実行する。みたいな事ができます。
         </p>
       </div>
     </template>
@@ -63,11 +51,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>リクエスト数/配信数</span></h3>
         <p class="text">
-          SNSに送るパブリッシュなどのリクエスト数と、通知の配信数を入力してください。
-          <br class="pc" />
-          リクエストと配信は、64KB単位でカウントするので、64KB以下のデータの場合は1リクエスト(配信)、
-          <br class="pc" />
-          256KBのデータの場合は4リクエスト(配信)になります。
+          SNSに送るパブリッシュなどのリクエスト数と、通知の配信数を入力してください。リクエストと配信は、64KB単位でカウントするので、64KB以下のデータの場合は1リクエスト(配信)、256KBのデータの場合は4リクエスト(配信)になります。
         </p>
       </section>
       <section class="section-child">

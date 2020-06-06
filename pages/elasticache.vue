@@ -4,11 +4,7 @@
       <div class="section-child">
         <p class="text">フルマネージド型のインメモリデータストア。</p>
         <p class="text">
-          データベースのクエリ結果のキャッシュや、セッション管理など、
-          <br class="pc" />
-          高いパフォーマンスが求められるところで使われるサービスです。
-          <br class="pc" />
-          データベースエンジンは、RedisかMemcachedから選べます。
+          データベースのクエリ結果のキャッシュや、セッション管理など、高いパフォーマンスが求められるところで使われるサービスです。データベースエンジンは、RedisかMemcachedから選べます。
         </p>
       </div>
     </template>
@@ -27,8 +23,8 @@
       <section class="section-child">
         <h3 class="title-small"><span>リザーブドノード</span></h3>
         <p class="text">
-          オンデマンドノードの利用を前提にしています。<br />
-          あらかじめノードを予約する<ExternalLink href="https://aws.amazon.com/jp/elasticache/reserved-cache-nodes/"
+          オンデマンドノードの利用を前提にしています。あらかじめノードを予約する<ExternalLink
+            href="https://aws.amazon.com/jp/elasticache/reserved-cache-nodes/"
             >リザーブドノード</ExternalLink
           >を利用すれば、大幅な割引が適用されます。
         </p>
@@ -36,7 +32,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>選択肢にないノードタイプ</span></h3>
         <p class="text">
-          ノードタイプは、よく使いそうなものに絞っています。<br />その他のノードタイプについては、<ExternalLink
+          ノードタイプは、よく使いそうなものに絞っています。その他のノードタイプについては、<ExternalLink
             href="https://aws.amazon.com/jp/elasticache/pricing/"
             >公式サイト</ExternalLink
           >でご確認ください。
@@ -57,7 +53,7 @@
           同一リージョンの異なるAZにあるEC2の間でデータを転送する場合には、<ExternalLink
             href="https://aws.amazon.com/jp/elasticache/pricing/#%E3%83%87%E3%83%BC%E3%82%BF%E8%BB%A2%E9%80%81"
             >データ転送料</ExternalLink
-          >がかかります。<br class="pc" />同一AZでのデータ転送は無料です。
+          >がかかります。同一AZでのデータ転送は無料です。
         </p>
       </section>
     </template>

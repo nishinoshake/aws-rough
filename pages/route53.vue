@@ -4,11 +4,7 @@
       <div class="section-child">
         <p class="text">ドメイン名を解決してくれるやつ（DNS）。</p>
         <p class="text">
-          ドメインごとにホストゾーンというものを作成し、そこにDNSレコードを追加していきます。
-          <br class="pc" />
-          可用性が高く、CloudFrontやS3などのAWSのサービスと連携がしやすいのが特徴です。
-          <br class="pc" />
-          あまり使われてないかもしれませんが、ドメインの取得もできます。
+          ドメインごとにホストゾーンというものを作成し、そこにDNSレコードを追加していきます。可用性が高く、CloudFrontやS3などのAWSのサービスと連携がしやすいのが特徴です。あまり使われてないかもしれませんが、ドメインの取得もできます。
         </p>
       </div>
     </template>
@@ -17,20 +13,14 @@
       <section class="section-child">
         <h3 class="title-small"><span>ホストゾーン数</span></h3>
         <p class="text">
-          Route53で管理するドメインの数を入力してください。<br
-            class="pc"
-          />example.comとexample.netのふたつのドメインを管理する場合は、ホストゾーン数は2つになります。<br
-            class="pc"
-          />サブドメインを使用する場合は、同一のホストゾーンで管理することになるので、example.comとsub.example.comを使用してもホストゾーン数は1つです。
+          Route53で管理するドメインの数を入力してください。example.comとexample.netのふたつのドメインを管理する場合は、ホストゾーン数は2つになります。サブドメインを使用する場合は、同一のホストゾーンで管理することになるので、example.comとsub.example.comを使用してもホストゾーン数は1つです。
         </p>
       </section>
 
       <section class="section-child">
         <h3 class="title-small"><span>クエリ数</span></h3>
         <p class="text">
-          DNSクエリの数を入力してください。<br
-            class="pc"
-          />料金が安いため、余程トラフィックが多い場合でなければ、適当な数値でいいと思います。
+          DNSクエリの数を入力してください。料金が安いため、余程トラフィックが多い場合でなければ、適当な数値でいいと思います。
         </p>
       </section>
     </template>

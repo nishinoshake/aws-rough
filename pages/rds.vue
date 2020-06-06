@@ -4,11 +4,7 @@
       <div class="section-child">
         <p class="text">フルマネージド型のリレーショナルデータベース。</p>
         <p class="text">
-          EC2でもリレーショナルデータベースは構築できますが、
-          <br class="pc" />
-          RDSを使うことで、バックアップやパッチの適用などの作業を自動化できます。
-          <br class="pc" />
-          マルチAZによる冗長化や、ポイントインタイムリカバリなどの機能は、特にありがたいです。
+          EC2でもリレーショナルデータベースは構築できますが、RDSを使うことで、バックアップやパッチの適用などの作業を自動化できます。マルチAZによる冗長化や、ポイントインタイムリカバリなどの機能は、特にありがたいです。
         </p>
       </div>
     </template>
@@ -19,7 +15,7 @@
         <p class="text">
           利用する<ExternalLink href="https://aws.amazon.com/jp/rds/#Amazon_RDS_データベースエンジン"
             >データベースエンジン</ExternalLink
-          >を選択してください。<br />当サイトでは、MySQL/MariaDB/PostgreSQLの中からお選びいただけます。
+          >を選択してください。当サイトでは、MySQL/MariaDB/PostgreSQLの中からお選びいただけます。
         </p>
       </section>
       <section class="section-child">
@@ -47,22 +43,20 @@
       <section class="section-child">
         <h3 class="title-small"><span>ライセンスがややこしいデータベース</span></h3>
         <p class="text">
-          選択できるDBエンジンは、MySQL/MariaDB/PostgreSQLに絞っています。<br />OracleとMicrosoft SQL
+          選択できるDBエンジンは、MySQL/MariaDB/PostgreSQLに絞っています。>OracleとMicrosoft SQL
           Serverは、ライセンスまわりがややこしかったので除外しています。すみません。
         </p>
       </section>
       <section class="section-child">
         <h3 class="title-small"><span>リザーブドインスタンスなど</span></h3>
         <p class="text">
-          インスタンスの支払い方法は、オンデマンドインスタンスを前提にしています。<br
-            class="pc"
-          />オンデマンドインスタンス以外にも、あらかじめ予約することで安く利用できるリザーブドインスタンスが用意されています。
+          インスタンスの支払い方法は、オンデマンドインスタンスを前提にしています。>オンデマンドインスタンス以外にも、あらかじめ予約することで安く利用できるリザーブドインスタンスが用意されています。
         </p>
       </section>
       <section class="section-child">
         <h3 class="title-small"><span>選択肢にないインスタンスタイプ</span></h3>
         <p class="text">
-          インスタンスタイプは、よく使いそうなものに絞っています。<br />その他のインスタンスタイプについては、<ExternalLink
+          インスタンスタイプは、よく使いそうなものに絞っています。>その他のインスタンスタイプについては、<ExternalLink
             href="https://aws.amazon.com/jp/rds/instance-types/"
             >公式サイト</ExternalLink
           >でご確認ください。
@@ -71,8 +65,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>汎用SSD以外のストレージ</span></h3>
         <p class="text">
-          ストレージはEBSの汎用SSDを前提にしています。<br class="pc" />
-          汎用SSD以外にもパフォーマンスが高い「プロビジョンド IOPS
+          ストレージはEBSの汎用SSDを前提にしています。汎用SSD以外にもパフォーマンスが高い「プロビジョンド IOPS
           SSD」や、安価な「マグネティック」なども用意されています。
         </p>
       </section>
@@ -83,9 +76,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>データ転送</span></h3>
         <p class="text">
-          RDSからインターネットや別リージョンへデータを転送する場合は転送料がかかります。<br
-            class="pc"
-          />同一AZ内のRDSとEC2のインスタンス間のデータ転送や、Multi-AZのレプリケーションを目的とするデータ転送は無料です。
+          RDSからインターネットや別リージョンへデータを転送する場合は転送料がかかります。>同一AZ内のRDSとEC2のインスタンス間のデータ転送や、Multi-AZのレプリケーションを目的とするデータ転送は無料です。
         </p>
       </section>
     </template>

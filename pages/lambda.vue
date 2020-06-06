@@ -6,25 +6,16 @@
           サーバーレスでコードを実行できるやつ。
         </p>
         <p class="text">
-          サーバーレスとはいっても、どこかにサーバーはあるので、
-          <br class="pc" />
-          初めてこの単語を聞いた人は、いまいちピンと来ないかもしれませんが、
-          <br class="pc" />
-          サーバーの管理が開発者の手から離れ、使った分だけ課金される、みたいなニュアンスになります。
+          サーバーレスとはいっても、どこかにサーバーはあるので、初めてこの単語を聞いた人は、いまいちピンと来ないかもしれませんが、サーバーの管理が開発者の手から離れ、使った分だけ課金される、みたいなニュアンスになります。
         </p>
         <p class="text">
-          Lambdaだけを使うケースは稀で、他のサービスと連携することが多いです。
-          <br class="pc" />
-          S3に画像が保存されたタイミングでリサイズ処理をしたり、
-          <br class="pc" />
-          API Gatewayのバックエンドとして設定したり、使いみちは色々。
+          Lambdaだけを使うケースは稀で、他のサービスと連携することが多いです。S3に画像が保存されたタイミングでリサイズ処理をしたり、API
+          Gatewayのバックエンドとして設定したり、使いみちは色々。
         </p>
         <p class="text">
           <ExternalLink href="https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/runtimes-custom.html"
             >カスタムランタイム</ExternalLink
-          >を使用すれば好きな言語で実装できますが、
-          <br class="pc" />
-          ネイティブでは、Java、Go、PowerShell、Node.js、C#、Python、Rubyをサポートしています。
+          >を使用すれば好きな言語で実装できますが、ネイティブでは、Java、Go、PowerShell、Node.js、C#、Python、Rubyをサポートしています。
         </p>
       </div>
     </template>
@@ -38,8 +29,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>メモリ</span></h3>
         <p class="text">
-          Lambdaに割り当てたメモリと、実行された秒数をかけた値を入力してください。<br />
-          {{
+          Lambdaに割り当てたメモリと、実行された秒数をかけた値を入力してください。{{
             freeMemory
           }}GB秒までは無料です。GB秒というのが直感的にわかりにくいですが、2048MB割り当てた関数を86,400秒実行した場合、下記のようになります
         </p>

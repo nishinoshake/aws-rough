@@ -4,19 +4,13 @@
       <div class="section-child">
         <p class="text">フルマネージド型のメールサービス。</p>
         <p class="text">
-          構築や運用が面倒なメールサーバーを持たずに、メールの送受信を行なえます。
-          <br class="pc" />
-          新規のアカウントは、機能が制限されているサンドボックスに配置されているため、
-          <br class="pc" />
-          本格的に利用する前に<ExternalLink
+          構築や運用が面倒なメールサーバーを持たずに、メールの送受信を行なえます。新規のアカウントは、機能が制限されているサンドボックスに配置されているため、本格的に利用する前に<ExternalLink
             href="https://docs.aws.amazon.com/ja_jp/ses/latest/DeveloperGuide/request-production-access.html"
             >申請</ExternalLink
           >を行う必要があります。
         </p>
         <p class="text">
-          現在、SESが東京リージョンでは提供されていないため、
-          <br class="pc" />
-          バージニア北部（us-east-1）リージョンの料金をもとに計算しています。
+          現在、SESが東京リージョンでは提供されていないため、バージニア北部（us-east-1）リージョンの料金をもとに計算しています。
         </p>
       </div>
     </template>
@@ -33,19 +27,13 @@
       <section class="section-child">
         <h3 class="title-small"><span>データ転送量</span></h3>
         <p class="text">
-          送信されるデータ転送量をGB単位で入力してください。
-          <br class="pc" />
-          これには、ヘッダー/メール本文/添付ファイルが含まれます。
+          送信されるデータ転送量をGB単位で入力してください。これには、ヘッダー/メール本文/添付ファイルが含まれます。
         </p>
       </section>
       <section class="section-child">
         <h3 class="title-small"><span>受信の平均サイズ</span></h3>
         <p class="text">
-          受信メールの平均サイズをKB単位で入力してください。
-          <br class="pc" />
-          課金対象である受信メールチャンクという項目は、256KBを1単位としてカウントするので、
-          <br class="pc" />
-          受信メールが255KBの場合は料金が発生せず、768KBの場合は、受信メールチャンクが3としてカウントされます。
+          受信メールの平均サイズをKB単位で入力してください。課金対象である受信メールチャンクという項目は、256KBを1単位としてカウントするので、受信メールが255KBの場合は料金が発生せず、768KBの場合は、受信メールチャンクが3としてカウントされます。
         </p>
       </section>
       <section class="section-child">

@@ -4,17 +4,11 @@
       <div class="section-child">
         <p class="text">コンテンツを効率的に配信できるやつ（CDN）。</p>
         <p class="text">
-          ユーザーの近くにあるデータセンター（エッジ）にコンテンツをキャッシュして配信することで、
-          <br class="pc" />
-          レスポンスの速度を向上させると共に、サーバーの負荷を軽減できます。
+          ユーザーの近くにあるデータセンター（エッジ）にコンテンツをキャッシュして配信することで、レスポンスの速度を向上させると共に、サーバーの負荷を軽減できます。
         </p>
         <p class="text">
-          頻繁にアクセスされる画像やCSSなどの静的アセットの場合、
-          <br class="pc" />
-          Webサーバーへ毎回リクエストするのは効率が悪いので、CloudFrontを導入するメリットは大きいです。
-        </p>
-        <p class="text">
-          Basic認証などのちょっとした処理であれば、<ExternalLink href="https://aws.amazon.com/jp/lambda/edge/"
+          頻繁にアクセスされる画像やCSSなどの静的アセットの場合、Webサーバーへ毎回リクエストするのは効率が悪いので、CloudFrontを導入するメリットは大きいです。Basic認証などのちょっとした処理であれば、<ExternalLink
+            href="https://aws.amazon.com/jp/lambda/edge/"
             >Lambda@Edge</ExternalLink
           >を使って実装できます。
         </p>
@@ -29,9 +23,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>データ転送量</span></h3>
         <p class="text">
-          CloudFrontからインターネットへ送信されるデータ量をGB単位で入力してください。<br
-            class="pc"
-          />Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
+          CloudFrontからインターネットへ送信されるデータ量をGB単位で入力してください。Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
         </p>
         <pre>2 * 100000 / 1024 ≒ 195GB</pre>
       </section>
@@ -58,9 +50,9 @@
       <section class="section-child">
         <h3 class="title-small"><span>大量の無効リクエスト</span></h3>
         <p class="text">
-          キャッシュの無効リクエストは、月に1,000パスまでは追加料金なしで利用できますが、それ以降は課金されます。<br
-            class="pc"
-          />詳しくは<ExternalLink href="https://aws.amazon.com/jp/cloudfront/pricing/">公式の料金表</ExternalLink
+          キャッシュの無効リクエストは、月に1,000パスまでは追加料金なしで利用できますが、それ以降は課金されます。詳しくは<ExternalLink
+            href="https://aws.amazon.com/jp/cloudfront/pricing/"
+            >公式の料金表</ExternalLink
           >をご確認ください。
         </p>
       </section>

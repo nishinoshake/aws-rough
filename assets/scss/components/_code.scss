@@ -6,17 +6,21 @@
     margin: 22px 0;
   }
   @include min {
-    margin: 32px 0;
+    margin: 32px #{-$width-ball-pc -$padding-main-pc} 32px 0;
   }
   pre {
+    display: block;
     padding: 0;
     background: none;
     border-radius: 0;
   }
   code {
+    width: 100%;
+    display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    background: $color-dark;
+    background: $color-white;
+    @include font-source;
     @include lh-en;
   }
   /*
@@ -35,14 +39,6 @@
   hue-6:   #986801
   hue-6-2: #c18401
   */
-
-  .hljs {
-    display: block;
-    overflow-x: auto;
-    background: $color-white;
-    @include font-source;
-  }
-
   .hljs-comment,
   .hljs-quote {
     color: #a0a1a7;

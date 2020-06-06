@@ -6,23 +6,15 @@
           なんでもできる仮想サーバー。
         </p>
         <p class="text">
-          スペックやOSなどを指定するだけで、サーバーをポコポコ立てられます。
-          <br class="pc" />
-          OSより上が自由なので、好きなミドルウェアをいれて、やりたいようにやれますが、そのぶん責任も大きいです。
+          スペックやOSなどを指定するだけで、サーバーをポコポコ立てられます。OSより上が自由なので、好きなミドルウェアをいれて、やりたいようにやれますが、そのぶん責任も大きいです。
         </p>
         <p class="text">
-          自由度が高いので、ついEC2で頑張りたくなってしまいますが、
-          <br class="pc" />
-          上手くやれるサービスが他にある場合は、そっちを使ったほうが楽をできます。
-          <br class="pc" />
-          データベースは<nuxt-link class="text-link" to="/rds/">RDS</nuxt-link>に。メールは<nuxt-link
+          自由度が高いので、ついEC2で頑張りたくなってしまいますが、上手くやれるサービスが他にある場合は、そっちを使ったほうが楽をできます。データベースは<nuxt-link
             class="text-link"
-            to="/ses/"
-            >SES</nuxt-link
-          >に。そんな感じで。
-        </p>
-        <p class="text">
-          他のサービスを検討して、消去法でEC2が残った場合に使う、ぐらいが丁度いい塩梅かと。
+            to="/rds/"
+            >RDS</nuxt-link
+          >に。メールは<nuxt-link class="text-link" to="/ses/">SES</nuxt-link
+          >に。そんな感じで。他のサービスを検討して、消去法でEC2が残った場合に使う、ぐらいが丁度いい塩梅かと。
         </p>
       </div>
     </template>
@@ -44,7 +36,7 @@
       <section class="section-child">
         <h3 class="title-small"><span>データ転送量</span></h3>
         <p class="text">
-          EC2からインターネットへ送信されるデータ量をGB単位で入力してください。<br />Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
+          EC2からインターネットへ送信されるデータ量をGB単位で入力してください。Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
         </p>
         <pre>2 * 100000 / 1024 ≒ 195GB</pre>
       </section>
@@ -72,9 +64,8 @@
       <section class="section-child">
         <h3 class="title-small"><span>選択肢にないインスタンスタイプ</span></h3>
         <p class="text">
-          インスタンスタイプは、よく使いそうなものに絞っています。
-          <br class="pc" />
-          その他のインスタンスタイプについては、<ExternalLink href="https://aws.amazon.com/jp/ec2/instance-types/"
+          インスタンスタイプは、よく使いそうなものに絞っています。その他のインスタンスタイプについては、<ExternalLink
+            href="https://aws.amazon.com/jp/ec2/instance-types/"
             >公式サイト</ExternalLink
           >でご確認ください。
         </p>

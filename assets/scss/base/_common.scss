@@ -36,9 +36,6 @@ body {
     padding-bottom: $padding-bottom-sp;
   }
   @include min {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding-bottom: 170px;
     min-height: calc(100vh - #{$height-footer-pc});
   }

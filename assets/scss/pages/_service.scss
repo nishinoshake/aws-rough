@@ -5,7 +5,35 @@
     margin-bottom: 80px;
   }
   @include min {
-    margin-bottom: 120px;
+    margin-bottom: 150px;
+  }
+}
+
+.service-body {
+  background-color: $color-white;
+  @include min {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.service-main {
+  @include min {
+    width: calc(100% - #{$width-ball-pc});
+    padding-right: $padding-main-pc;
+  }
+}
+
+.service-ball {
+  @include min {
+    width: $width-ball-pc;
+    height: $width-ball-pc;
+    flex: none;
+    position: sticky;
+    top: calc(50% - (#{$width-ball-pc} / 2));
+    background-color: $color-white;
+    border-radius: 50%; 
+    mix-blend-mode: difference;
   }
 }
 
