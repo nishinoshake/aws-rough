@@ -5,12 +5,7 @@
 }
 
 * + .text {
-  @include max {
-    margin-top: 12px;
-  }
-  @include min {
-    margin-top: 20px;
-  }
+  margin-top: 0.8em;
 }
 
 .title-small + .text {

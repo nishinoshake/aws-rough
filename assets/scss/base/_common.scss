@@ -9,21 +9,20 @@ body {
 
 .container {
   position: relative;
+
+}
+
+.main {
   @include max {
     padding: 0 $width-border-sp;
   }
   @include min {
     max-width: $width-max;
+    display: flex;
+    align-items: flex-start;
     margin-left: auto;
     margin-right: auto;
     padding: 0 $padding-content-pc;
-  }
-}
-
-.main {
-  @include min {
-    display: flex;
-    align-items: flex-start;
   }
 }
 
@@ -32,12 +31,10 @@ body {
   flex-grow: 1;
   position: relative;
   @include max {
-    min-height: calc(100vh - #{$height-footer-sp});
-    padding-bottom: $padding-bottom-sp;
+    min-height: 100vh;
   }
   @include min {
-    padding-bottom: 170px;
-    min-height: calc(100vh - #{$height-footer-pc});
+    min-height: calc(100vh - #{$height-cart-pc});
   }
 }
 

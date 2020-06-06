@@ -1,50 +1,67 @@
 @charset "utf-8";
 
 .cart {
+  z-index: 100;
+  position: sticky;
+  bottom: 0;
+  left: 0;
   display: flex;
   align-items: center;
-  position: fixed;
-  z-index: 100;
-  border: 2px solid $color-black;
   background-color: $color-black;
-  border-radius: 999em;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-  @include max {
-    width: calc(100% - #{$padding-sp * 2.8 + $width-menu-sp});
-    max-width: 360px;
-    bottom: $padding-sp;
-    left: $padding-sp;
-  }
   @include min {
-    bottom: 30px;
-    right: 85px;
+    height: $height-cart-pc;
   }
-  @include min($width-max) {
-    right: calc(50% - #{($width-max - 2) / 2} + 50px);
+}
+
+.cart-container {
+  @include min {
+    width: 100%;
+    max-width: $width-max;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 $padding-content-pc; 
   }
-  &-enter-active,
-  &-leave-active {
-    transition: opacity 0.1s ease, transform 0.64s $easeOutExpo;
+}
+
+.cart-official {
+  display: flex;
+  align-items: center;
+  color: $color-white;
+  @include fz-s;
+  svg {
+    width: 14px;
+    height: 14px;
+    margin-left: 0.4em;
   }
-  &-enter {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  &-leave-to {
-    opacity: 0;
+  path {
+    fill: $color-white;
   }
 }
 
 .cart-link {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include min {
+    padding: 12px 0;
+  }
+}
+
+.cart-detail {
   white-space: nowrap;
-  color: $color-white;
+  font-weight: 700;
+  background-color: $color-white;
+  border-radius: 3px;
+  @include fz-s;
   @include transition-collection;
   @include max {
     padding: 5px 16px;
   }
   @include min {
-    padding: 5px 22px;
+    padding: 2px 14px;
   }
 }
 
@@ -53,8 +70,8 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  background-color: $color-white;
   z-index: 1;
+  color: $color-white;
   @include transition-fade;
   @include fz-l;
   @include max {
@@ -63,12 +80,14 @@
     padding: 14px 14px 14px 18px;
   }
   @include min {
-    min-width: 270px;
-    padding: 18px 18px 18px 22px;
+    min-width: 260px;
+    padding: 6px 18px;
   }
 }
 
 .cart-label {
+  font-weight: 700;
+  margin-right: 0.5em;
   @include fz-m;
   @include lh-1;
 }

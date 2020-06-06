@@ -11,35 +11,6 @@
         </p>
 
         <p class="text">
-          SNSと名前が似ていて紛らわしいですが、違いをまとめるとこんな感じです。それぞれ異なる特徴を持ったサービスですが、組み合わせて使ったほうが有効なケースもあります。
-        </p>
-
-        <table class="spec mod-center">
-          <tbody>
-            <tr>
-              <th></th>
-              <td>SNS</td>
-              <td>SQS</td>
-            </tr>
-            <tr>
-              <th>仕組み</th>
-              <td><ExternalLink href="https://aws.amazon.com/jp/pub-sub-messaging/">Pub/Sub</ExternalLink></td>
-              <td><ExternalLink href="https://aws.amazon.com/jp/message-queue/">メッセージキュー</ExternalLink></td>
-            </tr>
-            <tr>
-              <th>やりとり</th>
-              <td>プッシュ</td>
-              <td>ポーリング</td>
-            </tr>
-            <tr>
-              <th>出力</th>
-              <td>複数可</td>
-              <td>単一のみ</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="text">
           ひとつ注意が必要なのが、標準キューの場合は、まれに複数のメッセージが配信される可能性があり、順序も保証されないので、アプリケーション側で重複や順序についても考慮しておく必要があります。順序を厳密に保持したいときのために、FIFOキューも用意されています。
         </p>
       </div>

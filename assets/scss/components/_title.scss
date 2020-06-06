@@ -3,6 +3,7 @@
 .title-page {
   display: flex;
   align-items: center;
+  color: $color-black;
   @include font-en;
   @include fz-grande;
   @include lh-1;
@@ -25,14 +26,15 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   font-feature-settings: "palt";
+  color: $color-black;
   @include fz-l;
   @include lh-min;
   @include max {
     padding: 16px 0;
   }
   @include min {
-    margin-bottom: 16px;
-    padding: 24px 0;
+    // margin-bottom: 26px;
+    padding: 20px 0;
   }
   + .accordion-list,
   + .spec {
@@ -55,7 +57,8 @@
       content: "#";
       position: absolute;
       top: calc(50% - 0.5em);
-      right: calc(100% + 0.3em);
+      right: calc(100% + 0.2em);
+      font-size: 90%;
       @include font-en;
     }
   }
@@ -74,7 +77,6 @@
 .title-small {
   display: block;
   font-weight: 700;
-  color: $color-black;
   @include lh-min;
   @include max {
     margin-bottom: 12px;

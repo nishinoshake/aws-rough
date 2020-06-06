@@ -6,16 +6,62 @@
     padding: 36px 0 0;
   }
   @include min {
-    padding-top: 44px;
+    padding-top: 50px;
   }
 }
 
-.landing-poem-text {
+.landing-copy {
+  font-weight: 700;
+  font-feature-settings: "palt";
+  letter-spacing: 0.04em;
+  @include fz-grande;
+  @include min {
+    margin-bottom: 60px;
+  }
+}
+
+.landing-please {
   @include fz-xl;
+}
+
+.landing-please:before {
+  padding-right: 0.2em;
+}
+
+.landing-please-menu:before {
+  @include max {
+    content: '↓↓';
+  }
+  @include min {
+    content: '←';
+  }
+}
+
+.landing-poem {
+  @include min {
+    margin-top: 60px;
+  }
+}
+
+.landing-please-poem:before {
+  content: '↓';
+}
+
+.landing-poem-section + .landing-poem-section {
+  margin-top: 50px;
+}
+
+.landing-poem-title {
+  margin-bottom: 0;
+}
+
+.landing-poem-text {
   @include max {
     text-align: justify;
   }
   a {
+    padding: 0 0.1em;
+    text-decoration: underline;
     @include font-en;
     &.mod-orange {
       color: $color-orange;
@@ -34,14 +80,14 @@
     }
     @include min {
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
 }
 
 .landing-poem-text + .landing-poem-text {
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 .landing-service-list {

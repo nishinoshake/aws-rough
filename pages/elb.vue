@@ -16,23 +16,6 @@
 
     <template v-slot:zakuri>
       <div class="section-child">
-        <table class="spec">
-          <tbody>
-            <tr>
-              <th>ALB</th>
-              <td>高機能・HTTP/HTTPS(L7)</td>
-            </tr>
-            <tr>
-              <th>NLB</th>
-              <td>シンプル・TCP(L4)</td>
-            </tr>
-            <tr>
-              <th>CLB</th>
-              <td>旧世代・L4/L7</td>
-            </tr>
-          </tbody>
-        </table>
-
         <p class="text">トラフィックを分散してくれるやつ（ロードバランサー）。</p>
 
         <p class="text">
@@ -60,8 +43,7 @@
           Unit(LCU)を入力してください。名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。このサイトでざっくりした説明するのは難しいので、<ExternalLink
             href="https://aws.amazon.com/jp/elasticloadbalancing/pricing/"
             >公式の料金表</ExternalLink
-          >を参考に算出していただくか、<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
-            >公式のツール</ExternalLink
+          >を参考に算出していただくか、<ExternalLink href="https://calculator.aws">公式のツール</ExternalLink
           >をお使いください。
         </p>
       </section>

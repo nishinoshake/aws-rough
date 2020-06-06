@@ -27,10 +27,11 @@
             >
           </h2>
           <div class="service-zakuri">
-            <p class="text">ざっくりこんな感じで料金を計算しています。</p>
             <ServicePartsCode :service-name="serviceName" />
           </div>
         </section>
+
+        <ServiceTemplateAds />
 
         <section class="section section-notice">
           <section class="section" v-if="hasHelp">
@@ -57,10 +58,8 @@
             </div>
           </section>
         </section>
-
-        <!-- <ServiceTemplateAds /> -->
       </div>
-      <div class="service-ball"></div>
+      <ServicePartsUnkown />
     </div>
   </article>
 </template>
@@ -71,6 +70,7 @@ import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCa
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
 import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
+import ServicePartsUnkown from '@/components/service/parts/ServicePartsUnkown'
 import ExternalLink from '@/components/text/ExternalLink'
 import serviceConfig from '@/config/service'
 import { getService } from '@/lib/service'
@@ -83,6 +83,7 @@ export default {
     ServiceTemplateAds,
     ServicePartsCode,
     ServicePartsCondition,
+    ServicePartsUnkown,
     ExternalLink
   },
   props: {

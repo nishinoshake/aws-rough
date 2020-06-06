@@ -1,15 +1,14 @@
 <template>
   <div :class="`app page-${routeName}`">
     <div class="container">
-      <LayoutCart :total="$store.state.total.jpy" />
       <div class="main">
         <LayoutMenu />
         <div class="contents">
           <nuxt />
         </div>
       </div>
+      <LayoutCart :total="$store.state.total.jpy" />
     </div>
-    <LayoutFooter />
     <ErrorModal :is-visible="$store.state.error.isVisible" :message="$store.state.error.message" />
   </div>
 </template>

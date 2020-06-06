@@ -41,8 +41,7 @@
           >を使う場合は料金が発生しますが、本サイトでは未対応です。<ExternalLink
             href="https://aws.amazon.com/jp/vpc/pricing/"
             >料金表</ExternalLink
-          >をご確認いただくか、<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
-            >公式のツール</ExternalLink
+          >をご確認いただくか、<ExternalLink href="https://calculator.aws">公式のツール</ExternalLink
           >を使用してください。
         </p>
       </section>

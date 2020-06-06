@@ -4,37 +4,14 @@
       <div class="section-child">
         <p class="text">フルマネージド型のPub/Subサービス。</p>
         <p class="text">
-          AWS内のメッセージングだけでなく、モバイルのプッシュ通知や、Email/HTTPなどの通知もサポートしています。結構な量の無料利用枠があるので、下の表を参考にしてください。SQS/Lambdaへの配信は無料です。SMSの通知も用意されていますが、本サイトではサポートしていないので<ExternalLink
+          AWS内のメッセージングだけでなく、モバイルのプッシュ通知や、Email/HTTPなどの通知もサポートしています。結構な量の無料枠があるので、<ExternalLink
+            href="https://aws.amazon.com/jp/sns/pricing/"
+            >公式の料金表</ExternalLink
+          >を確認してください。SQS/Lambdaへの配信は無料です。SMSの通知も用意されていますが、本サイトではサポートしていないので<ExternalLink
             href="https://aws.amazon.com/sns/sms-pricing/"
             >こちら</ExternalLink
           >を参考にしてください。
         </p>
-
-        <table class="spec">
-          <thead>
-            <tr>
-              <th colspan="2">無料利用枠</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>リクエスト数</th>
-              <td class="mod-align-right">{{ freeRequest }}件</td>
-            </tr>
-            <tr>
-              <th>モバイルプッシュ</th>
-              <td class="mod-align-right">{{ freeMobile }}件</td>
-            </tr>
-            <tr>
-              <th>HTTP/S</th>
-              <td class="mod-align-right">{{ freeHttp }}件</td>
-            </tr>
-            <tr>
-              <th>Email</th>
-              <td class="mod-align-right">{{ freeEmail }}件</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
       <div class="section-child">
         <h3 class="title-small"><span>SNSの使用例</span></h3>

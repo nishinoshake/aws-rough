@@ -14,26 +14,79 @@
   @include min {
     width: 100%;
     display: flex;
+    align-items: flex-end;
   }
 }
 
 .service-main {
   @include min {
     width: calc(100% - #{$width-ball-pc});
-    padding-right: $padding-main-pc;
+    padding: 0 $padding-main-pc 80px 0;
   }
 }
 
-.service-ball {
+.service-unknown {
+  mix-blend-mode: difference;
+  @include max {
+    width: $width-ball-sp;
+    margin: 120px auto 0;
+  }
   @include min {
     width: $width-ball-pc;
-    height: $width-ball-pc;
     flex: none;
     position: sticky;
-    top: calc(50% - (#{$width-ball-pc} / 2));
-    background-color: $color-white;
-    border-radius: 50%; 
-    mix-blend-mode: difference;
+    bottom: $height-cart-pc + $margin-pc;
+  }
+}
+
+.service-unknown-logo {
+  width: 100%;
+  display: flex;
+  background-color: $color-white;
+  margin-top: $margin-pc;
+  line-height: 0.75;
+  @include max {
+    padding: 12px;
+  }
+  @include min {
+    padding: 16px;
+  }
+}
+
+.service-unknown-logo-box {
+  background-color: $color-black;
+  flex-grow: 1;
+  @include max {
+    margin-right: 8px;
+  }
+  @include min {
+    margin-right: 10px;
+  }
+}
+
+.service-unknown-logo-text {
+  font-weight: 700;
+  color: $color-black;
+  @include font-en;
+  @include max {
+    font-size: 32px;
+  }
+  @include min {
+    font-size: 32px;
+  }
+}
+
+.service-unknown-ball {
+  background-color: $color-white;
+  border-radius: 50%; 
+  @include max {
+    height: $width-ball-sp;
+  }
+  @include min {
+    width: $width-ball-pc - 60px;
+    height: $width-ball-pc - 60px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
