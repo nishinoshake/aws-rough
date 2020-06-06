@@ -17,6 +17,19 @@
         </div>
       </section>
 
+      <section class="section">
+        <h2 class="title-section" id="code">
+          <a href="#code"
+            ><span class="title-section-large">{{ service.name }}</span
+            >の料金計算式をざっくり</a
+          >
+        </h2>
+        <div class="service-zakuri">
+          <p class="text">ざっくりこんな感じで料金を計算しています。</p>
+          <ServicePartsCode :service-name="serviceName" />
+        </div>
+      </section>
+
       <section class="section section-notice">
         <section class="section" v-if="hasHelp">
           <h2 class="title-section" id="help"><a href="#help">入力項目の補足</a></h2>
@@ -41,19 +54,6 @@
             <slot name="disclaimer" />
           </div>
         </section>
-      </section>
-
-      <section class="section">
-        <h2 class="title-section" id="code">
-          <a href="#code"
-            ><span class="title-section-large">{{ service.name }}</span
-            >の料金計算式をざっくり</a
-          >
-        </h2>
-        <div class="service-zakuri">
-          <p class="text">ざっくりこんな感じで料金を計算しています。</p>
-          <ServicePartsCode :service-name="serviceName" />
-        </div>
       </section>
 
       <!-- <ServiceTemplateAds /> -->
