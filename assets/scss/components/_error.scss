@@ -16,13 +16,9 @@
     padding: 40px;
   }
   &-message {
-    font-size: 20px;
-    line-height: 2;
     text-align: center;
     white-space: pre-wrap;
-    @include min {
-      font-size: 32px;
-    }
+    @include fz-xl;
   }
   &-close {
     width: 40px;

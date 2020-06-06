@@ -1,17 +1,8 @@
 @charset "utf-8";
 
 .list-item {
-  line-height: 1.4;
   position: relative;
   padding-left: 14px;
-  &:nth-child(n+2) {
-    @include max {
-      margin-top: 6px;
-    }
-    @include min {
-      margin-top: 10px;
-    }
-  }
   &:before {
     content: '';
     width: 5px;

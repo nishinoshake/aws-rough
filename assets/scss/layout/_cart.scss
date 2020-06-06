@@ -56,6 +56,7 @@
   background-color: $color-white;
   z-index: 1;
   @include transition-fade;
+  @include fz-l;
   @include max {
     min-width: 220px;
     flex-grow: 1;
@@ -64,23 +65,10 @@
   @include min {
     min-width: 270px;
     padding: 18px 18px 18px 22px;
-    font-size: 24px;
-  }
-  .price-number {
-    @include max {
-      &.mod-expensive {
-        font-size: 140%;
-      }
-    }
   }
 }
 
 .cart-label {
-  line-height: 1;
-  @include max {
-    font-size: 14px;
-  }
-  @include min {
-    font-size: 18px;
-  }
+  @include fz-m;
+  @include lh-1;
 }

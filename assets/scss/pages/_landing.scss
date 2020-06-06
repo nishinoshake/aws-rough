@@ -10,22 +10,10 @@
   }
 }
 
-.landing-please {
-  @include min {
-    margin-bottom: 40px;
-    font-size: 36px;
-  }
-}
-
-.landing-poem {
-  line-height: 1.8;
-  letter-spacing: 0.05em;
+.landing-poem-text {
+  @include fz-xl;
   @include max {
-    font-size: 20px;
     text-align: justify;
-  }
-  @include min {
-    font-size: 32px;
   }
   a {
     @include font-en;
@@ -52,7 +40,7 @@
   }
 }
 
-.landing-poem-item + .landing-poem-item {
+.landing-poem-text + .landing-poem-text {
   margin-top: 32px;
 }
 
@@ -69,7 +57,7 @@
 
 .landing-service-item {
   flex: none;
-  line-height: 1;
+  @include lh-1;
   @include max {
     width: 180px;
   }
@@ -113,39 +101,5 @@
       height: 50px;
       margin-right: 6px;
     }
-  }
-}
-
-.landing-service-name {
-  @include font-en;
-  @include max {
-    font-size: 16px;
-  }
-  @include min {
-    font-size: 32px;
-  }
-}
-
-.landing-service-fullname {
-  color: rgba($color-black, 0.1);
-  @include font-en;
-  @include max {
-    display: none;
-  }
-  @include min {
-    margin-left: 16px;
-    font-size: 46px;
-  }
-}
-
-.landing-service-description {
-  color: $color-muted;
-  @include max {
-    margin-left: 8px;
-    font-size: 14px;
-  }
-  @include min {
-    margin-left: 16px;
-    font-size: 16px;
   }
 }

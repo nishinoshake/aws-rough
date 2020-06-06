@@ -45,7 +45,11 @@ module.exports = {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Fira+Code&family=Lato&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp.min.css'
       }
     ]
   },

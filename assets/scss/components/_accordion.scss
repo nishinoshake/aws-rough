@@ -26,13 +26,13 @@
   position: relative;
   text-align: left;
   cursor: default;
+  @include fz-l;
   @include transition-fade;
   @include max {
     padding: 18px 30px 18px 20px;
   }
   @include min {
     padding: 22px 40px 22px 40px;
-    font-size: 18px;
   }
 }
 

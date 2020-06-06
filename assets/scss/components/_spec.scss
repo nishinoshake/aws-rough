@@ -8,9 +8,6 @@
       text-align: center;
     }
   }
-  tr {
-    border-bottom: $width-border-form solid $color-light-gray;
-  }
   thead th {
     text-align: center;
     padding-top: 0;
@@ -22,54 +19,20 @@
   }
   th,
   td {
+    border: $width-border-form solid $color-gray;
     @include max {
       padding-top: 10px;
       padding-bottom: 10px;
-      font-size: 14px;
     }
     @include min {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-  th {
-    @include max {
-      padding-left: 14px;
-      padding-right: 7px;
-    }
-    @include min {
-      padding-left: 20px;
-      padding-right: 10px;
-    }
-  }
-  td {
-    @include max {
-      padding-right: 14px;
-      padding-left: 7px; 
-    }
-    @include min {
-      padding-right: 20px;
-      padding-left: 10px; 
-    }
-    &.mod-align-right {
-      text-align: right;
+      padding: 12px 22px;
     }
   }
   caption {
     margin-top: 18px;
     caption-side: bottom;
-    font-size: 90%;
     text-align: left;
     color: $color-muted;
-  }
-}
-
-* + .spec,
-.spec + * {
-  @include max {
-    margin-top: 24px;
-  }
-  @include min {
-    margin-top: 32px;
+    @include fz-s;
   }
 }

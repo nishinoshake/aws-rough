@@ -6,27 +6,7 @@
       margin-top: 50px;
     }
     @include min {
-      margin-top: 120px;
-    }
-  }
-}
-
-.section-notice {
-  border: $width-border-form dashed $color-black;
-  @include max {
-    padding: 10px 30px 30px;
-  }
-  @include min {
-    padding: 40px 60px 60px;
-  }
-  .section {
-    + .section {
-      @include max {
-        margin-top: 24px;
-      }
-      @include min {
-        margin-top: 70px;
-      }
+      margin-top: 140px;
     }
   }
 }
@@ -34,10 +14,10 @@
 .section-child {
   + .section-child {
     @include max {
-      margin-top: 30px;
+      margin-top: 36px;
     }
     @include min {
-      margin-top: 34px;
+      margin-top: 50px;
     }
   }
 

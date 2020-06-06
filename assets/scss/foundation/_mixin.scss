@@ -96,10 +96,6 @@
 // -----------------------------------------------------
 // Text
 // -----------------------------------------------------
-@mixin font-serif {
-  font-family: "YuMincho", "Yu Mincho", serif;;
-}
-
 @mixin font-sans {
   font-family: system-ui,-apple-system,sans-serif;
 }
@@ -109,15 +105,90 @@
 }
 
 @mixin font-source {
-  font-family: 'Fira Code', monospace;
+  font-family: Menlo, Monaco, 'Courier New', Consolas, monospace;
 }
 
 @mixin hide-text {
   font: 0 / 0;
   color: transparent;
 }
-@mixin ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
+// -----------------------------------------------------
+// Text
+// -----------------------------------------------------
+@mixin fz-xs {
+  @include max {
+    font-size: 10px;
+  }
+  @include min {
+    font-size: 12px;
+  }
+}
+@mixin fz-s {
+  @include max {
+    font-size: 12px;
+  }
+  @include min {
+    font-size: 14px;
+  }
+}
+
+@mixin fz-m {
+  @include max {
+    font-size: 16px;
+  }
+  @include min {
+    font-size: 18px;
+  }
+}
+
+@mixin fz-l {
+  @include max {
+    font-size: 18px;
+  }
+  @include min {
+    font-size: 24px;
+  }
+}
+
+@mixin fz-xl {
+  @include max {
+    font-size: 24px;
+  }
+  @include min {
+    font-size: 32px;
+  }
+}
+
+@mixin fz-grande {
+  @include max {
+    font-size: 32px;
+  }
+  @include min {
+    font-size: 48px;
+  }
+}
+
+@mixin fz-form {
+  font-size: 16px;
+}
+
+@mixin lh-base {
+  line-height: 2;
+}
+
+@mixin lh-0 {
+  line-height: 0;
+}
+
+@mixin lh-1 {
+  line-height: 1;
+}
+
+@mixin lh-min {
+  line-height: 1.2;
+}
+
+@mixin lh-en {
+  line-height: 1.4;
 }

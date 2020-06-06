@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <section class="section">
-      <h2 class="title-section" id="introduction"><a href="#introduction"># AWSの料金を、日本円でざっくり</a></h2>
+      <h2 class="title-section" id="introduction"><a href="#introduction">AWSの料金を、日本円でざっくり</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">AWSの料金、ややこしいですよね。</p>
@@ -36,7 +36,7 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section" id="condition"><a href="#condition"># 計算の前提</a></h2>
+      <h2 class="title-section" id="condition"><a href="#condition">計算の前提</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <table class="spec">
@@ -91,7 +91,7 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section" id="analytics"><a href="#analytics"># Google Analytics</a></h2>
+      <h2 class="title-section" id="analytics"><a href="#analytics">Google Analytics</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">
@@ -117,7 +117,7 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section" id="adsense"><a href="#adsense"># Google AdSense</a></h2>
+      <h2 class="title-section" id="adsense"><a href="#adsense">Google AdSense</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">
@@ -132,7 +132,7 @@
     </section>
 
     <section class="section">
-      <h2 class="title-section" id="contact"><a href="#contact"># お問い合わせ</a></h2>
+      <h2 class="title-section" id="contact"><a href="#contact">お問い合わせ</a></h2>
       <div class="service-zakuri">
         <div class="section-child">
           <p class="text">

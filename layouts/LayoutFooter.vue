@@ -17,7 +17,7 @@
 import ExternalLink from '@/components/text/ExternalLink'
 
 export default {
-  name: 'ServicePartsExclude',
+  name: 'LayoutFooter',
   components: { ExternalLink },
   data() {
     return {

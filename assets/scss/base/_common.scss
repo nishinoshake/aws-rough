@@ -1,18 +1,11 @@
 @charset "utf-8";
 
 body {
-  font-size: 14px;
   color: $color-font;
-  font-feature-settings: "palt";
   background-color: $color-white;
   @include font-sans;
-  @include max {
-    line-height: 1.7;
-  }
-  @include min {
-    line-height: 1.8;
-    font-size: 18px;
-  }
+  @include lh-base;
+  @include fz-m;
 }
 
 .container {

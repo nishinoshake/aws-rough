@@ -27,26 +27,23 @@
   position: relative;
   margin: 0 auto;
   color: $color-black;
-  letter-spacing: 0.1em;
   background-color: $color-black;
   @include font-en;
+  @include fz-s;
   @include center-flex;
   @include max {
     width: 240px;
     height: 24px;
-    font-size: 12px;
   }
   @include min {
     width: 280px;
     height: 32px;
-    font-size: 14px;
   }
 }
 
 .footer-list {
   display: flex;
   align-items: center;
-  font-size: 18px;
   @include max {
     justify-content: center;
   }

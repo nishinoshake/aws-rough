@@ -1,9 +1,9 @@
 .code-block {
   position: relative;
-  line-height: 0;
+  @include fz-s;
+  @include lh-0;
   @include max {
     margin: 22px 0;
-    font-size: 12px;
   }
   @include min {
     margin: 32px 0;
@@ -17,7 +17,7 @@
     padding: 25px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    line-height: 1.4;
+    @include lh-en;
     background: $color-dark;
   }
   /*

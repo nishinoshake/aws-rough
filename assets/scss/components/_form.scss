@@ -2,12 +2,12 @@
 
 .form-label {
   display: block;
-  line-height: 1.1;
+  @include fz-s;
+  @include lh-min;
   @include max {
     margin-bottom: 10px;
   }
   @include min {
-    font-size: 14px;
     margin-bottom: 12px;
   }
 }
@@ -22,14 +22,13 @@
   border: $width-border-input solid $color-black;
   background-color: $color-white;
   border-radius: $radius;
+  @include fz-form;
   @include transition-collection;
   @include max {
     padding: 10px;
-    font-size: 16px;
   }
   @include min {
     padding: 11px;
-    font-size: 16px;
   }
   &:invalid {
     background-color: rgba($color-red, 0.2);
@@ -48,26 +47,18 @@
     opacity: 0;
     cursor: pointer;
     @include fit-full;
-    @include max {
-      font-size: 16px;
-    }
-    @include min {
-      font-size: 16px;
-    }
   }
   &-value {
     display: block;
-    line-height: 1;
     text-align: center;
     white-space: nowrap;
     background-color: $color-white;
+    @include lh-1;
     @include max {
       padding: 11px 16px 11px 0;
-      font-size: 16px;
     }
     @include min {
       padding: 13px 16px 13px 0;
-      font-size: 16px;
     }
   }
   &:after {

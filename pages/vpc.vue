@@ -10,7 +10,7 @@
 
     <section class="section">
       <h2 class="title-section" id="zakkuri">
-        <a href="#zakkuri"># ざっくりわかるVPC</a>
+        <a href="#zakkuri">ざっくりわかるVPC</a>
       </h2>
       <div class="service-zakuri">
         <div class="section-child">
@@ -28,7 +28,7 @@
 
     <section class="section section-notice">
       <section class="section">
-        <h2 class="title-section" id="help"><a href="#help"># 入力項目の補足</a></h2>
+        <h2 class="title-section" id="help"><a href="#help">入力項目の補足</a></h2>
         <div class="service-zakuri">
           <section class="section-child">
             <h3 class="title-small"><span>個数</span></h3>
@@ -42,14 +42,14 @@
       </section>
 
       <section class="section">
-        <h2 class="title-section" id="condition"><a href="#condition"># 料金計算の前提</a></h2>
+        <h2 class="title-section" id="condition"><a href="#condition">料金計算の前提</a></h2>
         <div class="service-zakuri">
           <ServicePartsCondition />
         </div>
       </section>
 
       <section class="section">
-        <h2 class="title-section" id="disclaimer"><a href="#disclaimer"># 対象外のもの</a></h2>
+        <h2 class="title-section" id="disclaimer"><a href="#disclaimer">対象外のもの</a></h2>
         <div class="service-zakuri">
           <section class="section-child">
             <h3 class="title-small"><span>VPN/PrivateLink</span></h3>
@@ -70,7 +70,7 @@
 
     <section class="section">
       <h2 class="title-section" id="code">
-        <a href="#code"># NAT Gatewayの料金計算式をざっくり</a>
+        <a href="#code">NAT Gatewayの料金計算式をざっくり</a>
       </h2>
       <div class="service-zakuri">
         <p class="text">ざっくりこんな感じで料金を計算しています。</p>
@@ -88,7 +88,6 @@ import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateL
 import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
-import ServicePartsExclude from '@/components/service/parts/ServicePartsExclude'
 import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
 import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
 import ExternalLink from '@/components/text/ExternalLink'
@@ -104,7 +103,6 @@ export default {
     ServiceTemplateCalc,
     ServiceTemplateAds,
     ServicePartsCode,
-    ServicePartsExclude,
     ServicePartsAccordion,
     ServicePartsCondition,
     ExternalLink

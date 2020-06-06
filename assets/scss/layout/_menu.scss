@@ -59,7 +59,6 @@
     z-index: 1000;
     bottom: $padding-sp;
     right: $padding-sp;
-    font-size: 14px;
     background-color: $color-black;
     border-radius: 50%;
     @include center-flex;
@@ -135,10 +134,9 @@
 
 .menu-link {
   display: block;
-  line-height: 1;
-  letter-spacing: normal;
   white-space: nowrap;
   @include font-en;
+  @include lh-1;
   &.is-active {
     &.mod-orange {
       color: $color-orange;
@@ -155,11 +153,9 @@
   }
   @include max {
     padding: 8px;
-    font-size: 18px;
   }
   @include min {
     padding: 5px 0;
-    font-size: 20px;
     &.mod-orange:hover {
       color: $color-orange;
     }

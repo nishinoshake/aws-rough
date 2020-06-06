@@ -9,22 +9,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 1;
   color: $color-white;
   background-color: $color-black;
   border-radius: 999em;
   cursor: pointer;
   @include font-sans;
+  @include fz-s;
+  @include lh-1;
   @include transition-collection;
   @include max {
     margin-left: 25px;
     padding: 10px 0;
-    font-size: 12px;
   }
   @include min {
     margin-left: 50px;
     padding: 14px 0;
-    font-size: 14px;
   }
 }
 
@@ -83,12 +82,11 @@
 
 .detail-price-name {
   margin-right: 20px;
-  font-size: 22px;
-  line-height: 1;
   @include font-en;
+  @include fz-l;
+  @include lh-1;
   @include min {
     margin-right: 30px;
-    font-size: 28px;
   }
 }
 
@@ -116,9 +114,10 @@
   position: absolute;
   top: 0;
   left:0 ;
-  line-height: 1.5;
   pointer-events: none;
   @include font-en;
+  @include fz-grande;
+  @include lh-en;
   span {
     display: block;
     opacity: 0;
@@ -126,12 +125,6 @@
     &:nth-child(2) {
       transition-delay: .08s;
     }
-  }
-  @include max {
-    font-size: 22px;
-  }
-  @include min {
-    font-size: 48px;
   }
   &.is-visible {
     span {
