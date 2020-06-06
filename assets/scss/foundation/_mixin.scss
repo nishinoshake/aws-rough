@@ -133,6 +133,15 @@
   }
 }
 
+@mixin fz-sm {
+  @include max {
+    font-size: 14px;
+  }
+  @include min {
+    font-size: 16px;
+  }
+}
+
 @mixin fz-m {
   @include max {
     font-size: 16px;
@@ -170,11 +179,21 @@
 }
 
 @mixin fz-form {
-  font-size: 16px;
+  @include max {
+    font-size: 16px;
+  }
+  @include min {
+    font-size: 14px;
+  }
 }
 
 @mixin lh-base {
-  line-height: 2;
+  @include max {
+    line-height: 1.8;
+  }
+  @include min {
+    line-height: 2;
+  }
 }
 
 @mixin lh-0 {

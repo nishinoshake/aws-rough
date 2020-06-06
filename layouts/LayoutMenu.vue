@@ -1,18 +1,14 @@
 <template>
   <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
     <div class="menu-frame">
-      <div class="menu-list-container">
-        <ul class="menu-list">
-          <li v-for="service in services" :key="service.key" class="menu-item">
-            <nuxt-link :class="`menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
-              <div class="menu-inner">
-                <ServicePartsIcon :name="service.key" />
-                <span>{{ service.name }}</span>
-              </div>
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
+      <ul class="menu-list">
+        <li v-for="service in services" :key="service.key" class="menu-item">
+          <nuxt-link :class="`menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
+            <ServicePartsIcon :name="service.key" />
+            <span>{{ service.name }}</span>
+          </nuxt-link>
+        </li>
+      </ul>
     </div>
     <button :class="['menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
       <span class="menu-button-icon">

@@ -12,7 +12,7 @@
     flex: none;
     top: 0;
     left: 0;
-    padding: 50px 0;
+    padding: 60px 0 20px;
     &.is-small {
       position: static;
     }
@@ -20,34 +20,20 @@
 }
 
 .menu-logo {
+  display: flex;
+  line-height: 1;
   @include max {
-    max-width: 200px;
-    padding: 28px 10px 24px;
+    margin-bottom: 12px;
   }
   @include min {
-    margin-bottom: 24px;
-    padding-left: 6px;
+    margin-bottom: 10px;
   }
   a {
     display: block;
-    @include min {
-      width: 100px;
-    }
-    span {
-      position: relative;
-      display: block;
-      &:before {
-        content: "";
-        display: block;
-        padding-top: 19.54%;
-      }
-    }
-  }
-  svg {
-    @include fit-full;
-  }
-  path {
-    fill: $color-muted;
+    color: $color-white;
+    background-color: $color-black;
+    padding: 3px;
+    @include font-en;
   }
 }
 
@@ -123,6 +109,9 @@
     padding: 22px 70px 22px 22px;
     will-change: transform;
   }
+  @include min {
+    display: flex;
+  }
 }
 
 .menu-list {
@@ -132,10 +121,16 @@
   }
 }
 
+.menu-item {
+
+}
+
 .menu-link {
-  display: block;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
   @include font-en;
+  @include fz-sm;
   @include lh-1;
   &.is-active {
     &.mod-orange {
@@ -155,7 +150,7 @@
     padding: 8px;
   }
   @include min {
-    padding: 5px 0;
+    padding: 6px 0;
     &.mod-orange:hover {
       color: $color-orange;
     }
@@ -169,12 +164,6 @@
       color: $color-beige;
     }
   }
-}
-
-.menu-inner {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
   svg {
     flex: none;
     @include max {
@@ -183,13 +172,9 @@
       margin-right: 3px;
     }
     @include min {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       margin-right: 4px;
     }
   }
-}
-
-.menu-name {
-  padding: 2px 3px;
 }

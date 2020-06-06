@@ -2,11 +2,14 @@
 
 .list-item {
   position: relative;
-  padding-left: 14px;
+  padding-left: 18px;
+  + .list-item {
+    margin-top: 0.2em;
+  }
   &:before {
     content: '';
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     background-color: $color-black;
     border-radius: 50%;
     position: absolute;

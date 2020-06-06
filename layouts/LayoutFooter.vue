@@ -3,9 +3,6 @@
     <div class="footer-inner">
       <ul class="footer-list">
         <li class="footer-item">
-          <nuxt-link to="/" class="footer-link">HOME</nuxt-link>
-        </li>
-        <li class="footer-item">
           <nuxt-link to="/about/" class="footer-link">ABOUT</nuxt-link>
         </li>
       </ul>

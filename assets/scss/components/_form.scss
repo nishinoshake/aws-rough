@@ -18,18 +18,14 @@
 
 .form-text-input {
   width: 100%;
+  padding: 10px;
   text-align: center;
   border: $width-border-input solid $color-black;
   background-color: $color-white;
   border-radius: $radius;
   @include fz-form;
+  @include font-en;
   @include transition-collection;
-  @include max {
-    padding: 10px;
-  }
-  @include min {
-    padding: 11px;
-  }
   &:invalid {
     background-color: rgba($color-red, 0.2);
   }
@@ -53,12 +49,13 @@
     text-align: center;
     white-space: nowrap;
     background-color: $color-white;
+    @include font-en;
     @include lh-1;
     @include max {
       padding: 11px 16px 11px 0;
     }
     @include min {
-      padding: 13px 16px 13px 0;
+      padding: 11px 16px 10px 0;
     }
   }
   &:after {

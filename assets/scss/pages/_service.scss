@@ -1,7 +1,12 @@
 @charset "utf-8";
 
-.service-body {
-  position: relative;
+.service-header {
+  @include max {
+    margin-bottom: 80px;
+  }
+  @include min {
+    margin-bottom: 120px;
+  }
 }
 
 .service-inside {
