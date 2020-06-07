@@ -4,36 +4,22 @@
   @include max {
     &.is-open .menu-frame {
       visibility: visible;
+      transform: translateY(0);
+      transition: transform 0.4s $easeOutQuart, visibility 0s;
     }
   }
   @include min {
     width: $width-menu-pc;
     position: sticky;
+    z-index: 10;
     flex: none;
+    display: flex;
     top: 0;
     left: 0;
-    padding: 60px 0 20px;
+    padding: $margin-pc 0;
     &.is-small {
       position: static;
     }
-  }
-}
-
-.menu-logo {
-  display: flex;
-  line-height: 1;
-  @include max {
-    margin-bottom: 12px;
-  }
-  @include min {
-    margin-bottom: 10px;
-  }
-  a {
-    display: block;
-    color: $color-white;
-    background-color: $color-black;
-    padding: 3px;
-    @include font-en;
   }
 }
 
@@ -105,12 +91,15 @@
     z-index: 900;
     visibility: hidden;
     background-color: $color-white;
-    border-top: $width-border-form dashed $color-border;
+    border-top: 1px solid $color-dark-gray;
     padding: 22px 70px 22px 22px;
+    transform: translateY(100%);
     will-change: transform;
+    transition: transform 0.3s $easeOutQuart, visibility 0s 0.3s;
   }
   @include min {
-    display: flex;
+    position: relative;
+    min-width: 160px;
   }
 }
 
@@ -121,16 +110,11 @@
   }
 }
 
-.menu-item {
-
-}
-
 .menu-link {
   display: flex;
   align-items: center;
   white-space: nowrap;
   @include font-en;
-  @include fz-sm;
   @include lh-1;
   &.is-active {
     &.mod-orange {
@@ -150,7 +134,7 @@
     padding: 8px;
   }
   @include min {
-    padding: 6px 0;
+    padding: 10px 0;
     &.mod-orange:hover {
       color: $color-orange;
     }
@@ -172,9 +156,18 @@
       margin-right: 3px;
     }
     @include min {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       margin-right: 4px;
     }
   }
+}
+
+.menu-please {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 3em);
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  @include fz-l;
 }

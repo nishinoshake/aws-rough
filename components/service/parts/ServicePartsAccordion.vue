@@ -1,6 +1,6 @@
 <template>
   <div :class="['accordion-item', { 'is-active': isActive }]">
-    <button class="accordion-title">
+    <button class="accordion-title" @click="toggle">
       {{ title }}
     </button>
     <div class="accordion-frame" ref="frame" :style="defaultFrameStyle">

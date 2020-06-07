@@ -19,14 +19,20 @@
   }
   th,
   td {
-    border: $width-border-form solid $color-gray;
+    text-align: left;
+    border-bottom: 1px solid $color-gray;
     @include max {
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: 8px 10px;
     }
     @include min {
-      padding: 12px 22px;
+      padding: 8px 14px;
     }
+  }
+  th {
+    padding-left: 0;
+  }
+  td {
+    padding-right: 0;
   }
   caption {
     margin-top: 18px;

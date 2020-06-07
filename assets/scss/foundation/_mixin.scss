@@ -100,6 +100,10 @@
   font-family: system-ui,-apple-system,sans-serif;
 }
 
+@mixin font-title {
+  font-family: system-ui,-apple-system,sans-serif;
+}
+
 @mixin font-en {
   font-family: 'Lato', sans-serif;
 }
@@ -133,21 +137,12 @@
   }
 }
 
-@mixin fz-sm {
+@mixin fz-m {
   @include max {
     font-size: 14px;
   }
   @include min {
     font-size: 16px;
-  }
-}
-
-@mixin fz-m {
-  @include max {
-    font-size: 16px;
-  }
-  @include min {
-    font-size: 18px;
   }
 }
 
@@ -175,6 +170,15 @@
   }
   @include min {
     font-size: 48px;
+  }
+}
+
+@mixin fz-enorme {
+  @include max {
+    font-size: 64px;
+  }
+  @include min {
+    font-size: 128px;
   }
 }
 

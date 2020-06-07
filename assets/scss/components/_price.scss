@@ -4,19 +4,20 @@
   display: inline-flex;
   align-items: baseline;
   font-family: sans-serif;
-  font-weight: 700;
   @include fz-xs;
   @include lh-1;
   &.mod-large {
-    @include fz-s;
     .price-unit {
-      margin: 0 0 2px 6px;
+      margin: 0 0 0 6px;
+      @include fz-s;
     }
   }
 }
 
 .price-number {
-  font-size: 160%;
+  font-size: 180%;
+  font-weight: 700;
+  @include font-en;
 }
 
 .price-unit {

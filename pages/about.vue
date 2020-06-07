@@ -4,7 +4,7 @@
       <div class="service-main">
         <section class="section">
           <h2 class="title-section" id="introduction"><a href="#introduction">AWSの料金を、日本円でざっくり</a></h2>
-          <div class="service-zakuri">
+          <div class="service-content">
             <div class="section-child">
               <p class="text">AWSの料金、ややこしいですよね。</p>
               <p class="text">
@@ -23,7 +23,7 @@
 
         <section class="section">
           <h2 class="title-section" id="condition"><a href="#condition">計算の前提</a></h2>
-          <div class="service-zakuri">
+          <div class="service-content">
             <div class="section-child">
               <table class="spec">
                 <caption>
@@ -78,7 +78,7 @@
 
         <section class="section">
           <h2 class="title-section" id="analytics"><a href="#analytics">Google Analytics</a></h2>
-          <div class="service-zakuri">
+          <div class="service-content">
             <div class="section-child">
               <p class="text">
                 サイトの利用状況を把握するために、Google
@@ -103,7 +103,7 @@
 
         <section class="section">
           <h2 class="title-section" id="adsense"><a href="#adsense">Google AdSense</a></h2>
-          <div class="service-zakuri">
+          <div class="service-content">
             <div class="section-child">
               <p class="text">
                 広告の配信に、Google
@@ -118,7 +118,7 @@
 
         <section class="section">
           <h2 class="title-section" id="contact"><a href="#contact">お問い合わせ</a></h2>
-          <div class="service-zakuri">
+          <div class="service-content">
             <div class="section-child">
               <p class="text">
                 不具合などのご連絡は、<ExternalLink href="https://github.com/nishinoshake/aws-rough/issues"

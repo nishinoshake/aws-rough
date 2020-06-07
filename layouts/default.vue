@@ -5,6 +5,7 @@
         <LayoutMenu />
         <div class="contents">
           <nuxt />
+          <LayoutFooter />
         </div>
       </div>
       <LayoutCart :total="$store.state.total.jpy" />

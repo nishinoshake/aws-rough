@@ -1,13 +1,14 @@
 @charset "utf-8";
 
 .accordion-item {
-  border: $width-border-input solid $color-black;
+  border: 1px solid $color-dark-gray;
+  border-radius: 8px;
   &.is-active {
     .accordion-inside {
       opacity: 1;
     }
     .accordion-title:after {
-      transform: translateY(6px) rotate(225deg);
+      transform: translateY(5px) rotate(-45deg);
     }
   }
   &:nth-child(n+2) {
@@ -15,7 +16,7 @@
       margin-top: 24px;
     }
     @include min {
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 }
@@ -25,14 +26,26 @@
   display: block;
   position: relative;
   text-align: left;
-  cursor: default;
-  @include fz-l;
   @include transition-fade;
   @include max {
     padding: 18px 30px 18px 20px;
   }
   @include min {
-    padding: 22px 40px 22px 40px;
+    padding: 24px 36px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 32px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    transform: rotate(135deg);
   }
 }
 
@@ -45,14 +58,15 @@
 .accordion-inside {
   position: relative;
   opacity: 0;
-  border-top: $width-border-input dotted $color-black;
+  border-top: $width-border-input dashed $color-dark-gray;
   transition: opacity 0.1s linear;
   will-change: opacity;
+  @include fz-s;
   @include max {
     padding: $padding-sp $padding-sp;
   }
   @include min {
-    padding: $padding-pc $padding-pc;
+    padding: 32px 36px;
   }
   .text {
     text-align: justify;

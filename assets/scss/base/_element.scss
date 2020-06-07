@@ -5,12 +5,6 @@
 // 増えると秩序がなくなるので最小限にする
 // -----------------------------------------------------
 
-em,
-strong {
-  padding: 0 2px;
-  font-weight: 700;
-}
-
 pre {
   padding: 12px;
   overflow-x: auto;
@@ -18,7 +12,7 @@ pre {
   background-color: $color-bg;
   @include font-source;
   @include min {
-    padding: 20px;
+    padding: 12px;
   }
 }
 

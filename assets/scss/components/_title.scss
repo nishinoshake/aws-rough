@@ -15,6 +15,7 @@
     min-height: $height-header-pc;
   }
   &-ja {
+    font-weight: 400;
     @include font-sans;
     @include fz-xl;
   }
@@ -23,44 +24,29 @@
 .title-section {
   display: flex;
   position: relative;
+  letter-spacing: 0.08em;
   font-weight: 700;
-  letter-spacing: 0.14em;
   font-feature-settings: "palt";
   color: $color-black;
+  @include font-title;
   @include fz-l;
   @include lh-min;
   @include max {
     padding: 16px 0;
   }
   @include min {
-    // margin-bottom: 26px;
     padding: 20px 0;
-  }
-  + .accordion-list,
-  + .spec {
-    @include max {
-      margin-top: 28px;
-    }
-    @include min {
-      margin-top: 44px;
-    }
+    margin-bottom: 4px;
   }
   &-large {
-    padding-right: 0.1em;
-    font-size: 140%;
     @include font-en;
+    @include min {
+      padding-right: 0.1em;
+      font-size: 120%;
+    }
   }
   a {
-    display: inline-block;
     position: relative;
-    &:before {
-      content: "#";
-      position: absolute;
-      top: calc(50% - 0.5em);
-      right: calc(100% + 0.2em);
-      font-size: 90%;
-      @include font-en;
-    }
   }
 }
 
@@ -75,14 +61,15 @@
 }
 
 .title-small {
-  display: block;
+  display: flex;
+  color: $color-muted-dark;
   font-weight: 700;
   @include lh-min;
   @include max {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
   }
   @include min {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 }
 

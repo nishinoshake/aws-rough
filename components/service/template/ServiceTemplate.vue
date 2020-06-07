@@ -14,7 +14,7 @@
               >についてざっくり</a
             >
           </h2>
-          <div class="service-zakuri">
+          <div class="service-content">
             <slot name="zakuri" />
           </div>
         </section>
@@ -26,37 +26,28 @@
               >の料金計算式をざっくり</a
             >
           </h2>
-          <div class="service-zakuri">
+          <div class="service-content">
             <ServicePartsCode :service-name="serviceName" />
           </div>
         </section>
 
         <ServiceTemplateAds />
 
-        <section class="section section-notice">
-          <section class="section" v-if="hasHelp">
-            <h2 class="title-section" id="help"><a href="#help">入力項目の補足</a></h2>
-            <div class="service-zakuri">
-              <slot name="help" />
-            </div>
-          </section>
+        <section class="section">
+          <ServicePartsAccordion v-if="hasHelp" title="入力項目の補足">
+            <slot name="help" />
+          </ServicePartsAccordion>
 
-          <section class="section">
-            <h2 class="title-section" id="condition"><a href="#condition">料金計算の前提</a></h2>
-            <div class="service-zakuri">
-              <slot name="fullCondition" v-if="hasFullCondition" />
-              <ServicePartsCondition v-else>
-                <slot name="condition" />
-              </ServicePartsCondition>
-            </div>
-          </section>
+          <ServicePartsAccordion title="料金計算の前提">
+            <slot name="fullCondition" v-if="hasFullCondition" />
+            <ServicePartsCondition v-else>
+              <slot name="condition" />
+            </ServicePartsCondition>
+          </ServicePartsAccordion>
 
-          <section class="section" v-if="hasDisclaimer">
-            <h2 class="title-section" id="disclaimer"><a href="#disclaimer">対象外のもの</a></h2>
-            <div class="service-zakuri">
-              <slot name="disclaimer" />
-            </div>
-          </section>
+          <ServicePartsAccordion v-if="hasDisclaimer" title="対象外のもの">
+            <slot name="disclaimer" />
+          </ServicePartsAccordion>
         </section>
       </div>
       <ServicePartsUnkown />
@@ -70,6 +61,7 @@ import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCa
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
 import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
+import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
 import ServicePartsUnkown from '@/components/service/parts/ServicePartsUnkown'
 import ExternalLink from '@/components/text/ExternalLink'
 import serviceConfig from '@/config/service'
@@ -83,6 +75,7 @@ export default {
     ServiceTemplateAds,
     ServicePartsCode,
     ServicePartsCondition,
+    ServicePartsAccordion,
     ServicePartsUnkown,
     ExternalLink
   },

@@ -6,7 +6,7 @@
       margin-top: 50px;
     }
     @include min {
-      margin-top: 100px;
+      margin-top: $padding-pc;
     }
   }
 }
@@ -14,10 +14,10 @@
 .section-child {
   + .section-child {
     @include max {
-      margin-top: 36px;
+      margin-top: 24px;
     }
     @include min {
-      margin-top: 50px;
+      margin-top: 30px;
     }
   }
 

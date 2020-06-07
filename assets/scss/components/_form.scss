@@ -42,6 +42,7 @@
   select {
     opacity: 0;
     cursor: pointer;
+    @include fz-form;
     @include fit-full;
   }
   &-value {
@@ -50,12 +51,13 @@
     white-space: nowrap;
     background-color: $color-white;
     @include font-en;
+    @include fz-form;
     @include lh-1;
     @include max {
       padding: 11px 16px 11px 0;
     }
     @include min {
-      padding: 11px 16px 10px 0;
+      padding: 12px 16px 11px 0;
     }
   }
   &:after {

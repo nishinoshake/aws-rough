@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <h2 class="title-section" id="about"><a href="#about">このサイトについて</a></h2>
-    <div class="service-zakuri">
+    <div class="service-content">
       <p class="text">AWSの料金を、日本円でざっくり計算できるサイトです。</p>
       <p class="text">
         公式の計算ツールよりも少ない入力で、ざっくり料金の概算がわかります。このサイトを作った当初は、公式のものは<ExternalLink

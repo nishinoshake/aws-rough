@@ -6,7 +6,7 @@
     margin: 22px 0;
   }
   @include min {
-    margin: 32px #{-$width-ball-pc -$padding-main-pc} 32px 0;
+    margin: 32px #{-$width-ball-pc -$padding-pc} 32px 0;
   }
   pre {
     display: block;

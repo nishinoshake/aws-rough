@@ -2,92 +2,78 @@
 
 .cart {
   z-index: 100;
-  position: sticky;
+  position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
-  background-color: $color-black;
+  background-color: $color-white;
+  @include max {
+    right: 86px;
+    bottom: $padding-sp;
+    border: 1px solid currentColor;
+    background-color: $color-black;
+    border-radius: 999em;
+    overflow: hidden;
+  }
   @include min {
-    height: $height-cart-pc;
-  }
-}
-
-.cart-container {
-  @include min {
-    width: 100%;
-    max-width: $width-max;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 $padding-content-pc; 
-  }
-}
-
-.cart-official {
-  display: flex;
-  align-items: center;
-  color: $color-white;
-  @include fz-s;
-  svg {
-    width: 14px;
-    height: 14px;
-    margin-left: 0.4em;
-  }
-  path {
-    fill: $color-white;
-  }
-}
-
-.cart-link {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  @include min {
+    right: $padding-content-pc;
     padding: 12px 0;
+  }
+  @include min($width-max) {
+    height: $height-cart-pc;
+    right: calc(50% - #{$width-max / 2} + #{$padding-content-pc});
+    &:hover {
+      .cart-detail {
+        color: $color-white;
+        background-color: $color-black;
+      }
+    }
   }
 }
 
 .cart-detail {
   white-space: nowrap;
-  font-weight: 700;
-  background-color: $color-white;
+  border: 1px solid $color-black;
   border-radius: 3px;
   @include fz-s;
-  @include transition-collection;
   @include max {
     padding: 5px 16px;
+    color: $color-white;
   }
   @include min {
-    padding: 2px 14px;
+    padding: 1px 12px;
   }
 }
 
 .cart-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   position: relative;
   z-index: 1;
-  color: $color-white;
   @include transition-fade;
   @include fz-l;
   @include max {
-    min-width: 220px;
-    flex-grow: 1;
-    padding: 14px 14px 14px 18px;
+    min-width: 200px;
+    padding: 15px 15px 15px 18px;
+    background-color: $color-white;
   }
   @include min {
-    min-width: 260px;
-    padding: 6px 18px;
+    padding: 6px 14px 0 0;
+    min-width: 230px;
+  }
+}
+
+.cart-total-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include min {
+    padding-bottom: 4px;
+    border-bottom: 1px solid currentColor;
   }
 }
 
 .cart-label {
-  font-weight: 700;
   margin-right: 0.5em;
-  @include fz-m;
+  @include fz-s;
   @include lh-1;
 }

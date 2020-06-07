@@ -1,14 +1,13 @@
 <template>
   <footer class="footer" id="footer">
-    <div class="footer-body">
-      <div class="footer-ticker">
-        <ul class="footer-list">
-          <li v-for="service in services" :key="service.key" class="footer-item">
-            <nuxt-link class="footer-link" :to="service.href">{{ service.name }}</nuxt-link>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <ul class="footer-list">
+      <li class="footer-item">
+        <nuxt-link to="/" class="footer-link">トップページ</nuxt-link>
+      </li>
+      <li class="footer-item">
+        <nuxt-link to="/about/" class="footer-link">このサイトについて</nuxt-link>
+      </li>
+    </ul>
   </footer>
 </template>
 

@@ -1,54 +1,58 @@
 @charset "utf-8";
 
 .footer {
-  border-top: 2px solid $color-white;
+  margin-top: $padding-pc;
+  display: flex;
+  align-items: center;
+  @include max {
+    justify-content: center;
+  }
+  @include min {
+    padding-bottom: 12px;
+  }
 }
-.footer-body {
-  height: 100%;
+.footer-logo {
+  display: flex;
   background-color: $color-black;
-  position: relative;
-  overflow: hidden;
+  line-height: 0.8;
+  margin-right: 30px;
+  @include max {
+    padding: 12px;
+  }
+  @include min {
+    width: 140px;
+    padding: 12px;
+  }
 }
 
-.footer-ticker {
-  line-height: 1;
-  overflow: hidden;
-  @include fz-xl;
+.footer-logo-box {
+  background-color: $color-white;
+  flex-grow: 1;
+  @include max {
+    margin-right: 8px;
+  }
+  @include min {
+    margin-right: 8px;
+  }
+}
+
+.footer-logo-text {
+  color: $color-white;
+  @include font-en;
 }
 .footer-list {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  padding: 0 0.4em;
-  animation: footer-ticker 20s $easeInOutSine infinite alternate;
+  @include fz-s;
+}
+.footer-item + .footer-item {
+  margin-left: 1em;
 }
 .footer-link {
-  display: block;
-  padding: 0 0.4em;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  color: $color-white;
-  white-space: nowrap;
-  @include font-en;
-}
-
-.footer-about {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  color: $color-white;
-  background-color: $color-black;
-  line-height: 1;
-  @include font-en;
-  @include fz-xl;
-}
-
-@keyframes footer-ticker {
-  0%,
-  10% {
-    transform: translateX(0);
-  }
-  90%,
-  100% {
-    transform: translateX(-100%) translateX(100vw);
+  text-decoration: underline;
+  @include min {
+    &:hover {
+      text-decoration: none;
+    } 
   }
 }
