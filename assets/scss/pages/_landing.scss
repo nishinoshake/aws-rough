@@ -7,42 +7,33 @@
     padding-top: 60px;
   }
   @include min {
-    padding-top: $padding-pc;
+    padding-top: 60px;
   }
 }
 
 .landing-please {
-  letter-spacing: 0.12em;
-  @include max {
-    margin-bottom: 50px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
   }
-  @include min {
-    margin-bottom: $padding-pc; 
+  10% {
+    opacity: 1;
   }
-  a {
-    padding: 0 0.2em;
-    border-bottom: 1px solid currentColor;
-    &:hover {
-      border-bottom-color: transparent;
-    }
-  }
-  svg {
-    width: 0.8em;
-    height: 0.8em;
-    margin-left: 0.2em;
-  }
-  svg path {
-    fill: currentColor;
+  50%, 100% {
+    opacity: 0;
   }
 }
 
 .landing-poem-text {
+  @include fz-poem;
   @include max {
     text-align: justify;
   }
   a {
     padding: 0 0.1em;
-    text-decoration: underline;
+    text-decoration: none;
     @include font-en;
     &.mod-orange {
       color: $color-orange;
@@ -61,7 +52,7 @@
     }
     @include min {
       &:hover {
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
   }
@@ -72,6 +63,6 @@
     margin-top: 12px;
   }
   @include min {
-    margin-top: 20px;
+    margin-top: 32px;
   }
 }

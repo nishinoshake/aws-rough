@@ -21,3 +21,8 @@
     }
   }
 }
+
+.text-notice {
+  color: $color-muted;
+  @include fz-s;
+}

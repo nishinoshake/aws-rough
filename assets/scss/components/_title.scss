@@ -27,7 +27,6 @@
   letter-spacing: 0.08em;
   font-weight: 700;
   font-feature-settings: "palt";
-  color: $color-black;
   @include font-title;
   @include fz-l;
   @include lh-min;
@@ -42,7 +41,7 @@
     @include font-en;
     @include min {
       padding-right: 0.1em;
-      font-size: 120%;
+      font-size: 110%;
     }
   }
   a {
@@ -62,7 +61,6 @@
 
 .title-small {
   display: flex;
-  color: $color-muted-dark;
   font-weight: 700;
   @include lh-min;
   @include max {

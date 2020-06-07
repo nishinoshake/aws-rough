@@ -1,133 +1,18 @@
 <template>
   <div class="landing">
     <p class="landing-please">
-      料金が気になるサービスはメニューにありますか？<br />もし見当たらなかったら →
-      <a href="https://calculator.aws" target="_blank" rel="noopener"
-        >公式のツール<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M440,256H424a8,8,0,0,0-8,8V464a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V112A16,16,0,0,1,48,96H248a8,8,0,0,0,8-8V72a8,8,0,0,0-8-8H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V264A8,8,0,0,0,440,256ZM500,0,364,.34a12,12,0,0,0-12,12v10a12,12,0,0,0,12,12L454,34l.7.71L131.51,357.86a12,12,0,0,0,0,17l5.66,5.66a12,12,0,0,0,17,0L477.29,57.34l.71.7-.34,90a12,12,0,0,0,12,12h10a12,12,0,0,0,12-12L512,12A12,12,0,0,0,500,0Z"
-          /></svg
-      ></a>
+      ようこそ、トップページです。<br />AWSの料金をざっくり計算できるサイトがあります。<br />料金が気になるサービスをメニューから選んでください。
     </p>
-    <div class="landing-poem">
-      <section class="section">
-        <h2 class="title-section" id="intro"><a href="#intro">入門</a></h2>
-        <p class="landing-poem-text">はじめてのAWS。<br />とりあえず入門書を読み進める。</p>
-        <p class="landing-poem-text">
-          <nuxt-link to="/vpc/" class="mod-orange">VPC</nuxt-link>でネットワークを設計してから、<br class="pc" />
-          <nuxt-link to="/ec2/" class="mod-orange">EC2</nuxt-link>を置くらしい。この単語には聞き覚えがあるぞ。<br
-            class="pc"
-          />
-          念のためにロードバランサーの<nuxt-link to="/elb/" class="mod-orange">ELB</nuxt-link>も挟んでおこう。
-        </p>
-      </section>
-
-      <section class="section">
-        <h2 class="title-section" id="ecs"><a href="#ecs">コンテナ</a></h2>
-        <p class="landing-poem-text">
-          これだけでも悪くないけど、欲を言えばDockerを使いたい。 <br class="pc" />ECSで<nuxt-link
-            to="/fargate/"
-            class="mod-orange"
-            >Fargate</nuxt-link
-          >を使用すると、サーバーの管理が不要になると。<br class="pc" />なんなんだこれは・・・革新的すぎるぜ。
-        </p>
-      </section>
-
-      <section class="section">
-        <h2 class="title-section" id="database"><a href="#database">データベース</a></h2>
-        <p class="landing-poem-text">
-          データベースは、直感で<nuxt-link to="/dynamodb/" class="mod-blue">DynamoDB</nuxt-link>に決める。<br
-            class="pc"
-          />仕様上、どうしても向き不向きがあるみたいなので、<br class="pc" />場合によっては<nuxt-link
-            to="/rds/"
-            class="mod-blue"
-            >RDS</nuxt-link
-          >を使うことも視野に入れておこう。 <br class="pc" />せっかくなら<nuxt-link to="/aurora/" class="mod-blue"
-            >Aurora</nuxt-link
-          >とかいうやつを使ってみようか。
-        </p>
-        <p class="landing-poem-text">
-          一旦これで様子を見て、キャッシュをかませたくなったら、<br class="pc" />
-          <nuxt-link to="/elasticache/" class="mod-blue">ElastiCache</nuxt-link>でRedisを動かすことも検討しよう。
-        </p>
-      </section>
-
-      <section class="section">
-        <h2 class="title-section" id="sls"><a href="#sls">サーバーレス</a></h2>
-
-        <p class="landing-poem-text">
-          詰め込み過ぎて頭が痛くなってきたけど、<br class="pc" />サーバーレスで設計してみたい気持ちもある。
-        </p>
-        <p class="landing-poem-text">
-          <nuxt-link to="/apigateway/" class="mod-beige">API Gateway</nuxt-link>に<nuxt-link
-            to="/lambda/"
-            class="mod-orange"
-            >Lambda</nuxt-link
-          >を繋げて、<br class="pc" /><nuxt-link to="/s3/" class="mod-red">S3</nuxt-link
-          >を組み合わせれば色々できそうだ。<br class="pc" />とりあえず<a
-            href="https://www.serverless.com/"
-            target="_blank"
-            rel="noopener"
-            class="mod-serverless"
-            >⚡ Serverless</a
-          >を触ってみよう。
-        </p>
-      </section>
-
-      <section class="section">
-        <h2 class="title-section" id="sxs"><a href="#sxs">メール</a></h2>
-        <p class="landing-poem-text">
-          メールの送信をどう実装しようか。<br class="pc" />ひとまず<nuxt-link to="/sqs/" class="mod-beige"
-            >SQS</nuxt-link
-          >のキューに入れてから、<br class="pc" /><nuxt-link to="/lambda/" class="mod-orange">Lambda</nuxt-link
-          >+<nuxt-link to="/ses/" class="mod-beige">SES</nuxt-link>で処理するのが良さそうだ。<br
-            class="pc"
-          />バウンスは<nuxt-link to="/sns/" class="mod-beige">SNS</nuxt-link>のトピックとして扱えるらしい。
-        </p>
-      </section>
-
-      <section class="section">
-        <h2 class="title-section" id="what-a-day"><a href="#what-a-day">なんて日だ</a></h2>
-        <p class="landing-poem-text">
-          あとは<nuxt-link to="/cloudfront/" class="mod-red">CloudFront</nuxt-link>を手前に置いて、<br class="pc" />
-          <nuxt-link to="/route53/" class="mod-orange">Route53</nuxt-link>でドメインの設定をすれば、<br
-            class="pc"
-          />なんとか公開まで持っていけそうだ。
-        </p>
-        <p class="landing-poem-text">しかしこれ、一体いくらかかるんだ？</p>
-      </section>
-    </div>
   </div>
 </template>
 
 <script>
-import ExternalLink from '@/components/text/ExternalLink'
-import ServicePartsUnkown from '@/components/service/parts/ServicePartsUnkown'
-import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
-import { getService } from '@/lib/service'
 
 export default {
   name: 'LandingIndex',
-  components: { ExternalLink, ServicePartsUnkown },
-  data() {
-    return {
-      isPlaying: false
-    }
-  },
   head() {
     return meta.index
-  },
-  computed: {
-    usdjpy() {
-      return this.$store.state.fx ? this.$store.state.fx.usdjpy : null
-    },
-    services() {
-      return serviceConfig.map(service => getService(service.key, serviceConfig))
-    }
-  },
-  mounted() {
-    this.isPlaying = true
   }
 }
 </script>

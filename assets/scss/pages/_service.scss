@@ -5,7 +5,7 @@
     margin-bottom: 80px;
   }
   @include min {
-    margin-bottom: $padding-pc;
+    margin-bottom: 160px;
   }
 }
 
@@ -14,19 +14,19 @@
   @include min {
     width: 100%;
     display: flex;
+    align-items: flex-start;
   }
 }
 
 .service-main {
   @include min {
     width: calc(100% - #{$width-ball-pc});
-    padding-right: 60px;
+    padding-right: 80px;
   }
 }
 
 .service-unknown {
-  display: none;
-  // mix-blend-mode: difference;
+  mix-blend-mode: difference;
   @include max {
     width: $width-ball-sp;
     margin: 120px auto 0;
@@ -35,8 +35,7 @@
     width: $width-ball-pc;
     flex: none;
     position: sticky;
-    top: 0;
-    padding-top: calc(50vh - #{$width-ball-pc / 2});
+    top: calc(50vh - #{$width-ball-pc / 2});
   }
 }
 
@@ -49,6 +48,36 @@
   @include min {
     height: $width-ball-pc;
   }
+}
+.service-unknown-logo {
+  width: 100%;
+  display: flex;
+  background-color: $color-white;
+  line-height: 0.8;
+  margin-right: 30px;
+  margin-top: 30px;
+  @include max {
+    padding: 12px;
+  }
+  @include min {
+    padding: 15px;
+  }
+}
+.service-unknown-logo-box {
+  background-color: $color-black;
+  flex-grow: 1;
+  @include hide-text;
+  @include max {
+    margin-right: 8px;
+  }
+  @include min {
+    margin-right: 8px;
+  }
+}
+.service-unknown-logo-text {
+  color: $color-black;
+  @include font-en;
+  @include fz-xl;
 }
 
 .service-inside {

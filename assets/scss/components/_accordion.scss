@@ -46,6 +46,7 @@
     border-top: 1px solid currentColor;
     border-right: 1px solid currentColor;
     transform: rotate(135deg);
+    transition: transform 0.32s $easeOutQuart;
   }
 }
 

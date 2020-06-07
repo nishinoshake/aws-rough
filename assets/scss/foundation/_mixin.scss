@@ -137,7 +137,7 @@
   }
 }
 
-@mixin fz-m {
+@mixin fz-sm {
   @include max {
     font-size: 14px;
   }
@@ -146,12 +146,30 @@
   }
 }
 
+@mixin fz-m {
+  @include max {
+    font-size: 14px;
+  }
+  @include min {
+    font-size: 18px;
+  }
+}
+
+@mixin fz-poem {
+  @include max {
+    font-size: 18px;
+  }
+  @include min {
+    font-size: 22px;
+  }
+}
+
 @mixin fz-l {
   @include max {
     font-size: 18px;
   }
   @include min {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 

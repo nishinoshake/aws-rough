@@ -8,7 +8,6 @@
   @include lh-1;
   &.mod-large {
     .price-unit {
-      margin: 0 0 0 6px;
       @include fz-s;
     }
   }

@@ -8,37 +8,8 @@
     justify-content: center;
   }
   @include min {
-    padding-bottom: 12px;
+    padding-bottom: 28px;
   }
-}
-.footer-logo {
-  display: flex;
-  background-color: $color-black;
-  line-height: 0.8;
-  margin-right: 30px;
-  @include max {
-    padding: 12px;
-  }
-  @include min {
-    width: 140px;
-    padding: 12px;
-  }
-}
-
-.footer-logo-box {
-  background-color: $color-white;
-  flex-grow: 1;
-  @include max {
-    margin-right: 8px;
-  }
-  @include min {
-    margin-right: 8px;
-  }
-}
-
-.footer-logo-text {
-  color: $color-white;
-  @include font-en;
 }
 .footer-list {
   display: flex;
@@ -46,7 +17,7 @@
   @include fz-s;
 }
 .footer-item + .footer-item {
-  margin-left: 1em;
+  margin-left: 1.5em;
 }
 .footer-link {
   text-decoration: underline;

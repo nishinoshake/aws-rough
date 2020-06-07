@@ -2,6 +2,7 @@
 
 .spec {
   border-collapse: collapse;
+  @include fz-sm;
   &.mod-center {
     th,
     td {

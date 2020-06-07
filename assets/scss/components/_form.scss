@@ -20,7 +20,7 @@
   width: 100%;
   padding: 10px;
   text-align: center;
-  border: $width-border-input solid $color-black;
+  border: $width-border-input solid $color-muted;
   background-color: $color-white;
   border-radius: $radius;
   @include fz-form;
@@ -28,6 +28,9 @@
   @include transition-collection;
   &:invalid {
     background-color: rgba($color-red, 0.2);
+  }
+  &:focus {
+    border-color: $color-black;
   }
 }
 
@@ -37,7 +40,7 @@
   position: relative;
   display: block;
   background-color: $color-white;
-  border: $width-border-input solid $color-black;
+  border: $width-border-input solid $color-muted;
   border-radius: $radius;
   select {
     opacity: 0;
@@ -66,8 +69,8 @@
     height: 8px;
     top: calc(50% - 8px);
     position: absolute;
-    border-bottom: $width-border-input solid $color-font;
-    border-right: $width-border-input solid $color-font;
+    border-bottom: $width-border-input solid $color-muted;
+    border-right: $width-border-input solid $color-muted;
     transform: rotate(45deg);
     pointer-events: none;
     @include max {

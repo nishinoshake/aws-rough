@@ -4,7 +4,7 @@
   width: 100%;
   display: block;
   position: relative;
-  border-top: $width-border-form dashed $color-border;
+  border-top: $width-border-form dashed $color-muted;
   &.mod-multiple {
     tr {
       @include min {
@@ -18,7 +18,7 @@
   tr {
     width: 100%;
     position: relative;
-    border-bottom: $width-border-form dashed $color-border;
+    border-bottom: $width-border-form dashed $color-muted;
     @include max {
       display: block;
       padding: $padding-sp 0;

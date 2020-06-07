@@ -18,7 +18,7 @@ const meta = {
     title: 'このサイトについて | ざっくりAWS',
     description: SITE_DESCRIPTION
   },
-  story: {
+  whatADay: {
     title: 'はじめてのAWS | ざっくりAWS',
     description: SITE_DESCRIPTION
   },
