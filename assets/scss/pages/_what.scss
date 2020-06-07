@@ -1,0 +1,48 @@
+.what {
+  @include max {
+    padding-top: 60px;
+  }
+  @include min {
+    padding-top: 66px;
+  }
+}
+
+.what-poem-text {
+  @include max {
+    text-align: justify;
+  }
+  a {
+    padding: 0 0.1em;
+    text-decoration: none;
+    @include font-en;
+    &.mod-orange {
+      color: $color-orange;
+    }
+    &.mod-blue {
+      color: $color-blue;
+    }
+    &.mod-red {
+      color: $color-red;
+    }
+    &.mod-beige {
+      color: $color-beige;
+    }
+    &.mod-serverless {
+      color: $color-serverless;
+    }
+    @include min {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.what-poem-text + .what-poem-text {
+  @include max {
+    margin-top: 20px;
+  }
+  @include min {
+    margin-top: 24px;
+  }
+}

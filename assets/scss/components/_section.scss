@@ -3,7 +3,7 @@
 .section {
   + .section {
     @include max {
-      margin-top: 50px;
+      margin-top: 60px;
     }
     @include min {
       margin-top: $padding-pc;

@@ -28,6 +28,17 @@
       }
     }
   }
+  &-enter-active {
+    transition: opacity 0.12s ease, transform 0.6s $easeOutExpo;
+  }
+  &-leave-active {
+    transition: opacity 0.2s ease, transform 0s 0.2s;
+  }
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
 }
 
 .cart-detail {

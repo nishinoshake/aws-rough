@@ -5,17 +5,17 @@
     margin-bottom: 80px;
   }
   @include min {
-    margin-bottom: 160px;
+    margin-bottom: 140px;
   }
 }
 
 .service-body {
   background-color: $color-white;
-  @include min {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-  }
+  // @include min {
+  //   width: 100%;
+  //   display: flex;
+  //   align-items: flex-start;
+  // }
 }
 
 .service-main {

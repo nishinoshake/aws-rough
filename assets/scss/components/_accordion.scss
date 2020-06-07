@@ -38,15 +38,22 @@
   }
   &:after {
     content: "";
-    width: 10px;
-    height: 10px;
     position: absolute;
-    top: calc(50% - 8px);
     right: 32px;
     border-top: 1px solid currentColor;
     border-right: 1px solid currentColor;
     transform: rotate(135deg);
     transition: transform 0.32s $easeOutQuart;
+    @include max {
+      width: 8px;
+      height: 8px;
+      top: calc(50% - 6px);
+    }
+    @include min {
+      width: 10px;
+      height: 10px;
+      top: calc(50% - 8px);
+    }
   }
 }
 

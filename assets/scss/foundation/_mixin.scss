@@ -155,15 +155,6 @@
   }
 }
 
-@mixin fz-poem {
-  @include max {
-    font-size: 18px;
-  }
-  @include min {
-    font-size: 22px;
-  }
-}
-
 @mixin fz-l {
   @include max {
     font-size: 18px;

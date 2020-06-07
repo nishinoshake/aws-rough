@@ -4,7 +4,9 @@
       <div class="main">
         <LayoutMenu />
         <div class="contents">
-          <nuxt />
+          <div class="page">
+            <nuxt />
+          </div>
           <LayoutFooter />
         </div>
       </div>

@@ -1,13 +1,15 @@
 <template>
-  <nuxt-link to="/detail/" class="cart">
-    <div class="cart-total">
-      <div class="cart-total-inner">
-        <span class="cart-label">合計</span>
-        <ServicePartsPrice :price="total" mod="large" />
+  <transition name="cart">
+    <nuxt-link v-if="isVisible" to="/detail/" class="cart">
+      <div class="cart-total">
+        <div class="cart-total-inner">
+          <span class="cart-label">合計</span>
+          <ServicePartsPrice :price="total" mod="large" />
+        </div>
       </div>
-    </div>
-    <span class="cart-detail">内訳</span>
-  </nuxt-link>
+      <span class="cart-detail">内訳</span>
+    </nuxt-link>
+  </transition>
 </template>
 
 <script>
@@ -25,8 +27,21 @@ export default {
   },
   data() {
     return {
-      isVisible: false,
       observer: null
+    }
+  },
+  computed: {
+    routeName() {
+      return this.$route.name
+    },
+    isVisible() {
+      const hideNames = ['index', 'about', 'what-a-day']
+
+      if (hideNames.includes(this.routeName)) {
+        return false
+      }
+
+      return true
     }
   }
 }
