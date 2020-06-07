@@ -28,27 +28,53 @@
       <h2 class="title-section" id="condition"><a href="#condition">計算の前提</a></h2>
       <div class="service-content">
         <div class="section-child">
-          <ul class="list">
-            <li class="list-item">通貨 → 日本円</li>
-            <li class="list-item">税金 → 税抜き</li>
-            <li class="list-item">期間 → 30.5日（月額）</li>
-            <li class="list-item">
-              ドル円 → <span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span
-              >円
-            </li>
-            <li class="list-item">リージョン → 東京/バージニア北部（SESのみ）</li>
-            <li class="list-item">
-              AWSの料金 →
-              <ExternalLink href="https→//docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/price-changes.html"
-                >Price List API</ExternalLink
-              >
-            </li>
-            <li class="list-item">
-              為替レート →
-              <ExternalLink href="https://github.com/exchangeratesapi/exchangeratesapi">exchangeratesapi</ExternalLink>
-            </li>
-          </ul>
-          <p class="text text-notice">※ 為替とAWSの料金は毎朝10時に更新しています</p>
+          <table class="spec">
+            <caption>
+              ※ 為替とAWSの料金は毎朝10時に更新しています
+            </caption>
+            <tbody>
+              <tr>
+                <th>通貨</th>
+                <td>日本円</td>
+              </tr>
+              <tr>
+                <th>税金</th>
+                <td>税抜き</td>
+              </tr>
+              <tr>
+                <th>期間</th>
+                <td>30.5日（月額）</td>
+              </tr>
+              <tr>
+                <th>ドル円</th>
+                <td>
+                  <span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span
+                  >円
+                </td>
+              </tr>
+              <tr>
+                <th>リージョン</th>
+                <td>東京<br />バージニア北部（SESのみ）</td>
+              </tr>
+              <tr>
+                <th>AWSの料金</th>
+                <td>
+                  <ExternalLink
+                    href="https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/price-changes.html"
+                    >Price List API</ExternalLink
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th>為替レート</th>
+                <td>
+                  <ExternalLink href="https://github.com/exchangeratesapi/exchangeratesapi"
+                    >exchangeratesapi</ExternalLink
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>

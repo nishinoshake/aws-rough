@@ -49,11 +49,11 @@ export default {
     this.handleResize()
     window.addEventListener('resize', () => this.handleResize())
 
-    // if (this.routeName === 'index' && window.matchMedia('(max-width: 1176px)').matches) {
-    //   setTimeout(() => {
-    //     this.SHOW_MENU()
-    //   }, 1400)
-    // }
+    if (this.routeName === 'index' && window.matchMedia('(max-width: 1176px)').matches) {
+      setTimeout(() => {
+        this.SHOW_MENU()
+      }, 800)
+    }
   },
   methods: {
     ...mapMutations(['SHOW_MENU', 'HIDE_MENU', 'TOGGLE_MENU']),

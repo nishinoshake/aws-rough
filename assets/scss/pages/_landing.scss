@@ -3,14 +3,17 @@
 .landing {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
   position: relative;
   background-color: $color-white;
-  @include center-flex;
   @include max {
-    padding-bottom: 140px;
+    align-items: flex-start;
+    padding-top: 80px;
   }
   @include min {
-    padding-bottom: 60px;
+    align-items: center;
+    padding-bottom: 80px;
   }
 }
 
@@ -37,7 +40,14 @@
 .landing-ball-caption {
   text-align: center;
   position: absolute;
-  top: calc(100% + 30px);
+  font-weight: 700;
+  white-space: nowrap;
+  @include max {
+    top: calc(100% + 20px);
+  }
+  @include min {
+    top: calc(100% + 30px);
+  }
 }
 
 @keyframes fadeInOut {

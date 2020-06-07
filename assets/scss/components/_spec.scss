@@ -1,8 +1,12 @@
 @charset "utf-8";
 
 .spec {
+  margin-top: 10px;
   border-collapse: collapse;
   @include fz-sm;
+  @include min {
+    margin-top: 20px;
+  }
   &.mod-center {
     th,
     td {
@@ -21,19 +25,17 @@
   th,
   td {
     text-align: left;
-    border-bottom: 1px solid $color-gray;
+    border: 1px solid $color-gray;
     @include max {
-      padding: 8px 10px;
+      padding: 8px 14px;
     }
     @include min {
-      padding: 8px 14px;
+      padding: 14px 28px;
     }
   }
   th {
-    padding-left: 0;
-  }
-  td {
-    padding-right: 0;
+    text-align: center;
+    background-color: $color-snow;;
   }
   caption {
     margin-top: 18px;
