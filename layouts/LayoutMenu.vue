@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
+  <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall, 'is-visible': isVisible }]" ref="menu">
     <div class="menu-frame">
       <ul class="menu-list">
         <li v-for="service in services" :key="service.key" class="menu-item">
@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       services: serviceConfig,
+      isVisible: false,
       isSmall: false
     }
   },
@@ -48,6 +49,8 @@ export default {
   mounted() {
     this.handleResize()
     window.addEventListener('resize', () => this.handleResize())
+
+    this.isVisible = true
 
     if (this.routeName === 'index' && window.matchMedia('(max-width: 1176px)').matches) {
       setTimeout(() => {

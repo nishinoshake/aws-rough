@@ -33,7 +33,7 @@ export default {
       this.timer = setTimeout(() => {
         this.label = 'メニューからサービスを選択してください'
         this.timer = null
-      }, 2000)
+      }, 1800)
     }
   }
 }

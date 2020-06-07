@@ -14,9 +14,19 @@
     z-index: 10;
     flex: none;
     display: flex;
+    opacity: 0;
+    visibility: hidden;
     top: 0;
+    top: calc(50% - var(--menu-height) / 2);
     left: 0;
     padding: $margin-pc 0;
+    transform: translate3d(-12px, 0, 0);
+    &.is-visible {
+      visibility: visible;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.14s ease, transform 0.3s $easeOutQuart, visibility 0s;
+    }
     &.is-small {
       position: static;
     }
@@ -134,7 +144,7 @@
     padding: 8px;
   }
   @include min {
-    padding: 10px 0;
+    padding: 8px 0;
     &.mod-orange:hover {
       color: $color-orange;
     }
@@ -156,8 +166,8 @@
       margin-right: 3px;
     }
     @include min {
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
       margin-right: 4px;
     }
   }
