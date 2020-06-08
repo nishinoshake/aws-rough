@@ -27,7 +27,6 @@
   letter-spacing: 0.08em;
   font-weight: 700;
   font-feature-settings: "palt";
-  @include font-title;
   @include fz-l;
   @include lh-min;
   @include max {
@@ -38,11 +37,11 @@
     margin-bottom: 4px;
   }
   &-large {
-    @include font-en;
-    @include min {
-      padding-right: 0.1em;
-      font-size: 110%;
-    }
+    // @include font-en;
+    // @include min {
+    //   padding-right: 0.1em;
+    //   font-size: 110%;
+    // }
   }
   a {
     position: relative;

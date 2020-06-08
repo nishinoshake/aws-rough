@@ -2,7 +2,13 @@
 
 .accordion-item {
   border: 1px solid $color-dark-gray;
-  border-radius: 8px;
+  transition: border-radius 0.32s $easeOutQuart;
+  @include max {
+    border-radius: 30px;
+  }
+  @include min {
+    border-radius: 45px;
+  }
   &.is-active {
     .accordion-inside {
       opacity: 1;
@@ -26,12 +32,13 @@
   display: block;
   position: relative;
   text-align: left;
+  @include lh-1;
   @include transition-fade;
   @include max {
-    padding: 18px 30px 18px 20px;
+    padding: 22px 22px 22px 24px;
   }
   @include min {
-    padding: 24px 36px;
+    padding: 36px 48px;
     &:hover {
       opacity: 0.7;
     }
@@ -39,7 +46,6 @@
   &:after {
     content: "";
     position: absolute;
-    right: 32px;
     border-top: 1px solid currentColor;
     border-right: 1px solid currentColor;
     transform: rotate(135deg);
@@ -48,11 +54,13 @@
       width: 8px;
       height: 8px;
       top: calc(50% - 6px);
+      right: 24px;
     }
     @include min {
       width: 10px;
       height: 10px;
       top: calc(50% - 8px);
+      right: 32px;
     }
   }
 }
@@ -74,7 +82,7 @@
     padding: $padding-sp $padding-sp;
   }
   @include min {
-    padding: 32px 36px;
+    padding: 48px;
   }
   .text {
     text-align: justify;

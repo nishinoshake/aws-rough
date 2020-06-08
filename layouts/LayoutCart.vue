@@ -35,7 +35,7 @@ export default {
       return this.$route.name
     },
     isVisible() {
-      const hideNames = ['index', 'about', 'what-a-day']
+      const hideNames = []
 
       if (hideNames.includes(this.routeName)) {
         return false

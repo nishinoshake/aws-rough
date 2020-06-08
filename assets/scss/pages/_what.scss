@@ -8,10 +8,15 @@
 }
 
 .what-poem-text {
+  font-feature-settings: "palt";
+  letter-spacing: 0.1em;
+  @include font-mixed;
+  @include fz-poem;
   @include max {
     text-align: justify;
   }
   a {
+    font-size: 106%;
     padding: 0 0.1em;
     text-decoration: none;
     @include font-en;
@@ -40,9 +45,35 @@
 
 .what-poem-text + .what-poem-text {
   @include max {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   @include min {
-    margin-top: 24px;
+    margin-top: 32px;
+  }
+}
+
+.what-footer {
+  display: flex;
+  @include max {
+    margin-top: 60px;
+    justify-content: center;
+  }
+  @include min {
+    margin-top: 60px;
+  }
+}
+
+.what-button {
+  color: $color-white;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  background-color: $color-black;
+  border-radius: 999em;
+  @include center-flex;
+  @include max {
+    padding: 22px 34px;
+  }
+  @include min {
+    padding: 28px 44px;
   }
 }

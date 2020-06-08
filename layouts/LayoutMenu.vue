@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       services: serviceConfig,
-      isVisible: false,
+      isReady: false,
       isSmall: false
     }
   },
@@ -37,6 +37,18 @@ export default {
     ...mapState(['isMenuOpen']),
     routeName() {
       return this.$route.name
+    },
+    isVisibleRoute() {
+      const ignoreRoutes = []
+
+      if (ignoreRoutes.includes(this.routeName)) {
+        return false
+      }
+
+      return true
+    },
+    isVisible() {
+      return this.isVisibleRoute && this.isReady
     }
   },
   watch: {
@@ -50,7 +62,7 @@ export default {
     this.handleResize()
     window.addEventListener('resize', () => this.handleResize())
 
-    this.isVisible = true
+    this.isReady = true
 
     if (this.routeName === 'index' && window.matchMedia('(max-width: 1176px)').matches) {
       setTimeout(() => {

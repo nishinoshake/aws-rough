@@ -97,11 +97,15 @@
 // Text
 // -----------------------------------------------------
 @mixin font-sans {
-  font-family: system-ui,-apple-system,sans-serif;
+  font-family: "YuGothic", sans-serif;
 }
 
-@mixin font-title {
-  font-family: system-ui,-apple-system,sans-serif;
+@mixin font-serif {
+  font-family: "YuMincho", "Yu Mincho", serif;
+}
+
+@mixin font-mixed {
+  font-family: 'Lato', "YuMincho", "Yu Mincho", serif;
 }
 
 @mixin font-en {
@@ -182,12 +186,12 @@
   }
 }
 
-@mixin fz-enorme {
+@mixin fz-poem {
   @include max {
-    font-size: 64px;
+    font-size: 20px;
   }
   @include min {
-    font-size: 128px;
+    font-size: 30px;
   }
 }
 

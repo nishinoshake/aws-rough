@@ -9,9 +9,6 @@ body {
 
 .container {
   position: relative;
-  @include max {
-    padding-bottom: 120px;
-  }
 }
 
 .main {
@@ -29,13 +26,25 @@ body {
 }
 
 .contents {
+  min-height: 100vh;
   min-width: 0;
   flex-grow: 1;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include max {
+    padding-bottom: 120px;
+  }
 }
 
 .page {
-  min-height: 100vh;
+  @include max {
+    padding-bottom: 120px;
+  }
+  @include min {
+    padding-bottom: $padding-bottom-pc;
+  }
 }
 
 .sp {

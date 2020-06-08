@@ -1,7 +1,14 @@
 <template>
   <div class="landing">
     <div class="landing-ball">
-      <button type="button" class="landing-ball-body" aria-label="本当の玉" @mouseenter="start" @click="start"></button>
+      <button
+        type="button"
+        class="landing-ball-body"
+        aria-label="本当の玉"
+        :style="`transform: scale(${scale})`"
+        @mouseenter="handleMouseenter"
+        @click="handleClick"
+      ></button>
       <p class="landing-ball-caption">{{ label }}</p>
     </div>
   </div>
@@ -17,23 +24,47 @@ export default {
   },
   data() {
     return {
-      label: '',
+      words: ['これは 玉 です'],
+      wordIndex: null,
       timer: null,
-      isStarted: false
+      isStarted: false,
+      scale: 1
+    }
+  },
+  computed: {
+    label() {
+      if (this.wordIndex !== null) {
+        return this.words[this.wordIndex]
+      }
+
+      return ''
+    }
+  },
+  beforeDestroy() {
+    if (this.timer) {
+      this.timer = null
     }
   },
   methods: {
     start() {
-      if (this.timer) {
-        clearTimeout(this.timer)
+      if (this.isStarted) {
+        return
       }
 
-      this.label = 'これは 玉 です'
+      this.isStarted = true
+      this.wordIndex = 0
 
-      this.timer = setTimeout(() => {
-        this.label = 'メニューからサービスを選択してください'
-        this.timer = null
-      }, 1800)
+      this.timer = setInterval(() => {
+        this.wordIndex = this.wordIndex === this.words.length - 1 ? 0 : this.wordIndex + 1
+      }, 2000)
+    },
+    handleMouseenter() {
+      this.start()
+    },
+    handleClick() {
+      this.start()
+
+      // this.scale = this.scale <= 0.1 ? 1 : this.scale - 0.05
     }
   }
 }

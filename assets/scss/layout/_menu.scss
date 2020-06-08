@@ -21,6 +21,7 @@
     left: 0;
     padding: $margin-pc 0;
     transform: translate3d(-12px, 0, 0);
+    transition: opacity 0.14s ease, transform 0s 0.2s $easeOutQuart, visibility 0s 0.2s;
     &.is-visible {
       visibility: visible;
       opacity: 1;

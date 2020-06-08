@@ -2,10 +2,13 @@
   <footer class="footer" id="footer">
     <ul class="footer-list">
       <li class="footer-item">
-        <nuxt-link to="/what-a-day/" class="footer-link">はじめてのAWS</nuxt-link>
+        <nuxt-link to="/" class="footer-link">HOME</nuxt-link>
       </li>
       <li class="footer-item">
-        <nuxt-link to="/about/" class="footer-link">このサイトについて</nuxt-link>
+        <nuxt-link to="/about/" class="footer-link">ABOUT</nuxt-link>
+      </li>
+      <li class="footer-item">
+        <nuxt-link to="/what-a-day/" class="footer-link">WHAT-A-DAY</nuxt-link>
       </li>
     </ul>
   </footer>

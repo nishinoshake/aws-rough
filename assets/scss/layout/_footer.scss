@@ -1,29 +1,28 @@
 @charset "utf-8";
 
 .footer {
-  margin-top: $padding-pc;
   display: flex;
   align-items: center;
+  line-height: 1;
   @include max {
     justify-content: center;
   }
   @include min {
-    padding-bottom: 28px;
+    padding-bottom: 30px;
   }
 }
 .footer-list {
   display: flex;
   align-items: center;
-  @include fz-s;
 }
 .footer-item + .footer-item {
   margin-left: 1.5em;
 }
 .footer-link {
-  text-decoration: underline;
+  @include font-en;
   @include min {
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     } 
   }
 }
