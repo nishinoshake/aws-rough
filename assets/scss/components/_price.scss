@@ -9,13 +9,15 @@
   &.mod-large {
     .price-unit {
       @include fz-s;
+      @include min {
+        margin-left: 6px;
+      }
     }
   }
 }
 
 .price-number {
   font-size: 180%;
-  font-weight: 700;
   @include font-en;
 }
 

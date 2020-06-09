@@ -1,7 +1,7 @@
 <template>
   <ServiceTemplate service-name="vpc">
     <template v-slot:calc>
-      <div class="section">
+      <div>
         <div class="service-inside" :data-test="serviceName" v-for="serviceName in ['natgw']" :key="serviceName">
           <ServiceTemplateLabel :label="service[serviceName].fullname" />
           <ServiceTemplateCalc :service="service[serviceName]" />

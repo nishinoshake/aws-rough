@@ -18,7 +18,6 @@
 
 .form-text-input {
   width: 100%;
-  padding: 10px;
   text-align: center;
   border: $width-border-input solid $color-muted;
   background-color: $color-white;
@@ -26,6 +25,12 @@
   @include fz-form;
   @include font-en;
   @include transition-collection;
+  @include max {
+    padding: 10px;
+  }
+  @include min {
+    padding: 12px;
+  }
   &:invalid {
     background-color: rgba($color-red, 0.2);
   }
@@ -60,7 +65,7 @@
       padding: 11px 16px 11px 0;
     }
     @include min {
-      padding: 12px 16px 11px 0;
+      padding: 14px 16px 13px 0;
     }
   }
   &:after {

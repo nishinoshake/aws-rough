@@ -100,12 +100,8 @@
   font-family: "YuGothic", sans-serif;
 }
 
-@mixin font-serif {
-  font-family: "YuMincho", "Yu Mincho", serif;
-}
-
 @mixin font-mixed {
-  font-family: 'Lato', "YuMincho", "Yu Mincho", serif;
+  font-family: 'Lato', "YuGothic", sans-serif;
 }
 
 @mixin font-en {
@@ -186,12 +182,21 @@
   }
 }
 
+@mixin fz-venti {
+  @include max {
+    font-size: 32px;
+  }
+  @include min {
+    font-size: 64px;
+  }
+}
+
 @mixin fz-poem {
   @include max {
     font-size: 20px;
   }
   @include min {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 

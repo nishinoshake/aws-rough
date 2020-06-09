@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
 
 export default {
@@ -24,8 +25,8 @@ export default {
   },
   data() {
     return {
-      words: ['これは 玉 です'],
-      wordIndex: null,
+      words: ['ガチャ'],
+      wordIndex: 0,
       timer: null,
       isStarted: false,
       scale: 1
@@ -38,6 +39,9 @@ export default {
       }
 
       return ''
+    },
+    serviceKeys() {
+      return serviceConfig.map(service => service.key)
     }
   },
   beforeDestroy() {
@@ -59,12 +63,14 @@ export default {
       }, 2000)
     },
     handleMouseenter() {
-      this.start()
+      // this.start()
     },
     handleClick() {
-      this.start()
-
+      // this.start()
       // this.scale = this.scale <= 0.1 ? 1 : this.scale - 0.05
+      const key = this.serviceKeys[Math.floor(Math.random() * this.serviceKeys.length)]
+
+      this.$router.push({ path: `/${key}/` })
     }
   }
 }

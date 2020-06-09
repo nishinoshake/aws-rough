@@ -7,11 +7,22 @@ body {
   @include fz-m;
 }
 
+.app {
+  position: relative;
+  @include max {
+    padding-bottom: 120px;
+  }
+}
+
 .container {
   position: relative;
+  @include min {
+    padding-bottom: $height-footer-pc; 
+  }
 }
 
 .main {
+  position: relative;
   @include max {
     padding: 0 $width-border-sp;
   }
@@ -21,29 +32,46 @@ body {
     align-items: flex-start;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 $padding-content-pc;
+    &:after {
+      content: "";
+      width: 1px;
+      height: calc(100% + #{$height-footer-pc});
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      background-color: $color-border;
+    }
   }
 }
 
 .contents {
-  min-height: 100vh;
   min-width: 0;
   flex-grow: 1;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   @include max {
-    padding-bottom: 120px;
-  }
-}
-
-.page {
-  @include max {
+    min-height: 100vh;
     padding-bottom: 120px;
   }
   @include min {
-    padding-bottom: $padding-bottom-pc;
+    min-height: calc(100vh - #{$height-footer-pc});
+    padding-top: $height-header-pc;
+    &:before,
+    &:after {
+      content: "";
+      width: 1px;
+      height: calc(100% + #{$height-footer-pc});
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      background-color: $color-border;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
   }
 }
 

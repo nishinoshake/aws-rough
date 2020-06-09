@@ -1,9 +1,2 @@
 .about {
-  @include max {
-    padding-top: 60px;
-  }
-  @include min {
-    max-width: 640px;
-    padding-top: 66px;
-  }
 }

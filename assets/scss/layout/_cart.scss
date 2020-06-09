@@ -2,22 +2,19 @@
 
 .cart {
   z-index: 100;
-  position: fixed;
-  right: 0;
   display: flex;
-  align-items: center;
-  border: 1px solid currentColor;
-  background-color: $color-black;
-  border-radius: 999em;
-  overflow: hidden;
   @include max {
+    position: fixed;
     right: 86px;
     bottom: $padding-sp;
+    align-items: center;
+    border-radius: 999em;
+    overflow: hidden;
+    border: 1px solid currentColor;
+    background-color: $color-black;
   }
   @include min {
-    bottom: 15px;
-    right: $padding-content-pc;
-    border-width: 2px;
+    border-left: 1px solid $color-border;
   }
   @include min($width-max) {
     right: calc(50% - #{$width-max / 2} + #{$padding-content-pc});
@@ -43,13 +40,15 @@
 
 .cart-detail {
   white-space: nowrap;
-  color: $color-white;
   @include fz-s;
   @include max {
     padding: 5px 16px;
+    color: $color-white;
   }
   @include min {
-    padding: 1px 16px;
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
   }
 }
 
@@ -65,7 +64,8 @@
   }
   @include min {
     padding: 14px 14px 14px 18px;
-    min-width: 210px;
+    min-width: 240px;
+    border-right: 1px solid $color-border;
   }
 }
 

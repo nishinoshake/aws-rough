@@ -29,11 +29,12 @@
 
 .detail-body {
   position: relative;
+  border-top: 1px solid $color-gray;
   @include max {
-    margin-top: 20px;
+    padding-top: 50px;
   }
   @include min {
-    margin-top: 30px;
+    padding: $padding-base-pc;
   }
 }
 
@@ -112,12 +113,18 @@
 
 .detail-empty {
   position: absolute;
-  top: 0;
-  left:0 ;
   pointer-events: none;
   @include font-en;
   @include fz-grande;
   @include lh-en;
+  @include max {
+    top: 30px;
+    left: 0;
+  }
+  @include min {
+    top: $padding-base-pc;
+    left: $padding-base-pc;
+  }
   span {
     display: block;
     opacity: 0;

@@ -1,12 +1,3 @@
-.what {
-  @include max {
-    padding-top: 60px;
-  }
-  @include min {
-    padding-top: 66px;
-  }
-}
-
 .what-poem-text {
   font-feature-settings: "palt";
   letter-spacing: 0.1em;

@@ -4,21 +4,14 @@
   width: 100%;
   display: block;
   position: relative;
-  border-top: $width-border-form dashed $color-muted;
-  &.mod-multiple {
-    tr {
-      @include min {
-        padding-left: 34px;
-      }
-    }
-  }
+  border-top: 1px solid $color-border;
   tbody {
     display: block;
   }
   tr {
     width: 100%;
     position: relative;
-    border-bottom: $width-border-form dashed $color-muted;
+    border-bottom: 1px solid $color-border;
     @include max {
       display: block;
       padding: $padding-sp 0;
@@ -26,6 +19,7 @@
     @include min {
       display: flex;
       align-items: flex-end;
+      padding-left: $padding-base-pc - 8px;
     }
   }
   td {
@@ -50,7 +44,7 @@
     }
     @include min {
       width: 8.5rem;
-      padding:24px 8px;
+      padding: 36px 8px;
       box-sizing: content-box;
       &.mod-minimal {
         width: 5rem;
@@ -66,7 +60,8 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-bottom: 32px;
+        padding-bottom: 38px;
+        padding-right: 36px;
       }
       &.mod-w-33 {
         width: 33.333%;
@@ -90,8 +85,8 @@
         left: 0;
       }
       @include min {
-        top: 57px;
-        left: 0;
+        top: 68px;
+        left: 18px;
       }
     }
   }

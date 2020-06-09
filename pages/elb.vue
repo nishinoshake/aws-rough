@@ -1,7 +1,7 @@
 <template>
   <ServiceTemplate service-name="elb">
     <template v-slot:calc>
-      <div class="section">
+      <div>
         <div
           class="service-inside"
           :data-test="serviceName"

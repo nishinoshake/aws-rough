@@ -9,10 +9,11 @@
   @include lh-1;
   @include radius;
   @include max {
-    min-height: $height-header-sp;
+    min-height: $height-heading-sp;
   }
   @include min {
-    min-height: $height-header-pc;
+    padding: 0 $padding-base-pc;
+    min-height: $height-heading-pc;
   }
   &-ja {
     font-weight: 400;
@@ -27,14 +28,14 @@
   letter-spacing: 0.08em;
   font-weight: 700;
   font-feature-settings: "palt";
+  border-bottom: 1px dashed $color-border;
   @include fz-l;
   @include lh-min;
   @include max {
-    padding: 16px 0;
+    padding: 36px 0;
   }
   @include min {
-    padding: 20px 0;
-    margin-bottom: 4px;
+    padding: $padding-base-pc;
   }
   &-large {
     // @include font-en;

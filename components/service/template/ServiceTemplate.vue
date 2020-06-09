@@ -6,7 +6,7 @@
       <ServiceTemplateCalc v-else :service="service" />
     </div>
     <div class="service-body">
-      <section class="section">
+      <section class="accordion-list">
         <ServicePartsAccordion v-if="hasHelp" title="入力項目の補足">
           <slot name="help" />
         </ServicePartsAccordion>
@@ -24,11 +24,9 @@
       </section>
 
       <section class="section">
-        <h2 class="title-section" id="zakkuri">
-          <a href="#zakkuri"
-            ><span class="title-section-large">{{ service.name }}</span
-            >についてざっくり</a
-          >
+        <h2 class="title-section">
+          <span class="title-section-large">{{ service.name }}</span
+          >についてざっくり
         </h2>
         <div class="service-content">
           <slot name="zakuri" />
@@ -36,11 +34,9 @@
       </section>
 
       <section class="section">
-        <h2 class="title-section" id="code">
-          <a href="#code"
-            ><span class="title-section-large">{{ service.name }}</span
-            >の料金計算式をざっくり</a
-          >
+        <h2 class="title-section">
+          <span class="title-section-large">{{ service.name }}</span
+          >の料金計算式をざっくり
         </h2>
         <div class="service-content">
           <ServicePartsCode :service-name="serviceName" />

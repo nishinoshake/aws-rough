@@ -14,20 +14,9 @@
     z-index: 10;
     flex: none;
     display: flex;
-    opacity: 0;
-    visibility: hidden;
     top: 0;
-    top: calc(50% - var(--menu-height) / 2);
     left: 0;
-    padding: $margin-pc 0;
-    transform: translate3d(-12px, 0, 0);
-    transition: opacity 0.14s ease, transform 0s 0.2s $easeOutQuart, visibility 0s 0.2s;
-    &.is-visible {
-      visibility: visible;
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-      transition: opacity 0.14s ease, transform 0.3s $easeOutQuart, visibility 0s;
-    }
+    padding: ($height-header-pc + 22px) 0 30px;
     &.is-small {
       position: static;
     }
@@ -142,10 +131,11 @@
     }
   }
   @include max {
-    padding: 8px;
+    padding: 12px;
+    @include fz-l;
   }
   @include min {
-    padding: 8px 0;
+    padding: 8px 30px;
     &.mod-orange:hover {
       color: $color-orange;
     }

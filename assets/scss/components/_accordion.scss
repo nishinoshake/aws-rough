@@ -1,14 +1,17 @@
 @charset "utf-8";
 
-.accordion-item {
-  border: 1px solid $color-dark-gray;
-  transition: border-radius 0.32s $easeOutQuart;
+.accordion-list {
+  border-bottom: 1px solid $color-border;
   @include max {
-    border-radius: 30px;
+    padding: 60px 0;
   }
   @include min {
-    border-radius: 45px;
+    padding: 120px 0;
   }
+}
+.accordion-item {
+  border-bottom: 1px solid $color-dark-gray;
+  transition: border-radius 0.32s $easeOutQuart;
   &.is-active {
     .accordion-inside {
       opacity: 1;
@@ -17,13 +20,8 @@
       transform: translateY(5px) rotate(-45deg);
     }
   }
-  &:nth-child(n+2) {
-    @include max {
-      margin-top: 24px;
-    }
-    @include min {
-      margin-top: 20px;
-    }
+  &:first-child {
+    border-top: 1px solid $color-dark-gray;
   }
 }
 
@@ -35,10 +33,10 @@
   @include lh-1;
   @include transition-fade;
   @include max {
-    padding: 22px 22px 22px 24px;
+    padding: 22px 22px 22px 0;
   }
   @include min {
-    padding: 36px 48px;
+    padding: 52px $padding-base-pc;
     &:hover {
       opacity: 0.7;
     }
@@ -60,7 +58,7 @@
       width: 10px;
       height: 10px;
       top: calc(50% - 8px);
-      right: 32px;
+      right: 40px;
     }
   }
 }
@@ -79,10 +77,10 @@
   will-change: opacity;
   @include fz-s;
   @include max {
-    padding: $padding-sp $padding-sp;
+    padding: $padding-sp 0;
   }
   @include min {
-    padding: 48px;
+    padding: $padding-base-pc;
   }
   .text {
     text-align: justify;

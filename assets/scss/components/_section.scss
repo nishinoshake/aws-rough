@@ -2,12 +2,7 @@
 
 .section {
   + .section {
-    @include max {
-      margin-top: 60px;
-    }
-    @include min {
-      margin-top: $padding-pc;
-    }
+    border-top: 1px solid $color-border;
   }
 }
 
