@@ -7,7 +7,7 @@
           <ServicePartsPrice :price="total" mod="large" />
         </div>
       </div>
-      <span class="cart-detail">内訳</span>
+      <span class="cart-detail"><span class="sp">内訳</span><span class="pc">料金内訳を見る</span></span>
     </nuxt-link>
   </transition>
 </template>

@@ -2,12 +2,6 @@
   position: relative;
   @include fz-s;
   @include lh-0;
-  @include max {
-    margin: 22px 0;
-  }
-  @include min {
-    margin: 32px #{-$width-ball-pc -$padding-pc} 32px 0;
-  }
   pre {
     display: block;
     padding: 0;

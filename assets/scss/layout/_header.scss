@@ -6,7 +6,9 @@
   @include max {
     align-items: center;
     justify-content: center;
-    margin-bottom: 60px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    border-top: 1px solid $color-gray;
   }
   @include min {
     width: 100%;
@@ -26,7 +28,6 @@
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
-    padding-right: $width-menu-pc; 
   }
 }
 .header-list {
@@ -40,14 +41,13 @@
   }
   + .header-item {
     @include max {
-      margin-left: 1.5em;
+      margin-left: 3em;
     }
   }
 }
 .header-link {
   display: block;
   @include font-en;
-  @include fz-sm;
   @include min {
     padding: 16px;
     &:hover {

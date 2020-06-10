@@ -1,75 +1,63 @@
 <template>
   <div class="landing">
-    <div class="landing-ball">
-      <button
-        type="button"
-        class="landing-ball-body"
-        aria-label="本当の玉"
-        :style="`transform: scale(${scale})`"
-        @mouseenter="handleMouseenter"
-        @click="handleClick"
-      ></button>
-      <p class="landing-ball-caption">{{ label }}</p>
-    </div>
+    <section class="section">
+      <h2 class="title-section">料金が気になるサービスはありますか？</h2>
+      <div class="service-content">
+        <ul class="landing-service-list">
+          <li v-for="service in services" :key="service.key" class="landing-service-item">
+            <nuxt-link
+              :class="`landing-service-link mod-${service.color}`"
+              :to="service.href"
+              @click.native="handleClick"
+            >
+              <ServicePartsIcon :name="service.key" class="landing-service-icon" />
+              <span class="landing-service-body">
+                <span class="landing-service-name">{{ service.name }}</span>
+                <span class="landing-service-desc">{{ service.description }}</span>
+              </span>
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="title-section">適当なページに飛ぶガチャ</h2>
+      <div class="service-content">
+        <div class="landing-ball-frame">
+          <button type="button" class="landing-ball" @mouseenter="handleMouseenter" @click="handleClick">
+            <span class="landing-ball-body"></span>
+            <p class="landing-ball-caption">ガチャ</p>
+          </button>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
+import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 
 export default {
   name: 'LandingIndex',
+  components: { ServicePartsIcon },
   head() {
     return meta.index
   },
   data() {
     return {
-      words: ['ガチャ'],
-      wordIndex: 0,
-      timer: null,
-      isStarted: false,
-      scale: 1
+      services: serviceConfig
     }
   },
   computed: {
-    label() {
-      if (this.wordIndex !== null) {
-        return this.words[this.wordIndex]
-      }
-
-      return ''
-    },
     serviceKeys() {
       return serviceConfig.map(service => service.key)
     }
   },
-  beforeDestroy() {
-    if (this.timer) {
-      this.timer = null
-    }
-  },
   methods: {
-    start() {
-      if (this.isStarted) {
-        return
-      }
-
-      this.isStarted = true
-      this.wordIndex = 0
-
-      this.timer = setInterval(() => {
-        this.wordIndex = this.wordIndex === this.words.length - 1 ? 0 : this.wordIndex + 1
-      }, 2000)
-    },
-    handleMouseenter() {
-      // this.start()
-    },
     handleClick() {
-      // this.start()
-      // this.scale = this.scale <= 0.1 ? 1 : this.scale - 0.05
       const key = this.serviceKeys[Math.floor(Math.random() * this.serviceKeys.length)]
-
       this.$router.push({ path: `/${key}/` })
     }
   }

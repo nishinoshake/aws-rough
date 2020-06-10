@@ -2,21 +2,16 @@
 
 .service-header {
   @include max {
-    // margin-bottom: 80px;
+    margin-bottom: 60px;
   }
   @include min {
-    // margin-bottom: 140px;
+    margin-bottom: 120px;
   }
 }
 
 .service-body {
   overflow: hidden;
   background-color: $color-white;
-  // @include min {
-  //   width: 100%;
-  //   display: flex;
-  //   align-items: flex-start;
-  // }
 }
 
 .service-main {
@@ -83,7 +78,7 @@
 
 .service-content {
   @include max {
-    padding: 30px 0;
+    padding: $padding-base-sp * 1.4 $padding-base-sp;
   }
   @include min {
     padding: $padding-base-pc;
@@ -122,7 +117,7 @@
   @include fz-l;
   @include lh-min;
   @include max {
-    padding: 16px 0;
+    padding: 20px $padding-base-sp;
   }
   @include min {
     padding: 24px $padding-base-pc;

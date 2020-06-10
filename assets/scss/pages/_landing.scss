@@ -1,34 +1,70 @@
 @charset "utf-8";
 
-.landing {
-  width: 100%;
+
+.landing-service-list {
   display: flex;
-  justify-content: center;
-  position: relative;
-  background-color: $color-white;
+  flex-wrap: wrap;
+  @include min {
+    margin: -8px 0;
+  }
+}
+.landing-service-item {
   @include max {
-    align-items: flex-start;
-    padding-top: 80px;
+    width: 50%;
   }
   @include min {
-    height: calc(100vh - #{$height-header-pc} - #{$height-footer-pc});
-    align-items: center;
+    width: 25%;
   }
 }
-
-.landing-ball {
-  width: 100%;
+.landing-service-link {
+  display: flex;
+  align-items: center;
+  @include max {
+    padding: 16px 0;
+  }
+  @include min {
+    padding: 18px 0;
+  }
+}
+.landing-service-icon {
+  @include max {
+    width: 50px;
+    margin-right: 6px;
+  }
+  @include min {
+    width: 60px;
+    margin-right: 8px;
+  }
+}
+.landing-service-name {
+  display: block;
+  @include font-en;
+  @include lh-1;
+  @include max {
+    margin-bottom: 6px;
+  }
+  @include min {
+    margin-bottom: 10px;
+  }
+}
+.landing-service-desc {
+  display: block;
+  color: $color-muted;
+  @include fz-xs;
+  @include lh-1;
+}
+.landing-ball-frame {
   display: flex;
   justify-content: center;
-  position: relative;
+  @include max {
+    padding: 50px 0 70px;
+  }
+  @include min {
+    padding: 50px 0 80px;
+  }
 }
-
-.landing-ball-body {
-  margin: 0 auto;
-  border-radius: 50%;
-  background: linear-gradient(to right, #000, #333);
-  transition: transform 0.6s $easeOutQuart;
-  animation: ball-rotation 10s linear infinite;
+.landing-ball {
+  position: relative;
   @include max {
     width: 220px;
     height: 220px;
@@ -36,19 +72,37 @@
   @include min {
     width: 300px;
     height: 300px;
+    &:hover {
+      .landing-ball-caption {
+        animation-play-state: running;
+      }
+    }
   }
 }
+.landing-ball-body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(to right, #000, #333);
+  transition: transform 0.6s $easeOutQuart;
+  animation: ball-rotation 10s linear infinite;
+}
 .landing-ball-caption {
-  text-align: center;
+  width: 130%;
+  height: 130%;
   position: absolute;
-  white-space: nowrap;
-  @include fz-l;
-  @include max {
-    top: calc(100% + 20px);
-  }
-  @include min {
-    top: calc(100% + 20px);
-  }
+  top: -15%;
+  left: -15%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  animation: ball-rotation 0.24s linear infinite;
+  animation-play-state: paused;
+  will-change: transform;
+  @include fz-ml;
+  @include lh-1;
 }
 
 @keyframes ball-rotation {

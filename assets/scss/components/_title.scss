@@ -10,6 +10,7 @@
   @include radius;
   @include max {
     min-height: $height-heading-sp;
+    padding: 0 $padding-base-sp;
   }
   @include min {
     padding: 0 $padding-base-pc;
@@ -26,23 +27,15 @@
   display: flex;
   position: relative;
   letter-spacing: 0.08em;
-  font-weight: 700;
   font-feature-settings: "palt";
   border-bottom: 1px dashed $color-border;
   @include fz-l;
   @include lh-min;
   @include max {
-    padding: 36px 0;
+    padding: 36px $padding-base-sp;
   }
   @include min {
     padding: $padding-base-pc;
-  }
-  &-large {
-    // @include font-en;
-    // @include min {
-    //   padding-right: 0.1em;
-    //   font-size: 110%;
-    // }
   }
   a {
     position: relative;

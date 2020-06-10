@@ -25,6 +25,7 @@
   td {
     @include max {
       display: block;
+      padding: 0 $padding-base-sp;
       + td {
         margin-top: $margin-sp;
         &.mod-price {
@@ -82,7 +83,7 @@
         width: 30px;
         height: 30px;
         bottom: 24px;
-        left: 0;
+        left: $padding-base-sp;
       }
       @include min {
         top: 68px;

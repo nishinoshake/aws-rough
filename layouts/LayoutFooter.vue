@@ -1,6 +1,9 @@
 <template>
   <footer class="footer" id="footer">
     <div class="footer-container">
+      <p class="footer-link">
+        <a href="https://calculator.aws" target="_blank" rel="noopener">公式のやつ</a>
+      </p>
       <div class="footer-inner">
         <div class="footer-list">
           <p class="footer-item" v-for="n of 2" :key="n">

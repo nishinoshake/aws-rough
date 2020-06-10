@@ -31,7 +31,7 @@
   position: relative;
   border-top: 1px solid $color-gray;
   @include max {
-    padding-top: 50px;
+    padding: 50px $padding-base-sp;
   }
   @include min {
     padding: $padding-base-pc;
@@ -119,7 +119,7 @@
   @include lh-en;
   @include max {
     top: 30px;
-    left: 0;
+    left: $padding-base-sp;
   }
   @include min {
     top: $padding-base-pc;

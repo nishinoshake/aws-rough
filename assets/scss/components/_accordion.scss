@@ -1,13 +1,7 @@
 @charset "utf-8";
 
 .accordion-list {
-  border-bottom: 1px solid $color-border;
-  @include max {
-    padding: 60px 0;
-  }
-  @include min {
-    padding: 120px 0;
-  }
+  background-color: $color-snow;
 }
 .accordion-item {
   border-bottom: 1px solid $color-dark-gray;
@@ -30,10 +24,12 @@
   display: block;
   position: relative;
   text-align: left;
+  color: $color-font;
+  @include fz-ml;
   @include lh-1;
   @include transition-fade;
   @include max {
-    padding: 22px 22px 22px 0;
+    padding: $padding-base-sp;
   }
   @include min {
     padding: 52px $padding-base-pc;
@@ -72,12 +68,13 @@
 .accordion-inside {
   position: relative;
   opacity: 0;
+  background-color: $color-white;
   border-top: $width-border-input dashed $color-dark-gray;
   transition: opacity 0.1s linear;
   will-change: opacity;
   @include fz-s;
   @include max {
-    padding: $padding-sp 0;
+    padding: $padding-base-sp * 1.4 $padding-base-sp;
   }
   @include min {
     padding: $padding-base-pc;
