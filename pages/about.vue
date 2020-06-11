@@ -1,11 +1,10 @@
 <template>
   <div class="about">
     <section class="section">
-      <h2 class="title-section">AWSの料金を、日本円でざっくり</h2>
+      <h2 class="title-section">このサイトについて</h2>
       <div class="service-content">
         <div class="section-child">
           <p class="text">AWSの料金、ややこしいですよね。</p>
-
           <p class="text">
             従量課金と多様なオプションがあいまって、料金を計算するときに考慮すべき点が多いのが悩みどころですが、重要なパラメータは意外と限られています。そこに絞って、ざっくり料金を計算できるサイトを作りました。
           </p>

@@ -1,7 +1,15 @@
+.what-poem {
+  @include max {
+    padding: $padding-base-sp $padding-base-sp ($padding-base-sp * 2);
+  }
+  @include min {
+    padding: $padding-base-pc $padding-base-pc ($padding-base-pc * 2);
+  }
+}
+
 .what-poem-text {
   font-feature-settings: "palt";
   letter-spacing: 0.1em;
-  @include font-mixed;
   @include fz-poem;
   @include max {
     text-align: justify;
@@ -58,7 +66,7 @@
   color: $color-white;
   line-height: 1;
   letter-spacing: 0.06em;
-  background-color: $color-black;
+  background-color: $color-button;
   border-radius: 999em;
   @include center-flex;
   @include max {

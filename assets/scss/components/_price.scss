@@ -17,16 +17,16 @@
 }
 
 .price-number {
-  font-size: 180%;
-  @include font-en;
+  font-size: 170%;
+  @include font-source;
 }
 
 .price-unit {
   @include max {
-    margin-left: 4px;
+    margin-left: 6px;
   }
   @include min {
-    margin-left: 4px;
+    margin-left: 6px;
   }
 }
 

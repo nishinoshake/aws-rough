@@ -16,7 +16,7 @@
     display: flex;
     top: 0;
     left: 0;
-    padding: ($height-header-pc + 22px) 0 30px;
+    padding-top: $height-header-pc;
     &.is-small {
       position: static;
     }
@@ -31,7 +31,7 @@
     z-index: 1000;
     bottom: $padding-sp;
     right: $padding-sp;
-    background-color: $color-black;
+    background-color: $color-button;
     border-radius: 50%;
     @include center-flex;
   }
@@ -91,15 +91,15 @@
     z-index: 900;
     visibility: hidden;
     background-color: $color-white;
-    border-top: 1px solid $color-dark-gray;
+    border-top: 1px solid $color-border;
     padding: 22px 70px 22px 22px;
     transform: translateY(100%);
     will-change: transform;
     transition: transform 0.3s $easeOutQuart, visibility 0s 0.3s;
   }
   @include min {
+    width: 100%;
     position: relative;
-    min-width: 160px;
   }
 }
 
@@ -107,9 +107,17 @@
   @include max {
     display: flex;
     flex-wrap: wrap;
+    margin: -7px;
   }
 }
-
+.menu-item {
+  @include max {
+    padding: 7px;
+  }
+  @include min {
+    border-bottom: 1px solid $color-border;
+  }
+}
 .menu-link {
   display: flex;
   align-items: center;
@@ -117,36 +125,18 @@
   @include font-en;
   @include lh-1;
   &.is-active {
-    &.mod-orange {
-      color: $color-orange;
-    }
-    &.mod-blue {
-      color: $color-blue;
-    }
-    &.mod-red {
-      color: $color-red;
-    }
-    &.mod-beige {
-      color: $color-beige;
-    }
+    color: $color-white;
+    background-color: $color-button;
   }
   @include max {
     padding: 12px;
     @include fz-l;
   }
   @include min {
-    padding: 8px 30px;
-    &.mod-orange:hover {
-      color: $color-orange;
-    }
-    &.mod-blue:hover {
-      color: $color-blue;
-    }
-    &.mod-red:hover {
-      color: $color-red;
-    }
-    &.mod-beige:hover {
-      color: $color-beige;
+    padding: 12px 20px;
+    &:hover {
+      color: $color-white;
+      background-color: $color-button;
     }
   }
   svg {

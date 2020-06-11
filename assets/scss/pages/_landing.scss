@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   @include min {
-    margin: -8px 0;
+    margin: -12px -18px;
   }
 }
 .landing-service-item {
@@ -17,13 +17,25 @@
   }
 }
 .landing-service-link {
-  display: flex;
-  align-items: center;
+  display: block;
   @include max {
     padding: 16px 0;
   }
   @include min {
-    padding: 18px 0;
+    padding: 6px 0;
+    &:hover {
+      .landing-service-inner {
+        border-color: $color-border;
+      }
+    }
+  }
+}
+.landing-service-inner {
+  display: flex;
+  align-items: center;
+  @include min {
+    padding: 12px;
+    border: 1px solid transparent;
   }
 }
 .landing-service-icon {

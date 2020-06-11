@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall, 'is-visible': isVisible }]" ref="menu">
+  <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
     <div class="menu-frame">
       <ul class="menu-list">
         <li v-for="service in services" :key="service.key" class="menu-item">
@@ -28,7 +28,6 @@ export default {
   data() {
     return {
       services: serviceConfig,
-      isReady: false,
       isSmall: false
     }
   },
@@ -36,18 +35,6 @@ export default {
     ...mapState(['isMenuOpen']),
     routeName() {
       return this.$route.name
-    },
-    isVisibleRoute() {
-      const ignoreRoutes = []
-
-      if (ignoreRoutes.includes(this.routeName)) {
-        return false
-      }
-
-      return true
-    },
-    isVisible() {
-      return this.isVisibleRoute && this.isReady
     }
   },
   watch: {
@@ -60,14 +47,6 @@ export default {
   mounted() {
     this.handleResize()
     window.addEventListener('resize', () => this.handleResize())
-
-    this.isReady = true
-
-    if (this.routeName === 'index' && window.matchMedia('(max-width: 1176px)').matches) {
-      setTimeout(() => {
-        this.SHOW_MENU()
-      }, 800)
-    }
   },
   methods: {
     ...mapMutations(['SHOW_MENU', 'HIDE_MENU', 'TOGGLE_MENU']),

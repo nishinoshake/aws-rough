@@ -93,19 +93,26 @@
   border-radius: 0;
 }
 
+@mixin dot-border {
+  background-image: linear-gradient(to right, $color-border, $color-border 50%, transparent 50%, transparent 100%);
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 20px 1px;
+}
+
 // -----------------------------------------------------
 // Text
 // -----------------------------------------------------
 @mixin font-sans {
-  font-family: "YuGothic", sans-serif;
+  font-family: 'Inter', "YuGothic", sans-serif;
 }
 
 @mixin font-mixed {
-  font-family: 'Lato', "YuGothic", sans-serif;
+  font-family: 'Inter', "YuGothic", sans-serif;
 }
 
 @mixin font-en {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @mixin font-source {
@@ -202,10 +209,19 @@
 
 @mixin fz-poem {
   @include max {
+    font-size: 16px;
+  }
+  @include min {
+    font-size: 20px;
+  }
+}
+
+@mixin fz-detail {
+  @include max {
     font-size: 20px;
   }
   @include min {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 

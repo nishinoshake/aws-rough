@@ -6,9 +6,10 @@
   @include max {
     align-items: center;
     justify-content: center;
-    padding-top: 40px;
-    margin-bottom: 30px;
-    border-top: 1px solid $color-gray;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
   }
   @include min {
     width: 100%;
@@ -16,8 +17,6 @@
     z-index: 20;
     top: 0;
     left: 0;
-    background-color: $color-white;
-    border-bottom: 1px solid $color-border;
   }
 }
 .header-inner {
@@ -28,6 +27,8 @@
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-border;
   }
 }
 .header-list {
@@ -36,23 +37,31 @@
   line-height: 1;
 }
 .header-item {
+  @include max {
+    margin: 0 1.5em;
+    &:nth-child(1) {
+      order: 2;
+    }
+    &:nth-child(2) {
+      order: 1;
+    }
+    &:nth-child(3) {
+      order: 3;
+    }
+  }
   @include min {
     border-right: 1px solid $color-border;
-  }
-  + .header-item {
-    @include max {
-      margin-left: 3em;
-    }
   }
 }
 .header-link {
   display: block;
   @include font-en;
+  @include fz-s;
   @include min {
-    padding: 16px;
+    padding: 18px 22px;
     &:hover {
       color: $color-white;
-      background-color: $color-black;
+      background-color: $color-button;
     }
   }
 }

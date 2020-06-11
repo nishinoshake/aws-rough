@@ -11,7 +11,7 @@
     border-radius: 999em;
     overflow: hidden;
     border: 1px solid currentColor;
-    background-color: $color-black;
+    background-color: $color-button;
   }
   @include min {
     border-left: 1px solid $color-border;
@@ -21,7 +21,7 @@
     &:hover {
       .cart-detail {
         color: $color-white;
-        background-color: $color-black;
+        background-color: $color-button;
       }
     }
   }
@@ -65,8 +65,8 @@
     padding: 15px 15px 15px 18px;
   }
   @include min {
-    padding: 14px 14px 14px 18px;
-    min-width: 240px;
+    min-width: 260px;
+    padding: 14px 22px 14px 22px;
     border-right: 1px solid $color-border;
   }
 }

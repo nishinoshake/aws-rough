@@ -1,21 +1,27 @@
 @charset "utf-8";
 
 .accordion-list {
-  background-color: $color-snow;
+  @include max {
+    margin: 60px 0;
+  }
+  @include min {
+    margin: 120px 0;
+  }
 }
+
 .accordion-item {
-  border-bottom: 1px solid $color-dark-gray;
-  transition: border-radius 0.32s $easeOutQuart;
+  border-bottom: 1px solid $color-border;
+  transition: border-radius 0.24s $easeOutQuart;
   &.is-active {
     .accordion-inside {
       opacity: 1;
     }
-    .accordion-title:after {
-      transform: translateY(5px) rotate(-45deg);
+    .accordion-title-icon {
+      transform: rotate(180deg);
     }
   }
   &:first-child {
-    border-top: 1px solid $color-dark-gray;
+    border-top: 1px solid $color-border;
   }
 }
 
@@ -34,27 +40,43 @@
   @include min {
     padding: 52px $padding-base-pc;
     &:hover {
-      opacity: 0.7;
+      background-color: $color-snow;
     }
+  }
+}
+.accordion-title-icon {
+  position: absolute;
+  border: 1px solid $color-border;
+  border-radius: 50%;
+  transition: transform 0.32s $easeOutQuart;
+  @include max {
+    width: 28px;
+    height: 28px;
+    top: calc(50% - 14px);
+    right: 24px;
+  }
+  @include min {
+    width: 32px;
+    height: 32px;
+    top: calc(50% - 16px);
+    right: $padding-base-pc;
   }
   &:after {
     content: "";
     position: absolute;
-    border-top: 1px solid currentColor;
+    bottom: 50%;
+    right: 50%;
+    border-bottom: 1px solid currentColor;
     border-right: 1px solid currentColor;
-    transform: rotate(135deg);
-    transition: transform 0.32s $easeOutQuart;
+    transform: translateY(50%) rotate(45deg);
+    transform-origin: right bottom;
     @include max {
-      width: 8px;
-      height: 8px;
-      top: calc(50% - 6px);
-      right: 24px;
+      width: 6px;
+      height: 6px;
     }
     @include min {
-      width: 10px;
-      height: 10px;
-      top: calc(50% - 8px);
-      right: 40px;
+      width: 6px;
+      height: 6px;
     }
   }
 }
@@ -68,8 +90,7 @@
 .accordion-inside {
   position: relative;
   opacity: 0;
-  background-color: $color-white;
-  border-top: $width-border-input dashed $color-dark-gray;
+  border-top: $width-border-input dashed $color-border;
   transition: opacity 0.1s linear;
   will-change: opacity;
   @include fz-s;

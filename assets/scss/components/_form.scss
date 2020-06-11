@@ -19,7 +19,7 @@
 .form-text-input {
   width: 100%;
   text-align: center;
-  border: $width-border-input solid $color-muted;
+  border: $width-border-input solid $color-border-dark;
   background-color: $color-white;
   border-radius: $radius;
   @include fz-form;
@@ -35,7 +35,7 @@
     background-color: rgba($color-red, 0.2);
   }
   &:focus {
-    border-color: $color-black;
+    border-color: $color-button;
   }
 }
 
@@ -45,7 +45,7 @@
   position: relative;
   display: block;
   background-color: $color-white;
-  border: $width-border-input solid $color-muted;
+  border: $width-border-input solid $color-border-dark;
   border-radius: $radius;
   select {
     opacity: 0;
@@ -74,8 +74,8 @@
     height: 8px;
     top: calc(50% - 8px);
     position: absolute;
-    border-bottom: $width-border-input solid $color-muted;
-    border-right: $width-border-input solid $color-muted;
+    border-bottom: $width-border-input solid $color-border-dark;
+    border-right: $width-border-input solid $color-border-dark;
     transform: rotate(45deg);
     pointer-events: none;
     @include max {

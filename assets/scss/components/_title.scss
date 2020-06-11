@@ -3,7 +3,6 @@
 .title-page {
   display: flex;
   align-items: center;
-  color: $color-black;
   @include font-en;
   @include fz-grande;
   @include lh-1;
@@ -23,12 +22,20 @@
   }
 }
 
+.title-page-fullname {
+  color: rgba($color-dark, 0.1);
+  padding-left: 0.3em;
+  @include max {
+    display: none;
+  }
+}
+
 .title-section {
   display: flex;
   position: relative;
   letter-spacing: 0.08em;
   font-feature-settings: "palt";
-  border-bottom: 1px dashed $color-border;
+  @include dot-border;
   @include fz-l;
   @include lh-min;
   @include max {
@@ -39,16 +46,6 @@
   }
   a {
     position: relative;
-  }
-}
-
-.title-page-fullname {
-  color: rgba($color-black, 0.1);
-  @include max {
-    display: none;
-  }
-  @include min {
-    padding-left: 0.2em;
   }
 }
 

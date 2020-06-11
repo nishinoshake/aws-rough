@@ -2,7 +2,7 @@
 
 body {
   color: $color-font;
-  text-size-adjust: 100%; 
+  text-size-adjust: 100%;
   @include font-sans;
   @include lh-base;
   @include fz-m;
@@ -30,6 +30,7 @@ body {
     align-items: flex-start;
     margin-left: auto;
     margin-right: auto;
+    background-color: $color-white;
     &:after {
       content: "";
       width: 1px;

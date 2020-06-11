@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   color: $color-white;
-  background-color: $color-black;
+  background-color: $color-button;
   border-radius: 999em;
   cursor: pointer;
   @include font-sans;
@@ -29,7 +29,7 @@
 
 .detail-body {
   position: relative;
-  border-top: 1px solid $color-gray;
+  border-top: 1px solid $color-border;
   @include max {
     padding: 50px $padding-base-sp;
   }
@@ -84,7 +84,7 @@
 .detail-price-name {
   margin-right: 20px;
   @include font-en;
-  @include fz-l;
+  @include fz-detail;
   @include lh-1;
   @include min {
     margin-right: 30px;
@@ -115,7 +115,7 @@
   position: absolute;
   pointer-events: none;
   @include font-en;
-  @include fz-grande;
+  @include fz-xl;
   @include lh-en;
   @include max {
     top: 30px;

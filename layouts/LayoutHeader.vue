@@ -3,15 +3,13 @@
     <div class="header-inner">
       <ul class="header-list">
         <li class="header-item">
-          <nuxt-link to="/" class="header-link">HOME</nuxt-link>
+          <nuxt-link to="/" class="header-link">ざっくりAWS</nuxt-link>
         </li>
         <li class="header-item">
           <nuxt-link to="/about/" class="header-link">ABOUT</nuxt-link>
         </li>
         <li class="header-item">
-          <a href="https://github.com/nishinoshake/aws-rough" target="_blank" rel="noopener" class="header-link"
-            >GitHub</a
-          >
+          <nuxt-link to="/what-a-day/" class="header-link">STORY</nuxt-link>
         </li>
       </ul>
       <LayoutCart :total="$store.state.total.jpy" />

@@ -1,99 +1,31 @@
 @charset "utf-8";
 
 .footer {
+  @include max {
+    display: none;
+  }
   @include min {
     width: 100%;
     position: absolute;
     bottom: 1px;
     left: 0;
     height: $height-footer-pc;
-    background-color: $color-white;
-    border-top: 1px solid $color-border;
   }
 }
 .footer-container {
   @include min {
     max-width: $width-max;
-    display: flex;
-    flex-direction: row-reverse;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    height: 100%;
+    padding-right: $width-menu-pc;
   }
 }
-.footer-link {
-  @include lh-1;
-  @include max {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 40px;
-  }
-  @include min {
-    width: $width-menu-pc;
-    flex: none;
-    @include fz-s;
-    a {
-      width: 100%;
-      height: 100%;
-      @include center-flex;
-      &:hover {
-        color: $color-white;
-        background-color: $color-black;
-      }
-    }
-  }
-}
-.footer-inner {
-  overflow: hidden;
-  // line-height: 0;
-  @include max {
-    border-top: 1px solid $color-border;
-    border-bottom: 1px solid $color-border;
-  }
-  @include min {
-    flex-grow: 1;
-  }
-}
-.footer-list {
-  display: inline-flex;
-  will-change: transform;
-  @include max {
-    animation: footer-ticker 200s linear infinite;
-  }
-  @include min {
-    animation: footer-ticker 200s linear infinite;
-  }
-}
-.footer-item {
-  white-space: nowrap;
-  line-height: 1;
-  letter-spacing: 0.12em;
-  font-feature-settings: "palt";
-  padding: 16px 0;
-  a {
-    display: inline-block;
-    &.mod-orange {
-      color: $color-orange;
-    }
-    &.mod-blue {
-      color: $color-blue;
-    }
-    &.mod-red {
-      color: $color-red;
-    }
-    &.mod-beige {
-      color: $color-beige;
-    }
-    &.mod-serverless {
-      color: $color-serverless;
-    }
-  }
-}
-
-@keyframes footer-ticker {
-  0% {
-    transform: translate3d(0 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
-  }
+.footer-label {
+  width: 100%;
+  height: 100%;
+  color: $color-muted;
+  background-color: $color-white;
+  border-top: 1px solid $color-border;
+  @include center-flex;
+  @include fz-s;
 }

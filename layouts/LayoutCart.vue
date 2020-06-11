@@ -4,7 +4,7 @@
       <div class="cart-total">
         <div class="cart-total-inner">
           <span class="cart-label">合計</span>
-          <ServicePartsPrice :price="total" mod="large" />
+          <ServicePartsPrice :price="total" />
         </div>
       </div>
       <span class="cart-detail"><span class="sp">内訳</span><span class="pc">料金内訳を見る</span></span>
