@@ -5,11 +5,7 @@
       <div class="service-content">
         <ul class="landing-service-list">
           <li v-for="service in services" :key="service.key" class="landing-service-item">
-            <nuxt-link
-              :class="`landing-service-link mod-${service.color}`"
-              :to="service.href"
-              @click.native="handleClick"
-            >
+            <nuxt-link :class="`landing-service-link mod-${service.color}`" :to="service.href">
               <ServicePartsIcon :name="service.key" class="landing-service-icon" />
               <span class="landing-service-body">
                 <span class="landing-service-name">{{ service.name }}</span>
