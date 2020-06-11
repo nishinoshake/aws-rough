@@ -1,7 +1,7 @@
 export default {
   key: 'dynamodb',
   name: 'DynamoDB',
-  fullname: 'Scalable NoSQL database',
+  fullname: '',
   href: '/dynamodb/',
   description: 'すごいNoSQL',
   color: 'blue',

@@ -1,7 +1,7 @@
 export default {
   key: 'elasticache',
   name: 'ElastiCache',
-  fullname: ' In-memory data store',
+  fullname: '',
   href: '/elasticache/',
   description: 'インメモリDB',
   color: 'blue',

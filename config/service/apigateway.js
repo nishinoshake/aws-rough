@@ -1,7 +1,7 @@
 export default {
   key: 'apigateway',
   name: 'API Gateway',
-  fullname: 'Fully managed API',
+  fullname: '',
   href: '/apigateway/',
   description: 'API管理',
   color: 'beige',

@@ -3,7 +3,7 @@ import sortBy from 'lodash/sortBy'
 export default {
   key: 'fargate',
   name: 'Fargate',
-  fullname: 'Serverless for container',
+  fullname: '',
   href: '/fargate/',
   description: 'すごいやつ',
   color: 'orange',
