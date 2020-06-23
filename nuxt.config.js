@@ -41,12 +41,6 @@ module.exports = {
         property: 'og:image',
         content: 'https://aws-rough.cc/img/og.png?d=2020060301'
       }
-    ],
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'
-      }
     ]
   },
   loading: false,
@@ -66,10 +60,7 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv'
   ],
-  plugins: [
-    { src: '~/plugins/vue-google-adsense', ssr: false },
-    { src: '~/plugins/vue-highlightjs', ssr: false }
-  ],
+  plugins: [{ src: '~/plugins/vue-google-adsense', ssr: false }, { src: '~/plugins/vue-highlightjs', ssr: false }],
   build: {
     extend(config, { isDev }) {
       if (config.externals) {

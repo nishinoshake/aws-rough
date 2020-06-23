@@ -104,15 +104,11 @@
 // Text
 // -----------------------------------------------------
 @mixin font-sans {
-  font-family: 'Inter', "YuGothic", sans-serif;
-}
-
-@mixin font-mixed {
-  font-family: 'Inter', "YuGothic", sans-serif;
+  font-family: YuGothic, Meiryo, sans-serif;
 }
 
 @mixin font-en {
-  font-family: 'Inter', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 @mixin font-source {

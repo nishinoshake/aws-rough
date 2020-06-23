@@ -22,7 +22,7 @@
       <h2 class="title-section">適当なページに飛ぶガチャ</h2>
       <div class="service-content">
         <div class="landing-ball-frame">
-          <button type="button" class="landing-ball" @mouseenter="handleMouseenter" @click="handleClick">
+          <button type="button" class="landing-ball" @click="handleClick">
             <span class="landing-ball-body"></span>
             <p class="landing-ball-caption">ガチャ</p>
           </button>
