@@ -9,7 +9,9 @@
           <nuxt-link to="/about/" class="header-link">ABOUT</nuxt-link>
         </li>
         <li class="header-item">
-          <nuxt-link to="/what-a-day/" class="header-link">STORY</nuxt-link>
+          <a href="https://github.com/nishinoshake/aws-rough" class="header-link" target="_blank" rel="noopener"
+            >GitHub</a
+          >
         </li>
       </ul>
       <LayoutCart :total="$store.state.total.jpy" />
