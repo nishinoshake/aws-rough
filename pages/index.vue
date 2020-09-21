@@ -1,7 +1,7 @@
 <template>
   <div class="landing">
     <section class="section">
-      <h2 class="title-section">AWSの料金を、日本円でざっくり</h2>
+      <h2 class="title-section">料金が気になるサービスはありますか？</h2>
       <div class="service-content">
         <ul class="landing-service-list">
           <li v-for="service in services" :key="service.key" class="landing-service-item">

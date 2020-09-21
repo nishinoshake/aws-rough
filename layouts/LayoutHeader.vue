@@ -13,6 +13,9 @@
             >GitHub</a
           >
         </li>
+        <li class="header-item">
+          <a href="https://twitter.com/nishinoshake" class="header-link" target="_blank" rel="noopener">Twitter</a>
+        </li>
       </ul>
       <LayoutCart :total="$store.state.total.jpy" />
     </div>
