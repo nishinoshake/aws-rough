@@ -18,17 +18,6 @@
         </ul>
       </div>
     </section>
-    <section class="section">
-      <h2 class="title-section">適当なページに飛ぶガチャ</h2>
-      <div class="service-content">
-        <div class="landing-ball-frame">
-          <button type="button" class="landing-ball" @click="handleClick">
-            <span class="landing-ball-body"></span>
-            <p class="landing-ball-caption">ガチャ</p>
-          </button>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -51,12 +40,6 @@ export default {
   computed: {
     serviceKeys() {
       return serviceConfig.map(service => service.key)
-    }
-  },
-  methods: {
-    handleClick() {
-      const key = this.serviceKeys[Math.floor(Math.random() * this.serviceKeys.length)]
-      this.$router.push({ path: `/${key}/` })
     }
   }
 }
