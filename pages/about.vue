@@ -119,13 +119,36 @@
     </section>
 
     <section class="section">
+      <h2 class="title-section">GitHub</h2>
+      <div class="service-content">
+        <div class="section-child">
+          <p class="text">ソースコードはGitHubにあります。</p>
+          <ul class="list">
+            <li class="list-item">
+              <ExternalLink href="https://github.com/nishinoshake/aws-rough">nishinoshake/aws-rough</ExternalLink>
+            </li>
+            <li class="list-item">
+              <ExternalLink href="https://github.com/nishinoshake/aws-rough-functions"
+                >nishinoshake/aws-rough-functions</ExternalLink
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <h2 class="title-section">お問い合わせ</h2>
       <div class="service-content">
         <div class="section-child">
           <p class="text">
             不具合などのご連絡は、<ExternalLink href="https://github.com/nishinoshake/aws-rough/issues"
               >GitHubのIssue</ExternalLink
-            >か<a href="mailto:lawson.and.7.11@gmail.com" class="text-link">メール</a>までお願いいたします。
+            >か<ExternalLink href="https://twitter.com/nishinoshake">Twitter</ExternalLink>か<a
+              href="mailto:lawson.and.7.11@gmail.com"
+              class="text-link"
+              >メール</a
+            >までお願いいたします。
           </p>
         </div>
       </div>

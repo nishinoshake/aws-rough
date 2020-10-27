@@ -1,9 +1,6 @@
 @charset "utf-8";
 
 .footer {
-  @include max {
-    display: none;
-  }
   @include min {
     width: 100%;
     position: absolute;
@@ -25,11 +22,21 @@
   height: 100%;
   color: $color-font;
   background-color: $color-white;
-  border-top: 1px solid $color-border;
   @include center-flex;
-  @include fz-s;
+  @include fz-xs;
+  @include max {
+    margin-top: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color-border;
+  }
+  @include min {
+    border-top: 1px solid $color-border;
+  }
   a {
     color: currentColor;
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

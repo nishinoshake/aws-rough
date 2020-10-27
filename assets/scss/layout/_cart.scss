@@ -19,6 +19,7 @@
   @include min($width-max) {
     right: calc(50% - #{$width-max / 2} + #{$padding-content-pc});
     &:hover {
+      .cart-total,
       .cart-detail {
         color: $color-white;
         background-color: $color-button;

@@ -1,8 +1,7 @@
 <template>
   <h1 class="title-page">
     <span class="title-page-service">
-      <span class="title-page-name">{{ service.name }}</span
-      ><span v-if="service.fullname" class="title-page-fullname">{{ service.fullname }}</span>
+      <span class="title-page-name">{{ service.name }}</span>
     </span>
   </h1>
 </template>

@@ -6,10 +6,8 @@
   @include max {
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
     border-top: 1px solid $color-border;
-    border-bottom: 1px solid $color-border;
   }
   @include min {
     width: 100%;
@@ -55,6 +53,9 @@
   display: block;
   @include font-en;
   @include fz-s;
+  @include max {
+    font-size: 14px;
+  }
   @include min {
     padding: 18px 22px;
     &:hover {
