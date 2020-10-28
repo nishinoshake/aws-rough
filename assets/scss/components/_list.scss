@@ -1,8 +1,19 @@
 @charset "utf-8";
 
+.list-bg {
+  margin-bottom: 24px;
+  background: #fafafa;
+  @include max {
+    padding: 20px;
+  }
+  @include min {
+    padding: 32px;
+  }
+}
+
 .list-item {
   position: relative;
-  padding-left: 18px;
+  padding-left: 16px;
   + .list-item {
     margin-top: 0.2em;
   }

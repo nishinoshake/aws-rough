@@ -52,13 +52,23 @@
 .title-small {
   display: flex;
   font-weight: 700;
+  @include fz-m;
   @include lh-min;
   @include max {
     margin-bottom: 6px;
   }
   @include min {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 }
 
-
+.title-xsmall {
+  display: block;
+  font-weight: 700;
+  @include max {
+    margin-top: 10px;
+  }
+  @include min {
+    margin-top: 18px;
+  }
+}
