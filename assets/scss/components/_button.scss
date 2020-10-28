@@ -24,3 +24,39 @@
     transform: translate3d(-50%, -50%, 0) rotate(-45deg);
   }
 }
+
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include max {
+    margin: -4px;
+  }
+  @include min {
+    margin: -6px;
+  }
+}
+.button-item {
+  @include max {
+    padding: 4px;
+  }
+  @include min {
+    padding: 6px;
+  }
+}
+.button-inner {
+  color: $color-white;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  background-color: $color-button;
+  border-radius: 999em;
+  @include center-flex;
+  @include max {
+    min-width: 98px;
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+  @include min {
+    min-width: 140px;
+    padding: 14px 28px;
+  }
+}

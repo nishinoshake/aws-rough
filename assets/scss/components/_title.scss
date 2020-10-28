@@ -52,10 +52,10 @@
 .title-small {
   display: flex;
   font-weight: 700;
-  @include fz-m;
+  @include fz-ml;
   @include lh-min;
   @include max {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
   @include min {
     margin-bottom: 16px;

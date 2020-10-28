@@ -153,6 +153,7 @@ const store = () =>
 
           commit('RESTORE', { tables, serviceConfig })
         } catch (e) {
+          console.log(e)
           commit('SET_ERROR_MESSAGE', {
             message: 'データを復元できませんでした・・・'
           })
