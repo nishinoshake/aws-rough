@@ -45,7 +45,15 @@
           </p>
           <pre>
 #ページの容量が2MBで月間10万PV
-2 * 100000 / 1024 ≒ 195GB</pre
+2 * 100000 / 1024 ≒ 195GB
+
+#最初の1GBは無料で、10TBまでは{{ priceSecondRangeTransfer }}ドル/GB
+(195 - 1) * {{ priceSecondRangeTransfer }} = {{ (195 - 1) * priceSecondRangeTransfer }}ドル
+
+#今朝取得した為替レートが{{ usdjpy }}円/ドルなので
+{{ (195 - 1) * priceSecondRangeTransfer }} * {{ usdjpy }} = {{
+              Math.floor((195 - 1) * priceSecondRangeTransfer * usdjpy)
+            }}円</pre
           >
         </div>
         <div class="section-child">
@@ -195,7 +203,16 @@ export default {
   computed: {
     serviceKeys() {
       return mokuji.map(service => service.key)
+    },
+    usdjpy() {
+      return this.$store.state.fx ? this.$store.state.fx.usdjpy : null
+    },
+    priceSecondRangeTransfer() {
+      return this.$store.state.price.transfer.out.priceRange[1].price
     }
+  },
+  mounted() {
+    console.log(this.$store.state.price.transfer.out.priceRange)
   },
   methods: {
     toDetail(z) {
