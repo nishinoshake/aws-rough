@@ -211,9 +211,6 @@ export default {
       return this.$store.state.price.transfer.out.priceRange[1].price
     }
   },
-  mounted() {
-    console.log(this.$store.state.price.transfer.out.priceRange)
-  },
   methods: {
     toDetail(z) {
       this.$store.commit('SET_INITIAL_TABLES', { serviceConfig })

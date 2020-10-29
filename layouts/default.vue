@@ -48,7 +48,17 @@ export default {
     }
 
     if (hash && hash.match(/^#.+$/)) {
-      document.querySelector(hash).scrollIntoView()
+      const target = document.querySelector(hash)
+
+      if (target) {
+        const rect = target.getBoundingClientRect()
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+        const isLarge = window.matchMedia('(min-width: 1177px)').matches
+        const headerHeight = isLarge ? document.getElementById('header').clientHeight : 0
+        const top = rect.top + scrollTop - headerHeight
+
+        window.scrollTo(0, top)
+      }
     }
   }
 }
