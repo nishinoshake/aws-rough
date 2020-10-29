@@ -18,9 +18,24 @@
         </ul>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="how-much" ref="howMuch">
       <h2 class="title-section">AWSの料金はどれぐらいかかるのか？</h2>
       <div class="service-content">
+        <div class="section-child">
+          <h3 class="title-small"><span>料金がざっくりわかるボタン</span></h3>
+          <p class="text">いろいろ考えるのが面倒な方は、とりあえずボタンを押してみてください。</p>
+          <ul class="button-list">
+            <li class="button-item">
+              <button type="button" class="button-inner" @click="toDetail('4fcacf46c2c155dfd1cf')">激安</button>
+            </li>
+            <li class="button-item">
+              <button type="button" class="button-inner" @click="toDetail('75178340160441c9ca8e')">静的サイト</button>
+            </li>
+            <li class="button-item">
+              <button type="button" class="button-inner" @click="toDetail('4c5c5254e11f97276ede')">いろいろ</button>
+            </li>
+          </ul>
+        </div>
         <div class="section-child">
           <h3 class="title-small"><span>AWSの料金の特徴</span></h3>
           <p class="text">
@@ -34,10 +49,7 @@
           </p>
         </div>
         <div class="section-child">
-          <h3 class="title-small"><span>コンピューティングとデータベースの料金から計算</span></h3>
-          <p class="text">
-            AWSでは多くのサービスを提供していますが、よく使うサービスをざっくりカテゴリ分けをすると以下のようになります。なんだかんだでインスタンスを立てるのにお金がかかるので、大概のシステムでは、コンピューティングとデータベースの料金が大部分を占めることになると思います。
-          </p>
+          <h3 class="title-small"><span>サービスのカテゴリ分け</span></h3>
           <ul class="list list-bg">
             <li class="list-item">コンピューティング（EC2/Fargate/...）</li>
             <li class="list-item">データベース（RDS/DynamoDB/...）</li>
@@ -46,13 +58,13 @@
             <li class="list-item">データ転送料金</li>
           </ul>
           <p class="text">
-            それから、ストレージやロードバランサーなどの料金を積んでいけば、AWSにかかる料金の大枠が見えてきます。なかなか料金のイメージが掴めない方は、メニューから好きなサービスを選択して、料金の変化を確認してみてください。
+            AWSでは多くのサービスを提供していますが、よく使うサービスをざっくりカテゴリ分けをすると上記のようになります。慣れてくると、アイコンの色でなんとなくわかるようになります。要件によって上下はありますが、大概のシステムではコンピューティングとデータベースの料金が大部分を占めると思うので、ここから計算すると費用感を掴みやすいです。
           </p>
         </div>
         <div class="section-child" id="zakuri-main">
           <h3 class="title-small"><span>EC2とRDSの概算</span></h3>
           <p class="text">
-            よく使うであろうEC2とRDSの料金の計算方法を見ていきます。細かい項目を無視すれば、使用するインスタンスとストレージの種類/容量を決めれば、ひと月にかかる料金の概算は出せます。
+            よく使うであろうEC2とRDSの料金の計算方法を見ていきます。細かい項目を無視すれば、使用するインスタンスタイプとストレージの種類/容量を決めれば、ひと月にかかる料金を計算できます。
           </p>
           <pre>
 # インスタンスの単価 * 時間 + ストレージの単価 * 容量
@@ -128,21 +140,6 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
             <span class="title-xsmall">サーバーレスのサービス</span>
             EC2で行っている処理をLambdaで置き換えてみたり、EC2で公開している静的サイトがあったらS3に移行してみたり、部分的にサーバーレスのサービスを導入してみたら、料金が安くなるかもしれません。
           </p>
-        </div>
-        <div class="section-child">
-          <h3 class="title-small"><span>料金がざっくりわかるボタン</span></h3>
-          <p class="text">いろいろ考えるのが面倒な方はボタンを押してみてください。</p>
-          <ul class="button-list">
-            <li class="button-item">
-              <button type="button" class="button-inner" @click="toDetail('4fcacf46c2c155dfd1cf')">激安</button>
-            </li>
-            <li class="button-item">
-              <button type="button" class="button-inner" @click="toDetail('75178340160441c9ca8e')">静的サイト</button>
-            </li>
-            <li class="button-item">
-              <button type="button" class="button-inner" @click="toDetail('4c5c5254e11f97276ede')">いろいろ</button>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
@@ -234,6 +231,8 @@ import ExternalLink from '@/components/text/ExternalLink'
 import { parseInstance } from '@/lib/service'
 import { fetchZ } from '@/api'
 
+let observer = null
+
 export default {
   name: 'LandingIndex',
   components: { ServicePartsIcon, ExternalLink },
@@ -273,14 +272,32 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$store.state.price)
+    this.watchScroll()
+  },
+  destroyed() {
+    this.unwatchScroll()
   },
   methods: {
     toDetail(z) {
       this.$store.commit('SET_INITIAL_TABLES', { serviceConfig })
       this.$store.dispatch('fetchZ', { fetchZ, hash: z, serviceConfig })
       this.$router.push('/detail/')
-    }
+    },
+    watchScroll() {
+      observer = new IntersectionObserver(
+        entries => {
+          console.log(entries)
+        },
+        {
+          root: null,
+          rootMargin: '-50% 0px 0px',
+          threshold: 0
+        }
+      )
+
+      observer.observe(this.$refs.howMuch)
+    },
+    unwatchScroll() {}
   }
 }
 </script>

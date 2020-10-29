@@ -114,7 +114,20 @@
     padding: 7px;
   }
   @include min {
+    position: relative;
     border-bottom: 1px solid $color-border;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $color-snow;
+      transform: scaleX(0);
+      transform-origin: right center;
+      transition: transform 0.7s $easeOutExpo;
+    }
   }
 }
 .menu-link {
@@ -159,4 +172,19 @@
   white-space: nowrap;
   writing-mode: vertical-rl;
   @include fz-l;
+}
+
+
+.app.page-index {
+  @include min {
+    .menu-item:after {
+      transform: scale(1);
+      transform-origin: left center;
+    }
+  }
+}
+
+
+@for $i from 0 through 20 {
+  .menu-item:nth-child(#{$i + 1}):after { transition-delay: #{$i * 24ms};}
 }
