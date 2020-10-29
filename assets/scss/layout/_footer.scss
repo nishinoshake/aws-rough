@@ -23,7 +23,7 @@
   background-color: $color-white;
   @include fz-s;
   @include max {
-    margin-top: 14px;
+    margin-top: 6px;
     padding-bottom: 20px;
     border-bottom: 1px solid $color-border;
     @include center-flex;
