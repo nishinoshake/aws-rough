@@ -36,12 +36,12 @@
           </ul>
         </div>
         <div class="section-child" id="zakuri">
-          <h3 class="title-small"><span>データ転送量の概算</span></h3>
+          <h3 class="title-small"><span>データ転送料金の概算</span></h3>
           <p class="text">
             データ転送料金は考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合はデータ転送料金も無視できないので、事前に余裕をもった見積もりを立てて請求に備えた方が安心できます。
           </p>
           <p class="text">
-            具体的な数値がイメージしにくいかもしれませんが、Webサイトを例にすると以下のようになります。
+            具体的な数値がイメージしにくいかもしれませんが、Webサーバーを例にすると以下のようになります。
           </p>
           <pre>
 #ページの容量が2MBで月間10万PV
@@ -50,7 +50,7 @@
 #最初の1GBは無料で、10TBまでは{{ priceSecondRangeTransfer }}ドル/GB
 (195 - 1) * {{ priceSecondRangeTransfer }} = {{ (195 - 1) * priceSecondRangeTransfer }}ドル
 
-#今朝取得した為替レートが{{ usdjpy }}円/ドルなので
+#為替レート:{{ usdjpy }}円/ドル（今朝の10時に取得）
 {{ (195 - 1) * priceSecondRangeTransfer }} * {{ usdjpy }} = {{
               Math.floor((195 - 1) * priceSecondRangeTransfer * usdjpy)
             }}円</pre
