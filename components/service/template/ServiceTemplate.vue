@@ -23,7 +23,7 @@
         </ServicePartsAccordion>
       </section>
 
-      <section class="section">
+      <section class="section" id="description">
         <h2 class="title-section">
           <span class="title-section-large">{{ service.name }}</span
           >についてざっくり
@@ -33,7 +33,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="function">
         <h2 class="title-section">
           <span class="title-section-large">{{ service.name }}</span
           >の料金計算式をざっくり

@@ -22,9 +22,21 @@
       <h2 class="title-section">AWSの料金はどれぐらいかかるのか？</h2>
       <div class="service-content">
         <div class="section-child">
-          <h3 class="title-small"><span>まずはコンピューティングとデータベース</span></h3>
+          <h3 class="title-small"><span>AWSの料金の特徴</span></h3>
           <p class="text">
-            AWSでは多くのサービスを提供していますが、ざっくりカテゴリ分けをすると、コンピューティングとデータベースの料金が大部分を占めることになると思います。それから、ストレージやロードバランサーなどの料金を積んで、ごにょごにょしていけば、AWSにかかる料金の大枠は見えてきます。イメージが掴めていない方は、メニューから好きなサービスを選択して、料金の変化を確認してみてください。
+            AWSの料金は、使った分だけ請求される<ExternalLink href="https://aws.amazon.com/jp/pricing/"
+              >従量課金</ExternalLink
+            >になっています。<ExternalLink href="https://lolipop.jp/pricing/">ロリポップ</ExternalLink
+            >などのレンタルサーバーのように、月額〇〇〇円のような決まった額ではなく、EC2を720時間使ったから〇〇〇円のように計算されるため、毎月の請求額が変動します。費用が変動するのは不便な面もありますが、フェアな料金体系です。
+          </p>
+          <p class="text">
+            また、リソースの増減が管理画面やコマンドラインから簡単に行えるため、お金さえ払えばすぐにスケールアウトできる所も大きな利点といえるでしょう。
+          </p>
+        </div>
+        <div class="section-child">
+          <h3 class="title-small"><span>コンピューティングとデータベースの料金から計算</span></h3>
+          <p class="text">
+            AWSでは多くのサービスを提供していますが、よく使うサービスをざっくりカテゴリ分けをすると以下のようになります。なんだかんだでインスタンスを立てるのにお金がかかるので、大概のシステムでは、コンピューティングとデータベースの料金が大部分を占めることになると思います。
           </p>
           <ul class="list list-bg">
             <li class="list-item">コンピューティング（EC2/Fargate/...）</li>
@@ -33,8 +45,33 @@
             <li class="list-item">ネットワークと配信（CloudFront/ELB/...）</li>
             <li class="list-item">データ転送料金</li>
           </ul>
+          <p class="text">
+            それから、ストレージやロードバランサーなどの料金を積んでいけば、AWSにかかる料金の大枠が見えてきます。なかなか料金のイメージが掴めない方は、メニューから好きなサービスを選択して、料金の変化を確認してみてください。
+          </p>
         </div>
-        <div class="section-child" id="zakuri">
+        <div class="section-child" id="zakuri-main">
+          <h3 class="title-small"><span>EC2とRDSの概算</span></h3>
+          <p class="text">
+            よく使うであろうEC2とRDSの料金の計算方法を見ていきます。細かい項目を無視すれば、使用するインスタンスとストレージの種類/容量を決めれば、ひと月にかかる料金の概算は出せます。
+          </p>
+          <pre>
+# インスタンスの単価 * 時間 + ストレージの単価 * 容量
+
+# EC2
+${{ priceEc2Instance }}(t3.micro) * 30.5日 * 24時間 + ${{ priceEc2Gp2 }}(gp2) * 20GB
+{{ priceEc2Instance }} * 30.5 * 24 + {{ priceEc2Gp2 }} * 20 = ${{
+              Math.floor(10 * (priceEc2Instance * 30.5 * 24 + priceEc2Gp2 * 20)) / 10
+            }} → {{ Math.floor((priceEc2Instance * 30.5 * 24 + priceEc2Gp2 * 20) * usdjpy) }}円
+
+# RDS
+${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsGp2 }}(gp2) * 20GB
+{{ priceRdsInstance }} * 30.5 * 24 + {{ priceRdsGp2 }} * 20 = ${{
+              Math.floor(10 * (priceRdsInstance * 30.5 * 24 + priceRdsGp2 * 20)) / 10
+            }} → {{ Math.floor((priceRdsInstance * 30.5 * 24 + priceRdsGp2 * 20) * usdjpy) }}円
+</pre
+          >
+        </div>
+        <div class="section-child" id="zakuri-transfer">
           <h3 class="title-small"><span>データ転送料金の概算</span></h3>
           <p class="text">
             データ転送料金は考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合はデータ転送料金も無視できないので、事前に余裕をもった見積もりを立てて請求に備えた方が安心できます。
@@ -43,17 +80,25 @@
             具体的な数値がイメージしにくいかもしれませんが、Webサーバーを例にすると以下のようになります。
           </p>
           <pre>
-# ページの容量が2MBで月間10万PV
+# ページあたりの容量が2MBで月間10万PV
 2 * 100000 / 1024 ≒ 195GB
 
-# 最初の1GBは無料で、10TBまでは{{ priceSecondRangeTransfer }}ドル/GB
-(195 - 1) * {{ priceSecondRangeTransfer }} = {{ (195 - 1) * priceSecondRangeTransfer }}ドル
-
-# 為替レート:{{ usdjpy }}円/ドル（今朝の10時に取得）
-{{ (195 - 1) * priceSecondRangeTransfer }} * {{ usdjpy }} = {{
+# 最初の1GBは無料 | 10TBまでは${{ priceSecondRangeTransfer }}/GB
+(195 - 1) * {{ priceSecondRangeTransfer }} = ${{ (195 - 1) * priceSecondRangeTransfer }} → {{
               Math.floor((195 - 1) * priceSecondRangeTransfer * usdjpy)
             }}円</pre
           >
+        </div>
+        <div class="section-child" id="zakuri-function">
+          <h3 class="title-small"><span>他の計算式の確認</span></h3>
+          <p class="text">
+            各サービスの料金計算に使用している式は、各ページの<nuxt-link to="/ec2/#function" class="text-link"
+              >◯◯◯の料金計算式をざっくり</nuxt-link
+            >というセクションに記載してますので、どんな計算をしているか気になる方は確認してみてください。計算式に不備が見つかった場合は、<ExternalLink
+              href="https://github.com/nishinoshake/aws-rough/issues"
+              >GitHubのIssue</ExternalLink
+            >にあげて頂けたら助かります。<br />
+          </p>
         </div>
         <div class="section-child">
           <h3 class="title-small"><span>AWSの料金を抑えるには</span></h3>
@@ -102,7 +147,7 @@
       </div>
     </section>
     <section class="section" id="my-first-aws">
-      <h2 class="title-section">ただサービス名を網羅するだけの文章</h2>
+      <h2 class="title-section">サービス名を網羅する作文</h2>
       <div class="service-content">
         <div class="what-poem">
           <section class="section">
@@ -186,6 +231,7 @@ import serviceConfig from '@/config/service'
 import meta from '@/config/meta'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import ExternalLink from '@/components/text/ExternalLink'
+import { parseInstance } from '@/lib/service'
 import { fetchZ } from '@/api'
 
 export default {
@@ -206,9 +252,28 @@ export default {
     usdjpy() {
       return this.$store.state.fx ? this.$store.state.fx.usdjpy : null
     },
+    priceEc2Instance() {
+      const instance = parseInstance('t3.micro', this.$store.state.price.ec2.instance)
+
+      return instance.price
+    },
+    priceEc2Gp2() {
+      return this.$store.state.price.ebs.gp2.price
+    },
+    priceRdsInstance() {
+      const instance = parseInstance('db.t3.micro', this.$store.state.price.rds.instance.MySQL)
+
+      return instance.price
+    },
+    priceRdsGp2() {
+      return this.$store.state.price.rds.storage.gp2.price
+    },
     priceSecondRangeTransfer() {
       return this.$store.state.price.transfer.out.priceRange[1].price
     }
+  },
+  mounted() {
+    console.log(this.$store.state.price)
   },
   methods: {
     toDetail(z) {
