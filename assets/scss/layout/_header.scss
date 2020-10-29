@@ -31,6 +31,7 @@
 .header-box {
   @include min {
     display: flex;
+    flex-direction: row-reverse;
     min-height: $height-header-pc;
     background-color: $color-white;
     border-top: 1px solid $color-border;
@@ -58,6 +59,7 @@
     }
   }
   @include min {
+    width: $width-menu-pc;
     height: 100%;
     + .header-item {
       border-left: 1px solid $color-border;
@@ -72,6 +74,7 @@
     font-size: 14px;
   }
   @include min {
+    width: 100%;
     height: 100%;
     padding: 14px 22px;
     @include center-flex;

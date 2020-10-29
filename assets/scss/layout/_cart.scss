@@ -13,9 +13,6 @@
     border: 1px solid currentColor;
     background-color: $color-button;
   }
-  @include min {
-    border-left: 1px solid $color-border;
-  }
   @include min($width-max) {
     right: calc(50% - #{$width-max / 2} + #{$padding-content-pc});
     &:hover {
@@ -46,11 +43,7 @@
     color: $color-white;
   }
   @include min {
-    width: $width-menu-pc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
+    display: none;
   }
 }
 
