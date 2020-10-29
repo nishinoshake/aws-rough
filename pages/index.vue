@@ -35,7 +35,7 @@
             <li class="list-item">データ転送料金</li>
           </ul>
         </div>
-        <div class="section-child">
+        <div class="section-child" id="zakuri">
           <h3 class="title-small"><span>データ転送量の概算</span></h3>
           <p class="text">
             データ転送料金は考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合はデータ転送料金も無視できないので、事前に余裕をもった見積もりを立てて請求に備えた方が安心できます。
@@ -94,7 +94,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="my-first-aws">
       <h2 class="title-section">AWSはじめました</h2>
       <div class="service-content">
         <div class="what-poem">
