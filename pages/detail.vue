@@ -10,9 +10,12 @@
         <DetailPrice v-if="hasService" :services="services" :colors="colors" />
         <DetailChart v-if="hasService" :services="services" :colors="colors" :hover-colors="hoverColors" />
       </div>
-      <p :class="['detail-empty', { 'is-visible': !hasService }]">
+      <p :class="['detail-empty', { 'is-visible': !hasService && !isLoading }]">
         <span>With Great Power</span>
         <span>Comes Great Responsibility</span>
+      </p>
+      <p :class="['detail-empty', { 'is-visible': isLoading }]">
+        <span>Loading...</span>
       </p>
     </div>
   </article>
@@ -83,6 +86,9 @@ export default {
           .darken(0.12)
           .string()
       })
+    },
+    isLoading() {
+      return this.$store.state.isDetailLoading
     }
   }
 }

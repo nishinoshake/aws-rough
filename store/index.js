@@ -18,6 +18,7 @@ const store = () =>
       tables: {},
       total: { usd: 0, jpy: 0 },
       isLoaded: false,
+      isDetailLoading: false,
       isMenuOpen: false,
       error: {
         isVisible: false,
@@ -62,6 +63,12 @@ const store = () =>
       },
       TOGGLE_MENU(state) {
         state.isMenuOpen = !state.isMenuOpen
+      },
+      SHOW_DETAIL_LOADING(state) {
+        state.isDetailLoading = true
+      },
+      HIDE_DETAIL_LOADING(state) {
+        state.isDetailLoading = false
       },
       SET_ERROR_MESSAGE(state, { message }) {
         state.error.message = message
@@ -149,15 +156,19 @@ const store = () =>
       },
       async fetchZ({ commit }, { fetchZ, hash, serviceConfig }) {
         try {
+          commit('SHOW_DETAIL_LOADING')
+
           const tables = await fetchZ(hash)
 
           commit('RESTORE', { tables, serviceConfig })
+          commit('HIDE_DETAIL_LOADING')
         } catch (e) {
           console.log(e)
           commit('SET_ERROR_MESSAGE', {
             message: 'データを復元できませんでした・・・'
           })
           commit('SHOW_ERROR')
+          commit('HIDE_DETAIL_LOADING')
         }
       },
       async postZ({ commit }, { postZ, hash, data }) {
