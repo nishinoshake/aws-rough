@@ -37,12 +37,12 @@
   font-feature-settings: "palt";
   @include dot-border;
   @include fz-l;
-  @include lh-min;
   @include max {
     padding: 36px $padding-base-sp;
   }
   @include min {
-    padding: $padding-base-pc;
+    padding: 54px $padding-base-pc 53px;
+    @include lh-1;
   }
   a {
     position: relative;

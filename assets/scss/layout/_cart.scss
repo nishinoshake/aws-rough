@@ -21,8 +21,7 @@
     &:hover {
       .cart-total,
       .cart-detail {
-        color: $color-white;
-        background-color: $color-button;
+        background-color: $color-snow;
       }
     }
   }
@@ -68,7 +67,6 @@
   @include min {
     min-width: 260px;
     padding: 14px 22px 14px 22px;
-    border-right: 1px solid $color-border;
   }
 }
 

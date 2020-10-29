@@ -10,9 +10,11 @@ pre {
   overflow-x: auto;
   overflow-y: hidden;
   background-color: $color-snow;
+  line-height: 1.6;
+  border-radius: 3px;
   @include font-source;
   @include min {
-    padding: 12px;
+    padding: 32px;
   }
 }
 

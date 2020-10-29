@@ -114,8 +114,9 @@
 .detail-empty {
   position: absolute;
   pointer-events: none;
+  font-weight: 100;
   @include font-en;
-  @include fz-xl;
+  @include fz-grande;
   @include lh-en;
   @include max {
     top: 30px;

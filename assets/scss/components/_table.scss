@@ -45,7 +45,7 @@
     }
     @include min {
       width: 8.5rem;
-      padding: 36px 8px;
+      padding: 31px 8px 32px;
       box-sizing: content-box;
       &.mod-minimal {
         width: 5rem;
@@ -69,6 +69,7 @@
         box-sizing: border-box;
         &:nth-child(n+4) {
           padding-top: 0;
+          margin-top: -13px;
         }
       }
     }
@@ -86,7 +87,7 @@
         left: $padding-base-sp;
       }
       @include min {
-        top: 72px;
+        top: 66px;
         left: 18px;
       }
     }

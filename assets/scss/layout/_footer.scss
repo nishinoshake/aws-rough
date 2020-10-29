@@ -4,7 +4,7 @@
   @include min {
     width: 100%;
     position: absolute;
-    bottom: 1px;
+    bottom: 0;
     left: 0;
     height: $height-footer-pc;
   }
@@ -15,28 +15,34 @@
     margin: 0 auto;
     height: 100%;
     padding-right: $width-menu-pc;
+    padding-right: var(--header-width);
   }
 }
 .footer-label {
-  width: 100%;
-  height: 100%;
   color: $color-font;
   background-color: $color-white;
-  @include center-flex;
-  @include fz-xs;
+  @include fz-s;
   @include max {
     margin-top: 14px;
     padding-bottom: 20px;
     border-bottom: 1px solid $color-border;
+    @include center-flex;
   }
   @include min {
+    width: 100%;
+    height: 100%;
     border-top: 1px solid $color-border;
   }
   a {
     color: currentColor;
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    @include min {
+      width: 100%;
+      height: 100%;
+      @include center-flex;
+      &:hover {
+        background-color: $color-snow;
+      }
     }
   }
 }

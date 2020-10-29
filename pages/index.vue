@@ -21,7 +21,6 @@
     <section class="section">
       <h2 class="title-section">AWSの料金はどれぐらいかかるのか？</h2>
       <div class="service-content">
-        <div class="section-child"></div>
         <div class="section-child">
           <h3 class="title-small"><span>まずはコンピューティングとデータベース</span></h3>
           <p class="text">
@@ -44,13 +43,13 @@
             具体的な数値がイメージしにくいかもしれませんが、Webサーバーを例にすると以下のようになります。
           </p>
           <pre>
-#ページの容量が2MBで月間10万PV
+# ページの容量が2MBで月間10万PV
 2 * 100000 / 1024 ≒ 195GB
 
-#最初の1GBは無料で、10TBまでは{{ priceSecondRangeTransfer }}ドル/GB
+# 最初の1GBは無料で、10TBまでは{{ priceSecondRangeTransfer }}ドル/GB
 (195 - 1) * {{ priceSecondRangeTransfer }} = {{ (195 - 1) * priceSecondRangeTransfer }}ドル
 
-#為替レート:{{ usdjpy }}円/ドル（今朝の10時に取得）
+# 為替レート:{{ usdjpy }}円/ドル（今朝の10時に取得）
 {{ (195 - 1) * priceSecondRangeTransfer }} * {{ usdjpy }} = {{
               Math.floor((195 - 1) * priceSecondRangeTransfer * usdjpy)
             }}円</pre
@@ -103,7 +102,7 @@
       </div>
     </section>
     <section class="section" id="my-first-aws">
-      <h2 class="title-section">AWSはじめました</h2>
+      <h2 class="title-section">ただサービス名を網羅するだけの文章</h2>
       <div class="service-content">
         <div class="what-poem">
           <section class="section">

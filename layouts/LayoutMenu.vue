@@ -4,6 +4,7 @@
       <ul class="menu-list">
         <li v-for="service in services" :key="service.key" class="menu-item">
           <nuxt-link :class="`menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
+            <ServicePartsIcon :name="service.key" />
             <span>{{ service.name }}</span>
           </nuxt-link>
         </li>
@@ -57,6 +58,7 @@ export default {
       const viewHeight = parseInt(window.innerHeight, 10)
       const menuHeight = parseInt(this.$refs.menu.offsetHeight, 10)
       const contentWidth = parseInt(document.querySelector('.contents').clientWidth, 10)
+      const headerHeight = parseInt(document.getElementById('header').clientHeight, 10)
 
       document.documentElement.style.setProperty('--view-height', `${viewHeight}px`)
       document.documentElement.style.setProperty('--menu-height', `${menuHeight}px`)
@@ -66,7 +68,7 @@ export default {
         return
       }
 
-      this.isSmall = menuHeight > window.innerHeight
+      this.isSmall = menuHeight + headerHeight > window.innerHeight
     },
     toggle() {
       this.TOGGLE_MENU()

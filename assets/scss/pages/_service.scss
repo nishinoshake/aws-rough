@@ -107,14 +107,14 @@
     padding: 20px $padding-base-sp;
   }
   @include min {
-    padding: 36px $padding-base-pc;
+    padding: 28px $padding-base-pc 29px;
   }
 }
 
 .service-calc-footer {
   display: flex;
   justify-content: center;
-  margin-top: 36px;
+  margin-top: 44px;
 }
 
 .service-calc-append {

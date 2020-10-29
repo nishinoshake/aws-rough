@@ -16,7 +16,6 @@
     display: flex;
     top: 0;
     left: 0;
-    padding-top: $height-header-pc;
     &.is-small {
       position: static;
     }
@@ -125,18 +124,17 @@
   @include font-en;
   @include lh-1;
   &.is-active {
-    color: $color-white;
-    background-color: $color-button;
+    background-color: $color-snow;
   }
   @include max {
     padding: 12px;
     @include fz-l;
   }
   @include min {
-    padding: 12px 20px;
+    padding: 11px 16px;
+    font-size: 16px;
     &:hover {
-      color: $color-white;
-      background-color: $color-button;
+      background-color: $color-snow;
     }
   }
   svg {
@@ -149,7 +147,7 @@
     @include min {
       width: 22px;
       height: 22px;
-      margin-right: 4px;
+      margin-right: 3px;
     }
   }
 }
