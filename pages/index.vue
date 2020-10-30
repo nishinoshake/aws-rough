@@ -29,6 +29,9 @@
               <button type="button" class="button-inner" @click="toDetail('4fcacf46c2c155dfd1cf')">激安</button>
             </li>
             <li class="button-item">
+              <button type="button" class="button-inner" @click="toDetail('915dbae595d92581209f')">富豪</button>
+            </li>
+            <li class="button-item">
               <button type="button" class="button-inner" @click="toDetail('75178340160441c9ca8e')">静的サイト</button>
             </li>
             <li class="button-item">
@@ -55,7 +58,6 @@
             <li class="list-item">データベース（RDS/DynamoDB/...）</li>
             <li class="list-item">ストレージ（S3/EBS/...）</li>
             <li class="list-item">ネットワークと配信（CloudFront/ELB/...）</li>
-            <li class="list-item">データ転送料金</li>
           </ul>
           <p class="text">
             AWSでは多くのサービスを提供していますが、よく使うサービスのカテゴリをざっくり分けると上記のようになります。慣れてくると、アイコンの色でピンと来るようになるかもしれません。要件によって上下はありますが、大概のシステムではコンピューティングとデータベースの料金が大部分を占めると思うので、ここから計算すると費用感を掴みやすいです。
@@ -94,7 +96,10 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
         <div class="section-child" id="zakuri-transfer">
           <h3 class="title-small"><span>データ転送料金の概算</span></h3>
           <p class="text">
-            データ転送料金は考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合は無視できないので、事前に余裕をもった見積もりを立てておいた方が安心できます。
+            AWSの料金を計算するうえで忘れてはいけない項目に、データ転送料金があります。
+          </p>
+          <p class="text">
+            考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合は無視できないので、事前に余裕をもった見積もりを立てておいた方が安心できます。
           </p>
           <p class="text">
             具体的な数値がイメージしにくいかもしれませんが、Webサーバーを例にすると以下のようになります。
@@ -110,7 +115,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
           >
         </div>
         <div class="section-child" id="zakuri-function">
-          <h3 class="title-small"><span>他の計算式の確認</span></h3>
+          <h3 class="title-small"><span>計算式の確認</span></h3>
           <p class="text">
             各サービスの料金計算に使用している式は、各ページの<nuxt-link to="/ec2/#function" class="text-link"
               >◯◯◯の料金計算式をざっくり</nuxt-link
@@ -130,7 +135,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
             >です。名前のリザーブドが示すとおり、◯年使ってくれるなら安くしますよ、という仕組みになります。これとは別で、EC2の空いているインスタンスを安くつかえるかもしれない、<ExternalLink
               href="https://aws.amazon.com/jp/ec2/spot/"
               >スポットインスタンス</ExternalLink
-            >というものもあります。（どちらもこのサイトでは計算できないですが...）
+            >というものもあります。どちらもこのサイトでは計算できないですが...
           </p>
           <p class="text">
             <span class="title-xsmall">ボリュームディスカウント</span>
@@ -142,7 +147,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
           <p class="text">
             <span class="title-xsmall">ストレージクラス</span>
             S3には<ExternalLink href="https://aws.amazon.com/jp/s3/storage-classes/">ストレージクラス</ExternalLink
-            >というものがあって、アクセスの頻度が低いデータは安く保存できる（代わりに取り出しのコストがかかる）ようになっているので、利用を検討してみてもいいかもしれません。（これもこのサイトでは計算できないですが...）
+            >というものがあって、アクセスの頻度が低いデータは安く保存できる（代わりに取り出しのコストがかかる）ようになっているので、利用を検討してみてもいいかもしれません。これもこのサイトでは計算できないですが...
           </p>
           <p class="text">
             <span class="title-xsmall">サーバーレスのサービス</span>
@@ -152,7 +157,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
       </div>
     </section>
     <section class="section" id="my-first-aws">
-      <h2 class="title-section">使い道を想像するために、サービス名を網羅するだけの作文</h2>
+      <h2 class="title-section">使い道を想像するためにサービス名を網羅するだけの作文</h2>
       <div class="service-content">
         <div class="what-poem">
           <section class="section">
