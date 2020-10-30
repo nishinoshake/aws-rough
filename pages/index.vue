@@ -19,7 +19,7 @@
       </div>
     </section>
     <section class="section" id="how-much" ref="howMuch">
-      <h2 class="title-section">AWSの料金はどれぐらいかかるのか？</h2>
+      <h2 class="title-section">AWSの料金はどれぐらいかかるのか</h2>
       <div class="service-content">
         <div class="section-child">
           <h3 class="title-small"><span>料金がざっくりわかるボタン</span></h3>
@@ -42,7 +42,7 @@
             AWSの料金は、使った分だけ請求される<ExternalLink href="https://aws.amazon.com/jp/pricing/"
               >従量課金</ExternalLink
             >になっています。<ExternalLink href="https://lolipop.jp/pricing/">ロリポップ</ExternalLink
-            >などのレンタルサーバーのように、月額〇〇〇円のような決まった額ではなく、EC2を720時間使ったから〇〇〇円のように計算されるため、毎月の請求額が変動します。費用が変動するのは不便な面もありますが、フェアな料金体系です。
+            >などのレンタルサーバーのように、月額〇〇〇円のような決まった額ではなく、EC2を720時間使ったから〇〇〇円のように計算されるため、毎月の請求額が変動します。費用が変動するのは不便な面もありますが、フェアな料金体系といえます。
           </p>
           <p class="text">
             また、リソースの増減が管理画面やコマンドラインから簡単に行えるため、お金さえ払えばすぐにスケールアウトできる所も大きな利点といえるでしょう。
@@ -58,13 +58,13 @@
             <li class="list-item">データ転送料金</li>
           </ul>
           <p class="text">
-            AWSでは多くのサービスを提供していますが、よく使うサービスをざっくりカテゴリ分けをすると上記のようになります。慣れてくると、アイコンの色でなんとなくわかるようになります。要件によって上下はありますが、大概のシステムではコンピューティングとデータベースの料金が大部分を占めると思うので、ここから計算すると費用感を掴みやすいです。
+            AWSでは多くのサービスを提供していますが、よく使うサービスのカテゴリをざっくり分けると上記のようになります。慣れてくると、アイコンの色でピンと来るようになるかもしれません。要件によって上下はありますが、大概のシステムではコンピューティングとデータベースの料金が大部分を占めると思うので、ここから計算すると費用感を掴みやすいです。
           </p>
         </div>
         <div class="section-child" id="zakuri-main">
           <h3 class="title-small"><span>EC2とRDSの概算</span></h3>
           <p class="text">
-            よく使うであろうEC2とRDSの料金の計算方法を見ていきます。細かい項目を無視すれば、使用するインスタンスタイプとストレージの種類/容量を決めれば、ひと月にかかる料金を計算できます。
+            よく使うであろうEC2とRDSの料金を計算してみましょう。細かい事は気にせずに、インスタンスタイプとストレージの種類/容量を決めれば、ひと月にかかる料金をざっくり計算できます。
           </p>
           <pre>
 # インスタンスの単価 * 時間 + ストレージの単価 * 容量
@@ -82,11 +82,19 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
             }} → {{ Math.floor((priceRdsInstance * 30.5 * 24 + priceRdsGp2 * 20) * usdjpy) }}円
 </pre
           >
+          <p class="text">
+            料金計算を簡単にするために、あえて無視している細かい事については、各ページの<nuxt-link
+              to="/ec2/#notice"
+              class="text-link"
+              >対象外のもの</nuxt-link
+            >というセクションに記載しています。具体例をあげると、追加のElastic
+            IPやリージョン間のデータ転送料金などです。
+          </p>
         </div>
         <div class="section-child" id="zakuri-transfer">
           <h3 class="title-small"><span>データ転送料金の概算</span></h3>
           <p class="text">
-            データ転送料金は考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合はデータ転送料金も無視できないので、事前に余裕をもった見積もりを立てて請求に備えた方が安心できます。
+            データ転送料金は考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合は無視できないので、事前に余裕をもった見積もりを立てておいた方が安心できます。
           </p>
           <p class="text">
             具体的な数値がイメージしにくいかもしれませんが、Webサーバーを例にすると以下のようになります。
@@ -106,7 +114,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
           <p class="text">
             各サービスの料金計算に使用している式は、各ページの<nuxt-link to="/ec2/#function" class="text-link"
               >◯◯◯の料金計算式をざっくり</nuxt-link
-            >というセクションに記載してますので、どんな計算をしているか気になる方は確認してみてください。計算式に不備が見つかった場合は、<ExternalLink
+            >というセクションに記載してますので、どんな計算をしているか気になる方は確認してみてください。計算に不備が見つかった場合は、<ExternalLink
               href="https://github.com/nishinoshake/aws-rough/issues"
               >GitHubのIssue</ExternalLink
             >にあげて頂けたら助かります。<br />
@@ -115,7 +123,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
         <div class="section-child">
           <h3 class="title-small"><span>AWSの料金を抑えるには</span></h3>
           <p class="text">
-            <span class="title-xsmall">お得なインスタンス</span>
+            <span class="title-xsmall">リザーブド/スポットインスタンス</span>
             「AWSの料金を安くする」と考えたときに、最初に思いつくのがEC2やRDSで使える<ExternalLink
               href="https://aws.amazon.com/jp/ec2/pricing/reserved-instances/"
               >リザーブドインスタンス</ExternalLink
@@ -144,7 +152,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
       </div>
     </section>
     <section class="section" id="my-first-aws">
-      <h2 class="title-section">サービス名を網羅する作文</h2>
+      <h2 class="title-section">使い道を想像するために、サービス名を網羅するだけの作文</h2>
       <div class="service-content">
         <div class="what-poem">
           <section class="section">

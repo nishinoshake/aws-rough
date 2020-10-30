@@ -6,7 +6,7 @@
       <ServiceTemplateCalc v-else :service="service" />
     </div>
     <div class="service-body">
-      <section class="accordion-list">
+      <section class="accordion-list" id="notice">
         <ServicePartsAccordion v-if="hasHelp" title="入力項目の補足">
           <slot name="help" />
         </ServicePartsAccordion>

@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+:root {
+  --header-width: 414px;
+}
+
 body {
   color: $color-font;
   text-size-adjust: 100%;
