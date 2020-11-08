@@ -244,8 +244,6 @@ import ExternalLink from '@/components/text/ExternalLink'
 import { parseInstance } from '@/lib/service'
 import { fetchZ } from '@/api'
 
-let observer = null
-
 export default {
   name: 'LandingIndex',
   components: { ServicePartsIcon, ExternalLink },
@@ -284,33 +282,12 @@ export default {
       return this.$store.state.price.transfer.out.priceRange[1].price
     }
   },
-  mounted() {
-    this.watchScroll()
-  },
-  destroyed() {
-    this.unwatchScroll()
-  },
   methods: {
     toDetail(z) {
       this.$store.commit('SET_INITIAL_TABLES', { serviceConfig })
       this.$store.dispatch('fetchZ', { fetchZ, hash: z, serviceConfig })
       this.$router.push('/detail/')
-    },
-    watchScroll() {
-      observer = new IntersectionObserver(
-        entries => {
-          console.log(entries)
-        },
-        {
-          root: null,
-          rootMargin: '-50% 0px 0px',
-          threshold: 0
-        }
-      )
-
-      observer.observe(this.$refs.howMuch)
-    },
-    unwatchScroll() {}
+    }
   }
 }
 </script>
