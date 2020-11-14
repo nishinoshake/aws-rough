@@ -232,6 +232,8 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
         </div>
       </div>
     </section>
+
+    <ServiceTemplateAds />
   </div>
 </template>
 
@@ -239,6 +241,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
 import mokuji from '@/config/service/mokuji'
 import serviceConfig from '@/config/service'
 import meta from '@/config/meta'
+import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import ExternalLink from '@/components/text/ExternalLink'
 import { parseInstance } from '@/lib/service'
@@ -246,7 +249,7 @@ import { fetchZ } from '@/api'
 
 export default {
   name: 'LandingIndex',
-  components: { ServicePartsIcon, ExternalLink },
+  components: { ServicePartsIcon, ServiceTemplateAds, ExternalLink },
   head() {
     return meta.index
   },
