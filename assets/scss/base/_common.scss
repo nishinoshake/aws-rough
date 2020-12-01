@@ -66,13 +66,12 @@ body {
 }
 
 .contents {
-  min-width: 0;
-  flex-grow: 1;
   position: relative;
   @include max {
     min-height: 100vh;
   }
   @include min {
+    width: calc(100% - #{$width-menu-pc});
     min-height: calc(100vh - #{$height-header-pc});
   }
 }
