@@ -32,7 +32,7 @@
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.6.0",
     "animejs": "^2.2.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "chart.js": "^2.7.2",
     "clipboard": "^2.0.0",
     "color": "^3.0.0",
