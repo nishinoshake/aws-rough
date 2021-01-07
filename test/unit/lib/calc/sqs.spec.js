@@ -6,10 +6,42 @@ describe('sqs', () => {
       sqs: {
         free: 1000000,
         standard: {
-          price: 4e-7
+          priceRange: [
+            {
+              beginRange: 0,
+              endRange: 100000000000,
+              price: 4e-7
+            },
+            {
+              beginRange: 100000000000,
+              endRange: 200000000000,
+              price: 3.5e-7
+            },
+            {
+              beginRange: 200000000000,
+              endRange: null,
+              price: 3.2e-7
+            }
+          ]
         },
         fifo: {
-          price: 5e-7
+          priceRange: [
+            {
+              beginRange: 0,
+              endRange: 100000000000,
+              price: 5e-7
+            },
+            {
+              beginRange: 100000000000,
+              endRange: 200000000000,
+              price: 4.6e-7
+            },
+            {
+              beginRange: 200000000000,
+              endRange: null,
+              price: 4.2e-7
+            }
+          ]
         }
       }
     }
