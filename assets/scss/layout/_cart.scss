@@ -3,11 +3,11 @@
 .cart {
   z-index: 100;
   display: flex;
+  align-items: center;
   @include max {
     position: fixed;
     right: 86px;
     bottom: $padding-sp;
-    align-items: center;
     border-radius: 999em;
     overflow: hidden;
     border: $border-width solid currentColor;
