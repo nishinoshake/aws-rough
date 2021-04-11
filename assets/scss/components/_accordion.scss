@@ -10,7 +10,7 @@
 }
 
 .accordion-item {
-  border-bottom: 1px solid $color-border;
+  border-bottom: $border-width solid $color-border;
   transition: border-radius 0.24s $easeOutQuart;
   &.is-active {
     .accordion-inside {
@@ -21,7 +21,7 @@
     }
   }
   &:first-child {
-    border-top: 1px solid $color-border;
+    border-top: $border-width solid $color-border;
   }
 }
 
@@ -38,7 +38,7 @@
     padding: $padding-base-sp;
   }
   @include min {
-    padding: 56px $padding-base-pc;
+    padding: 30px $padding-base-pc;
     &:hover {
       background-color: $color-snow;
     }
@@ -46,7 +46,7 @@
 }
 .accordion-title-icon {
   position: absolute;
-  border: 1px solid $color-border;
+  border: $border-width solid $color-border;
   border-radius: 50%;
   transition: transform 0.32s $easeOutQuart;
   @include max {
@@ -66,8 +66,8 @@
     position: absolute;
     bottom: 50%;
     right: 50%;
-    border-bottom: 1px solid currentColor;
-    border-right: 1px solid currentColor;
+    border-bottom: $border-width solid currentColor;
+    border-right: $border-width solid currentColor;
     transform: translateY(50%) rotate(45deg);
     transform-origin: right bottom;
     @include max {

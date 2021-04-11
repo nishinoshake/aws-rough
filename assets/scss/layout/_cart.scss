@@ -10,7 +10,7 @@
     align-items: center;
     border-radius: 999em;
     overflow: hidden;
-    border: 1px solid currentColor;
+    border: $border-width solid currentColor;
     background-color: $color-button;
   }
   @include min($width-max) {

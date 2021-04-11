@@ -104,7 +104,7 @@
 // Text
 // -----------------------------------------------------
 @mixin font-sans {
-  font-family: YuGothic, Meiryo, sans-serif;
+  font-family: sans-serif;
 }
 
 @mixin font-en {
@@ -128,7 +128,7 @@
     font-size: 10px;
   }
   @include min {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 @mixin fz-s {
@@ -136,7 +136,7 @@
     font-size: 12px;
   }
   @include min {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -145,7 +145,7 @@
     font-size: 14px;
   }
   @include min {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -154,7 +154,7 @@
     font-size: 14px;
   }
   @include min {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -163,25 +163,25 @@
     font-size: 16px;
   }
   @include min {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
 @mixin fz-l {
   @include max {
-    font-size: 18px;
+    font-size: 16px;
   }
   @include min {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
 @mixin fz-xl {
   @include max {
-    font-size: 24px;
+    font-size: 22px;
   }
   @include min {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
@@ -190,7 +190,7 @@
     font-size: 32px;
   }
   @include min {
-    font-size: 48px;
+    font-size: 32px;
   }
 }
 
@@ -199,16 +199,7 @@
     font-size: 32px;
   }
   @include min {
-    font-size: 64px;
-  }
-}
-
-@mixin fz-poem {
-  @include max {
-    font-size: 16px;
-  }
-  @include min {
-    font-size: 20px;
+    font-size: 42px;
   }
 }
 
@@ -252,5 +243,5 @@
 }
 
 @mixin lh-en {
-  line-height: 1.4;
+  line-height: 1.8;
 }

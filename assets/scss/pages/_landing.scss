@@ -34,7 +34,7 @@
   align-items: center;
   @include min {
     padding: 12px;
-    border: 1px solid transparent;
+    border: $border-width solid transparent;
   }
 }
 .landing-service-icon {

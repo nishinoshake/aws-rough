@@ -1,7 +1,9 @@
 <template>
   <div class="about">
     <section class="section">
-      <h2 class="title-section">このサイトについて</h2>
+      <h1 class="title-page service-copy">
+        <span class="title-page-ja">このサイトについて</span>
+      </h1>
       <div class="service-content">
         <div class="section-child">
           <p class="text">AWSの料金、ややこしいですよね。</p>

@@ -31,17 +31,20 @@
 }
 
 .title-section {
-  display: flex;
+  display: inline-flex;
   position: relative;
   letter-spacing: 0.08em;
   font-feature-settings: "palt";
-  @include dot-border;
+  color: $color-white;
+  background-color: $color-border;
+  // border-right: $border-width solid $color-border;
+  // border-bottom: $border-width solid $color-border;
   @include fz-l;
   @include max {
-    padding: 36px $padding-base-sp;
+    padding: 12px 16px;
   }
   @include min {
-    padding: 54px $padding-base-pc 53px;
+    padding: 18px 24px;
     @include lh-1;
   }
   a {
@@ -55,10 +58,14 @@
   @include fz-ml;
   @include lh-min;
   @include max {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
   @include min {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+  }
+  span {
+    padding-bottom: 2px;
+    border-bottom: 2px solid currentColor;
   }
 }
 

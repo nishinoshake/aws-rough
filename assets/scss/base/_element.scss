@@ -18,7 +18,8 @@ pre {
   }
 }
 
-* + pre {
+* + pre,
+pre + * {
   @include max {
     margin-top: 18px;
   }

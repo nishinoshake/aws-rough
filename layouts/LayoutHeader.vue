@@ -2,11 +2,6 @@
   <header class="header" id="header">
     <div class="header-inner">
       <div class="header-box" ref="box">
-        <ul class="header-list">
-          <li class="header-item">
-            <nuxt-link to="/" class="header-link">ざっくりAWS</nuxt-link>
-          </li>
-        </ul>
         <LayoutCart :total="$store.state.total.jpy" />
       </div>
     </div>

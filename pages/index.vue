@@ -1,7 +1,9 @@
 <template>
   <div class="landing">
     <section class="section">
-      <h2 class="title-section">料金が気になるサービスはありますか？</h2>
+      <h1 class="title-page service-copy">
+        <span class="title-page-ja">AWSの料金を、日本円でざっくり</span>
+      </h1>
       <div class="service-content">
         <ul class="landing-service-list">
           <li v-for="service in services" :key="service.key" class="landing-service-item">
@@ -18,146 +20,137 @@
         </ul>
       </div>
     </section>
-    <section class="section" id="how-much" ref="howMuch">
-      <h2 class="title-section">AWSの料金はどれぐらいかかるのか</h2>
+    <section class="section">
+      <h2 class="title-section">AWSの料金の特徴</h2>
       <div class="service-content">
-        <div class="section-child">
-          <h3 class="title-small"><span>料金がざっくりわかるボタン</span></h3>
-          <p class="text">いろいろ考えるのが面倒な方は、とりあえずボタンを押してみてください。</p>
-          <ul class="button-list">
-            <li class="button-item">
-              <button type="button" class="button-inner" @click="toDetail('4fcacf46c2c155dfd1cf')">激安</button>
-            </li>
-            <li class="button-item">
-              <button type="button" class="button-inner" @click="toDetail('915dbae595d92581209f')">富豪</button>
-            </li>
-            <li class="button-item">
-              <button type="button" class="button-inner" @click="toDetail('75178340160441c9ca8e')">静的サイト</button>
-            </li>
-            <li class="button-item">
-              <button type="button" class="button-inner" @click="toDetail('4c5c5254e11f97276ede')">いろいろ</button>
-            </li>
-          </ul>
-        </div>
-        <div class="section-child">
-          <h3 class="title-small"><span>AWSの料金の特徴</span></h3>
-          <p class="text">
-            AWSの料金は、使った分だけ請求される<ExternalLink href="https://aws.amazon.com/jp/pricing/"
-              >従量課金</ExternalLink
-            >になっています。<ExternalLink href="https://lolipop.jp/pricing/">ロリポップ</ExternalLink
-            >などのレンタルサーバーのように、月額〇〇〇円のような決まった額ではなく、EC2を720時間使ったから〇〇〇円のように計算されるため、毎月の請求額が変動します。費用が変動するのは不便な面もありますが、フェアな料金体系といえます。
-          </p>
-          <p class="text">
-            また、リソースの増減が管理画面やコマンドラインから簡単に行えるため、お金さえ払えばすぐにスケールアウトできる所も大きな利点といえるでしょう。
-          </p>
-        </div>
-        <div class="section-child">
-          <h3 class="title-small"><span>サービスのカテゴリ分け</span></h3>
-          <ul class="list list-bg">
-            <li class="list-item">コンピューティング（EC2/Fargate/...）</li>
-            <li class="list-item">データベース（RDS/DynamoDB/...）</li>
-            <li class="list-item">ストレージ（S3/EBS/...）</li>
-            <li class="list-item">ネットワークと配信（CloudFront/ELB/...）</li>
-          </ul>
-          <p class="text">
-            AWSでは多くのサービスを提供していますが、よく使うサービスのカテゴリをざっくり分けると上記のようになります。慣れてくると、アイコンの色でピンと来るようになるかもしれません。要件によって上下はありますが、大概のシステムではコンピューティングとデータベースの料金が大部分を占めると思うので、ここから計算すると費用感を掴みやすいです。
-          </p>
-        </div>
-        <div class="section-child" id="zakuri-main">
-          <h3 class="title-small"><span>EC2とRDSの概算</span></h3>
-          <p class="text">
-            よく使うであろうEC2とRDSの料金を計算してみましょう。細かい事は気にせずに、インスタンスタイプとストレージの種類/容量を決めれば、ひと月にかかる料金をざっくり計算できます。
-          </p>
-          <pre>
+        <p class="text">
+          AWSの料金は、使った分だけ請求される<ExternalLink href="https://aws.amazon.com/jp/pricing/"
+            >従量課金</ExternalLink
+          >になっています。<ExternalLink href="https://lolipop.jp/pricing/">ロリポップ</ExternalLink
+          >などのレンタルサーバーのように、月額〇〇〇円のような決まった額ではなく、EC2を720時間使ったから〇〇〇円のように計算されるため、毎月の請求額が変動します。費用が変動するのは不便な面もありますが、フェアな料金体系といえます。
+        </p>
+        <p class="text">
+          また、リソースの増減が管理画面やコマンドラインから簡単に行えるため、お金さえ払えばすぐにスケールアウトできる所も大きな利点といえるでしょう。
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="title-section">サービスの分類</h2>
+      <div class="service-content">
+        <ul class="list list-bg">
+          <li class="list-item">コンピューティング（EC2/Fargate）</li>
+          <li class="list-item">データベース（RDS/DynamoDB）</li>
+          <li class="list-item">ストレージ（S3/EBS）</li>
+          <li class="list-item">ネットワークと配信（CloudFront/ELB）</li>
+        </ul>
+        <p class="text">
+          AWSでは多くのサービスを提供していますが、よく使うサービスをざっくり分けると上記のようになります。慣れてくると、アイコンの色でピンと来るようになるかもしれません。要件によって上下はありますが、多くのシステムではコンピューティングとデータベースの料金が大部分を占めると思うので、ここから計算すると費用感を掴みやすいと思います。
+        </p>
+        <p class="text">
+          コンピューティングやデータベースは、使用するインスタンスのCPU/メモリ等のスペックによって単価が上下し、使った分だけ費用が発生します。そのため、インスタンスを24時間稼働する場合と比べ、稼働を半日に抑えられれば料金も半額になります。また、ストレージやネットワークについても、使用量に応じて料金がかかります。
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="title-section">EC2とRDSの料金計算例</h2>
+      <div class="service-content">
+        <p class="text">
+          よく使うであろうEC2とRDSの料金を計算してみましょう。細かい事は気にせずに、インスタンスタイプとストレージの種類/容量を決めれば、ひと月にかかる料金をざっくり計算できます。
+        </p>
+        <pre>
 # インスタンスの単価 * 時間 + ストレージの単価 * 容量
 
 # EC2
 ${{ priceEc2Instance }}(t3.micro) * 30.5日 * 24時間 + ${{ priceEc2Gp2 }}(gp2) * 20GB
 {{ priceEc2Instance }} * 30.5 * 24 + {{ priceEc2Gp2 }} * 20 = ${{
-              Math.floor(10 * (priceEc2Instance * 30.5 * 24 + priceEc2Gp2 * 20)) / 10
-            }} → {{ Math.floor((priceEc2Instance * 30.5 * 24 + priceEc2Gp2 * 20) * usdjpy) }}円
+            Math.floor(10 * (priceEc2Instance * 30.5 * 24 + priceEc2Gp2 * 20)) / 10
+          }} → {{ Math.floor((priceEc2Instance * 30.5 * 24 + priceEc2Gp2 * 20) * usdjpy) }}円
 
 # RDS
 ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsGp2 }}(gp2) * 20GB
 {{ priceRdsInstance }} * 30.5 * 24 + {{ priceRdsGp2 }} * 20 = ${{
-              Math.floor(10 * (priceRdsInstance * 30.5 * 24 + priceRdsGp2 * 20)) / 10
-            }} → {{ Math.floor((priceRdsInstance * 30.5 * 24 + priceRdsGp2 * 20) * usdjpy) }}円
+            Math.floor(10 * (priceRdsInstance * 30.5 * 24 + priceRdsGp2 * 20)) / 10
+          }} → {{ Math.floor((priceRdsInstance * 30.5 * 24 + priceRdsGp2 * 20) * usdjpy) }}円
 </pre
-          >
-          <p class="text">
-            料金計算を簡単にするために、あえて無視している細かい事については、各ページの<nuxt-link
-              to="/ec2/#notice"
-              class="text-link"
-              >対象外のもの</nuxt-link
-            >というセクションに記載しています。具体例をあげると、追加のElastic
-            IPやリージョン間のデータ転送料金などです。
-          </p>
-        </div>
-        <div class="section-child" id="zakuri-transfer">
-          <h3 class="title-small"><span>データ転送料金の概算</span></h3>
-          <p class="text">
-            AWSの料金を計算するうえで忘れてはいけない項目に、データ転送料金があります。
-          </p>
-          <p class="text">
-            考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合は無視できないので、事前に余裕をもった見積もりを立てておいた方が安心できます。
-          </p>
-          <p class="text">
-            具体的な数値がイメージしにくいかもしれませんが、Webサーバーを例にすると以下のようになります。
-          </p>
-          <pre>
+        >
+        <p class="text">
+          料金計算を簡単にするために、あえて無視している細かい事については、各ページの<nuxt-link
+            to="/ec2/#notice"
+            class="text-link"
+            >対象外のもの</nuxt-link
+          >というセクションに記載しています。具体例をあげると、追加のElastic IPやリージョン間のデータ転送料金などです。
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="title-section">データ転送料金の計算例</h2>
+      <div class="service-content">
+        <p class="text">
+          AWSの料金を計算するうえで忘れてはいけない項目に、データ転送料金があります。
+        </p>
+        <p class="text">
+          考え方に少しクセがありますが、基本的にはAWSから外へ出るデータに対して料金が発生すると覚えておけばシンプルです。実際に使ってみないとわからない部分なので見積もりが難しいですが、トラフィックが多い場合は無視できないので、事前に余裕をもった見積もりを立てておいた方が安心できます。
+        </p>
+        <p class="text">
+          具体的な数値がイメージしにくいかもしれませんが、Webサーバーを例にすると以下のようになります。
+        </p>
+        <pre>
 # ページあたりの容量が2MBで月間10万PV
 2 * 100000 / 1024 ≒ 195GB
 
 # 最初の1GBは無料 | 10TBまでは${{ priceSecondRangeTransfer }}/GB
 (195 - 1) * {{ priceSecondRangeTransfer }} = ${{ (195 - 1) * priceSecondRangeTransfer }} → {{
-              Math.floor((195 - 1) * priceSecondRangeTransfer * usdjpy)
-            }}円</pre
-          >
-        </div>
-        <div class="section-child" id="zakuri-function">
-          <h3 class="title-small"><span>計算式の確認</span></h3>
-          <p class="text">
-            各サービスの料金計算に使用している式は、各ページの<nuxt-link to="/ec2/#function" class="text-link"
-              >◯◯◯の料金計算式をざっくり</nuxt-link
-            >というセクションに記載してますので、どんな計算をしているか気になる方は確認してみてください。計算に不備が見つかった場合は、<ExternalLink
-              href="https://github.com/nishinoshake/aws-rough/issues"
-              >GitHubのIssue</ExternalLink
-            >にあげて頂けたら助かります。<br />
-          </p>
-        </div>
-        <div class="section-child">
-          <h3 class="title-small"><span>AWSの料金を抑えるには</span></h3>
-          <p class="text">
-            <span class="title-xsmall">リザーブド/スポットインスタンス</span>
-            「AWSの料金を安くする」と考えたときに、最初に思いつくのがEC2やRDSで使える<ExternalLink
-              href="https://aws.amazon.com/jp/ec2/pricing/reserved-instances/"
-              >リザーブドインスタンス</ExternalLink
-            >です。名前のリザーブドが示すとおり、◯年使ってくれるなら安くしますよ、という仕組みになります。これとは別で、EC2の空いているインスタンスを安くつかえるかもしれない、<ExternalLink
-              href="https://aws.amazon.com/jp/ec2/spot/"
-              >スポットインスタンス</ExternalLink
-            >というものもあります。どちらもこのサイトでは計算できないですが...
-          </p>
-          <p class="text">
-            <span class="title-xsmall">ボリュームディスカウント</span>
-            S3のストレージやデータ転送料金は、使うほど単価が安くなる料金体系になっています。安くなるラインが高めなので、なかなか届かないかもしれませんが、<ExternalLink
-              href="https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html"
-              >一括請求</ExternalLink
-            >という仕組みで複数のアカウントを合算すれば恩恵を受けられるかもしれません。
-          </p>
-          <p class="text">
-            <span class="title-xsmall">ストレージクラス</span>
-            S3には<ExternalLink href="https://aws.amazon.com/jp/s3/storage-classes/">ストレージクラス</ExternalLink
-            >というものがあって、アクセスの頻度が低いデータは安く保存できる（代わりに取り出しのコストがかかる）ようになっているので、利用を検討してみてもいいかもしれません。これもこのサイトでは計算できないですが...
-          </p>
-          <p class="text">
-            <span class="title-xsmall">サーバーレスのサービス</span>
-            EC2で行っている処理をLambdaで置き換えてみたり、EC2で公開している静的サイトがあったらS3に移行してみたり、部分的にサーバーレスのサービスを導入してみたら、料金が安くなるかもしれません。
-          </p>
-        </div>
+            Math.floor((195 - 1) * priceSecondRangeTransfer * usdjpy)
+          }}円</pre
+        >
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="title-section">計算式の確認</h2>
+      <div class="service-content">
+        <p class="text">
+          各サービスの料金計算に使用している式は、各ページの<nuxt-link to="/ec2/#function" class="text-link"
+            >◯◯◯の料金計算式をざっくり</nuxt-link
+          >というセクションに記載してますので、どんな計算をしているか気になる方は確認してみてください。計算に不備が見つかった場合は、<ExternalLink
+            href="https://github.com/nishinoshake/aws-rough/issues"
+            >GitHubのIssue</ExternalLink
+          >にあげて頂けたら助かります。<br />
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="title-section">AWSの料金を抑えるには</h2>
+      <div class="service-content">
+        <p class="text">
+          <span class="title-xsmall">リザーブド/スポットインスタンス</span>
+          「AWSの料金を安くする」と考えたときに、最初に思いつくのがEC2やRDSで使える<ExternalLink
+            href="https://aws.amazon.com/jp/ec2/pricing/reserved-instances/"
+            >リザーブドインスタンス</ExternalLink
+          >です。名前のリザーブドが示すとおり、◯年使ってくれるなら安くしますよ、という仕組みになります。これとは別で、EC2の空いているインスタンスを安くつかえるかもしれない、<ExternalLink
+            href="https://aws.amazon.com/jp/ec2/spot/"
+            >スポットインスタンス</ExternalLink
+          >というものもあります。どちらもこのサイトでは計算できないですが...
+        </p>
+        <p class="text">
+          <span class="title-xsmall">ボリュームディスカウント</span>
+          S3のストレージやデータ転送料金は、使うほど単価が安くなる料金体系になっています。安くなるラインが高めなので、なかなか届かないかもしれませんが、<ExternalLink
+            href="https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/con-bill-blended-rates.html"
+            >一括請求</ExternalLink
+          >という仕組みで複数のアカウントを合算すれば恩恵を受けられるかもしれません。
+        </p>
+        <p class="text">
+          <span class="title-xsmall">ストレージクラス</span>
+          S3には<ExternalLink href="https://aws.amazon.com/jp/s3/storage-classes/">ストレージクラス</ExternalLink
+          >というものがあって、アクセスの頻度が低いデータは安く保存できる（代わりに取り出しのコストがかかる）ようになっているので、利用を検討してみてもいいかもしれません。これもこのサイトでは計算できないですが...
+        </p>
+        <p class="text">
+          <span class="title-xsmall">サーバーレスのサービス</span>
+          EC2で行っている処理をLambdaで置き換えてみたり、EC2で公開している静的サイトがあったらS3に移行してみたり、部分的にサーバーレスのサービスを導入してみたら、料金が安くなるかもしれません。
+        </p>
       </div>
     </section>
     <section class="section" id="my-first-aws">
-      <h2 class="title-section">使い道を想像するためにサービス名を網羅するだけの作文</h2>
+      <h2 class="title-section">AWS作文</h2>
       <div class="service-content">
         <div class="what-poem">
           <section class="section">
@@ -224,11 +217,8 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
                 class="pc"
               />なんとか公開まで持っていけそうだ。
             </p>
-            <p class="what-poem-text">しかしこれ、料金はいくらかかるんだ？</p>
+            <p class="what-poem-text">しかしこれ、一体いくらかかるんだ？</p>
           </section>
-          <div class="what-footer">
-            <nuxt-link to="/ec2/" class="what-button">まずはEC2の料金を計算</nuxt-link>
-          </div>
         </div>
       </div>
     </section>

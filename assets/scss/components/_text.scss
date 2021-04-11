@@ -4,6 +4,10 @@
   text-align: justify;
 }
 
+.text + .text {
+  margin-top: 1em;
+}
+
 .title-small + .text {
   margin-top: 0;
 }

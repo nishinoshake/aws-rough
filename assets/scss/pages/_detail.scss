@@ -29,7 +29,7 @@
 
 .detail-body {
   position: relative;
-  border-top: 1px solid $color-border;
+  border-top: $border-width solid $color-border;
   @include max {
     padding: 50px $padding-base-sp;
   }

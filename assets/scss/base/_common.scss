@@ -37,18 +37,18 @@ body {
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      border: 1px solid $color-border;
+      border: $border-width solid $color-border;
       pointer-events: none;
       box-sizing: border-box;
     }
     &:after {
       content: "";
-      width: 1px;
+      width: $border-width;
       height: 100vh;
       position: fixed;
       z-index: 100;
       top: 0;
-      right: calc(50% - #{$width-max} / 2 + #{$width-menu-pc});
+      left: calc(50% - #{$width-max} / 2 + #{$width-menu-pc});
       background-color: $color-border;
       pointer-events: none;
       box-sizing: border-box;

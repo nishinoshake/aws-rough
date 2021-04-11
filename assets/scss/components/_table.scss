@@ -4,14 +4,14 @@
   width: 100%;
   display: block;
   position: relative;
-  border-top: 1px solid $color-border;
+  border-top: $border-width solid $color-border;
   tbody {
     display: block;
   }
   tr {
     width: 100%;
     position: relative;
-    border-bottom: 1px solid $color-border;
+    border-bottom: $border-width solid $color-border;
     @include max {
       display: block;
       padding: $padding-sp 0;
@@ -88,7 +88,7 @@
       }
       @include min {
         top: 66px;
-        left: 18px;
+        left: 14px;
       }
     }
   }

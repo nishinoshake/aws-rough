@@ -1,15 +1,23 @@
 <template>
   <footer class="footer" id="footer">
     <div class="footer-container">
-      <p class="footer-label">
-        <nuxt-link to="/about/">このサイトについて</nuxt-link>
-      </p>
+      <ul class="footer-list">
+        <li class="footer-item">
+          <nuxt-link to="/about/">ABOUT</nuxt-link>
+        </li>
+        <li class="footer-item">
+          <a href="https://github.com/nishinoshake/aws-rough" target="_blank" rel="noopener">GitHub</a>
+        </li>
+      </ul>
     </div>
   </footer>
 </template>
 
 <script>
+import ExternalLink from '@/components/text/ExternalLink'
+
 export default {
-  name: 'LayoutFooter'
+  name: 'LayoutFooter',
+  components: { ExternalLink }
 }
 </script>

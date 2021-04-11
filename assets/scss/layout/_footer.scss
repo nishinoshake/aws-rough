@@ -14,35 +14,31 @@
     max-width: $width-max;
     margin: 0 auto;
     height: 100%;
+    padding-left: $width-menu-pc;
     padding-right: $width-menu-pc;
     padding-right: var(--header-width);
   }
 }
-.footer-label {
-  color: $color-font;
-  background-color: $color-white;
-  @include fz-s;
+.footer-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include max {
-    margin-top: 6px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid $color-border;
-    @include center-flex;
+    padding: 16px 0;
+    border-top: $border-width solid $color-border;
+    border-bottom: $border-width solid $color-border;
   }
   @include min {
-    width: 100%;
     height: 100%;
-    border-top: 1px solid $color-border;
+    border-top: $border-width solid $color-border;
   }
-  a {
-    color: currentColor;
-    text-decoration: none;
-    @include min {
-      width: 100%;
-      height: 100%;
-      @include center-flex;
-      &:hover {
-        background-color: $color-snow;
-      }
-    }
+}
+.footer-item {
+  a:hover {
+    text-decoration: underline;
   }
+}
+.footer-item + .footer-item {
+  margin-left: 1.5em;
 }

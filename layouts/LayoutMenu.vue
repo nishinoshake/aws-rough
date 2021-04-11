@@ -1,6 +1,9 @@
 <template>
   <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
     <div class="menu-frame">
+      <p class="menu-logo">
+        <nuxt-link to="/" class="menu-logo-link">ざっくりAWS</nuxt-link>
+      </p>
       <ul class="menu-list">
         <li v-for="service in services" :key="service.key" class="menu-item">
           <nuxt-link :class="`menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">

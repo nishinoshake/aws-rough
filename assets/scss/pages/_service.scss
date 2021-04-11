@@ -11,7 +11,18 @@
     padding-right: 80px;
   }
 }
-
+.service-copy {
+  position: relative;
+  &:after {
+    content: "";
+    width: 100%;
+    height: $border-width;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $color-border;
+  }
+}
 .service-unknown {
   mix-blend-mode: difference;
   @include max {
@@ -86,7 +97,7 @@
     }
   }
   &:first-child {
-    border-top: 1px solid $color-border;
+    border-top: $border-width solid $color-border;
   }
   .table {
     border-top: none;
@@ -102,12 +113,11 @@
   @include font-en;
   @include fz-l;
   @include lh-min;
-  @include dot-border;
   @include max {
-    padding: 20px $padding-base-sp;
+    padding: 20px $padding-base-sp 0;
   }
   @include min {
-    padding: 28px $padding-base-pc 29px;
+    padding: 28px $padding-base-pc 0;
   }
 }
 

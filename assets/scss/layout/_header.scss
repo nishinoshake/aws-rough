@@ -3,12 +3,6 @@
 .header {
   display: flex;
   line-height: 1;
-  @include max {
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-    border-top: 1px solid $color-border;
-  }
   @include min {
     width: 100%;
     position: fixed;
@@ -34,53 +28,9 @@
     flex-direction: row-reverse;
     min-height: $height-header-pc;
     background-color: $color-white;
-    border-top: 1px solid $color-border;
-    border-left: 1px solid $color-border;
+    border-top: $border-width solid $color-border;
+    border-left: $border-width solid $color-border;
     pointer-events: auto;
   }
 }
-.header-list {
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  @include min {
-    height: 100%;
-  }
-}
-.header-item {
-  display: flex;
-  align-items: center;
-  @include max {
-    + .header-item {
-      &:before {
-        content: "/";
-        margin: 0 0.2em;
-      }
-    }
-  }
-  @include min {
-    width: $width-menu-pc;
-    height: 100%;
-    + .header-item {
-      border-left: 1px solid $color-border;
-    }
-  }
-}
-.header-link {
-  display: block;
-  @include font-en;
-  @include max {
-    font-size: 14px;
-  }
-  @include min {
-    font-size: 16px;
-  }
-  @include min {
-    width: 100%;
-    height: 100%;
-    @include center-flex;
-    &:hover {
-      background-color: $color-snow;
-    }
-  }
-}
+

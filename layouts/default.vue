@@ -2,12 +2,12 @@
   <div :class="`app page-${routeName}`">
     <div class="container">
       <div class="main">
+        <LayoutMenu />
         <div class="contents">
           <div class="page">
             <nuxt />
           </div>
         </div>
-        <LayoutMenu />
       </div>
     </div>
     <LayoutHeader />
