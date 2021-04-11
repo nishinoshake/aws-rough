@@ -182,7 +182,7 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
                 to="/elasticache/"
                 class="mod-blue"
                 >ElastiCache</nuxt-link
-              >でRedisを動かすことも検討しよう。
+              >でRedisを導入することも検討しよう。
             </p>
             <p class="what-poem-text">
               これでもう十分な感はあるけど、<br class="pc" />サーバーレスで設計してみたい気持ちになってきた。
