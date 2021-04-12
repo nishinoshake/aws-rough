@@ -55,7 +55,16 @@
   }
   .service-content {
     overflow: hidden;
+    @include min {
+      padding: 40px;
+    }
   }
+}
+.service-ad-label {
+  margin-top: 1em;
+  text-align: center;
+  color: $color-muted;
+  @include fz-sm;
 }
 .service-ad-inner {
   position: sticky;

@@ -5,8 +5,7 @@
   flex-wrap: wrap;
   margin: -8px -16px;
   @include min {
-    margin: 0;
-    padding: 1px 0;
+    margin: -15px;
   }
 }
 .landing-service-item {
