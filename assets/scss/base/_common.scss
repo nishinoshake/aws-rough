@@ -82,7 +82,7 @@ body {
   }
   @include min($mq-tb-min) {
     width: calc(100% - #{$width-menu-pc});
-    min-height: calc(100vh - #{$height-header-pc});
+    min-height: calc(100vh - #{$height-footer-pc});
   }
 }
 
