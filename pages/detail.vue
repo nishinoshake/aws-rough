@@ -11,7 +11,7 @@
         <DetailChart v-if="hasService" :services="services" :colors="colors" :hover-colors="hoverColors" />
       </div>
       <p :class="['detail-empty', { 'is-visible': !hasService && !isLoading }]">
-        <span>0円なので、内訳を表示できません。</span>
+        <span>表示する内訳がありません</span>
       </p>
       <p :class="['detail-empty', { 'is-visible': isLoading }]">
         <span>Loading...</span>

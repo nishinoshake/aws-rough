@@ -3,8 +3,7 @@
 .price {
   display: inline-flex;
   align-items: baseline;
-  font-family: sans-serif;
-  @include fz-xs;
+  @include fz-s;
   @include lh-1;
   &.mod-large {
     .price-unit {

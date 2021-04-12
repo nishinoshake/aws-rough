@@ -139,3 +139,11 @@
     }
   }
 }
+
+.page-detail {
+  @include min {
+    .cart-detail {
+      display: none;
+    }
+  }
+}

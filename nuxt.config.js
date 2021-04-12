@@ -41,6 +41,10 @@ module.exports = {
         property: 'og:image',
         content: 'https://aws-rough.cc/img/og.png?d=2020060301'
       }
+    ],
+    link: [
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap' }
     ]
   },
   loading: false,

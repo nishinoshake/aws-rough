@@ -5,9 +5,9 @@
   line-height: 1;
   @include min {
     width: 100%;
-    position: fixed;
+    position: absolute;
     z-index: 20;
-    bottom: 0;
+    top: 0;
     left: 0;
     pointer-events: none;
   }
@@ -28,7 +28,7 @@
     flex-direction: row-reverse;
     min-height: $height-header-pc;
     background-color: $color-white;
-    border-top: $border-width solid $color-border;
+    border-bottom: $border-width solid $color-border;
     border-left: $border-width solid $color-border;
     pointer-events: auto;
   }

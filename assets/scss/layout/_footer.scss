@@ -17,8 +17,6 @@
   @include min {
     max-width: $width-max;
     margin: 0 auto;
-    padding-right: $width-menu-pc;
-    padding-right: var(--header-width);
   }
 }
 .footer-list {
