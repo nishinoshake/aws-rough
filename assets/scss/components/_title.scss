@@ -3,6 +3,8 @@
 .title-page {
   display: flex;
   align-items: center;
+  letter-spacing: 0.08em;
+  font-feature-settings: "palt";
   @include font-en;
   @include fz-grande;
   @include lh-1;
@@ -31,20 +33,19 @@
 }
 
 .title-section {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   position: relative;
   letter-spacing: 0.08em;
   font-feature-settings: "palt";
-  color: $color-white;
-  background-color: $color-border;
-  // border-right: $border-width solid $color-border;
-  // border-bottom: $border-width solid $color-border;
-  @include fz-l;
+  border-bottom: $border-width solid $color-border;
+  @include fz-ml;
   @include max {
-    padding: 12px 16px;
+    padding: 12px $padding-base-sp;
   }
   @include min {
-    padding: 18px 24px;
+    min-height: $height-section-heading-pc;
+    padding: 18px $padding-base-pc;
     @include lh-1;
   }
   a {
@@ -63,19 +64,9 @@
   @include min {
     margin-bottom: 14px;
   }
-  span {
-    padding-bottom: 2px;
-    border-bottom: 2px solid currentColor;
-  }
 }
 
 .title-xsmall {
   display: block;
   font-weight: 700;
-  @include max {
-    margin-top: 10px;
-  }
-  @include min {
-    margin-top: 18px;
-  }
 }

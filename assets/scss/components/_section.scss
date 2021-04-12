@@ -7,23 +7,7 @@
 
 .section-child {
   + .section-child {
-    @include max {
-      margin-top: 50px;
-    }
-    @include min {
-      margin-top: 60px;
-    }
-  }
 
-  > * + * {
-    @include max {
-      margin-top: 12px;
-    }
-    @include min {
-      margin-top: 24px;
-    }
-  }
-  > *:last-child {
-    margin-bottom: 0;
+    margin-top: 32px;
   }
 }

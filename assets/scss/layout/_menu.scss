@@ -1,14 +1,14 @@
 @charset "utf-8";
 
 .menu {
-  @include max {
+  @include max($mq-tb-max) {
     &.is-open .menu-frame {
       visibility: visible;
       transform: translateY(0);
       transition: transform 0.4s $easeOutQuart, visibility 0s;
     }
   }
-  @include min {
+  @include min($mq-tb-min) {
     width: $width-menu-pc;
     position: sticky;
     z-index: 10;
@@ -23,7 +23,7 @@
 }
 
 .menu-button {
-  @include max {
+  @include max($mq-tb-max) {
     width: $width-menu-sp;
     height: $width-menu-sp;
     position: fixed;
@@ -34,7 +34,7 @@
     border-radius: 50%;
     @include center-flex;
   }
-  @include min {
+  @include min($mq-tb-min) {
     display: none;
   }
   &.is-open {
@@ -82,7 +82,7 @@
 }
 
 .menu-frame {
-  @include max {
+  @include max($mq-tb-max) {
     width: 100vw;
     position: fixed;
     bottom: 0;
@@ -96,28 +96,28 @@
     will-change: transform;
     transition: transform 0.3s $easeOutQuart, visibility 0s 0.3s;
   }
-  @include min {
+  @include min($mq-tb-min) {
     width: 100%;
     position: relative;
   }
 }
 .menu-logo {
-  @include min {
+  @include min($mq-tb-min) {
     border-bottom: $border-width solid $color-border;
   }
 }
 .menu-logo-link {
   display: block;
   @include font-en;
-  @include max {
+  @include max($mq-tb-max) {
     padding: 12px;
     font-size: 18px;
   }
-  @include min {
+  @include min($mq-tb-min) {
     padding: 7px 4px;
     font-size: 16px;
   }
-  @include min {
+  @include min($mq-tb-min) {
     width: 100%;
     height: 100%;
     @include center-flex;
@@ -127,17 +127,17 @@
   }
 }
 .menu-list {
-  @include max {
+  @include max($mq-tb-max) {
     display: flex;
     flex-wrap: wrap;
     margin: -7px;
   }
 }
 .menu-item {
-  @include max {
+  @include max($mq-tb-max) {
     padding: 7px;
   }
-  @include min {
+  @include min($mq-tb-min) {
     border-bottom: $border-width solid $color-border;
   }
 }
@@ -150,27 +150,28 @@
   &.is-active {
     background-color: $color-snow;
   }
-  @include max {
+  @include max($mq-tb-max) {
     padding: 12px;
     @include fz-l;
   }
-  @include min {
+  @include min($mq-tb-min) {
+    height: 40px;
     padding: 9px 14px;
-    font-size: 15px;
+    font-size: 14px;
     &:hover {
       background-color: $color-snow;
     }
   }
   svg {
     flex: none;
-    @include max {
+    @include max($mq-tb-max) {
       width: 24px;
       height: 24px;
       margin-right: 3px;
     }
-    @include min {
-      width: 22px;
-      height: 22px;
+    @include min($mq-tb-min) {
+      width: 21px;
+      height: 21px;
       margin-right: 3px;
     }
   }

@@ -11,7 +11,7 @@
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-small"><span>ノードタイプ</span></h3>
+        <h3 class="title-xsmall"><span>ノードタイプ</span></h3>
         <p class="text">
           利用する<ExternalLink href="https://aws.amazon.com/jp/elasticache/pricing/">ノードタイプ</ExternalLink
           >を選択してください。
@@ -21,7 +21,7 @@
 
     <template v-slot:disclaimer>
       <section class="section-child">
-        <h3 class="title-small"><span>リザーブドノード</span></h3>
+        <h3 class="title-xsmall"><span>リザーブドノード</span></h3>
         <p class="text">
           オンデマンドノードの利用を前提にしています。あらかじめノードを予約する<ExternalLink
             href="https://aws.amazon.com/jp/elasticache/reserved-cache-nodes/"
@@ -30,7 +30,7 @@
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>選択肢にないノードタイプ</span></h3>
+        <h3 class="title-xsmall"><span>選択肢にないノードタイプ</span></h3>
         <p class="text">
           ノードタイプは、よく使いそうなものに絞っています。その他のノードタイプについては、<ExternalLink
             href="https://aws.amazon.com/jp/elasticache/pricing/"
@@ -39,7 +39,7 @@
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>追加のバックアップストレージ</span></h3>
+        <h3 class="title-xsmall"><span>追加のバックアップストレージ</span></h3>
         <p class="text">
           1つのスナップショットのストレージ領域は無料で提供していますが、<ExternalLink
             href="https://aws.amazon.com/jp/elasticache/pricing/#%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8"
@@ -48,7 +48,7 @@
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>異なるAZ間のデータ転送</span></h3>
+        <h3 class="title-xsmall"><span>異なるAZ間のデータ転送</span></h3>
         <p class="text">
           同一リージョンの異なるAZにあるEC2の間でデータを転送する場合には、<ExternalLink
             href="https://aws.amazon.com/jp/elasticache/pricing/#%E3%83%87%E3%83%BC%E3%82%BF%E8%BB%A2%E9%80%81"

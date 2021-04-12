@@ -10,11 +10,13 @@
   }
 }
 .footer-container {
+  @include min($mq-tb-min) {
+    height: 100%;
+    padding-left: $width-menu-pc;
+  }
   @include min {
     max-width: $width-max;
     margin: 0 auto;
-    height: 100%;
-    padding-left: $width-menu-pc;
     padding-right: $width-menu-pc;
     padding-right: var(--header-width);
   }
@@ -35,6 +37,7 @@
   }
 }
 .footer-item {
+  @include fz-sm;
   a:hover {
     text-decoration: underline;
   }

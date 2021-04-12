@@ -15,7 +15,7 @@
         </p>
       </div>
       <div class="section-child">
-        <h3 class="title-small"><span>SNSとSQSを組み合わせる例</span></h3>
+        <h3 class="title-xsmall"><span>SNSとSQSを組み合わせる例</span></h3>
         <p class="text">
           ユーザーがアップロードした画像に対して、サムネイルの作成と画像認識の処理を同時に走らせたい場合、メッセージを一旦SNSのトピックに投げて、それを複数のSQSのキューでサブスクライブする設計しておけば、処理が増えた場合のスケールが簡単になります。（<ExternalLink
             href="https://docs.aws.amazon.com/sns/latest/dg/sns-common-scenarios.html"

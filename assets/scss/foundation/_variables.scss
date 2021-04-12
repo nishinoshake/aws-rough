@@ -24,8 +24,10 @@ $color-border-dark: #aaa;
 // -----------------------------------------------------
 // size
 // -----------------------------------------------------
-$mq-max: 1176px;
+$mq-max: 1200px;
 $mq-min: $mq-max + 1;
+$mq-tb-max: 700px;
+$mq-tb-min: $mq-tb-max + 1;
 $width-max: $mq-max;
 $width-menu-pc: 154px;
 $width-footer-pc: 600px;
@@ -42,12 +44,13 @@ $height-header-pc: 50px;
 $height-footer-pc: 50px;
 $height-heading-pc: 128px;
 $height-heading-sp: 120px;
+$height-section-heading-pc: 82px;
 $height-cart-pc: 60px;
 $margin-sp: 20px;
 $margin-pc: 30px;
 $padding-sp: 24px;
 $padding-pc: 100px;
-$padding-base-pc: 52px;
+$padding-base-pc: 40px;
 $padding-base-sp: 30px;
 $padding-content-pc: 20px;
 $padding-bottom-pc: 100px;

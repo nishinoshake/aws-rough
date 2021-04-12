@@ -1,19 +1,19 @@
 @charset "utf-8";
 
-
 .landing-service-list {
   display: flex;
   flex-wrap: wrap;
+  margin: -8px -16px;
   @include min {
-    margin: -13px -18px;
+    margin: -26px -18px -12px;
   }
 }
 .landing-service-item {
   @include max {
-    width: 50%;
+    width: 160px;
   }
   @include min {
-    width: 25%;
+    width: 210px;
   }
 }
 .landing-service-link {
@@ -22,7 +22,7 @@
     padding: 16px 0;
   }
   @include min {
-    padding: 6px 0;
+    padding: 5px 0;
     &:hover {
       filter: grayscale(100%);
       color: $color-muted;
@@ -33,14 +33,14 @@
   display: flex;
   align-items: center;
   @include min {
-    padding: 12px;
+    padding: 10px;
     border: $border-width solid transparent;
   }
 }
 .landing-service-icon {
   @include max {
-    width: 50px;
-    margin-right: 6px;
+    width: 46px;
+    margin-right: 5px;
   }
   @include min {
     width: 60px;
@@ -52,7 +52,7 @@
   @include font-en;
   @include lh-1;
   @include max {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
   @include min {
     margin-bottom: 10px;
@@ -63,6 +63,17 @@
   color: $color-muted;
   @include fz-xs;
   @include lh-1;
+}
+.landing-heading {
+  display: flex;
+  margin-bottom: 20px;
+  @include min {
+    margin-bottom: 41px;
+    @include fz-l;
+  }
+  span {
+    border-bottom: $border-width solid currentColor;
+  }
 }
 .landing-ball-frame {
   display: flex;

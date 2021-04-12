@@ -8,7 +8,7 @@
     margin-bottom: 10px;
   }
   @include min {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 }
 
@@ -29,7 +29,7 @@
     padding: 10px;
   }
   @include min {
-    padding: 12px;
+    padding: 10px 12px;
   }
   &:invalid {
     background-color: rgba($color-red, 0.2);

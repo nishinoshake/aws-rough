@@ -10,6 +10,9 @@ body {
   @include font-sans;
   @include lh-base;
   @include fz-m;
+  @include min {
+    background-color: $color-snow;
+  }
 }
 
 .app {
@@ -21,44 +24,57 @@ body {
 
 .container {
   position: relative;
+  background-color: $color-white;
+  @include min($mq-tb-min) {
+
+  }
   @include min {
     max-width: $width-max;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: $height-footer-pc; 
-    &:before {
+  }
+  &:before {
+    @include min($mq-tb-min) {
       content: "";
       width: 100%;
-      max-width: $width-max;
       height: 100vh;
       position: fixed;
       z-index: 100;
       left: 0;
       right: 0;
-      margin-left: auto;
-      margin-right: auto;
       border: $border-width solid $color-border;
       pointer-events: none;
       box-sizing: border-box;
     }
-    &:after {
+    @include min {
+      max-width: $width-max;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &:after {
+    @include min($mq-tb-min) {
       content: "";
       width: $border-width;
       height: 100vh;
       position: fixed;
       z-index: 100;
       top: 0;
-      left: calc(50% - #{$width-max} / 2 + #{$width-menu-pc});
+      left: $width-menu-pc;
       background-color: $color-border;
       pointer-events: none;
       box-sizing: border-box;
+    }
+    @include min {
+      left: calc(50% - #{$width-max} / 2 + #{$width-menu-pc});
     }
   }
 }
 
 .main {
   position: relative;
-  @include min {
+  @include min($mq-tb-min) {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -67,10 +83,10 @@ body {
 
 .contents {
   position: relative;
-  @include max {
+  @include max($mq-tb-max) {
     min-height: 100vh;
   }
-  @include min {
+  @include min($mq-tb-min) {
     width: calc(100% - #{$width-menu-pc});
     min-height: calc(100vh - #{$height-header-pc});
   }

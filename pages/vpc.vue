@@ -22,18 +22,18 @@
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-small"><span>個数</span></h3>
+        <h3 class="title-xsmall"><span>個数</span></h3>
         <p class="text">利用するNAT Gatewayの個数を入力してください。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>処理データ量</span></h3>
+        <h3 class="title-xsmall"><span>処理データ量</span></h3>
         <p class="text">NAT Gatewayで処理されるデータ量の合計をGB単位で入力してください。</p>
       </section>
     </template>
 
     <template v-slot:disclaimer>
       <section class="section-child">
-        <h3 class="title-small"><span>VPN/PrivateLink</span></h3>
+        <h3 class="title-xsmall"><span>VPN/PrivateLink</span></h3>
         <p class="text">
           <ExternalLink href="https://aws.amazon.com/jp/vpn/">AWS VPN</ExternalLink>や<ExternalLink
             href="https://aws.amazon.com/jp/privatelink/"

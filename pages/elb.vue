@@ -26,18 +26,18 @@
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-small"><span>台数</span></h3>
+        <h3 class="title-xsmall"><span>台数</span></h3>
         <p class="text">利用するロードバランサーの台数を入力してください。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>データ転送量</span></h3>
+        <h3 class="title-xsmall"><span>データ転送量</span></h3>
         <p class="text">
           ロードバランサーで処理されるデータ量の合計をGB単位で入力してください。Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
         </p>
         <pre>2 * 100000 / 1024 ≒ 195GB</pre>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>LCU</span></h3>
+        <h3 class="title-xsmall"><span>LCU</span></h3>
         <p class="text">
           Load Balancer Capacity
           Unit(LCU)を入力してください。名前だけではピンときませんが、単位時間あたりの接続数や帯域幅をもとに算出される数値です。このサイトでざっくりした説明するのは難しいので、<ExternalLink

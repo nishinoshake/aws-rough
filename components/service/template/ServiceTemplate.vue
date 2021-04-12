@@ -5,44 +5,45 @@
       <slot v-if="hasCalc" name="calc" />
       <ServiceTemplateCalc v-else :service="service" />
     </div>
-    <div class="service-body">
-      <section class="accordion-list" id="notice">
-        <ServicePartsAccordion v-if="hasHelp" title="入力項目の補足">
-          <slot name="help" />
-        </ServicePartsAccordion>
+    <div class="service-container">
+      <div class="service-body">
+        <section class="accordion-list" id="notice">
+          <ServicePartsAccordion v-if="hasHelp" title="入力項目の補足">
+            <slot name="help" />
+          </ServicePartsAccordion>
 
-        <ServicePartsAccordion title="料金計算の前提">
-          <slot name="fullCondition" v-if="hasFullCondition" />
-          <ServicePartsCondition v-else>
-            <slot name="condition" />
-          </ServicePartsCondition>
-        </ServicePartsAccordion>
+          <ServicePartsAccordion title="料金計算の前提">
+            <slot name="fullCondition" v-if="hasFullCondition" />
+            <ServicePartsCondition v-else>
+              <slot name="condition" />
+            </ServicePartsCondition>
+          </ServicePartsAccordion>
 
-        <ServicePartsAccordion v-if="hasDisclaimer" title="対象外のもの">
-          <slot name="disclaimer" />
-        </ServicePartsAccordion>
-      </section>
+          <ServicePartsAccordion v-if="hasDisclaimer" title="対象外のもの">
+            <slot name="disclaimer" />
+          </ServicePartsAccordion>
+        </section>
 
-      <section class="section" id="description">
-        <h2 class="title-section">
-          <span class="title-section-large">{{ service.name }}</span
-          >についてざっくり
-        </h2>
-        <div class="service-content">
-          <slot name="zakuri" />
-        </div>
-      </section>
+        <section class="section" id="description">
+          <h2 class="title-section">
+            <span class="title-section-large">{{ service.name }}</span
+            >についてざっくり
+          </h2>
+          <div class="service-content">
+            <slot name="zakuri" />
+          </div>
+        </section>
 
-      <section class="section" id="function">
-        <h2 class="title-section">
-          <span class="title-section-large">{{ service.name }}</span
-          >の料金計算式をざっくり
-        </h2>
-        <div class="service-content">
-          <ServicePartsCode :service-name="serviceName" />
-        </div>
-      </section>
-
+        <section class="section" id="function">
+          <h2 class="title-section">
+            <span class="title-section-large">{{ service.name }}</span
+            >の料金計算式をざっくり
+          </h2>
+          <div class="service-content">
+            <ServicePartsCode :service-name="serviceName" />
+          </div>
+        </section>
+      </div>
       <ServiceTemplateAds />
     </div>
   </article>

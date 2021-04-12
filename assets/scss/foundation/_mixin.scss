@@ -108,11 +108,11 @@
 }
 
 @mixin font-en {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: sans-serif;
 }
 
 @mixin font-source {
-  font-family: Menlo, Monaco, 'Courier New', Consolas, monospace;
+  font-family: Monaco, Menlo, Consolas, "Fira Mono", "DejaVu Sans Mono", "Courier New", monospace;
 }
 
 @mixin hide-text {
@@ -154,7 +154,7 @@
     font-size: 14px;
   }
   @include min {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -190,7 +190,7 @@
     font-size: 32px;
   }
   @include min {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 

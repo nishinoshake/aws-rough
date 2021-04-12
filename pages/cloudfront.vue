@@ -17,29 +17,29 @@
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-small"><span>プロトコル</span></h3>
+        <h3 class="title-xsmall"><span>プロトコル</span></h3>
         <p class="text">HTTPかHTTPSを選択してください。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>データ転送量</span></h3>
+        <h3 class="title-xsmall"><span>データ転送量</span></h3>
         <p class="text">
           CloudFrontからインターネットへ送信されるデータ量をGB単位で入力してください。Webサイトを例にすると、ページあたりの容量が2MBで、月間10万PVの場合、下記のようになります。
         </p>
         <pre>2 * 100000 / 1024 ≒ 195GB</pre>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>リクエスト数</span></h3>
+        <h3 class="title-xsmall"><span>リクエスト数</span></h3>
         <p class="text">CloudFrontへ送信されるリクエストの数を入力してください。</p>
       </section>
     </template>
 
     <template v-slot:disclaimer>
       <section class="section-child">
-        <h3 class="title-small"><span>日本以外のエッジロケーション</span></h3>
+        <h3 class="title-xsmall"><span>日本以外のエッジロケーション</span></h3>
         <p class="text">日本のエッジロケーションを前提に料金を算出しています。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>オリジンへのPOSTやPUT</span></h3>
+        <h3 class="title-xsmall"><span>オリジンへのPOSTやPUT</span></h3>
         <p class="text">
           CloudFrontでは、オリジン(S3/ELB/EC2など)に対するデータのフェッチは無料ですが、POSTやPUTのリクエストに対しては別料金がかかります。詳しくは<ExternalLink
             href="https://aws.amazon.com/jp/cloudfront/pricing/"
@@ -48,7 +48,7 @@
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>大量の無効リクエスト</span></h3>
+        <h3 class="title-xsmall"><span>大量の無効リクエスト</span></h3>
         <p class="text">
           キャッシュの無効リクエストは、月に1,000パスまでは追加料金なしで利用できますが、それ以降は課金されます。詳しくは<ExternalLink
             href="https://aws.amazon.com/jp/cloudfront/pricing/"

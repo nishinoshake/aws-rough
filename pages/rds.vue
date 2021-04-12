@@ -11,7 +11,7 @@
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-small"><span>DBエンジン</span></h3>
+        <h3 class="title-xsmall"><span>DBエンジン</span></h3>
         <p class="text">
           利用する<ExternalLink href="https://aws.amazon.com/jp/rds/#Amazon_RDS_データベースエンジン"
             >データベースエンジン</ExternalLink
@@ -19,14 +19,14 @@
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>インスタンス</span></h3>
+        <h3 class="title-xsmall"><span>インスタンス</span></h3>
         <p class="text">
           利用する<ExternalLink href="https://aws.amazon.com/jp/rds/instance-types/">インスタンスタイプ</ExternalLink
           >を選択してください。
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>AZ</span></h3>
+        <h3 class="title-xsmall"><span>AZ</span></h3>
         <p class="text">
           シンプルなSingle-AZか、冗長構成の<ExternalLink href="https://aws.amazon.com/jp/rds/details/multi-az/"
             >Multi-AZ</ExternalLink
@@ -34,27 +34,27 @@
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>ストレージ</span></h3>
+        <h3 class="title-xsmall"><span>ストレージ</span></h3>
         <p class="text">RDSに割り当てるストレージの容量をGB単位で入力してください。</p>
       </section>
     </template>
 
     <template v-slot:disclaimer>
       <section class="section-child">
-        <h3 class="title-small"><span>ライセンスがややこしいデータベース</span></h3>
+        <h3 class="title-xsmall"><span>ライセンスがややこしいデータベース</span></h3>
         <p class="text">
           選択できるDBエンジンは、MySQL/MariaDB/PostgreSQLに絞っています。>OracleとMicrosoft SQL
           Serverは、ライセンスまわりがややこしかったので除外しています。すみません。
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>リザーブドインスタンスなど</span></h3>
+        <h3 class="title-xsmall"><span>リザーブドインスタンスなど</span></h3>
         <p class="text">
           インスタンスの支払い方法は、オンデマンドインスタンスを前提にしています。>オンデマンドインスタンス以外にも、あらかじめ予約することで安く利用できるリザーブドインスタンスが用意されています。
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>選択肢にないインスタンスタイプ</span></h3>
+        <h3 class="title-xsmall"><span>選択肢にないインスタンスタイプ</span></h3>
         <p class="text">
           インスタンスタイプは、よく使いそうなものに絞っています。>その他のインスタンスタイプについては、<ExternalLink
             href="https://aws.amazon.com/jp/rds/instance-types/"
@@ -63,18 +63,18 @@
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>汎用SSD以外のストレージ</span></h3>
+        <h3 class="title-xsmall"><span>汎用SSD以外のストレージ</span></h3>
         <p class="text">
           ストレージはEBSの汎用SSDを前提にしています。汎用SSD以外にもパフォーマンスが高い「プロビジョンド IOPS
           SSD」や、安価な「マグネティック」なども用意されています。
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>バックアップストレージ</span></h3>
+        <h3 class="title-xsmall"><span>バックアップストレージ</span></h3>
         <p class="text">バックアップストレージを利用する場合は追加料金がかかります。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>データ転送</span></h3>
+        <h3 class="title-xsmall"><span>データ転送</span></h3>
         <p class="text">
           RDSからインターネットや別リージョンへデータを転送する場合は転送料がかかります。>同一AZ内のRDSとEC2のインスタンス間のデータ転送や、Multi-AZのレプリケーションを目的とするデータ転送は無料です。
         </p>

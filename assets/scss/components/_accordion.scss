@@ -2,10 +2,10 @@
 
 .accordion-list {
   @include max {
-    margin: 60px 0;
+    margin-bottom: 80px;
   }
   @include min {
-    margin: 89px 0;
+    margin-bottom: 122px;
   }
 }
 
@@ -27,7 +27,8 @@
 
 .accordion-title {
   width: 100%;
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
   text-align: left;
   color: $color-font;
@@ -38,6 +39,7 @@
     padding: $padding-base-sp;
   }
   @include min {
+    min-height: $height-section-heading-pc - 1px;
     padding: 30px $padding-base-pc;
     &:hover {
       background-color: $color-snow;

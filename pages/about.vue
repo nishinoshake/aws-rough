@@ -24,142 +24,147 @@
         </div>
       </div>
     </section>
+    <div class="service-container service-container-without-margin">
+      <div class="service-body">
+        <section class="section">
+          <h2 class="title-section">計算の前提</h2>
+          <div class="service-content">
+            <div class="section-child">
+              <table class="spec">
+                <caption>
+                  ※ 為替とAWSの料金は毎朝10時に更新しています
+                </caption>
+                <tbody>
+                  <tr>
+                    <th>通貨</th>
+                    <td>日本円</td>
+                  </tr>
+                  <tr>
+                    <th>税金</th>
+                    <td>税抜き</td>
+                  </tr>
+                  <tr>
+                    <th>期間</th>
+                    <td>30.5日（月額）</td>
+                  </tr>
+                  <tr>
+                    <th>ドル円</th>
+                    <td>
+                      <span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span
+                      >円
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>リージョン</th>
+                    <td>東京<br />バージニア北部（SESのみ）</td>
+                  </tr>
+                  <tr>
+                    <th>AWSの料金</th>
+                    <td>
+                      <ExternalLink
+                        href="https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/price-changes.html"
+                        >Price List API</ExternalLink
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>為替レート</th>
+                    <td>
+                      <ExternalLink href="https://github.com/exchangeratesapi/exchangeratesapi"
+                        >exchangeratesapi</ExternalLink
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
 
-    <section class="section">
-      <h2 class="title-section">計算の前提</h2>
-      <div class="service-content">
-        <div class="section-child">
-          <table class="spec">
-            <caption>
-              ※ 為替とAWSの料金は毎朝10時に更新しています
-            </caption>
-            <tbody>
-              <tr>
-                <th>通貨</th>
-                <td>日本円</td>
-              </tr>
-              <tr>
-                <th>税金</th>
-                <td>税抜き</td>
-              </tr>
-              <tr>
-                <th>期間</th>
-                <td>30.5日（月額）</td>
-              </tr>
-              <tr>
-                <th>ドル円</th>
-                <td>
-                  <span v-if="usdjpy" data-test="yen">{{ usdjpy }}</span
-                  >円
-                </td>
-              </tr>
-              <tr>
-                <th>リージョン</th>
-                <td>東京<br />バージニア北部（SESのみ）</td>
-              </tr>
-              <tr>
-                <th>AWSの料金</th>
-                <td>
-                  <ExternalLink
-                    href="https://docs.aws.amazon.com/ja_jp/awsaccountbilling/latest/aboutv2/price-changes.html"
-                    >Price List API</ExternalLink
+        <section class="section">
+          <h2 class="title-section">Google Analytics</h2>
+          <div class="service-content">
+            <div class="section-child">
+              <p class="text">
+                サイトの利用状況を把握するために、Google
+                Analyticsを使用しています。GoogleによるCookieの利用方法やオプトアウトの方法は、下記のリンクから確認できます。
+              </p>
+
+              <ul class="list">
+                <li class="list-item">
+                  <ExternalLink href="https://policies.google.com/technologies/cookies?hl=ja"
+                    >GoogleによるCookieの利用方法</ExternalLink
                   >
-                </td>
-              </tr>
-              <tr>
-                <th>為替レート</th>
-                <td>
-                  <ExternalLink href="https://github.com/exchangeratesapi/exchangeratesapi"
-                    >exchangeratesapi</ExternalLink
+                </li>
+                <li class="list-item">
+                  <ExternalLink href="https://support.google.com/analytics/answer/181881?hl=ja"
+                    >Google Analyticsのオプトアウト</ExternalLink
                   >
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-    <section class="section">
-      <h2 class="title-section">Google Analytics</h2>
-      <div class="service-content">
-        <div class="section-child">
-          <p class="text">
-            サイトの利用状況を把握するために、Google
-            Analyticsを使用しています。GoogleによるCookieの利用方法やオプトアウトの方法は、下記のリンクから確認できます。
-          </p>
+        <section class="section">
+          <h2 class="title-section">Google AdSense</h2>
+          <div class="service-content">
+            <div class="section-child">
+              <p class="text">
+                広告の配信に、Google
+                AdSenseというサービスを使用しており、こちらもCookieを使用します。パーソナライズ広告に抵抗がある方は、<ExternalLink
+                  href="https://www.google.com/settings/ads"
+                  >広告設定のページ</ExternalLink
+                >から無効にできます。
+              </p>
+            </div>
+          </div>
+        </section>
 
-          <ul class="list">
-            <li class="list-item">
-              <ExternalLink href="https://policies.google.com/technologies/cookies?hl=ja"
-                >GoogleによるCookieの利用方法</ExternalLink
-              >
-            </li>
-            <li class="list-item">
-              <ExternalLink href="https://support.google.com/analytics/answer/181881?hl=ja"
-                >Google Analyticsのオプトアウト</ExternalLink
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <section class="section">
+          <h2 class="title-section">GitHub</h2>
+          <div class="service-content">
+            <div class="section-child">
+              <p class="text">ソースコードはGitHubにあります。</p>
+              <ul class="list">
+                <li class="list-item">
+                  <ExternalLink href="https://github.com/nishinoshake/aws-rough">nishinoshake/aws-rough</ExternalLink>
+                </li>
+                <li class="list-item">
+                  <ExternalLink href="https://github.com/nishinoshake/aws-rough-functions"
+                    >nishinoshake/aws-rough-functions</ExternalLink
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-    <section class="section">
-      <h2 class="title-section">Google AdSense</h2>
-      <div class="service-content">
-        <div class="section-child">
-          <p class="text">
-            広告の配信に、Google
-            AdSenseというサービスを使用しており、こちらもCookieを使用します。パーソナライズ広告に抵抗がある方は、<ExternalLink
-              href="https://www.google.com/settings/ads"
-              >広告設定のページ</ExternalLink
-            >から無効にできます。
-          </p>
-        </div>
+        <section class="section">
+          <h2 class="title-section">お問い合わせ</h2>
+          <div class="service-content">
+            <div class="section-child">
+              <p class="text">
+                不具合などのご連絡は、<ExternalLink href="https://github.com/nishinoshake/aws-rough/issues"
+                  >GitHubのIssue</ExternalLink
+                >か<ExternalLink href="https://twitter.com/nishinoshake">Twitter</ExternalLink>か<a
+                  href="mailto:lawson.and.7.11@gmail.com"
+                  class="text-link"
+                  >メール</a
+                >までお願いいたします。
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <section class="section">
-      <h2 class="title-section">GitHub</h2>
-      <div class="service-content">
-        <div class="section-child">
-          <p class="text">ソースコードはGitHubにあります。</p>
-          <ul class="list">
-            <li class="list-item">
-              <ExternalLink href="https://github.com/nishinoshake/aws-rough">nishinoshake/aws-rough</ExternalLink>
-            </li>
-            <li class="list-item">
-              <ExternalLink href="https://github.com/nishinoshake/aws-rough-functions"
-                >nishinoshake/aws-rough-functions</ExternalLink
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="title-section">お問い合わせ</h2>
-      <div class="service-content">
-        <div class="section-child">
-          <p class="text">
-            不具合などのご連絡は、<ExternalLink href="https://github.com/nishinoshake/aws-rough/issues"
-              >GitHubのIssue</ExternalLink
-            >か<ExternalLink href="https://twitter.com/nishinoshake">Twitter</ExternalLink>か<a
-              href="mailto:lawson.and.7.11@gmail.com"
-              class="text-link"
-              >メール</a
-            >までお願いいたします。
-          </p>
-        </div>
-      </div>
-    </section>
+      <ServiceTemplateAds />
+    </div>
   </div>
 </template>
 
 <script>
 import ServicePartsUnkown from '@/components/service/parts/ServicePartsUnkown'
+import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import ExternalLink from '@/components/text/ExternalLink'
 import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
@@ -168,7 +173,7 @@ import { getService } from '@/lib/service'
 
 export default {
   name: 'LandingIndex',
-  components: { ServicePartsUnkown, ExternalLink },
+  components: { ServicePartsUnkown, ServiceTemplateAds, ExternalLink },
   data() {
     return {
       monthlyDate: MONTHLY_DATE

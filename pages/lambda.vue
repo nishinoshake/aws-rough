@@ -22,12 +22,12 @@
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-small"><span>リクエスト数</span></h3>
+        <h3 class="title-xsmall"><span>リクエスト数</span></h3>
         <p class="text">Lambdaへのリクエスト数を入力してください。</p>
         <p class="text">{{ freeRequest }}件のリクエストは無料です。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>メモリ</span></h3>
+        <h3 class="title-xsmall"><span>メモリ</span></h3>
         <p class="text">
           Lambdaに割り当てたメモリと、実行された秒数をかけた値を入力してください。{{
             freeMemory

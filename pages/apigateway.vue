@@ -11,15 +11,15 @@
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-small"><span>リクエスト数</span></h3>
+        <h3 class="title-xsmall"><span>リクエスト数</span></h3>
         <p class="text">API Gatewayへ送信されるリクエストの数を入力してください。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>データ転送量</span></h3>
+        <h3 class="title-xsmall"><span>データ転送量</span></h3>
         <p class="text">API Gatewayから送信されるデータ転送量をGB単位で入力してください。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>キャッシュ</span></h3>
+        <h3 class="title-xsmall"><span>キャッシュ</span></h3>
         <p class="text">キャッシュを使用する場合は、サイズを選択してください。</p>
       </section>
     </template>

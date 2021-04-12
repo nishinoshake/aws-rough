@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="section-child">
-        <h3 class="title-small"><span>SNSの使用例</span></h3>
+        <h3 class="title-xsmall"><span>SNSの使用例</span></h3>
         <p class="text">
           EC2のCPU使用率が高いときに知らせるためのSNSトピックを、<ExternalLink
             href="https://aws.amazon.com/jp/cloudwatch/"
@@ -26,20 +26,20 @@
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-small"><span>リクエスト数/配信数</span></h3>
+        <h3 class="title-xsmall"><span>リクエスト数/配信数</span></h3>
         <p class="text">
           SNSに送るパブリッシュなどのリクエスト数と、通知の配信数を入力してください。リクエストと配信は、64KB単位でカウントするので、64KB以下のデータの場合は1リクエスト(配信)、256KBのデータの場合は4リクエスト(配信)になります。
         </p>
       </section>
       <section class="section-child">
-        <h3 class="title-small"><span>データ転送量</span></h3>
+        <h3 class="title-xsmall"><span>データ転送量</span></h3>
         <p class="text">インターネットへ送信されるデータ量をGB単位で入力してください。</p>
       </section>
     </template>
 
     <template v-slot:disclaimer>
       <section class="section-child">
-        <h3 class="title-small"><span>SMSの通知</span></h3>
+        <h3 class="title-xsmall"><span>SMSの通知</span></h3>
         <p class="text">
           SNSでは、SMSの通知も用意されていますが、本サイトではサポートしていないので、<ExternalLink
             href="https://aws.amazon.com/sns/sms-pricing/"
