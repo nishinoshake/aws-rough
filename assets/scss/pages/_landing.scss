@@ -66,6 +66,9 @@
   @include lh-1;
 }
 .landing-first-title {
+  @include max {
+    display: none;
+  }
   @include min {
     min-height: $height-section-heading-pc + 1px;
   }
