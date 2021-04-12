@@ -54,10 +54,12 @@
     }
   }
   .service-content {
-    position: sticky;
-    top: 0;
     overflow: hidden;
   }
+}
+.service-ad-inner {
+  position: sticky;
+  top: 0;
 }
 
 .service-main {
