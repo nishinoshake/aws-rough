@@ -1,9 +1,10 @@
 <template>
   <div class="landing">
+    <h1 class="title-page service-copy">
+      <span class="title-page-ja">AWSの料金を、<br class="sp" />日本円でざっくり</span>
+    </h1>
     <section class="section">
-      <h1 class="title-page service-copy">
-        <span class="title-page-ja">AWSの料金を、<br class="sp" />日本円でざっくり</span>
-      </h1>
+      <h2 class="title-section landing-first-title">料金が気になるサービスはありますか？</h2>
       <div class="service-content">
         <ul class="landing-service-list">
           <li v-for="service in services" :key="service.key" class="landing-service-item">
@@ -235,6 +236,9 @@ ${{ priceRdsInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ priceRdsG
                 </p>
                 <p class="what-poem-text">しかしこれ、一体いくらかかるんだ？</p>
               </section>
+              <div class="what-footer">
+                <nuxt-link to="/ec2/" class="what-button">まずはEC2の料金を計算</nuxt-link>
+              </div>
             </div>
           </div>
         </section>

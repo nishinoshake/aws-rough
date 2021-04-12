@@ -5,7 +5,8 @@
   flex-wrap: wrap;
   margin: -8px -16px;
   @include min {
-    margin: -26px -18px -12px;
+    margin: 0;
+    padding: 1px 0;
   }
 }
 .landing-service-item {
@@ -13,7 +14,7 @@
     width: 160px;
   }
   @include min {
-    width: 210px;
+    width: 25%;
   }
 }
 .landing-service-link {
@@ -64,15 +65,9 @@
   @include fz-xs;
   @include lh-1;
 }
-.landing-heading {
-  display: flex;
-  margin-bottom: 20px;
+.landing-first-title {
   @include min {
-    margin-bottom: 41px;
-    @include fz-l;
-  }
-  span {
-    border-bottom: $border-width solid currentColor;
+    min-height: $height-section-heading-pc + 1px;
   }
 }
 .landing-ball-frame {
