@@ -44,7 +44,7 @@
           <div class="service-content">
             <div class="landing-summary">
               <ol class="landing-summary-list">
-                <li class="landing-summary-item">費用が高いサービスに絞って考える</li>
+                <li class="landing-summary-item">料金が高くなりがちなサービスに絞って考える</li>
                 <li class="landing-summary-item">具体的にはEC2とRDS</li>
                 <li class="landing-summary-item">まずはインスタンスの料金だけでも</li>
                 <li class="landing-summary-item">これで大体の料金がわかる（十万か、百万か）</li>
