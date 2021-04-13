@@ -24,7 +24,7 @@
     <div class="service-container service-container-without-margin">
       <div class="service-body">
         <section class="section">
-          <h2 class="title-section">公式の料金計算ツールではありません！</h2>
+          <h2 class="title-section">公式の料金計算ツールではありません</h2>
           <div class="service-content">
             <p class="text">本サイトは公式のものではありません。</p>
             <p class="text">
@@ -35,13 +35,23 @@
               >があります。本サイトは、これらのツールから計算に必要な項目を最小限に絞ってシンプルにしています。
             </p>
             <p class="text">
-              そのため、AWSの料金をざっくり知りたいときには便利ですが、正確な料金な料金を知りたい場合は、公式の料金計算ツールを使用してください。
+              そのため、AWSの料金をざっくり知りたいときには便利ですが、正確な料金を知りたい場合は、公式の料金計算ツールを使用してください。
             </p>
           </div>
         </section>
         <section class="section">
           <h2 class="title-section">AWSの料金をざっくり知るには</h2>
           <div class="service-content">
+            <div class="landing-summary">
+              <ol class="landing-summary-list">
+                <li class="landing-summary-item">費用が高いサービスに絞って考える</li>
+                <li class="landing-summary-item">具体的にはEC2とRDS</li>
+                <li class="landing-summary-item">まずはインスタンスの料金だけでも</li>
+                <li class="landing-summary-item">これで大体の料金がわかる（十万か、百万か）</li>
+                <li class="landing-summary-item">他のサービスも重要な項目のみを計算</li>
+                <li class="landing-summary-item">全体の費用感がざっくりわかる</li>
+              </ol>
+            </div>
             <p class="text">
               AWSの料金は、リソースを使った分だけ請求される<ExternalLink href="https://aws.amazon.com/jp/pricing/"
                 >従量課金</ExternalLink
