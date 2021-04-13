@@ -61,13 +61,16 @@ module.exports = {
         id: 'UA-53153991-13'
       }
     ],
+    [
+      '@nuxtjs/google-adsense',
+      {
+        id: 'ca-pub-7912727364342998'
+      }
+    ],
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv'
   ],
-  plugins: [
-    { src: '~/plugins/vue-google-adsense', ssr: false },
-    { src: '~/plugins/vue-highlightjs', ssr: false }
-  ],
+  plugins: [{ src: '~/plugins/vue-highlightjs', ssr: false }],
   build: {
     extend(config, { isDev }) {
       if (config.externals) {

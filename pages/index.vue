@@ -71,11 +71,13 @@
               >から確認できます。あとは、インスタンスの台数を決めれば、大まかな料金を算出できます。
             </p>
             <p class="text">
-              本サイトで計算すると、EC2で m5.large を2台使用した際の料金は<a
-                href="/ec2/?z=1301232a15158c975e5b"
+              本サイトで計算すると、EC2で m5.large を2台使用した際の料金は<button
+                type="button"
+                @click="handleClickMonthlyPrice"
                 class="text-link"
-                >{{ priceEc2M5LargeMonthlyJpy }}円</a
               >
+                {{ priceEc2M5LargeMonthlyJpy }}円
+              </button>
               です。ドル円のレートは毎朝10時に更新しており、いま適用しているレートは {{ usdjpy }}円/ドル になります。
             </p>
             <p class="text">
@@ -283,7 +285,6 @@ import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds
 import ServicePartsIcon from '@/components/service/parts/ServicePartsIcon'
 import ExternalLink from '@/components/text/ExternalLink'
 import { parseInstance } from '@/lib/service'
-import { fetchZ } from '@/api'
 import { MONTHLY_HOURS } from '@/config/constants'
 import { addComma } from '@/lib/price'
 
@@ -319,7 +320,7 @@ export default {
       return instance.price
     },
     priceEc2M5LargeMonthlyJpy() {
-      return addComma(Math.floor(this.priceEc2M5LargeInstance * MONTHLY_HOURS * this.usdjpy))
+      return addComma(Math.floor(this.priceEc2M5LargeInstance * MONTHLY_HOURS * this.usdjpy * 2))
     },
     priceEc2T3MicroMonthlyUsd() {
       return Math.floor(10 * (this.priceEc2T3MicroInstance * MONTHLY_HOURS + this.priceEc2Gp2 * 20)) / 10
@@ -352,10 +353,12 @@ export default {
     }
   },
   methods: {
-    toDetail(z) {
+    handleClickMonthlyPrice() {
       this.$store.commit('SET_INITIAL_TABLES', { serviceConfig })
-      this.$store.dispatch('fetchZ', { fetchZ, hash: z, serviceConfig })
-      this.$router.push('/detail/')
+      this.$store.commit('UPDATE', { serviceKey: 'ec2', index: 0, columnKey: 'instance', value: 'm5.large' })
+      this.$store.commit('UPDATE', { serviceKey: 'ec2', index: 0, columnKey: 'unit', value: '2' })
+
+      this.$router.push('/ec2/')
     }
   }
 }
