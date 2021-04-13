@@ -32,7 +32,7 @@
                 >AWS Pricing Calculator</ExternalLink
               >と、2007年にリリースされた歴史のある<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
                 >SIMPLE MONTHLY CALCULATOR</ExternalLink
-              >があります。本サイトは、これらのツールから計算に必要な項目を最小限に絞ってシンプルにしています。
+              >があります。本サイトは、これらのツールから計算に必要な項目を最小限に絞ってシンプルにしたものです。
             </p>
             <p class="text">
               そのため、AWSの料金をざっくり知りたいときには便利ですが、正確な料金を知りたい場合は、公式の料金計算ツールを使用してください。
@@ -76,7 +76,7 @@
                 class="text-link"
                 >{{ priceEc2M5LargeMonthlyJpy }}円</a
               >
-              です。ドル円のレートは毎朝10時に更新しており、いま適用しているレートは {{ usdjpy }}円/ドル です。
+              です。ドル円のレートは毎朝10時に更新しており、いま適用しているレートは {{ usdjpy }}円/ドル になります。
             </p>
             <p class="text">
               これはEC2の料金の例ですが、他のサービスも料金への影響が大きい項目に絞ることで、ざっくりとした料金を知ることができます。
