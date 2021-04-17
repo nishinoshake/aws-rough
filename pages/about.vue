@@ -156,8 +156,9 @@
             </div>
           </div>
         </section>
+
+        <ServiceTemplateAds />
       </div>
-      <ServiceTemplateAds />
     </div>
   </div>
 </template>

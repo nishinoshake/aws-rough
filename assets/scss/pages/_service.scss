@@ -5,7 +5,6 @@
     margin-top: 80px;
   }
   @include min {
-    display: flex;
     margin-top: 122px;
   }
 }
@@ -21,14 +20,6 @@
   }
 }
 
-.service-body {
-  @include min {
-    min-width: 0;
-    max-width: 800px;
-    border-right: $border-width solid $color-border;
-  }
-}
-
 .service-gutter {
   @include max {
     display: none;
@@ -40,29 +31,15 @@
   }
 }
 
-.service-ad {
-  border-top: $border-width solid $color-border;
+.service-ad-desc {
+  @include max {
+    margin-bottom: 32px;
+  }
   @include min {
-    width: 420px;
-    display: flex;
-    flex-direction: column;
-    flex: none;
-    > .section {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-  }
-  .service-content {
-    overflow: hidden;
-    @include min {
-      padding: 40px;
-    }
-  }
-  ins {
-    background-color: $color-snow;
+    margin-bottom: 46px;
   }
 }
+
 .service-ad-label {
   margin-top: 1em;
   text-align: center;

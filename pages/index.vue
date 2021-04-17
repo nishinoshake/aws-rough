@@ -271,8 +271,9 @@ ${{ priceRdsT3MicroInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ pr
             </div>
           </div>
         </section>
+
+        <ServiceTemplateAds />
       </div>
-      <ServiceTemplateAds />
     </div>
   </div>
 </template>

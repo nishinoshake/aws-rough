@@ -43,8 +43,9 @@
             <ServicePartsCode :service-name="serviceName" />
           </div>
         </section>
+
+        <ServiceTemplateAds />
       </div>
-      <ServiceTemplateAds />
     </div>
   </article>
 </template>
