@@ -2,10 +2,7 @@
   <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
     <div class="menu-frame">
       <p class="menu-logo">
-        <nuxt-link to="/" class="menu-logo-link" :class="{ 'is-visible': makura }"
-          ><span class="menu-logo-makura">{{ makura || 'ざっくり' }}</span
-          >AWS</nuxt-link
-        >
+        <nuxt-link to="/" class="menu-logo-link">ざっくりAWS</nuxt-link>
       </p>
       <ul class="menu-list">
         <li v-for="service in services" :key="service.key" class="menu-item">
@@ -34,13 +31,12 @@ export default {
   components: { ServicePartsIcon },
   data() {
     return {
-      makuraLoaded: false,
       services: serviceConfig,
       isSmall: false
     }
   },
   computed: {
-    ...mapState(['isMenuOpen', 'makura']),
+    ...mapState(['isMenuOpen']),
     routeName() {
       return this.$route.name
     }
@@ -55,11 +51,9 @@ export default {
   mounted() {
     this.handleResize()
     window.addEventListener('resize', () => this.handleResize())
-
-    this.UPDATE_MAKURA()
   },
   methods: {
-    ...mapMutations(['SHOW_MENU', 'HIDE_MENU', 'TOGGLE_MENU', 'UPDATE_MAKURA']),
+    ...mapMutations(['SHOW_MENU', 'HIDE_MENU', 'TOGGLE_MENU']),
     handleClick() {
       this.$emit('change')
     },

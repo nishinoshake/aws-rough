@@ -20,7 +20,6 @@ const store = () =>
       isLoaded: false,
       isDetailLoading: false,
       isMenuOpen: false,
-      makura: '',
       error: {
         isVisible: false,
         message: null
@@ -136,21 +135,6 @@ const store = () =>
         }
 
         state.total = calc.totalTables(state.tables)
-      },
-      UPDATE_MAKURA(state) {
-        const makuraWords = [
-          'ざっくり',
-          'あっさり',
-          'こってり',
-          'さっぱり',
-          'しっくり',
-          'じっくり',
-          'びっくり',
-          'やっぱり',
-          'がっつり'
-        ]
-
-        state.makura = makuraWords[Math.floor(Math.random() * makuraWords.length)]
       }
     },
     actions: {

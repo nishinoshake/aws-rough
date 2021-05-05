@@ -126,9 +126,6 @@
     }
   }
 }
-.menu-logo-link:not(.is-visible) {
-  visibility: hidden;
-}
 .menu-list {
   @include max($mq-tb-max) {
     display: flex;
