@@ -1,7 +1,7 @@
 <template>
   <div class="landing">
     <h1 class="title-page service-copy">
-      <span class="title-page-ja">AWSの料金を、<br class="sp" />日本円でざっくり</span>
+      <span class="title-page-ja">AWSの料金を、<br class="sp" />日本円で{{ makura }}</span>
     </h1>
     <section class="section">
       <h2 class="title-section landing-first-title">料金が気になるサービスはありますか？</h2>
@@ -279,6 +279,7 @@ ${{ priceRdsT3MicroInstance }}(MySQL/db2.t3.micro) * 30.5日 * 24時間 + ${{ pr
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import mokuji from '@/config/service/mokuji'
 import serviceConfig from '@/config/service'
 import meta from '@/config/meta'
@@ -301,6 +302,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['makura']),
     serviceKeys() {
       return mokuji.map(service => service.key)
     },
