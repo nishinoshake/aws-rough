@@ -181,6 +181,21 @@ const store = () =>
           commit('SHOW_ERROR')
         }
       },
+      async postContact({ commit }, { postContact, text }) {
+        try {
+          await postContact(text)
+
+          commit('SET_ERROR_MESSAGE', {
+            message: '貴重なご意見をありがとうございます！'
+          })
+          commit('SHOW_ERROR')
+        } catch (e) {
+          commit('SET_ERROR_MESSAGE', {
+            message: 'メールを送信できませんでした。\nすみませんがもう一度お願いします・・・'
+          })
+          commit('SHOW_ERROR')
+        }
+      },
       appendRow({ state, commit }, { serviceKey, serviceConfig }) {
         if (state.tables[serviceKey].length >= MAX_ROW) {
           commit('SET_ERROR_MESSAGE', { message: `最大で${MAX_ROW}行までなんです。\nすみません・・・` })

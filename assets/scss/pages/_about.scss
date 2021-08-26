@@ -1,2 +1,36 @@
-.about {
+.about-contact-input {
+  width: 100%;
+  margin-top: 24px;
+  border: $width-border-input solid $color-border-dark;
+  background-color: $color-white;
+  border-radius: $radius;
+  @include transition-collection;
+  @include max {
+    padding: 16px;
+  }
+  @include min {
+    padding: 24px;
+  }
+  &:focus {
+    border-color: $color-button;
+  }
+}
+.about-contact-button {
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  padding: 16px 24px;
+  border-radius: 999em;
+  color: $color-white;
+  background-color: $color-button;
+  @include transition-collection;
+  &[disabled] {
+    cursor: wait;
+  }
+  @include max {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

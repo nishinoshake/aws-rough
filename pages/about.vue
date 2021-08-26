@@ -145,14 +145,12 @@
           <div class="service-content">
             <div class="section-child">
               <p class="text">
-                不具合などのご連絡は、<ExternalLink href="https://github.com/nishinoshake/aws-rough/issues"
-                  >GitHubのIssue</ExternalLink
-                >か<ExternalLink href="https://twitter.com/nishinoshake">Twitter</ExternalLink>か<a
-                  href="mailto:lawson.and.7.11@gmail.com"
-                  class="text-link"
-                  >メール</a
-                >までお願いいたします。
+                サイトに対するご意見や不具合のご報告などがありましたら、こちらからメッセージをお願いします。
               </p>
+              <form @submit.prevent="handleSubmitContact">
+                <textarea v-model="message" name="contact" rows="10" class="about-contact-input" required></textarea>
+                <button type="submit" class="about-contact-button" :disabled="isSending">{{ contactLabel }}</button>
+              </form>
             </div>
           </div>
         </section>
@@ -171,13 +169,16 @@ import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
 import { MONTHLY_DATE } from '@/config/constants'
 import { getService } from '@/lib/service'
+import { postContact } from '@/api'
 
 export default {
   name: 'LandingIndex',
   components: { ServicePartsUnkown, ServiceTemplateAds, ExternalLink },
   data() {
     return {
-      monthlyDate: MONTHLY_DATE
+      monthlyDate: MONTHLY_DATE,
+      message: '',
+      isSending: false
     }
   },
   head() {
@@ -189,6 +190,27 @@ export default {
     },
     services() {
       return serviceConfig.map(service => getService(service.key, serviceConfig))
+    },
+    contactLabel() {
+      return this.isSending ? '送信中...' : '送信'
+    },
+    trimmedMessage() {
+      return this.message.trim()
+    }
+  },
+  methods: {
+    async handleSubmitContact() {
+      console.log(this.trimmedMessage)
+
+      if (!this.trimmedMessage) {
+        return
+      }
+
+      this.isSending = true
+
+      await this.$store.dispatch('postContact', { postContact, text: this.trimmedMessage })
+
+      this.isSending = false
     }
   }
 }

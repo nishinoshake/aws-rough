@@ -26,3 +26,11 @@ export const postZ = (hash, tables) =>
       .then(response => resolve(response.data))
       .catch(error => reject(error))
   )
+
+export const postContact = text =>
+  new Promise((resolve, reject) =>
+    client
+      .post(`${process.env.apiUrl}/contact`, { text })
+      .then(response => resolve(response.data))
+      .catch(error => reject(error))
+  )

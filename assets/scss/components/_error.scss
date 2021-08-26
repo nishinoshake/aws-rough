@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  border: 1px solid $color-dark;
   @include center(fixed);
   @include min {
     width: calc(100% - 80px);
