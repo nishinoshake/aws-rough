@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   @include max {
+    width: calc(100vw - 86px - #{$padding-sp});
+    max-width: 400px;
     position: fixed;
     right: 86px;
     bottom: $padding-sp;
@@ -12,6 +14,9 @@
     overflow: hidden;
     border: $border-width solid currentColor;
     background-color: $color-button;
+    .price-number {
+      word-break: break-all;
+    }
   }
   @include min($mq-tb-min) {
     right: $padding-sp;
@@ -42,9 +47,17 @@
 }
 
 .cart-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
   white-space: nowrap;
+  @include max(360px) {
+    display: none;
+  }
   @include max {
-    padding: 5px 16px;
+    width: 56px;
+    padding: 5px 12px;
     font-size: 12px;
     color: $color-white;
   }
@@ -52,10 +65,6 @@
     width: 100%;
     height: 50%;
     padding: 0 32px;
-    flex: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 16px;
     border-bottom: $border-width solid $color-border;
   }
@@ -64,17 +73,19 @@
 .cart-total {
   position: relative;
   z-index: 1;
+  flex-grow: 1;
   background-color: $color-white;
   @include transition-fade;
   @include fz-l;
   @include max {
-    min-width: 200px;
     padding: 15px 15px 15px 18px;
+  }
+  @include min(360px) {
+    min-width: 200px;
   }
   @include min {
     display: flex;
     align-items: center;
-    flex-grow: 1;
     min-width: 260px;
     padding: 0 32px;
   }

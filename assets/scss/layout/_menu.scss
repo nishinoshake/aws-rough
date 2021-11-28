@@ -4,7 +4,7 @@
   @include max($mq-tb-max) {
     &.is-open .menu-frame {
       visibility: visible;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
       transition: transform 0.4s $easeOutQuart, visibility 0s;
     }
   }
@@ -24,8 +24,8 @@
 
 .menu-button {
   @include max($mq-tb-max) {
-    width: $width-menu-sp;
-    height: $width-menu-sp;
+    width: $width-menu-button-sp;
+    height: $width-menu-button-sp;
     position: fixed;
     z-index: 1000;
     bottom: $padding-sp;
@@ -83,16 +83,19 @@
 
 .menu-frame {
   @include max($mq-tb-max) {
-    width: 100vw;
+    width: $width-menu-sp;
+    height: 100vh;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 900;
+    top: 0;
+    right: 0;
+    z-index: 80;
     visibility: hidden;
-    background-color: $color-white;
-    border-top: $border-width solid $color-border;
-    padding: 22px 70px 22px 22px;
-    transform: translateY(100%);
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translate3d(100%, 0, 0);
+    padding-bottom: calc(#{$width-menu-button-sp} + #{$padding-sp} * 2);
+    border-left: $border-width solid $color-border;
+    background-color: #fff;
     will-change: transform;
     transition: transform 0.3s $easeOutQuart, visibility 0s 0.3s;
   }
@@ -102,6 +105,9 @@
   }
 }
 .menu-logo {
+  @include max($mq-tb-max) {
+    border-bottom: $border-width solid $color-border;
+  }
   @include min($mq-tb-min) {
     border-bottom: $border-width solid $color-border;
   }
@@ -111,7 +117,7 @@
   @include font-en;
   @include max($mq-tb-max) {
     padding: 12px;
-    font-size: 18px;
+    font-size: 16px;
   }
   @include min($mq-tb-min) {
     padding: 7px 4px;
@@ -126,16 +132,9 @@
     }
   }
 }
-.menu-list {
-  @include max($mq-tb-max) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -7px;
-  }
-}
 .menu-item {
   @include max($mq-tb-max) {
-    padding: 7px;
+    border-bottom: $border-width solid $color-border;
   }
   @include min($mq-tb-min) {
     border-bottom: $border-width solid $color-border;
@@ -152,7 +151,7 @@
   }
   @include max($mq-tb-max) {
     padding: 12px;
-    @include fz-l;
+    @include fz-m;
   }
   @include min($mq-tb-min) {
     height: 40px;
