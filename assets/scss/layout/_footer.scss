@@ -14,10 +14,6 @@
     height: 100%;
     padding-left: $width-menu-pc;
   }
-  @include min {
-    max-width: $width-max;
-    margin: 0 auto;
-  }
 }
 .footer-list {
   width: 100%;

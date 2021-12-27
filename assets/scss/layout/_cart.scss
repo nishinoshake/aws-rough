@@ -21,11 +21,11 @@
   @include min($mq-tb-min) {
     right: $padding-sp;
   }
-  @include min($width-max) {
+  @include min {
     display: flex;
     flex-direction: column-reverse;
     height: $height-heading-pc;
-    right: calc(50% - #{$width-max / 2} + #{$padding-content-pc});
+    right: 20px;
     &:hover {
       .cart-total,
       .cart-detail {

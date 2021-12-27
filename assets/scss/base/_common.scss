@@ -23,9 +23,6 @@ body {
   position: relative;
   background-color: $color-white;
   @include min {
-    max-width: $width-max;
-    margin-left: auto;
-    margin-right: auto;
     padding-bottom: $height-footer-pc; 
   }
   &:before {
@@ -41,11 +38,6 @@ body {
       pointer-events: none;
       box-sizing: border-box;
     }
-    @include min {
-      max-width: $width-max;
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
   &:after {
     @include min($mq-tb-min) {
@@ -59,9 +51,6 @@ body {
       background-color: $color-border;
       pointer-events: none;
       box-sizing: border-box;
-    }
-    @include min {
-      left: calc(50% - #{$width-max} / 2 + #{$width-menu-pc});
     }
   }
 }
