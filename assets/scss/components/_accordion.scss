@@ -101,6 +101,13 @@
   @include min {
     padding: $padding-base-pc;
   }
+  @include min($width-content-max + $width-menu-pc + $width-blank) {
+    padding-right: calc(100% - #{$width-content-max} + #{$padding-base-pc});
+    &:after {
+      @include blank;
+      border-left-style: dashed;
+    }
+  }
   .text {
     text-align: justify;
   }

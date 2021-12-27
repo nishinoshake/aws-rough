@@ -130,6 +130,7 @@
     padding: $padding-base-sp * 1.4 $padding-base-sp;
   }
   @include min {
+    position: relative;
     padding: $padding-base-pc;
   }
 }
@@ -142,9 +143,6 @@
     @include min {
       margin-bottom: 40px;
     }
-  }
-  &:first-child {
-    border-top: $border-width solid $color-border;
   }
   .table {
     border-top: none;

@@ -24,27 +24,29 @@
           </ServicePartsAccordion>
         </section>
 
-        <section class="section" id="description">
-          <h2 class="title-section">
-            <span class="title-section-large">{{ service.name }}</span
-            >についてざっくり
-          </h2>
-          <div class="service-content">
-            <slot name="zakuri" />
-          </div>
-        </section>
+        <div class="section-list">
+          <section class="section" id="description">
+            <h2 class="title-section">
+              <span class="title-section-large">{{ service.name }}</span
+              >についてざっくり
+            </h2>
+            <div class="service-content">
+              <slot name="zakuri" />
+            </div>
+          </section>
 
-        <section class="section" id="function">
-          <h2 class="title-section">
-            <span class="title-section-large">{{ service.name }}</span
-            >の料金計算式をざっくり
-          </h2>
-          <div class="service-content">
-            <ServicePartsCode :service-name="serviceName" />
-          </div>
-        </section>
+          <section class="section" id="function">
+            <h2 class="title-section">
+              <span class="title-section-large">{{ service.name }}</span
+              >の料金計算式をざっくり
+            </h2>
+            <div class="service-content">
+              <ServicePartsCode :service-name="serviceName" />
+            </div>
+          </section>
 
-        <ServiceTemplateAds />
+          <ServiceTemplateAds />
+        </div>
       </div>
     </div>
   </article>

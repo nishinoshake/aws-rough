@@ -5,6 +5,8 @@
   align-items: center;
   letter-spacing: 0.08em;
   font-feature-settings: "palt";
+  border-bottom: $border-width solid $color-border;
+  position: relative;
   @include font-en;
   @include fz-grande;
   @include lh-1;
@@ -16,6 +18,15 @@
   @include min {
     padding: 0 $padding-base-pc;
     min-height: $height-heading-pc;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: $border-width;
+    width: 100%;
+    left: 0;
+    background-color: $color-border;
   }
   &-ja {
     font-weight: 400;

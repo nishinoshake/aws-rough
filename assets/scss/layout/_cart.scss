@@ -24,7 +24,7 @@
   @include min {
     display: flex;
     flex-direction: column-reverse;
-    height: $height-heading-pc;
+    height: 100%;
     right: 20px;
     &:hover {
       .cart-total,

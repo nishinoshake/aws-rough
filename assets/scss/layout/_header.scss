@@ -23,7 +23,7 @@
   @include min {
     display: flex;
     flex-direction: row-reverse;
-    min-height: $height-header-pc;
+    height: $height-heading-pc;
     background-color: $color-white;
     border-bottom: $border-width solid $color-border;
     border-left: $border-width solid $color-border;

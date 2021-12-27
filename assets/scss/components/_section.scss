@@ -1,9 +1,29 @@
 @charset "utf-8";
 
-.section + .section,
-.accordion-list + .section {
+.section-list {
+  position: relative;
+  border-top: $border-width solid $color-border;
+  @include min($width-content-max + $width-menu-pc + $width-blank) {
+    padding-right: calc(100% - #{$width-content-max});
+    &:after {
+      background-color: $color-white;
+      @include blank;
+    }
+  }
+}
+
+.title-page + .section-list {
+  border-top: 0;
+}
+
+.section {
+  position: relative;
+}
+
+.section + .section {
   border-top: $border-width solid $color-border;
 }
+
 
 .section-child {
   + .section-child {
