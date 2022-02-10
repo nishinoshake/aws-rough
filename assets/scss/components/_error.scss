@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  border: 1px solid $color-dark;
+  border: 1px solid var(--color-dark);
   @include center(fixed);
   @include min {
     width: calc(100% - 80px);
@@ -28,7 +28,7 @@
   position: absolute;
   top: -20px;
   right: -20px;
-  background-color: $color-button;
+  background-color: var(--color-button);
   @include hide-text;
   @include min {
     width: 50px;

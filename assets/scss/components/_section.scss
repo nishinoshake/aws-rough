@@ -2,11 +2,11 @@
 
 .section-list {
   position: relative;
-  border-top: $border-width solid $color-border;
-  @include min($width-content-max + $width-menu-pc + $width-blank) {
-    padding-right: calc(100% - #{$width-content-max});
+  border-top: var(--border-width) solid var(--color-border);
+  @include min($mq-large-min) {
+    padding-right: calc(100% - var(--max-content-width));
     &:after {
-      background-color: $color-white;
+      background-color: var(--color-white);
       @include blank;
     }
   }
@@ -18,15 +18,15 @@
   position: relative;
 }
 .section + .section {
-  border-top: $border-width solid $color-border;
+  border-top: var(--border-width) solid var(--color-border);
 }
 .section-content {
   @include max {
-    padding: $padding-base-sp * 1.4 $padding-base-sp;
+    padding: calc(var(--base-padding) * 1.4) var(--base-padding);
   }
   @include min {
     position: relative;
-    padding: $padding-base-pc;
+    padding: var(--base-padding);
   }
 }
 .section-child + .section-child {

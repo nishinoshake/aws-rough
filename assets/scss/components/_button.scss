@@ -4,18 +4,18 @@
   width: 24px;
   height: 24px;
   position: relative;
-  background-color: $color-button;
+  background-color: var(--color-button);
   border-radius: 50%;
   @include hide-text;
   &:before,
   &:after {
     content: '';
     width: 50%;
-    height: $border-width;
+    height: var(--border-width);
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: $color-white;
+    background-color: var(--color-white);
   }
   &:before {
     transform: translate3d(-50%, -50%, 0) rotate(45deg);

@@ -90,7 +90,7 @@
 }
 
 @mixin dot-border {
-  background-image: linear-gradient(to right, $color-border, $color-border 50%, transparent 50%, transparent 100%);
+  background-image: linear-gradient(to right, var(--color-border), var(--color-border) 50%, transparent 50%, transparent 100%);
   background-position: left bottom;
   background-repeat: repeat-x;
   background-size: 20px 1px;
@@ -121,15 +121,15 @@
 // -----------------------------------------------------
 @mixin blank {
   content: "余白";
-  width: calc(100% - #{$width-content-max});
+  width: calc(100% - var(--max-content-width));
   height: 100%;
-  border-left: $border-width solid $color-border;
+  border-left: var(--border-width) solid var(--color-border);
   display: flex;
   position: absolute;
   right: 0;
   top: 0;
   align-items: center;
-  color: $color-dark-gray;
+  color: var(--color-dark-gray);
   justify-content: center;
   letter-spacing: 0.2em;
 }

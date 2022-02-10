@@ -58,16 +58,10 @@ export default {
       this.$emit('change')
     },
     handleResize() {
-      const viewHeight = parseInt(window.innerHeight, 10)
       const menuHeight = parseInt(this.$refs.menu.offsetHeight, 10)
-      const contentWidth = parseInt(document.querySelector('.contents').clientWidth, 10)
-      const headerHeight = parseInt(document.querySelector('.header').clientHeight, 10)
+      const headerHeight = parseInt(document.querySelector('.l-header').clientHeight, 10)
 
-      document.documentElement.style.setProperty('--view-height', `${viewHeight}px`)
-      document.documentElement.style.setProperty('--menu-height', `${menuHeight}px`)
-      document.documentElement.style.setProperty('--content-width', `${contentWidth}px`)
-
-      if (window.matchMedia('(max-width: 1192px)').matches) {
+      if (window.matchMedia('(max-width: 1140px)').matches) {
         return
       }
 

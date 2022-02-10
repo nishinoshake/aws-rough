@@ -9,8 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $color-white;
-  background-color: $color-button;
+  color: var(--color-white);
+  background-color: var(--color-button);
   border-radius: 999em;
   cursor: pointer;
   @include font-sans;
@@ -29,10 +29,10 @@
 .detail-body {
   position: relative;
   @include max {
-    padding: 50px $padding-base-sp;
+    padding: 50px var(--base-padding);
   }
   @include min {
-    padding: $padding-base-pc;
+    padding: var(--base-padding);
   }
 }
 .detail-main {
@@ -108,11 +108,11 @@
   @include lh-en;
   @include max {
     top: 30px;
-    left: $padding-base-sp;
+    left: var(--base-padding);
   }
   @include min {
-    top: $padding-base-pc;
-    left: $padding-base-pc;
+    top: var(--base-padding);
+    left: var(--base-padding);
   }
   span {
     display: block;

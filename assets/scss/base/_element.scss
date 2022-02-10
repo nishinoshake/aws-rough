@@ -9,7 +9,7 @@ pre {
   padding: 12px;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: $color-snow;
+  background-color: var(--color-snow);
   line-height: 1.6;
   border-radius: 3px;
   @include font-source;
@@ -30,5 +30,5 @@ pre + * {
 
 code {
   padding: 3px;
-  background-color: $color-snow;
+  background-color: var(--color-snow);
 }

@@ -20,11 +20,11 @@
   @include fz-l;
   @include lh-min;
   @include max {
-    padding: 20px $padding-base-sp 0;
+    padding: 20px var(--base-padding) 0;
   }
   @include min {
     margin-bottom: -4px;
-    padding: 21px $padding-base-pc 0;
+    padding: 21px var(--base-padding) 0;
   }
 }
 .calc-footer {
@@ -38,8 +38,8 @@
   align-items: center;
   padding: 16px 32px;
   border-radius: 999em;
-  color: $color-white;
-  background-color: $color-button;
+  color: var(--color-white);
+  background-color: var(--color-button);
   @include transition-collection;
   span {
     padding-left: 20px;
@@ -51,7 +51,7 @@
     &:after {
       content: '';
       width: 12px;
-      height: $border-width;
+      height: var(--border-width);
       position: absolute;
       top: 50%;
       left: 0;

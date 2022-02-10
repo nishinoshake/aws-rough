@@ -7,7 +7,7 @@
   margin-top: 1em;
 }
 .text-link {
-  color: $color-link;
+  color: var(--color-link);
   text-decoration: underline;
   @include min {
     &:hover {
@@ -16,6 +16,6 @@
   }
 }
 .text-notice {
-  color: $color-muted;
+  color: var(--color-muted);
   @include fz-s;
 }

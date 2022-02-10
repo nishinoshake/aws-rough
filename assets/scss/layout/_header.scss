@@ -23,10 +23,10 @@
   @include min {
     display: flex;
     flex-direction: row-reverse;
-    height: $height-heading-pc;
-    background-color: $color-white;
-    border-bottom: $border-width solid $color-border;
-    border-left: $border-width solid $color-border;
+    height: var(--heading-height);
+    background-color: var(--color-white);
+    border-bottom: var(--border-width) solid var(--color-border);
+    border-left: var(--border-width) solid var(--color-border);
     pointer-events: auto;
   }
 }

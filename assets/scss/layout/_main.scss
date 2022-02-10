@@ -1,8 +1,8 @@
 .l-main {
   position: relative;
-  background-color: $color-white;
+  background-color: var(--color-white);
   @include min {
-    padding-bottom: $height-footer-pc; 
+    padding-bottom: var(--footer-height); 
   }
   &:before {
     @include min($mq-tb-min) {
@@ -13,7 +13,7 @@
       z-index: 100;
       left: 0;
       right: 0;
-      border: $border-width solid $color-border;
+      border: var(--border-width) solid var(--color-border);
       pointer-events: none;
       box-sizing: border-box;
     }
@@ -21,13 +21,13 @@
   &:after {
     @include min($mq-tb-min) {
       content: "";
-      width: $border-width;
+      width: var(--border-width);
       height: 100vh;
       position: fixed;
       z-index: 100;
       top: 0;
-      left: $width-menu-pc;
-      background-color: $color-border;
+      left: var(--side-menu-width);
+      background-color: var(--color-border);
       pointer-events: none;
       box-sizing: border-box;
     }

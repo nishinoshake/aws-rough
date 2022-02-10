@@ -1,30 +1,29 @@
 .large-heading {
   display: flex;
+  min-height: var(--heading-height);
   align-items: center;
   letter-spacing: 0.08em;
   font-feature-settings: "palt";
-  border-bottom: $border-width solid $color-border;
+  border-bottom: var(--border-width) solid var(--color-border);
   position: relative;
   @include font-en;
   @include fz-grande;
   @include lh-1;
   @include radius;
   @include max {
-    min-height: $height-heading-sp;
-    padding: 0 $padding-base-sp;
+    padding: 0 var(--base-padding);
   }
   @include min {
-    padding: 0 $padding-base-pc;
-    min-height: $height-heading-pc;
+    padding: 0 var(--base-padding);
   }
   &:after {
     content: "";
     position: absolute;
     top: 100%;
-    height: $border-width;
+    height: var(--border-width);
     width: 100%;
     left: 0;
-    background-color: $color-border;
+    background-color: var(--color-border);
   }
 }
 .large-heading-ja {

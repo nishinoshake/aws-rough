@@ -5,11 +5,11 @@
     &.is-open .l-menu-frame {
       visibility: visible;
       transform: translate3d(0, 0, 0);
-      transition: transform 0.4s $easeOutQuart, visibility 0s;
+      transition: transform 0.4s var(--ease-out-quart), visibility 0s;
     }
   }
   @include min($mq-tb-min) {
-    width: $width-menu-pc;
+    width: var(--side-menu-width);
     position: sticky;
     z-index: 10;
     flex: none;
@@ -23,13 +23,13 @@
 }
 .l-menu-button {
   @include max($mq-tb-max) {
-    width: $width-menu-button-sp;
-    height: $width-menu-button-sp;
+    width: var(--menu-button-size);
+    height: var(--menu-button-size);
     position: fixed;
     z-index: 1000;
     bottom: 24px;
     right: 24px;
-    background-color: $color-button;
+    background-color: var(--color-button);
     border-radius: 50%;
     @include center-flex;
   }
@@ -55,15 +55,15 @@
 .l-menu-button-icon {
   width: 20px;
   height: 12px;
-  margin-bottom: $border-width;
+  margin-bottom: var(--border-width);
   position: relative;
-  color: $color-white;
+  color: var(--color-white);
   &:before,
   &:after,
   span {
     content: "";
     width: 100%;
-    height: $border-width;
+    height: var(--border-width);
     left: 0;
     position: absolute;
     background-color: currentColor;
@@ -80,7 +80,7 @@
 }
 .l-menu-frame {
   @include max($mq-tb-max) {
-    width: $width-menu-sp;
+    width: var(--mobile-menu-width);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -90,11 +90,11 @@
     overflow-y: auto;
     overflow-x: hidden;
     transform: translate3d(100%, 0, 0);
-    padding-bottom: calc(#{$width-menu-button-sp} + 24px * 2);
-    border-left: $border-width solid $color-border;
+    padding-bottom: calc(var(--menu-button-size) + 24px * 2);
+    border-left: var(--border-width) solid var(--color-border);
     background-color: #fff;
     will-change: transform;
-    transition: transform 0.3s $easeOutQuart, visibility 0s 0.3s;
+    transition: transform 0.3s var(--ease-out-quart), visibility 0s 0.3s;
   }
   @include min($mq-tb-min) {
     width: 100%;
@@ -103,10 +103,10 @@
 }
 .l-menu-logo {
   @include max($mq-tb-max) {
-    border-bottom: $border-width solid $color-border;
+    border-bottom: var(--border-width) solid var(--color-border);
   }
   @include min($mq-tb-min) {
-    border-bottom: $border-width solid $color-border;
+    border-bottom: var(--border-width) solid var(--color-border);
   }
 }
 .l-menu-logo-link {
@@ -125,16 +125,16 @@
     height: 100%;
     @include center-flex;
     &:hover {
-      background-color: $color-snow;
+      background-color: var(--color-snow);
     }
   }
 }
 .l-menu-item {
   @include max($mq-tb-max) {
-    border-bottom: $border-width solid $color-border;
+    border-bottom: var(--border-width) solid var(--color-border);
   }
   @include min($mq-tb-min) {
-    border-bottom: $border-width solid $color-border;
+    border-bottom: var(--border-width) solid var(--color-border);
   }
 }
 .l-menu-link {
@@ -144,7 +144,7 @@
   @include font-en;
   @include lh-1;
   &.is-active {
-    background-color: $color-snow;
+    background-color: var(--color-snow);
   }
   @include max($mq-tb-max) {
     padding: 12px;
@@ -155,7 +155,7 @@
     padding: 9px 14px;
     font-size: 14px;
     &:hover {
-      background-color: $color-snow;
+      background-color: var(--color-snow);
     }
   }
   svg {

@@ -6,13 +6,13 @@
     position: absolute;
     bottom: 1px;
     left: 0;
-    height: $height-footer-pc;
+    height: var(--footer-height);
   }
 }
 .l-footer-container {
   @include min($mq-tb-min) {
     height: 100%;
-    padding-left: $width-menu-pc;
+    padding-left: var(--side-menu-width);
   }
 }
 .l-footer-list {
@@ -22,12 +22,12 @@
   align-items: center;
   @include max {
     padding: 16px 0;
-    border-top: $border-width solid $color-border;
-    border-bottom: $border-width solid $color-border;
+    border-top: var(--border-width) solid var(--color-border);
+    border-bottom: var(--border-width) solid var(--color-border);
   }
   @include min {
     height: 100%;
-    border-top: $border-width solid $color-border;
+    border-top: var(--border-width) solid var(--color-border);
   }
 }
 .l-footer-item {

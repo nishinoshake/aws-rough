@@ -1,8 +1,8 @@
 .about-contact-input {
   width: 100%;
   margin-top: 24px;
-  border: $border-width solid $color-border-dark;
-  background-color: $color-white;
+  border: var(--border-width) solid var(--color-border-dark);
+  background-color: var(--color-white);
   border-radius: 4px;
   @include transition-collection;
   @include max {
@@ -12,7 +12,7 @@
     padding: 24px;
   }
   &:focus {
-    border-color: $color-button;
+    border-color: var(--color-button);
   }
 }
 .about-contact-button {
@@ -23,8 +23,8 @@
   margin-top: 18px;
   padding: 16px 24px;
   border-radius: 999em;
-  color: $color-white;
-  background-color: $color-button;
+  color: var(--color-white);
+  background-color: var(--color-button);
   @include transition-collection;
   &[disabled] {
     cursor: wait;

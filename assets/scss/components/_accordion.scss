@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 .accordion {
-  border-bottom: $border-width solid $color-border;
-  transition: border-radius 0.24s $easeOutQuart;
+  border-bottom: var(--border-width) solid var(--color-border);
+  transition: border-radius 0.24s var(--ease-out-quart);
   &.is-active {
     .accordion-inside {
       opacity: 1;
@@ -12,7 +12,7 @@
     }
   }
   &:first-child {
-    border-top: $border-width solid $color-border;
+    border-top: var(--border-width) solid var(--color-border);
   }
 }
 .accordion-heading {
@@ -21,26 +21,25 @@
   align-items: center;
   position: relative;
   text-align: left;
-  color: $color-font;
   @include fz-ml;
   @include lh-1;
   @include transition-fade;
   @include max {
-    padding: $padding-base-sp;
+    padding: var(--base-padding);
   }
   @include min {
-    min-height: $height-section-heading-pc - 1px;
-    padding: 30px $padding-base-pc;
+    min-height: calc(var(--section-heading-height) - 1px);
+    padding: 30px var(--base-padding);
     &:hover {
-      background-color: $color-snow;
+      background-color: var(--color-snow);
     }
   }
 }
 .accordion-heading-icon {
   position: absolute;
-  border: $border-width solid $color-border;
+  border: var(--border-width) solid var(--color-border);
   border-radius: 50%;
-  transition: transform 0.32s $easeOutQuart;
+  transition: transform 0.32s var(--ease-out-quart);
   @include max {
     width: 28px;
     height: 28px;
@@ -51,15 +50,15 @@
     width: 32px;
     height: 32px;
     top: calc(50% - 16px);
-    right: $padding-base-pc;
+    right: var(--base-padding);
   }
   &:after {
     content: "";
     position: absolute;
     bottom: 50%;
     right: 50%;
-    border-bottom: $border-width solid currentColor;
-    border-right: $border-width solid currentColor;
+    border-bottom: var(--border-width) solid currentColor;
+    border-right: var(--border-width) solid currentColor;
     transform: translateY(50%) rotate(45deg);
     transform-origin: right bottom;
     @include max {
@@ -80,17 +79,17 @@
 .accordion-inside {
   position: relative;
   opacity: 0;
-  border-top: $border-width dashed $color-border;
+  border-top: var(--border-width) dashed var(--color-border);
   transition: opacity 0.1s linear;
   will-change: opacity;
   @include max {
-    padding: $padding-base-sp * 1.4 $padding-base-sp;
+    padding: calc(var(--base-padding) * 1.4) var(--base-padding);
   }
   @include min {
-    padding: $padding-base-pc;
+    padding: var(--base-padding);
   }
-  @include min($width-content-max + $width-menu-pc + $width-blank) {
-    padding-right: calc(100% - #{$width-content-max} + #{$padding-base-pc});
+  @include min($mq-large-min) {
+    padding-right: calc(100% - var(--max-content-width) + var(--base-padding));
     &:after {
       @include blank;
       border-left-style: dashed;

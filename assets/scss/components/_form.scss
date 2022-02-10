@@ -17,8 +17,8 @@
 .form-text-input {
   width: 100%;
   text-align: center;
-  border: $border-width solid $color-border-dark;
-  background-color: $color-white;
+  border: var(--border-width) solid var(--color-border-dark);
+  background-color: var(--color-white);
   border-radius: 4px;
   @include fz-form;
   @include font-en;
@@ -30,10 +30,10 @@
     padding: 10px 12px;
   }
   &:invalid {
-    background-color: rgba($color-red, 0.2);
+    background-color: rgba(var(--color-red), 0.2);
   }
   &:focus {
-    border-color: $color-button;
+    border-color: var(--color-button);
   }
 }
 .form-select {
@@ -41,8 +41,8 @@
   overflow: hidden;
   position: relative;
   display: block;
-  background-color: $color-white;
-  border: $border-width solid $color-border-dark;
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border-dark);
   border-radius: 4px;
   select {
     opacity: 0;
@@ -56,8 +56,8 @@
     height: 8px;
     top: calc(50% - 8px);
     position: absolute;
-    border-bottom: $border-width solid $color-border-dark;
-    border-right: $border-width solid $color-border-dark;
+    border-bottom: var(--border-width) solid var(--color-border-dark);
+    border-right: var(--border-width) solid var(--color-border-dark);
     transform: rotate(45deg);
     pointer-events: none;
     @include max {
@@ -72,7 +72,7 @@
   display: block;
   text-align: center;
   white-space: nowrap;
-  background-color: $color-white;
+  background-color: var(--color-white);
   @include font-en;
   @include fz-form;
   @include lh-1;

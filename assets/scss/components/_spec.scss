@@ -21,7 +21,7 @@
   th,
   td {
     text-align: left;
-    border: $border-width solid $color-border;
+    border: var(--border-width) solid var(--color-border);
     @include max {
       padding: 8px 14px;
     }
@@ -31,13 +31,13 @@
   }
   th {
     text-align: center;
-    background-color: $color-snow;;
+    background-color: var(--color-snow);;
   }
   caption {
     margin-top: 18px;
     caption-side: bottom;
     text-align: left;
-    color: $color-muted;
+    color: var(--color-muted);
     @include fz-s;
   }
 }

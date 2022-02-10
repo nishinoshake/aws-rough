@@ -10,7 +10,7 @@
   tr {
     width: 100%;
     position: relative;
-    border-bottom: $border-width solid $color-border;
+    border-bottom: var(--border-width) solid var(--color-border);
     @include max {
       display: block;
       padding: 24px 0;
@@ -18,13 +18,13 @@
     @include min {
       display: flex;
       align-items: flex-end;
-      padding-left: $padding-base-pc - 8px;
+      padding-left: calc(var(--base-padding) - 8px);
     }
   }
   td {
     @include max {
       display: block;
-      padding: 0 $padding-base-sp;
+      padding: 0 var(--base-padding);
       + td {
         margin-top: 20px;
         &.mod-price {
@@ -83,7 +83,7 @@
         width: 30px;
         height: 30px;
         bottom: 24px;
-        left: $padding-base-sp;
+        left: var(--base-padding);
       }
       @include min {
         top: 61px;

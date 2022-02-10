@@ -4,14 +4,14 @@
   position: relative;
   letter-spacing: 0.08em;
   font-feature-settings: "palt";
-  border-bottom: $border-width solid $color-border;
+  border-bottom: var(--border-width) solid var(--color-border);
   @include fz-ml;
   @include max {
-    padding: 12px $padding-base-sp;
+    padding: 12px var(--base-padding);
   }
   @include min {
-    min-height: $height-section-heading-pc;
-    padding: 18px $padding-base-pc;
+    min-height: var(--section-heading-height);
+    padding: 18px var(--base-padding);
     @include lh-1;
   }
   a {
