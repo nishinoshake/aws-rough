@@ -20,7 +20,7 @@
         </div>
       </section>
       <section class="section">
-        <h2 class="heading">公式の料金計算ツールではありません</h2>
+        <h2 class="heading">免責</h2>
         <div class="section-content">
           <p class="text">本サイトは公式のものではありません。</p>
           <p class="text">
