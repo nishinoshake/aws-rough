@@ -30,7 +30,9 @@ figcaption {
   padding: 0;
 }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -54,7 +56,7 @@ strong,
 th,
 var {
   font-family: inherit;
-  font-style: normal;
+  font-style: inherit;
   font-weight: inherit;
 }
 

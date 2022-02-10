@@ -28,21 +28,12 @@
     left: 0;
     background-color: $color-border;
   }
-  &-ja {
-    font-weight: 400;
-    @include font-sans;
-    @include fz-xl;
-  }
 }
-
-.title-page-fullname {
-  color: rgba($color-dark, 0.1);
-  padding-left: 0.3em;
-  @include max {
-    display: none;
-  }
+.title-page-ja {
+  font-weight: 400;
+  @include font-sans;
+  @include fz-xl;
 }
-
 .title-section {
   display: flex;
   align-items: center;
@@ -63,20 +54,6 @@
     position: relative;
   }
 }
-
-.title-small {
-  display: flex;
-  font-weight: 700;
-  @include fz-ml;
-  @include lh-min;
-  @include max {
-    margin-bottom: 16px;
-  }
-  @include min {
-    margin-bottom: 14px;
-  }
-}
-
 .title-xsmall {
   display: block;
   font-weight: 700;

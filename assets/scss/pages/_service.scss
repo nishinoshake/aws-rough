@@ -19,7 +19,6 @@
     border-top: $border-width solid $color-border;
   }
 }
-
 .service-gutter {
   @include max {
     display: none;
@@ -30,31 +29,12 @@
     border-left: $border-width solid $color-border;
   }
 }
-
 .service-ad-desc {
   @include max {
     margin-bottom: 32px;
   }
   @include min {
     margin-bottom: 46px;
-  }
-}
-
-.service-ad-label {
-  margin-top: 1em;
-  text-align: center;
-  color: $color-muted;
-  @include fz-sm;
-}
-.service-ad-inner {
-  position: sticky;
-  top: 0;
-}
-
-.service-main {
-  @include min {
-    width: calc(100% - #{$width-ball-pc});
-    padding-right: 80px;
   }
 }
 .service-copy {
@@ -70,61 +50,6 @@
     background-color: $color-border;
   }
 }
-.service-unknown {
-  mix-blend-mode: difference;
-  @include max {
-    width: $width-ball-sp;
-    margin: 120px auto 0;
-  }
-  @include min {
-    width: $width-ball-pc;
-    flex: none;
-    position: sticky;
-    top: calc(50vh - #{$width-ball-pc / 2});
-  }
-}
-
-.service-unknown-ball {
-  background-color: $color-white;
-  border-radius: 50%; 
-  @include max {
-    height: $width-ball-sp;
-  }
-  @include min {
-    height: $width-ball-pc;
-  }
-}
-.service-unknown-logo {
-  width: 100%;
-  display: flex;
-  background-color: $color-white;
-  line-height: 0.8;
-  margin-right: 30px;
-  margin-top: 30px;
-  @include max {
-    padding: 12px;
-  }
-  @include min {
-    padding: 15px;
-  }
-}
-.service-unknown-logo-box {
-  background-color: $color-button;
-  flex-grow: 1;
-  @include hide-text;
-  @include max {
-    margin-right: 8px;
-  }
-  @include min {
-    margin-right: 8px;
-  }
-}
-.service-unknown-logo-text {
-  color: $color-button;
-  @include font-en;
-  @include fz-xl;
-}
-
 .service-content {
   @include max {
     padding: $padding-base-sp * 1.4 $padding-base-sp;
@@ -134,7 +59,6 @@
     padding: $padding-base-pc;
   }
 }
-
 .service-inside {
   .service-calc.mod-multiple {
     @include max {
@@ -148,12 +72,10 @@
     border-top: none;
   }
 }
-
 .service-calc {
   position: relative;
   z-index: 0;
 }
-
 .service-calc-label {
   @include font-en;
   @include fz-l;
@@ -166,13 +88,11 @@
     padding: 21px $padding-base-pc 0;
   }
 }
-
 .service-calc-footer {
   display: flex;
   justify-content: center;
   margin-top: 38px;
 }
-
 .service-calc-append {
   display: flex;
   justify-content: center;
@@ -192,7 +112,7 @@
     &:after {
       content: '';
       width: 12px;
-      height: $width-border-input;
+      height: $border-width;
       position: absolute;
       top: 50%;
       left: 0;

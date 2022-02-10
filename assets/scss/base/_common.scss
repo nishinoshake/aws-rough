@@ -6,7 +6,6 @@
 
 body {
   color: $color-font;
-  text-size-adjust: 100%;
   @include font-sans;
   @include lh-base;
   @include fz-m;

@@ -8,7 +8,6 @@
     margin-bottom: 122px;
   }
 }
-
 .accordion-item {
   border-bottom: $border-width solid $color-border;
   transition: border-radius 0.24s $easeOutQuart;
@@ -24,7 +23,6 @@
     border-top: $border-width solid $color-border;
   }
 }
-
 .accordion-title {
   width: 100%;
   display: flex;
@@ -82,17 +80,15 @@
     }
   }
 }
-
 .accordion-frame {
   overflow: hidden;
   height: 0;
   will-change: height;
 }
-
 .accordion-inside {
   position: relative;
   opacity: 0;
-  border-top: $width-border-input dashed $color-border;
+  border-top: $border-width dashed $color-border;
   transition: opacity 0.1s linear;
   will-change: opacity;
   @include max {

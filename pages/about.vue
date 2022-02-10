@@ -165,7 +165,6 @@
 </template>
 
 <script>
-import ServicePartsUnkown from '@/components/service/parts/ServicePartsUnkown'
 import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
 import ExternalLink from '@/components/text/ExternalLink'
 import serviceConfig from '@/config/service/mokuji'
@@ -176,7 +175,7 @@ import { postContact } from '@/api'
 
 export default {
   name: 'LandingIndex',
-  components: { ServicePartsUnkown, ServiceTemplateAds, ExternalLink },
+  components: { ServiceTemplateAds, ExternalLink },
   data() {
     return {
       monthlyDate: MONTHLY_DATE,

@@ -3,15 +3,9 @@
 .text {
   text-align: justify;
 }
-
 .text + .text {
   margin-top: 1em;
 }
-
-.title-small + .text {
-  margin-top: 0;
-}
-
 .text-link {
   color: $color-link;
   text-decoration: underline;
@@ -21,7 +15,6 @@
     }
   }
 }
-
 .text-notice {
   color: $color-muted;
   @include fz-s;

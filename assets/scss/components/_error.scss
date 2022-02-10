@@ -16,40 +16,40 @@
     max-width: 800px;
     padding: 40px;
   }
-  &-message {
-    text-align: center;
-    white-space: pre-wrap;
-    @include fz-xl;
+}
+.error-modal-message {
+  text-align: center;
+  white-space: pre-wrap;
+  @include fz-xl;
+}
+.error-modal-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: $color-button;
+  @include hide-text;
+  @include min {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    right: -25px;
   }
-  &-close {
-    width: 40px;
-    height: 40px;
+  &:before,
+  &:after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #fff;
     position: absolute;
-    top: -20px;
-    right: -20px;
-    background-color: $color-button;
-    @include hide-text;
-    @include min {
-      width: 50px;
-      height: 50px;
-      top: -25px;
-      right: -25px;
-    }
-    &:before,
-    &:after {
-      content: "";
-      width: 50%;
-      height: 2px;
-      background-color: #fff;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-    }
-    &:before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-    &:after {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
+    top: 50%;
+    left: 50%;
+  }
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }

@@ -85,10 +85,6 @@
 // -----------------------------------------------------
 // Border
 // -----------------------------------------------------
-@mixin b($color: $color-border) {
-  border: $width-border-form solid $color;
-}
-
 @mixin radius {
   border-radius: 0;
 }

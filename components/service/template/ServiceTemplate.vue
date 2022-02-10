@@ -59,7 +59,6 @@ import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds
 import ServicePartsCode from '@/components/service/parts/ServicePartsCode'
 import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
 import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsUnkown from '@/components/service/parts/ServicePartsUnkown'
 import ExternalLink from '@/components/text/ExternalLink'
 import serviceConfig from '@/config/service'
 import { getService } from '@/lib/service'
@@ -73,7 +72,6 @@ export default {
     ServicePartsCode,
     ServicePartsCondition,
     ServicePartsAccordion,
-    ServicePartsUnkown,
     ExternalLink
   },
   props: {

@@ -1,20 +1,13 @@
 @charset "utf-8";
 
-$image: '/assets/img/specialmooove';
-
 // -----------------------------------------------------
 // color
 // -----------------------------------------------------
 $color-white: #fff;
-$color-gray: #eee;
 $color-dark-gray: #ccc;
 $color-snow: #fafafa;
 $color-link: #039be4;
 $color-red: #e05243;
-$color-orange: #f58536;
-$color-beige: #d9a741;
-$color-blue: #2e73b8;
-$color-serverless: #fd5750;
 $color-muted: #777;
 $color-dark: #18181f;
 $color-button: $color-dark;
@@ -29,38 +22,18 @@ $mq-max: 1140px;
 $mq-min: $mq-max + 1;
 $mq-tb-max: 700px;
 $mq-tb-min: $mq-tb-max + 1;
-$width-max: 1360px;
 $width-menu-sp: 180px;
 $width-menu-pc: 154px;
 $width-menu-button-sp: 50px;
-$width-footer-pc: 600px;
-$width-border-pc: 30px;
-$width-border-sp: 30px;
-$width-border-form: 1px;
-$width-border-spec: 1px;
-$width-border-input: 1px;
-$width-ball-pc: 220px;
-$width-ball-sp: 220px;
 $width-content-max: 960px;
 $width-blank: 120px;
-$height-logo-pc: 50px;
-$height-header-pc: 50px;
 $height-footer-pc: 70px;
 $height-heading-pc: 129px;
 $height-heading-sp: 120px;
 $height-section-heading-pc: 82px;
-$height-cart-pc: 60px;
-$margin-sp: 20px;
-$margin-pc: 30px;
-$padding-sp: 24px;
-$padding-pc: 100px;
 $padding-base-pc: 56px;
 $padding-base-sp: 30px;
-$padding-content-pc: 20px;
-$padding-bottom-pc: 100px;
-$padding-bottom-sp: 100px;
 $border-width: 1px;
-$radius: 4px;
 
 // -----------------------------------------------------
 // easing

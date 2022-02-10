@@ -11,7 +11,7 @@
   &:after {
     content: '';
     width: 50%;
-    height: $width-border-input;
+    height: $border-width;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,38 +25,3 @@
   }
 }
 
-.button-list {
-  display: flex;
-  flex-wrap: wrap;
-  @include max {
-    margin: -6px;
-  }
-  @include min {
-    margin: -6px;
-  }
-}
-.button-item {
-  @include max {
-    padding: 6px;
-  }
-  @include min {
-    padding: 6px;
-  }
-}
-.button-inner {
-  color: $color-white;
-  line-height: 1;
-  letter-spacing: 0.06em;
-  background-color: $color-button;
-  border-radius: 999em;
-  @include center-flex;
-  @include max {
-    min-width: 130px;
-    padding: 14px 10px;
-    font-size: 12px;
-  }
-  @include min {
-    min-width: 140px;
-    padding: 14px 28px;
-  }
-}

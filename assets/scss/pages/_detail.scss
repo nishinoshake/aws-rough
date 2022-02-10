@@ -26,7 +26,6 @@
     padding: 18px 0;
   }
 }
-
 .detail-body {
   position: relative;
   @include max {
@@ -36,7 +35,6 @@
     padding: $padding-base-pc;
   }
 }
-
 .detail-main {
   display: flex;
   opacity: 0;
@@ -54,7 +52,6 @@
     pointer-events: auto;
   }
 }
-
 .detail-price {
   @include min {
     min-width: 400px;
@@ -64,7 +61,6 @@
     margin-left: auto;
   }
 }
-
 .detail-price-item {
   &:nth-child(n + 2) {
     margin-top: 20px;
@@ -73,13 +69,11 @@
     }
   }
 }
-
 .detail-price-link {
   display: flex;
   align-items: center;
   @include hover-fade;
 }
-
 .detail-price-name {
   margin-right: 20px;
   @include font-en;
@@ -89,14 +83,12 @@
     margin-right: 30px;
   }
 }
-
 .detail-price-color {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   margin-right: 16px;
 }
-
 .detail-chart {
   @include max {
     width: 240px;
@@ -109,7 +101,6 @@
     height: 320px;
   }
 }
-
 .detail-empty {
   position: absolute;
   pointer-events: none;
@@ -135,14 +126,6 @@
     span {
       opacity: 1;
       transition-delay: .4s;
-    }
-  }
-}
-
-.page-detail {
-  @include min {
-    .cart-detail {
-      display: none;
     }
   }
 }

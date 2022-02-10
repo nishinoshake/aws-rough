@@ -13,7 +13,7 @@
     border-bottom: $border-width solid $color-border;
     @include max {
       display: block;
-      padding: $padding-sp 0;
+      padding: 24px 0;
     }
     @include min {
       display: flex;
@@ -26,9 +26,9 @@
       display: block;
       padding: 0 $padding-base-sp;
       + td {
-        margin-top: $margin-sp;
+        margin-top: 20px;
         &.mod-price {
-          margin-top: $margin-sp * 2;
+          margin-top: 40px;
         }
       }
       &.mod-price {
@@ -91,30 +91,21 @@
       }
     }
   }
-  &.mod-grande {
-    @include min {
-      tr {
-        flex-wrap: wrap;
-        padding-right: 240px;
-      }
-      td.mod-price {
-        width: 240px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
+}
+.table.mod-grande {
+  @include min {
+    tr {
+      flex-wrap: wrap;
+      padding-right: 240px;
+    }
+    td.mod-price {
+      width: 240px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }
-
-.table-unit {
-  margin-left: 6px;
-}
-
-.table-price {
-  text-align: right;
-}
-
 .table-spec {
   margin: 30px 0;
   border-collapse: collapse;

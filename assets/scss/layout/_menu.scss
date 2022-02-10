@@ -21,15 +21,14 @@
     }
   }
 }
-
 .menu-button {
   @include max($mq-tb-max) {
     width: $width-menu-button-sp;
     height: $width-menu-button-sp;
     position: fixed;
     z-index: 1000;
-    bottom: $padding-sp;
-    right: $padding-sp;
+    bottom: 24px;
+    right: 24px;
     background-color: $color-button;
     border-radius: 50%;
     @include center-flex;
@@ -52,35 +51,33 @@
       }
     }
   }
-  &-icon {
-    width: 20px;
-    height: 12px;
-    margin-bottom: $width-border-input;
-    position: relative;
-    color: $color-white;
-    &:before,
-    &:after,
-    span {
-      content: "";
-      width: 100%;
-      height: $width-border-input;
-      left: 0;
-      position: absolute;
-      background-color: currentColor;
-    }
-    &:before {
-      top: 0;
-    }
-    span {
-      top: 50%;
-    }
-    &:after {
-      top: 100%;
-    }
-  }
-
 }
-
+.menu-button-icon {
+  width: 20px;
+  height: 12px;
+  margin-bottom: $border-width;
+  position: relative;
+  color: $color-white;
+  &:before,
+  &:after,
+  span {
+    content: "";
+    width: 100%;
+    height: $border-width;
+    left: 0;
+    position: absolute;
+    background-color: currentColor;
+  }
+  &:before {
+    top: 0;
+  }
+  span {
+    top: 50%;
+  }
+  &:after {
+    top: 100%;
+  }
+}
 .menu-frame {
   @include max($mq-tb-max) {
     width: $width-menu-sp;
@@ -93,7 +90,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     transform: translate3d(100%, 0, 0);
-    padding-bottom: calc(#{$width-menu-button-sp} + #{$padding-sp} * 2);
+    padding-bottom: calc(#{$width-menu-button-sp} + 24px * 2);
     border-left: $border-width solid $color-border;
     background-color: #fff;
     will-change: transform;
@@ -174,13 +171,4 @@
       margin-right: 3px;
     }
   }
-}
-
-.menu-please {
-  position: absolute;
-  top: 0;
-  left: calc(100% + 3em);
-  white-space: nowrap;
-  writing-mode: vertical-rl;
-  @include fz-l;
 }

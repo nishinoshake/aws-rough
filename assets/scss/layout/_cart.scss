@@ -5,11 +5,11 @@
   display: flex;
   align-items: center;
   @include max {
-    width: calc(100vw - 86px - #{$padding-sp});
+    width: calc(100vw - 86px - 24px);
     max-width: 400px;
     position: fixed;
     right: 86px;
-    bottom: $padding-sp;
+    bottom: 24px;
     border-radius: 999em;
     overflow: hidden;
     border: $border-width solid currentColor;
@@ -19,7 +19,7 @@
     }
   }
   @include min($mq-tb-min) {
-    right: $padding-sp;
+    right: 24px;
   }
   @include min {
     display: flex;
@@ -45,7 +45,6 @@
     transform: translate3d(0, 60px, 0);
   }
 }
-
 .cart-detail {
   display: flex;
   align-items: center;
@@ -69,7 +68,6 @@
     border-bottom: $border-width solid $color-border;
   }
 }
-
 .cart-total {
   position: relative;
   z-index: 1;
@@ -90,7 +88,6 @@
     padding: 0 32px;
   }
 }
-
 .cart-total-inner {
   display: flex;
   justify-content: space-between;
@@ -99,7 +96,6 @@
     width: 100%;
   }
 }
-
 .cart-label {
   margin-right: 0.5em;
   @include lh-1;

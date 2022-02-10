@@ -11,23 +11,15 @@
     }
   }
 }
-
 .title-page + .section-list {
   border-top: 0;
 }
-
 .section {
   position: relative;
 }
-
 .section + .section {
   border-top: $border-width solid $color-border;
 }
-
-
-.section-child {
-  + .section-child {
-
-    margin-top: 32px;
-  }
+.section-child + .section-child {
+  margin-top: 32px;
 }

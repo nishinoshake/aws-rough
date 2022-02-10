@@ -11,17 +11,15 @@
     margin-bottom: 10px;
   }
 }
-
 .form-text {
   position: relative;
 }
-
 .form-text-input {
   width: 100%;
   text-align: center;
-  border: $width-border-input solid $color-border-dark;
+  border: $border-width solid $color-border-dark;
   background-color: $color-white;
-  border-radius: $radius;
+  border-radius: 4px;
   @include fz-form;
   @include font-en;
   @include transition-collection;
@@ -38,35 +36,19 @@
     border-color: $color-button;
   }
 }
-
 .form-select {
   width: 100%;
   overflow: hidden;
   position: relative;
   display: block;
   background-color: $color-white;
-  border: $width-border-input solid $color-border-dark;
-  border-radius: $radius;
+  border: $border-width solid $color-border-dark;
+  border-radius: 4px;
   select {
     opacity: 0;
     cursor: pointer;
     @include fz-form;
     @include fit-full;
-  }
-  &-value {
-    display: block;
-    text-align: center;
-    white-space: nowrap;
-    background-color: $color-white;
-    @include font-en;
-    @include fz-form;
-    @include lh-1;
-    @include max {
-      padding: 11px 16px 11px 0;
-    }
-    @include min {
-      padding: 14px 16px 13px 0;
-    }
   }
   &:after {
     content: '';
@@ -74,8 +56,8 @@
     height: 8px;
     top: calc(50% - 8px);
     position: absolute;
-    border-bottom: $width-border-input solid $color-border-dark;
-    border-right: $width-border-input solid $color-border-dark;
+    border-bottom: $border-width solid $color-border-dark;
+    border-right: $border-width solid $color-border-dark;
     transform: rotate(45deg);
     pointer-events: none;
     @include max {
@@ -84,5 +66,20 @@
     @include min {
       right: 14px;
     }
+  }
+}
+.form-select-value {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $color-white;
+  @include font-en;
+  @include fz-form;
+  @include lh-1;
+  @include max {
+    padding: 11px 16px 11px 0;
+  }
+  @include min {
+    padding: 14px 16px 13px 0;
   }
 }

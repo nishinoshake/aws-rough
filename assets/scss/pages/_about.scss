@@ -1,9 +1,9 @@
 .about-contact-input {
   width: 100%;
   margin-top: 24px;
-  border: $width-border-input solid $color-border-dark;
+  border: $border-width solid $color-border-dark;
   background-color: $color-white;
-  border-radius: $radius;
+  border-radius: 4px;
   @include transition-collection;
   @include max {
     padding: 16px;

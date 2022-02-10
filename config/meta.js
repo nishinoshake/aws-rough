@@ -18,10 +18,6 @@ const meta = {
     title: 'このサイトについて | ざっくりAWS',
     description: SITE_DESCRIPTION
   },
-  whatADay: {
-    title: 'はじめてのAWS | ざっくりAWS',
-    description: SITE_DESCRIPTION
-  },
   detail: {
     title: '料金内訳 | ざっくりAWS',
     description: 'ざっくりAWSの料金内訳を確認できます。'
