@@ -7,7 +7,7 @@
         [`mod-${column.size}`]: column.size
       }"
     >
-      <ServiceFormNumber
+      <FormNumber
         v-if="column.type === 'number'"
         :service-key="service.key"
         :index="rowIndex"
@@ -16,7 +16,7 @@
         :value="row[column.key]"
       />
 
-      <ServiceFormSelect
+      <FormSelect
         v-if="column.type === 'select'"
         :service-key="service.key"
         :index="rowIndex"
@@ -27,7 +27,7 @@
       />
     </td>
     <td class="mod-price">
-      <ServicePartsPrice :price="row.total.jpy" />
+      <Price :price="row.total.jpy" />
       <button
         v-if="service.multiple"
         class="button-remove"
@@ -41,13 +41,13 @@
 
 <script>
 import serviceConfig from '@/config/service'
-import ServiceFormNumber from '@/components/service/form/ServiceFormNumber'
-import ServiceFormSelect from '@/components/service/form/ServiceFormSelect'
-import ServicePartsPrice from '@/components/service/parts/ServicePartsPrice'
+import FormNumber from '@/components/form/FormNumber'
+import FormSelect from '@/components/form/FormSelect'
+import Price from '@/components/Price'
 
 export default {
-  name: 'ServiceTemplateRow',
-  components: { ServiceFormNumber, ServiceFormSelect, ServicePartsPrice },
+  name: 'ServiceRow',
+  components: { FormNumber, FormSelect, Price },
   props: {
     row: {
       type: Object,

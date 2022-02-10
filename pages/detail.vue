@@ -23,7 +23,7 @@
 <script>
 import Color from 'color'
 import { mapGetters } from 'vuex'
-import ServicePartsPrice from '@/components/service/parts/ServicePartsPrice'
+import Price from '@/components/Price'
 import DetailCopy from '@/components/detail/DetailCopy'
 import DetailPrice from '@/components/detail/DetailPrice'
 import DetailChart from '@/components/detail/DetailChart'
@@ -32,7 +32,7 @@ import meta from '@/config/meta'
 export default {
   name: 'DetailIndex',
   components: {
-    ServicePartsPrice,
+    Price,
     DetailCopy,
     DetailPrice,
     DetailChart

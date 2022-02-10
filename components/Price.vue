@@ -10,7 +10,7 @@ import anime from 'animejs'
 import { formatPrice } from '@/lib/price'
 
 export default {
-  name: 'ServicePartsPrice',
+  name: 'Price',
   props: {
     price: {
       type: Number,

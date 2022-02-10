@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="ses" hide-condition>
+  <ServiceArticle service-name="ses" hide-condition>
     <template v-slot:zakuri>
       <p class="text">フルマネージド型のメールサービス。</p>
       <p class="text">
@@ -39,24 +39,24 @@
         <p class="text">送信用のIPアドレスをリースする場合は、個数を入力してください。</p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
-import ServicePartsSpec from '@/components/service/parts/ServicePartsSpec'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
+import Spec from '@/components/Spec'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceSES',
   components: {
-    ServiceTemplate,
-    ServicePartsAccordion,
-    ServicePartsCondition,
-    ServicePartsSpec,
+    ServiceArticle,
+    Accordion,
+    Condition,
+    Spec,
     ExternalLink
   },
   head() {

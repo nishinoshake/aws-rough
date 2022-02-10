@@ -16,7 +16,7 @@
 import anime from 'animejs'
 
 export default {
-  name: 'ServicePartsAccordion',
+  name: 'Accordion',
   props: {
     title: String,
     forceOpen: Boolean

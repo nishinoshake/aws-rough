@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ExternalLink from '@/components/text/ExternalLink'
+import ExternalLink from '@/components/ExternalLink'
 
 export default {
   name: 'LayoutFooter',

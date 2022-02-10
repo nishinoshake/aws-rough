@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="cloudfront">
+  <ServiceArticle service-name="cloudfront">
     <template v-slot:zakuri>
       <p class="text">コンテンツを効率的に配信できるやつ（CDN）。</p>
       <p class="text">
@@ -55,19 +55,19 @@
         </p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceCloudfront',
-  components: { ServiceTemplate, ServicePartsAccordion, ServicePartsCondition, ExternalLink },
+  components: { ServiceArticle, Accordion, Condition, ExternalLink },
   head() {
     return meta.cloudfront
   }

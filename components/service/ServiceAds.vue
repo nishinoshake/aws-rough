@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'ServiceTemplateAds'
+  name: 'ServiceAds'
 }
 </script>

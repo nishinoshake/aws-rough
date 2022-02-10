@@ -136,14 +136,14 @@
         </div>
       </section>
 
-      <ServiceTemplateAds />
+      <ServiceAds />
     </div>
   </article>
 </template>
 
 <script>
-import ServiceTemplateAds from '@/components/service/template/ServiceTemplateAds'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceAds from '@/components/service/ServiceAds'
+import ExternalLink from '@/components/ExternalLink'
 import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
 import { MONTHLY_DATE } from '@/config/constants'
@@ -152,7 +152,7 @@ import { postContact } from '@/api'
 
 export default {
   name: 'LandingIndex',
-  components: { ServiceTemplateAds, ExternalLink },
+  components: { ServiceAds, ExternalLink },
   data() {
     return {
       monthlyDate: MONTHLY_DATE,

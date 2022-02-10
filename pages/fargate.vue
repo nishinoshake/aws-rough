@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="fargate">
+  <ServiceArticle service-name="fargate">
     <template v-slot:zakuri>
       <p class="text">
         サーバーの管理が不要なコンテナの実行環境。
@@ -36,22 +36,22 @@
         <p class="text">ECSからインターネットへ送信されるデータ量をGB単位で入力してください。</p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceFargate',
   components: {
-    ServiceTemplate,
-    ServicePartsAccordion,
-    ServicePartsCondition,
+    ServiceArticle,
+    Accordion,
+    Condition,
     ExternalLink
   },
   head() {

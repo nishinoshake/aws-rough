@@ -21,7 +21,7 @@ import LayoutCart from '@/layouts/LayoutCart'
 import LayoutMenu from '@/layouts/LayoutMenu'
 import LayoutHeader from '@/layouts/LayoutHeader'
 import LayoutFooter from '@/layouts/LayoutFooter'
-import ErrorModal from '@/components/error/ErrorModal'
+import ErrorModal from '@/components/ErrorModal'
 import { fetchZ } from '@/api'
 
 export default {

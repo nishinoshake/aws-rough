@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="lambda">
+  <ServiceArticle service-name="lambda">
     <template v-slot:zakuri>
       <p class="text">
         サーバーレスでコードを実行できるやつ。
@@ -34,20 +34,20 @@
         <pre>(2048 / 1024) * 86400 = 172,800GB秒</pre>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 import { addComma } from '@/lib/price'
 
 export default {
   name: 'ServiceLambda',
-  components: { ServiceTemplate, ServicePartsAccordion, ServicePartsCondition, ExternalLink },
+  components: { ServiceArticle, Accordion, Condition, ExternalLink },
   head() {
     return meta.lambda
   },

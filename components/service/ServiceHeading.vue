@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'ServiceTemplateTitle',
+  name: 'ServiceHeading',
   props: {
     service: {
       type: Object,

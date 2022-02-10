@@ -21,7 +21,7 @@ import ses from '@/assets/svg/ses.svg'
 import sqs from '@/assets/svg/sqs.svg'
 
 export default {
-  name: 'ServicePartsIcon',
+  name: 'ServiceIcon',
   components: {
     ec2,
     fargate,

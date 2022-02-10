@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="ec2">
+  <ServiceArticle service-name="ec2">
     <template v-slot:zakuri>
       <p class="text">
         なんでもできる仮想サーバー。
@@ -92,22 +92,22 @@
         </p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceEC2',
   components: {
-    ServiceTemplate,
-    ServicePartsAccordion,
-    ServicePartsCondition,
+    ServiceArticle,
+    Accordion,
+    Condition,
     ExternalLink
   },
   head() {

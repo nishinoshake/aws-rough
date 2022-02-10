@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="apigateway">
+  <ServiceArticle service-name="apigateway">
     <template v-slot:zakuri>
       <p class="text">APIのエンドポイントを作成できるやつ。</p>
       <p class="text">
@@ -21,18 +21,18 @@
         <p class="text">キャッシュを使用する場合は、サイズを選択してください。</p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceApiGateway',
-  components: { ServiceTemplate, ServicePartsAccordion, ServicePartsCondition },
+  components: { ServiceArticle, Accordion, Condition },
   head() {
     return meta.apigateway
   }

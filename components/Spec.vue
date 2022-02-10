@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'ServicePartsSpec',
+  name: 'Spec',
   props: {
     labels: {
       type: Array,

@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="route53">
+  <ServiceArticle service-name="route53">
     <template v-slot:zakuri>
       <p class="text">ドメイン名を解決してくれるやつ（DNS）。</p>
       <p class="text">
@@ -34,19 +34,19 @@
         </p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceRoute53',
-  components: { ServiceTemplate, ServicePartsAccordion, ServicePartsCondition, ExternalLink },
+  components: { ServiceArticle, Accordion, Condition, ExternalLink },
   head() {
     return meta.route53
   }

@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="rds">
+  <ServiceArticle service-name="rds">
     <template v-slot:zakuri>
       <p class="text">フルマネージド型のリレーショナルデータベース。</p>
       <p class="text">
@@ -78,24 +78,24 @@
         </p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
-import ServicePartsSpec from '@/components/service/parts/ServicePartsSpec'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
+import Spec from '@/components/Spec'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceRDS',
   components: {
-    ServiceTemplate,
-    ServicePartsAccordion,
-    ServicePartsCondition,
-    ServicePartsSpec,
+    ServiceArticle,
+    Accordion,
+    Condition,
+    Spec,
     ExternalLink
   },
   head() {

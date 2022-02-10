@@ -19,7 +19,7 @@
 import { MAX_INPUT } from '@/config/constants'
 
 export default {
-  name: 'ServiceFormNumber',
+  name: 'FormNumber',
   props: {
     serviceKey: {
       type: String,

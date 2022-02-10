@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'ServiceTemplateLabel',
+  name: 'ServiceLabel',
   props: {
     label: {
       type: String,

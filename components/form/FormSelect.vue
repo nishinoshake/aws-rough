@@ -20,7 +20,7 @@ import serviceConfig from '@/config/service'
 import { getDefaultColumnValue } from '@/lib/service'
 
 export default {
-  name: 'ServiceFormSelect',
+  name: 'FormSelect',
   props: {
     serviceKey: {
       type: String,

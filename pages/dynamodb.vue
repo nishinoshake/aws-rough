@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="dynamodb">
+  <ServiceArticle service-name="dynamodb">
     <template v-slot:zakuri>
       <p class="text">スケーラブルなNoSQLデータベース。</p>
       <p class="text">
@@ -84,19 +84,19 @@
         </p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServicePartsAccordion from '@/components/service/parts/ServicePartsAccordion'
-import ServicePartsCondition from '@/components/service/parts/ServicePartsCondition'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import Accordion from '@/components/Accordion'
+import Condition from '@/components/Condition'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceDynamoDB',
-  components: { ServiceTemplate, ServicePartsAccordion, ServicePartsCondition, ExternalLink },
+  components: { ServiceArticle, Accordion, Condition, ExternalLink },
   head() {
     return meta.dynamodb
   }

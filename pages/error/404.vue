@@ -12,7 +12,7 @@
 
 <script>
 import meta from '@/config/meta'
-import ExternalLink from '@/components/text/ExternalLink'
+import ExternalLink from '@/components/ExternalLink'
 
 export default {
   components: { ExternalLink },

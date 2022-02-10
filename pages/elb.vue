@@ -1,5 +1,5 @@
 <template>
-  <ServiceTemplate service-name="elb">
+  <ServiceArticle service-name="elb">
     <template v-slot:calc>
       <div
         class="calc-section"
@@ -7,8 +7,8 @@
         v-for="serviceName in ['alb', 'nlb', 'clb']"
         :key="serviceName"
       >
-        <ServiceTemplateLabel :label="service[serviceName].fullname" />
-        <ServiceTemplateCalc :service="service[serviceName]" />
+        <ServiceLabel :label="service[serviceName].fullname" />
+        <ServiceCalc :service="service[serviceName]" />
       </div>
     </template>
 
@@ -43,26 +43,26 @@
         </p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateLabel'
-import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import ServiceLabel from '@/components/service/ServiceLabel'
+import ServiceCalc from '@/components/service/ServiceCalc'
 import serviceConfigELB from '@/config/service/elb'
 import serviceConfigCLB from '@/config/service/clb'
 import serviceConfigALB from '@/config/service/alb'
 import serviceConfigNLB from '@/config/service/nlb'
-import ExternalLink from '@/components/text/ExternalLink'
+import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceELB',
   components: {
-    ServiceTemplate,
-    ServiceTemplateLabel,
-    ServiceTemplateCalc,
+    ServiceArticle,
+    ServiceLabel,
+    ServiceCalc,
     ExternalLink
   },
   head() {

@@ -1,10 +1,10 @@
 <template>
-  <ServiceTemplate service-name="vpc">
+  <ServiceArticle service-name="vpc">
     <template v-slot:calc>
       <div>
         <div class="service-inside" :data-test="serviceName" v-for="serviceName in ['natgw']" :key="serviceName">
-          <ServiceTemplateLabel :label="service[serviceName].fullname" />
-          <ServiceTemplateCalc :service="service[serviceName]" />
+          <ServiceLabel :label="service[serviceName].fullname" />
+          <ServiceCalc :service="service[serviceName]" />
         </div>
       </div>
     </template>
@@ -44,14 +44,14 @@
         </p>
       </section>
     </template>
-  </ServiceTemplate>
+  </ServiceArticle>
 </template>
 
 <script>
-import ServiceTemplate from '@/components/service/template/ServiceTemplate'
-import ServiceTemplateLabel from '@/components/service/template/ServiceTemplateLabel'
-import ServiceTemplateCalc from '@/components/service/template/ServiceTemplateCalc'
-import ExternalLink from '@/components/text/ExternalLink'
+import ServiceArticle from '@/components/service/ServiceArticle'
+import ServiceLabel from '@/components/service/ServiceLabel'
+import ServiceCalc from '@/components/service/ServiceCalc'
+import ExternalLink from '@/components/ExternalLink'
 import serviceConfigVPC from '@/config/service/vpc'
 import serviceConfigNATGW from '@/config/service/natgw'
 import meta from '@/config/meta'
@@ -59,9 +59,9 @@ import meta from '@/config/meta'
 export default {
   name: 'ServiceVPC',
   components: {
-    ServiceTemplate,
-    ServiceTemplateLabel,
-    ServiceTemplateCalc,
+    ServiceArticle,
+    ServiceLabel,
+    ServiceCalc,
     ExternalLink
   },
   head() {

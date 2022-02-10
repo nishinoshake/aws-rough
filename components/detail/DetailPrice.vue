@@ -5,7 +5,7 @@
         <nuxt-link :to="getServiceHref(service.key)" class="detail-price-link">
           <span class="detail-price-color" :style="{ backgroundColor: colors[index] }" />
           <p class="detail-price-name">{{ service.name }}</p>
-          <ServicePartsPrice :price="service.total" mod="large" />
+          <Price :price="service.total" mod="large" />
         </nuxt-link>
       </li>
     </ul>
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import ServicePartsPrice from '@/components/service/parts/ServicePartsPrice'
+import Price from '@/components/Price'
 import serviceConfig from '@/config/service'
 import { getService } from '@/lib/service'
 
 export default {
   name: 'DetailPrice',
-  components: { ServicePartsPrice },
+  components: { Price },
   props: {
     services: {
       type: Array,

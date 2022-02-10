@@ -2,7 +2,7 @@
   <div :class="['calc', { 'mod-multiple': service.multiple, 'mod-grande': service.grande }]" data-test="service-calc">
     <table :class="['table', { 'mod-multiple': service.multiple, 'mod-grande': service.grande }]">
       <tbody>
-        <ServiceTemplateRow
+        <ServiceRow
           v-for="(row, rowIndex) in table"
           :key="rowIndex"
           :row="row"
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-import ServiceTemplateRow from '@/components/service/template/ServiceTemplateRow'
+import ServiceRow from '@/components/service/ServiceRow'
 import serviceConfig from '@/config/service'
 
 export default {
-  name: 'ServiceTemplate',
-  components: { ServiceTemplateRow },
+  name: 'ServiceCalc',
+  components: { ServiceRow },
   props: {
     service: {
       type: Object,
