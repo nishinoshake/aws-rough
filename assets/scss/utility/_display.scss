@@ -1,0 +1,11 @@
+.sp {
+  @include min {
+    display: none;
+  }
+}
+
+.pc {
+  @include max {
+    display: none;
+  }
+}

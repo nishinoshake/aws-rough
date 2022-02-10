@@ -1,0 +1,20 @@
+.heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  letter-spacing: 0.08em;
+  font-feature-settings: "palt";
+  border-bottom: $border-width solid $color-border;
+  @include fz-ml;
+  @include max {
+    padding: 12px $padding-base-sp;
+  }
+  @include min {
+    min-height: $height-section-heading-pc;
+    padding: 18px $padding-base-pc;
+    @include lh-1;
+  }
+  a {
+    position: relative;
+  }
+}

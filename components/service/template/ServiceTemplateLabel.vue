@@ -1,5 +1,5 @@
 <template>
-  <h2 class="service-calc-label">{{ label }}</h2>
+  <h2 class="calc-label">{{ label }}</h2>
 </template>
 
 <script>

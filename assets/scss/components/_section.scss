@@ -11,7 +11,7 @@
     }
   }
 }
-.title-page + .section-list {
+.large-heading + .section-list {
   border-top: 0;
 }
 .section {
@@ -19,6 +19,15 @@
 }
 .section + .section {
   border-top: $border-width solid $color-border;
+}
+.section-content {
+  @include max {
+    padding: $padding-base-sp * 1.4 $padding-base-sp;
+  }
+  @include min {
+    position: relative;
+    padding: $padding-base-pc;
+  }
 }
 .section-child + .section-child {
   margin-top: 32px;

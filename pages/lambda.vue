@@ -1,33 +1,31 @@
 <template>
   <ServiceTemplate service-name="lambda">
     <template v-slot:zakuri>
-      <div class="section-child">
-        <p class="text">
-          サーバーレスでコードを実行できるやつ。
-        </p>
-        <p class="text">
-          サーバーレスとはいっても、どこかにサーバーはあるので、初めてこの単語を聞いた人は、いまいちピンと来ないかもしれませんが、サーバーの管理が開発者の手から離れ、使った分だけ課金される、みたいなニュアンスになります。
-        </p>
-        <p class="text">
-          Lambdaだけを使うケースは稀で、他のサービスと連携することが多いです。S3に画像が保存されたタイミングでリサイズ処理をしたり、API
-          Gatewayのバックエンドとして設定したり、使いみちは色々。
-        </p>
-        <p class="text">
-          <ExternalLink href="https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/runtimes-custom.html"
-            >カスタムランタイム</ExternalLink
-          >を使用すれば好きな言語で実装できますが、ネイティブでは、Java、Go、PowerShell、Node.js、C#、Python、Rubyをサポートしています。
-        </p>
-      </div>
+      <p class="text">
+        サーバーレスでコードを実行できるやつ。
+      </p>
+      <p class="text">
+        サーバーレスとはいっても、どこかにサーバーはあるので、初めてこの単語を聞いた人は、いまいちピンと来ないかもしれませんが、サーバーの管理が開発者の手から離れ、使った分だけ課金される、みたいなニュアンスになります。
+      </p>
+      <p class="text">
+        Lambdaだけを使うケースは稀で、他のサービスと連携することが多いです。S3に画像が保存されたタイミングでリサイズ処理をしたり、API
+        Gatewayのバックエンドとして設定したり、使いみちは色々。
+      </p>
+      <p class="text">
+        <ExternalLink href="https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/runtimes-custom.html"
+          >カスタムランタイム</ExternalLink
+        >を使用すれば好きな言語で実装できますが、ネイティブでは、Java、Go、PowerShell、Node.js、C#、Python、Rubyをサポートしています。
+      </p>
     </template>
 
     <template v-slot:help>
       <section class="section-child">
-        <h3 class="title-xsmall"><span>リクエスト数</span></h3>
+        <h3 class="small-heading"><span>リクエスト数</span></h3>
         <p class="text">Lambdaへのリクエスト数を入力してください。</p>
         <p class="text">{{ freeRequest }}件のリクエストは無料です。</p>
       </section>
       <section class="section-child">
-        <h3 class="title-xsmall"><span>メモリ</span></h3>
+        <h3 class="small-heading"><span>メモリ</span></h3>
         <p class="text">
           Lambdaに割り当てたメモリと、実行された秒数をかけた値を入力してください。{{
             freeMemory

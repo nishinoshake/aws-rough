@@ -1,21 +1,13 @@
 @charset "utf-8";
 
-.accordion-list {
-  @include max {
-    margin-bottom: 80px;
-  }
-  @include min {
-    margin-bottom: 122px;
-  }
-}
-.accordion-item {
+.accordion {
   border-bottom: $border-width solid $color-border;
   transition: border-radius 0.24s $easeOutQuart;
   &.is-active {
     .accordion-inside {
       opacity: 1;
     }
-    .accordion-title-icon {
+    .accordion-heading-icon {
       transform: rotate(180deg);
     }
   }
@@ -23,7 +15,7 @@
     border-top: $border-width solid $color-border;
   }
 }
-.accordion-title {
+.accordion-heading {
   width: 100%;
   display: flex;
   align-items: center;
@@ -44,7 +36,7 @@
     }
   }
 }
-.accordion-title-icon {
+.accordion-heading-icon {
   position: absolute;
   border: $border-width solid $color-border;
   border-radius: 50%;

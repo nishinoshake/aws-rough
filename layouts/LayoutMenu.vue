@@ -1,20 +1,20 @@
 <template>
-  <nav :class="['menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
-    <div class="menu-frame">
-      <p class="menu-logo">
-        <nuxt-link to="/" class="menu-logo-link">ざっくりAWS</nuxt-link>
+  <nav :class="['l-menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
+    <div class="l-menu-frame">
+      <p class="l-menu-logo">
+        <nuxt-link to="/" class="l-menu-logo-link">ざっくりAWS</nuxt-link>
       </p>
-      <ul class="menu-list">
-        <li v-for="service in services" :key="service.key" class="menu-item">
-          <nuxt-link :class="`menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
+      <ul class="l-menu-list">
+        <li v-for="service in services" :key="service.key" class="l-menu-item">
+          <nuxt-link :class="`l-menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
             <ServicePartsIcon :name="service.key" />
             <span>{{ service.name }}</span>
           </nuxt-link>
         </li>
       </ul>
     </div>
-    <button :class="['menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
-      <span class="menu-button-icon">
+    <button :class="['l-menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
+      <span class="l-menu-button-icon">
         <span></span>
       </span>
     </button>
@@ -61,7 +61,7 @@ export default {
       const viewHeight = parseInt(window.innerHeight, 10)
       const menuHeight = parseInt(this.$refs.menu.offsetHeight, 10)
       const contentWidth = parseInt(document.querySelector('.contents').clientWidth, 10)
-      const headerHeight = parseInt(document.getElementById('header').clientHeight, 10)
+      const headerHeight = parseInt(document.querySelector('.header').clientHeight, 10)
 
       document.documentElement.style.setProperty('--view-height', `${viewHeight}px`)
       document.documentElement.style.setProperty('--menu-height', `${menuHeight}px`)

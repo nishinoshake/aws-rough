@@ -1,0 +1,10 @@
+.l-contents {
+  position: relative;
+  @include max($mq-tb-max) {
+    min-height: 100vh;
+  }
+  @include min($mq-tb-min) {
+    width: calc(100% - #{$width-menu-pc});
+    min-height: calc(100vh - #{$height-footer-pc});
+  }
+}

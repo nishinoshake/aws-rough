@@ -1,7 +1,7 @@
 <template>
-  <header class="header" id="header">
-    <div class="header-inner">
-      <div class="header-box" ref="box">
+  <header class="l-header">
+    <div class="l-header-inner">
+      <div class="l-header-box" ref="box">
         <LayoutCart :total="$store.state.total.jpy" />
       </div>
     </div>

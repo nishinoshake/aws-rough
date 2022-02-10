@@ -1,0 +1,8 @@
+.l-container {
+  position: relative;
+  @include min($mq-tb-min) {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+}

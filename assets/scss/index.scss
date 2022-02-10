@@ -21,24 +21,38 @@
 // コンポーネント
 // ==========================================================================
 @import 'components/accordion';
+@import 'components/ad';
 @import 'components/button';
+@import 'components/calc';
 @import 'components/code';
 @import 'components/error';
 @import 'components/form';
 @import 'components/list';
+@import 'components/notice';
 @import 'components/price';
 @import 'components/section';
 @import 'components/table';
 @import 'components/text';
-@import 'components/title';
 @import 'components/spec';
+@import 'components/heading/large-heading';
+@import 'components/heading/heading';
+@import 'components/heading/small-heading';
+
+// ==========================================================================
+// ユーティリティ
+// ==========================================================================
+@import 'utility/display';
 
 // ==========================================================================
 // 全ページにあるやつ
 // ==========================================================================
-@import 'layout/header';
-@import 'layout/footer';
+@import 'layout/app';
 @import 'layout/cart';
+@import 'layout/container';
+@import 'layout/content';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
 @import 'layout/menu';
 
 // ==========================================================================
@@ -47,4 +61,3 @@
 @import 'pages/about';
 @import 'pages/detail';
 @import 'pages/landing';
-@import 'pages/service';

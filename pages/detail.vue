@@ -1,7 +1,7 @@
 <template>
   <article class="detail">
-    <h1 class="title-page">
-      <span class="title-page-ja">料金内訳</span>
+    <h1 class="large-heading large-heading-ja">
+      料金内訳
       <DetailCopy :services="services" />
     </h1>
 

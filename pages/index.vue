@@ -1,11 +1,9 @@
 <template>
-  <div class="landing">
-    <h1 class="title-page service-copy">
-      <span class="title-page-ja">AWSの料金を、<br class="sp" />日本円でざっくり</span>
-    </h1>
+  <article>
+    <h1 class="large-heading large-heading-ja">AWSの料金を、<br class="sp" />日本円でざっくり</h1>
     <div class="section-list">
       <section class="section">
-        <div class="service-content">
+        <div class="section-content">
           <ul class="landing-service-list">
             <li v-for="service in services" :key="service.key" class="landing-service-item">
               <nuxt-link :class="`landing-service-link mod-${service.color}`" :to="service.href">
@@ -21,28 +19,24 @@
           </ul>
         </div>
       </section>
-      <div class="service-container service-container-without-margin">
-        <div class="service-body">
-          <section class="section">
-            <h2 class="title-section">公式の料金計算ツールではありません</h2>
-            <div class="service-content">
-              <p class="text">本サイトは公式のものではありません。</p>
-              <p class="text">
-                公式の料金計算ツールには、2018年にリリースされた<ExternalLink href="https://calculator.aws"
-                  >AWS Pricing Calculator</ExternalLink
-                >と、2007年にリリースされた歴史のある<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
-                  >SIMPLE MONTHLY CALCULATOR</ExternalLink
-                >があります。本サイトは、公式のツールから入力項目に絞ってシンプルにしたものです。
-              </p>
-              <p class="text">
-                そのため、AWSの料金をざっくり知りたいときには便利ですが、正確な料金を知りたい場合は、公式の料金計算ツールを使用してください。
-              </p>
-            </div>
-          </section>
+      <section class="section">
+        <h2 class="heading">公式の料金計算ツールではありません</h2>
+        <div class="section-content">
+          <p class="text">本サイトは公式のものではありません。</p>
+          <p class="text">
+            公式の料金計算ツールには、2018年にリリースされた<ExternalLink href="https://calculator.aws"
+              >AWS Pricing Calculator</ExternalLink
+            >と、2007年にリリースされた歴史のある<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
+              >SIMPLE MONTHLY CALCULATOR</ExternalLink
+            >があります。本サイトは、公式のツールから入力項目に絞ってシンプルにしたものです。
+          </p>
+          <p class="text">
+            そのため、AWSの料金をざっくり知りたいときには便利ですが、正確な料金を知りたい場合は、公式の料金計算ツールを使用してください。
+          </p>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

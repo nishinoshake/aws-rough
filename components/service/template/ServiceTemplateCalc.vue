@@ -1,8 +1,5 @@
 <template>
-  <div
-    :class="['service-calc', { 'mod-multiple': service.multiple, 'mod-grande': service.grande }]"
-    data-test="service-calc"
-  >
+  <div :class="['calc', { 'mod-multiple': service.multiple, 'mod-grande': service.grande }]" data-test="service-calc">
     <table :class="['table', { 'mod-multiple': service.multiple, 'mod-grande': service.grande }]">
       <tbody>
         <ServiceTemplateRow
@@ -14,8 +11,8 @@
         />
       </tbody>
     </table>
-    <div class="service-calc-footer" v-if="service.multiple">
-      <button :class="`service-calc-append mod-${service.color}`" @click="append(service.key)">
+    <div class="calc-footer" v-if="service.multiple">
+      <button :class="`calc-append mod-${service.color}`" @click="append(service.key)">
         <span>追加する</span>
       </button>
     </div>

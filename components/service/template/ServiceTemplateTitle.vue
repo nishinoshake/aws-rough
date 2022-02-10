@@ -1,9 +1,5 @@
 <template>
-  <h1 class="title-page">
-    <span class="title-page-service">
-      <span class="title-page-name">{{ service.name }}</span>
-    </span>
-  </h1>
+  <h1 class="large-heading">{{ service.name }}</h1>
 </template>
 
 <script>

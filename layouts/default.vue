@@ -1,16 +1,14 @@
 <template>
-  <div :class="`app page-${routeName}`">
-    <div class="container">
-      <div class="main">
+  <div class="l-app">
+    <LayoutHeader />
+    <main class="l-main">
+      <div class="l-container">
         <LayoutMenu />
-        <div class="contents">
-          <div class="page">
-            <nuxt />
-          </div>
+        <div class="l-contents">
+          <nuxt />
         </div>
       </div>
-    </div>
-    <LayoutHeader />
+    </main>
     <LayoutFooter />
     <ErrorModal :is-visible="$store.state.error.isVisible" :message="$store.state.error.message" />
   </div>

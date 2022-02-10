@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.header {
+.l-header {
   display: flex;
   line-height: 1;
   @include min {
@@ -12,14 +12,14 @@
     pointer-events: none;
   }
 }
-.header-inner {
+.l-header-inner {
   @include min {
     width: 100%;
     display: flex;
     justify-content: flex-end;
   }
 }
-.header-box {
+.l-header-box {
   @include min {
     display: flex;
     flex-direction: row-reverse;

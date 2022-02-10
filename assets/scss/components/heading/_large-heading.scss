@@ -1,6 +1,4 @@
-@charset "utf-8";
-
-.title-page {
+.large-heading {
   display: flex;
   align-items: center;
   letter-spacing: 0.08em;
@@ -29,32 +27,8 @@
     background-color: $color-border;
   }
 }
-.title-page-ja {
+.large-heading-ja {
   font-weight: 400;
   @include font-sans;
   @include fz-xl;
-}
-.title-section {
-  display: flex;
-  align-items: center;
-  position: relative;
-  letter-spacing: 0.08em;
-  font-feature-settings: "palt";
-  border-bottom: $border-width solid $color-border;
-  @include fz-ml;
-  @include max {
-    padding: 12px $padding-base-sp;
-  }
-  @include min {
-    min-height: $height-section-heading-pc;
-    padding: 18px $padding-base-pc;
-    @include lh-1;
-  }
-  a {
-    position: relative;
-  }
-}
-.title-xsmall {
-  display: block;
-  font-weight: 700;
 }

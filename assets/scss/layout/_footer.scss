@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.footer {
+.l-footer {
   @include min {
     width: 100%;
     position: absolute;
@@ -9,13 +9,13 @@
     height: $height-footer-pc;
   }
 }
-.footer-container {
+.l-footer-container {
   @include min($mq-tb-min) {
     height: 100%;
     padding-left: $width-menu-pc;
   }
 }
-.footer-list {
+.l-footer-list {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -30,12 +30,12 @@
     border-top: $border-width solid $color-border;
   }
 }
-.footer-item {
+.l-footer-item {
   @include fz-sm;
   a:hover {
     text-decoration: underline;
   }
 }
-.footer-item + .footer-item {
+.l-footer-item + .l-footer-item {
   margin-left: 1.5em;
 }

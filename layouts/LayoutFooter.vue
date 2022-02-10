@@ -1,8 +1,8 @@
 <template>
-  <footer class="footer" id="footer">
-    <div class="footer-container">
-      <ul class="footer-list">
-        <li class="footer-item">
+  <footer class="l-footer">
+    <div class="l-footer-container">
+      <ul class="l-footer-list">
+        <li class="l-footer-item">
           <nuxt-link to="/about/">このサイトについて</nuxt-link>
         </li>
       </ul>

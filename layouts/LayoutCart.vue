@@ -1,13 +1,13 @@
 <template>
-  <transition name="cart">
-    <nuxt-link v-if="isVisible" to="/detail/" class="cart">
-      <div class="cart-total">
-        <div class="cart-total-inner">
-          <span class="cart-label">合計</span>
+  <transition name="l-cart">
+    <nuxt-link v-if="isVisible" to="/detail/" class="l-cart">
+      <div class="l-cart-total">
+        <div class="l-cart-total-inner">
+          <span class="l-cart-label">合計</span>
           <ServicePartsPrice :price="total" />
         </div>
       </div>
-      <span class="cart-detail"><span class="sp">内訳</span><span class="pc">料金内訳を見る</span></span>
+      <span class="l-cart-detail"><span class="sp">内訳</span><span class="pc">料金内訳を見る</span></span>
     </nuxt-link>
   </transition>
 </template>

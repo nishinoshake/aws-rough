@@ -1,0 +1,8 @@
+.ad-desc {
+  @include max {
+    margin-bottom: 32px;
+  }
+  @include min {
+    margin-bottom: 46px;
+  }
+}

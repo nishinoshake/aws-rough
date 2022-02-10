@@ -1,0 +1,6 @@
+.l-app {
+  position: relative;
+  @include max {
+    padding-bottom: 100px;
+  }
+}
