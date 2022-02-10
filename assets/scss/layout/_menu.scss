@@ -111,7 +111,6 @@
 }
 .l-menu-logo-link {
   display: block;
-  @include font-en;
   @include max($mq-tb-max) {
     padding: 12px;
     font-size: 16px;
@@ -141,14 +140,13 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
-  @include font-en;
-  @include lh-1;
+  line-height: var(--leading-none);
   &.is-active {
     background-color: var(--color-snow);
   }
   @include max($mq-tb-max) {
     padding: 12px;
-    @include fz-m;
+    font-size: var(--text-base);
   }
   @include min($mq-tb-min) {
     height: 40px;

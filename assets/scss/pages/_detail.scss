@@ -13,9 +13,8 @@
   background-color: var(--color-button);
   border-radius: 999em;
   cursor: pointer;
-  @include font-sans;
-  @include fz-s;
-  @include lh-1;
+  font-size: var(--text-sm);
+  line-height: var(--leading-none);
   @include transition-collection;
   @include max {
     margin-left: 25px;
@@ -76,11 +75,11 @@
 }
 .detail-price-name {
   margin-right: 20px;
-  @include font-en;
-  @include fz-detail;
-  @include lh-1;
+  font-size: 20px;
+  line-height: var(--leading-none);
   @include min {
     margin-right: 30px;
+    font-size: 22px;
   }
 }
 .detail-price-color {
@@ -104,8 +103,7 @@
 .detail-empty {
   position: absolute;
   pointer-events: none;
-  @include fz-l;
-  @include lh-en;
+  font-size: var(--text-xl);
   @include max {
     top: 30px;
     left: var(--base-padding);

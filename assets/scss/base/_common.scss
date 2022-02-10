@@ -30,6 +30,37 @@
     --base-padding: 56px;
   }
 
+  // フォント
+  --font-sans: sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+
+  // フォントサイズ
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-form: 16px;
+  --text-lg: 16px;
+  --text-xl: 16px;
+  --text-2xl: 22px;
+  --text-3xl: 32px;
+
+  @include min {
+    --text-sm: 12px;
+    --text-base: 15px;
+    --text-form: 14px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 26px;
+  }
+
+  // 行間
+  --leading-none: 1;
+  --leading-tight: 1.2;
+  --leading-base: 1.8;
+
+  @include min {
+    --leading-base: 2;
+  }
+
   // イージング
   --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
   --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -41,7 +72,7 @@
 
 body {
   color: var(--color-text);
-  @include font-sans;
-  @include lh-base;
-  @include fz-m;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
 }

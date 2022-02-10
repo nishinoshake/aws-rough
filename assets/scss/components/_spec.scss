@@ -38,6 +38,6 @@
     caption-side: bottom;
     text-align: left;
     color: var(--color-muted);
-    @include fz-s;
+    font-size: var(--text-sm);
   }
 }

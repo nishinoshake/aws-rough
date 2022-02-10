@@ -12,7 +12,7 @@ pre {
   background-color: var(--color-snow);
   line-height: 1.6;
   border-radius: 3px;
-  @include font-source;
+  font-family: var(--font-mono);
   @include min {
     padding: 32px;
   }

@@ -20,7 +20,7 @@
 .error-modal-message {
   text-align: center;
   white-space: pre-wrap;
-  @include fz-xl;
+  font-size: var(--text-2xl);
 }
 .error-modal-close {
   width: 40px;

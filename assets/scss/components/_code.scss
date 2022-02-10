@@ -1,7 +1,7 @@
 .code-block {
   position: relative;
-  @include fz-s;
-  @include lh-0;
+  line-height: 0;
+  font-size: var(--text-sm);
   pre {
     display: block;
     padding: 0;
@@ -14,8 +14,7 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     background: var(--color-white);
-    @include font-source;
-    @include lh-en;
+    font-family: var(--font-mono);
   }
   /*
   Atom One Light by Daniel Gamage

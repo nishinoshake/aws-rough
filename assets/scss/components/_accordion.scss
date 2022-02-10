@@ -21,8 +21,8 @@
   align-items: center;
   position: relative;
   text-align: left;
-  @include fz-ml;
-  @include lh-1;
+  line-height: var(--leading-none);
+  font-size: var(--text-lg);
   @include transition-fade;
   @include max {
     padding: var(--base-padding);

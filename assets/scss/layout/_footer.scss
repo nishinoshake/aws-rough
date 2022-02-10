@@ -31,7 +31,7 @@
   }
 }
 .l-footer-item {
-  @include fz-sm;
+  font-size: var(--text-sm);;
   a:hover {
     text-decoration: underline;
   }

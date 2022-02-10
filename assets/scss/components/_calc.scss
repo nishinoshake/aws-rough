@@ -16,9 +16,8 @@
   }
 }
 .calc-label {
-  @include font-en;
-  @include fz-l;
-  @include lh-min;
+  line-height: var(--leading-tight);
+  font-size: var(--text-xl);
   @include max {
     padding: 20px var(--base-padding) 0;
   }
@@ -45,8 +44,8 @@
     padding-left: 20px;
     position: relative;
     text-align: left;
-    @include fz-s;
-    @include lh-1;
+    font-size: var(--text-sm);
+    line-height: var(--leading-none);
     &:before,
     &:after {
       content: '';

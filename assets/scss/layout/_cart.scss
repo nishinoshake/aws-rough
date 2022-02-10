@@ -74,7 +74,7 @@
   flex-grow: 1;
   background-color: var(--color-white);
   @include transition-fade;
-  @include fz-l;
+  font-size: var(--text-xl);
   @include max {
     padding: 15px 15px 15px 18px;
   }
@@ -98,7 +98,7 @@
 }
 .l-cart-label {
   margin-right: 0.5em;
-  @include lh-1;
+  line-height: var(--leading-none);
   @include max {
     font-size: 12px;
   }

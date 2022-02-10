@@ -49,8 +49,7 @@
 }
 .landing-service-name {
   display: block;
-  @include font-en;
-  @include lh-1;
+  line-height: var(--leading-none);
   @include max {
     margin-bottom: 5px;
   }
@@ -61,6 +60,6 @@
 .landing-service-desc {
   display: block;
   color: var(--color-muted);
-  @include fz-xs;
-  @include lh-1;
+  font-size: var(--text-sm);
+  line-height: var(--leading-none);
 }

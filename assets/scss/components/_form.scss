@@ -2,8 +2,8 @@
 
 .form-label {
   display: block;
-  @include fz-s;
-  @include lh-min;
+  line-height: var(--leading-tight);
+  font-size: var(--text-sm);
   @include max {
     margin-bottom: 10px;
   }
@@ -20,8 +20,7 @@
   border: var(--border-width) solid var(--color-border-dark);
   background-color: var(--color-white);
   border-radius: 4px;
-  @include fz-form;
-  @include font-en;
+  font-size: var(--text-form);
   @include transition-collection;
   @include max {
     padding: 10px;
@@ -47,7 +46,7 @@
   select {
     opacity: 0;
     cursor: pointer;
-    @include fz-form;
+    font-size: var(--text-form);
     @include fit-full;
   }
   &:after {
@@ -73,9 +72,8 @@
   text-align: center;
   white-space: nowrap;
   background-color: var(--color-white);
-  @include font-en;
-  @include fz-form;
-  @include lh-1;
+  font-size: var(--text-form);
+  line-height: var(--leading-none);
   @include max {
     padding: 11px 16px 11px 0;
   }

@@ -3,11 +3,11 @@
 .price {
   display: inline-flex;
   align-items: baseline;
-  @include fz-s;
-  @include lh-1;
+  font-size: var(--text-sm);
+  line-height: var(--leading-none);
   &.mod-large {
     .price-unit {
-      @include fz-s;
+      font-size: var(--text-sm);
       @include min {
         margin-left: 6px;
       }
@@ -17,7 +17,7 @@
 
 .price-number {
   font-size: 170%;
-  @include font-source;
+  font-family: var(--font-mono);
 }
 
 .price-unit {

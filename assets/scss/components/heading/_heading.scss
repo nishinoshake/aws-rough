@@ -5,14 +5,14 @@
   letter-spacing: 0.08em;
   font-feature-settings: "palt";
   border-bottom: var(--border-width) solid var(--color-border);
-  @include fz-ml;
+  font-size: var(--text-lg);
   @include max {
     padding: 12px var(--base-padding);
   }
   @include min {
     min-height: var(--section-heading-height);
     padding: 18px var(--base-padding);
-    @include lh-1;
+    line-height: var(--leading-none);
   }
   a {
     position: relative;
