@@ -7,7 +7,7 @@
       <ul class="l-menu-list">
         <li v-for="service in services" :key="service.key" class="l-menu-item">
           <nuxt-link :class="`l-menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
-            <ServiceIcon :name="service.key" />
+            <AwsIcon :name="service.key" />
             <span>{{ service.name }}</span>
           </nuxt-link>
         </li>
@@ -24,11 +24,11 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import serviceConfig from '@/config/service/mokuji'
-import ServiceIcon from '@/components/ServiceIcon'
+import AwsIcon from '@/components/AwsIcon'
 
 export default {
   name: 'LayoutMenu',
-  components: { ServiceIcon },
+  components: { AwsIcon },
   data() {
     return {
       services: serviceConfig,

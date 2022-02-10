@@ -8,7 +8,7 @@
             <li v-for="service in services" :key="service.key" class="landing-service-item">
               <nuxt-link :class="`landing-service-link mod-${service.color}`" :to="service.href">
                 <div class="landing-service-inner">
-                  <ServiceIcon :name="service.key" class="landing-service-icon" />
+                  <AwsIcon :name="service.key" class="landing-service-icon" />
                   <span class="landing-service-body">
                     <span class="landing-service-name">{{ service.name }}</span>
                     <span class="landing-service-desc">{{ service.description }}</span>
@@ -44,7 +44,7 @@ import mokuji from '@/config/service/mokuji'
 import serviceConfig from '@/config/service'
 import meta from '@/config/meta'
 import ServiceAds from '@/components/service/ServiceAds'
-import ServiceIcon from '@/components/ServiceIcon'
+import AwsIcon from '@/components/AwsIcon'
 import ExternalLink from '@/components/ExternalLink'
 import { parseInstance } from '@/lib/service'
 import { MONTHLY_HOURS } from '@/config/constants'
@@ -52,7 +52,7 @@ import { addComma } from '@/lib/price'
 
 export default {
   name: 'LandingIndex',
-  components: { ServiceIcon, ServiceAds, ExternalLink },
+  components: { AwsIcon, ServiceAds, ExternalLink },
   head() {
     return meta.index
   },
