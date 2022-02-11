@@ -5,11 +5,11 @@
   display: flex;
   align-items: center;
   @include max {
-    width: calc(100vw - 86px - 24px);
-    max-width: 400px;
+    width: calc(100vw - 8.6rem - 2.4rem);
+    max-width: 40rem;
     position: fixed;
-    right: 86px;
-    bottom: 24px;
+    right: 8.6rem;
+    bottom: 2.4rem;
     border-radius: 999em;
     overflow: hidden;
     border: var(--border-width) solid currentColor;
@@ -19,13 +19,13 @@
     }
   }
   @include min($mq-tb-min) {
-    right: 24px;
+    right: 2.4rem;
   }
   @include min {
     display: flex;
     flex-direction: column-reverse;
     height: 100%;
-    right: 20px;
+    right: 2rem;
     &:hover {
       .l-cart-total,
       .l-cart-detail {
@@ -42,7 +42,7 @@
   &-enter,
   &-leave-to {
     opacity: 0;
-    transform: translate3d(0, 60px, 0);
+    transform: translate3d(0, 6rem, 0);
   }
 }
 .l-cart-detail {
@@ -51,20 +51,20 @@
   justify-content: center;
   flex: none;
   white-space: nowrap;
-  @include max(360px) {
+  @include max(36rem) {
     display: none;
   }
   @include max {
-    width: 56px;
-    padding: 5px 12px;
-    font-size: 12px;
+    width: 5.6rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
     color: var(--color-white);
   }
   @include min {
     width: 100%;
     height: 50%;
-    padding: 0 32px;
-    font-size: 16px;
+    padding: 0 3.2rem;
+    font-size: 1.6rem;
     border-bottom: var(--border-width) solid var(--color-border);
   }
 }
@@ -76,16 +76,16 @@
   @include transition-fade;
   font-size: var(--text-xl);
   @include max {
-    padding: 15px 15px 15px 18px;
+    padding: 1.5rem 1.5rem 1.5rem 1.8rem;
   }
-  @include min(360px) {
-    min-width: 200px;
+  @include min(36rem) {
+    min-width: 20rem;
   }
   @include min {
     display: flex;
     align-items: center;
-    min-width: 260px;
-    padding: 0 32px;
+    min-width: 26rem;
+    padding: 0 3.2rem;
   }
 }
 .l-cart-total-inner {
@@ -100,10 +100,10 @@
   margin-right: 0.5em;
   line-height: var(--leading-none);
   @include max {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
   @include min {
     margin-right: 1em;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }

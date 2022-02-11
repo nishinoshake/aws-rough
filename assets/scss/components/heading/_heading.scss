@@ -7,11 +7,11 @@
   border-bottom: var(--border-width) solid var(--color-border);
   font-size: var(--text-lg);
   @include max {
-    padding: 12px var(--base-padding);
+    padding: 1.2rem var(--base-padding);
   }
   @include min {
     min-height: var(--section-heading-height);
-    padding: 18px var(--base-padding);
+    padding: 1.8rem var(--base-padding);
     line-height: var(--leading-none);
   }
   a {

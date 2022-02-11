@@ -9,7 +9,7 @@
     .price-unit {
       font-size: var(--text-sm);
       @include min {
-        margin-left: 6px;
+        margin-left: 0.6rem;
       }
     }
   }
@@ -22,10 +22,10 @@
 
 .price-unit {
   @include max {
-    margin-left: 6px;
+    margin-left: 0.6rem;
   }
   @include min {
-    margin-left: 6px;
+    margin-left: 0.6rem;
   }
 }
 

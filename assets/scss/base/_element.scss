@@ -6,29 +6,29 @@
 // -----------------------------------------------------
 
 pre {
-  padding: 12px;
+  padding: 1.2rem;
   overflow-x: auto;
   overflow-y: hidden;
   background-color: var(--color-snow);
   line-height: 1.6;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   font-family: var(--font-mono);
   @include min {
-    padding: 32px;
+    padding: 3.2rem;
   }
 }
 
 * + pre,
 pre + * {
   @include max {
-    margin-top: 18px;
+    margin-top: 1.8rem;
   }
   @include min {
-    margin-top: 25px;
+    margin-top: 2.5rem;
   }
 }
 
 code {
-  padding: 3px;
+  padding: 0.3rem;
   background-color: var(--color-snow);
 }

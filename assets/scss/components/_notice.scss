@@ -1,8 +1,8 @@
 .notice {
   @include max {
-    margin: 80px 0;
+    margin: 8rem 0;
   }
   @include min {
-    margin: 122px 0;
+    margin: 12.2rem 0;
   }
 }

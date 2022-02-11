@@ -4,7 +4,7 @@
   @include min {
     width: 100%;
     position: absolute;
-    bottom: 1px;
+    bottom: 0.1rem;
     left: 0;
     height: var(--footer-height);
   }
@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   @include max {
-    padding: 16px 0;
+    padding: 1.6rem 0;
     border-top: var(--border-width) solid var(--color-border);
     border-bottom: var(--border-width) solid var(--color-border);
   }

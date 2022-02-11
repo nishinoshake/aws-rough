@@ -1,20 +1,20 @@
 @charset "utf-8";
 
 .error-modal {
-  width: calc(100% - 60px);
-  max-width: 500px;
+  width: calc(100% - 6rem);
+  max-width: 50rem;
   z-index: 100;
-  padding: 40px 20px;
+  padding: 4rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  border: 1px solid var(--color-dark);
+  border: 0.1rem solid var(--color-dark);
   @include center(fixed);
   @include min {
-    width: calc(100% - 80px);
-    max-width: 800px;
-    padding: 40px;
+    width: calc(100% - 8rem);
+    max-width: 80rem;
+    padding: 4rem;
   }
 }
 .error-modal-message {
@@ -23,24 +23,24 @@
   font-size: var(--text-2xl);
 }
 .error-modal-close {
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: -2rem;
+  right: -2rem;
   background-color: var(--color-button);
   @include hide-text;
   @include min {
-    width: 50px;
-    height: 50px;
-    top: -25px;
-    right: -25px;
+    width: 5rem;
+    height: 5rem;
+    top: -2.5rem;
+    right: -2.5rem;
   }
   &:before,
   &:after {
     content: "";
     width: 50%;
-    height: 2px;
+    height: 0.2rem;
     background-color: #fff;
     position: absolute;
     top: 50%;

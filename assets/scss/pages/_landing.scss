@@ -3,14 +3,14 @@
 .landing-service-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -8px -16px;
+  margin: -0.8rem -1.6rem;
   @include min {
-    margin: -15px;
+    margin: -1.5rem;
   }
 }
 .landing-service-item {
   @include max {
-    width: 160px;
+    width: 16rem;
   }
   @include min {
     width: 25%;
@@ -19,10 +19,10 @@
 .landing-service-link {
   display: block;
   @include max {
-    padding: 16px 0;
+    padding: 1.6rem 0;
   }
   @include min {
-    padding: 5px 0;
+    padding: 0.5rem 0;
     &:hover {
       filter: grayscale(100%);
       color: var(--color-muted);
@@ -33,28 +33,28 @@
   display: flex;
   align-items: center;
   @include min {
-    padding: 10px;
+    padding: 1rem;
     border: var(--border-width) solid transparent;
   }
 }
 .landing-service-icon {
   @include max {
-    width: 46px;
-    margin-right: 5px;
+    width: 4.6rem;
+    margin-right: 0.5rem;
   }
   @include min {
-    width: 60px;
-    margin-right: 8px;
+    width: 6rem;
+    margin-right: 0.8rem;
   }
 }
 .landing-service-name {
   display: block;
   line-height: var(--leading-none);
   @include max {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
   }
   @include min {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 }
 .landing-service-desc {

@@ -28,8 +28,8 @@
     padding: var(--base-padding);
   }
   @include min {
-    min-height: calc(var(--section-heading-height) - 1px);
-    padding: 30px var(--base-padding);
+    min-height: calc(var(--section-heading-height) - 0.1rem);
+    padding: 3rem var(--base-padding);
     &:hover {
       background-color: var(--color-snow);
     }
@@ -41,15 +41,15 @@
   border-radius: 50%;
   transition: transform 0.32s var(--ease-out-quart);
   @include max {
-    width: 28px;
-    height: 28px;
-    top: calc(50% - 14px);
-    right: 24px;
+    width: 2.8rem;
+    height: 2.8rem;
+    top: calc(50% - 1.4rem);
+    right: 2.4rem;
   }
   @include min {
-    width: 32px;
-    height: 32px;
-    top: calc(50% - 16px);
+    width: 3.2rem;
+    height: 3.2rem;
+    top: calc(50% - 1.6rem);
     right: var(--base-padding);
   }
   &:after {
@@ -62,12 +62,12 @@
     transform: translateY(50%) rotate(45deg);
     transform-origin: right bottom;
     @include max {
-      width: 6px;
-      height: 6px;
+      width: 0.6rem;
+      height: 0.6rem;
     }
     @include min {
-      width: 6px;
-      height: 6px;
+      width: 0.6rem;
+      height: 0.6rem;
     }
   }
 }

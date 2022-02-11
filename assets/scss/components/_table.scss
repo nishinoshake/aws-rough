@@ -13,12 +13,12 @@
     border-bottom: var(--border-width) solid var(--color-border);
     @include max {
       display: block;
-      padding: 24px 0;
+      padding: 2.4rem 0;
     }
     @include min {
       display: flex;
       align-items: flex-end;
-      padding-left: calc(var(--base-padding) - 8px);
+      padding-left: calc(var(--base-padding) - 0.8rem);
     }
   }
   td {
@@ -26,9 +26,9 @@
       display: block;
       padding: 0 var(--base-padding);
       + td {
-        margin-top: 20px;
+        margin-top: 2rem;
         &.mod-price {
-          margin-top: 40px;
+          margin-top: 4rem;
         }
       }
       &.mod-price {
@@ -38,56 +38,56 @@
           width: 100%;
           display: flex;
           justify-content: flex-end;
-          padding-bottom: 5px;
+          padding-bottom: 0.5rem;
         }
       }
     }
     @include min {
-      width: 8.5rem;
-      padding: 27px 8px 28px;
+      width: 14.7rem;
+      padding: 2.7rem 0.8rem 2.8rem;
       box-sizing: content-box;
       &.mod-minimal {
-        width: 5rem;
+        width: 8.6rem;
       }
       &.mod-small {
-        width: 7rem;
+        width: 12rem;
       }
       &.mod-large {
-        width: 12rem;
+        width: 20rem;
       }
       &.mod-price {
         flex-grow: 1;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-bottom: 30px;
-        padding-right: 32px;
+        padding-bottom: 3rem;
+        padding-right: 3.2rem;
       }
       &.mod-w-33 {
         width: 33.333%;
         box-sizing: border-box;
         &:nth-child(n+4) {
           padding-top: 0;
-          margin-top: -14px;
+          margin-top: -1.4rem;
         }
       }
     }
     &:last-child {
       @include min {
-        min-width: 200px;
+        min-width: 20rem;
       }
     }
     .button-remove {
       position: absolute;
       @include max {
-        width: 30px;
-        height: 30px;
-        bottom: 24px;
+        width: 3rem;
+        height: 3rem;
+        bottom: 2.4rem;
         left: var(--base-padding);
       }
       @include min {
-        top: 61px;
-        left: 16px;
+        top: 6.1rem;
+        left: 1.6rem;
       }
     }
   }
@@ -96,10 +96,10 @@
   @include min {
     tr {
       flex-wrap: wrap;
-      padding-right: 240px;
+      padding-right: 24rem;
     }
     td.mod-price {
-      width: 240px;
+      width: 24rem;
       position: absolute;
       bottom: 0;
       right: 0;
@@ -107,9 +107,9 @@
   }
 }
 .table-spec {
-  margin: 30px 0;
+  margin: 3rem 0;
   border-collapse: collapse;
   td {
-    padding: 8px 12px;
+    padding: 0.8rem 1.2rem;
   }
 }

@@ -23,10 +23,10 @@
     text-align: left;
     border: var(--border-width) solid var(--color-border);
     @include max {
-      padding: 8px 14px;
+      padding: 0.8rem 1.4rem;
     }
     @include min {
-      padding: 14px 28px;
+      padding: 1.4rem 2.8rem;
     }
   }
   th {
@@ -34,7 +34,7 @@
     background-color: var(--color-snow);;
   }
   caption {
-    margin-top: 18px;
+    margin-top: 1.8rem;
     caption-side: bottom;
     text-align: left;
     color: var(--color-muted);

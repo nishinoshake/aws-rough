@@ -17,18 +17,18 @@
   line-height: var(--leading-none);
   @include transition-collection;
   @include max {
-    margin-left: 25px;
-    padding: 10px 0;
+    margin-left: 2.5rem;
+    padding: 1rem 0;
   }
   @include min {
-    margin-left: 50px;
-    padding: 18px 0;
+    margin-left: 5rem;
+    padding: 1.8rem 0;
   }
 }
 .detail-body {
   position: relative;
   @include max {
-    padding: 50px var(--base-padding);
+    padding: 5rem var(--base-padding);
   }
   @include min {
     padding: var(--base-padding);
@@ -53,8 +53,8 @@
 }
 .detail-price {
   @include min {
-    min-width: 400px;
-    padding-right: 100px;
+    min-width: 40rem;
+    padding-right: 10rem;
   }
   .price {
     margin-left: auto;
@@ -62,9 +62,9 @@
 }
 .detail-price-item {
   &:nth-child(n + 2) {
-    margin-top: 20px;
+    margin-top: 2rem;
     @include min {
-      margin-top: 30px;
+      margin-top: 3rem;
     }
   }
 }
@@ -74,30 +74,30 @@
   @include hover-fade;
 }
 .detail-price-name {
-  margin-right: 20px;
-  font-size: 20px;
+  margin-right: 2rem;
+  font-size: 2rem;
   line-height: var(--leading-none);
   @include min {
-    margin-right: 30px;
-    font-size: 22px;
+    margin-right: 3rem;
+    font-size: 2.2rem;
   }
 }
 .detail-price-color {
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
-  margin-right: 16px;
+  margin-right: 1.6rem;
 }
 .detail-chart {
   @include max {
-    width: 240px;
-    height: 240px;
+    width: 24rem;
+    height: 24rem;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
   }
   @include min {
-    width: 320px;
-    height: 320px;
+    width: 32rem;
+    height: 32rem;
   }
 }
 .detail-empty {
@@ -105,7 +105,7 @@
   pointer-events: none;
   font-size: var(--text-xl);
   @include max {
-    top: 30px;
+    top: 3rem;
     left: var(--base-padding);
   }
   @include min {

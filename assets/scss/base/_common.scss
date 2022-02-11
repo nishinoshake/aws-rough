@@ -10,24 +10,24 @@
   --color-muted: #777;
   --color-dark: #18181f;
   --color-button: var(--color-dark);
-  --color-text: #{rgba(#000, 0.75)};
+  --color-text: #333;
   --color-border: #e2e2e2;
   --color-border-dark: #aaa;
 
   // サイズ
-  --mobile-menu-width: 180px;
-  --side-menu-width: 154px;
-  --menu-button-size: 50px;
-  --max-content-width: 960px;
-  --footer-height: 70px;
-  --heading-height: 120px;
-  --section-heading-height: 82px;
-  --base-padding: 30px;
-  --border-width: 1px;
+  --mobile-menu-width: 18rem;
+  --side-menu-width: 15.4rem;
+  --menu-button-size: 5rem;
+  --max-content-width: 96rem;
+  --footer-height: 7rem;
+  --heading-height: 12rem;
+  --section-heading-height: 8.2rem;
+  --base-padding: 3rem;
+  --border-width: 0.1rem;
 
   @include min {
-    --heading-height: 129px;
-    --base-padding: 56px;
+    --heading-height: 12.9rem;
+    --base-padding: 5.6rem;
   }
 
   // フォント
@@ -35,21 +35,21 @@
   --font-mono: 'Roboto Mono', monospace;
 
   // フォントサイズ
-  --text-sm: 12px;
-  --text-base: 14px;
-  --text-form: 16px;
-  --text-lg: 16px;
-  --text-xl: 16px;
-  --text-2xl: 22px;
-  --text-3xl: 32px;
+  --text-sm: 1.2rem;
+  --text-base: 1.4rem;
+  --text-form: 1.6rem;
+  --text-lg: 1.6rem;
+  --text-xl: 1.6rem;
+  --text-2xl: 2.2rem;
+  --text-3xl: 3.2rem;
 
   @include min {
-    --text-sm: 12px;
-    --text-base: 15px;
-    --text-form: 14px;
-    --text-lg: 18px;
-    --text-xl: 20px;
-    --text-2xl: 26px;
+    --text-sm: 1.2rem;
+    --text-base: 1.5rem;
+    --text-form: 1.4rem;
+    --text-lg: 1.8rem;
+    --text-xl: 2rem;
+    --text-2xl: 2.6rem;
   }
 
   // 行間
@@ -68,6 +68,10 @@
   --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
   --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
