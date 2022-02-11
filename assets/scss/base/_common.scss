@@ -4,29 +4,31 @@
   // 色
   --color-white: #fff;
   --color-dark-gray: #ccc;
-  --color-snow: #fafafa;
+  --color-hobo-white: #fbfbfb;
+  --color-snow: #f6f8fa;
   --color-link: #039be4;
   --color-red: #e05243;
   --color-muted: #777;
-  --color-dark: #18181f;
+  --color-dark: #181818;
   --color-button: var(--color-dark);
   --color-text: #333;
   --color-border: #e2e2e2;
-  --color-border-dark: #aaa;
+  --color-border-dark: #bbb;
 
   // サイズ
   --mobile-menu-width: 18rem;
   --side-menu-width: 15.4rem;
   --menu-button-size: 5rem;
-  --max-content-width: 96rem;
-  --footer-height: 7rem;
+  --max-content-width: 86rem;
+  --column-height: 4.1rem;
   --heading-height: 12rem;
-  --section-heading-height: 8.2rem;
+  --section-heading-height: calc(var(--column-height) * 2);
+  --footer-height: calc(var(--column-height) * 2);
   --base-padding: 3rem;
   --border-width: 0.1rem;
 
   @include min {
-    --heading-height: 12.9rem;
+    --heading-height: calc(var(--column-height) * 4);
     --base-padding: 5.6rem;
   }
 
@@ -79,4 +81,5 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: var(--leading-base);
+  -webkit-font-smoothing: antialiased;
 }

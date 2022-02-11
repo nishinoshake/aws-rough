@@ -4,7 +4,7 @@
   @include min {
     width: 100%;
     position: absolute;
-    bottom: 0.1rem;
+    bottom: var(--border-width);
     left: 0;
     height: var(--footer-height);
   }
@@ -31,7 +31,7 @@
   }
 }
 .l-footer-item {
-  font-size: var(--text-sm);;
+  font-size: var(--text-sm);
   a:hover {
     text-decoration: underline;
   }

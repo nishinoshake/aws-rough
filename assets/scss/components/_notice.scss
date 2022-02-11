@@ -3,6 +3,6 @@
     margin: 8rem 0;
   }
   @include min {
-    margin: 12.2rem 0;
+    margin: calc(var(--column-height) * 3 - var(--border-width)) 0;
   }
 }

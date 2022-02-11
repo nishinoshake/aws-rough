@@ -2,7 +2,7 @@
   display: flex;
   min-height: var(--heading-height);
   align-items: center;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   font-feature-settings: "palt";
   border-bottom: var(--border-width) solid var(--color-border);
   position: relative;
@@ -13,6 +13,7 @@
   }
   @include min {
     padding: 0 var(--base-padding);
+    font-size: 4.8rem;
   }
   &:after {
     content: "";
@@ -25,6 +26,6 @@
   }
 }
 .large-heading-ja {
-  font-weight: 400;
   font-size: var(--text-2xl);
+  letter-spacing: 0.06em;
 }

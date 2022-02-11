@@ -22,14 +22,17 @@
     padding: 2rem var(--base-padding) 0;
   }
   @include min {
-    margin-bottom: -0.4rem;
-    padding: 2.1rem var(--base-padding) 0;
+    display: flex;
+    align-items: flex-end;
+    height: var(--column-height);
+    padding: 0 var(--base-padding);
   }
 }
 .calc-footer {
+  height: calc(var(--column-height) * 2);
   display: flex;
   justify-content: center;
-  margin-top: 3.8rem;
+  align-items: flex-end;
 }
 .calc-append {
   display: flex;

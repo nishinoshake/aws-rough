@@ -27,6 +27,9 @@
   }
   @include min {
     padding: 1rem 1.2rem;
+    &:hover {
+      background-color: var(--color-hobo-white);
+    }
   }
   &:invalid {
     background-color: rgba(var(--color-red), 0.2);

@@ -1,4 +1,5 @@
 .l-main {
+  min-height: 100vh;
   position: relative;
   background-color: var(--color-white);
   @include min {

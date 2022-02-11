@@ -28,7 +28,7 @@
     padding: var(--base-padding);
   }
   @include min {
-    min-height: calc(var(--section-heading-height) - 0.1rem);
+    min-height: calc(var(--section-heading-height) - var(--border-width));
     padding: 3rem var(--base-padding);
     &:hover {
       background-color: var(--color-snow);

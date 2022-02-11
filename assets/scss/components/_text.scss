@@ -3,7 +3,8 @@
 .text {
   text-align: justify;
 }
-.text + .text {
+.text + .text,
+.text + .list {
   margin-top: 1em;
 }
 .text-link {

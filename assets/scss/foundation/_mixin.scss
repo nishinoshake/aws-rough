@@ -93,7 +93,7 @@
   background-image: linear-gradient(to right, var(--color-border), var(--color-border) 50%, transparent 50%, transparent 100%);
   background-position: left bottom;
   background-repeat: repeat-x;
-  background-size: 2rem 0.1rem;
+  background-size: 2rem var(--border-width);
 }
 
 // -----------------------------------------------------
@@ -117,7 +117,6 @@
   right: 0;
   top: 0;
   align-items: center;
-  color: var(--color-dark-gray);
   justify-content: center;
   letter-spacing: 0.2em;
 }
