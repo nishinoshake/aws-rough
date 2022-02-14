@@ -64,13 +64,12 @@ export default {
     },
     handleResize() {
       const menuHeight = parseInt(this.$refs.menu.offsetHeight, 10)
-      const headerHeight = parseInt(document.querySelector('.l-header').clientHeight, 10)
 
       if (window.matchMedia('(max-width: 1140px)').matches) {
         return
       }
 
-      this.isSmall = menuHeight + headerHeight > window.innerHeight
+      this.isSmall = menuHeight > window.innerHeight
     },
     toggle() {
       this.TOGGLE_MENU()
