@@ -19,11 +19,6 @@
     &.is-small {
       position: static;
     }
-    &:not(.has-coffee) .l-menu-coffee {
-      visibility: hidden;
-      transform: translateY(100%) translateY(40px);
-      transition: transform 640ms var(--ease-in-quart), visibility 0s 640ms;
-    }
   }
 }
 .l-menu-button {
@@ -181,7 +176,6 @@
   display: flex;
   justify-content: center;
   padding: 3.8rem 1.4rem 0.8rem;
-  transition: transform 640ms var(--ease-out-quart), visibility 0s;
   a {
     display: block;
   }

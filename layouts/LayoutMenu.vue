@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['l-menu', { 'is-open': isMenuOpen, 'is-small': isSmall, 'has-coffee': hasCoffee }]" ref="menu">
+  <nav :class="['l-menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
     <div class="l-menu-frame">
       <div class="l-menu-main" ref="menuMain">
         <p class="l-menu-logo">
@@ -39,8 +39,7 @@ export default {
   data() {
     return {
       services: serviceConfig,
-      isSmall: false,
-      hasCoffee: false
+      isSmall: false
     }
   },
   computed: {
@@ -66,7 +65,6 @@ export default {
       this.$emit('change')
     },
     handleResize() {
-      const menuHeight = this.$refs.menu.offsetHeight
       const menuMainHeight = this.$refs.menuMain.offsetHeight
 
       if (window.matchMedia('(max-width: 700px)').matches) {
@@ -74,9 +72,6 @@ export default {
       }
 
       this.isSmall = menuMainHeight > window.innerHeight
-      this.hasCoffee = menuHeight <= window.innerHeight
-
-      console.log(menuMainHeight, menuHeight, window.innerHeight)
     },
     toggle() {
       this.TOGGLE_MENU()
