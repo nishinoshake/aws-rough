@@ -1,17 +1,19 @@
 <template>
-  <nav :class="['l-menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
+  <nav :class="['l-menu', { 'is-open': isMenuOpen, 'is-small': isSmall, 'has-coffee': hasCoffee }]" ref="menu">
     <div class="l-menu-frame">
-      <p class="l-menu-logo">
-        <nuxt-link to="/" class="l-menu-logo-link">ざっくりAWS</nuxt-link>
-      </p>
-      <ul class="l-menu-list">
-        <li v-for="service in services" :key="service.key" class="l-menu-item">
-          <nuxt-link :class="`l-menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
-            <AwsIcon :name="service.key" />
-            <span>{{ service.name }}</span>
-          </nuxt-link>
-        </li>
-      </ul>
+      <div class="l-menu-main" ref="menuMain">
+        <p class="l-menu-logo">
+          <nuxt-link to="/" class="l-menu-logo-link">ざっくりAWS</nuxt-link>
+        </p>
+        <ul class="l-menu-list">
+          <li v-for="service in services" :key="service.key" class="l-menu-item">
+            <nuxt-link :class="`l-menu-link mod-${service.color}`" :to="service.href" @click.native="handleClick">
+              <AwsIcon :name="service.key" />
+              <span>{{ service.name }}</span>
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
       <p class="l-menu-coffee">
         <a href="https://www.buymeacoffee.com/nishinoshake" target="_blank" rel="noopener">
           <img src="/img/bmc-button.svg" alt="Buy Me A Coffee" />
@@ -37,7 +39,8 @@ export default {
   data() {
     return {
       services: serviceConfig,
-      isSmall: false
+      isSmall: false,
+      hasCoffee: false
     }
   },
   computed: {
@@ -63,13 +66,17 @@ export default {
       this.$emit('change')
     },
     handleResize() {
-      const menuHeight = parseInt(this.$refs.menu.offsetHeight, 10)
+      const menuHeight = this.$refs.menu.offsetHeight
+      const menuMainHeight = this.$refs.menuMain.offsetHeight
 
-      if (window.matchMedia('(max-width: 1140px)').matches) {
+      if (window.matchMedia('(max-width: 700px)').matches) {
         return
       }
 
-      this.isSmall = menuHeight > window.innerHeight
+      this.isSmall = menuMainHeight > window.innerHeight
+      this.hasCoffee = menuHeight <= window.innerHeight
+
+      console.log(menuMainHeight, menuHeight, window.innerHeight)
     },
     toggle() {
       this.TOGGLE_MENU()
