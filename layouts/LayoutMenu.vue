@@ -12,6 +12,11 @@
           </nuxt-link>
         </li>
       </ul>
+      <p class="l-menu-coffee">
+        <a href="https://www.buymeacoffee.com/nishinoshake" target="_blank" rel="noopener">
+          <img src="/img/bmc-button.svg" alt="Buy Me A Coffee" />
+        </a>
+      </p>
     </div>
     <button :class="['l-menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
       <span class="l-menu-button-icon">
