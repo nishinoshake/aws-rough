@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   margin: -0.8rem -1.6rem;
   @include min {
-    margin: -1.5rem;
+    margin: -1.6rem -1.5rem -1.7rem;
   }
 }
 .landing-service-item {
@@ -22,7 +22,7 @@
     padding: 1.6rem 0;
   }
   @include min {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     &:hover {
       filter: grayscale(100%);
       color: var(--color-muted);
