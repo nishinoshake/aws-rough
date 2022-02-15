@@ -51,15 +51,22 @@
   display: block;
   line-height: var(--leading-none);
   @include max {
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
   }
   @include min {
+    font-size: 1.6rem;
     margin-bottom: 1rem;
   }
 }
 .landing-service-desc {
   display: block;
   color: var(--color-muted);
-  font-size: var(--text-sm);
   line-height: var(--leading-none);
+  @include max {
+    font-size: 1.1rem;
+  }
+  @include min {
+    font-size: 1.2rem;
+  }
 }

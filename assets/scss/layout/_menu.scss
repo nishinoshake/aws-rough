@@ -175,9 +175,19 @@
 .l-menu-coffee {
   display: flex;
   justify-content: center;
-  padding: 3.8rem 1.4rem 0.8rem;
+  padding: 3.8rem 0 0.8rem;
   a {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    @include min {
+      &:hover {
+        border-bottom-color: var(--color-button);
+      }
+    }
   }
   img {
     width: 100%;
