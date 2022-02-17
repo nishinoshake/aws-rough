@@ -3,4 +3,25 @@
   @include max {
     padding-bottom: 10rem;
   }
+  @include min($mq-tb-min) {
+    border: var(--border-width) solid var(--color-border);
+  }
+  @include min($mq-full) {
+    width: $mq-full;
+    margin: 0 auto;
+  }
+  &:after {
+    @include min($mq-tb-min) {
+      content: "";
+      width: var(--border-width);
+      height: 100%;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      left: var(--side-menu-width);
+      background-color: var(--color-border);
+      pointer-events: none;
+      box-sizing: border-box;
+    }
+  }
 }

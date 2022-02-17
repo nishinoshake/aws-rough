@@ -8,11 +8,16 @@
     left: 0;
     height: var(--footer-height);
   }
+  @include min($mq-full) {
+    width: $mq-full;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 .l-footer-container {
   @include min($mq-tb-min) {
     height: 100%;
-    padding-left: var(--side-menu-width);
+    padding-left: calc(var(--side-menu-width) + var(--border-width));
   }
 }
 .l-footer-list {

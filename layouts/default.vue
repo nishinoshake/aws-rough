@@ -1,7 +1,7 @@
 <template>
   <div class="l-app">
     <LayoutHeader />
-    <main class="l-main">
+    <main class="l-main" ref="main">
       <div class="l-container">
         <LayoutMenu />
         <div class="l-contents">
@@ -52,6 +52,20 @@ export default {
         target.scrollIntoView()
       }
     }
+
+    // アドセンスよ・・・
+    const observer = new MutationObserver(() => {
+      if (this.$refs.main.style) {
+        if (this.$refs.main.style.minHeight === '0px') {
+          this.$refs.main.style.minHeight = '100vh'
+        }
+      }
+    })
+
+    observer.observe(this.$refs.main, {
+      attributes: true,
+      attributeFilter: ['style']
+    })
   }
 }
 </script>
