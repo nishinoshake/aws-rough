@@ -108,7 +108,7 @@
 // Blank
 // -----------------------------------------------------
 @mixin blank {
-  content: "余白";
+  content: "";
   width: calc(100% - var(--max-content-width));
   height: 100%;
   border-left: var(--border-width) solid var(--color-border);
