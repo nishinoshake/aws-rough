@@ -31,7 +31,7 @@
     min-height: calc(var(--section-heading-height) - var(--border-width));
     padding: 1.2rem var(--base-padding);
     &:hover {
-      background-color: var(--color-snow);
+      background-color: var(--color-hover);
     }
   }
 }
@@ -88,7 +88,7 @@
   @include min {
     padding: var(--base-padding);
   }
-  @include min($mq-large-min) {
+  @include min($mq-full) {
     padding-right: calc(100% - var(--max-content-width) + var(--base-padding));
     &:after {
       @include blank;

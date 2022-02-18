@@ -18,18 +18,14 @@
       word-break: break-all;
     }
   }
-  @include min($mq-tb-min) {
-    right: 2.4rem;
-  }
   @include min {
     display: flex;
     flex-direction: column-reverse;
     height: 100%;
-    right: 2rem;
     &:hover {
       .l-cart-total,
       .l-cart-detail {
-        background-color: var(--color-snow);
+        background-color: var(--color-hover);
       }
     }
   }
@@ -84,7 +80,7 @@
   @include min {
     display: flex;
     align-items: center;
-    min-width: 26rem;
+    min-width: var(--cart-width);
     padding: 0 3.2rem;
   }
 }

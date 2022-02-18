@@ -1,23 +1,35 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('/fonts/Satoshi-Variable.woff') format('woff'),
+       url('/fonts/Satoshi-Variable.ttf') format('truetype');
+       font-weight: 300 900;
+       font-display: swap;
+       font-style: normal;
+}
+
 :root {
   // 色
   --color-white: #fff;
   --color-dark-gray: #ccc;
   --color-hobo-white: #fbfbfb;
-  --color-snow: #f6f8fa;
+  --color-snow: #f6f8fb;
   --color-link: #039be4;
   --color-red: #e05243;
   --color-muted: #777;
   --color-dark: #181818;
   --color-button: var(--color-dark);
-  --color-text: #333;
-  --color-border: #e2e2e2;
+  --color-text: var(--color-dark);
+  --color-border: var(--color-dark);
   --color-border-dark: #bbb;
+  --color-hover: var(--color-snow);
 
   // サイズ
   --mobile-menu-width: 18rem;
   --side-menu-width: 15.4rem;
+  --cart-width: 26rem;
   --menu-button-size: 5rem;
   --max-content-width: 86.3rem;
   --column-height: 3.8rem;
@@ -33,7 +45,8 @@
   }
 
   // フォント
-  --font-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+  --font-en: 'Satoshi', sans-serif;
   --font-mono: 'Roboto Mono', monospace;
 
   // フォントサイズ

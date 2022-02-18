@@ -5,7 +5,7 @@
 // -----------------------------------------------------
 
 .detail-copy {
-  width: 10.8em;
+  width: 10em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
   background-color: var(--color-button);
   border-radius: 999em;
   cursor: pointer;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   line-height: var(--leading-none);
   @include transition-collection;
   @include max {
@@ -22,7 +22,7 @@
   }
   @include min {
     margin-left: 5rem;
-    padding: 1.8rem 0;
+    padding: 1.5rem 0;
   }
 }
 .detail-body {
@@ -76,6 +76,8 @@
 .detail-price-name {
   margin-right: 2rem;
   font-size: 2rem;
+  font-family: var(--font-en);
+  font-weight: 480;
   line-height: var(--leading-none);
   @include min {
     margin-right: 3rem;

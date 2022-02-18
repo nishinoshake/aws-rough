@@ -1,5 +1,5 @@
 <template>
-  <div class="l-app">
+  <div :class="['l-app', `is-${routeName}`]">
     <LayoutHeader />
     <main class="l-main" ref="main">
       <div class="l-container">

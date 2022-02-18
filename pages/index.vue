@@ -8,7 +8,6 @@
             <li v-for="service in services" :key="service.key" class="landing-service-item">
               <nuxt-link :class="`landing-service-link mod-${service.color}`" :to="service.href">
                 <div class="landing-service-inner">
-                  <AwsIcon :name="service.key" class="landing-service-icon" />
                   <span class="landing-service-body">
                     <span class="landing-service-name">{{ service.name }}</span>
                     <span class="landing-service-desc">{{ service.description }}</span>
@@ -26,12 +25,9 @@
           <p class="text">
             公式の料金計算ツールには、2018年にリリースされた<ExternalLink href="https://calculator.aws"
               >AWS Pricing Calculator</ExternalLink
-            >と、2007年にリリースされた歴史のある<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
+            >と、歴史のある<ExternalLink href="https://calculator.s3.amazonaws.com/index.html"
               >SIMPLE MONTHLY CALCULATOR</ExternalLink
-            >があります。本サイトは、公式のツールから入力項目に絞ってシンプルにしたものです。
-          </p>
-          <p class="text">
-            そのため、AWSの料金をざっくり知りたいときには便利ですが、正確な料金を知りたい場合は、公式の料金計算ツールを使用してください。
+            >があります。本サイトは、公式のツールから入力項目に絞ってシンプルにしたものです。そのため、AWSの料金をざっくり知りたいときには便利ですが、正確な料金を知りたい場合は、公式の料金計算ツールを使用してください。
           </p>
         </div>
       </section>

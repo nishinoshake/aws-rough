@@ -6,10 +6,7 @@
         構築や運用が面倒なメールサーバーを持たずに、メールの送受信を行なえます。新規のアカウントは、機能が制限されているサンドボックスに配置されているため、本格的に利用する前に<ExternalLink
           href="https://docs.aws.amazon.com/ja_jp/ses/latest/DeveloperGuide/request-production-access.html"
           >申請</ExternalLink
-        >を行う必要があります。
-      </p>
-      <p class="text">
-        現在、SESが東京リージョンでは提供されていないため、バージニア北部（us-east-1）リージョンの料金をもとに計算しています。
+        >を行う必要があります。現在、SESが東京リージョンでは提供されていないため、バージニア北部（us-east-1）リージョンの料金をもとに計算しています。
       </p>
     </template>
 
