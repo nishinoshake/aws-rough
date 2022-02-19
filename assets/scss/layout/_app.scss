@@ -1,10 +1,9 @@
 .l-app {
   position: relative;
+  border-left: var(--border-width) solid var(--color-border);
+  border-right: var(--border-width) solid var(--color-border);
   @include max {
     padding-bottom: 10rem;
-  }
-  @include min($mq-tb-min) {
-    border: var(--border-width) solid var(--color-border);
   }
   @include min($mq-full) {
     width: $mq-full;

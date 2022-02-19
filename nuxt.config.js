@@ -46,7 +46,7 @@ module.exports = {
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap'
       }
     ]
   },

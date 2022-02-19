@@ -1,0 +1,21 @@
+#__layout {
+  &:before,
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-border);
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: $mq-full;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+  }
+}
