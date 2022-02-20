@@ -26,12 +26,12 @@
   }
   @include hover {
     .landing-service-inner {
-      border-color: var(--color-border);
+      border-color: var(--color-link);
     }
   }
   @include keyboard-focus {
     .landing-service-inner {
-      border-color: var(--color-border);
+      border-color: var(--color-link);
     }
   }
 }
@@ -40,7 +40,7 @@
   align-items: center;
   @include min {
     padding: 2rem;
-    border: var(--border-width) solid transparent;
+    border: var(--focus-border-width) solid transparent;
   }
 }
 .landing-service-name {

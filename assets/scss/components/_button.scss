@@ -6,8 +6,11 @@
   position: relative;
   background-color: var(--color-button);
   border-radius: 50%;
+  @include hover {
+    background-color: var(--color-button-hover);
+  }
   @include keyboard-focus {
-    box-shadow: 0 0 0 0.2rem var(--color-link);
+    @include focus-button;
   }
   &:before,
   &:after {

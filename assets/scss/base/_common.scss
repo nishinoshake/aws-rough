@@ -21,7 +21,8 @@
   --color-muted: #777;
   --color-dark: #181818;
   --color-light-dark: #888;
-  --color-button: var(--color-dark);
+  --color-button: #242424;
+  --color-button-hover: #000;
   --color-text: var(--color-dark);
   --color-border: var(--color-dark);
   --color-border-dark: #bbb;
@@ -72,6 +73,7 @@
   // 行間
   --leading-none: 1;
   --leading-tight: 1.2;
+  --leading-copy: 1.5;
   --leading-base: 1.8;
 
   @include min {
@@ -97,5 +99,4 @@ body {
   font-size: var(--text-base);
   line-height: var(--leading-base);
   background-color: var(--color-gray);
-  -webkit-font-smoothing: antialiased;
 }

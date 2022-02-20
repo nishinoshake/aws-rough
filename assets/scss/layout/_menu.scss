@@ -160,7 +160,6 @@
   white-space: nowrap;
   line-height: var(--leading-none);
   font-family: var(--font-en);
-  font-weight: 450;
   @include max($mq-tb-max) {
     padding: 1.2rem;
     font-size: var(--text-base);
@@ -193,7 +192,7 @@
         bottom: 0;
         left: 1.7rem;
         margin: auto 0;
-        background-color: var(--color-border);
+        background-color: var(--color-button);
         border-radius: 50%;
       }
       svg {
@@ -237,7 +236,6 @@
     font-size: 1.3rem;
     line-height: 1.4;
     font-family: var(--font-en);
-    font-weight: 450;
     @include hover {
       text-decoration: underline;
     }

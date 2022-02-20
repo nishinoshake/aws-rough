@@ -43,6 +43,9 @@
   color: var(--color-white);
   background-color: var(--color-button);
   @include transition-collection;
+  @include hover {
+    background-color: var(--color-button-hover);
+  }
   @include keyboard-focus {
     @include focus-button;
   }

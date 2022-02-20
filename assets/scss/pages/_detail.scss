@@ -3,7 +3,6 @@
 // -----------------------------------------------------
 // 料金内訳
 // -----------------------------------------------------
-
 .detail-copy {
   width: 10.2em;
   display: flex;
@@ -25,6 +24,9 @@
     padding: 1.5rem 0;
     font-size: 1.3rem;
   }
+  @include hover {
+    background-color: var(--color-button-hover);
+  }
   @include keyboard-focus {
     @include focus-button;
   }
@@ -42,7 +44,8 @@
   display: flex;
   opacity: 0;
   pointer-events: none;
-  transition: .2s linear;
+  margin-left: -1.2rem;
+  transition: opacity .2s linear;
   @include max {
     flex-direction: column-reverse;
   }
@@ -64,17 +67,14 @@
     margin-left: auto;
   }
 }
-.detail-price-item {
-  &:nth-child(n + 2) {
-    margin-top: 2rem;
-    @include min {
-      margin-top: 3rem;
-    }
-  }
-}
 .detail-price-link {
   display: flex;
   align-items: center;
+  padding: 1.2rem;
+  border: var(--focus-border-width) solid transparent;
+  @include hover {
+    border-color: var(--color-link);
+  }
   @include keyboard-focus {
     @include focus-ring;
   }
@@ -83,7 +83,6 @@
   margin-right: 2rem;
   font-size: 2rem;
   font-family: var(--font-en);
-  font-weight: 450;
   line-height: var(--leading-none);
   @include min {
     margin-right: 3rem;
@@ -111,14 +110,17 @@
 .detail-empty {
   position: absolute;
   pointer-events: none;
-  font-size: var(--text-xl);
+  font-family: var(--font-en);
+  line-height: var(--leading-copy);
   @include max {
     top: 3rem;
     left: var(--base-padding);
+    font-size: 2.4rem;
   }
   @include min {
     top: var(--base-padding);
     left: var(--base-padding);
+    font-size: 4rem;
   }
   span {
     display: block;
