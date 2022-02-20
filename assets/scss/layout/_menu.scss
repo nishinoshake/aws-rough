@@ -227,20 +227,21 @@
 .l-menu-coffee {
   display: flex;
   justify-content: center;
-  padding: 3.8rem 0 0.8rem;
+  padding: 3.2rem 0 0.8rem;
   a {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.2rem 0.8rem;
     border-bottom: 1px solid transparent;
     font-size: 1.3rem;
     line-height: 1.4;
     font-family: var(--font-en);
     @include hover {
-      text-decoration: underline;
+      box-shadow: 0 0 0 var(--focus-border-width) var(--color-link);
     }
     @include keyboard-focus {
-      @include focus-ring;
+      box-shadow: 0 0 0 var(--focus-border-width) var(--color-link);
     }
   }
   img {

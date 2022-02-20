@@ -38,12 +38,12 @@
 .l-footer-item {
   font-size: var(--text-sm);
   a {
+    padding: 0.6rem 0.8rem;
     @include hover {
-      text-decoration: underline;
+      box-shadow: 0 0 0 var(--focus-border-width) var(--color-link);
     }
     @include keyboard-focus {
-      text-decoration: none;
-      @include focus-ring;
+      box-shadow: 0 0 0 var(--focus-border-width) var(--color-link);
     }
   }
 

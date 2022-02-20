@@ -80,10 +80,10 @@
 // -----------------------------------------------------
 @mixin focus-ring($color: var(--color-link)) {
   padding: 0.4rem 0.6rem;
-  box-shadow: 0 0 0 0.2rem $color;
+  box-shadow: 0 0 0 var(--focus-border-width) $color;
 }
 @mixin focus-button {
-  box-shadow: 0 0 0 0.4rem var(--color-link);
+  box-shadow: 0 0 0 calc(var(--focus-border-width) * 2) var(--color-link);
 }
 @mixin keyboard-focus {
   &:focus[data-focus-visible-added] {
