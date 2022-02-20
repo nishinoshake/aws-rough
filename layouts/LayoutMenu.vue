@@ -1,6 +1,6 @@
 <template>
   <nav :class="['l-menu', { 'is-open': isMenuOpen, 'is-small': isSmall }]" ref="menu">
-    <div class="l-menu-frame">
+    <div class="l-menu-frame" ref="frame">
       <div class="l-menu-main" ref="menuMain">
         <p class="l-menu-logo">
           <nuxt-link to="/" class="l-menu-logo-link">ざっくりAWS</nuxt-link>
@@ -51,6 +51,9 @@ export default {
       await this.$nextTick()
 
       this.HIDE_MENU()
+    },
+    isMenuOpen(val) {
+      this.$refs.frame.scrollTo(0, 0)
     }
   },
   mounted() {

@@ -11,7 +11,7 @@
   @include min($mq-tb-min) {
     width: var(--side-menu-width);
     position: sticky;
-    z-index: 10;
+    z-index: 1000;
     flex: none;
     display: flex;
     top: 0;
@@ -26,7 +26,7 @@
     width: var(--menu-button-size);
     height: var(--menu-button-size);
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     bottom: 2.4rem;
     right: 2.4rem;
     background-color: var(--color-button);
@@ -119,9 +119,21 @@
   @include min($mq-tb-min) {
     width: 100%;
     height: 100%;
+    position: relative;
     font-size: 1.4rem;
-    &:hover {
-      background-color: var(--color-hover);
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1000;
+      width: calc(100% + 2 * var(--border-width));
+      height: calc(100% + var(--border-width));
+      top: 0;
+      left: calc(-1 * var(--border-width));
+      visibility: hidden;
+      border: var(--focus-border-width) solid var(--color-link);
+    }
+    &:hover:before {
+      visibility: visible;
     }
   }
 }
@@ -136,14 +148,12 @@
 }
 .l-menu-link {
   display: flex;
+  position: relative;
   align-items: center;
   white-space: nowrap;
   line-height: var(--leading-none);
   font-family: var(--font-en);
   font-weight: 450;
-  &.is-active {
-    background-color: var(--color-hover);
-  }
   @include max($mq-tb-max) {
     padding: 1.2rem;
     font-size: var(--text-base);
@@ -155,8 +165,36 @@
     align-items: center;
     padding: 0 1.4rem;
     font-size: 1.4rem;
-    &:hover {
-      background-color: var(--color-hover);
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1000;
+      width: calc(100% + 2 * var(--border-width));
+      height: calc(100% + 2 * var(--border-width));
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      visibility: hidden;
+      border: var(--focus-border-width) solid var(--color-link);
+    }
+    &:hover:before {
+      visibility: visible;
+    }
+    &.is-active {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 1.1rem;
+        height: 1.1rem;
+        top: 0;
+        bottom: 0;
+        left: 1.7rem;
+        margin: auto 0;
+        background-color: var(--color-border);
+        border-radius: 50%;
+      }
+      svg {
+        visibility: hidden;
+      }
     }
   }
   svg {

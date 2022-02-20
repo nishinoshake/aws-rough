@@ -6,7 +6,7 @@
         <div class="section-content">
           <p class="text">AWSの料金、ややこしいですよね。</p>
           <p class="text">
-            従量課金と多様なオプションがあいまって、料金を計算するときに考慮すべき点が多いのが悩みどころですが、重要なパラメータは意外と限られています。そこに絞って、ざっくり料金を計算できるサイトを作りました。このサイトを作った当初は、公式のツールが<ExternalLink
+            従量課金と多様なオプションがあいまって、料金を計算するときに考慮すべき点が多いのが悩みどころですが、重要なパラメータは意外と限られています。そこで、パラメータを絞ってざっくり計算できるサイトを作りました。このサイトを作った当初は、公式のツールが<ExternalLink
               href="https://calculator.s3.amazonaws.com/index.html"
               >SIMPLE MONTHLY CALCULATOR</ExternalLink
             >という敷居が高いやつしかありませんでしたが、今は<ExternalLink href="https://calculator.aws"

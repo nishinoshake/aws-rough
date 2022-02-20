@@ -13,7 +13,7 @@
     </table>
     <div class="calc-footer" v-if="service.multiple">
       <button :class="`calc-append mod-${service.color}`" @click="append(service.key)">
-        <span>追加する</span>
+        <span>追加</span>
       </button>
     </div>
   </div>

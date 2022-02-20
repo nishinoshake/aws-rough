@@ -32,6 +32,7 @@
         <h2 class="heading">{{ service.name }}の料金計算式をざっくり</h2>
         <div class="section-content">
           <CodeBlock :service-name="serviceName" />
+          <ServiceSourceLink :service-name="serviceName" />
         </div>
       </section>
 
@@ -44,6 +45,7 @@
 import ServiceHeading from '@/components/service/ServiceHeading'
 import ServiceCalc from '@/components/service/ServiceCalc'
 import ServiceAds from '@/components/service/ServiceAds'
+import ServiceSourceLink from '@/components/service/ServiceSourceLink'
 import CodeBlock from '@/components/CodeBlock'
 import Condition from '@/components/Condition'
 import Accordion from '@/components/Accordion'
@@ -57,6 +59,7 @@ export default {
     ServiceCalc,
     ServiceHeading,
     ServiceAds,
+    ServiceSourceLink,
     CodeBlock,
     Condition,
     Accordion,

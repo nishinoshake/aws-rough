@@ -28,11 +28,11 @@
   @include min {
     padding: 1rem 1.2rem;
     &:hover {
-      background-color: var(--color-hobo-white);
+      border-color: var(--color-light-dark);
     }
   }
   &:invalid {
-    background-color: rgba(var(--color-red), 0.2);
+    background-color: var(--color-danger);
   }
   &:focus {
     border-color: var(--color-button);
@@ -46,6 +46,11 @@
   background-color: var(--color-white);
   border: var(--border-width) solid var(--color-border-dark);
   border-radius: 0.4rem;
+  @include min {
+    &:hover {
+      border-color: var(--color-dark);
+    }
+  }
   select {
     opacity: 0;
     cursor: pointer;

@@ -30,8 +30,19 @@
   @include min {
     min-height: calc(var(--section-heading-height) - var(--border-width));
     padding: 1.2rem var(--base-padding);
-    &:hover {
-      background-color: var(--color-hover);
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1000;
+      width: calc(100% + var(--border-width));
+      height: calc(100% + 2 * var(--border-width));
+      top: calc(-1 * var(--border-width));
+      left: 0;
+      visibility: hidden;
+      border: var(--focus-border-width) solid var(--color-link);
+    }
+    &:hover:before {
+      visibility: visible;
     }
   }
 }

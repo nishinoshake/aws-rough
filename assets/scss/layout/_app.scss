@@ -1,5 +1,6 @@
 .l-app {
   position: relative;
+  background-color: var(--color-white);
   border-left: var(--border-width) solid var(--color-border);
   border-right: var(--border-width) solid var(--color-border);
   @include max {

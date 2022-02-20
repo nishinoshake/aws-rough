@@ -13,13 +13,14 @@
 :root {
   // 色
   --color-white: #fff;
+  --color-gray: #f4f4f4;
   --color-dark-gray: #ccc;
-  --color-hobo-white: #fbfbfb;
   --color-snow: #f6f8fb;
   --color-link: #039be4;
-  --color-red: #e05243;
+  --color-danger: #{rgba(#e05243, 0.2)};
   --color-muted: #777;
   --color-dark: #181818;
+  --color-light-dark: #888;
   --color-button: var(--color-dark);
   --color-text: var(--color-dark);
   --color-border: var(--color-dark);
@@ -38,6 +39,7 @@
   --footer-height: calc(var(--column-height) * 2);
   --base-padding: 3rem;
   --border-width: 0.1rem;
+  --focus-border-width: 0.2rem;
 
   @include min {
     --heading-height: calc(var(--column-height) * 4);
@@ -94,5 +96,6 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: var(--leading-base);
+  background-color: var(--color-gray);
   -webkit-font-smoothing: antialiased;
 }

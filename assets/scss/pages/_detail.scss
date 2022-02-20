@@ -5,7 +5,7 @@
 // -----------------------------------------------------
 
 .detail-copy {
-  width: 10em;
+  width: 10.2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,16 +13,17 @@
   background-color: var(--color-button);
   border-radius: 999em;
   cursor: pointer;
-  font-size: var(--text-base);
   line-height: var(--leading-none);
   @include transition-collection;
   @include max {
     margin-left: 2.5rem;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
+    font-size: 1.3rem;
   }
   @include min {
     margin-left: 5rem;
     padding: 1.5rem 0;
+    font-size: 1.3rem;
   }
 }
 .detail-body {

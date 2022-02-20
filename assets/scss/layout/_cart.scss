@@ -22,11 +22,20 @@
     display: flex;
     flex-direction: column-reverse;
     height: 100%;
-    &:hover {
-      .l-cart-total,
-      .l-cart-detail {
-        background-color: var(--color-hover);
-      }
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1000;
+      width: calc(100% + 2 * var(--border-width));
+      height: calc(100% + var(--border-width));
+      top: 0;
+      left: calc(-1 * var(--border-width));
+      visibility: hidden;
+      border: var(--focus-border-width) solid var(--color-link);
+    }
+    &:hover:before {
+      visibility: visible;
     }
   }
   &-enter-active {
@@ -61,6 +70,7 @@
     height: 50%;
     padding: 0 3.2rem;
     font-size: 1.6rem;
+    border-top: var(--border-width) solid var(--color-border);
     border-bottom: var(--border-width) solid var(--color-border);
   }
 }

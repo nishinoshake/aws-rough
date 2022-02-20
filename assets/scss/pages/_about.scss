@@ -19,6 +19,9 @@
   }
   @include min {
     padding: 2.4rem;
+    &:hover {
+      border-color: var(--color-light-dark);
+    }
   }
   &:focus {
     border-color: var(--color-button);
