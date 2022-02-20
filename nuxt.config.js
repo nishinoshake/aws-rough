@@ -73,7 +73,10 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv'
   ],
-  plugins: [{ src: '~/plugins/vue-highlightjs', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-highlightjs', ssr: false },
+    { src: '~/plugins/focus-visible', ssr: false }
+  ],
   build: {
     extend(config, { isDev }) {
       if (config.externals) {

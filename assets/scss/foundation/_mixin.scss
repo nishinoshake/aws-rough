@@ -74,3 +74,26 @@
   justify-content: center;
   letter-spacing: 0.1em;
 }
+
+// -----------------------------------------------------
+// Hover/Focus
+// -----------------------------------------------------
+@mixin focus-ring($color: var(--color-link)) {
+  padding: 0.4rem 0.6rem;
+  box-shadow: 0 0 0 0.2rem $color;
+}
+@mixin focus-button {
+  box-shadow: 0 0 0 0.4rem var(--color-link);
+}
+@mixin keyboard-focus {
+  &:focus[data-focus-visible-added] {
+    @content;
+  }
+}
+@mixin hover {
+  @media (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

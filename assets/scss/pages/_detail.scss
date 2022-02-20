@@ -25,6 +25,9 @@
     padding: 1.5rem 0;
     font-size: 1.3rem;
   }
+  @include keyboard-focus {
+    @include focus-button;
+  }
 }
 .detail-body {
   position: relative;
@@ -72,6 +75,9 @@
 .detail-price-link {
   display: flex;
   align-items: center;
+  @include keyboard-focus {
+    @include focus-ring;
+  }
 }
 .detail-price-name {
   margin-right: 2rem;

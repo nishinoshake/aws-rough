@@ -43,4 +43,7 @@
   &[disabled] {
     cursor: wait;
   }
+  @include keyboard-focus {
+    @include focus-button;
+  }
 }

@@ -40,7 +40,14 @@
       visibility: hidden;
       border: var(--focus-border-width) solid var(--color-link);
     }
-    &:hover:before {
+  }
+  @include hover {
+    &:before {
+      visibility: visible;
+    }
+  }
+  @include keyboard-focus {
+    &:before {
       visibility: visible;
     }
   }

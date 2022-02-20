@@ -10,10 +10,12 @@
 .text-link {
   color: var(--color-link);
   text-decoration: underline;
-  @include min {
-    &:hover {
-      text-decoration: none;
-    }
+  @include hover {
+    text-decoration: none;
+  }
+  @include keyboard-focus {
+    text-decoration: none;
+    @include focus-ring;
   }
 }
 .text-notice {

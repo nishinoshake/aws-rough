@@ -43,6 +43,9 @@
   color: var(--color-white);
   background-color: var(--color-button);
   @include transition-collection;
+  @include keyboard-focus {
+    @include focus-button;
+  }
   span {
     padding-left: 2rem;
     position: relative;

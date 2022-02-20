@@ -23,10 +23,15 @@
   }
   @include min {
     padding: 1.8rem 1rem;
-    &:hover {
-      .landing-service-inner {
-        border-color: var(--color-border);
-      }
+  }
+  @include hover {
+    .landing-service-inner {
+      border-color: var(--color-border);
+    }
+  }
+  @include keyboard-focus {
+    .landing-service-inner {
+      border-color: var(--color-border);
     }
   }
 }

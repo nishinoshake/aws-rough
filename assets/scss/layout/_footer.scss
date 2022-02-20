@@ -37,9 +37,16 @@
 }
 .l-footer-item {
   font-size: var(--text-sm);
-  a:hover {
-    text-decoration: underline;
+  a {
+    @include hover {
+      text-decoration: underline;
+    }
+    @include keyboard-focus {
+      text-decoration: none;
+      @include focus-ring;
+    }
   }
+
 }
 .l-footer-item + .l-footer-item {
   margin-left: 1.5em;

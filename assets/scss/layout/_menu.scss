@@ -132,7 +132,14 @@
       visibility: hidden;
       border: var(--focus-border-width) solid var(--color-link);
     }
-    &:hover:before {
+  }
+  @include hover {
+    &:before {
+      visibility: visible;
+    }
+  }
+  @include keyboard-focus {
+    &:before {
       visibility: visible;
     }
   }
@@ -176,9 +183,6 @@
       visibility: hidden;
       border: var(--focus-border-width) solid var(--color-link);
     }
-    &:hover:before {
-      visibility: visible;
-    }
     &.is-active {
       &:after {
         content: "";
@@ -194,6 +198,16 @@
       }
       svg {
         visibility: hidden;
+      }
+    }
+    @include hover {
+      &:before {
+        visibility: visible;
+      }
+    }
+    @include keyboard-focus {
+      &:before {
+        visibility: visible;
       }
     }
   }
@@ -224,10 +238,11 @@
     line-height: 1.4;
     font-family: var(--font-en);
     font-weight: 450;
-    @include min {
-      &:hover {
-        text-decoration: underline;
-      }
+    @include hover {
+      text-decoration: underline;
+    }
+    @include keyboard-focus {
+      @include focus-ring;
     }
   }
   img {

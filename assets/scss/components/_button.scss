@@ -6,6 +6,9 @@
   position: relative;
   background-color: var(--color-button);
   border-radius: 50%;
+  @include keyboard-focus {
+    box-shadow: 0 0 0 0.2rem var(--color-link);
+  }
   &:before,
   &:after {
     content: '';
