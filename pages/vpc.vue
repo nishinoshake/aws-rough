@@ -2,7 +2,7 @@
   <ServiceArticle service-name="vpc">
     <template v-slot:calc>
       <div>
-        <div class="service-inside" :data-test="serviceName" v-for="serviceName in ['natgw']" :key="serviceName">
+        <div class="calc-section" :data-test="serviceName" v-for="serviceName in ['natgw']" :key="serviceName">
           <ServiceLabel :label="service[serviceName].fullname" />
           <ServiceCalc :service="service[serviceName]" />
         </div>

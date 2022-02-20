@@ -69,7 +69,7 @@
         box-sizing: border-box;
         &:nth-child(n+4) {
           padding-top: 0;
-          margin-top: -2.8rem;
+          margin-top: -1.8rem;
         }
       }
     }
@@ -98,7 +98,7 @@
     tr {
       flex-wrap: wrap;
       padding-right: 24rem;
-      height: calc(var(--column-height) * 5);
+      height: calc(var(--column-height) * 6);
     }
     td.mod-price {
       width: 24rem;

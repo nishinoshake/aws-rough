@@ -3,6 +3,26 @@
   z-index: 0;
 }
 .calc-section {
+  @include min {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(var(--column-height) * 5);
+    padding-bottom: 0.5rem;
+    border-bottom: var(--border-width) solid var(--color-border);
+    .table {
+      tr {
+        height: auto;
+        border-bottom: 0;
+      }
+      td {
+        padding-bottom: 0;
+        &.mod-price {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
   .calc.mod-multiple {
     @include max {
       margin-bottom: 5rem;
@@ -17,15 +37,17 @@
 }
 .calc-label {
   line-height: var(--leading-tight);
-  font-size: var(--text-xl);
+  font-family: var(--font-en);
   @include max {
     padding: 2rem var(--base-padding) 0;
+    font-size: 2rem;
   }
   @include min {
     display: flex;
     align-items: flex-end;
-    height: var(--column-height);
     padding: 0 var(--base-padding);
+    margin-bottom: 2.2rem;
+    font-size: 2.4rem;
   }
 }
 .calc-footer {
