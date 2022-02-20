@@ -39,7 +39,7 @@
     "color": "^3.0.0",
     "fastclick": "^1.0.6",
     "jssha": "^2.3.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "nuxt": "^2.3.4",
     "sweet-scroll": "^3.0.1",
     "url-parse": "^1.5.6",
