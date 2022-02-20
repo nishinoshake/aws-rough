@@ -9,7 +9,7 @@
     height: var(--footer-height);
   }
   @include min($mq-full) {
-    width: calc($mq-full - 2 * var(--border-width));
+    width: calc(#{$mq-full} - 2 * var(--border-width));
     right: 0;
     margin: 0 auto;
   }
