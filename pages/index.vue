@@ -8,6 +8,7 @@
             <li v-for="service in services" :key="service.key" class="landing-service-item">
               <nuxt-link :class="`landing-service-link mod-${service.color}`" :to="service.href">
                 <div class="landing-service-inner">
+                  <AwsIcon :name="service.key" />
                   <span class="landing-service-body">
                     <span class="landing-service-name">{{ service.name }}</span>
                     <span class="landing-service-desc">{{ service.description }}</span>

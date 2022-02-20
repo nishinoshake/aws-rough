@@ -3,9 +3,9 @@
 .landing-service-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -2.6rem 0 -1.8rem;
+  margin: -2.6rem -0.6rem;
   @include min {
-    margin: -2.3rem -3rem -1.6rem;
+    margin: -2.8rem -4rem;
   }
 }
 .landing-service-item {
@@ -42,6 +42,19 @@
     padding: 2rem;
     border: var(--focus-border-width) solid transparent;
   }
+  svg {
+    flex: none;
+    @include max {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 0.4rem;      
+    }
+    @include min {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 0.6rem;
+    }
+  }
 }
 .landing-service-name {
   display: block;
@@ -49,12 +62,12 @@
   font-family: var(--font-en);
   font-weight: 450;
   @include max {
-    font-size: 2.4rem;
+    font-size: 1.7rem;
     margin-bottom: 0.7rem;
   }
   @include min {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
+    font-size: 2.1rem;
+    margin-bottom: 0.8rem;
   }
 }
 .landing-service-desc {
@@ -65,7 +78,7 @@
     font-size: 1.1rem;
   }
   @include min {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
