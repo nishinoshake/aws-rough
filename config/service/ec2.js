@@ -3,7 +3,7 @@ export default {
   name: 'EC2',
   fullname: 'Elastic Compute Cloud',
   href: '/ec2/',
-  description: '仮想サーバー',
+  description: 'サーバー',
   color: 'orange',
   multiple: true,
   table: [

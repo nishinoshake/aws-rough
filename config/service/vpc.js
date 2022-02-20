@@ -4,5 +4,5 @@ export default {
   fullname: 'Virtual Private Cloud',
   href: '/vpc/',
   color: 'orange',
-  description: '仮想ネットワーク'
+  description: 'ネットワーク'
 }
