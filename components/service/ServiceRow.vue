@@ -32,9 +32,8 @@
         v-if="service.multiple"
         class="button-remove"
         @click="remove({ serviceKey: service.key, index: rowIndex })"
-      >
-        削除
-      </button>
+        aria-label="削除"
+      ></button>
     </td>
   </tr>
 </template>

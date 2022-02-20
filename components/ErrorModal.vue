@@ -2,7 +2,7 @@
   <transition name="anime-error">
     <div class="error-modal" v-if="isVisible">
       <p class="error-modal-message">{{ message }}</p>
-      <button class="error-modal-close" @click="handleClose">閉じる</button>
+      <button class="error-modal-close" @click="handleClose" aria-label="閉じる"></button>
     </div>
   </transition>
 </template>

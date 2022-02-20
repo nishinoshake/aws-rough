@@ -9,7 +9,6 @@
   font-family: var(--font-en);
   font-weight: 450;
   letter-spacing: 0.02em;
-  @include radius;
   @include max {
     padding: 0 var(--base-padding);
     font-size: 3.8rem;

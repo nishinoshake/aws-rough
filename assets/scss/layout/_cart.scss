@@ -79,7 +79,6 @@
   z-index: 1;
   flex-grow: 1;
   background-color: var(--color-white);
-  @include transition-fade;
   font-size: var(--text-xl);
   @include max {
     padding: 1.5rem 1.5rem 1.5rem 1.8rem;

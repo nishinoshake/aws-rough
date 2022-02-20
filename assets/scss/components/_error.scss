@@ -29,7 +29,6 @@
   top: -2rem;
   right: -2rem;
   background-color: var(--color-button);
-  @include hide-text;
   @include min {
     width: 5rem;
     height: 5rem;

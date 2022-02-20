@@ -70,11 +70,11 @@
     "jest": "^24.8.0",
     "jest-puppeteer": "^4.1.1",
     "lint-staged": "^7.3.0",
-    "node-sass": "^4.13.1",
     "prettier": "^1.14.3",
     "puppeteer": "^1.15.0",
     "regenerator-runtime": "^0.11.1",
-    "sass-loader": "^7.1.0",
+    "sass": "^1.49.8",
+    "sass-loader": "^10.2.1",
     "vue-svg-loader": "^0.11.0"
   }
 }

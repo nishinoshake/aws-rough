@@ -72,7 +72,6 @@
 .detail-price-link {
   display: flex;
   align-items: center;
-  @include hover-fade;
 }
 .detail-price-name {
   margin-right: 2rem;

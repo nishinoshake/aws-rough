@@ -54,54 +54,8 @@
 // -----------------------------------------------------
 // Transition
 // -----------------------------------------------------
-@mixin transition-fade {
-  transition: opacity 0.1s linear;
-}
 @mixin transition-collection {
   transition: opacity 0.1s linear, color 0.1s linear, border-color 0.1s linear, background-color 0.1s linear;
-}
-
-// -----------------------------------------------------
-// Hover
-// -----------------------------------------------------
-@mixin hover-fade {
-  @include transition-fade;
-  @include min { 
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
-
-// -----------------------------------------------------
-// Background
-// -----------------------------------------------------
-@mixin bg-cover {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-// -----------------------------------------------------
-// Border
-// -----------------------------------------------------
-@mixin radius {
-  border-radius: 0;
-}
-
-@mixin dot-border {
-  background-image: linear-gradient(to right, var(--color-border), var(--color-border) 50%, transparent 50%, transparent 100%);
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  background-size: 2rem var(--border-width);
-}
-
-// -----------------------------------------------------
-// Text
-// -----------------------------------------------------
-@mixin hide-text {
-  font: 0 / 0;
-  color: transparent;
 }
 
 // -----------------------------------------------------

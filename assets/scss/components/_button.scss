@@ -6,7 +6,6 @@
   position: relative;
   background-color: var(--color-button);
   border-radius: 50%;
-  @include hide-text;
   &:before,
   &:after {
     content: '';
