@@ -83,7 +83,6 @@
 
 <script>
 import ServiceArticle from '@/components/service/ServiceArticle'
-import Accordion from '@/components/Accordion'
 import Condition from '@/components/Condition'
 import Spec from '@/components/Spec'
 import ExternalLink from '@/components/ExternalLink'
@@ -93,7 +92,6 @@ export default {
   name: 'ServiceRDS',
   components: {
     ServiceArticle,
-    Accordion,
     Condition,
     Spec,
     ExternalLink

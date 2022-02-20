@@ -7,9 +7,9 @@ import { usdToXXX } from '@/lib/price'
 import { fetchPrice, fetchFx } from '@/api'
 import serviceConfig from '@/config/service'
 
-// すべてをAction経由にした方が見通しは良さそうですが、
-// 冗長過ぎるので、非同期なものだけdispatchして、他は直接commit。
-
+/**
+ * 非同期だけAction経由、他は迷わずMutate
+ */
 const store = () =>
   new Vuex.Store({
     state: {
@@ -140,6 +140,7 @@ const store = () =>
     actions: {
       async nuxtServerInit({ commit, dispatch }) {
         commit('SET_INITIAL_TABLES', { serviceConfig })
+
         await dispatch('fetchAll', { fetchPrice, fetchFx })
       },
       async fetchAll({ commit }, { fetchPrice, fetchFx }) {

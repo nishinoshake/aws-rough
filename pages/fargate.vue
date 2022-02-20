@@ -41,7 +41,6 @@
 
 <script>
 import ServiceArticle from '@/components/service/ServiceArticle'
-import Accordion from '@/components/Accordion'
 import Condition from '@/components/Condition'
 import ExternalLink from '@/components/ExternalLink'
 import meta from '@/config/meta'
@@ -50,7 +49,6 @@ export default {
   name: 'ServiceFargate',
   components: {
     ServiceArticle,
-    Accordion,
     Condition,
     ExternalLink
   },

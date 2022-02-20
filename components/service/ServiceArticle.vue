@@ -4,18 +4,18 @@
     <slot v-if="hasCalc" name="calc" />
     <ServiceCalc v-else :service="service" />
     <div class="notice">
-      <Accordion v-if="hasHelp" title="入力項目の補足">
+      <Accordion v-if="hasHelp" title="入力項目の補足" slug="help">
         <slot name="help" />
       </Accordion>
 
-      <Accordion title="料金計算の前提">
+      <Accordion title="料金計算の前提" slug="condition">
         <slot name="fullCondition" v-if="hasFullCondition" />
         <Condition v-else>
           <slot name="condition" />
         </Condition>
       </Accordion>
 
-      <Accordion v-if="hasDisclaimer" title="対象外のもの">
+      <Accordion v-if="hasDisclaimer" title="対象外のもの" slug="disclaimer">
         <slot name="disclaimer" />
       </Accordion>
     </div>

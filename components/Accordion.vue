@@ -1,10 +1,22 @@
 <template>
   <div :class="['accordion', { 'is-active': isActive }]">
-    <button class="accordion-heading" @click="toggle">
+    <button
+      class="accordion-heading"
+      :id="`accordion-trigger-${slug}`"
+      :aria-controls="`accordion-content-${slug}`"
+      :aria-expanded="ariaExpanded"
+      @click="toggle"
+    >
       {{ title }}
       <span class="accordion-heading-icon"></span>
     </button>
-    <div class="accordion-frame" ref="frame" :style="defaultFrameStyle">
+    <div
+      class="accordion-frame"
+      :style="defaultFrameStyle"
+      :id="`accordion-content-${slug}`"
+      :aria-labelledby="`accordion-trigger-${slug}`"
+      ref="frame"
+    >
       <div class="accordion-inside" ref="inside">
         <slot />
       </div>
@@ -19,6 +31,7 @@ export default {
   name: 'Accordion',
   props: {
     title: String,
+    slug: String,
     forceOpen: Boolean
   },
   data() {
@@ -27,6 +40,9 @@ export default {
     }
   },
   computed: {
+    ariaExpanded() {
+      return this.isActive ? 'true' : 'false'
+    },
     defaultFrameStyle() {
       if (this.forceOpen) {
         return {

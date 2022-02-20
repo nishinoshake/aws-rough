@@ -26,13 +26,12 @@
 
 <script>
 import ServiceArticle from '@/components/service/ServiceArticle'
-import Accordion from '@/components/Accordion'
 import Condition from '@/components/Condition'
 import meta from '@/config/meta'
 
 export default {
   name: 'ServiceApiGateway',
-  components: { ServiceArticle, Accordion, Condition },
+  components: { ServiceArticle, Condition },
   head() {
     return meta.apigateway
   }
