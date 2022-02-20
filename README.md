@@ -12,7 +12,7 @@ https://aws-rough.cc
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nishinoshake/aws-rough/blob/master/LICENSE) [![CircleCI](https://circleci.com/gh/nishinoshake/aws-rough/tree/master.svg?style=svg)](https://circleci.com/gh/nishinoshake/aws-rough/tree/master)
  
-## 使い方
+## コマンド
 ```
 # インストール
 npm install
@@ -33,7 +33,6 @@ npm run test:e2e
 npm run test
 
 # 本番向けに静的ファイルを生成
-# E2Eテストに使用した要素のdata-test属性を削除しておく
 npm run generate:production
 ```
 
