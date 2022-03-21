@@ -32,6 +32,7 @@
           </p>
         </div>
       </section>
+      <ServiceAds />
     </div>
   </article>
 </template>

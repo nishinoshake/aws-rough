@@ -81,28 +81,3 @@
     font-size: 1.2rem;
   }
 }
-
-.l-app.is-index {
-  @include min($mq-tb-min) {
-    &:after {
-      display: none;
-    }
-    .l-menu {
-      display: none;
-    }
-    .l-footer-container {
-      padding-left: 0;
-    }
-    .l-contents {
-      width: 100%;
-    }
-  }
-  @include min($mq-full) {
-    .section-list {
-      padding-right: calc(var(--cart-width) + var(--border-width));
-      &:after {
-        width: calc(var(--cart-width) + var(--border-width));
-      }
-    }
-  }
-}
