@@ -3,6 +3,6 @@ export default {
   name: 'ELB',
   fullname: 'Elastic Load Balancing',
   href: '/elb/',
-  color: 'orange',
+  color: 'purple',
   description: 'ロードバランサー'
 }

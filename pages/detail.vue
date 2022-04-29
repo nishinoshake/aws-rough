@@ -55,16 +55,20 @@ export default {
     },
     colors() {
       const colorMap = {
-        orange: [245, 133, 54],
-        red: [224, 82, 67],
-        blue: [46, 115, 184],
-        beige: [217, 167, 65]
+        orange: [255, 153, 0],
+        red: [255, 82, 82],
+        blue: [82, 127, 255],
+        purple: [161, 102, 255],
+        pink: [255, 79, 139],
+        green: [108, 174, 62]
       }
       const usedColorCount = {
         orange: 0,
         red: 0,
         blue: 0,
-        beige: 0
+        purple: 0,
+        pink: 0,
+        green: 0
       }
 
       return this.services.map(service => {

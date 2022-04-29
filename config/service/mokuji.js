@@ -17,19 +17,19 @@ import ses from './ses'
 
 export default [
   ec2,
-  elb,
-  vpc,
   fargate,
   lambda,
-  route53,
   s3,
+  elb,
+  vpc,
+  route53,
   cloudfront,
   rds,
   aurora,
   dynamodb,
   elasticache,
-  ses,
+  apigateway,
   sns,
   sqs,
-  apigateway
+  ses
 ]

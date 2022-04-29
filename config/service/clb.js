@@ -4,7 +4,7 @@ export default {
   fullname: 'Classic Load Balancer',
   href: '/elb/',
   description: 'クラシックロードバランサー',
-  color: 'orange',
+  color: 'purple',
   multiple: false,
   table: [
     {

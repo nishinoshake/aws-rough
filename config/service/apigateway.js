@@ -4,7 +4,7 @@ export default {
   fullname: '',
   href: '/apigateway/',
   description: 'API管理',
-  color: 'beige',
+  color: 'pink',
   multiple: false,
   table: [
     {

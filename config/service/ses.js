@@ -4,7 +4,7 @@ export default {
   href: '/ses/',
   fullname: 'Simple Email Service',
   description: 'メール',
-  color: 'beige',
+  color: 'red',
   grande: true,
   table: [
     {

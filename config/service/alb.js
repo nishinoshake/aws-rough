@@ -4,7 +4,7 @@ export default {
   fullname: 'Application Load Balancer',
   href: '/elb/',
   description: 'アプリケーションロードバランサー',
-  color: 'orange',
+  color: 'purple',
   multiple: false,
   table: [
     {

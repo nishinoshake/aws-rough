@@ -4,7 +4,7 @@ export default {
   href: '/elb/',
   fullname: 'Network Load Balancer',
   description: 'ネットワークロードバランサー',
-  color: 'orange',
+  color: 'purple',
   multiple: false,
   table: [
     {

@@ -4,7 +4,7 @@ export default {
   href: '/sns/',
   fullname: 'Simple Notification Service',
   description: 'Pub/Sub',
-  color: 'beige',
+  color: 'pink',
   grande: true,
   table: [
     {

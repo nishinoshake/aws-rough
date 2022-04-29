@@ -4,7 +4,7 @@ export default {
   fullname: '',
   href: '/route53/',
   description: 'DNS',
-  color: 'orange',
+  color: 'purple',
   multiple: false,
   table: [
     {

@@ -195,7 +195,7 @@
         background-color: var(--color-button);
         border-radius: 50%;
       }
-      svg {
+      img {
         visibility: hidden;
       }
     }
@@ -210,17 +210,16 @@
       }
     }
   }
-  svg {
+  img {
     flex: none;
+    border-radius: 0.3rem;
     @include max($mq-tb-max) {
       width: 2.4rem;
-      height: 2.4rem;
       margin-right: 0.3rem;
     }
     @include min($mq-tb-min) {
-      width: 1.8rem;
-      height: 1.8rem;
-      margin-right: 0.4rem;
+      width: 2rem;
+      margin-right: 0.6rem;
     }
   }
 }

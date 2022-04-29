@@ -3,6 +3,6 @@ export default {
   name: 'VPC',
   fullname: 'Virtual Private Cloud',
   href: '/vpc/',
-  color: 'orange',
+  color: 'purple',
   description: 'ネットワーク'
 }

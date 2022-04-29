@@ -4,7 +4,7 @@ export default {
   href: '/sqs/',
   fullname: 'Simple Queue Service',
   description: 'キュー',
-  color: 'beige',
+  color: 'pink',
   table: [
     {
       type: 'number',

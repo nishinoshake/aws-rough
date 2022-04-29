@@ -4,7 +4,7 @@ export default {
   fullname: 'Simple Storage Service',
   href: '/s3/',
   description: 'ストレージ',
-  color: 'red',
+  color: 'green',
   multiple: false,
   table: [
     {

@@ -4,7 +4,7 @@ export default {
   fullname: '',
   href: '/cloudfront/',
   description: 'CDN',
-  color: 'red',
+  color: 'purple',
   multiple: true,
   table: [
     {
