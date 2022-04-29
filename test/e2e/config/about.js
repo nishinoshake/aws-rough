@@ -4,8 +4,8 @@ export default {
     {
       name: '日本円の為替レートが想定内',
       range: {
-        min: 80,
-        max: 130
+        min: 110,
+        max: 150
       },
       waitFor: '[data-test="yen"]',
       actions: [],
