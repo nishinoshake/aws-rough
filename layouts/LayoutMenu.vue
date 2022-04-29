@@ -14,9 +14,6 @@
           </li>
         </ul>
       </div>
-      <p class="l-menu-coffee">
-        <a href="https://www.buymeacoffee.com/nishinoshake" target="_blank" rel="noopener">Buy Me a Coffee</a>
-      </p>
     </div>
     <button :class="['l-menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
       <span class="l-menu-button-icon">
