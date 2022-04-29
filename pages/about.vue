@@ -125,7 +125,10 @@
         <h2 class="heading">お問い合わせ</h2>
         <div class="section-content">
           <p class="text">
-            サイトに対するご意見や不具合のご報告などがありましたら、こちらからメッセージをお願いします。
+            サイトに対するご意見や不具合のご報告などがありましたら、GitHubの<ExternalLink
+              href="https://github.com/nishinoshake/aws-rough/issues"
+              >Issues</ExternalLink
+            >に追加していただくか、こちらからメッセージをお願いします。
           </p>
           <form @submit.prevent="handleSubmitContact">
             <textarea v-model="message" name="contact" rows="10" class="about-contact-input" required></textarea>
