@@ -212,13 +212,14 @@
   }
   img {
     flex: none;
+    height: auto;
     border-radius: 0.3rem;
     @include max($mq-tb-max) {
       width: 2rem;
       margin-right: 0.6rem;
     }
     @include min($mq-tb-min) {
-      width: 2rem;
+      width: 1.8rem;
       margin-right: 0.6rem;
     }
   }

@@ -23,7 +23,7 @@
     padding: 2.2rem 0;
   }
   @include min {
-    padding: 1.4rem 0;
+    padding: 0.4rem 0;
   }
   @include hover {
     .landing-service-inner {
@@ -45,6 +45,7 @@
   }
   img {
     flex: none;
+    height: auto;
     border-radius: 0.4rem;
     @include max {
       width: 3.2rem;

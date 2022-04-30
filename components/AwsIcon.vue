@@ -1,5 +1,5 @@
 <template>
-  <img :src="`/img/icons/${name}.svg`" :alt="name" />
+  <img :src="`/img/icons/${name}.svg`" width="80" height="80" :alt="name" />
 </template>
 
 <script>
