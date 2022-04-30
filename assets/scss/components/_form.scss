@@ -4,6 +4,7 @@
   display: block;
   line-height: var(--leading-tight);
   font-size: var(--text-sm);
+  white-space: nowrap;
   @include max {
     margin-bottom: 1rem;
   }

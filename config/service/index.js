@@ -9,6 +9,7 @@ import route53 from './route53'
 import cloudfront from './cloudfront'
 import apigateway from './apigateway'
 import cloudwatch from './cloudwatch'
+import cognito from './cognito'
 import s3 from './s3'
 import rds from './rds'
 import aurora from './aurora'
@@ -37,9 +38,10 @@ export default [
   aurora,
   dynamodb,
   elasticache,
-  ses,
+  cloudwatch,
+  apigateway,
   sns,
   sqs,
-  cloudwatch,
-  apigateway
+  ses,
+  cognito
 ]

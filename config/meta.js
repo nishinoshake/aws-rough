@@ -101,6 +101,10 @@ const meta = {
       'CloudWatchの料金は、メトリクス数やAPIのリクエスト数、ダッシュボード数やログの量によって決まります。'
     )
   },
+  cognito: {
+    title: pageTitle('Cognito'),
+    description: pageDescription('Cognitoの料金は、月間アクティブユーザー数などによって決まります。')
+  },
   sns: {
     title: pageTitle('SNS'),
     description: pageDescription('SNSの料金は、主にノードタイプと台数で決まります。')

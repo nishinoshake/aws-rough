@@ -2,7 +2,6 @@
   <ServiceArticle service-name="cloudwatch">
     <template v-slot:zakuri>
       <div class="section-child">
-        <p class="text">監視。</p>
         <p class="text">
           システムの稼働状況を監視したり、アラートを設定したり、ダッシュボードを作成したりできます。他にも、cronのイベントを設定できたり様々な機能があるので、一言で説明するのが難しいです。
         </p>
@@ -96,7 +95,7 @@
         <h3 class="small-heading"><span>その他</span></h3>
         <p class="text">
           Metric Streams/Vended Logs/Contributor Insights/Synthetics/Evidently/RUM
-          などのサービスは、気が遠くなったため対象外にしています。
+          などは、気が遠くなったため対象外にしています。
         </p>
       </section>
     </template>
