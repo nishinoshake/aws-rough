@@ -3,7 +3,7 @@
     <template v-slot:zakuri>
       <div class="section-child">
         <p class="text">
-          アプリケーションにユーザの認証機能を追加できるサービスです。月間アクティブユーザー数に応じて料金が発生します。
+          ユーザーの認証機能を提供するサービスです。月間アクティブユーザー数に応じて料金が発生します。
         </p>
       </div>
     </template>
@@ -12,7 +12,7 @@
       <section class="section-child">
         <h3 class="small-heading"><span>月間アクティブユーザー数（MAU）</span></h3>
         <p class="text">
-          Cognitoでは、その月に変更が発生したユーザー数に基づいて課金されます。
+          Cognitoでは、その月に状態の変更が発生したユーザー数に基づいて課金されます。
         </p>
         <p class="text">
           サインアップ、サインイン、トークンの更新、パスワードの変更、またはユーザーアカウント属性の更新など、当該ユーザーに関わる
