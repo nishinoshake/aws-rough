@@ -19,20 +19,17 @@
       <section class="section-child">
         <h3 class="small-heading"><span>カスタムメトリクス</span></h3>
         <p class="text">
-          設定しているカスタムメトリクスの個数を入力してください。
+          設定しているカスタムメトリクスの個数を入力してください。<br />
+          詳細モニタリングのメトリクスは10個まで無料ですが、このサイトでは考慮していないため、無料分を差し引いた個数を入力してください。
         </p>
       </section>
       <section class="section-child">
         <h3 class="small-heading"><span>ダッシュボード</span></h3>
-        <p class="text">
-          ダッシュボードの個数を入力してください。
-        </p>
+        <p class="text">ダッシュボードの個数を入力してください。{{ free.dashboard }}個までは無料です。</p>
       </section>
       <section class="section-child">
         <h3 class="small-heading"><span>ログ（GB）</span></h3>
-        <p class="text">
-          取り込んだログのサイズをGB単位で入力してください。
-        </p>
+        <p class="text">取り込んだログのサイズをGB単位で入力してください。{{ free.log }}GBまでは無料です。</p>
       </section>
       <section class="section-child">
         <h3 class="small-heading"><span>GetMetricData（メトリクス数）</span></h3>
@@ -48,14 +45,12 @@
       </section>
       <section class="section-child">
         <h3 class="small-heading"><span>その他のAPI（リクエスト数）</span></h3>
-        <p class="text">
-          上記以外のAPIのリクエスト数を入力してください。
-        </p>
+        <p class="text">上記以外のAPIのリクエスト数を入力してください。{{ free.otherApi }}回までは無料です。</p>
       </section>
       <section class="section-child">
         <h3 class="small-heading"><span>アラーム（標準）</span></h3>
         <p class="text">
-          標準のアラームを設定している個数を入力してください。
+          標準のアラームを設定している個数を入力してください。{{ free.standardAlarm }}個までは無料です。
         </p>
       </section>
       <section class="section-child">
@@ -67,12 +62,6 @@
     </template>
 
     <template v-slot:disclaimer>
-      <section class="section-child">
-        <h3 class="small-heading"><span>詳細モニタリング</span></h3>
-        <p class="text">
-          詳細モニタリングのメトリクスは10個まで無料ですが、このサイトでは考慮していません。詳細モニタリングを使用する場合は、無料分を差し引いた個数を入力してください。
-        </p>
-      </section>
       <section class="section-child">
         <h3 class="small-heading"><span>カスタムイベント</span></h3>
         <p class="text">
@@ -134,20 +123,16 @@ export default {
     return meta.cloudwatch
   },
   computed: {
-    priceSns() {
-      return this.$store.state.price.sns
+    priceCloudWatch() {
+      return this.$store.state.price.cloudwatch
     },
-    freeRequest() {
-      return addComma(this.priceSns.request.priceRange[0].endRange)
-    },
-    freeMobile() {
-      return addComma(this.priceSns.mobile.free)
-    },
-    freeHttp() {
-      return addComma(this.priceSns.http.priceRange[0].endRange)
-    },
-    freeEmail() {
-      return addComma(this.priceSns.email.priceRange[0].endRange)
+    free() {
+      return {
+        dashboard: addComma(this.priceCloudWatch.dashboard.free),
+        log: addComma(this.priceCloudWatch.log.collect.free),
+        otherApi: addComma(this.priceCloudWatch.api.other.free),
+        standardAlarm: addComma(this.priceCloudWatch.alarm.standard.free)
+      }
     }
   }
 }
