@@ -6,6 +6,7 @@ export default {
   description: 'クラシックロードバランサー',
   color: 'purple',
   multiple: false,
+  row: 1,
   table: [
     {
       type: 'number',

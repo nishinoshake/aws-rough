@@ -6,6 +6,7 @@ export default {
   description: 'すごいRDBMS',
   color: 'blue',
   multiple: true,
+  row: 1,
   table: [
     {
       type: 'select',

@@ -6,6 +6,7 @@ export default {
   description: 'CDN',
   color: 'purple',
   multiple: true,
+  row: 1,
   table: [
     {
       type: 'select',

@@ -6,6 +6,7 @@ export default {
   description: 'API管理',
   color: 'pink',
   multiple: false,
+  row: 1,
   table: [
     {
       type: 'number',

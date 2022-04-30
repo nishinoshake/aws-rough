@@ -66,6 +66,16 @@ export default {
       attributes: true,
       attributeFilter: ['style']
     })
+
+    console.log(`%c========================================`, 'padding:2px 0;font-size:16px;')
+    console.log(
+      `%c円安が進んでるので、コンソールでドル表示はじめました。`,
+      'padding:6px 0;font-weight:bold;text-transform:capitalize;font-size:16px;'
+    )
+    console.log(`%c========================================`, 'padding:2px 0;font-size:16px;')
+    console.log('「えっ、AWSの料金が高い...」')
+    console.log('それ、もしかしたら円安が原因かもしれません。')
+    console.log('')
   }
 }
 </script>

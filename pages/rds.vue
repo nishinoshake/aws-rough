@@ -1,7 +1,7 @@
 <template>
   <ServiceArticle service-name="rds">
     <template v-slot:zakuri>
-      <p class="text">フルマネージド型のリレーショナルデータベース。</p>
+      <p class="text">リレーショナルデータベース。</p>
       <p class="text">
         EC2でもリレーショナルデータベースは構築できますが、RDSを使うことで、バックアップやパッチの適用などの作業を自動化できます。マルチAZによる冗長化や、ポイントインタイムリカバリなどの機能は、特にありがたいです。
       </p>

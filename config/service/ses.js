@@ -5,7 +5,7 @@ export default {
   fullname: 'Simple Email Service',
   description: 'メール',
   color: 'red',
-  grande: true,
+  row: 2,
   table: [
     {
       type: 'number',

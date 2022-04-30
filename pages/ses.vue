@@ -1,7 +1,7 @@
 <template>
   <ServiceArticle service-name="ses" hide-condition>
     <template v-slot:zakuri>
-      <p class="text">フルマネージド型のメールサービス。</p>
+      <p class="text">メールを送れるやつ。</p>
       <p class="text">
         構築や運用が面倒なメールサーバーを持たずに、メールの送受信を行なえます。新規のアカウントは、機能が制限されているサンドボックスに配置されているため、本格的に利用する前に<ExternalLink
           href="https://docs.aws.amazon.com/ja_jp/ses/latest/DeveloperGuide/request-production-access.html"

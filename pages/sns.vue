@@ -2,7 +2,7 @@
   <ServiceArticle service-name="sns">
     <template v-slot:zakuri>
       <div class="section-child">
-        <p class="text">フルマネージド型のPub/Subサービス。</p>
+        <p class="text">いわゆるPub/Sub。</p>
         <p class="text">
           AWS内のメッセージングだけでなく、モバイルのプッシュ通知や、Email/HTTPなどの通知もサポートしています。結構な量の無料枠があるので、<ExternalLink
             href="https://aws.amazon.com/jp/sns/pricing/"

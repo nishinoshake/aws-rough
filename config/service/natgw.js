@@ -6,6 +6,7 @@ export default {
   description: 'NAT Gateway',
   color: 'orange',
   multiple: false,
+  row: 1,
   table: [
     {
       type: 'number',

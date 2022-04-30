@@ -3,7 +3,7 @@ import * as calc from '@/lib/calc'
 import { MAX_ROW } from '@/config/constants'
 import { getDefaultTable, getDefaultTables, getService } from '@/lib/service'
 import { totalTable } from '@/lib/calc/total'
-import { usdToXXX } from '@/lib/price'
+import { usdToXXX, addComma } from '@/lib/price'
 import { fetchPrice, fetchFx } from '@/api'
 import serviceConfig from '@/config/service'
 
@@ -99,6 +99,7 @@ const store = () =>
         })
 
         state.total = calc.totalTables(state.tables)
+        console.log(`$${addComma(state.total.usd)} | ¥${addComma(state.total.jpy)}`)
       },
       RESTORE(state, { tables, serviceConfig }) {
         Object.keys(state.tables).forEach(serviceKey => {

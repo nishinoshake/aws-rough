@@ -8,6 +8,7 @@ export default {
   description: 'すごいやつ',
   color: 'orange',
   multiple: true,
+  row: 1,
   table: [
     {
       type: 'number',

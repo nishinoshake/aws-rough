@@ -5,6 +5,7 @@ export default {
   fullname: 'Simple Queue Service',
   description: 'キュー',
   color: 'pink',
+  row: 1,
   table: [
     {
       type: 'number',

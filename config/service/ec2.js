@@ -6,6 +6,7 @@ export default {
   description: 'サーバー',
   color: 'orange',
   multiple: true,
+  row: 1,
   table: [
     {
       type: 'select',

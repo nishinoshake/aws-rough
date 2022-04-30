@@ -6,6 +6,7 @@ export default {
   description: '関数',
   color: 'orange',
   multiple: false,
+  row: 1,
   table: [
     {
       type: 'number',

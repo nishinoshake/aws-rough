@@ -1,7 +1,7 @@
 <template>
   <ServiceArticle service-name="elasticache">
     <template v-slot:zakuri>
-      <p class="text">フルマネージド型のインメモリデータストア。</p>
+      <p class="text">インメモリデータストア。</p>
       <p class="text">
         データベースのクエリ結果のキャッシュや、セッション管理など、高いパフォーマンスが求められるところで使われるサービスです。データベースエンジンは、RedisかMemcachedから選べます。
       </p>

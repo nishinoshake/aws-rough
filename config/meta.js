@@ -95,6 +95,12 @@ const meta = {
     title: pageTitle('ElastiCache'),
     description: pageDescription('ElastiCacheの料金は、主にノードタイプと台数で決まります。')
   },
+  cloudwatch: {
+    title: pageTitle('CloudWatch'),
+    description: pageDescription(
+      'CloudWatchの料金は、メトリクス数やAPIのリクエスト数、ダッシュボード数やログの量によって決まります。'
+    )
+  },
   sns: {
     title: pageTitle('SNS'),
     description: pageDescription('SNSの料金は、主にノードタイプと台数で決まります。')

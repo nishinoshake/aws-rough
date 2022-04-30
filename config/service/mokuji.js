@@ -11,6 +11,7 @@ import aurora from './aurora'
 import dynamodb from './dynamodb'
 import elasticache from './elasticache'
 import apigateway from './apigateway'
+import cloudwatch from './cloudwatch'
 import sns from './sns'
 import sqs from './sqs'
 import ses from './ses'
@@ -28,8 +29,9 @@ export default [
   aurora,
   dynamodb,
   elasticache,
-  apigateway,
+  ses,
   sns,
   sqs,
-  ses
+  cloudwatch,
+  apigateway
 ]

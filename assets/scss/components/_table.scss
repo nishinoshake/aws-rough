@@ -93,12 +93,27 @@
     }
   }
 }
-.table.mod-grande {
+.table.mod-row-2 {
   @include min {
     tr {
       flex-wrap: wrap;
       padding-right: 24rem;
       height: calc(var(--column-height) * 6);
+    }
+    td.mod-price {
+      width: 24rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+.table.mod-row-3 {
+  @include min {
+    tr {
+      flex-wrap: wrap;
+      padding-right: 24rem;
+      height: calc(var(--column-height) * 9);
     }
     td.mod-price {
       width: 24rem;

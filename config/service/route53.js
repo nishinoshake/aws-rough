@@ -6,6 +6,7 @@ export default {
   description: 'DNS',
   color: 'purple',
   multiple: false,
+  row: 1,
   table: [
     {
       type: 'number',

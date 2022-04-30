@@ -6,6 +6,7 @@ export default {
   description: 'インメモリDB',
   color: 'blue',
   multiple: true,
+  row: 1,
   table: [
     {
       type: 'select',

@@ -6,6 +6,7 @@ export default {
   description: 'ストレージ',
   color: 'green',
   multiple: false,
+  row: 1,
   table: [
     {
       type: 'number',

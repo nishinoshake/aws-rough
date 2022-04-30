@@ -2,7 +2,7 @@
   <ServiceArticle service-name="sqs">
     <template v-slot:zakuri>
       <div class="section-child">
-        <p class="text">フルマネージド型のメッセージキューサービス。</p>
+        <p class="text">メッセージキュー。</p>
         <p class="text">
           メッセージキューは、複数の処理を<ExternalLink
             href="https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A5%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)"

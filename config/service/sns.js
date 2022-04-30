@@ -5,7 +5,7 @@ export default {
   fullname: 'Simple Notification Service',
   description: 'Pub/Sub',
   color: 'pink',
-  grande: true,
+  row: 2,
   table: [
     {
       type: 'number',
