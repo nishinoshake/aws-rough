@@ -6,11 +6,12 @@
   margin: -2.6rem -0.6rem;
   @include min {
     margin: -2.8rem -2.2rem;
+    max-width: 94rem;
   }
 }
 .landing-service-item {
   @include max {
-    width: 15.5rem;
+    width: 15rem;
   }
   @include min {
     width: 25%;
@@ -46,8 +47,8 @@
     flex: none;
     border-radius: 0.4rem;
     @include max {
-      width: 4rem;
-      margin-right: 0.4rem;      
+      width: 3.2rem;
+      margin-right: 0.8rem;      
     }
     @include min {
       width: 4rem;
@@ -61,7 +62,7 @@
   font-family: var(--font-en);
   font-weight: 450;
   @include max {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-bottom: 0.7rem;
   }
   @include min {

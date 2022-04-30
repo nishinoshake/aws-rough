@@ -3,13 +3,6 @@
 .section-list {
   position: relative;
   border-top: var(--border-width) solid var(--color-border);
-  @include min($mq-full) {
-    padding-right: calc(100% - var(--max-content-width));
-    &:after {
-      background-color: var(--color-white);
-      @include blank;
-    }
-  }
 }
 .large-heading + .section-list {
   border-top: 0;

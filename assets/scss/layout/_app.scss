@@ -6,10 +6,6 @@
   @include max {
     padding-bottom: 10rem;
   }
-  @include min($mq-full) {
-    width: $mq-full;
-    margin: 0 auto;
-  }
   &:after {
     @include min($mq-tb-min) {
       content: "";

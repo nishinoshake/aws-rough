@@ -105,13 +105,6 @@
   @include min {
     padding: var(--base-padding);
   }
-  @include min($mq-full) {
-    padding-right: calc(100% - var(--max-content-width) + var(--base-padding));
-    &:after {
-      @include blank;
-      border-left-style: dashed;
-    }
-  }
   .text {
     text-align: justify;
   }
