@@ -2,7 +2,7 @@ const SITE_TITLE = 'ざっくりAWS'
 const SITE_DESCRIPTION =
   'AWSの料金を日本円でざっくり計算できるサイトです。AWSはサービスが多岐にわたっているため、どこから料金を計算すればよいか迷ってしまいますが、料金への影響が大きい部分に絞ると案外シンプルになります。'
 
-const pageTitle = page => `${page}の料金を日本円でざっくり | ${SITE_TITLE}`
+const pageTitle = page => `${SITE_TITLE} | ${page}の料金を日本円で計算 `
 const pageDescription = description => `${description}${SITE_DESCRIPTION}`
 
 const meta = {
