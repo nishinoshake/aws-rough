@@ -1,13 +1,14 @@
 <template>
-  <section class="error-notfound">
-    <h1 class="error-title title-page">Not Found</h1>
-    <div class="detail-body">
-      <p class="detail-empty is-visible">
-        <span>With Great Power</span>
-        <span>Comes Great Responsibility</span>
-      </p>
+  <article class="error">
+    <h1 class="large-heading large-heading-ja">ページが見つかりませんでした</h1>
+    <div class="section-list">
+      <section class="section">
+        <div class="section-content">
+          <p class="error-text">あなたが入力したURLが正しくないか、<br />私が間違っているのか。答えは闇の中。</p>
+        </div>
+      </section>
     </div>
-  </section>
+  </article>
 </template>
 
 <script>
