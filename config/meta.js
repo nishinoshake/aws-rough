@@ -2,24 +2,24 @@ const SITE_TITLE = 'ざっくりAWS'
 const SITE_DESCRIPTION =
   'AWSの料金を日本円でざっくり計算できるサイトです。AWSはサービスが多岐にわたっているため、どこから料金を計算すればよいか迷ってしまいますが、料金への影響が大きい部分に絞ると案外シンプルになります。'
 
-const pageTitle = page => `${SITE_TITLE} | ${page}の料金を日本円で計算 `
+const pageTitle = page => `${SITE_TITLE} - ${page}の料金を日本円で計算 `
 const pageDescription = description => `${description}${SITE_DESCRIPTION}`
 
 const meta = {
   index: {
-    title: `${SITE_TITLE} | AWSの料金を日本円でざっくり`,
+    title: `${SITE_TITLE} - AWSの料金を日本円でざっくり`,
     description: SITE_DESCRIPTION
   },
   error_404: {
-    title: `${SITE_TITLE} | Not Found`,
+    title: `${SITE_TITLE} - Not Found`,
     description: SITE_DESCRIPTION
   },
   about: {
-    title: `${SITE_TITLE} | このサイトについて`,
+    title: `${SITE_TITLE} - このサイトについて`,
     description: SITE_DESCRIPTION
   },
   detail: {
-    title: `${SITE_TITLE} | 料金内訳`,
+    title: `${SITE_TITLE} - 料金内訳`,
     description: 'ざっくりAWSの料金内訳を確認できます。'
   },
   ec2: {
