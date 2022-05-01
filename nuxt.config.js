@@ -125,7 +125,9 @@ module.exports = {
     start_url: '/index.html'
   },
   sitemap: {
-    hostname: 'https://aws-rough.cc'
+    hostname: 'https://aws-rough.cc',
+    trailingSlash: true,
+    exclude: ['/error/**']
   },
   workbox: {
     dev: true
