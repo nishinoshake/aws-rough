@@ -72,7 +72,8 @@ module.exports = {
       }
     ],
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/sitemap'
   ],
   plugins: [
     { src: '~/plugins/vue-highlightjs', ssr: false },
@@ -122,6 +123,9 @@ module.exports = {
     theme_color: '#ffffff',
     background_color: '#ffffff',
     start_url: '/index.html'
+  },
+  sitemap: {
+    hostname: 'https://aws-rough.cc'
   },
   workbox: {
     dev: true
