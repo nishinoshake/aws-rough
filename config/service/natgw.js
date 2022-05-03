@@ -4,7 +4,7 @@ export default {
   fullname: 'NAT Gateway',
   href: '/vpc/',
   description: 'NAT Gateway',
-  color: 'orange',
+  color: 'purple',
   multiple: false,
   row: 1,
   table: [
