@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.sponsor-desc {
+  @include max {
+    margin-bottom: 3.2rem;
+  }
+  @include min {
+    margin-bottom: 3.6rem;
+  }
+}
+.sponsor-banner {
+  max-width: 72rem;
+  min-height: 12rem;
+}
+.sponsor-banner-link {
+  display: block;
+  transition: opacity 160ms ease;
+  &:hover {
+    opacity: 0.8;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

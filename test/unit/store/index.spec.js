@@ -38,6 +38,14 @@ const fx = {
   usdjpy: 100
 }
 
+const sponsorBanners = [
+  {
+    image: 'http://example.com/banner.jpg',
+    link: 'http://example.com',
+    ga_label: 'label'
+  }
+]
+
 let store
 
 describe('store', () => {
@@ -213,17 +221,19 @@ describe('store', () => {
   const fetchAllResolve = async () => {
     const fetchPrice = jest.fn().mockResolvedValue(price)
     const fetchFx = jest.fn().mockResolvedValue(fx)
+    const fetchSponsorBanners = jest.fn().mockResolvedValue(sponsorBanners)
 
-    await store.dispatch('fetchAll', { fetchPrice, fetchFx })
+    await store.dispatch('fetchAll', { fetchPrice, fetchFx, fetchSponsorBanners })
   }
 
   const fetchAllReject = async () => {
-    const fetchPrice = jest.fn().mockResolvedValue({ data: price })
+    const fetchPrice = jest.fn().mockResolvedValue(price)
     const fetchFx = jest.fn().mockRejectedValue({
       message: 'With Great Power Comes Great Responsibility'
     })
+    const fetchSponsorBanners = jest.fn().mockResolvedValue(sponsorBanners)
 
-    await store.dispatch('fetchAll', { fetchPrice, fetchFx })
+    await store.dispatch('fetchAll', { fetchPrice, fetchFx, fetchSponsorBanners })
   }
 
   describe('fetchAll', () => {
@@ -232,6 +242,7 @@ describe('store', () => {
 
       expect(store.state.price).toEqual(price)
       expect(store.state.fx).toEqual(fx)
+      expect(store.state.sponsorBanners).toEqual(sponsorBanners)
       expect(store.state.isLoaded).toEqual(true)
     })
 

@@ -4,7 +4,7 @@ import { MAX_ROW } from '@/config/constants'
 import { getDefaultTable, getDefaultTables, getService } from '@/lib/service'
 import { totalTable } from '@/lib/calc/total'
 import { usdToXXX, addComma } from '@/lib/price'
-import { fetchPrice, fetchFx } from '@/api'
+import { fetchPrice, fetchFx, fetchSponsorBanners } from '@/api'
 import serviceConfig from '@/config/service'
 
 /**
@@ -16,6 +16,7 @@ const store = () =>
       price: {},
       fx: {},
       tables: {},
+      sponsorBanners: [],
       total: { usd: 0, jpy: 0 },
       isLoaded: false,
       isDetailLoading: false,
@@ -51,6 +52,9 @@ const store = () =>
       },
       SET_FX(state, { value }) {
         state.fx = value
+      },
+      SET_SPONSOR_BANNERS(state, { value }) {
+        state.sponsorBanners = value
       },
       SET_IS_LOADED(state) {
         state.isLoaded = true
@@ -142,14 +146,15 @@ const store = () =>
       async nuxtServerInit({ commit, dispatch }) {
         commit('SET_INITIAL_TABLES', { serviceConfig })
 
-        await dispatch('fetchAll', { fetchPrice, fetchFx })
+        await dispatch('fetchAll', { fetchPrice, fetchFx, fetchSponsorBanners })
       },
-      async fetchAll({ commit }, { fetchPrice, fetchFx }) {
+      async fetchAll({ commit }, { fetchPrice, fetchFx, fetchSponsorBanners }) {
         try {
-          const values = await Promise.all([fetchPrice(), fetchFx()])
+          const values = await Promise.all([fetchPrice(), fetchFx(), fetchSponsorBanners()])
 
           commit('SET_PRICE', { value: values[0] })
           commit('SET_FX', { value: values[1] })
+          commit('SET_SPONSOR_BANNERS', { value: values[2] })
           commit('SET_IS_LOADED')
         } catch (e) {
           commit('SET_ERROR_MESSAGE', { message: '通信エラーが発生しました。\nすみませんがリロードを・・・' })

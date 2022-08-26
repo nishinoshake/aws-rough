@@ -41,21 +41,25 @@
   }
 }
 .detail-main {
-  display: flex;
   opacity: 0;
   pointer-events: none;
-  margin-left: -1.2rem;
   transition: opacity .2s linear;
-  @include max {
-    flex-direction: column-reverse;
-  }
-  @include min {
-    align-items: center;
-  }
   &.is-visible {
     opacity: 1;
     transition-delay: .4s;
     pointer-events: auto;
+  }
+}
+.detail-main-content {
+  display: flex;
+  margin-left: -1.2rem;
+  @include max {
+    margin-bottom: 3.6rem;
+    flex-direction: column-reverse;
+  }
+  @include min {
+    margin-bottom: 6.4rem;
+    align-items: center;
   }
 }
 .detail-price {
@@ -103,8 +107,8 @@
     margin-bottom: 4rem;
   }
   @include min {
-    width: 32rem;
-    height: 32rem;
+    width: 33.2rem;
+    height: 33.2rem;
   }
 }
 .detail-empty {
@@ -134,6 +138,7 @@
     span {
       opacity: 1;
       transition-delay: .4s;
+      pointer-events: auto;
     }
   }
 }

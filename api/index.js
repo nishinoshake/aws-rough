@@ -17,6 +17,8 @@ export const fetchPrice = () => fetchJson(`${process.env.storageUrl}/json/price.
 
 export const fetchFx = () => fetchJson(`${process.env.storageUrl}/json/fx.json`)
 
+export const fetchSponsorBanners = () => fetchJson(`${process.env.storageUrl}/json/sponsor-banner.json`)
+
 export const fetchZ = hash => fetchJson(`${process.env.apiUrl}/z/${hash}`)
 
 export const postZ = (hash, tables) =>

@@ -56,7 +56,7 @@ module.exports = {
   env: {
     homeUrl: process.env.HOME_URL || 'https://aws-rough.cc',
     apiUrl: process.env.API_URL || 'https://aws-api.noplan.cc',
-    storageUrl: process.env.STORAGE_URL || 'http://aws-storage.noplan.cc.s3-website-ap-northeast-1.amazonaws.com'
+    storageUrl: process.env.STORAGE_URL || 'https://storage.aws-rough.cc'
   },
   modules: [
     [
@@ -65,12 +65,12 @@ module.exports = {
         id: 'UA-53153991-13'
       }
     ],
-    [
-      '@nuxtjs/google-adsense',
-      {
-        id: 'ca-pub-7912727364342998'
-      }
-    ],
+    // [
+    //   '@nuxtjs/google-adsense',
+    //   {
+    //     id: 'ca-pub-7912727364342998'
+    //   }
+    // ],
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/sitemap'
