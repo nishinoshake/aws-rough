@@ -39,7 +39,7 @@ export default {
         return
       }
 
-      window.ga('send', 'click', `banner_${this.banner.ga_label}`, `page_${this.pageName}`)
+      window.ga('send', 'event', 'click', `banner_${this.banner.ga_label}`, `page_${this.pageName}`)
     },
     shuffleArray(arr) {
       return arr
