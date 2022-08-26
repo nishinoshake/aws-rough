@@ -5,11 +5,6 @@ defaults: &defaults
   docker:
     - image: circleci/python:3.6-jessie-node-browsers
 
-filter_only_master: &filter_only_master
-  filters:
-    branches:
-      only: master
-
 jobs:
   install:
     <<: *defaults
@@ -70,13 +65,13 @@ jobs:
       - attach_workspace:
           at: ~/app
       - run: sudo pip install awscli
-      - run: aws s3 sync ./dist/ s3://aws-rough.cc --exact-timestamps --delete --exclude "*.html" --cache-control max-age=31536000
-      - run: aws s3 sync ./dist/ s3://aws-rough.cc --exact-timestamps --delete --exclude "*" --include "*.html" --cache-control no-store
+      - run: aws s3 sync ./dist/ $S3_BUCKET --exact-timestamps --delete --exclude "*.html" --cache-control max-age=31536000
+      - run: aws s3 sync ./dist/ $S3_BUCKET --exact-timestamps --delete --exclude "*" --include "*.html" --cache-control no-store
       - run: aws cloudfront create-invalidation --distribution-id $CF_DIST_ID --paths "/*"
 
 workflows:
   version: 2
-  test-deploy:
+  prepare:
     jobs:
       - install
       - build_for_test:
@@ -89,6 +84,18 @@ workflows:
           requires:
             - test
       - deploy:
-          <<: *filter_only_master
+          context: aws_rough_master
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build_for_production
+      - deploy:
+          context: aws_rough_staging
+          filters:
+            branches:
+              only:
+                - staging
           requires:
             - build_for_production
