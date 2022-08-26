@@ -20,7 +20,7 @@ export default {
       banner: {
         image: '',
         link: '',
-        ga_label: ''
+        ga_action: ''
       }
     }
   },
@@ -35,11 +35,11 @@ export default {
   },
   methods: {
     handleClick() {
-      if (!this.banner.ga_label || !window.ga) {
+      if (!this.banner.ga_action || !window.ga) {
         return
       }
 
-      window.ga('send', 'event', 'click', `banner_${this.banner.ga_label}`, `page_${this.pageName}`)
+      window.ga('send', 'event', 'click', this.banner.ga_action, `page_${this.pageName}`)
     },
     shuffleArray(arr) {
       return arr
