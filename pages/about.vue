@@ -180,8 +180,6 @@ export default {
   },
   methods: {
     async handleSubmitContact() {
-      console.log(this.trimmedMessage)
-
       if (!this.trimmedMessage) {
         return
       }

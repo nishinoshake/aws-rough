@@ -1,7 +1,7 @@
 <template>
   <p class="sponsor-banner">
     <a :href="banner.link" class="sponsor-banner-link" target="_blank" @click="handleClick">
-      <img :src="banner.image" alt="" />
+      <img :src="banner.image.url" :alt="banner.image.alt" />
     </a>
   </p>
 </template>
@@ -18,9 +18,14 @@ export default {
   data() {
     return {
       banner: {
-        image: '',
+        image: {
+          url: '',
+          alt: ''
+        },
         link: '',
-        ga_action: ''
+        ga: {
+          action: ''
+        }
       }
     }
   },
@@ -35,17 +40,25 @@ export default {
   },
   methods: {
     handleClick() {
-      if (!this.banner.ga_action || !window.ga) {
+      if (!this.banner.ga.action || !window.ga) {
         return
       }
 
-      window.ga('send', 'event', 'click', this.banner.ga_action, `page_${this.pageName}`)
+      window.ga('send', 'event', 'click', this.banner.ga.action, `page_${this.pageName}`)
     },
+    /**
+     * Fisher–Yates shuffle
+     */
     shuffleArray(arr) {
-      return arr
-        .map(a => [Math.random(), a])
-        .sort((a, b) => a[0] - b[0])
-        .map(a => a[1])
+      const a = [...arr]
+
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+
+        ;[a[i], a[j]] = [a[j], a[i]]
+      }
+
+      return a
     }
   }
 }

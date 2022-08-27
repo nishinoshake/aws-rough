@@ -14,9 +14,13 @@
 }
 .sponsor-banner-link {
   display: block;
-  transition: opacity 160ms ease;
-  &:hover {
-    opacity: 0.8;
+  position: relative;
+  transition: opacity 240ms ease;
+  @include hover {
+    opacity: 0.75;
+  }
+  @include keyboard-focus {
+    @include focus-ring;
   }
   img {
     display: block;

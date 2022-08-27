@@ -15,7 +15,12 @@
         </ul>
       </div>
     </div>
-    <button :class="['l-menu-button', { 'is-open': isMenuOpen }]" @click="toggle">
+    <button
+      :class="['l-menu-button', { 'is-open': isMenuOpen }]"
+      @click="toggle"
+      :aria-label="menuButtonLabel"
+      :aria-expanded="isMenuOpen ? 'true' : 'false'"
+    >
       <span class="l-menu-button-icon">
         <span></span>
       </span>
@@ -41,6 +46,9 @@ export default {
     ...mapState(['isMenuOpen']),
     routeName() {
       return this.$route.name
+    },
+    menuButtonLabel() {
+      return this.isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'
     }
   },
   watch: {

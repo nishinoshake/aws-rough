@@ -33,10 +33,11 @@ export default {
         const minimalTable = minifyTable(this.$store.state.tables)
         const data = JSON.stringify(minimalTable)
         const hash = generateHash(data)
-        const url = `${process.env.homeUrl}/detail/?z=${hash}`
+        const currentUrl = new URL(location.href)
+        const sharedUrl = `${currentUrl.origin}/detail/?z=${hash}`
 
         console.log('▼共有URLはこちら')
-        console.log(url)
+        console.log(sharedUrl)
 
         this.$store.dispatch('postZ', { postZ, hash, data })
         this.isCopied = true
@@ -44,7 +45,7 @@ export default {
           this.clearCopied()
         }, 1200)
 
-        return url
+        return sharedUrl
       }
     })
   },

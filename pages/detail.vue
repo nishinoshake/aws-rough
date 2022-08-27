@@ -6,19 +6,14 @@
     </h1>
 
     <div class="detail-body">
-      <div :class="['detail-main', { 'is-visible': hasService }]">
-        <div class="detail-main-content">
+      <div class="detail-main">
+        <div :class="['detail-main-content', { 'is-visible': hasService }]">
           <DetailPrice v-if="hasService" :services="services" :colors="colors" />
           <DetailChart v-if="hasService" :services="services" :colors="colors" :hover-colors="hoverColors" />
         </div>
+        <DetailSkelton :is-visible="!hasService" />
         <ServiceSponsorBanner page-name="detail" />
       </div>
-      <p :class="['detail-empty', { 'is-visible': !hasService && !isLoading }]">
-        <span>With great power,<br />comes great responsibility</span>
-      </p>
-      <p :class="['detail-empty', { 'is-visible': isLoading }]">
-        <span>Loading...</span>
-      </p>
     </div>
   </article>
 </template>
@@ -30,6 +25,7 @@ import Price from '@/components/Price'
 import DetailCopy from '@/components/detail/DetailCopy'
 import DetailPrice from '@/components/detail/DetailPrice'
 import DetailChart from '@/components/detail/DetailChart'
+import DetailSkelton from '@/components/detail/DetailSkelton'
 import ServiceSponsorBanner from '@/components/service/ServiceSponsorBanner'
 import meta from '@/config/meta'
 
@@ -40,6 +36,7 @@ export default {
     DetailCopy,
     DetailPrice,
     DetailChart,
+    DetailSkelton,
     ServiceSponsorBanner
   },
   head() {

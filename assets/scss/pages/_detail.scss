@@ -34,6 +34,8 @@
 .detail-body {
   position: relative;
   @include max {
+    max-width: 72rem;
+    margin: 0 auto;
     padding: 5rem var(--base-padding);
   }
   @include min {
@@ -41,25 +43,48 @@
   }
 }
 .detail-main {
+  position: relative;
+}
+.detail-main-content,
+.detail-skelton {
+  display: flex;
+  margin-left: -1.2rem;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .2s linear;
+  transition: opacity 360ms ease;
+  @include max {
+    margin-bottom: 4rem;
+    flex-direction: column-reverse;
+  }
+  @include min {
+    margin-bottom: 8rem;
+    align-items: center;
+  }
   &.is-visible {
     opacity: 1;
-    transition-delay: .4s;
     pointer-events: auto;
   }
 }
 .detail-main-content {
-  display: flex;
-  margin-left: -1.2rem;
+  min-height: 33.2rem;
+}
+.detail-skelton {
+  position: absolute;
+  top: 0;
+  left: 0;
   @include max {
-    margin-bottom: 3.6rem;
+    width: 100%;
+    display: flex;
     flex-direction: column-reverse;
-  }
-  @include min {
-    margin-bottom: 6.4rem;
     align-items: center;
+    justify-content: center;
+  }
+  .detail-price-color {
+    background-color: var(--color-gray);
+  }
+  .detail-chart {
+    border-radius: 50%;
+    background-color: var(--color-gray);
   }
 }
 .detail-price {
@@ -109,36 +134,5 @@
   @include min {
     width: 33.2rem;
     height: 33.2rem;
-  }
-}
-.detail-empty {
-  position: absolute;
-  pointer-events: none;
-  font-family: var(--font-en);
-  line-height: var(--leading-copy);
-  @include max {
-    top: 3rem;
-    left: var(--base-padding);
-    font-size: 2.4rem;
-  }
-  @include min {
-    top: var(--base-padding);
-    left: var(--base-padding);
-    font-size: 4rem;
-  }
-  span {
-    display: block;
-    opacity: 0;
-    transition: opacity .2s linear;
-    &:nth-child(2) {
-      transition-delay: .08s;
-    }
-  }
-  &.is-visible {
-    span {
-      opacity: 1;
-      transition-delay: .4s;
-      pointer-events: auto;
-    }
   }
 }
