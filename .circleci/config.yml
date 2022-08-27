@@ -71,7 +71,7 @@ jobs:
 
 workflows:
   version: 2
-  prepare:
+  test_deploy:
     jobs:
       - install
       - build_for_test:
