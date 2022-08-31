@@ -91,11 +91,11 @@ workflows:
                 - master
           requires:
             - build_for_production
-      - deploy:
-          context: aws_rough_staging
-          filters:
-            branches:
-              only:
-                - staging
-          requires:
-            - build_for_production
+      # - deploy:
+      #     context: aws_rough_staging
+      #     filters:
+      #       branches:
+      #         only:
+      #           - staging
+      #     requires:
+      #       - build_for_production
