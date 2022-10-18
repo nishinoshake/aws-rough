@@ -12,7 +12,6 @@
           <DetailChart v-if="hasService" :services="services" :colors="colors" :hover-colors="hoverColors" />
         </div>
         <DetailSkelton :is-visible="!hasService" />
-        <ServiceSponsorBanner page-name="detail" />
       </div>
     </div>
   </article>
@@ -26,7 +25,6 @@ import DetailCopy from '@/components/detail/DetailCopy'
 import DetailPrice from '@/components/detail/DetailPrice'
 import DetailChart from '@/components/detail/DetailChart'
 import DetailSkelton from '@/components/detail/DetailSkelton'
-import ServiceSponsorBanner from '@/components/service/ServiceSponsorBanner'
 import meta from '@/config/meta'
 
 export default {
@@ -36,8 +34,7 @@ export default {
     DetailCopy,
     DetailPrice,
     DetailChart,
-    DetailSkelton,
-    ServiceSponsorBanner
+    DetailSkelton
   },
   head() {
     return meta.detail

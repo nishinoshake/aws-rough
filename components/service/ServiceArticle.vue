@@ -36,7 +36,7 @@
         </div>
       </section>
 
-      <ServiceSponsor :page-name="serviceName" />
+      <ServiceAds />
     </div>
   </article>
 </template>
@@ -44,7 +44,7 @@
 <script>
 import ServiceHeading from '@/components/service/ServiceHeading'
 import ServiceCalc from '@/components/service/ServiceCalc'
-import ServiceSponsor from '@/components/service/ServiceSponsor'
+import ServiceAds from '@/components/service/ServiceAds'
 import ServiceSourceLink from '@/components/service/ServiceSourceLink'
 import CodeBlock from '@/components/CodeBlock'
 import Condition from '@/components/Condition'
@@ -58,7 +58,7 @@ export default {
   components: {
     ServiceCalc,
     ServiceHeading,
-    ServiceSponsor,
+    ServiceAds,
     ServiceSourceLink,
     CodeBlock,
     Condition,
