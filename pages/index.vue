@@ -32,7 +32,6 @@
           </p>
         </div>
       </section>
-      <ServiceAds />
     </div>
   </article>
 </template>
@@ -41,7 +40,6 @@
 import mokuji from '@/config/service/mokuji'
 import serviceConfig from '@/config/service'
 import meta from '@/config/meta'
-import ServiceAds from '@/components/service/ServiceAds'
 import AwsIcon from '@/components/AwsIcon'
 import ExternalLink from '@/components/ExternalLink'
 import { parseInstance } from '@/lib/service'
@@ -50,7 +48,7 @@ import { addComma } from '@/lib/price'
 
 export default {
   name: 'LandingIndex',
-  components: { AwsIcon, ServiceAds, ExternalLink },
+  components: { AwsIcon, ExternalLink },
   head() {
     return meta.index
   },

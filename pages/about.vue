@@ -94,18 +94,6 @@
         </div>
       </section>
       <section class="section">
-        <h2 class="heading">Google AdSense</h2>
-        <div class="section-content">
-          <p class="text">
-            広告の配信に、Google
-            AdSenseというサービスを使用しており、こちらもCookieを使用します。パーソナライズ広告に抵抗がある方は、<ExternalLink
-              href="https://www.google.com/settings/ads"
-              >広告設定のページ</ExternalLink
-            >から無効にできます。
-          </p>
-        </div>
-      </section>
-      <section class="section">
         <h2 class="heading">GitHub</h2>
         <div class="section-content">
           <p class="text">ソースコードはGitHubにあります。</p>
@@ -119,6 +107,19 @@
               >
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="heading">Buy me a coffee</h2>
+        <div class="section-content">
+          <p class="text">
+            コーヒーを贈れるボタンを置いておきますね。
+          </p>
+          <p class="about-coffee">
+            <ExternalLink href="https://www.buymeacoffee.com/nishinoshake">
+              <img src="/img/bmc-button.svg" alt="Buy me a coffee" width="545" height="153" />
+            </ExternalLink>
+          </p>
         </div>
       </section>
       <section class="section">
@@ -136,14 +137,11 @@
           </form>
         </div>
       </section>
-
-      <ServiceAds />
     </div>
   </article>
 </template>
 
 <script>
-import ServiceAds from '@/components/service/ServiceAds'
 import ExternalLink from '@/components/ExternalLink'
 import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
@@ -153,7 +151,7 @@ import { postContact } from '@/api'
 
 export default {
   name: 'LandingIndex',
-  components: { ServiceAds, ExternalLink },
+  components: { ExternalLink },
   data() {
     return {
       monthlyDate: MONTHLY_DATE,

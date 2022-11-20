@@ -65,12 +65,6 @@ module.exports = {
         id: 'UA-53153991-13'
       }
     ],
-    [
-      '@nuxtjs/google-adsense',
-      {
-        id: 'ca-pub-7912727364342998'
-      }
-    ],
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/sitemap'
