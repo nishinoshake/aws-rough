@@ -110,19 +110,6 @@
         </div>
       </section>
       <section class="section">
-        <h2 class="heading">Buy me a coffee</h2>
-        <div class="section-content">
-          <p class="text">
-            コーヒーを贈れるボタンを置いておきますね。
-          </p>
-          <p class="about-coffee">
-            <ExternalLink href="https://www.buymeacoffee.com/nishinoshake">
-              <img src="/img/bmc-button.svg" alt="Buy me a coffee" width="545" height="153" />
-            </ExternalLink>
-          </p>
-        </div>
-      </section>
-      <section class="section">
         <h2 class="heading">お問い合わせ</h2>
         <div class="section-content">
           <p class="text">
