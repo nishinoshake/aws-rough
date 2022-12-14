@@ -39,10 +39,8 @@ npm run generate:production
 ## データ更新の流れ
 <img src="https://user-images.githubusercontent.com/8698355/47230492-4e658080-d405-11e8-9b63-619cabb11d3b.png" alt="運用フロー" width="600">
 
-計算に使用する為替やAWSの料金は、Lambdaで毎朝に取得しています。  
-10am(JST)にLambdaを起こして価格の更新を行い、CircleCIで静的ファイルを生成してからデプロイする流れです。
-
-価格を取得するLambdaのコードは別のリポジトリで管理しています。  
+計算に使用する為替やAWSの料金は、Lambdaで毎朝更新しています。  
+Lambdaのコードは別のリポジトリに置いてます。  
 https://github.com/nishinoshake/aws-rough-functions
 
 ## ご意見・ご要望
