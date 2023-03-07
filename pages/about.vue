@@ -94,6 +94,18 @@
         </div>
       </section>
       <section class="section">
+        <h2 class="heading">Google AdSense</h2>
+        <div class="section-content">
+          <p class="text">
+            広告の配信に、Google
+            AdSenseというサービスを使用しており、こちらもCookieを使用します。パーソナライズ広告に抵抗がある方は、<ExternalLink
+              href="https://www.google.com/settings/ads"
+              >広告設定のページ</ExternalLink
+            >から無効にできます。
+          </p>
+        </div>
+      </section>
+      <section class="section">
         <h2 class="heading">GitHub</h2>
         <div class="section-content">
           <p class="text">ソースコードはGitHubにあります。</p>
@@ -124,11 +136,14 @@
           </form>
         </div>
       </section>
+
+      <ServiceAds />
     </div>
   </article>
 </template>
 
 <script>
+import ServiceAds from '@/components/service/ServiceAds'
 import ExternalLink from '@/components/ExternalLink'
 import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
@@ -138,7 +153,7 @@ import { postContact } from '@/api'
 
 export default {
   name: 'LandingIndex',
-  components: { ExternalLink },
+  components: { ServiceAds, ExternalLink },
   data() {
     return {
       monthlyDate: MONTHLY_DATE,

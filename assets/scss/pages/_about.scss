@@ -50,19 +50,3 @@
     @include focus-button;
   }
 }
-.about-coffee {
-  max-width: 160px;
-  margin-top: 16px;
-  a {
-    display: block;
-    transition: opacity 160ms ease;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
