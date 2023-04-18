@@ -1,3 +1,6 @@
+.ad {
+  overflow: hidden;
+}
 .ad-desc {
   @include max {
     margin-bottom: 3.2rem;

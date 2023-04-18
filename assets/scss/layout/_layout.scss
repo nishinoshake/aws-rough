@@ -10,6 +10,7 @@
     left: 0;
     right: 0;
     margin: 0 auto;
+    max-width: var(--max-width);
   }
   &:before {
     top: 0;

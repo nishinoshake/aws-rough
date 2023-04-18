@@ -3,21 +3,34 @@
   background-color: var(--color-white);
   border-left: var(--border-width) solid var(--color-border);
   border-right: var(--border-width) solid var(--color-border);
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
   @include max {
     padding-bottom: 10rem;
   }
-  &:after {
-    @include min($mq-tb-min) {
-      content: "";
-      width: var(--border-width);
-      height: 100%;
-      position: absolute;
-      z-index: 100;
-      top: 0;
-      left: var(--side-menu-width);
-      background-color: var(--color-border);
-      pointer-events: none;
-      box-sizing: border-box;
+}
+.l-app.is-index {
+  @include min($mq-tb-min) {
+    .l-menu {
+      width: 0;
+      overflow: hidden;
+      border-right-width: 0;
+      transition: width 200ms var(--ease-out-quart), border-right-width 0s 200ms;
+    }
+    .l-menu-logo-link,
+    .l-menu-link {
+      opacity: 0;
+      transition: opacity 0s;
+    }
+    .l-contents {
+      width: 100%;
+    }
+    .l-footer-container {
+      padding-left: 0;
+    }
+    .l-footer-list {
+      border-left: 0;
     }
   }
 }

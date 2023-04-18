@@ -2,7 +2,7 @@
   <div :class="['l-app', `is-${routeName}`]">
     <LayoutHeader />
     <main class="l-main" ref="main">
-      <div class="l-container">
+      <div class="l-container" ref="container">
         <LayoutMenu />
         <div class="l-contents">
           <nuxt />
@@ -58,6 +58,11 @@ export default {
       if (this.$refs.main.style) {
         if (this.$refs.main.style.minHeight === '0px') {
           this.$refs.main.style.minHeight = '100vh'
+        }
+      }
+      if (this.$refs.container.style) {
+        if (this.$refs.container.style.minHeight) {
+          this.$refs.container.style.minHeight = ''
         }
       }
     })

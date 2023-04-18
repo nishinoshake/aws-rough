@@ -10,14 +10,14 @@
   }
   @include min($mq-tb-min) {
     width: var(--side-menu-width);
-    position: sticky;
     z-index: 1000;
     flex: none;
-    display: flex;
-    top: 0;
-    left: 0;
+    border-right: var(--border-width) solid var(--color-border);
+    transition: width 200ms var(--ease-out-quart);
     &.is-small {
-      position: static;
+      .l-menu-frame {
+        position: static;
+      }
     }
   }
 }
@@ -99,6 +99,8 @@
   @include min($mq-tb-min) {
     width: 100%;
     position: relative;
+    position: sticky;
+    top: 0;
   }
 }
 .l-menu-logo {
@@ -110,7 +112,12 @@
     border-bottom: var(--border-width) solid var(--color-border);
   }
 }
+.l-menu-logo-link,
+.l-menu-link {
+  transition: opacity 100ms 100ms ease;
+}
 .l-menu-logo-link {
+  white-space: nowrap;
   @include center-flex;
   @include max($mq-tb-max) {
     padding: 1.2rem;

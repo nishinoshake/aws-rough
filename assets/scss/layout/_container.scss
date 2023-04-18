@@ -2,7 +2,7 @@
   position: relative;
   @include min($mq-tb-min) {
     width: 100%;
+    min-height: calc(100vh - var(--footer-height));
     display: flex;
-    align-items: flex-start;
   }
 }

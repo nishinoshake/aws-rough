@@ -4,7 +4,8 @@
     min-height: 100vh;
   }
   @include min($mq-tb-min) {
-    width: calc(100% - var(--side-menu-width));
+    flex-grow: 1;
+    min-width: 0;
     min-height: calc(100vh - var(--footer-height));
   }
 }

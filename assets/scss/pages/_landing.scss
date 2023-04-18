@@ -6,7 +6,6 @@
   margin: -2.6rem -0.6rem;
   @include min {
     margin: -2.8rem -2.2rem;
-    max-width: 94rem;
   }
 }
 .landing-service-item {
@@ -14,7 +13,7 @@
     width: 15rem;
   }
   @include min {
-    width: 25%;
+    width: 20%;
   }
 }
 .landing-service-link {

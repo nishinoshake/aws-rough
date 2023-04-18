@@ -1,6 +1,6 @@
 <template>
   <article>
-    <h1 class="large-heading large-heading-ja">AWSの料金を、<br class="sp" />日本円でざっくり</h1>
+    <h1 class="large-heading large-heading-ja">ざっくりAWS</h1>
     <div class="section-list">
       <section class="section">
         <div class="section-content">
