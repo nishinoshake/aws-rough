@@ -20,11 +20,13 @@
       </Accordion>
     </div>
 
-    <div class="section-list">
-      <section class="section">
-        <h2 class="heading">{{ service.name }}についてざっくり</h2>
-        <div class="section-content">
-          <slot name="zakuri" />
+    <div class="section-list" itemscope itemtype="https://schema.org/FAQPage">
+      <section class="section" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h2 class="heading" itemprop="name">{{ service.name }}についてざっくり</h2>
+        <div class="section-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">
+            <slot name="zakuri" />
+          </div>
         </div>
       </section>
 
