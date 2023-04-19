@@ -29,7 +29,10 @@ export default {
       title: 'vCPU',
       default: '1',
       size: 'minimal',
-      parseJson: (json, row) => ['', ...sortBy(Object.keys(json.fargate.pair)).map(v => v.toString())]
+      parseJson: (json, row) => [
+        '',
+        ...sortBy(Object.keys(json.fargate.pair).map(v => parseFloat(v))).map(v => v.toString())
+      ]
     },
     {
       type: 'select',
