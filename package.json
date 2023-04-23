@@ -42,7 +42,7 @@
     "focus-visible": "^5.2.0",
     "jssha": "^2.3.1",
     "lodash": "^4.17.21",
-    "nuxt": "^2.15.8",
+    "nuxt": "^3.4.2",
     "sweet-scroll": "^3.0.1",
     "url-parse": "^1.5.9",
     "vue-chartjs": "^3.3.1",
