@@ -72,28 +72,6 @@
         </div>
       </section>
       <section class="section">
-        <h2 class="heading">Google Analytics</h2>
-        <div class="section-content">
-          <p class="text">
-            サイトの利用状況を把握するために、Google
-            Analyticsを使用しています。GoogleによるCookieの利用方法やオプトアウトの方法は、下記のリンクから確認できます。
-          </p>
-
-          <ul class="list">
-            <li class="list-item">
-              <ExternalLink href="https://policies.google.com/technologies/cookies?hl=ja"
-                >GoogleによるCookieの利用方法</ExternalLink
-              >
-            </li>
-            <li class="list-item">
-              <ExternalLink href="https://support.google.com/analytics/answer/181881?hl=ja"
-                >Google Analyticsのオプトアウト</ExternalLink
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section">
         <h2 class="heading">Google AdSense</h2>
         <div class="section-content">
           <p class="text">

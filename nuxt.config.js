@@ -59,7 +59,6 @@ module.exports = {
     storageUrl: process.env.STORAGE_URL || 'https://storage.aws-rough.cc'
   },
   modules: [
-    '@nuxtjs/google-gtag',
     [
       '@nuxtjs/google-adsense',
       {
@@ -105,9 +104,6 @@ module.exports = {
         }
       })
     }
-  },
-  'google-gtag': {
-    id: 'G-3RP0RDS9QJ'
   },
   router: {
     linkActiveClass: 'is-active',
