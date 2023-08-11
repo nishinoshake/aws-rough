@@ -6,8 +6,7 @@ describe('ses', () => {
       ses: {
         send: {
           ec2: {
-            price: 0.0001,
-            free: 62000
+            price: 0.0001
           },
           general: {
             price: 0.0001
@@ -18,8 +17,7 @@ describe('ses', () => {
         },
         recieve: {
           request: {
-            price: 0.0001,
-            free: 1000
+            price: 0.0001
           },
           chunk: {
             price: 0.00009
@@ -51,10 +49,10 @@ describe('ses', () => {
       dedicatedIp: 3
     }
 
-    const sendEc2 = (3000000 - 62000) * 0.0001
+    const sendEc2 = 3000000 * 0.0001
     const sendGeneral = 4000000 * 0.0001
     const transfer = 1000 * 0.12
-    const recieve = (2000000 - 1000) * 0.0001
+    const recieve = 2000000 * 0.0001
     const recieveChunk = Math.floor(512 / CHUNK_SIZE) * 2000000 * 0.00009
     const dedicatedIp = 3 * 24.95
     const expected = sendEc2 + sendGeneral + transfer + recieve + recieveChunk + dedicatedIp
