@@ -100,21 +100,32 @@
         </div>
       </section>
       <section class="section">
+        <h2 class="heading">販売</h2>
+        <div class="section-content">
+          <p class="text">このサイトを 100万円 で販売しています。</p>
+          <p class="text">
+            今は Google Analytics
+            を外してしまったため、1年ほど前のデータになりますが、5万PV/月ぐらいです。この数字を考えると妥当な価格とは思えませんが、100万円欲しいので。売却を検討している理由は、自身がAWSを触る機会が減ったため、サイトを維持する気力が低下しているためになります。ご興味がある方は、下記までメールをお願いいたします。買ってください！
+          </p>
+          <p>
+            <a href="mailto:lawson.and.7.11@gmail.com" class="text-link">lawson.and.7.11@gmail.com</a>
+          </p>
+        </div>
+      </section>
+      <section class="section">
         <h2 class="heading">お問い合わせ</h2>
         <div class="section-content">
           <p class="text">
             サイトに対するご意見や不具合のご報告などがありましたら、GitHubの<ExternalLink
               href="https://github.com/nishinoshake/aws-rough/issues"
               >Issues</ExternalLink
-            >に追加していただくか、こちらからメッセージをお願いします。
+            >に追加していただくか、下記までメールをお願いいたします。
           </p>
-          <form @submit.prevent="handleSubmitContact">
-            <textarea v-model="message" name="contact" rows="10" class="about-contact-input" required></textarea>
-            <button type="submit" class="about-contact-button" :disabled="isSending">{{ contactLabel }}</button>
-          </form>
+          <p>
+            <a href="mailto:lawson.and.7.11@gmail.com" class="text-link">lawson.and.7.11@gmail.com</a>
+          </p>
         </div>
       </section>
-
       <ServiceAds />
     </div>
   </article>
@@ -127,7 +138,6 @@ import serviceConfig from '@/config/service/mokuji'
 import meta from '@/config/meta'
 import { MONTHLY_DATE } from '@/config/constants'
 import { getService } from '@/lib/service'
-import { postContact } from '@/api'
 
 export default {
   name: 'LandingIndex',
@@ -154,19 +164,6 @@ export default {
     },
     trimmedMessage() {
       return this.message.trim()
-    }
-  },
-  methods: {
-    async handleSubmitContact() {
-      if (!this.trimmedMessage) {
-        return
-      }
-
-      this.isSending = true
-
-      await this.$store.dispatch('postContact', { postContact, text: this.trimmedMessage })
-
-      this.isSending = false
     }
   }
 }
