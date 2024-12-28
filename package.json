@@ -77,5 +77,8 @@
     "sass": "^1.49.8",
     "sass-loader": "^10.2.1",
     "vue-svg-loader": "^0.11.0"
+  },
+  "volta": {
+    "node": "12.22.12"
   }
 }

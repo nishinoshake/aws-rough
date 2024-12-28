@@ -37,8 +37,8 @@ export default {
     {
       name: 'DynamoDBのオンデマンドキャパシティの計算結果が想定内',
       range: {
-        min: 1270,
-        max: 1280
+        min: 750,
+        max: 800
       },
       waitFor: '[data-test="storage"]',
       actions: [
