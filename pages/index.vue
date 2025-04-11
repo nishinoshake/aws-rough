@@ -18,6 +18,7 @@
             </li>
           </ul>
         </div>
+        <ServiceAds />
       </section>
       <section class="section">
         <h2 class="heading">免責</h2>
@@ -32,7 +33,6 @@
           </p>
         </div>
       </section>
-      <ServiceAds />
     </div>
   </article>
 </template>

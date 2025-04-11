@@ -11,6 +11,9 @@
   }
 }
 .l-app.is-index {
+  .ad-section {
+    margin-top: 0;
+  }
   @include min($mq-tb-min) {
     .l-menu {
       width: 0;

@@ -3,6 +3,9 @@
     <ServiceHeading :service="service" />
     <slot v-if="hasCalc" name="calc" />
     <ServiceCalc v-else :service="service" />
+
+    <ServiceAds />
+
     <div class="notice">
       <Accordion v-if="hasHelp" title="入力項目の補足" slug="help">
         <slot name="help" />
@@ -37,8 +40,6 @@
           <ServiceSourceLink :service-name="serviceName" />
         </div>
       </section>
-
-      <ServiceAds />
     </div>
   </article>
 </template>

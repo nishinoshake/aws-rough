@@ -1,11 +1,15 @@
 .ad {
   overflow: hidden;
 }
+.ad-section {
+  margin-top: calc(var(--column-height) * 2 - var(--border-width));
+  border-top: var(--border-width) solid var(--color-border);
+}
 .ad-desc {
   @include max {
-    margin-bottom: 3.2rem;
+    margin-top: 2.4rem;
   }
   @include min {
-    margin-bottom: 4.6rem;
+    margin-top: 2rem;
   }
 }

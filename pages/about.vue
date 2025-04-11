@@ -19,6 +19,7 @@
           </p>
         </div>
       </section>
+      <ServiceAds />
       <section class="section">
         <h2 class="heading">計算の前提</h2>
         <div class="section-content">
@@ -126,7 +127,6 @@
           </p>
         </div>
       </section>
-      <ServiceAds />
     </div>
   </article>
 </template>
